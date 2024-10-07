@@ -7,6 +7,13 @@
     "description": "Automatically claims rewards from farming when available."
   },
   {
+    "key": "auto_repaint",
+    "name": "Auto Repaint",
+    "type": "checkbox",
+    "default_value": "on",
+    "description": "Automatically repaint when available."
+  },
+  {
     "key": "auto_finish_tasks",
     "name": "Auto Finish Tasks",
     "type": "checkbox",

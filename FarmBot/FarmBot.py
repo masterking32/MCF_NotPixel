@@ -12,6 +12,7 @@ from .core.Users import Users
 from .core.Mining import Mining
 from .core.Buy import Buy
 from .core.Tasks import Tasks
+from .core.Repaint import Repaint
 
 from utilities.utilities import getConfig
 
@@ -174,6 +175,34 @@ class FarmBot:
                 await tasks.claim_tasks(status)
             else:
                 self.log.info(f"<y>🟡 Auto-finish tasks is disabled</y>")
+
+            if getConfig("auto_repaint", True):
+                if status_charges > 0:
+                    repaint = Repaint(
+                        log=self.log,
+                        httpRequest=self.http,
+                        account_name=self.account_name,
+                        license_key=license_key,
+                    )
+                    await repaint.do_repaint(charges=status_charges)
+                else:
+                    self.log.info(
+                        f"<y>🪫 Account <c>{self.account_name}</c> doesn't have any charges left</y>"
+                    )
+            else:
+                self.log.info(f"<y>🟡 Auto-repaint is disabled</y>")
+
+            status = mining.get_status()
+            if status is None:
+                self.log.error(
+                    f"<r>⭕ Error getting mining status (<c>{self.account_name}</c>)</r>"
+                )
+                return
+
+            status_user_balance = status.get("userBalance", 0)
+            self.log.info(
+                f"<g>💰 Account <c>{self.account_name}</c> has a balance of <c>{status_user_balance} ⏹️</c>.</g>"
+            )
 
         except Exception as e:
             self.log.error(f"<r>🔴 Error: {e}</r>")
