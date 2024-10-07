@@ -2,6 +2,7 @@
 # Date: 2024
 # Github: https://github.com/masterking32
 # Telegram: https://t.me/MasterCryptoFarmBot
+import random
 import sys
 import os
 import time
@@ -14,6 +15,7 @@ from .core.Buy import Buy
 from .core.Tasks import Tasks
 from .core.Repaint import Repaint
 from .core.Upgrades import Upgrades
+from .core.Squad import Squad
 
 from utilities.utilities import getConfig
 
@@ -232,6 +234,37 @@ class FarmBot:
                     status.get("boosts", {}).get("reChargeSpeed", 1),
                 )
 
+            squad = me.get("squad", None)
+            if squad is None:
+                squad = {}
+
+            squad_id = squad.get("id", 0)
+
+            if squad_id is not None and squad_id > 0:
+                self.log.info(
+                    f"<g>👥 Account <c>{self.account_name}</c> is in squad <c>{squad_id}</c></g>"
+                )
+            elif getConfig("auto_join_squad", True):
+                squad = Squad(
+                    log=self.log,
+                    httpRequest=self.http,
+                    account_name=self.account_name,
+                    tgAccount=self.tgAccount,
+                )
+                await squad.join_squad()
+
+            self.log.info(
+                f"<g>🤖 NotPixel farming for account <cyan>{self.account_name}</cyan> has finished</g>"
+            )
+
         except Exception as e:
             self.log.error(f"<r>🔴 Error: {e}</r>")
             return
+
+        finally:
+            delay_between_accounts = getConfig("delay_between_accounts", 60)
+            random_sleep = random.randint(0, 20) + delay_between_accounts
+            self.log.info(
+                f"<g>⌛ Farming for <c>{self.account_name}</c> completed. Waiting for <c>{random_sleep}</c> seconds before running the next account...</g>"
+            )
+            time.sleep(random_sleep)

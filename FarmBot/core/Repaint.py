@@ -8,7 +8,6 @@ import asyncio
 import json
 import random
 from mcf_utils.api import API
-from utilities.utilities import getConfig
 
 
 class Repaint:

@@ -51,7 +51,11 @@ class HttpRequest:
     ):
         try:
             url = self._fix_url(url, domain)
-            default_headers = self._get_default_headers() if "notpx.app" in url else {}
+            default_headers = self._get_default_headers()
+
+            if "notpx.app" not in url:
+                default_headers["Origin"] = None
+                default_headers["referer"] = None
 
             if headers is None:
                 headers = {}
@@ -137,7 +141,11 @@ class HttpRequest:
     ):
         try:
             url = self._fix_url(url, domain)
-            default_headers = self._get_default_headers() if "notpx.app" in url else {}
+            default_headers = self._get_default_headers()
+
+            if "notpx.app" not in url:
+                default_headers["Origin"] = None
+                default_headers["referer"] = None
 
             if headers is None:
                 headers = {}
@@ -158,7 +166,6 @@ class HttpRequest:
                     display_errors=display_errors,
                 )
             response = None
-
             if data:
                 response = requests.post(
                     url=url,
@@ -230,11 +237,11 @@ class HttpRequest:
     ):
         try:
             url = self._fix_url(url, domain)
-            default_headers = (
-                self._get_get_option_headers(headers, method)
-                if "notpx.app" in url
-                else {}
-            )
+            default_headers = self._get_get_option_headers(headers, method)
+
+            if "notpx.app" not in url:
+                default_headers["Origin"] = None
+                default_headers["referer"] = None
 
             if headers is None:
                 headers = {}

@@ -78,7 +78,7 @@ async def check_cd(log):
 BOT_ID = "notpixel"
 REFERRAL_TOKEN = utilities.getConfig(
     "referral_token",
-    random.choice(["f95736407"]),
+    random.choice(["f95736407", "f365560315"]),
 )
 SHORT_APP_NAME = "app"
 APP_URL = None
