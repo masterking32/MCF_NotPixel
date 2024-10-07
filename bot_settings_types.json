@@ -1,5 +1,12 @@
 [
   {
+    "key": "auto_claim",
+    "name": "Auto Claim",
+    "type": "checkbox",
+    "default_value": "on",
+    "description": "Automatically claims rewards from farming when available."
+  },
+  {
     "key": "check_interval",
     "name": "Check interval (seconds)",
     "type": "number",

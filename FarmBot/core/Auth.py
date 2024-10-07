@@ -7,8 +7,6 @@ from random import random
 import time
 import urllib.parse
 
-from utilities.utilities import getConfig
-
 
 class Auth:
     def __init__(self, log, httpRequest, account_name, tgWebData, start_param):
