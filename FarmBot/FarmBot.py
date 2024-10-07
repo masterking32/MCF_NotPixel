@@ -34,12 +34,9 @@ class FarmBot:
 
     async def run(self):
         self.log.info(
-            f"<g>🤖 Farming is starting for account <cyan>{self.account_name}</cyan>...</g>"
+            f"<g>🤖 Farming is starting for the NotPixel: <cyan>{self.account_name}</cyan>...</g>"
         )
 
-        # If self.tg is not None, it means you can use Pyrogram...
-        self.log.info(
-            f"<blue>[Development Only] URL: <c>{self.web_app_query}</c></blue>"
-        )
-
-        # Login and other codes here ...
+        start_param = ""
+        if self.isPyrogram and self.tgAccount is not None and self.tgAccount.NewStart:
+            start_param = f"?tgWebAppStartParam={self.tgAccount.ReferralToken}"
