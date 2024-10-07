@@ -28,6 +28,27 @@
     "description": "Automatically joins channels to finish tasks."
   },
   {
+    "key": "auto_upgrade_paint_reward",
+    "name": "Auto Upgrade Paint Reward",
+    "type": "checkbox",
+    "default_value": "on",
+    "description": "Automatically upgrades paint reward when available."
+  },
+  {
+    "key": "auto_upgrade_recharge_speed",
+    "name": "Auto Upgrade Recharge Speed",
+    "type": "checkbox",
+    "default_value": "on",
+    "description": "Automatically upgrades recharge speed when available."
+  },
+  {
+    "key": "auto_upgrade_energy_limit",
+    "name": "Auto Upgrade Energy Limit",
+    "type": "checkbox",
+    "default_value": "on",
+    "description": "Automatically upgrades energy limit when available."
+  },
+  {
     "key": "check_interval",
     "name": "Check interval (seconds)",
     "type": "number",

@@ -13,6 +13,7 @@ from .core.Mining import Mining
 from .core.Buy import Buy
 from .core.Tasks import Tasks
 from .core.Repaint import Repaint
+from .core.Upgrades import Upgrades
 
 from utilities.utilities import getConfig
 
@@ -203,6 +204,33 @@ class FarmBot:
             self.log.info(
                 f"<g>💰 Account <c>{self.account_name}</c> has a balance of <c>{status_user_balance} ⏹️</c>.</g>"
             )
+
+            upgrades = Upgrades(
+                log=self.log,
+                httpRequest=self.http,
+                account_name=self.account_name,
+            )
+
+            if getConfig("auto_upgrade_energy_limit", True):
+                status_user_balance = await upgrades.upgrade(
+                    "energyLimit",
+                    status_user_balance,
+                    status.get("boosts", {}).get("energyLimit", 4),
+                )
+
+            if getConfig("auto_upgrade_paint_reward", True):
+                status_user_balance = await upgrades.upgrade(
+                    "paintReward",
+                    status_user_balance,
+                    status.get("boosts", {}).get("paintReward", 1),
+                )
+
+            if getConfig("auto_upgrade_recharge_speed", True):
+                status_user_balance = await upgrades.upgrade(
+                    "reChargeSpeed",
+                    status_user_balance,
+                    status.get("boosts", {}).get("reChargeSpeed", 1),
+                )
 
         except Exception as e:
             self.log.error(f"<r>🔴 Error: {e}</r>")
