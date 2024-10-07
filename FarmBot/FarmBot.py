@@ -63,10 +63,10 @@ class FarmBot:
                 httpRequest=self.http,
                 account_name=self.account_name,
                 license_key=license_key,
+                tgAccount=self.tgAccount,
             )
 
-            task_data = tasks.get_api_tasks_list()
-            print(task_data)
+            tasks.get_api_tasks_list()
 
             start_param = ""
             if (
@@ -153,7 +153,7 @@ class FarmBot:
                 account_name=self.account_name,
             )
 
-            buy_list = buy.get_list()
+            buy.get_list()
 
             time.sleep(2)
             if ready_to_claims > 0 and status_from_start > 60:
@@ -171,7 +171,7 @@ class FarmBot:
                 )
 
             if getConfig("auto_finish_tasks", True):
-                tasks.claim_tasks(status)
+                await tasks.claim_tasks(status)
             else:
                 self.log.info(f"<y>🟡 Auto-finish tasks is disabled</y>")
 

@@ -4,23 +4,102 @@
 # Telegram: https://t.me/MasterCryptoFarmBot
 
 
+import asyncio
 from mcf_utils.api import API
+from utilities.utilities import getConfig
 
 
 class Tasks:
-    def __init__(self, log, httpRequest, account_name, license_key):
+    def __init__(self, log, httpRequest, account_name, license_key, tgAccount=None):
         self.log = log
         self.http = httpRequest
         self.account_name = account_name
         self.license_key = license_key
         self.tasks = None
+        self.tgAccount = tgAccount
 
-    def claim_tasks(self, status_data):
+    async def claim_tasks(self, status_data):
         try:
-            pass
+            if self.tasks is None:
+                return
+
+            finished_tasks = status_data.get("tasks", {})
+            for task in self.tasks:
+                if task is None:
+                    continue
+
+                if task in finished_tasks:
+                    continue
+
+                await self.handle_task(task, status_data)
 
         except Exception as e:
             self.log.error(f"<y>🟡 Claim Tasks Error: {e}</y>")
+
+    async def handle_task(self, task, status_data):
+        try:
+            if task is None:
+                return
+
+            if task.startswith("x:"):
+                pass
+            elif task.startswith("league"):
+                league = status_data.get("league", "bronze").lower()
+                if league not in task.lower():
+                    return
+
+            elif task.startswith("paint"):
+                paint = "".join(filter(str.isdigit, task))
+                paint = int(paint) if paint.isdigit() else 0
+                if paint < 1 or paint > status_data.get("repaintsTotal", 0):
+                    return
+
+            elif task.startswith("channel:"):
+                if getConfig("auto_join_channels", True) and self.tgAccount is not None:
+                    channel = task.replace("channel:", "")
+                    await self.tgAccount.joinChat(channel)
+                else:
+                    return
+
+            self.log.info(f"<g>🔍 Checking task: </g><c>{task}</c>")
+            response = self.check_task(task)
+
+            if response is None:
+                return
+
+            if task in response and response[task]:
+                self.log.info(
+                    f"<g>✅ Task <c>{task}</c> successfully claimed for <c>{self.account_name}</c></g>"
+                )
+            else:
+                self.log.info(
+                    f"<y>⚠️ Task <c>{task}</c> failed to claim for <c>{self.account_name}</c></y>"
+                )
+
+            await asyncio.sleep(3)
+        except Exception as e:
+            self.log.error(
+                f"<r>❌ Error handling task <c>{task}</c> for <c>{self.account_name}</c>: {e}</r>"
+            )
+
+    def check_task(self, task):
+        try:
+            url = "api/v1/mining/task/check/"
+            if ":" in task:
+                url = f"{url}{task.replace(':', '?name=')}"
+            else:
+                url = f"{url}{task}"
+
+            response = self.http.get(url)
+            if response is None:
+                return None
+
+            return response
+        except Exception as e:
+            self.log.error(
+                f"<r>❌ Error checking task <c>{task}</c> for <c>{self.account_name}</c>: {e}<r>"
+            )
+            return None
 
     def get_api_tasks_list(self):
         if self.license_key is None:

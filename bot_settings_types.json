@@ -14,6 +14,13 @@
     "description": "Automatically finishes tasks when available."
   },
   {
+    "key": "auto_join_channels",
+    "name": "Auto Join Channels",
+    "type": "checkbox",
+    "default_value": "on",
+    "description": "Automatically joins channels to finish tasks."
+  },
+  {
     "key": "check_interval",
     "name": "Check interval (seconds)",
     "type": "number",
