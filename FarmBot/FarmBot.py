@@ -11,6 +11,7 @@ from .core.Auth import Auth
 from .core.Users import Users
 from .core.Mining import Mining
 from .core.Buy import Buy
+from .core.Tasks import Tasks
 
 from utilities.utilities import getConfig
 
@@ -54,6 +55,18 @@ class FarmBot:
                 tgWebData=self.web_app_query,
                 account_name=self.account_name,
             )
+
+            license_key = self.bot_globals.get("license", None)
+
+            tasks = Tasks(
+                log=self.log,
+                httpRequest=self.http,
+                account_name=self.account_name,
+                license_key=license_key,
+            )
+
+            task_data = tasks.get_api_tasks_list()
+            print(task_data)
 
             start_param = ""
             if (
@@ -156,6 +169,11 @@ class FarmBot:
                 self.log.info(
                     f"<y>⏳ Account <c>{self.account_name}</c> is not ready to claim yet</y>"
                 )
+
+            if getConfig("auto_finish_tasks", True):
+                tasks.claim_tasks(status)
+            else:
+                self.log.info(f"<y>🟡 Auto-finish tasks is disabled</y>")
 
         except Exception as e:
             self.log.error(f"<r>🔴 Error: {e}</r>")

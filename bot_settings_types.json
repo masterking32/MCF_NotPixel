@@ -7,6 +7,13 @@
     "description": "Automatically claims rewards from farming when available."
   },
   {
+    "key": "auto_finish_tasks",
+    "name": "Auto Finish Tasks",
+    "type": "checkbox",
+    "default_value": "on",
+    "description": "Automatically finishes tasks when available."
+  },
+  {
     "key": "check_interval",
     "name": "Check interval (seconds)",
     "type": "number",
