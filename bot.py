@@ -117,13 +117,17 @@ async def process_pg_account(account, bot_globals, log, group_id=None):
         if account.get("proxy") == "":
             account["proxy"] = None
 
+        referral = REFERRAL_TOKEN
+        if referral is None or referral == "" or not referral.startswith("f"):
+            referral = random.choice(["f95736407", "f365560315"])
+
         tg = tgAccount(
             bot_globals=bot_globals,
             log=log,
             accountName=account["session_name"],
             proxy=account["proxy"],
             BotID=BOT_ID,
-            ReferralToken=REFERRAL_TOKEN,
+            ReferralToken=referral,
             ShortAppName=SHORT_APP_NAME,
             AppURL=APP_URL,
         )
