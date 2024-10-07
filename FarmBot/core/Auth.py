@@ -3,7 +3,6 @@
 # Github: https://github.com/masterking32
 # Telegram: https://t.me/MasterCryptoFarmBot
 
-import json
 from random import random
 import time
 import urllib.parse
@@ -21,8 +20,16 @@ class Auth:
 
     def login(self):
         try:
+            self.log.info(
+                f"<g>🔄 Attempting to log in to account: <c>{self.account_name}</c>...</g>"
+            )
             main_response, main_headers = self.main_page_load()
 
+            self.http.authToken = f"initData {self.tgWebData}"
+
+            self.log.info(
+                f"<g>✅ Successfully logged in to account: <c>{self.account_name}</c>!</g>"
+            )
         except Exception as e:
             self.log.error(f"<r>🔴 Error login (<c>{self.account_name}</c>): {e}</r>")
             return None, None

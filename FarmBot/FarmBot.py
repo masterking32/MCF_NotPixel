@@ -4,9 +4,11 @@
 # Telegram: https://t.me/MasterCryptoFarmBot
 import sys
 import os
+import time
 
 from .core.HttpRequest import HttpRequest
 from .core.Auth import Auth
+from .core.Users import Users
 
 MasterCryptoFarmBot_Dir = os.path.dirname(
     os.path.dirname(os.path.abspath(__file__ + "/../../"))
@@ -66,6 +68,27 @@ class FarmBot:
             )
 
             auth.login()
+
+            users = Users(
+                log=self.log,
+                httpRequest=self.http,
+                account_name=self.account_name,
+            )
+
+            me = users.get_me()
+            if me is None:
+                self.log.error(
+                    f"<r>⭕ Error getting user info (<c>{self.account_name}</c>)</r>"
+                )
+                return
+
+            me_id = me.get("id")
+            if me_id == 0:
+                self.log.info(
+                    f"<g>🆕 Account <c>{self.account_name}</c> is not registered and this is new!</g>"
+                )
+
+            time.sleep(2)
 
         except Exception as e:
             self.log.error(f"<r>🔴 Error: {e}</r>")

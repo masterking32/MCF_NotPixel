@@ -3,7 +3,6 @@
 # Github: https://github.com/masterking32
 # Telegram: https://t.me/MasterCryptoFarmBot
 
-import json
 import time
 import requests
 
@@ -25,10 +24,8 @@ class HttpRequest:
             "app": "https://app.notpx.app",
         }
         self.authToken = None
-        self.RefreshToken = None
         self.tgWebData = tgWebData
         self.account_name = account_name
-        self.token_refreshed = False
 
         if not self.user_agent or self.user_agent == "":
             self.user_agent = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.3"
@@ -54,13 +51,13 @@ class HttpRequest:
     ):
         try:
             url = self._fix_url(url, domain)
-            default_headers = self._get_default_headers() if "blum.codes" in url else {}
+            default_headers = self._get_default_headers() if "notpx.app" in url else {}
 
             if headers is None:
                 headers = {}
 
             if auth_header and self.authToken:
-                headers["authorization"] = f"Bearer {self.authToken}"
+                headers["authorization"] = f"{self.authToken}"
 
             if headers:
                 for key, value in headers.items():
@@ -140,13 +137,13 @@ class HttpRequest:
     ):
         try:
             url = self._fix_url(url, domain)
-            default_headers = self._get_default_headers() if "blum.codes" in url else {}
+            default_headers = self._get_default_headers() if "notpx.app" in url else {}
 
             if headers is None:
                 headers = {}
 
             if auth_header and self.authToken is not None:
-                headers["authorization"] = f"Bearer {self.authToken}"
+                headers["authorization"] = f"{self.authToken}"
 
             if headers:
                 for key, value in headers.items():
@@ -227,7 +224,7 @@ class HttpRequest:
         domain=None,
         method="POST",
         headers=None,
-        valid_response_code=204,
+        valid_response_code=200,
         display_errors=True,
         retries=3,
     ):
@@ -235,7 +232,7 @@ class HttpRequest:
             url = self._fix_url(url, domain)
             default_headers = (
                 self._get_get_option_headers(headers, method)
-                if "blum.codes" in url
+                if "notpx.app" in url
                 else {}
             )
 
@@ -324,22 +321,20 @@ class HttpRequest:
     def _get_get_option_headers(self, headers=None, method="GET"):
         default_headers = {
             "Accept": "*/*",
-            "Origin": "https://telegram.blum.codes",
+            "Origin": "https://app.notpx.app",
+            "referer": "https://app.notpx.app/",
             "Sec-Fetch-Dest": "empty",
             "Sec-Fetch-Mode": "cors",
             "Sec-Fetch-Site": "same-site",
             "User-Agent": self.user_agent,
             "cache-control": "no-cache",
             "access-control-request-method": method,
-            "access-control-request-headers": "lang",
         }
 
         if not headers:
             return default_headers
 
         if "authorization" in headers:
-            default_headers["access-control-request-headers"] = (
-                default_headers["access-control-request-headers"] + ",authorization"
-            )
+            default_headers["access-control-request-headers"] = "authorization"
 
         return default_headers
