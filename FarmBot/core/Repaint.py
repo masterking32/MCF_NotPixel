@@ -17,22 +17,45 @@ class Repaint:
         self.account_name = account_name
         self.license_key = license_key
         self.pixels = None
-        self.pixel_colors = [
-            "#000000",
-            "#FFFFFF",
-            "#3690EA",
-            "#6D482F",
-            "#7EED56",
-            "#00CC78",
-            "#2450A4",
-            "#BE0039",
-            "#6D001A",
-            "#FF9600",
-            "#BF4300",
-            "#51E9F4",
-            "#898D90",
-            "#E4ABFF",
-        ]
+
+    def get_template_list(self):
+        try:
+            page = [48, 60, 72, 84, 96, 108]
+            response = self.http.get(
+                f"/api/v1/image/template/list?limit=12&offset={random.choice(page)}"
+            )
+            if response is None:
+                return None
+
+            return response
+        except Exception as e:
+            self.log.error(f"<r>❌ Error getting templates: {e}</r>")
+            return None
+
+    def get_template(self, template_id):
+        try:
+            response = self.http.get(f"/api/v1/image/template/{template_id}")
+            if response is None:
+                return None
+
+            return response
+        except Exception as e:
+            self.log.error(f"<r>❌ Error getting templates: {e}</r>")
+            return None
+
+    def set_template(self, template_id):
+        try:
+            response = self.http.put(
+                f"/api/v1/image/template/subscribe/{template_id}",
+                only_json_response=False,
+            )
+            if response is None:
+                return None
+
+            return response
+        except Exception as e:
+            self.log.error(f"<r>❌ Error setting template: {e}</r>")
+            return None
 
     async def do_repaint(self, charges=0):
         try:
@@ -40,8 +63,35 @@ class Repaint:
                 f"<g>🎨 Repainting <c>{charges}</c> pixels for <c>{self.account_name}</c>...</g>"
             )
 
+            self.log.info(
+                f"<g>🖼️ Getting templates for <c>{self.account_name}</c>...</g>"
+            )
+            templates = self.get_template_list()
+            if templates is None:
+                return
+
+            template = random.choice(templates)
+            template_id = template.get("templateId", None)
+            if template_id is None:
+                self.log.error(
+                    f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
+                )
+                return
+
+            self.set_template(template_id)
+
+            self.log.info(
+                f"<g>🖼️ Setting template for <c>{self.account_name}</c>...</g>"
+            )
+
+            image_x = template.get("x", 0)
+            image_y = template.get("y", 0)
+
             await asyncio.sleep(4)
-            response = self.get_api_tasks_list()
+            self.log.info(
+                f"<g>📷 Fetching pixels for the template <c>{template_id}</c> from the API for account <c>{self.account_name}</c>...</g>"
+            )
+            response = self.get_api_tasks_list(template_id)
             if response is None:
                 return
 
@@ -52,29 +102,23 @@ class Repaint:
                 return
 
             while charges > 0:
-                if self.pixels is None or len(self.pixels) == 0:
-                    self.get_api_tasks_list()
-                    await asyncio.sleep(5)
+                self.log.info(
+                    f"<g>🎨 Repainting <c>{charges}</c> pixels for <c>{self.account_name}</c>...</g>"
+                )
 
                 if self.pixels is None or len(self.pixels) == 0:
                     break
 
                 random_pixel = self.pixels.pop()
                 if random_pixel is None:
-                    continue
+                    break
 
-                pixel_id = random_pixel.get("pixelId", None)
-                pixel_newColor = random_pixel.get("newColor", None)
-                random_color = self.getRandomColor(pixel_newColor)
-
-                if charges > 1:
-                    self.start_repaint(pixel_id, random_color)
-                    await asyncio.sleep(0.2)
-                    self.start_repaint(pixel_id, pixel_newColor)
-                    charges -= 2
-                else:
-                    self.start_repaint(pixel_id, pixel_newColor)
-                    charges -= 1
+                pixel_x = random_pixel.get("x", 0) + image_x
+                pixel_y = random_pixel.get("y", 0) + image_y
+                pixel_color = random_pixel.get("color", None)
+                pixel_id = int(f"{pixel_y}{pixel_x}")
+                self.start_repaint(pixel_id, pixel_color)
+                charges -= 1
 
                 sleep_random = random.randint(3, 5)
                 await asyncio.sleep(sleep_random)
@@ -103,15 +147,7 @@ class Repaint:
         except Exception as e:
             self.log.error(f"<y>🟡 Error for <c>{self.account_name}</c>: {e}</y>")
 
-    def getRandomColor(self, pixel_newColor):
-
-        random_color = random.choice(self.pixel_colors)
-        while random_color == pixel_newColor:
-            random_color = random.choice(self.pixel_colors)
-
-        return random_color
-
-    def get_api_tasks_list(self):
+    def get_api_tasks_list(self, image_id):
         if self.license_key is None:
             return None
 
@@ -119,7 +155,8 @@ class Repaint:
         data = {
             "game_name": "notpixel",
             "action": "get_task",
-            "task_type": "pixels",
+            "task_type": "get_image_pixels",
+            "image_id": image_id,
         }
 
         response = apiObj.get_task_answer(self.license_key, data)

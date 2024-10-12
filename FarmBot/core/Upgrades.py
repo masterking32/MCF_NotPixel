@@ -54,13 +54,17 @@ class Upgrades:
                 },
             },
             "energyLimit": {
-                2: {"Price": 5, "Boost": 6},
-                3: {"Price": 100, "Boost": 7},
-                4: {"Price": 200, "Boost": 8},
-                5: {"Price": 300, "Boost": 9},
+                2: {"Price": 5, "Boost": 12},
+                3: {"Price": 100, "Boost": 14},
+                4: {"Price": 200, "Boost": 16},
+                5: {"Price": 300, "Boost": 18},
                 6: {
                     "Price": 400,
-                    "Boost": 10,
+                    "Boost": 20,
+                },
+                7: {
+                    "Price": 10,
+                    "Boost": 24,
                 },
             },
         }
@@ -70,7 +74,7 @@ class Upgrades:
             max_levels = {
                 "reChargeSpeed": 11,
                 "paintReward": 7,
-                "energyLimit": 6,
+                "energyLimit": 7,
             }
 
             if current_level >= max_levels[upgrade_type]:

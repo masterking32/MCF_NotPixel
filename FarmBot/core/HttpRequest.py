@@ -124,6 +124,100 @@ class HttpRequest:
                 self.log.error(f"🔴 <red> GET Request Error: <y>{url}</y> {e}</red>")
             return (None, None) if return_headers else None
 
+    def put(
+        self,
+        url,
+        domain="main",
+        data=None,
+        headers=None,
+        send_option_request=True,
+        valid_response_code=204,
+        valid_option_response_code=200,
+        auth_header=True,
+        return_headers=False,
+        display_errors=True,
+        only_json_response=True,
+        retries=3,
+    ):
+        try:
+            url = self._fix_url(url, domain)
+            default_headers = self._get_default_headers()
+
+            if "notpx.app" not in url:
+                default_headers["Origin"] = None
+                default_headers["referer"] = None
+
+            if headers is None:
+                headers = {}
+
+            if auth_header and self.authToken is not None:
+                headers["authorization"] = f"{self.authToken}"
+
+            if headers:
+                for key, value in headers.items():
+                    default_headers[key] = value
+
+            if send_option_request:
+                self.options(
+                    url=url,
+                    method="PUT",
+                    headers=headers,
+                    valid_response_code=valid_option_response_code,
+                    display_errors=display_errors,
+                )
+
+            response = requests.put(
+                url=url,
+                headers=default_headers,
+                data=data,
+                proxies=self._get_proxy(),
+            )
+
+            if response.status_code != valid_response_code:
+                if display_errors:
+                    self.log.error(
+                        f"🔴 <red> PUT Request Error: <y>{url}</y> Response code: {response.status_code}</red>"
+                    )
+                return (None, None) if return_headers else None
+
+            if (
+                "application/json" not in response.headers.get("Content-Type", "")
+                and only_json_response is False
+            ):
+                return (
+                    (response.text, response.headers)
+                    if return_headers
+                    else response.text
+                )
+
+            return (
+                (response.json(), response.headers)
+                if return_headers
+                else response.json()
+            )
+        except Exception as e:
+            print(e)
+            if retries > 0:
+                self.log.info(f"🟡 <y> Unable to send request, retrying...</y>")
+                time.sleep(0.5)
+                return self.put(
+                    url=url,
+                    domain=domain,
+                    data=data,
+                    headers=headers,
+                    send_option_request=send_option_request,
+                    valid_response_code=valid_response_code,
+                    valid_option_response_code=valid_option_response_code,
+                    auth_header=auth_header,
+                    return_headers=return_headers,
+                    display_errors=display_errors,
+                    only_json_response=only_json_response,
+                    retries=retries - 1,
+                )
+            if display_errors:
+                self.log.error(f"🔴 <red> PUT Request Error: <y>{url}</y> {e}</red>")
+            return (None, None) if return_headers else None
+
     def post(
         self,
         url,
@@ -313,6 +407,7 @@ class HttpRequest:
             "User-Agent": self.user_agent,
             "cache-control": "no-cache",
             "Content-Type": "application/json",
+            "priority": "u=1, i",
         }
 
         if "android" in self.user_agent.lower():
@@ -336,6 +431,7 @@ class HttpRequest:
             "User-Agent": self.user_agent,
             "cache-control": "no-cache",
             "access-control-request-method": method,
+            "priority": "u=1, i",
         }
 
         if not headers:
