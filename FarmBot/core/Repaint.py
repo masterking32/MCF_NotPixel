@@ -52,6 +52,13 @@ class Repaint:
                 return
 
             while charges > 0:
+                if self.pixels is None or len(self.pixels) == 0:
+                    self.get_api_tasks_list()
+                    await asyncio.sleep(5)
+
+                if self.pixels is None or len(self.pixels) == 0:
+                    break
+
                 random_pixel = self.pixels.pop()
                 if random_pixel is None:
                     continue
