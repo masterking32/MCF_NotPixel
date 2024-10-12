@@ -48,6 +48,7 @@ class Repaint:
             response = self.http.put(
                 f"/api/v1/image/template/subscribe/{template_id}",
                 only_json_response=False,
+                display_errors=False,
             )
             if response is None:
                 return None
