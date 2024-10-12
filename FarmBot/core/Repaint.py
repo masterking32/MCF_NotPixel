@@ -78,6 +78,14 @@ class Repaint:
                 )
                 return
 
+            template = self.get_template(template_id)
+
+            if template is None:
+                self.log.error(
+                    f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
+                )
+                return
+
             self.set_template(template_id)
 
             self.log.info(
@@ -115,7 +123,8 @@ class Repaint:
 
                 pixel_x = random_pixel.get("x", 0) + image_x
                 pixel_y = random_pixel.get("y", 0) + image_y
-                pixel_color = random_pixel.get("color", None)
+                pixel_color = random_pixel.get("color", "#000000")
+
                 pixel_id = int(f"{pixel_y}{pixel_x}")
                 self.start_repaint(pixel_id, pixel_color)
                 charges -= 1
