@@ -122,7 +122,13 @@ class Repaint:
                 pixel_y = random_pixel.get("y", 0) + image_y
                 pixel_color = random_pixel.get("color", "#000000")
 
+                if pixel_x < 0 or pixel_y < 0:
+                    continue
+
+                pixel_x += 1
+                pixel_x = str(pixel_x).zfill(3)
                 pixel_id = int(f"{pixel_y}{pixel_x}")
+
                 self.log.info(
                     f"<g>🎨 Repainting pixel at X: <c>{pixel_x}</c>, Y: <c>{pixel_y}</c> with color: <c>{pixel_color}</c> for account: <c>{self.account_name}</c>...</g>"
                 )
