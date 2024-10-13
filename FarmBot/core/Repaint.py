@@ -125,13 +125,14 @@ class Repaint:
                 if pixel_x < 0 or pixel_y < 0:
                     continue
 
+                self.log.info(
+                    f"<g>🎨 Repainting pixel at X: <c>{pixel_x}</c>, Y: <c>{pixel_y}</c> with color: <c>{pixel_color}</c> for account: <c>{self.account_name}</c>...</g>"
+                )
+
                 pixel_x += 1
                 pixel_x = str(pixel_x).zfill(3)
                 pixel_id = int(f"{pixel_y}{pixel_x}")
 
-                self.log.info(
-                    f"<g>🎨 Repainting pixel at X: <c>{pixel_x}</c>, Y: <c>{pixel_y}</c> with color: <c>{pixel_color}</c> for account: <c>{self.account_name}</c>...</g>"
-                )
                 self.start_repaint(pixel_id, pixel_color)
                 charges -= 1
 
