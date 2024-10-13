@@ -111,10 +111,6 @@ class Repaint:
                 return
 
             while charges > 0:
-                self.log.info(
-                    f"<g>🎨 Repainting <c>{charges}</c> pixels for <c>{self.account_name}</c>...</g>"
-                )
-
                 if self.pixels is None or len(self.pixels) == 0:
                     break
 
@@ -127,6 +123,9 @@ class Repaint:
                 pixel_color = random_pixel.get("color", "#000000")
 
                 pixel_id = int(f"{pixel_y}{pixel_x}")
+                self.log.info(
+                    f"<g>🎨 Repainting pixel at X: <c>{pixel_x}</c>, Y: <c>{pixel_y}</c> with color: <c>{pixel_color}</c> for account: <c>{self.account_name}</c>...</g>"
+                )
                 self.start_repaint(pixel_id, pixel_color)
                 charges -= 1
 
