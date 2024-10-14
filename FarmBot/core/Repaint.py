@@ -20,7 +20,7 @@ class Repaint:
 
     def get_template_list(self):
         try:
-            page = [48, 60, 72, 84, 96, 108]
+            page = [24, 36, 48, 60, 72, 84, 96, 108, 120, 132, 144, 156, 168]
             response = self.http.get(
                 f"/api/v1/image/template/list?limit=12&offset={random.choice(page)}"
             )
@@ -87,14 +87,24 @@ class Repaint:
                 )
                 return
 
-            self.set_template(template_id)
-
             self.log.info(
                 f"<g>🖼️ Setting template for <c>{self.account_name}</c>...</g>"
             )
 
-            image_x = template.get("x", 0)
-            image_y = template.get("y", 0)
+            self.set_template(template_id)
+            my_template = self.get_my_template()
+            if my_template is None:
+                return
+
+            template_id = my_template.get("id", None)
+            if template_id is None or template_id == 0:
+                self.log.error(
+                    f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
+                )
+                return
+
+            image_x = my_template.get("x", 0)
+            image_y = my_template.get("y", 0)
 
             await asyncio.sleep(4)
             self.log.info(
@@ -136,7 +146,7 @@ class Repaint:
                 self.start_repaint(pixel_id, pixel_color)
                 charges -= 1
 
-                sleep_random = random.randint(3, 5)
+                sleep_random = random.randint(4, 8)
                 await asyncio.sleep(sleep_random)
 
             self.log.info(
@@ -201,4 +211,15 @@ class Repaint:
             self.log.error(
                 f"<y>🟡 Unable to get task answer, please try again later</y>"
             )
+            return None
+
+    def get_my_template(self):
+        try:
+            response = self.http.get(f"/api/v1/image/template/my")
+            if response is None:
+                return None
+
+            return response
+        except Exception as e:
+            self.log.error(f"<r>❌ Error getting my template: {e}</r>")
             return None
