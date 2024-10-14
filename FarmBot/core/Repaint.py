@@ -92,6 +92,7 @@ class Repaint:
             )
 
             self.set_template(template_id)
+            await asyncio.sleep(1)
             my_template = self.get_my_template()
             if my_template is None:
                 return
@@ -106,7 +107,7 @@ class Repaint:
             image_x = my_template.get("x", 0)
             image_y = my_template.get("y", 0)
 
-            await asyncio.sleep(4)
+            await asyncio.sleep(3)
             self.log.info(
                 f"<g>📷 Fetching pixels for the template <c>{template_id}</c> from the API for account <c>{self.account_name}</c>...</g>"
             )
@@ -146,7 +147,7 @@ class Repaint:
                 self.start_repaint(pixel_id, pixel_color)
                 charges -= 1
 
-                sleep_random = random.randint(4, 8)
+                sleep_random = random.randint(5, 10)
                 await asyncio.sleep(sleep_random)
 
             self.log.info(
