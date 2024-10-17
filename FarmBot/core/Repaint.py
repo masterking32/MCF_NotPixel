@@ -71,38 +71,45 @@ class Repaint:
             if templates is None:
                 return
 
-            template = random.choice(templates)
-            template_id = template.get("templateId", None)
-            if template_id is None:
-                self.log.error(
-                    f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
-                )
-                return
+            template_id = random.choice([95736407, 365560315])
+            # template = random.choice(templates)
+            # template_id = template.get("templateId", None)
+            # if template_id is None:
+            #     self.log.error(
+            #         f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
+            #     )
+            #     return
+            # template = self.get_template(template_id)
+            # if template is None:
+            #     self.log.error(
+            #         f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
+            #     )
+            #     return
+            # self.log.info(
+            #     f"<g>🖼️ Setting template for <c>{self.account_name}</c>...</g>"
+            # )
 
-            template = self.get_template(template_id)
-
-            if template is None:
-                self.log.error(
-                    f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
-                )
-                return
-
-            self.log.info(
-                f"<g>🖼️ Setting template for <c>{self.account_name}</c>...</g>"
-            )
-
-            self.set_template(template_id)
-            await asyncio.sleep(1)
             my_template = self.get_my_template()
             if my_template is None:
                 return
 
-            template_id = my_template.get("id", None)
-            if template_id is None or template_id == 0:
-                self.log.error(
-                    f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
+            if my_template.get("id", 0) != template_id:
+                self.log.info(
+                    f"<g>🖼️ Setting template for <c>{self.account_name}</c>...</g>"
                 )
-                return
+                await asyncio.sleep(1)
+                self.set_template(template_id)
+                await asyncio.sleep(1)
+                my_template = self.get_my_template()
+                if my_template is None:
+                    return
+
+                template_id = my_template.get("id", None)
+                if template_id is None or template_id == 0:
+                    self.log.error(
+                        f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
+                    )
+                    return
 
             image_x = my_template.get("x", 0)
             image_y = my_template.get("y", 0)
