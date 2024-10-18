@@ -91,7 +91,7 @@ class Repaint:
 
             my_template = self.get_my_template()
             if my_template is None:
-                return
+                my_template = {}
 
             if my_template.get("id", 0) != template_id:
                 self.log.info(
@@ -223,7 +223,7 @@ class Repaint:
 
     def get_my_template(self):
         try:
-            response = self.http.get(f"/api/v1/image/template/my")
+            response = self.http.get(f"/api/v1/image/template/my", display_errors=False)
             if response is None:
                 return None
 
