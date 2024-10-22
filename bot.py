@@ -83,7 +83,7 @@ async def check_cd(log, bot_globals):
 BOT_ID = "notpixel"
 REFERRAL_TOKEN = utilities.getConfig(
     "referral_token",
-    random.choice(["f95736407", "f365560315"]),
+    "f95736407",
 )
 SHORT_APP_NAME = "app"
 APP_URL = None
@@ -169,7 +169,7 @@ async def process_pg_account(account, bot_globals, log, group_id=None):
 
         referral = REFERRAL_TOKEN
         if referral is None or referral == "" or not referral.startswith("f"):
-            referral = random.choice(["f95736407", "f365560315"])
+            referral = "f95736407"
 
         tg = tgAccount(
             bot_globals=bot_globals,

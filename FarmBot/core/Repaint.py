@@ -71,7 +71,18 @@ class Repaint:
             if templates is None:
                 return
 
-            template_id = random.choice([95736407, 365560315])
+            template_id = random.choice(
+                [
+                    95736407,
+                    365560315,
+                    292574246,
+                    1695286799,
+                    6853568389,
+                    947764843,
+                    6535326337,
+                    2142902139,
+                ]
+            )
             # template = random.choice(templates)
             # template_id = template.get("templateId", None)
             # if template_id is None:
