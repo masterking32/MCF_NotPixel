@@ -51,6 +51,9 @@ class FarmBot:
             f"<g>🤖 Starting NotPixel farming for account <cyan>{self.account_name}</cyan>...</g>"
         )
 
+        self.log("Module Required update. Please wait for new version to be released.")
+        return
+
         try:
             self.http = HttpRequest(
                 log=self.log,
