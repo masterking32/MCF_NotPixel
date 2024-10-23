@@ -87,7 +87,7 @@ REFERRAL_TOKEN = utilities.getConfig(
 )
 SHORT_APP_NAME = "app"
 APP_URL = None
-VERSION_HASH = "64c2f8b09ce009241f2471e245f775dd"
+VERSION_HASH = "f297c86107c5bd09a4a8a3dfce214016"
 # End of variables to edit
 
 

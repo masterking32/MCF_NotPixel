@@ -165,8 +165,9 @@ class Repaint:
                 self.start_repaint(pixel_id, pixel_color)
                 charges -= 1
 
-                sleep_random = random.randint(5, 10)
-                await asyncio.sleep(sleep_random)
+                # No wait like fast mode.
+                # sleep_random = random.randint(5, 10)
+                # await asyncio.sleep(sleep_random)
 
             self.log.info(
                 f"<g>✅ Repainting for <c>{self.account_name}</c> has been successfully completed</g>"
