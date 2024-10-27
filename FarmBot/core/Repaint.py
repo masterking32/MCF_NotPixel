@@ -20,7 +20,7 @@ class Repaint:
 
     def get_template_list(self):
         try:
-            page = [24, 36, 48, 60, 72, 84, 96, 108, 120, 132, 144, 156, 168]
+            page = [24]
             response = self.http.get(
                 f"/api/v1/image/template/list?limit=12&offset={random.choice(page)}"
             )
@@ -71,34 +71,31 @@ class Repaint:
             if templates is None:
                 return
 
-            template_id = random.choice(
-                [
-                    95736407,
-                    365560315,
-                    292574246,
-                    1695286799,
-                    6853568389,
-                    947764843,
-                    6535326337,
-                    2142902139,
-                ]
-            )
-            # template = random.choice(templates)
-            # template_id = template.get("templateId", None)
-            # if template_id is None:
-            #     self.log.error(
-            #         f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
-            #     )
-            #     return
-            # template = self.get_template(template_id)
-            # if template is None:
-            #     self.log.error(
-            #         f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
-            #     )
-            #     return
-            # self.log.info(
-            #     f"<g>🖼️ Setting template for <c>{self.account_name}</c>...</g>"
+            # template_id = random.choice(
+            #     [
+            #         95736407,
+            #         365560315,
+            #         292574246,
+            #         1695286799,
+            #         6853568389,
+            #         947764843,
+            #         6535326337,
+            #         2142902139,
+            #     ]
             # )
+            template = random.choice(templates)
+            template_id = template.get("templateId", None)
+            if template_id is None:
+                self.log.error(
+                    f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
+                )
+                return
+            template = self.get_template(template_id)
+            if template is None:
+                self.log.error(
+                    f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
+                )
+                return
 
             my_template = self.get_my_template()
             if my_template is None:
