@@ -60,6 +60,28 @@ class Tasks:
                     await self.tgAccount.joinChat(channel)
                 else:
                     return
+            elif task == "pixelInNickname":
+                if self.tgAccount is None:
+                    return
+
+                tgMe = self.tgAccount.me if self.tgAccount.me else None
+                if tgMe is None:
+                    return
+
+                tgMe.first_name = tgMe.first_name or ""
+                tgMe.last_name = tgMe.last_name or ""
+
+                if "▪️" not in tgMe.last_name and "▪️" not in tgMe.first_name:
+                    await self.tgAccount.setName(tgMe.first_name, tgMe.last_name + "▪️")
+                    self.log.info(
+                        f"<cyan>{self.account_name}</cyan><g> | ▪️ Tag has been added to the last name!</g>"
+                    )
+
+                    await asyncio.sleep(3)
+                else:
+                    self.log.info(
+                        f"<cyan>{self.account_name}</cyan><g> | ▪️ Tag already exists!</g>"
+                    )
 
             self.log.info(f"<g>🔍 Checking task: </g><c>{task}</c>")
             response = self.check_task(task)
@@ -90,6 +112,7 @@ class Tasks:
             else:
                 url = f"{url}{task}"
 
+            print(url)
             response = self.http.get(url)
             if response is None:
                 return None
