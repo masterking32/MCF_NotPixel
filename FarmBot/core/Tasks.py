@@ -112,7 +112,6 @@ class Tasks:
             else:
                 url = f"{url}{task}"
 
-            print(url)
             response = self.http.get(url)
             if response is None:
                 return None
