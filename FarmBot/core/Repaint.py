@@ -7,6 +7,7 @@
 import asyncio
 import json
 import random
+import time
 from mcf_utils.api import API
 
 
@@ -57,6 +58,26 @@ class Repaint:
         except Exception as e:
             self.log.error(f"<r>❌ Error setting template: {e}</r>")
             return None
+
+    def do_halloween_repaint(self, charges=0):
+        try:
+            if charges == 0:
+                self.log.info(f"<y>🟡 No charges for halloween repaint</y>")
+                return
+            self.log.info(f"<g>🎃 Start halloween task...</g>")
+
+            for i in range(charges):
+                self.log.info(f"<g>🎃 Repainting pixel {i+1}/{charges}...</g>")
+
+                data = {"pixelId": 281789, "type": 7}
+                data["pixelId"] = 280000 + random.randint(1000, 3000)
+                self.http.post(url="api/v1/repaint/special", data=json.dumps(data))
+                self.log.info(f"<g>🎃 Repainted pixel {i+1}/{charges}...</g>")
+                time.sleep(1)
+        except Exception as e:
+            self.log.error(
+                f"<r>❌ Error repainting pixels for <c>{self.account_name}</c>: {e}</r>"
+            )
 
     async def do_repaint(self, charges=0):
         try:

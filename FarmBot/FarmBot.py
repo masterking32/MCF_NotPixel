@@ -179,14 +179,22 @@ class FarmBot:
             else:
                 self.log.info(f"<y>🟡 Auto-finish tasks is disabled</y>")
 
+            repaint = Repaint(
+                log=self.log,
+                httpRequest=self.http,
+                account_name=self.account_name,
+                license_key=license_key,
+            )
+
+            status_halloween = status.get("goods", {}).get("7", 0)
+            if status_halloween > 0:
+                repaint.do_halloween_repaint(charges=status_halloween)
+                self.log.info(
+                    f"<g>🎃 Account <c>{self.account_name}</c> has successfully repainted <c>{status_halloween} 🪫</c> for Halloween</g>"
+                )
+
             if getConfig("auto_repaint", True):
                 if status_charges > 0:
-                    repaint = Repaint(
-                        log=self.log,
-                        httpRequest=self.http,
-                        account_name=self.account_name,
-                        license_key=license_key,
-                    )
                     await repaint.do_repaint(charges=status_charges)
                 else:
                     self.log.info(
