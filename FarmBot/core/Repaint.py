@@ -21,7 +21,8 @@ class Repaint:
 
     def get_template_list(self):
         try:
-            page = [24]
+            # page = [24]
+            page = [0]
             response = self.http.get(
                 f"/api/v1/image/template/list?limit=12&offset={random.choice(page)}"
             )
@@ -92,20 +93,17 @@ class Repaint:
             if templates is None:
                 return
 
-            # template_id = random.choice(
-            #     [
-            #         95736407,
-            #         365560315,
-            #         292574246,
-            #         1695286799,
-            #         6853568389,
-            #         947764843,
-            #         6535326337,
-            #         2142902139,
-            #     ]
-            # )
-            template = random.choice(templates)
-            template_id = template.get("templateId", None)
+            template_id = random.choice(
+                [
+                    95736407,
+                    1211823521,
+                    6172166098,
+                    1367422017,
+                    6488265864,
+                ]
+            )
+            # template = random.choice(templates)
+            # template_id = template.get("templateId", None)
             if template_id is None:
                 self.log.error(
                     f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
