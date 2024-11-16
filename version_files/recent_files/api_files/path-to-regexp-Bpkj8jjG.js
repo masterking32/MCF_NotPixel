@@ -1,258 +1,171 @@
-< !DOCTYPE html >
-  <
-  html lang = "en" >
-  <
-  head >
-  <
-  meta charset = "utf-8" / >
-  <
-  meta name = "viewport"
-content = "user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" / >
-  <
-  meta name = "theme-color"
-content = "#1e2732" >
-  <
-  meta name = "msapplication-TileColor"
-content = "#161e27" >
-  <
-  meta name = "apple-mobile-web-app-title"
-content = "Not Pixel" >
-  <
-  meta name = "application-name"
-content = "Not Pixel" >
-  <
-  meta property = "og:site_name"
-content = "Not Pixel" >
-  <
-  meta property = "og:title"
-content = "Paint pixels and get Not Pixels!" >
-  <
-  meta property = "og:description"
-content = "Pixel Battle based on Telegram and TON blockchain." >
-  <
-  meta property = "og:url"
-content = "https://app.notpx.app/" / >
-  <
-  meta property = "og:image"
-content = "https://app.notpx.app/notpixel.png" >
-  <
-  link rel = "icon"
-href = "https://app.notpx.app/favicon.ico" / >
-  <
-  link rel = "apple-touch-icon"
-sizes = "180x180"
-href = "https://app.notpx.app/apple-touch-icon.png" >
-  <
-  link rel = "icon"
-type = "image/png"
-sizes = "32x32"
-href = "https://app.notpx.app/favicon-32x32.png" >
-  <
-  link rel = "icon"
-type = "image/png"
-sizes = "16x16"
-href = "https://app.notpx.app/favicon-16x16.png" >
-  <
-  link rel = "manifest"
-href = "https://app.notpx.app/site.webmanifest" >
-  <
-  link rel = "mask-icon"
-href = "https://app.notpx.app/safari-pinned-tab.svg"
-color = "#161e27" >
-  <
-  title > Not Pixel < /title> <
-  script src = "https://telegram.org/js/telegram-web-app.js" > < /script> <
-  script src = "https://tganalytics.xyz/index.js"
-type = "text/javascript" > < /script> <
-  script >
-  window.Telegram.WebApp.expand();
-window.Telegram.WebApp.headerColor = "#171f2a";
-if (window.Telegram.WebApp.isVersionAtLeast("7.7")) {
-  window.Telegram.WebApp.disableVerticalSwipes();
-} <
-/script> <
-script src = "./pixi.min.js" > < /script> <
-  script src = "./viewport.min.js" > < /script> <
-  script defer data - domain = "notpx.app"
-src = "https://plausible.joincommunity.xyz/js/script.js" > < /script> <
-  !-- < script src = "https://sad.adsgram.ai/js/sad.min.js" > < /script>--> <
-  script type = "module"
-crossorigin src = "/assets/index-D2JmPGMg.js" > < /script> <
-  link rel = "modulepreload"
-crossorigin href = "/assets/vite-plugin-node-polyfills-BVIVvkCX.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/events-bk97flgb.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/yallist-Ce8uAuvz.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/lru-cache-3TXFCret.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/semver-Og4YvWUh.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/rxjs-D-QMI6lw.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@ledgerhq-BW4RAlPi.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-DjWS3H3h.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/scheduler-CzFDRTuY.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-dom-DCoj3sTC.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/redux-DITMfSWq.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/immer-AZmEbvJU.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/reselect-BeKUwQU7.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/redux-thunk-ClJT1hhx.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@reduxjs-WPf4Nv7j.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/axios-BdInfei4.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/use-sync-external-store-BIcyVYYg.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-redux-BljSBgeC.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@babel-OEIDM1DX.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/prop-types-DK12qZJk.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/resolve-pathname-D6XOvX2q.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/tiny-invariant-BaFNuDhB.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/history-COziRoqA.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/isarray-Dmh8zLWU.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/path-to-regexp-Bpkj8jjG.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/hoist-non-react-statics-DQogQWOa.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-router-BhXvGmnQ.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/framer-motion-BggZOsGS.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/yaml-Dy-SgT9h.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/classnames-D-x1NdaJ.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/tweetnacl-util-B9eApQKV.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/is-hex-prefixed-Chswt-_p.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/strip-hex-prefix-DJeEoz3i.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/number-to-bn-VwIxN61R.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/ethjs-unit-bvdJTi0B.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/isomorphic-webcrypto-Cp7ugTe2.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/tonweb-BaiZR3hJ.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/tweetnacl-DeYMGiLl.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/ua-parser-js-9NRjnSWS.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/deepmerge-D9PnGD7j.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@tonconnect-CKEjIK8E.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/symbol.inspect-CD8uWkLQ.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/jssha-Dj0pk0Xq.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/dataloader-7UOpijhF.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/zod-Dbq4cBMj.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@ton-CABtnvlX.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@react-spring-BiYD2lL6.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/centrifuge-B3TpHLNx.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/fflate-DRb3BoOD.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/void-elements-CbcVFbPk.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/html-parse-stringify-Cy9TkeAK.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-i18next-DUbAQzaN.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-range-COVt_hlT.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/chroma-js-CHvE9HB5.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-router-dom-CKnOmWyG.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/i18next-vSwsns86.js" >
-  <
-  link rel = "stylesheet"
-crossorigin href = "/assets/index-vh7dyUcZ.css" >
-  <
-  /head> <
-  body >
-  <
-  noscript > You need to enable JavaScript to run this app < /noscript> <
-  div id = "root" > < /div> <
-  /body> <
-  /html>
+import {
+  a as F
+} from "./@ledgerhq-BW4RAlPi.js";
+import {
+  i as P
+} from "./isarray-Dmh8zLWU.js";
+var h = {
+    exports: {}
+  },
+  E = P;
+h.exports = U;
+h.exports.parse = m;
+h.exports.compile = J;
+h.exports.tokensToFunction = b;
+h.exports.tokensToRegExp = C;
+var G = new RegExp(["(\\\\.)", "([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))"].join("|"), "g");
+
+function m(r, e) {
+  for (var a = [], p = 0, c = 0, n = "", u = e && e.delimiter || "/", i;
+    (i = G.exec(r)) != null;) {
+    var g = i[0],
+      f = i[1],
+      l = i.index;
+    if (n += r.slice(c, l), c = l + g.length, f) {
+      n += f[1];
+      continue
+    }
+    var t = r[c],
+      o = i[2],
+      v = i[3],
+      x = i[4],
+      A = i[5],
+      s = i[6],
+      T = i[7];
+    n && (a.push(n), n = "");
+    var S = o != null && t != null && t !== o,
+      I = s === "+" || s === "*",
+      D = s === "?" || s === "*",
+      $ = i[2] || u,
+      y = x || A;
+    a.push({
+      name: v || p++,
+      prefix: o || "",
+      delimiter: $,
+      optional: D,
+      repeat: I,
+      partial: S,
+      asterisk: !!T,
+      pattern: y ? j(y) : T ? ".*" : "[^" + d($) + "]+?"
+    })
+  }
+  return c < r.length && (n += r.substr(c)), n && a.push(n), a
+}
+
+function J(r, e) {
+  return b(m(r, e), e)
+}
+
+function N(r) {
+  return encodeURI(r).replace(/[\/?#]/g, function(e) {
+    return "%" + e.charCodeAt(0).toString(16).toUpperCase()
+  })
+}
+
+function O(r) {
+  return encodeURI(r).replace(/[?#]/g, function(e) {
+    return "%" + e.charCodeAt(0).toString(16).toUpperCase()
+  })
+}
+
+function b(r, e) {
+  for (var a = new Array(r.length), p = 0; p < r.length; p++) typeof r[p] == "object" && (a[p] = new RegExp("^(?:" + r[p].pattern + ")$", w(e)));
+  return function(c, n) {
+    for (var u = "", i = c || {}, g = n || {}, f = g.pretty ? N : encodeURIComponent, l = 0; l < r.length; l++) {
+      var t = r[l];
+      if (typeof t == "string") {
+        u += t;
+        continue
+      }
+      var o = i[t.name],
+        v;
+      if (o == null)
+        if (t.optional) {
+          t.partial && (u += t.prefix);
+          continue
+        } else throw new TypeError('Expected "' + t.name + '" to be defined');
+      if (E(o)) {
+        if (!t.repeat) throw new TypeError('Expected "' + t.name + '" to not repeat, but received `' + JSON.stringify(o) + "`");
+        if (o.length === 0) {
+          if (t.optional) continue;
+          throw new TypeError('Expected "' + t.name + '" to not be empty')
+        }
+        for (var x = 0; x < o.length; x++) {
+          if (v = f(o[x]), !a[l].test(v)) throw new TypeError('Expected all "' + t.name + '" to match "' + t.pattern + '", but received `' + JSON.stringify(v) + "`");
+          u += (x === 0 ? t.prefix : t.delimiter) + v
+        }
+        continue
+      }
+      if (v = t.asterisk ? O(o) : f(o), !a[l].test(v)) throw new TypeError('Expected "' + t.name + '" to match "' + t.pattern + '", but received "' + v + '"');
+      u += t.prefix + v
+    }
+    return u
+  }
+}
+
+function d(r) {
+  return r.replace(/([.+*?=^!:${}()[\]|\/\\])/g, "\\$1")
+}
+
+function j(r) {
+  return r.replace(/([=!:$\/()])/g, "\\$1")
+}
+
+function R(r, e) {
+  return r.keys = e, r
+}
+
+function w(r) {
+  return r && r.sensitive ? "" : "i"
+}
+
+function H(r, e) {
+  var a = r.source.match(/\((?!\?)/g);
+  if (a)
+    for (var p = 0; p < a.length; p++) e.push({
+      name: p,
+      prefix: null,
+      delimiter: null,
+      optional: !1,
+      repeat: !1,
+      partial: !1,
+      asterisk: !1,
+      pattern: null
+    });
+  return R(r, e)
+}
+
+function K(r, e, a) {
+  for (var p = [], c = 0; c < r.length; c++) p.push(U(r[c], e, a).source);
+  var n = new RegExp("(?:" + p.join("|") + ")", w(a));
+  return R(n, e)
+}
+
+function W(r, e, a) {
+  return C(m(r, a), e, a)
+}
+
+function C(r, e, a) {
+  E(e) || (a = e || a, e = []), a = a || {};
+  for (var p = a.strict, c = a.end !== !1, n = "", u = 0; u < r.length; u++) {
+    var i = r[u];
+    if (typeof i == "string") n += d(i);
+    else {
+      var g = d(i.prefix),
+        f = "(?:" + i.pattern + ")";
+      e.push(i), i.repeat && (f += "(?:" + g + f + ")*"), i.optional ? i.partial ? f = g + "(" + f + ")?" : f = "(?:" + g + "(" + f + "))?" : f = g + "(" + f + ")", n += f
+    }
+  }
+  var l = d(a.delimiter || "/"),
+    t = n.slice(-l.length) === l;
+  return p || (n = (t ? n.slice(0, -l.length) : n) + "(?:" + l + "(?=$))?"), c ? n += "$" : n += p && t ? "" : "(?=" + l + "|$)", R(new RegExp("^" + n, w(a)), e)
+}
+
+function U(r, e, a) {
+  return E(e) || (a = e || a, e = []), a = a || {}, r instanceof RegExp ? H(r, e) : E(r) ? K(r, e, a) : W(r, e, a)
+}
+var X = h.exports;
+const z = F(X);
+export {
+  z as p
+};

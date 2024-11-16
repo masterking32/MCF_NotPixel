@@ -1,258 +1,182 @@
-< !DOCTYPE html >
-  <
-  html lang = "en" >
-  <
-  head >
-  <
-  meta charset = "utf-8" / >
-  <
-  meta name = "viewport"
-content = "user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" / >
-  <
-  meta name = "theme-color"
-content = "#1e2732" >
-  <
-  meta name = "msapplication-TileColor"
-content = "#161e27" >
-  <
-  meta name = "apple-mobile-web-app-title"
-content = "Not Pixel" >
-  <
-  meta name = "application-name"
-content = "Not Pixel" >
-  <
-  meta property = "og:site_name"
-content = "Not Pixel" >
-  <
-  meta property = "og:title"
-content = "Paint pixels and get Not Pixels!" >
-  <
-  meta property = "og:description"
-content = "Pixel Battle based on Telegram and TON blockchain." >
-  <
-  meta property = "og:url"
-content = "https://app.notpx.app/" / >
-  <
-  meta property = "og:image"
-content = "https://app.notpx.app/notpixel.png" >
-  <
-  link rel = "icon"
-href = "https://app.notpx.app/favicon.ico" / >
-  <
-  link rel = "apple-touch-icon"
-sizes = "180x180"
-href = "https://app.notpx.app/apple-touch-icon.png" >
-  <
-  link rel = "icon"
-type = "image/png"
-sizes = "32x32"
-href = "https://app.notpx.app/favicon-32x32.png" >
-  <
-  link rel = "icon"
-type = "image/png"
-sizes = "16x16"
-href = "https://app.notpx.app/favicon-16x16.png" >
-  <
-  link rel = "manifest"
-href = "https://app.notpx.app/site.webmanifest" >
-  <
-  link rel = "mask-icon"
-href = "https://app.notpx.app/safari-pinned-tab.svg"
-color = "#161e27" >
-  <
-  title > Not Pixel < /title> <
-  script src = "https://telegram.org/js/telegram-web-app.js" > < /script> <
-  script src = "https://tganalytics.xyz/index.js"
-type = "text/javascript" > < /script> <
-  script >
-  window.Telegram.WebApp.expand();
-window.Telegram.WebApp.headerColor = "#171f2a";
-if (window.Telegram.WebApp.isVersionAtLeast("7.7")) {
-  window.Telegram.WebApp.disableVerticalSwipes();
-} <
-/script> <
-script src = "./pixi.min.js" > < /script> <
-  script src = "./viewport.min.js" > < /script> <
-  script defer data - domain = "notpx.app"
-src = "https://plausible.joincommunity.xyz/js/script.js" > < /script> <
-  !-- < script src = "https://sad.adsgram.ai/js/sad.min.js" > < /script>--> <
-  script type = "module"
-crossorigin src = "/assets/index-D2JmPGMg.js" > < /script> <
-  link rel = "modulepreload"
-crossorigin href = "/assets/vite-plugin-node-polyfills-BVIVvkCX.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/events-bk97flgb.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/yallist-Ce8uAuvz.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/lru-cache-3TXFCret.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/semver-Og4YvWUh.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/rxjs-D-QMI6lw.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@ledgerhq-BW4RAlPi.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-DjWS3H3h.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/scheduler-CzFDRTuY.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-dom-DCoj3sTC.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/redux-DITMfSWq.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/immer-AZmEbvJU.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/reselect-BeKUwQU7.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/redux-thunk-ClJT1hhx.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@reduxjs-WPf4Nv7j.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/axios-BdInfei4.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/use-sync-external-store-BIcyVYYg.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-redux-BljSBgeC.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@babel-OEIDM1DX.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/prop-types-DK12qZJk.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/resolve-pathname-D6XOvX2q.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/tiny-invariant-BaFNuDhB.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/history-COziRoqA.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/isarray-Dmh8zLWU.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/path-to-regexp-Bpkj8jjG.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/hoist-non-react-statics-DQogQWOa.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-router-BhXvGmnQ.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/framer-motion-BggZOsGS.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/yaml-Dy-SgT9h.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/classnames-D-x1NdaJ.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/tweetnacl-util-B9eApQKV.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/is-hex-prefixed-Chswt-_p.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/strip-hex-prefix-DJeEoz3i.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/number-to-bn-VwIxN61R.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/ethjs-unit-bvdJTi0B.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/isomorphic-webcrypto-Cp7ugTe2.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/tonweb-BaiZR3hJ.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/tweetnacl-DeYMGiLl.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/ua-parser-js-9NRjnSWS.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/deepmerge-D9PnGD7j.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@tonconnect-CKEjIK8E.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/symbol.inspect-CD8uWkLQ.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/jssha-Dj0pk0Xq.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/dataloader-7UOpijhF.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/zod-Dbq4cBMj.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@ton-CABtnvlX.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@react-spring-BiYD2lL6.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/centrifuge-B3TpHLNx.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/fflate-DRb3BoOD.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/void-elements-CbcVFbPk.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/html-parse-stringify-Cy9TkeAK.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-i18next-DUbAQzaN.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-range-COVt_hlT.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/chroma-js-CHvE9HB5.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-router-dom-CKnOmWyG.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/i18next-vSwsns86.js" >
-  <
-  link rel = "stylesheet"
-crossorigin href = "/assets/index-vh7dyUcZ.css" >
-  <
-  /head> <
-  body >
-  <
-  noscript > You need to enable JavaScript to run this app < /noscript> <
-  div id = "root" > < /div> <
-  /body> <
-  /html>
+function n(e) {
+  return `Minified Redux error #${e}; visit https://redux.js.org/Errors?code=${e} for the full message or use the non-minified dev environment for full errors. `
+}
+var P = typeof Symbol == "function" && Symbol.observable || "@@observable",
+  N = P,
+  O = () => Math.random().toString(36).substring(7).split("").join("."),
+  S = {
+    INIT: `@@redux/INIT${O()}`,
+    REPLACE: `@@redux/REPLACE${O()}`,
+    PROBE_UNKNOWN_ACTION: () => `@@redux/PROBE_UNKNOWN_ACTION${O()}`
+  },
+  g = S;
+
+function m(e) {
+  if (typeof e != "object" || e === null) return !1;
+  let t = e;
+  for (; Object.getPrototypeOf(t) !== null;) t = Object.getPrototypeOf(t);
+  return Object.getPrototypeOf(e) === t || Object.getPrototypeOf(e) === null
+}
+
+function R(e, t, r) {
+  if (typeof e != "function") throw new Error(n(2));
+  if (typeof t == "function" && typeof r == "function" || typeof r == "function" && typeof arguments[3] == "function") throw new Error(n(0));
+  if (typeof t == "function" && typeof r > "u" && (r = t, t = void 0), typeof r < "u") {
+    if (typeof r != "function") throw new Error(n(1));
+    return r(R)(e, t)
+  }
+  let u = e,
+    c = t,
+    o = new Map,
+    i = o,
+    y = 0,
+    f = !1;
+
+  function p() {
+    i === o && (i = new Map, o.forEach((s, l) => {
+      i.set(l, s)
+    }))
+  }
+
+  function w() {
+    if (f) throw new Error(n(3));
+    return c
+  }
+
+  function b(s) {
+    if (typeof s != "function") throw new Error(n(4));
+    if (f) throw new Error(n(5));
+    let l = !0;
+    p();
+    const a = y++;
+    return i.set(a, s),
+      function() {
+        if (l) {
+          if (f) throw new Error(n(6));
+          l = !1, p(), i.delete(a), o = null
+        }
+      }
+  }
+
+  function h(s) {
+    if (!m(s)) throw new Error(n(7));
+    if (typeof s.type > "u") throw new Error(n(8));
+    if (typeof s.type != "string") throw new Error(n(17));
+    if (f) throw new Error(n(9));
+    try {
+      f = !0, c = u(c, s)
+    } finally {
+      f = !1
+    }
+    return (o = i).forEach(a => {
+      a()
+    }), s
+  }
+
+  function E(s) {
+    if (typeof s != "function") throw new Error(n(10));
+    u = s, h({
+      type: g.REPLACE
+    })
+  }
+
+  function d() {
+    const s = b;
+    return {
+      subscribe(l) {
+        if (typeof l != "object" || l === null) throw new Error(n(11));
+
+        function a() {
+          const v = l;
+          v.next && v.next(w())
+        }
+        return a(), {
+          unsubscribe: s(a)
+        }
+      },
+      [N]() {
+        return this
+      }
+    }
+  }
+  return h({
+    type: g.INIT
+  }), {
+    dispatch: h,
+    subscribe: b,
+    getState: w,
+    replaceReducer: E,
+    [N]: d
+  }
+}
+
+function x(e) {
+  Object.keys(e).forEach(t => {
+    const r = e[t];
+    if (typeof r(void 0, {
+        type: g.INIT
+      }) > "u") throw new Error(n(12));
+    if (typeof r(void 0, {
+        type: g.PROBE_UNKNOWN_ACTION()
+      }) > "u") throw new Error(n(13))
+  })
+}
+
+function C(e) {
+  const t = Object.keys(e),
+    r = {};
+  for (let o = 0; o < t.length; o++) {
+    const i = t[o];
+    typeof e[i] == "function" && (r[i] = e[i])
+  }
+  const u = Object.keys(r);
+  let c;
+  try {
+    x(r)
+  } catch (o) {
+    c = o
+  }
+  return function(i = {}, y) {
+    if (c) throw c;
+    let f = !1;
+    const p = {};
+    for (let w = 0; w < u.length; w++) {
+      const b = u[w],
+        h = r[b],
+        E = i[b],
+        d = h(E, y);
+      if (typeof d > "u") throw y && y.type, new Error(n(14));
+      p[b] = d, f = f || d !== E
+    }
+    return f = f || u.length !== Object.keys(i).length, f ? p : i
+  }
+}
+
+function A(...e) {
+  return e.length === 0 ? t => t : e.length === 1 ? e[0] : e.reduce((t, r) => (...u) => t(r(...u)))
+}
+
+function T(...e) {
+  return t => (r, u) => {
+    const c = t(r, u);
+    let o = () => {
+      throw new Error(n(15))
+    };
+    const i = {
+        getState: c.getState,
+        dispatch: (f, ...p) => o(f, ...p)
+      },
+      y = e.map(f => f(i));
+    return o = A(...y)(c.dispatch), {
+      ...c,
+      dispatch: o
+    }
+  }
+}
+
+function _(e) {
+  return m(e) && "type" in e && typeof e.type == "string"
+}
+export {
+  T as a, R as b, C as c, A as d, _ as e, m as i
+};

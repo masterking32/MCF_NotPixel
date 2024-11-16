@@ -1,258 +1,252 @@
-< !DOCTYPE html >
-  <
-  html lang = "en" >
-  <
-  head >
-  <
-  meta charset = "utf-8" / >
-  <
-  meta name = "viewport"
-content = "user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" / >
-  <
-  meta name = "theme-color"
-content = "#1e2732" >
-  <
-  meta name = "msapplication-TileColor"
-content = "#161e27" >
-  <
-  meta name = "apple-mobile-web-app-title"
-content = "Not Pixel" >
-  <
-  meta name = "application-name"
-content = "Not Pixel" >
-  <
-  meta property = "og:site_name"
-content = "Not Pixel" >
-  <
-  meta property = "og:title"
-content = "Paint pixels and get Not Pixels!" >
-  <
-  meta property = "og:description"
-content = "Pixel Battle based on Telegram and TON blockchain." >
-  <
-  meta property = "og:url"
-content = "https://app.notpx.app/" / >
-  <
-  meta property = "og:image"
-content = "https://app.notpx.app/notpixel.png" >
-  <
-  link rel = "icon"
-href = "https://app.notpx.app/favicon.ico" / >
-  <
-  link rel = "apple-touch-icon"
-sizes = "180x180"
-href = "https://app.notpx.app/apple-touch-icon.png" >
-  <
-  link rel = "icon"
-type = "image/png"
-sizes = "32x32"
-href = "https://app.notpx.app/favicon-32x32.png" >
-  <
-  link rel = "icon"
-type = "image/png"
-sizes = "16x16"
-href = "https://app.notpx.app/favicon-16x16.png" >
-  <
-  link rel = "manifest"
-href = "https://app.notpx.app/site.webmanifest" >
-  <
-  link rel = "mask-icon"
-href = "https://app.notpx.app/safari-pinned-tab.svg"
-color = "#161e27" >
-  <
-  title > Not Pixel < /title> <
-  script src = "https://telegram.org/js/telegram-web-app.js" > < /script> <
-  script src = "https://tganalytics.xyz/index.js"
-type = "text/javascript" > < /script> <
-  script >
-  window.Telegram.WebApp.expand();
-window.Telegram.WebApp.headerColor = "#171f2a";
-if (window.Telegram.WebApp.isVersionAtLeast("7.7")) {
-  window.Telegram.WebApp.disableVerticalSwipes();
-} <
-/script> <
-script src = "./pixi.min.js" > < /script> <
-  script src = "./viewport.min.js" > < /script> <
-  script defer data - domain = "notpx.app"
-src = "https://plausible.joincommunity.xyz/js/script.js" > < /script> <
-  !-- < script src = "https://sad.adsgram.ai/js/sad.min.js" > < /script>--> <
-  script type = "module"
-crossorigin src = "/assets/index-D2JmPGMg.js" > < /script> <
-  link rel = "modulepreload"
-crossorigin href = "/assets/vite-plugin-node-polyfills-BVIVvkCX.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/events-bk97flgb.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/yallist-Ce8uAuvz.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/lru-cache-3TXFCret.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/semver-Og4YvWUh.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/rxjs-D-QMI6lw.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@ledgerhq-BW4RAlPi.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-DjWS3H3h.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/scheduler-CzFDRTuY.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-dom-DCoj3sTC.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/redux-DITMfSWq.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/immer-AZmEbvJU.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/reselect-BeKUwQU7.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/redux-thunk-ClJT1hhx.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@reduxjs-WPf4Nv7j.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/axios-BdInfei4.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/use-sync-external-store-BIcyVYYg.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-redux-BljSBgeC.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@babel-OEIDM1DX.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/prop-types-DK12qZJk.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/resolve-pathname-D6XOvX2q.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/tiny-invariant-BaFNuDhB.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/history-COziRoqA.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/isarray-Dmh8zLWU.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/path-to-regexp-Bpkj8jjG.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/hoist-non-react-statics-DQogQWOa.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-router-BhXvGmnQ.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/framer-motion-BggZOsGS.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/yaml-Dy-SgT9h.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/classnames-D-x1NdaJ.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/tweetnacl-util-B9eApQKV.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/is-hex-prefixed-Chswt-_p.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/strip-hex-prefix-DJeEoz3i.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/number-to-bn-VwIxN61R.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/ethjs-unit-bvdJTi0B.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/isomorphic-webcrypto-Cp7ugTe2.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/tonweb-BaiZR3hJ.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/tweetnacl-DeYMGiLl.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/ua-parser-js-9NRjnSWS.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/deepmerge-D9PnGD7j.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@tonconnect-CKEjIK8E.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/symbol.inspect-CD8uWkLQ.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/jssha-Dj0pk0Xq.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/dataloader-7UOpijhF.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/zod-Dbq4cBMj.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@ton-CABtnvlX.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/@react-spring-BiYD2lL6.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/centrifuge-B3TpHLNx.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/fflate-DRb3BoOD.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/void-elements-CbcVFbPk.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/html-parse-stringify-Cy9TkeAK.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-i18next-DUbAQzaN.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-range-COVt_hlT.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/chroma-js-CHvE9HB5.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/react-router-dom-CKnOmWyG.js" >
-  <
-  link rel = "modulepreload"
-crossorigin href = "/assets/i18next-vSwsns86.js" >
-  <
-  link rel = "stylesheet"
-crossorigin href = "/assets/index-vh7dyUcZ.css" >
-  <
-  /head> <
-  body >
-  <
-  noscript > You need to enable JavaScript to run this app < /noscript> <
-  div id = "root" > < /div> <
-  /body> <
-  /html>
+var H = {
+    exports: {}
+  },
+  J = {};
+/**
+ * @license React
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+(function(l) {
+  function P(n, e) {
+    var t = n.length;
+    n.push(e);
+    n: for (; 0 < t;) {
+      var i = t - 1 >>> 1,
+        r = n[i];
+      if (0 < h(r, e)) n[i] = e, n[t] = r, t = i;
+      else break n
+    }
+  }
+
+  function o(n) {
+    return n.length === 0 ? null : n[0]
+  }
+
+  function _(n) {
+    if (n.length === 0) return null;
+    var e = n[0],
+      t = n.pop();
+    if (t !== e) {
+      n[0] = t;
+      n: for (var i = 0, r = n.length, w = r >>> 1; i < w;) {
+        var v = 2 * (i + 1) - 1,
+          N = n[v],
+          b = v + 1,
+          I = n[b];
+        if (0 > h(N, t)) b < r && 0 > h(I, N) ? (n[i] = I, n[b] = t, i = b) : (n[i] = N, n[v] = t, i = v);
+        else if (b < r && 0 > h(I, t)) n[i] = I, n[b] = t, i = b;
+        else break n
+      }
+    }
+    return e
+  }
+
+  function h(n, e) {
+    var t = n.sortIndex - e.sortIndex;
+    return t !== 0 ? t : n.id - e.id
+  }
+  if (typeof performance == "object" && typeof performance.now == "function") {
+    var K = performance;
+    l.unstable_now = function() {
+      return K.now()
+    }
+  } else {
+    var R = Date,
+      O = R.now();
+    l.unstable_now = function() {
+      return R.now() - O
+    }
+  }
+  var f = [],
+    c = [],
+    Q = 1,
+    a = null,
+    u = 3,
+    m = !1,
+    s = !1,
+    y = !1,
+    j = typeof setTimeout == "function" ? setTimeout : null,
+    B = typeof clearTimeout == "function" ? clearTimeout : null,
+    D = typeof setImmediate < "u" ? setImmediate : null;
+  typeof navigator < "u" && navigator.scheduling !== void 0 && navigator.scheduling.isInputPending !== void 0 && navigator.scheduling.isInputPending.bind(navigator.scheduling);
+
+  function T(n) {
+    for (var e = o(c); e !== null;) {
+      if (e.callback === null) _(c);
+      else if (e.startTime <= n) _(c), e.sortIndex = e.expirationTime, P(f, e);
+      else break;
+      e = o(c)
+    }
+  }
+
+  function E(n) {
+    if (y = !1, T(n), !s)
+      if (o(f) !== null) s = !0, M(C);
+      else {
+        var e = o(c);
+        e !== null && F(E, e.startTime - n)
+      }
+  }
+
+  function C(n, e) {
+    s = !1, y && (y = !1, B(d), d = -1), m = !0;
+    var t = u;
+    try {
+      for (T(e), a = o(f); a !== null && (!(a.expirationTime > e) || n && !A());) {
+        var i = a.callback;
+        if (typeof i == "function") {
+          a.callback = null, u = a.priorityLevel;
+          var r = i(a.expirationTime <= e);
+          e = l.unstable_now(), typeof r == "function" ? a.callback = r : a === o(f) && _(f), T(e)
+        } else _(f);
+        a = o(f)
+      }
+      if (a !== null) var w = !0;
+      else {
+        var v = o(c);
+        v !== null && F(E, v.startTime - e), w = !1
+      }
+      return w
+    } finally {
+      a = null, u = t, m = !1
+    }
+  }
+  var k = !1,
+    p = null,
+    d = -1,
+    q = 5,
+    z = -1;
+
+  function A() {
+    return !(l.unstable_now() - z < q)
+  }
+
+  function L() {
+    if (p !== null) {
+      var n = l.unstable_now();
+      z = n;
+      var e = !0;
+      try {
+        e = p(!0, n)
+      } finally {
+        e ? g() : (k = !1, p = null)
+      }
+    } else k = !1
+  }
+  var g;
+  if (typeof D == "function") g = function() {
+    D(L)
+  };
+  else if (typeof MessageChannel < "u") {
+    var G = new MessageChannel,
+      S = G.port2;
+    G.port1.onmessage = L, g = function() {
+      S.postMessage(null)
+    }
+  } else g = function() {
+    j(L, 0)
+  };
+
+  function M(n) {
+    p = n, k || (k = !0, g())
+  }
+
+  function F(n, e) {
+    d = j(function() {
+      n(l.unstable_now())
+    }, e)
+  }
+  l.unstable_IdlePriority = 5, l.unstable_ImmediatePriority = 1, l.unstable_LowPriority = 4, l.unstable_NormalPriority = 3, l.unstable_Profiling = null, l.unstable_UserBlockingPriority = 2, l.unstable_cancelCallback = function(n) {
+    n.callback = null
+  }, l.unstable_continueExecution = function() {
+    s || m || (s = !0, M(C))
+  }, l.unstable_forceFrameRate = function(n) {
+    0 > n || 125 < n ? console.error("forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported") : q = 0 < n ? Math.floor(1e3 / n) : 5
+  }, l.unstable_getCurrentPriorityLevel = function() {
+    return u
+  }, l.unstable_getFirstCallbackNode = function() {
+    return o(f)
+  }, l.unstable_next = function(n) {
+    switch (u) {
+      case 1:
+      case 2:
+      case 3:
+        var e = 3;
+        break;
+      default:
+        e = u
+    }
+    var t = u;
+    u = e;
+    try {
+      return n()
+    } finally {
+      u = t
+    }
+  }, l.unstable_pauseExecution = function() {}, l.unstable_requestPaint = function() {}, l.unstable_runWithPriority = function(n, e) {
+    switch (n) {
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+        break;
+      default:
+        n = 3
+    }
+    var t = u;
+    u = n;
+    try {
+      return e()
+    } finally {
+      u = t
+    }
+  }, l.unstable_scheduleCallback = function(n, e, t) {
+    var i = l.unstable_now();
+    switch (typeof t == "object" && t !== null ? (t = t.delay, t = typeof t == "number" && 0 < t ? i + t : i) : t = i, n) {
+      case 1:
+        var r = -1;
+        break;
+      case 2:
+        r = 250;
+        break;
+      case 5:
+        r = 1073741823;
+        break;
+      case 4:
+        r = 1e4;
+        break;
+      default:
+        r = 5e3
+    }
+    return r = t + r, n = {
+      id: Q++,
+      callback: e,
+      priorityLevel: n,
+      startTime: t,
+      expirationTime: r,
+      sortIndex: -1
+    }, t > i ? (n.sortIndex = t, P(c, n), o(f) === null && n === o(c) && (y ? (B(d), d = -1) : y = !0, F(E, t - i))) : (n.sortIndex = r, P(f, n), s || m || (s = !0, M(C))), n
+  }, l.unstable_shouldYield = A, l.unstable_wrapCallback = function(n) {
+    var e = u;
+    return function() {
+      var t = u;
+      u = e;
+      try {
+        return n.apply(this, arguments)
+      } finally {
+        u = t
+      }
+    }
+  }
+})(J);
+H.exports = J;
+var U = H.exports;
+export {
+  U as s
+};
