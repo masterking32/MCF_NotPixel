@@ -6343,14 +6343,16 @@ class $h {
             y: a.y + .5
           }
         }), n.data.originalEvent.preventDefault()), this.lastPointerUpTs = r, i) {
-        const l = {
+        const l = n.data.originalEvent.touches;
+        if (l && l.length > 0) return;
+        const d = {
           x: n.data.global.x,
           y: n.data.global.y
         };
         this.lastPaintCoords = a, Eo({
           charges: s.mining.charges,
           dispatch: this.store.dispatch,
-          flyCoords: l,
+          flyCoords: d,
           paintCoords: a,
           activeColor: s.color.active,
           state: this.store.getState()
