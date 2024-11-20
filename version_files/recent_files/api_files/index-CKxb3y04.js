@@ -19,7 +19,7 @@ import {
   c as Q,
   a as me,
   b as dn,
-  d as Na,
+  d as Pa,
   e as un,
   i as Ce,
   f as gr
@@ -45,7 +45,7 @@ import {
   b as vr
 } from "./@tonconnect-CKEjIK8E.js";
 import {
-  d as qe
+  d as Le
 } from "./@ton-CABtnvlX.js";
 import {
   u as ds,
@@ -69,7 +69,7 @@ import {
 } from "./chroma-js-CHvE9HB5.js";
 import {
   m as sn,
-  A as Pa
+  A as Ia
 } from "./framer-motion-BggZOsGS.js";
 import {
   u as Se,
@@ -203,7 +203,7 @@ const Cr = "_stars_img_container_1wci0_1",
     chunkSize: 750,
     chunkOrder: [6, 7, 11, 10, 9, 5, 1, 2, 3, 4, 8, 12, 16, 15, 14, 13]
   },
-  Ha = {
+  Ga = {
     bomb: "Dynamite",
     pumpkin: "Pumpkin"
   },
@@ -257,7 +257,7 @@ const Cr = "_stars_img_container_1wci0_1",
   },
   Ut = "notgames_bot/squads",
   bi = "https://t.me/notpixel_42",
-  la = "UQBv3exBKLmQcn2Fm6VlntAInW-je1YP4U59gJxaO62NCyMn",
+  da = "UQBv3exBKLmQcn2Fm6VlntAInW-je1YP4U59gJxaO62NCyMn",
   Ue = {
     userFromPixelInfo: "userFromPixelInfo",
     squadFromData: "squadFromData",
@@ -273,14 +273,14 @@ const Cr = "_stars_img_container_1wci0_1",
   $r = {
     friendsForTemplateCreation: 128
   },
-  Ia = "https://notpx.app/api/v1/",
+  Ca = "https://notpx.app/api/v1/",
   Ni = "https://image.notpx.app/api/v2/image";
 let Pi;
 const ec = t => {
     Pi = t
   },
   I = _r.create({
-    baseURL: Ia
+    baseURL: Ca
   });
 I.interceptors.request.use(function(t) {
   var a;
@@ -820,8 +820,8 @@ const ic = {
     setProductCard: nt,
     showProductCard: st,
     hideProductCard: an,
-    increaseAmount: BD,
-    decreaseAmount: DD,
+    increaseAmount: DD,
+    decreaseAmount: kD,
     setAmount: bs,
     setAvailable: oc,
     addAvailable: Ze,
@@ -897,7 +897,7 @@ const ic = {
   Pc = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAAxtJREFUeJzt3bFx3DAQRmHTo5GbcKwC3IHVh7tzPc6kQLmbUELFBjXG4QDsgnzvC6XhHaX5Z7EgQHL7srh93/fsc5hp27Yt8/u/Zn658hkAOAMAlzr+3KLsAZKHzG6tLc3sHsEKAGcA4AwA3EP2CfTO8w+Hvz73fFyz9z9v//39t19/g87kPlYAOAMAZwDg0nsAOtcClMoAwBkAuPQeoDYGrrYfoHXev9jpH1gB4AwAnAGAS+8BaLLn/SUrAJwBgDMAcIce4JM9eE1jVu/xq1lt3j/6/2sFgDMAcAYA7tAD9I4pZx/zRxv9/yg/r7ZWUvt+KwCcAYAzAHCuBRRWm/fPZgWAMwBwBgBueA/QOy9dbQ9gr9l/j2sB6mIA4AwA3PLXAcohLvp5ALX7+2cvfZR/7+i1BSsAnAGAMwBww3uAq83zo083ejuFFQDOAMAZALjw/XutPUD2dYDRyv0GrfsLvA6goQwAnAGAC18LuNp1gpraHsMa3xegqQwAnAGAq/YAd8zbp45Z77+/z/z4g8cfT0M/b7X7CqwAcAYAzgDANV8HaL0/fbTod/DsL209QO+8P5oVAM4AwBkAuOYeIHrMP/uevOz1/horAJwBgDMAcNUeIHpMir7OcNhz+PKz6fizzftLVgA4AwBnAODC9wRe7X0CpdXn/SUrAJwBgDMAcMvdF3DD8aNO5S7R+/x7n7tYYwWAMwBwBgCuuweYPUbd8P3//iD4eQGr7fNvZQWAMwBwBgBu+WcFjxa9fr/6u5etAHAGAM4AwHX3ANnr2b167zUcPe/3vgCFMgBwBgDu8tcBWuf9vWP62XoiKwCcAYAzAHCX7wFKZ9u3Xxq9VmAFgDMAcAYAbrkeoPl5AMUewLPt289+FrMVAM4AwBkAuOV6gFLvewPPtm8/+hlJVgA4AwBnAOCm9wDD97knz/tHH1+KfhazFQDOAMAZALjh7wsox8To9fTZ8/7RPU32fgMrAJwBgDMAcM3jz+xnAn0yxvZ83KEHyB5zV2MFgDMAcAYArvvdwbOtvn7farX3JVgB4AwAnAGQJEkC+gAjCBSs2IK1XQAAAABJRU5ErkJggg==",
   Ic = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAA9NJREFUeJztnT1y1EAQhS1qy1yCmAAybgDnMLfjHHADMhMQwyWcLLF6sXp7X49GW+/7MnktjaR61X/TM1oeDs75fD7PvgeFZVkW5fzs+dXrv1FOhvsHAZiDAMw5zb4BFdEFtnNvIQsWwBwEYA4CMGd4DKDmsfH37HoXP//6sn2DCS8/f2/+/vbrX+n68Xni86p5fgYWwBwEYA4CMOfu6wB7E32+mveP9vEZWABzEIA5CMAcOQaYncd2k+X9Gd3PW+2HqI6PBTAHAZiDAMw5XB3gaD2Aat7f3dNXnRvJwAKYgwDMQQDmpDFANc/P/v9oHC3vz+iOkbAA5iAAcxCAOWkM0L22rbsHsJvZ8/1qDFU9HwtgDgIwBwGYU64DqMyu9c/O+0c/P/0AUAIBmIMAzCn3A+xd2o8uM46vrgWs5v1H8+EqWABzEIA5CMCcjnUB6z+I6/GXjz+k81VmxzhX/H9rjyEWwBwEYA4CMOciBhid58ZafPf8e8bjp/dhvD9Dx3v59m51nO0ppL7/6vlYAHMQgDkIwJzhawNn+/wUsW4RqT7v7LoDFsAcBGAOAjDnmnUBq+Pu2v+9o/YYRtT3m8UgESyAOQjAHARgzml07X903h9r7SpxrqDK3nUONQbBApiDAMxBAOZc1AFG5/3V2nfmQ9Vv9lyM97wdAzSsLVyPV3y/1W8YZe8PC2AOAjAHAZjT3w/w4fvqMEuDb+iZu+m2XkOdjx9e52j2+XHdABbAHARgDgIwp9wPkBPy3OfPq+PZPYIXeXi4v8jeeX+3z8/AApiDAMxBAOb8b21g6QJVn1rlaJ8b2Dtmyeoi2fthLgA2QQDmIABzTup+9Bndef/odQmz5/sfn9b7FZyftserzqVEsADmIABzEIA5u38v4N5QY5bquoXHh1pPoHp/WABzEIA5CMAc+XsBR5vvj8zee7i+biG8L3Fuhe8GwiYIwBwEYE77/gBqn/rousPoGKS7n2J0TIUFMAcBmIMAzEn7Abp9svxdPHH9fCSLQbr7JUb7/OrzYAHMQQDmIABz5P0BYq19dvtAd56sxgRVVJ9f/R0LYA4CMAcBmFOOAW6ode9aZ8hQfeYN462OY94/O4bCApiDAMxBAOZcs0fQrgv0u/fUyajGIOr7qPr80f0SWABzEIA5CMAc2b93z59X9xzq9qlqf4Dqowf0HzAXAK+DAMxBAObI+wOM3mMoovb8ZYyem9i7rpKBBTAHAZiDAMxJ/VF3DJBdX3WR8XZn+9y9ewqrYAHMQQDmIABzpvujo+fdR/fhKlgAcxCAOQgAAAAAwJB/s3kQcMKqJVwAAAAASUVORK5CYII=",
   Ui = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACABAMAAAAxEHz4AAAAD1BMVEVHcEz284nytSDliicgGCcE4LS5AAAAAXRSTlMAQObYZgAAAJ5JREFUeNrt2LsNgDAMRVEKFuAzAYwAA4DE/jNBCmyF/IkEzX113qmsyHITyJGIPAQACKQ1D7or/fTMvFxZAQAqAOlu5hEAQKq7m7I7gNoFAPgY0Al2AgAQAKTbT950d0YAgApAtzQAgBjgT2BLAwBwu7G59CxZAADlgP2JAQBIsg8QgzWAAAB/AbrXAwAURQ8QMoAAAC8BvVQBAOTmBHvqugmDIq+UAAAAAElFTkSuQmCC",
-  Ca = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAAAXNSR0IArs4c6QAAAFRQTFRFICo/9c+d/88A+Ldj/8UB0bqh/78A/7cA/60Ax6uV7bEK/6QA/6AA/5kA/5IA1qASop2exJ40/4UAsIA0eX6JlHpOeWhPV2ByYFZLMzxRGSc+ESE7VlFONgAAAadJREFUeNrt121vgyAUhmGnKFRb6ltbOOf//8/x4Jgm7ZKJZGkWbr80fLiCPVLTIpfL5XK5v8zacTydiN4VJJqmcdSa+X1BfRldfU/JQK09WKTJGO3FqmJOBaJUILPWl4v2PR4JQArgmAQksvZ8vrjwLdY1M/niwWIFdSyIXRnf7TZNSnXdusePj7ruXfP8eFi7B7SvQB0Htq0QTSNdytU58JuEuYl5D9goqdBx0BgPLn2h50BuzKr63XDoDtCLCpfqcAXQtwtE1oKUMJ9uO9x4XRdoFwjuCdQxIBoG7O56nSZj8CgxSwlyQfGIJwK9GQOCIFdB+GSMWkbjUqrvwcWCrgVUAew8GBew+32dNsh5JnDHQCU9F0CK5oBtTw1Q/MweA9dTAy8eJBoG4WogNmGPGMlxcN2j6xQLWluWALd7BFhVsVPeguvJltHv59vNgZ4sy+s1oBjSEVBsQYgqFmRu29LXttbiIE6TENIX9eDQj2ATCdLCGcNcUHi9VhWm3fcHwbBSAJSxIAsxDMVT8yzEPEeAnBZERK9XsZ4QxHr+K5jL5XL/oU+kODawNDIwtAAAAABJRU5ErkJggg==",
+  Sa = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAAAXNSR0IArs4c6QAAAFRQTFRFICo/9c+d/88A+Ldj/8UB0bqh/78A/7cA/60Ax6uV7bEK/6QA/6AA/5kA/5IA1qASop2exJ40/4UAsIA0eX6JlHpOeWhPV2ByYFZLMzxRGSc+ESE7VlFONgAAAadJREFUeNrt121vgyAUhmGnKFRb6ltbOOf//8/x4Jgm7ZKJZGkWbr80fLiCPVLTIpfL5XK5v8zacTydiN4VJJqmcdSa+X1BfRldfU/JQK09WKTJGO3FqmJOBaJUILPWl4v2PR4JQArgmAQksvZ8vrjwLdY1M/niwWIFdSyIXRnf7TZNSnXdusePj7ruXfP8eFi7B7SvQB0Htq0QTSNdytU58JuEuYl5D9goqdBx0BgPLn2h50BuzKr63XDoDtCLCpfqcAXQtwtE1oKUMJ9uO9x4XRdoFwjuCdQxIBoG7O56nSZj8CgxSwlyQfGIJwK9GQOCIFdB+GSMWkbjUqrvwcWCrgVUAew8GBew+32dNsh5JnDHQCU9F0CK5oBtTw1Q/MweA9dTAy8eJBoG4WogNmGPGMlxcN2j6xQLWluWALd7BFhVsVPeguvJltHv59vNgZ4sy+s1oBjSEVBsQYgqFmRu29LXttbiIE6TENIX9eDQj2ATCdLCGcNcUHi9VhWm3fcHwbBSAJSxIAsxDMVT8yzEPEeAnBZERK9XsZ4QxHr+K5jL5XL/oU+kODawNDIwtAAAAABJRU5ErkJggg==",
   qs = {
     1: wc,
     5: jc,
@@ -930,13 +930,13 @@ const ic = {
     default: Mi
   },
   Bc = (t, n) => Gs[n] ? Gs[n] : Gs.default,
-  Ga = {
+  Ja = {
     9: Ci,
     10: Si,
     11: Ti
   },
-  Js = (t, n) => Ga[t] ? Ga[t] : Ca,
-  Dc = () => Ca,
+  Js = (t, n) => Ja[t] ? Ja[t] : Sa,
+  Dc = () => Sa,
   Vs = {
     1: Cc,
     2: Sc,
@@ -1090,14 +1090,14 @@ const ic = {
     setDeviceInfo: Hc,
     setFullscreen: Gc
   } = zi.actions,
-  Ve = t => t.device.platform,
+  Je = t => t.device.platform,
   Jc = t => t.device.os,
   mn = t => t.device.fullscreen,
   Vc = t => t.device.contentSafeAreaInset,
   Yc = t => t.device.safeAreaInset,
   Xc = zi.reducer,
   Wc = () => {
-    const [t, n] = u.useState("Stars"), s = c(Ve);
+    const [t, n] = u.useState("Stars"), s = c(Je);
     return e.jsx("div", {
       className: Ys.panel,
       children: ["Star Shop"].map(a => e.jsxs("div", {
@@ -1115,7 +1115,7 @@ const ic = {
   },
   Kc = "_layout_q8u4d_1",
   Zc = "_content_q8u4d_22",
-  Ja = {
+  Va = {
     layout: Kc,
     content: Zc
   },
@@ -1172,20 +1172,20 @@ const ic = {
   }) => {
     const n = c(s => s.main.showMiningDetailsPopup);
     return e.jsxs(sn.div, {
-      className: Ja.layout,
+      className: Va.layout,
       style: {
         overflow: n ? "hidden" : ""
       },
       ...Al,
       children: [e.jsx(ml, {}), e.jsx("div", {
-        className: Ja.content,
+        className: Va.content,
         children: t
       })]
     })
   },
   z = (t, n) => Math.floor(Math.random() * (n - t + 1) + t),
   pl = t => `${t.includes("@")?"":"@"}${t}`,
-  Va = t => t.replace("@", ""),
+  Ya = t => t.replace("@", ""),
   An = (t, n = 18, s = !0) => t.slice(0, n) + (t.length > n && s ? "..." : ""),
   Ot = t => {
     window.Telegram.WebApp.openLink(t)
@@ -1270,7 +1270,7 @@ const ic = {
     const s = Math.floor(t / 3600),
       a = Math.floor(t % 3600 / 60);
     return n += s, n += "h ", n += a > 9 ? a : `0${a}`, n += "m", n
-  }, da = t => !0, yl = "_layout_13e1w_1", vl = "_container_13e1w_10", wl = "_star_13e1w_14", jl = "_move_13e1w_1", jn = {
+  }, ua = t => !0, yl = "_layout_13e1w_1", vl = "_container_13e1w_10", wl = "_star_13e1w_14", jl = "_move_13e1w_1", jn = {
     layout: yl,
     container: vl,
     star: wl,
@@ -1293,7 +1293,7 @@ const ic = {
   }) : null, Pl = u.memo(() => {
     console.log("render");
     const t = Array.from(Array(30)),
-      n = c(Ve);
+      n = c(Je);
     return e.jsx("div", {
       className: jn.layout,
       children: e.jsx("div", {
@@ -1319,15 +1319,15 @@ const ic = {
         })
       })
     })
-  }, () => !1), Il = "_layout_1nbfl_1", Cl = "_button_1nbfl_14", Ya = {
+  }, () => !1), Il = "_layout_1nbfl_1", Cl = "_button_1nbfl_14", Xa = {
     layout: Il,
     button: Cl
   }, Sl = () => {
     const t = K();
     return e.jsx("div", {
-      className: Ya.layout,
+      className: Xa.layout,
       children: e.jsx("div", {
-        className: Ya.button,
+        className: Xa.button,
         onPointerUp: () => t.push("/pay-support"),
         children: "Pay support"
       })
@@ -1345,7 +1345,7 @@ const ic = {
     const t = g(),
       n = c(i => i.shop.crypto),
       s = c(i => i.shop.selectedCurrency),
-      a = c(Ve);
+      a = c(Je);
     return u.useEffect(() => {
       a === he && s === 1 && t(on(2))
     }, [a]), a !== he ? null : e.jsx("div", {
@@ -1405,10 +1405,10 @@ const ic = {
     }
   }), {
     addToast: J,
-    removeToast: Xa
+    removeToast: Wa
   } = Gi.actions, ql = Gi.reducer, Hl = () => {
     const t = g(),
-      n = c(Ve),
+      n = c(Je),
       [s, a] = u.useState(1);
     return e.jsx("img", {
       alt: "img",
@@ -1426,7 +1426,7 @@ const ic = {
     const t = c(i => i.shop.order),
       n = c(i => i.shop.products),
       s = c(i => i.shop.available),
-      a = c(Ve);
+      a = c(Je);
     return u.useEffect(() => {}, []), e.jsxs(oe, {
       children: [e.jsxs("div", {
         className: de.stars_img_container,
@@ -2265,7 +2265,7 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
   },
   {
     setCheckError: Cd,
-    setActiveTab: ua,
+    setActiveTab: ma,
     setToggleAction: Vi,
     setAllToggleActions: Sd,
     setMaxCharges: Td,
@@ -2274,7 +2274,7 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
     addCharges: Yi,
     addAddedCharges: Dd,
     subCharges: kd,
-    restoreCharges: kD,
+    restoreCharges: RD,
     setTask: Rd
   } = Ji.actions,
   Md = Ji.reducer,
@@ -2289,7 +2289,7 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
   hs = dn({
     sortComparer: (t, n) => t.id - n.id
   }),
-  Sa = dn(),
+  Ta = dn(),
   en = dn(),
   Ud = {
     user: null,
@@ -2420,10 +2420,10 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
     setPixelsForSaleTotal: Od,
     setPixelsForSaleFetchStatus: Qd,
     removePixelsForSale: zd,
-    setPixelsSoldOffset: RD,
-    setPixelsSoldTotal: MD,
-    setPixelsSoldFetchStatus: UD,
-    removePixelsSold: FD,
+    setPixelsSoldOffset: MD,
+    setPixelsSoldTotal: UD,
+    setPixelsSoldFetchStatus: FD,
+    removePixelsSold: OD,
     addPixelCoins: jt,
     subtractPixelCoins: Ld,
     setPixelCoins: Ki,
@@ -2434,7 +2434,7 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
     return n === null ? null : n.league || null
   },
   Hd = t => t.user.userPic,
-  Oe = t => t.user.user,
+  Ve = t => t.user.user,
   Gd = Xi.reducer,
   vt = {
     getPixelsForSale: Fn,
@@ -2557,14 +2557,14 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
   nu = 16,
   su = 500,
   $i = 800,
-  Wa = window.innerWidth,
-  Ka = 100,
+  Ka = window.innerWidth,
+  Za = 100,
   au = () => Array.from(Array(100)).map(() => {
     const t = z(tu, nu),
       n = `hsl(${z(0,360)} , 70%, 50%)`,
       s = z(su, $i),
-      a = z(-Wa, Wa),
-      i = z(-Ka, Ka);
+      a = z(-Ka, Ka),
+      i = z(-Za, Za);
     return {
       size: t,
       color: n,
@@ -2898,7 +2898,7 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
     })
   },
   Ou = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQBAMAAAB8P++eAAAAAXNSR0IArs4c6QAAABhQTFRFHCk/6cGp86xt4I5f1YNQq4VwlU8bUzwyVRbffwAAAJZJREFUeNrt1cENw0AIBdG04BZo4bcwLWwLlGDaj7KKkeVTZFAu3jk/gcSF12r1vKAVbsza4PYpaRk62HaiVegCDmoA8hoEY3ZsV0QVojONcC9DMPvKMdxbIDJDEaMPIkW4T9cEkWd1aNYOsWaI3YP7v+7od+Ge8JpLl4lRg5MmTFaAMwklK8HMpWQ1mEWyX+B6yqtVtTf2acUX1leb/QAAAABJRU5ErkJggg==",
-  Ge = ({
+  He = ({
     num: t
   }) => isNaN(t) ? null : new Intl.NumberFormat("en-US").format(t),
   Qu = () => {
@@ -2933,7 +2933,7 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
           }), e.jsxs("div", {
             children: ["Up to ", e.jsx(W, {
               className: p.not_pixel_icon
-            }), " ", e.jsx(Ge, {
+            }), " ", e.jsx(He, {
               num: a.RefRewardCoinsPremium
             }), " for fren"]
           })]
@@ -3062,7 +3062,7 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
       })
     })
   },
-  Ta = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQBAMAAAB8P++eAAAAAXNSR0IArs4c6QAAABhQTFRFHCk//9dK/7cA/pYA2n0AvlkAmjEAXjEUlqfz5AAAAKhJREFUeNrt1cFpRFEMQ1G1oBbUglpwC2pBLUz74Q8hmeXA8/JdMMZw9sbtdjvJohNLpBYgB5i0TWYCDA8hC7/iNB7LL6M8gwKAKh1bfF86gy6AcP5hfQYhAKUfyDc0DiEMVMpYpAHhGMKtObGo1FiAMGplqIGxAgPEIz97Bz61KZ7W4IjahchgGY6WoSmuQqcm92D/WoPU8Jk9+OvWYD/6Gt5nerud9AMgnFxPBQmwaAAAAABJRU5ErkJggg==",
+  Ea = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQBAMAAAB8P++eAAAAAXNSR0IArs4c6QAAABhQTFRFHCk//9dK/7cA/pYA2n0AvlkAmjEAXjEUlqfz5AAAAKhJREFUeNrt1cFpRFEMQ1G1oBbUglpwC2pBLUz74Q8hmeXA8/JdMMZw9sbtdjvJohNLpBYgB5i0TWYCDA8hC7/iNB7LL6M8gwKAKh1bfF86gy6AcP5hfQYhAKUfyDc0DiEMVMpYpAHhGMKtObGo1FiAMGplqIGxAgPEIz97Bz61KZ7W4IjahchgGY6WoSmuQqcm92D/WoPU8Jk9+OvWYD/6Gt5nerud9AMgnFxPBQmwaAAAAABJRU5ErkJggg==",
   Vu = () => {
     var o, r;
     const t = N.leagueBonusSilver,
@@ -3080,7 +3080,7 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
           className: p.image_container,
           children: e.jsx("img", {
             alt: "image",
-            src: Ta,
+            src: Ea,
             className: p.image
           })
         }), e.jsxs("div", {
@@ -3119,7 +3119,7 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
           className: p.image_container,
           children: e.jsx("img", {
             alt: "image",
-            src: Ta,
+            src: Ea,
             className: p.image
           })
         }), e.jsxs("div", {
@@ -3158,7 +3158,7 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
           className: p.image_container,
           children: e.jsx("img", {
             alt: "image",
-            src: Ta,
+            src: Ea,
             className: p.image
           })
         }), e.jsxs("div", {
@@ -3202,7 +3202,7 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
           className: p.image_container,
           children: e.jsx("img", {
             alt: "image",
-            src: Ca,
+            src: Sa,
             className: p.image
           })
         }), e.jsxs("div", {
@@ -3392,9 +3392,9 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
   },
   cm = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAD/ElEQVR4nO2cTUtUURjH/+fOOOooDFqhuJHATMJEaOPCQHGhlZCLoBaCX6NW0c4v4Qdo1yJCCiMLxlUQKCGF4UjhppR8vy9zbzxHbyN0r6bP8Qzo88NhmOvlOXN+5zlv915GXe3ujyCcGkfU8RCBTEQgExHIRAQyEYFMRCATEchEBDIRgUxEIBMRyEQEMhGBTEQgExHIRAQyEYFMRCATEchEBDIRgUxEIBMRyCRrq6DaXBa3ervx4P4dNDc3QSmz8aMIWPq2jJnZIj5+WoDrBWYLSMHKkwn1dTlMPnuMmzeuoVQqwfd9hGFotAzHcVBTU4P29nbMf/6KJ08nsbPnGS0jCSsZONDfh+sd7ZiamsL8/Dy2t7fheR6iyEzbKaWQy+XQ0NCAnp4ejI+PY+B2H169eW8k/lFYEXhvZBALCwuYm5vTlS0UCsYFUvZtbGygWCyit7cXd4cHz49AErax/lNnXltbG1pbW3U3NgkJpAZZXV3VsVsKBRtVsyOw5cplLC99geu62NrawtraGoIgMJqB2Wz279BQLpd1mTawNgtDz5QR/MCF7+8ddGFHV/7f88qVD0r/HUNGS6OYNDmZapj/wapAIvADXVHfd7XAZD0nFVDW0kiibawL1Jnie3qciqLk3IrCikCdocelYLS/H6BhwTbWBZK43Z1d+IGXKvCkqIMufCEEUiVdj8ZB76Cnpkk8iVxHj30XQ2A5AFzApwE/bbA/4RCoVCUDaUdyricR3yvrF00kSTOwtqeSBThh8rWPUFW2hrScSY57NlSlC8dLDsqU5MqGiT1YhQoq4R+hghaYyWRQW1t7Nl88haoIJHn0Sif5QoOKUq6+OUo3Bu2HbVOdScR1j74io5KPH+7CceaSuMhROlY8/p3rMZAqSvJI4hFnpXRhp3JY7V8D1DhKy7sQC2mSR1kY74VTx8AElF43Hjqfso2OZBw9/lFMineuJ5F4y3W6PWvK+UGl+9qUB7knwkcEMqmKwLOYKeN4NmdgSAbyEYFMrAqkmTJeZpicLSkWLWPoncqwibVlDFWMtlq0V6UXVdbUwpfkxbHpnT7bworA0sp3XbF8Pq/v3ZK4+C6aCagxSB7Frqur07GpTBtYETg9M4uHYyPo6OjQld3c3DT+dAKJa2xsRGdnp3464fmLaWOxj8KKwLfvihgdHsLExAQWFxf1Ptj03TPqtiSxq6sL27u+LtMG1n6141JTAaMjQxh/NIZ8vt54fGqM0soPvJ75gJfTM/i1/tt4GUnIz54wkXUgExHIRAQyEYFMRCATEchEBDIRgUxEIBMRyEQEMhGBTEQgExHIRAQyEYFMRCATEchEBDIRgUxEIBMRyEQEMhGBHAD8AQc9wS5/YswmAAAAAElFTkSuQmCC",
   Zs = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADPklEQVRYhe1XS2gTURS9b5JO07RQ2lUJ1tmU0qoNhayFgNJuLGq1i0Chu+5cFEREN24KgoKCGzfZCdkoLrqQiIWC0K66SsXipxBFuovQT5r5ZEbObSaZTt+kSRmsCw9Mhsx7c8+5n3ffGzprCPA7jkOXr06lJ66kM2MXR+f7+/tIiHCVOQ5RqfS7WPj0Of9+eSX38cPSihDiUMDEtdvp508Wn3bF1FSxWCTTNMm27VAFKIpCHR0dpGkaHVSM9YV7D+/ml16vRDE4M309E1Eolc1mqVAo0P7+PhmGwZEJA/BUVVXq7u6mZDJJs7OzqZnpG5m6gOTYhcmNjQ1aW1vjyb29vaELgPc7Ozu0urpK4+PjNHZpdBJjLKC/r4+2vn1hzxOJBA0MDHAawgQEwKHt7W22Dc66ACLSqtUq6bpOe3t7VCqVyLKsUCMQjUbrqQUXOL0CGCA0LZ1Ms1JLgcIv++E4VY/12lJqigiTwiaK2+tY1P+aZVo80TR1FiA3325kqkxa8/wIjglgpabBeXIcuW+O3RDAETopBOwIcVpPFADig/IBmZYRKKBdiFoKWhKASbqBOjBqkQ4S0Y44hXPfmoCqRaQTmSiYoFXQZgkI0YgAOmLTIjSNKl8oRNkKYHYhV6DYivS5LRqtHcvRa1eaAnfJQKlchC3NgLCxuRwfsAWxgEgkQp2dnUfGpAJAjisY8o1KOPIIkCLYGewHfsiLUNeb74hC/tybAjdyIHYUwbbc/DetAUwEOUQ0jYA0BUrjsTg8A7gRAHlLjQjkiIK7FwTWgASC+4ZnPrzFk4jC+YdNPoQ0K0K3Zfp7dmsImG81wu93KKBq/h7+TQH+Sg0Drj2/3f8pOCIAleouE/nyOx1gC8sQd3B4EfWSo1WiV+PCZFnjOA1A7trGHf9dsIByuVxUVVWLx+N8dgexe4oNKwIgh+1YLMa2wYkxFvD1+1Ze07T5oaEhnry7uxv61xGIe3p6aHh4mL+OwFkX8C6/nFt89CA1NzeX2tzc5H3gdJ0wGAg7RIyMjNDg4Pn1l9lXOY4OfkB0Z+F++tbNqczgucR8PN4VGrELcFQqevHHz1/5N2+Xci+ePeaP07MFEf0BphfPxyhJzcIAAAAASUVORK5CYII=",
-  lm = "_blocker_1ub07_1",
-  dm = "_popup_1ub07_11",
-  Za = {
+  lm = "_blocker_wufj5_1",
+  dm = "_popup_wufj5_11",
+  $a = {
     blocker: lm,
     popup: dm
   },
@@ -3433,7 +3433,7 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
       }))
     }, [t]), a ? tt.createPortal(e.jsxs(ie.Fragment, {
       children: [e.jsx(ms.div, {
-        className: Za.blocker,
+        className: $a.blocker,
         style: {
           ...l
         },
@@ -3447,7 +3447,7 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
           m.stopPropagation()
         }
       }), e.jsx(ms.div, {
-        className: Za.popup,
+        className: $a.popup,
         style: {
           ...o
         },
@@ -3669,18 +3669,17 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
   },
   gm = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAADmklEQVR4nO2cz2oTURSHT5OAEUSsgqBQaAl0EbKQLkXBZiMibrrwCXwCFy58ABcufII+gxsp4kYFpcviorgQSgoFC4JFpGAXJpFzM2dycnpnksxx7h3C+SDcOzN3Qubr7/7JZOjSWufOEIzC1EydDhOoxAQqMYFKTKASE6jEBCoxgUpMoBITqMQEKjGBSkygEhOoxAQqMYFKTKASE6jEBCoxgUpMoBITqKRRlQ/y8/sB/D45nqnt5as34NrNVumfaRaiCpTS3teWZjqve3LszquCyCgCuTgubX0wKr/VxnXfNp3TTd4jpsTgAkkeSeBiQMiiOr6uv2ON7o8KfI/YEoNOIlweieHIpFEd5f1IpGFJMvE4vtesY2cZBBXI5UEibB5IHpdI4B8nBsEE+i5QJjALnzDax1MYQ2IwgTJ9ReEyfRJDU5l14CzwFPJ6o14HGPZdHVMYckIJIvB/dC2aROS4OUp0H9bZrLxwArXdl0vzzdyS3v7nYIvsynVhn5A88fJY6EV2JW4moDQS9/TBarrft1acBp0TamaOmkAprb25Am0A2N5ccdtPnn1yZZ7ErLUkSSx7TCxdoEwAv2AUR9KIrx+OJo4jr94eulJ+PwaRWGxXdJFelNKf0scB/dbDNVfHC9x+efdcGy5t781IeK1Wg8FgkJYbj1qpSEjEYVvZ7mOjnrbpDoalTyZBujCmDCVJeT5xHJQij6NIrO9ltLv3t5+2g51e6ZNItDEQ5ZFYFOIumEGpBZLB4Nt57UIQTGA7mRjkNpZ44fK4D0rstLbY7stOz3XfsgmawM7uaVrfv30prVMSIUOOPMa7vg+St1ALaZS32rw43rF7ek4iZMjJSq+EJy/U17loY6CTmSTSJ5LDE0hjp69NaHkQS+DBrzNoXWmOE8lETksg7+5VIJhAl7KkG6M8lIhIkZ0LyxOJ9JE3iWAKIeBvJEETKCVCkkbwiCwCyn+8tQzPX49WiQt5N4YkQjIO5oosyIutDSdxYW9npV2UzcxSpIZ6M9y1RL0bw9MIIpFFOTz749IXYhENVbihOjFhFBz7OCRv4deBPqbNvnnEWgdW9vG2rLWeb38seVDlnzWzFsxyDRhTHlT9d+F57rrEerio9DvS8zw4WYTYzwjaP95RYs9IKzGBSkygEhOoxAQqMYFKTKASE6jEBCoxgUpMoBITqMQEKjGBSkygEhOoxAQqMYFKTKASE6jEBCoxgRoA4B95qZ/x3prlhgAAAABJRU5ErkJggg==",
   _m = () => {
-    const t = c(h => h.user.languageCode),
+    const t = c(m => m.user.languageCode),
       n = t === "ru" ? 74264 : 74262,
       s = t === "ru" ? 74262 : 74264,
       a = "Campaign1",
       i = N[`taskType${a}_${s}`],
-      o = c(h => h.mining.tasks[i]);
+      o = c(m => m.mining.tasks[i]);
     let r = N[`taskType${a}_${n}`];
     o && (r = N[`taskType${a}_${s}`]);
-    const l = c(h => h.mining.tasks[r]),
-      d = 1024,
-      m = c(Oe);
-    return !m || m.id !== 395492139 ? null : e.jsx(le, {
+    const l = c(m => m.mining.tasks[r]),
+      d = 1024;
+    return e.jsx(le, {
       action: () => {
         ce(`https://t.me/community_bot/join?startapp=id_${n}`)
       },
@@ -3817,14 +3816,14 @@ const Dn = Q("mining/info", async () => (await Is.info()).data),
     skeleton_header: Lm,
     skeleton_row: qm
   },
-  Ea = As.getSelectors(t => t.user.pixelsForSale);
+  Ba = As.getSelectors(t => t.user.pixelsForSale);
 ps.getSelectors(t => t.user.pixelsSold);
 const so = hs.getSelectors(t => t.daily.list);
-Sa.getSelectors(t => t.reward.list);
+Ta.getSelectors(t => t.reward.list);
 const Hm = en.getSelectors(t => t.tournament.approvedTemplatesList),
   Gm = () => {
     const t = c(s => s.user.pixelsForSaleFetchStatus);
-    return c(Ea.selectTotal) === 0 && t === A.fulfilled ? e.jsx("div", {
+    return c(Ba.selectTotal) === 0 && t === A.fulfilled ? e.jsx("div", {
       className: $.noPixelsContainer,
       children: e.jsx("span", {
         className: $.noPixelsText,
@@ -3905,7 +3904,7 @@ const Hm = en.getSelectors(t => t.tournament.approvedTemplatesList),
   $m = {
     main_canvas: Zm
   },
-  ma = t => ({
+  Aa = t => ({
     x: (t - 1) % E.width,
     y: Math.floor((t - 1) / E.height)
   }),
@@ -3951,7 +3950,7 @@ const Hm = en.getSelectors(t => t.tournament.approvedTemplatesList),
     newColor: n
   })).data);
 let Dt = null;
-const Aa = Q("canvas/getPixelInfo", async ({
+const pa = Q("canvas/getPixelInfo", async ({
     id: t
   }) => (Dt !== null && (Dt.abort(), Dt = null), Dt = new AbortController, (await X.getPixelInfo({
     id: t,
@@ -4005,9 +4004,9 @@ const Aa = Q("canvas/getPixelInfo", async ({
       }
     },
     extraReducers: t => {
-      t.addCase(Aa.pending, n => {
+      t.addCase(pa.pending, n => {
         n.getPixelInfoFetchStatus = A.pending
-      }).addCase(Aa.fulfilled, (n, s) => {
+      }).addCase(pa.fulfilled, (n, s) => {
         n.pixelInfo = s.payload, n.getPixelInfoFetchStatus = A.fulfilled, Dt = null
       }).addCase(qn.pending, n => {}).addCase(qn.fulfilled, (n, s) => {
         n.prices = s.payload.prices
@@ -4029,13 +4028,13 @@ const Aa = Q("canvas/getPixelInfo", async ({
   {
     setCoords: wt,
     addPaintCoords: tA,
-    setPriceMask: OD,
+    setPriceMask: QD,
     setSelectedPrice: nA,
-    updatePixelInfo: QD
+    updatePixelInfo: zD
   } = ro.actions,
   sA = ro.reducer,
   Cs = {
-    getPixelInfo: Aa,
+    getPixelInfo: pa,
     getPriceMask: Hn,
     getPrices: qn,
     repaint: Ln
@@ -4204,7 +4203,7 @@ const vA = "_order_panel_1ley0_1",
     image: QA,
     inner_wrapper_button: zA
   },
-  $a = window.Telegram.WebApp.CloudStorage;
+  ei = window.Telegram.WebApp.CloudStorage;
 let lo = class {
   static warn() {
     console.log("Your telegram is too old")
@@ -4218,18 +4217,18 @@ let lo = class {
 };
 window.Telegram.WebApp.isVersionAtLeast("6.9") && (lo = class {
   static save(n, s, a = () => {}) {
-    $a.setItem(n, s, a)
+    ei.setItem(n, s, a)
   }
   static get(n, s = () => {}) {
-    $a.getItem(n, s)
+    ei.getItem(n, s)
   }
 });
 const zt = lo,
   At = ["#E46E6E", "#FFD635", "#7EED56", "#00CCC0", "#51E9F4", "#94B3FF", "#E4ABFF", "#FF99AA", "#FFB470", "#FFFFFF", "#BE0039", "#FF9600", "#00CC78", "#009EAA", "#3690EA", "#6A5CFF", "#B44AC0", "#FF3881", "#9C6926", "#898D90", "#6D001A", "#BF4300", "#00A368", "#00756F", "#2450A4", "#493AC1", "#811E9F", "#A00357", "#6D482F", "#000000"],
-  ei = At[z(0, At.length - 1)],
+  ti = At[z(0, At.length - 1)],
   LA = {
-    active: ei,
-    id: btoa(ei),
+    active: ti,
+    id: btoa(ti),
     latest: ["#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff"],
     basic: At
   },
@@ -4253,7 +4252,7 @@ const zt = lo,
   {
     addColor: qA,
     setColors: HA,
-    setActiveColor: Ba
+    setActiveColor: Da
   } = uo.actions,
   GA = uo.reducer,
   JA = {
@@ -4263,9 +4262,9 @@ let kt;
 const VA = t => {
   kt = t
 };
-let pa = 0;
+let ha = 0;
 setInterval(() => {
-  console.log(pa), pa = 0
+  console.log(ha), ha = 0
 }, 1e4);
 let cn = !0;
 window.addEventListener("blur", () => {
@@ -4282,12 +4281,12 @@ const YA = (t, n) => {
     let s = {
       token: t
     };
-    da() && (s = {
+    ua() && (s = {
       data: new TextEncoder().encode(JSON.stringify({
         token: t
       }))
-    }), lt = new wr(Ia.replace("https", "wss").replace("api/v1/", "connection/websocket"), s), lt.on("connected", function(a) {
-      if (console.log(`connected over ${a.transport}`), !da()) return;
+    }), lt = new wr(Ca.replace("https", "wss").replace("api/v1/", "connection/websocket"), s), lt.on("connected", function(a) {
+      if (console.log(`connected over ${a.transport}`), !ua()) return;
       console.log("centrifuge image");
       const i = new Blob([a.data], {
           type: "image/webp"
@@ -4313,7 +4312,7 @@ const YA = (t, n) => {
     }), lt.on("publication", function(a) {
       if (a.channel === "event:message") {
         JSON.parse(new TextDecoder().decode(a.data)).forEach(r => {
-          r.user === n || !cn || (r.type === Ha.bomb && v.mainImage.bomb.boomWithDebounce(ma(r.pixel)), r.type === Ha.pumpkin && v.mainImage.pumpkin.boomWithDebounce(ma(r.pixel)))
+          r.user === n || !cn || (r.type === Ga.bomb && v.mainImage.bomb.boomWithDebounce(Aa(r.pixel)), r.type === Ga.pumpkin && v.mainImage.pumpkin.boomWithDebounce(Aa(r.pixel)))
         });
         return
       }
@@ -4323,7 +4322,7 @@ const YA = (t, n) => {
         else {
           const l = JSON.parse(new TextDecoder().decode(r));
           if (a.channel === "pixel:message") Object.values(l).forEach(d => {
-            pa += d.length
+            ha += d.length
           }), v.mainImage.paintPixelsFromCentrifuge(l);
           else if (a.channel === `personal:user#${n}`) {
             const d = JSON.parse(new TextDecoder().decode(r));
@@ -4607,7 +4606,7 @@ const YA = (t, n) => {
   }),
   {
     setTimeLimit: KA,
-    updateSettings: HD,
+    updateSettings: GD,
     enableFastMode: Ao,
     disableFastMode: Ss,
     enableFastType: Ts,
@@ -4616,25 +4615,25 @@ const YA = (t, n) => {
     disableFastEnergy: po,
     showPixanosEvent: $A,
     hidePixanosEvent: ep,
-    setShowIntro: GD,
-    setShowBetaTestIntro: JD,
+    setShowIntro: JD,
+    setShowBetaTestIntro: VD,
     addFlyingReward: tp,
     removeFlyingReward: np,
-    showInviteFrensPopup: VD,
+    showInviteFrensPopup: YD,
     hideInviteFrensPopup: ea,
-    showNoChargesPopup: YD,
+    showNoChargesPopup: XD,
     hideNoChargesPopup: ta,
-    setLastShowChargesPopupTs: XD,
+    setLastShowChargesPopupTs: WD,
     setShowMiningDetailsPopup: ho,
-    setShowBoostDetailsPopup: Da,
+    setShowBoostDetailsPopup: ka,
     setActiveBoostDetails: sp,
     addItemToUserAndSquadPopupStack: _n,
     removeItemFromUserAndSquadPopupStack: go,
     setShowNoFlagsPopup: ap,
-    setReferrerSquadId: ha
+    setReferrerSquadId: ga
   } = mo.actions,
   ip = mo.reducer,
-  Lt = Na(t => t.main.settings, t => {
+  Lt = Pa(t => t.main.settings, t => {
     const n = t.UpgradeRepaint,
       s = t.UpgradeChargeCount,
       a = t.UpgradeChargeRestoration;
@@ -4653,7 +4652,7 @@ const YA = (t, n) => {
       restorationSpeed: r
     }
   }),
-  _o = Na(t => t.main.settings, t => ({
+  _o = Pa(t => t.main.settings, t => ({
     bronze: 0,
     silver: t.BronzeMax + 1,
     gold: t.SilverMax + 1,
@@ -4667,7 +4666,7 @@ const YA = (t, n) => {
       diamond: "∞"
     }
   })),
-  op = Na(t => t.main.settings, t => ({
+  op = Pa(t => t.main.settings, t => ({
     bronze: 0,
     silver: t.SquadBronzeMax + 1,
     gold: t.SquadSilverMax + 1,
@@ -5087,7 +5086,7 @@ const Gn = Q("ratings/personal", async ({
     setActiveLeague: bo,
     clearRatingList: Zp
   } = jo.actions,
-  ka = {
+  Ra = {
     personal: Gn,
     squad: Jn
   },
@@ -5122,7 +5121,7 @@ const Gn = Q("ratings/personal", async ({
     }
   });
 No.actions;
-const Ra = {
+const Ma = {
     get: Vn
   },
   th = No.reducer,
@@ -5218,7 +5217,7 @@ ht.startListening({
 });
 const Es = un();
 Es.startListening({
-  matcher: Ce(Cs.getPriceMask.pending, vt.getPixelsForSale.pending, vt.getPixelsSold.pending, Ra.get.pending),
+  matcher: Ce(Cs.getPriceMask.pending, vt.getPixelsForSale.pending, vt.getPixelsSold.pending, Ma.get.pending),
   effect: (t, n) => {
     n.dispatch($e({
       command: Pe.start
@@ -5226,7 +5225,7 @@ Es.startListening({
   }
 });
 Es.startListening({
-  matcher: Ce(Cs.getPriceMask.fulfilled, vt.getPixelsForSale.fulfilled, vt.getPixelsSold.fulfilled, Ra.get.fulfilled),
+  matcher: Ce(Cs.getPriceMask.fulfilled, vt.getPixelsForSale.fulfilled, vt.getPixelsSold.fulfilled, Ma.get.fulfilled),
   effect: (t, n) => {
     n.dispatch($e({
       command: Pe.finish
@@ -5275,7 +5274,7 @@ xn.startListening({
 });
 const Io = un();
 Io.startListening({
-  matcher: Ce(ka.squad.fulfilled),
+  matcher: Ce(Ra.squad.fulfilled),
   effect: (t, n) => {
     n.dispatch(qd(t.payload.mySquad))
   }
@@ -5405,7 +5404,7 @@ const ah = "/assets/halloween2-l9FmXxVI.png",
     userId: t
   })).data),
   Wn = Q("template/getReferredTemplate", async () => (await De.getReferredTemplate()).data),
-  ga = Q("template/getMyTemplate", async ({
+  _a = Q("template/getMyTemplate", async ({
     id: t
   }) => (await De.getTemplateById({
     id: t
@@ -5477,7 +5476,7 @@ const ah = "/assets/halloween2-l9FmXxVI.png",
           };
           n.referredTemplate = a
         }
-      }).addCase(Wn.rejected, (n, s) => {}).addCase(ga.pending, n => {}).addCase(ga.fulfilled, (n, s) => {}).addCase(Kn.pending, (n, s) => {}).addCase(Kn.fulfilled, (n, s) => {
+      }).addCase(Wn.rejected, (n, s) => {}).addCase(_a.pending, n => {}).addCase(_a.fulfilled, (n, s) => {}).addCase(Kn.pending, (n, s) => {}).addCase(Kn.fulfilled, (n, s) => {
         const a = {
           ...s.payload,
           type: pe.world
@@ -5493,20 +5492,20 @@ const ah = "/assets/halloween2-l9FmXxVI.png",
     }
   }),
   {
-    setActiveTemplate: Ma,
+    setActiveTemplate: Ua,
     setActiveTemplateTab: _s,
     hideTemplates: yn,
     setTemplateOpacity: ch,
     setReferredTemplate: lh,
     setMyTemplate: To,
-    setTemplateListOffset: WD,
+    setTemplateListOffset: KD,
     clearTemplatesListData: dh,
     setShowTemplateDetailsPopup: Eo,
-    setShowTemplateInfoPopup: _a
+    setShowTemplateInfoPopup: fa
   } = So.actions,
-  Je = {
+  Ge = {
     getReferredTemplate: Wn,
-    getTemplateById: ga,
+    getTemplateById: _a,
     getWorldTemplate: Kn,
     getList: Xn,
     getAvailableSizes: oh,
@@ -5554,7 +5553,7 @@ const ah = "/assets/halloween2-l9FmXxVI.png",
   },
   {
     setSelectedDaily: ph,
-    updateOneDaily: KD
+    updateOneDaily: ZD
   } = Bo.actions,
   hh = Bo.reducer,
   gh = {
@@ -5564,7 +5563,7 @@ const ah = "/assets/halloween2-l9FmXxVI.png",
   _h = "_panel_1mia4_1",
   fh = "_item_1mia4_15",
   xh = "_active_1mia4_24",
-  fa = {
+  xa = {
     panel: _h,
     item: fh,
     active: xh
@@ -5574,7 +5573,7 @@ const ah = "/assets/halloween2-l9FmXxVI.png",
     className: n = "",
     style: s = {}
   }) => e.jsx("div", {
-    className: `${fa.panel} ${n}`,
+    className: `${xa.panel} ${n}`,
     style: {
       ...s
     },
@@ -5585,13 +5584,13 @@ const ah = "/assets/halloween2-l9FmXxVI.png",
     setActive: n,
     children: s
   }) => e.jsx("div", {
-    className: `${fa.item} ${t?fa.active:""}`,
+    className: `${xa.item} ${t?xa.active:""}`,
     onPointerUp: () => {
       n()
     },
     children: s
   }),
-  Ua = t => t ? t.friends >= $r.friendsForTemplateCreation || t.isContractor : !1,
+  Fa = t => t ? t.friends >= $r.friendsForTemplateCreation || t.isContractor : !1,
   Re = {
     create: "create",
     main: "main",
@@ -5600,8 +5599,8 @@ const ah = "/assets/halloween2-l9FmXxVI.png",
   yh = () => {
     const t = g(),
       n = c(r => r.tournament.activeTab),
-      s = c(Oe),
-      a = Ua(s),
+      s = c(Ve),
+      a = Fa(s),
       i = c(r => r.tournament.myTemplate),
       o = i && i.approved;
     return e.jsxs(qt, {
@@ -5729,10 +5728,10 @@ const ah = "/assets/halloween2-l9FmXxVI.png",
   {
     setActiveTournamentTab: is,
     setShowTournamentDetailsPopup: ko,
-    setMyTournamentTemplate: ZD,
+    setMyTournamentTemplate: $D,
     clearApprovedTemplateList: jh,
     showTournamentTemplateInfoPopup: Ro,
-    closeTournamentTemplateInfoPopup: ti,
+    closeTournamentTemplateInfoPopup: ni,
     setSelectedTemplate: bh
   } = Do.actions,
   Ds = {
@@ -5758,7 +5757,7 @@ const ah = "/assets/halloween2-l9FmXxVI.png",
     id: null,
     rewardUserId: null,
     active: null,
-    list: Sa.getInitialState(),
+    list: Ta.getInitialState(),
     getListStatus: A.idle,
     getRewardStatus: A.idle
   },
@@ -5785,7 +5784,7 @@ const ah = "/assets/halloween2-l9FmXxVI.png",
         t.active = null
       },
       clearInventoryList: t => {
-        Sa.removeAll(t.list)
+        Ta.removeAll(t.list)
       }
     },
     extraReducers: t => {
@@ -5807,8 +5806,8 @@ const ah = "/assets/halloween2-l9FmXxVI.png",
   {
     setRewardId: Ih,
     clearRewardId: Ch,
-    addReward: $D,
-    removeReward: ek,
+    addReward: ek,
+    removeReward: tk,
     clearInventoryList: Sh,
     showRewardPopup: Th,
     hideRewardPopup: Eh
@@ -6392,7 +6391,7 @@ const Ag = ({
         })
       })]
     })
-  }, xa = "/assets/particle_rays1-mrHjO6Jg.png", gg = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAB40lEQVR4nO3dQU7CUBRA0da4L2Hl1JXVidP+0Fgi7T1nSiIoNy+2vo/zuq7rRNaHt75NAHECiBNAnADiBBD3Ofr253mu/3wuYXSlbwLECSBOAHECiBNAnADiBBAngDgBxAkgTgBxAogTQJwA4gQQJ4A4AcQJIE4AcQKIE0CcAOIEECeAOAHEDU8GncV/fMbFVU5NmQBxAogTQJwA4gQQJ4C401wG7r3Uu9/uhzzvY3k8/XrOeGloAsQJIE4AcQKIE0DcJf4YtMfyvbzsa9++bpuPvfJ5/8IEiBNAnADiBBAngDgBxAkgTgBxAogTQNxpbgWPli1Gt2CftbVwctRiybsyAeIEECeAOAHECSDuEgshe5YtjjpJ/K4LHnuZAHECiBNAnADiBBAngDgBxAkgTgBxAogTQFzucOjWZtERW0VnZALECSBOAHECiJvXwYbEVT4SvW60BGMCxAkgTgBxAojL3QncuxV89V+ETYA4AcQJIE4AcQKIy10F7LW1J+BsIJcggDgBxAkgTgBxtoJ/2QomSQBxAogTQJwA4qyFB1gLZ5MA4gQQJ4A4AcQJIE4AcQKIE0CcAOIEECeAOAHECSBOAHECiBNA3PBcwFH/ZZP3ZQLECSBOAHECiBNAnADKpmn6AbwwPcfPo50AAAAAAElFTkSuQmCC";
+  }, ya = "/assets/particle_rays1-mrHjO6Jg.png", gg = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAB40lEQVR4nO3dQU7CUBRA0da4L2Hl1JXVidP+0Fgi7T1nSiIoNy+2vo/zuq7rRNaHt75NAHECiBNAnADiBBD3Ofr253mu/3wuYXSlbwLECSBOAHECiBNAnADiBBAngDgBxAkgTgBxAogTQJwA4gQQJ4A4AcQJIE4AcQKIE0CcAOIEECeAOAHEDU8GncV/fMbFVU5NmQBxAogTQJwA4gQQJ4C401wG7r3Uu9/uhzzvY3k8/XrOeGloAsQJIE4AcQKIE0DcJf4YtMfyvbzsa9++bpuPvfJ5/8IEiBNAnADiBBAngDgBxAkgTgBxAogTQNxpbgWPli1Gt2CftbVwctRiybsyAeIEECeAOAHECSDuEgshe5YtjjpJ/K4LHnuZAHECiBNAnADiBBAngDgBxAkgTgBxAogTQFzucOjWZtERW0VnZALECSBOAHECiJvXwYbEVT4SvW60BGMCxAkgTgBxAojL3QncuxV89V+ETYA4AcQJIE4AcQKIy10F7LW1J+BsIJcggDgBxAkgTgBxtoJ/2QomSQBxAogTQJwA4qyFB1gLZ5MA4gQQJ4A4AcQJIE4AcQKIE0CcAOIEECeAOAHECSBOAHECiBNA3PBcwFH/ZZP3ZQLECSBOAHECiBNAnADKpmn6AbwwPcfPo50AAAAAAElFTkSuQmCC";
 class _g {
   constructor({
     ticker: n,
@@ -6423,7 +6422,7 @@ class _g {
     }, 2e3), this.pixiViewport.addChild(this.backdrop)
   }
   async addGlow(n) {
-    PIXI.Loader.shared.resources.rewardGlow || await this.loadResource("rewardGlow", xa);
+    PIXI.Loader.shared.resources.rewardGlow || await this.loadResource("rewardGlow", ya);
     const a = (i = 1) => {
       const o = new PIXI.Sprite(PIXI.Loader.shared.resources.rewardGlow.texture);
       return o.zIndex = 21, o.width = 10, o.height = 10, o.x = n.x + .5, o.y = n.y + .5, o.alpha = .5, o.anchor.set(.5), o
@@ -6493,7 +6492,7 @@ class fg {
       y: -1
     }, this.initImage(), o(a), this.initEvents(), this.store.dispatch($e({
       command: Pe.start
-    })), !da() && this.loadAllChunks().then(() => {
+    })), !ua() && this.loadAllChunks().then(() => {
       const r = a.getState().main.startParams.coords;
       r && (v.viewport.viewport.animate({
         scale: 60,
@@ -6592,7 +6591,7 @@ class fg {
     chunkIndex: n
   }) {
     const s = E.chunkOrder[n],
-      a = await this.loadImage(`${Ia}image/block?block_id=${s}`),
+      a = await this.loadImage(`${Ca}image/block?block_id=${s}`),
       i = this.getImageData(a, E.chunkSize, E.chunkSize),
       o = $s({
         index: s - 1,
@@ -6819,9 +6818,9 @@ class wg {
     this.fps = Math.min(60, Math.max(10, n))
   }
 }
-let ya;
+let va;
 const jg = t => {
-  ya = t
+  va = t
 };
 class bg {
   constructor({
@@ -6840,11 +6839,11 @@ class bg {
       app: this.app
     }), this.viewport = new yg({
       app: this.app,
-      store: ya
+      store: va
     }), this.mainImage = new fg({
       app: this.app,
       viewport: this.viewport,
-      store: ya,
+      store: va,
       ticker: this.ticker,
       readyCallback: n
     }), this.mask = new xg({
@@ -6852,7 +6851,7 @@ class bg {
     })
   }
 }
-let v, ni = !1;
+let v, si = !1;
 
 function Ng() {
   v = new bg({
@@ -6862,7 +6861,7 @@ function Ng() {
   })
 }
 const Pg = u.memo(() => (u.useEffect(() => {
-    ni || (Ng(), ni = !0)
+    si || (Ng(), si = !0)
   }, []), tt.createPortal(e.jsx("canvas", {
     id: "canvasHolder",
     className: `${$m.main_canvas}`
@@ -6910,7 +6909,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       })
     })]
   }),
-  Sg = () => c(Ea.selectAll).map(n => e.jsx(Cg, {
+  Sg = () => c(Ba.selectAll).map(n => e.jsx(Cg, {
     item: n
   }, et({
     x: n.x,
@@ -6945,7 +6944,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     })]
   }),
   Bg = () => {
-    const t = c(Ea.selectTotal);
+    const t = c(Ba.selectTotal);
     return c(s => s.user.pixelsForSaleFetchStatus) === A.pending && t === 0 ? e.jsx(Eg, {}) : t !== 0 ? e.jsxs(Vm, {
       children: [e.jsx(Sg, {}), e.jsx(Tg, {})]
     }) : null
@@ -7013,7 +7012,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     status_container: Xg,
     status: Wg
   },
-  Fa = ({
+  Oa = ({
     children: t,
     boost: n,
     price: s,
@@ -7023,12 +7022,12 @@ const Pg = u.memo(() => (u.useEffect(() => {
     return e.jsx("div", {
       className: be.boost_item,
       onPointerUp: () => {
-        a || (i(sp(n)), i(Da(!0)))
+        a || (i(sp(n)), i(ka(!0)))
       },
       children: t
     })
   },
-  Oa = ({
+  Qa = ({
     isMax: t
   }) => t ? null : e.jsx("div", {
     className: be.status_container,
@@ -7040,7 +7039,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       })
     })
   }),
-  Qa = ({
+  za = ({
     src: t
   }) => e.jsx("div", {
     className: be.image_container,
@@ -7059,7 +7058,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       children: t
     })]
   }),
-  za = ({
+  La = ({
     reward: t,
     level: n,
     price: s,
@@ -7098,18 +7097,18 @@ const Pg = u.memo(() => (u.useEffect(() => {
     } = Se(), n = ue.paintReward, s = c(m => m.main.settings.UpgradeRepaint), a = c(m => m.mining.boosts[n]), {
       repaintReward: i
     } = c(Lt), o = a >= i, r = Math.min(i, a + 1), l = Math.min(i, a), d = s == null ? void 0 : s.levels[r];
-    return e.jsxs(Fa, {
+    return e.jsxs(Oa, {
       boost: n,
       isMax: o,
       price: d.Price,
-      children: [e.jsx(Qa, {
+      children: [e.jsx(za, {
         src: Fo
-      }), e.jsx(za, {
+      }), e.jsx(La, {
         reward: t("mining.boosts.paintReward"),
         price: d.Price,
         level: l,
         isMax: o
-      }), e.jsx(Oa, {
+      }), e.jsx(Qa, {
         isMax: o
       })]
     })
@@ -7121,18 +7120,18 @@ const Pg = u.memo(() => (u.useEffect(() => {
     } = Se(), n = ue.reChargeSpeed, s = c(m => m.main.settings.UpgradeChargeRestoration), a = c(m => m.mining.boosts[n]), {
       restorationSpeed: i
     } = c(Lt), o = a >= i, r = Math.min(i, a + 1), l = Math.min(i, a), d = s == null ? void 0 : s.levels[r];
-    return e.jsxs(Fa, {
+    return e.jsxs(Oa, {
       boost: n,
       isMax: o,
       price: d.Price,
-      children: [e.jsx(Qa, {
+      children: [e.jsx(za, {
         src: Oo
-      }), e.jsx(za, {
+      }), e.jsx(La, {
         reward: t("mining.boosts.rechargingSpeed"),
         price: d.Price,
         level: l,
         isMax: o
-      }), e.jsx(Oa, {
+      }), e.jsx(Qa, {
         isMax: o
       })]
     })
@@ -7144,18 +7143,18 @@ const Pg = u.memo(() => (u.useEffect(() => {
     } = Se(), n = ue.energyLimit, s = c(m => m.main.settings.UpgradeChargeCount), a = c(m => m.mining.boosts[n]), {
       chargesCount: i
     } = c(Lt), o = a >= i, r = Math.min(i, a + 1), l = Math.min(i, a), d = s == null ? void 0 : s.levels[r];
-    return e.jsxs(Fa, {
+    return e.jsxs(Oa, {
       boost: n,
       isMax: o,
       price: d.Price,
-      children: [e.jsx(Qa, {
+      children: [e.jsx(za, {
         src: Qo
-      }), e.jsx(za, {
+      }), e.jsx(La, {
         reward: t("mining.boosts.energyLimit"),
         price: d.Price,
         level: l,
         isMax: o
-      }), e.jsx(Oa, {
+      }), e.jsx(Qa, {
         isMax: o
       })]
     })
@@ -7184,7 +7183,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     cancel_button: d_,
     loading: u_
   },
-  La = ({
+  qa = ({
     children: t,
     boost: n,
     price: s
@@ -7194,7 +7193,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         t: i
       } = Se(),
       o = d => {
-        a(Da(d))
+        a(ka(d))
       },
       l = c(d => d.mining.checkStatuses[n]) === A.pending;
     return e.jsxs("div", {
@@ -7229,7 +7228,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     } = c(Lt), o = Math.min(i, a + 1), r = (s == null ? void 0 : s.levels[a]) || {
       Boost: 1
     }, l = s == null ? void 0 : s.levels[o];
-    return e.jsxs(La, {
+    return e.jsxs(qa, {
       price: l.Price,
       boost: n,
       children: [e.jsxs("div", {
@@ -7264,7 +7263,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     } = c(Lt), o = Math.min(i, a + 1), r = (s == null ? void 0 : s.levels[a]) || {
       ChargeBoost: 6e5
     }, l = s == null ? void 0 : s.levels[o];
-    return l.ChargeBoost - (r == null ? void 0 : r.ChargeBoost), e.jsxs(La, {
+    return l.ChargeBoost - (r == null ? void 0 : r.ChargeBoost), e.jsxs(qa, {
       price: l.Price,
       boost: n,
       children: [e.jsxs("div", {
@@ -7297,7 +7296,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     } = Se(), n = ue.energyLimit, s = c(d => d.main.settings.UpgradeChargeCount), a = c(d => d.mining.boosts[n]), {
       chargesCount: i
     } = c(Lt), o = Math.min(i, a + 1), r = s == null ? void 0 : s.levels[o], l = c(d => d.mining.maxCharges);
-    return e.jsxs(La, {
+    return e.jsxs(qa, {
       price: r.Price,
       boost: n,
       children: [e.jsxs("div", {
@@ -7329,7 +7328,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       n = c(i => i.main.showBoostDetailsPopup),
       s = c(i => i.main.activeBoostDetails),
       a = i => {
-        t(Da(i))
+        t(ka(i))
       };
     return e.jsxs(gn, {
       show: n,
@@ -7361,11 +7360,11 @@ const Pg = u.memo(() => (u.useEffect(() => {
     return e.jsxs(qt, {
       children: [e.jsx(Ie, {
         active: n === "tasks",
-        setActive: () => t(ua("tasks")),
+        setActive: () => t(ma("tasks")),
         children: "Tasks"
       }), e.jsx(Ie, {
         active: n === "boosts",
-        setActive: () => t(ua("boosts")),
+        setActive: () => t(ma("boosts")),
         children: "Boosts"
       })]
     })
@@ -7398,7 +7397,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
   T_ = "_mining_percent_1h1qc_60",
   E_ = "_active_row_1h1qc_70",
   B_ = "_button_1h1qc_81",
-  si = {
+  ai = {
     container: w_,
     divider: j_,
     row: b_,
@@ -7428,7 +7427,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       show: s,
       setShow: a,
       children: e.jsxs("div", {
-        className: si.container,
+        className: ai.container,
         children: [e.jsx("h2", {
           children: n("title1")
         }), e.jsx("p", {
@@ -7449,7 +7448,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
             time: o.MaxMiningTime
           })
         }), e.jsx("button", {
-          className: si.button,
+          className: ai.button,
           onPointerUp: () => a(!1),
           children: n("button")
         })]
@@ -7713,7 +7712,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       s = c(i => i.ratings.league),
       a = c(i => i.ratings.status);
     return u.useEffect(() => {
-      t(ka.personal({
+      t(Ra.personal({
         league: s
       }))
     }, [s]), u.useEffect(() => () => {
@@ -7766,7 +7765,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     })
   },
   tn = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAJFBMVEUQGSb////w8PHU1de6vMCoq6+NkJd3e4Juc3pXXWU8QkwlLDf3GVopAAABfklEQVR42u3ZwW7CMBCE4WHXazbO+79vL7QjUdxwYG1Vmu/YRP0tOwkOQERERERERERE5APOzIjMgR1Gd7s9mMfAWoffnnhuypMfWOMMu71kcWKB0W5TbaBcOuc8cgAjw/mngWJ3+5lvtjDCOII1/fa03GfjgQV96/ilP47Fin7ihTQeLO7f/zzuZ/X6d0x0Hq/sN0w1TkFd3w5MHcaroKJ/fZUHT6nqW4Imd4KX9a//uXOVCvq8BKcaZ6mif32PdZ708b7xIXR1clT0Pd6Z3fz4APK7P/YMgH3EjiVgH+ilF+F1H2nrb0NnHzhs/YPI2Qfg6x/FjX0Asf7DaDj7QNqej2PyNzckqNLtnS2ZdVQ5fc+mlNL2bMspdr2YcAC7Xs3Y3/dyyv789dzuC/u0uB9he/vA4Xv74BC29PlF5c4+v6q1HX0arr76i/qm+d/T75M+NyCWqORc//UbQA6AfUpjv1Cf9XE29it1946XzvB26KdTEREREREREZF/7Qv4ZQurWN4R2wAAAABJRU5ErkJggg==",
-  qa = ({
+  Ha = ({
     src: t
   }) => {
     let n = tn;
@@ -7795,7 +7794,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       },
       children: [e.jsxs("div", {
         className: F.squad_avatar_container,
-        children: [e.jsx(qa, {
+        children: [e.jsx(Ha, {
           src: s.logo
         }), e.jsx("div", {
           className: F.user_squad_position,
@@ -7858,7 +7857,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     const t = g(),
       n = c(s => s.ratings.league);
     return u.useEffect(() => {
-      t(ka.squad({
+      t(Ra.squad({
         league: n
       }))
     }, [n]), e.jsxs(ie.Fragment, {
@@ -8113,7 +8112,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     return n > 0 && (i = An(i, n)), e.jsx("span", {
       className: Hi.link,
       onPointerUp: o => {
-        o.stopPropagation(), a ? ce(`https://t.me/${Va(t)}`) : Ot(`https://t.me/${Va(t)}`)
+        o.stopPropagation(), a ? ce(`https://t.me/${Ya(t)}`) : Ot(`https://t.me/${Ya(t)}`)
       },
       children: i
     })
@@ -8196,7 +8195,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         src: a
       }), e.jsx("div", {
         className: re.squad_avatar_container,
-        children: e.jsx(qa, {
+        children: e.jsx(Ha, {
           src: ((o = (i = t == null ? void 0 : t.owner) == null ? void 0 : i.squad) == null ? void 0 : o.logo) || ""
         })
       })]
@@ -8269,7 +8268,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         var o, r;
         s(!0), a.current !== null && clearTimeout(a.current), a.current = setTimeout(() => {
           s(!1)
-        }, 200), i(Ba(t)), (r = (o = window.Telegram.WebApp) == null ? void 0 : o.HapticFeedback) == null || r.notificationOccurred("success")
+        }, 200), i(Da(t)), (r = (o = window.Telegram.WebApp) == null ? void 0 : o.HapticFeedback) == null || r.notificationOccurred("success")
       }
     })
   },
@@ -8283,16 +8282,16 @@ const Pg = u.memo(() => (u.useEffect(() => {
   }),
   wx = "_unlock_button_fc8qr_1",
   jx = "_stars_text_fc8qr_13",
-  ai = {
+  ii = {
     unlock_button: wx,
     stars_text: jx
   },
   bx = () => e.jsxs("div", {
-    className: ai.unlock_button,
+    className: ii.unlock_button,
     children: [e.jsx("span", {
       children: "Unlock all colors for"
     }), e.jsxs("span", {
-      className: ai.stars_text,
+      className: ii.stars_text,
       children: [e.jsx(Ft, {}), e.jsx("span", {
         children: "5000"
       })]
@@ -8567,14 +8566,14 @@ const Pg = u.memo(() => (u.useEffect(() => {
   Hx = () => null,
   Gx = "_layout_dnjz3_1",
   Jx = "_container_dnjz3_9",
-  ii = {
+  oi = {
     layout: Gx,
     container: Jx
   },
   Vx = () => e.jsx("div", {
-    className: ii.layout,
+    className: oi.layout,
     children: e.jsx("div", {
-      className: ii.container,
+      className: oi.container,
       children: "Online 124k"
     })
   }),
@@ -8583,7 +8582,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
   Wx = "_container_15ijk_16",
   Kx = "_item_15ijk_21",
   Zx = "_move_15ijk_1",
-  va = {
+  wa = {
     layout: Xx,
     container: Wx,
     item: Kx,
@@ -8602,7 +8601,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         clearTimeout(a)
       }
     }, []), e.jsxs("div", {
-      className: va.item,
+      className: wa.item,
       style: {
         left: t.flyCoords.x,
         top: t.flyCoords.y,
@@ -8614,9 +8613,9 @@ const Pg = u.memo(() => (u.useEffect(() => {
   ey = () => {
     const t = c(n => n.main.flyingRewards);
     return e.jsx("div", {
-      className: va.layout,
+      className: wa.layout,
       children: e.jsx("div", {
-        className: va.container,
+        className: wa.container,
         children: t.map(n => e.jsx($x, {
           item: n
         }, n.id))
@@ -8650,7 +8649,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
   my = "_layout_1df7o_1",
   Ay = "_container_1df7o_14",
   py = "_move_in_1df7o_1",
-  oi = {
+  ri = {
     layout: my,
     container: Ay,
     move_in: py
@@ -8677,13 +8676,13 @@ const Pg = u.memo(() => (u.useEffect(() => {
         onResolve: () => i(!1)
       })
     }, [n]), a ? e.jsx(ms.div, {
-      className: oi.layout,
+      className: ri.layout,
       style: {
         ...o
       },
       onPointerUp: s,
       children: e.jsx("div", {
-        className: oi.container,
+        className: ri.container,
         children: t
       })
     }) : null
@@ -8705,7 +8704,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     }, [n]), e.jsx(ke, {
       show: n !== null,
       onPointerUp: () => {
-        t(ha(null))
+        t(ga(null))
       },
       children: e.jsx("div", {
         className: je.layout,
@@ -8717,7 +8716,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
           children: [e.jsx("div", {
             className: je.close_button,
             onPointerUp: () => {
-              t(ha(null))
+              t(ga(null))
             },
             children: e.jsx(b, {
               size: 26,
@@ -8791,7 +8790,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
             x: n.x + n.imageSize / 2,
             y: n.y + n.imageSize / 2
           }
-        }), t(Ma(pe.world)))
+        }), t(Ua(pe.world)))
       },
       children: e.jsx("img", {
         alt: "img",
@@ -8805,8 +8804,8 @@ const Pg = u.memo(() => (u.useEffect(() => {
     container: by
   },
   Py = 1,
-  ri = 0,
-  ci = 100,
+  ci = 0,
+  li = 100,
   Iy = ({
     rtl: t = !0
   }) => {
@@ -8824,8 +8823,8 @@ const Pg = u.memo(() => (u.useEffect(() => {
         direction: Zt.Direction.Up,
         values: s,
         step: Py,
-        min: ri,
-        max: ci,
+        min: ci,
+        max: li,
         onChange: a => {
           n(ch(a)), v.mainImage.worldTemplate.setOpacity(Number(a[0]))
         },
@@ -8857,8 +8856,8 @@ const Pg = u.memo(() => (u.useEffect(() => {
               background: Zt.getTrackBackground({
                 values: s,
                 colors: ["var(--font-secondary-color)", "var(--font-secondary-color)"],
-                min: ri,
-                max: ci,
+                min: ci,
+                max: li,
                 direction: Zt.Direction.Up,
                 rtl: t
               }),
@@ -8911,7 +8910,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
             x: s.x + s.imageSize / 2,
             y: s.y + s.imageSize / 2
           }
-        }), t(Ma(pe.referred)))
+        }), t(Ua(pe.referred)))
       },
       children: [s === null && e.jsx(b, {
         className: Me.gray,
@@ -8977,7 +8976,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     setTemplateSize: n
   }) => {
     const s = g(),
-      a = c(Oe),
+      a = c(Ve),
       i = a.friends || 64,
       [o] = u.useState([16, 32, 64, 128]);
     return e.jsxs("div", {
@@ -9025,7 +9024,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
             x: a.x + a.imageSize / 2,
             y: a.y + a.imageSize / 2
           }
-        }), t(Ma(pe.my)))
+        }), t(Ua(pe.my)))
       },
       children: [a === null && e.jsx(b, {
         className: Me.gray,
@@ -9052,7 +9051,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
   }),
   $y = "_layout_1a5xo_1",
   ev = "_container_1a5xo_5",
-  li = {
+  di = {
     layout: $y,
     container: ev
   },
@@ -9088,7 +9087,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         const l = v.mainImage.getPixelColor({
           coords: n
         });
-        t(Ba(l))
+        t(Da(l))
       },
       children: [e.jsx("div", {
         className: S.disabled_button_cover,
@@ -9103,9 +9102,9 @@ const Pg = u.memo(() => (u.useEffect(() => {
     })
   },
   sv = () => c(n => n.canvas.coords) === null ? null : e.jsx("div", {
-    className: li.layout,
+    className: di.layout,
     children: e.jsxs("div", {
-      className: li.container + " " + S.container__bottom,
+      className: di.container + " " + S.container__bottom,
       children: [e.jsx(Hh, {}), e.jsx(zh, {}), e.jsx(hg, {}), e.jsx(Yp, {}), e.jsx(tv, {}), e.jsx(nv, {})]
     })
   }),
@@ -9156,7 +9155,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     item: t
   }) => {
     const n = K(),
-      s = ma(t.details.pixel),
+      s = Aa(t.details.pixel),
       a = g();
     return e.jsxs("div", {
       className: `${x.item} ${x.active}`,
@@ -9492,7 +9491,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       n = c(a => a.history.list),
       s = c(a => a.history.status);
     return u.useEffect(() => {
-      t(Ra.get({
+      t(Ma.get({
         offset: 0,
         limit: 50
       }))
@@ -9760,7 +9759,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
   _w = "_button_layout_q4wab_15",
   fw = "_button_layout_placeholder_q4wab_27",
   xw = "_button_q4wab_15",
-  di = {
+  ui = {
     text_layout: hw,
     text: gw,
     button_layout: _w,
@@ -9769,9 +9768,9 @@ const Pg = u.memo(() => (u.useEffect(() => {
   },
   yw = () => e.jsx(oe, {
     children: e.jsx("div", {
-      className: di.text_layout,
+      className: ui.text_layout,
       children: e.jsxs("span", {
-        className: di.text,
+        className: ui.text,
         children: [e.jsx("h1", {
           children: "Pay support"
         }), e.jsxs("p", {
@@ -10056,7 +10055,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
   Kw = "_indicator_10f8u_37",
   Zw = "_button_container_10f8u_46",
   $w = "_button_10f8u_46",
-  ze = {
+  Qe = {
     container: Gw,
     text_container: Jw,
     text_block: Vw,
@@ -10130,39 +10129,39 @@ const Pg = u.memo(() => (u.useEffect(() => {
           height: 50
         }
       }), e.jsxs("div", {
-        className: ze.container,
+        className: Qe.container,
         children: [e.jsxs("div", {
-          className: ze.text_container,
+          className: Qe.text_container,
           children: [e.jsxs("div", {
-            className: ze.text_block,
+            className: Qe.text_block,
             children: [e.jsx("span", {
-              className: ze.gray,
+              className: Qe.gray,
               children: "Total painters"
             }), e.jsx("span", {
-              className: `${ze.bold}`,
+              className: `${Qe.bold}`,
               style: {
                 fontSize: 22
               },
-              children: e.jsx(Ge, {
+              children: e.jsx(He, {
                 num: a
               })
             })]
           }), e.jsxs("div", {
-            className: ze.text_block,
+            className: Qe.text_block,
             children: [e.jsx("span", {
-              className: ze.gray,
+              className: Qe.gray,
               children: "Total repaints"
             }), e.jsx("span", {
-              className: `${ze.bold}`,
-              children: e.jsx(Ge, {
+              className: `${Qe.bold}`,
+              children: e.jsx(He, {
                 num: Math.floor(o)
               })
             })]
           })]
         }), e.jsx("div", {
-          className: ze.button_container,
+          className: Qe.button_container,
           children: e.jsx("button", {
-            className: ze.button,
+            className: Qe.button,
             onPointerUp: () => {
               t.push("/invite-frens")
             },
@@ -10308,7 +10307,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         }), e.jsxs("div", {
           className: L.variant_item,
           onPointerUp: () => {
-            t(ua("boosts")), n.push("/claiming")
+            t(ma("boosts")), n.push("/claiming")
           },
           children: [e.jsx("div", {
             className: L.variant_left_container,
@@ -10456,7 +10455,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       l = vs(),
       [d, m] = ws(),
       [h, f] = u.useState(!1),
-      M = c(Ve);
+      M = c(Je);
     u.useEffect(() => {
       if (!a || !r) return;
       const _ = localStorage.getItem(s);
@@ -10475,12 +10474,12 @@ const Pg = u.memo(() => (u.useEffect(() => {
             quantity: _.quantity,
             goodId: a.id
           }),
-          T = qe.beginCell().storeUint(0, 32).storeStringTail(j.data.txMemCode).endCell(),
+          T = Le.beginCell().storeUint(0, 32).storeStringTail(j.data.txMemCode).endCell(),
           w = {
             validUntil: Math.floor(Date.now() / 1e3) + 600,
             messages: [{
-              address: la,
-              amount: String(qe.toNano(j.data.strAmount)),
+              address: da,
+              amount: String(Le.toNano(j.data.strAmount)),
               payload: T.toBoc().toString("base64")
             }]
           },
@@ -10707,7 +10706,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
   vb = "_button_copy_uihlo_53",
   wb = "_button_uihlo_44",
   jb = "_create_new_template_uihlo_72",
-  He = {
+  qe = {
     no_template_container: hb,
     no_template_button: gb,
     template_container: _b,
@@ -10724,7 +10723,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       s = c(i => i.user.user),
       a = s && s.friends >= ln[16] || s.isContractor;
     return n !== null ? null : e.jsxs("div", {
-      className: He.no_template_container,
+      className: qe.no_template_container,
       children: [a && e.jsx("span", {
         className: "gray",
         children: "Create a template and share with your friends."
@@ -10732,13 +10731,13 @@ const Pg = u.memo(() => (u.useEffect(() => {
         className: "gray",
         children: ["To unlock template creation, ", e.jsx("br", {}), " invite", " ", s && s.friends || 0, "/", ln[16], " friends"]
       }), a && e.jsx("button", {
-        className: He.no_template_button,
+        className: qe.no_template_button,
         onPointerUp: () => {
           t.push("/template/create")
         },
         children: "Pixel Templates"
       }), !a && e.jsx("button", {
-        className: He.no_template_button,
+        className: qe.no_template_button,
         onPointerUp: () => {
           t.push("/invite-frens")
         },
@@ -10773,7 +10772,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         ...n
       },
       onPointerUp: async () => {
-        t.templateId && t.templateId !== 0 && s(_a({
+        t.templateId && t.templateId !== 0 && s(fa({
           show: !0,
           id: Number(t.templateId)
         }))
@@ -10801,7 +10800,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
   Tb = () => {
     const t = K();
     return e.jsx("div", {
-      className: He.create_new_template,
+      className: qe.create_new_template,
       onPointerUp: () => {
         t.push("/template/create")
       },
@@ -10814,7 +10813,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     t.squad && t.squad.id !== null && (n += `_s${t.squad.id}`);
     const s = c(a => a.template.myTemplate);
     return s === null ? null : e.jsxs("div", {
-      className: He.template_container,
+      className: qe.template_container,
       children: [e.jsx(Jo, {
         item: {
           ...s,
@@ -10826,19 +10825,19 @@ const Pg = u.memo(() => (u.useEffect(() => {
           paddingTop: 0
         }
       }), e.jsx("div", {
-        className: He.template_info_container,
+        className: qe.template_info_container,
         children: e.jsxs("span", {
-          className: He.template_info,
+          className: qe.template_info,
           children: ["Share this template with your frens, ", e.jsx("br", {}), " get reward for frens repaints."]
         })
       }), e.jsxs("div", {
-        className: He.buttons_container,
+        className: qe.buttons_container,
         children: [e.jsx(Pt, {
           url: n,
-          className: He.button_copy,
+          className: qe.button_copy,
           text: "Copy template link"
         }), e.jsx("button", {
-          className: He.button,
+          className: qe.button,
           onPointerUp: a => {
             a.stopPropagation(), window.Telegram.WebApp.openTelegramLink(`https://t.me/share/url?url=${n}`)
           },
@@ -10878,7 +10877,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
           },
           f = (M, D) => {
             M.forEach(_ => {
-              _.intersectionRatio >= 1 && (t(Je.getList({
+              _.intersectionRatio >= 1 && (t(Ge.getList({
                 offset: i,
                 limit: o
               })), D.unobserve(n.current))
@@ -10898,7 +10897,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         disabled: a === A.pending,
         className: fs.button,
         onPointerUp: () => {
-          t(Je.getList({
+          t(Ge.getList({
             offset: i,
             limit: o
           }))
@@ -10913,7 +10912,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       s = c(o => o.template.listLimit),
       a = c(o => o.template.list),
       i = c(o => o.template.referredTemplate);
-    return u.useEffect(() => (t(Je.getList({
+    return u.useEffect(() => (t(Ge.getList({
       offset: n,
       limit: s
     })), () => {
@@ -10970,7 +10969,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
   Wb = "_mining_percent_1h1qc_60",
   Kb = "_active_row_1h1qc_70",
   Zb = "_button_1h1qc_81",
-  ui = {
+  mi = {
     container: Lb,
     divider: qb,
     row: Hb,
@@ -10993,7 +10992,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       show: n,
       setShow: s,
       children: e.jsxs("div", {
-        className: ui.container,
+        className: mi.container,
         children: [e.jsx("h2", {
           children: "How does Templates work? "
         }), e.jsx("p", {
@@ -11003,7 +11002,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         }), e.jsx("p", {
           children: "Create a template and get reward in PX. The reward depends on the number of painters of the template. Btw, the owner doesn't get an award for painting his template."
         }), e.jsx("button", {
-          className: ui.button,
+          className: mi.button,
           onPointerUp: () => s(!1),
           children: "That's so wise!"
         })]
@@ -11066,14 +11065,14 @@ const Pg = u.memo(() => (u.useEffect(() => {
       onPointerUp: async () => {
         if (!s) try {
           if (n && n !== 0) {
-            if (a(!0), (await t(Je.subscribe({
+            if (a(!0), (await t(Ge.subscribe({
                 id: n
               }))).meta.requestStatus === A.fulfilled) {
               await t(J({
                 id: performance.now(),
                 text: "Success!"
               }));
-              const m = await t(Je.getTemplateById({
+              const m = await t(Ge.getTemplateById({
                   id: n
                 })),
                 h = {
@@ -11102,7 +11101,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       i = c(o => o.template.templateInfoPopupId);
     return u.useEffect(() => (i && (async () => {
       try {
-        const r = await t(Je.getTemplateById({
+        const r = await t(Ge.getTemplateById({
           id: i
         }));
         r.payload && s({
@@ -11112,7 +11111,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     })(), () => {
       s(null)
     }), [i]), tt.createPortal(e.jsx(ke, {
-      onPointerUp: () => t(_a({
+      onPointerUp: () => t(fa({
         show: !1
       })),
       show: a,
@@ -11126,7 +11125,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
           children: [e.jsx("div", {
             className: te.close_button,
             onPointerUp: () => {
-              t(_a({
+              t(fa({
                 show: !1
               }))
             },
@@ -11301,7 +11300,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     const [n, s] = u.useState({
       ready: !1,
       data: null
-    }), a = O1(), i = c(Oe);
+    }), a = O1(), i = c(Ve);
     return u.useEffect(() => {
       n && s({
         ready: !0,
@@ -11393,7 +11392,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         src: a
       }), e.jsx("div", {
         className: O.squad_avatar_container,
-        children: e.jsx(qa, {
+        children: e.jsx(Ha, {
           src: ((i = n == null ? void 0 : n.squad) == null ? void 0 : i.logo) || ""
         })
       })]
@@ -11489,7 +11488,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
           children: "Pixels recolored"
         }), e.jsx("div", {
           className: O.content_info_item_value,
-          children: s ? Ge({
+          children: s ? He({
             num: n.repaints
           }) : 0
         })]
@@ -11500,7 +11499,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
           children: "PX mined"
         }), e.jsx("div", {
           className: O.content_info_item_value,
-          children: s ? Ge({
+          children: s ? He({
             num: n.balance
           }) : 0
         })]
@@ -11666,7 +11665,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       })
     })
   },
-  wa = ({
+  ja = ({
     isPopupContent: t = !0
   }) => {
     const n = t ? "Painter" : "My Profile";
@@ -11692,13 +11691,13 @@ const Pg = u.memo(() => (u.useEffect(() => {
   },
   _0 = () => {
     const t = g(),
-      n = c(Oe);
+      n = c(Ve);
     return u.useEffect(() => (n && n.id && t(Bh.getListByUserId({
       userId: n.id
     })), () => {
       t(Sh())
     }), [n]), e.jsx(oe, {
-      children: e.jsx(wa, {
+      children: e.jsx(ja, {
         isPopupContent: !1
       })
     })
@@ -11887,7 +11886,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         children: "Place"
       }), e.jsx("div", {
         className: C.content_info_item_value,
-        children: n ? Ge({
+        children: n ? He({
           num: t.rank
         }) : 0
       })]
@@ -11898,7 +11897,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         children: "Score"
       }), e.jsx("div", {
         className: C.content_info_item_value,
-        children: n ? Ge({
+        children: n ? He({
           num: t.squad.scoredRepaints
         }) : 0
       })]
@@ -11909,7 +11908,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         children: "Members"
       }), e.jsx("div", {
         className: C.content_info_item_value,
-        children: n ? Ge({
+        children: n ? He({
           num: t.squad.players
         }) : 0
       })]
@@ -11920,7 +11919,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         children: "Pixels recolored"
       }), e.jsx("div", {
         className: C.content_info_item_value,
-        children: n ? Ge({
+        children: n ? He({
           num: t.squad.totalRepaints
         }) : 0
       })]
@@ -11931,7 +11930,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         children: "PX mined"
       }), e.jsx("div", {
         className: C.content_info_item_value,
-        children: n ? Ge({
+        children: n ? He({
           num: t.squad.totalBalance
         }) : 0
       })]
@@ -12147,7 +12146,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
                 posY: a
               })).status === 200) {
               r && v.mainImage.worldTemplate.deleteTemplate(r.id);
-              const M = await i(Je.getTemplateById({
+              const M = await i(Ge.getTemplateById({
                   id: l.id
                 })),
                 D = {
@@ -12245,7 +12244,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     })]
   }),
   aN = () => {
-    g(), c(Oe);
+    g(), c(Ve);
     const [t, n] = u.useState(null), [s, a] = u.useState(null), [i, o] = u.useState(null), [r, l] = u.useState(16), [d, m] = u.useState({
       x: "",
       y: ""
@@ -12261,8 +12260,8 @@ const Pg = u.memo(() => (u.useEffect(() => {
           let T, w;
           j > 1 ? (T = r, w = r / j) : (w = r, T = r * j);
           const ge = (r - T) / 2,
-            Qe = (r - w) / 2;
-          D.width = r, D.height = r, _.drawImage(t, ge, Qe, T, w);
+            Oe = (r - w) / 2;
+          D.width = r, D.height = r, _.drawImage(t, ge, Oe, T, w);
           const Ye = _.getImageData(0, 0, r, r);
           eN(Ye), _.putImageData(Ye, 0, 0), a(Ye), o(D.toDataURL())
         };
@@ -12492,7 +12491,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
     setCoords: n
   }) => null,
   WN = () => {
-    g(), c(Oe);
+    g(), c(Ve);
     const [t, n] = u.useState(null), [s, a] = u.useState(null), [i, o] = u.useState(null), [r, l] = u.useState(32), [d, m] = u.useState({
       x: 0,
       y: 0
@@ -12508,8 +12507,8 @@ const Pg = u.memo(() => (u.useEffect(() => {
           let T, w;
           j > 1 ? (T = r, w = r / j) : (w = r, T = r * j);
           const ge = (r - T) / 2,
-            Qe = (r - w) / 2;
-          D.width = r, D.height = r, _.drawImage(t, ge, Qe, T, w);
+            Oe = (r - w) / 2;
+          D.width = r, D.height = r, _.drawImage(t, ge, Oe, T, w);
           const Ye = _.getImageData(0, 0, r, r);
           fN(Ye), _.putImageData(Ye, 0, 0), a(Ye), o(D.toDataURL())
         };
@@ -12826,20 +12825,21 @@ const Pg = u.memo(() => (u.useEffect(() => {
   }),
   JP = "/assets/bg-BNfFdtGI.png",
   tr = "data:image/png;base64,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",
-  ja = "/assets/rays-uhfpLlt6.png",
+  ba = "/assets/rays-uhfpLlt6.png",
   VP = "/assets/rays2-Ce7ymw8-.png",
-  YP = "_container_1h1qc_1",
-  XP = "_divider_1h1qc_19",
-  WP = "_row_1h1qc_24",
-  KP = "_row_title_1h1qc_36",
-  ZP = "_row_title_main_1h1qc_40",
-  $P = "_row_hint_1h1qc_45",
-  eI = "_row_value_1h1qc_51",
-  tI = "_row_value_main_1h1qc_55",
-  nI = "_mining_percent_1h1qc_60",
-  sI = "_active_row_1h1qc_70",
-  aI = "_button_1h1qc_81",
-  mi = {
+  YP = "_container_1blfx_1",
+  XP = "_divider_1blfx_19",
+  WP = "_row_1blfx_24",
+  KP = "_row_title_1blfx_36",
+  ZP = "_row_title_main_1blfx_40",
+  $P = "_row_hint_1blfx_45",
+  eI = "_row_value_1blfx_51",
+  tI = "_row_value_main_1blfx_55",
+  nI = "_mining_percent_1blfx_60",
+  sI = "_active_row_1blfx_70",
+  aI = "_gold_1blfx_80",
+  iI = "_button_1blfx_88",
+  ra = {
     container: YP,
     divider: XP,
     row: WP,
@@ -12850,9 +12850,10 @@ const Pg = u.memo(() => (u.useEffect(() => {
     row_value_main: tI,
     mining_percent: nI,
     active_row: sI,
-    button: aI
+    gold: aI,
+    button: iI
   },
-  iI = () => {
+  oI = () => {
     const t = g(),
       n = c(a => a.tournament.showTournamentDetailsPopup),
       s = a => {
@@ -12862,54 +12863,87 @@ const Pg = u.memo(() => (u.useEffect(() => {
       show: n,
       setShow: s,
       children: e.jsxs("div", {
-        className: mi.container,
+        className: ra.container,
         children: [e.jsx("h2", {
-          children: "How does Tournament work? "
+          children: " General Rules "
         }), e.jsxs("p", {
-          children: ["Something will happen here,", e.jsx("br", {}), " but not now."]
+          children: ["1. ", e.jsx("b", {
+            children: " 1,024 "
+          }), "templates were selected (32×32px)."]
+        }), e.jsxs("p", {
+          children: ["2. The tournament has ", e.jsx("b", {
+            children: "10 "
+          }), " rounds, with templates progressing based on ", e.jsx("b", {
+            children: "correct color fills "
+          }), " and fines for incorrect painting."]
+        }), e.jsxs("p", {
+          children: ["3. The number of templates is", e.jsx("b", {
+            children: " halved each round "
+          }), ", and some rounds ", e.jsx("b", {
+            children: "feature larger templates"
+          }), " (e.g., the final round has 2 templates at 1024×1024px)."]
+        }), e.jsx("h2", {
+          children: " Participation and Rewards "
+        }), e.jsxs("p", {
+          children: ["1. All players can join. ", e.jsx("b", {
+            children: "Select a template"
+          }), " at the start of each round and color it correctly (one choice per round)."]
+        }), e.jsxs("p", {
+          children: ["2. At the end of each round, the top participants from the winning templates ", e.jsx("b", {
+            children: " receive $PX"
+          }), "."]
+        }), " ", e.jsxs("p", {
+          children: ["3. If your template loses or you don’t rank in the top, you", e.jsx("b", {
+            children: " receive no rewards"
+          }), "."]
+        }), e.jsxs("p", {
+          children: ["4. At the end of the Tournament, the best participants from the winning templates receive a", " ", e.jsx("span", {
+            className: ra.gold,
+            children: "Golden Pixel"
+          }), "."]
         }), e.jsx("button", {
-          className: mi.button,
+          className: ra.button,
           onPointerUp: () => s(!1),
           children: "That's so wise!"
         })]
       })
     })
   },
-  oI = "_layout_2uiqn_1",
-  rI = "_container_2uiqn_6",
-  cI = "_close_button_2uiqn_18",
-  lI = "_title_container_2uiqn_26",
-  dI = "_title_2uiqn_26",
-  uI = "_image_container_2uiqn_37",
-  mI = "_image_2uiqn_37",
-  AI = "_image_placeholder_2uiqn_51",
-  pI = "_info_container_2uiqn_58",
-  hI = "_info_row_2uiqn_64",
-  gI = "_info_title_2uiqn_69",
-  _I = "_info_value_blue_2uiqn_73",
-  fI = "_info_value_white_2uiqn_78",
-  xI = "_buttons_container_2uiqn_82",
-  yI = "_button_2uiqn_82",
-  vI = "_not_button_2uiqn_98",
-  wI = "_button_copy_2uiqn_109",
+  rI = "_layout_2uiqn_1",
+  cI = "_container_2uiqn_6",
+  lI = "_close_button_2uiqn_18",
+  dI = "_title_container_2uiqn_26",
+  uI = "_title_2uiqn_26",
+  mI = "_image_container_2uiqn_37",
+  AI = "_image_2uiqn_37",
+  pI = "_image_placeholder_2uiqn_51",
+  hI = "_info_container_2uiqn_58",
+  gI = "_info_row_2uiqn_64",
+  _I = "_info_title_2uiqn_69",
+  fI = "_info_value_blue_2uiqn_73",
+  xI = "_info_value_white_2uiqn_78",
+  yI = "_buttons_container_2uiqn_82",
+  vI = "_button_2uiqn_82",
+  wI = "_not_button_2uiqn_98",
+  jI = "_button_copy_2uiqn_109",
   V = {
-    layout: oI,
-    container: rI,
-    close_button: cI,
-    title_container: lI,
-    title: dI,
-    image_container: uI,
-    image: mI,
-    image_placeholder: AI,
-    info_container: pI,
-    info_row: hI,
-    info_title: gI,
-    info_value_blue: _I,
-    info_value_white: fI,
-    buttons_container: xI,
-    button: yI,
-    not_button: vI,
-    button_copy: wI
+    layout: rI,
+    container: cI,
+    close_button: lI,
+    title_container: dI,
+    title: uI,
+    image_container: mI,
+    image: AI,
+    image_placeholder: pI,
+    info_container: hI,
+    info_row: gI,
+    info_title: _I,
+    info_value_blue: fI,
+    info_value_white: xI,
+    buttons_container: yI,
+    button: vI,
+    not_button: wI,
+    button_copy: jI
   },
   nr = ({
     template: t,
@@ -12929,15 +12963,17 @@ const Pg = u.memo(() => (u.useEffect(() => {
           if (o) return;
           (await a(Ds.selectTemplate({
             id: t.id
-          }))).meta.requestStatus === A.fulfilled && a(bh(data))
-        } catch {} finally {
+          }))).meta.requestStatus === A.fulfilled && a(bh(t))
+        } catch (r) {
+          console.log(r, "error when selecting template")
+        } finally {
           s()
         }
       },
       children: "Select Template"
     })
   },
-  jI = () => {
+  bI = () => {
     const t = c(o => o.tournament.templateDataInfoPopup),
       n = c(o => o.user.user),
       s = c(o => o.tournament.selectedTemplate),
@@ -12953,12 +12989,12 @@ const Pg = u.memo(() => (u.useEffect(() => {
       template: t
     })
   },
-  bI = () => {
+  NI = () => {
     const t = g(),
       n = c(a => a.tournament.showTemplateInfoPopup),
       s = c(a => a.tournament.templateDataInfoPopup);
     return !s || !n ? null : tt.createPortal(e.jsx(ke, {
-      onPointerUp: () => t(ti()),
+      onPointerUp: () => t(ni()),
       show: n,
       children: e.jsx("div", {
         className: V.layout,
@@ -12970,7 +13006,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
           children: [e.jsx("div", {
             className: V.close_button,
             onPointerUp: () => {
-              t(ti())
+              t(ni())
             },
             children: e.jsx(b, {
               size: 26,
@@ -12991,7 +13027,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
             })
           }), e.jsxs("div", {
             className: V.buttons_container,
-            children: [e.jsx(jI, {}), e.jsx(Pt, {
+            children: [e.jsx(bI, {}), e.jsx(Pt, {
               url: `${pt}?startapp=f${s.id}_t`,
               className: V.button_copy,
               text: "Copy template link"
@@ -13049,26 +13085,26 @@ const Pg = u.memo(() => (u.useEffect(() => {
       })
     }), document.body)
   },
-  NI = "_layout_20dlh_1",
-  PI = "_container_20dlh_10",
-  II = "_star_20dlh_14",
-  CI = "_star_animation_20dlh_21",
-  SI = "_move_20dlh_1",
+  PI = "_layout_20dlh_1",
+  II = "_container_20dlh_10",
+  CI = "_star_20dlh_14",
+  SI = "_star_animation_20dlh_21",
+  TI = "_move_20dlh_1",
   ys = {
-    layout: NI,
-    container: PI,
-    star: II,
-    star_animation: CI,
-    move: SI
+    layout: PI,
+    container: II,
+    star: CI,
+    star_animation: SI,
+    move: TI
   },
-  TI = "data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3clinearGradient%20id='grad1'%20x1='0%25'%20y1='0%25'%20x2='0%25'%20y2='100%25'%3e%3cstop%20offset='0%25'%20style='stop-color:%23efce32;stop-opacity:1'%20/%3e%3c!--%20более%20светлый%20желтый%20--%3e%3cstop%20offset='100%25'%20style='stop-color:%23f7752e;stop-opacity:1'%20/%3e%3c!--%20более%20темный%20желтый%20--%3e%3c/linearGradient%3e%3c/defs%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5%200C2.23858%200%200%202.23858%200%205V27C0%2029.7614%202.23858%2032%205%2032H27C29.7614%2032%2032%2029.7614%2032%2027V5C32%202.23858%2029.7614%200%2027%200H5ZM21.4261%2010.5739H10.5739V21.4261H21.4261V10.5739Z'%20fill='url(%23grad1)'/%3e%3c/svg%3e",
+  EI = "data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3clinearGradient%20id='grad1'%20x1='0%25'%20y1='0%25'%20x2='0%25'%20y2='100%25'%3e%3cstop%20offset='0%25'%20style='stop-color:%23efce32;stop-opacity:1'%20/%3e%3c!--%20более%20светлый%20желтый%20--%3e%3cstop%20offset='100%25'%20style='stop-color:%23f7752e;stop-opacity:1'%20/%3e%3c!--%20более%20темный%20желтый%20--%3e%3c/linearGradient%3e%3c/defs%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5%200C2.23858%200%200%202.23858%200%205V27C0%2029.7614%202.23858%2032%205%2032H27C29.7614%2032%2032%2029.7614%2032%2027V5C32%202.23858%2029.7614%200%2027%200H5ZM21.4261%2010.5739H10.5739V21.4261H21.4261V10.5739Z'%20fill='url(%23grad1)'/%3e%3c/svg%3e",
   sr = ({
     size: t,
     style: n = {},
     animation: s = !1
   }) => e.jsx("img", {
     alt: "image",
-    src: TI,
+    src: EI,
     className: s ? ys.star_animation : ys.star,
     style: {
       width: t,
@@ -13076,7 +13112,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       ...n
     }
   }),
-  EI = u.memo(() => {
+  BI = u.memo(() => {
     const t = Array.from(Array(30));
     return e.jsx("div", {
       className: ys.layout,
@@ -13096,7 +13132,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       })
     })
   }, () => !1),
-  BI = () => {
+  DI = () => {
     const t = g();
     return e.jsxs(oe, {
       children: [e.jsxs("div", {
@@ -13117,12 +13153,12 @@ const Pg = u.memo(() => (u.useEffect(() => {
           }), e.jsx("img", {
             alt: "img",
             className: Xe.image_glow,
-            src: ja
+            src: ba
           }), e.jsx("img", {
             alt: "img",
             className: Xe.image_glow_reverse,
             src: VP
-          }), e.jsx(EI, {})]
+          }), e.jsx(BI, {})]
         }), e.jsx("h1", {
           className: Xe.title,
           children: "The Grand Tournament"
@@ -13131,75 +13167,75 @@ const Pg = u.memo(() => (u.useEffect(() => {
           children: [e.jsxs("span", {
             className: Xe.description,
             children: [e.jsx("span", {
-              children: " Pick a template, paint and win"
+              children: " Paint templates to win "
             }), " ", e.jsx("span", {
               className: Xe.gold,
-              children: "Golden Pixel"
+              children: "Golden Pixels"
             }), " ", e.jsx("br", {}), e.jsx(wn, {
               onPointerUp: n => {
                 n.stopPropagation(), t(ko(!0))
               },
               children: "Read the rules"
             })]
-          }), e.jsx(iI, {})]
+          }), e.jsx(oI, {})]
         })]
-      }), e.jsx(GP, {}), e.jsx(bI, {})]
+      }), e.jsx(GP, {}), e.jsx(NI, {})]
     })
   },
-  DI = "_container_2w971_1",
-  kI = "_image_container_2w971_9",
-  RI = "_image_2w971_9",
-  MI = "_title_container_2w971_18",
-  UI = "_text_container_2w971_27",
-  FI = "_title_2w971_18",
-  OI = "_gray_2w971_39",
-  QI = "_bold_2w971_43",
-  zI = "_input_2w971_47",
-  LI = "_catalog_container_2w971_71",
-  qI = "_catalog_title_2w971_76",
-  HI = "_catalog_items_container_2w971_81",
-  GI = "_catalog_item_2w971_81",
-  JI = "_catalog_item_image_container_2w971_100",
-  VI = "_catalog_item_image_2w971_100",
-  YI = "_button_container_2w971_109",
-  XI = "_button_2w971_109",
-  WI = "_wrong_helper_text_2w971_124",
-  KI = "_wrong_button_2w971_129",
-  ZI = "_wrong_button_text2_2w971_142",
+  kI = "_container_2w971_1",
+  RI = "_image_container_2w971_9",
+  MI = "_image_2w971_9",
+  UI = "_title_container_2w971_18",
+  FI = "_text_container_2w971_27",
+  OI = "_title_2w971_18",
+  QI = "_gray_2w971_39",
+  zI = "_bold_2w971_43",
+  LI = "_input_2w971_47",
+  qI = "_catalog_container_2w971_71",
+  HI = "_catalog_title_2w971_76",
+  GI = "_catalog_items_container_2w971_81",
+  JI = "_catalog_item_2w971_81",
+  VI = "_catalog_item_image_container_2w971_100",
+  YI = "_catalog_item_image_2w971_100",
+  XI = "_button_container_2w971_109",
+  WI = "_button_2w971_109",
+  KI = "_wrong_helper_text_2w971_124",
+  ZI = "_wrong_button_2w971_129",
+  $I = "_wrong_button_text2_2w971_142",
   R = {
-    container: DI,
-    image_container: kI,
-    image: RI,
-    title_container: MI,
-    text_container: UI,
-    title: FI,
-    gray: OI,
-    bold: QI,
-    input: zI,
-    catalog_container: LI,
-    catalog_title: qI,
-    catalog_items_container: HI,
-    catalog_item: GI,
-    catalog_item_image_container: JI,
-    catalog_item_image: VI,
-    button_container: YI,
-    button: XI,
-    wrong_helper_text: WI,
-    wrong_button: KI,
-    wrong_button_text2: ZI
+    container: kI,
+    image_container: RI,
+    image: MI,
+    title_container: UI,
+    text_container: FI,
+    title: OI,
+    gray: QI,
+    bold: zI,
+    input: LI,
+    catalog_container: qI,
+    catalog_title: HI,
+    catalog_items_container: GI,
+    catalog_item: JI,
+    catalog_item_image_container: VI,
+    catalog_item_image: YI,
+    button_container: XI,
+    button: WI,
+    wrong_helper_text: KI,
+    wrong_button: ZI,
+    wrong_button_text2: $I
   },
-  $I = "/assets/box_1-CzUKXu07.gif",
-  eC = "/assets/box_2-wR9cQS7q.gif",
-  tC = "/assets/box_3-g_PL1kKM.gif",
-  nC = "/assets/dogs-D0jtZggB.gif",
-  sC = "/assets/secret_word-BTKB1fAO.gif",
+  eC = "/assets/box_1-CzUKXu07.gif",
+  tC = "/assets/box_2-wR9cQS7q.gif",
+  nC = "/assets/box_3-g_PL1kKM.gif",
+  sC = "/assets/dogs-D0jtZggB.gif",
+  aC = "/assets/secret_word-BTKB1fAO.gif",
   Cn = {
     Ghost: "Ghost",
     Mythical: "Mythical",
     Magical: "Magical",
     Dogs: "Dogs"
   },
-  aC = () => {
+  iC = () => {
     const t = g(),
       [n, s] = u.useState(""),
       [a, i] = u.useState(!1),
@@ -13254,7 +13290,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
           children: e.jsx("img", {
             alt: "image",
             className: R.image,
-            src: sC
+            src: aC
           })
         }), e.jsxs("div", {
           className: R.title_container,
@@ -13290,7 +13326,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
                 children: e.jsx("img", {
                   alt: "item_image",
                   className: R.catalog_item_image,
-                  src: $I
+                  src: eC
                 })
               }), e.jsx("div", {
                 className: H(R.bold),
@@ -13310,7 +13346,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
                 children: e.jsx("img", {
                   alt: "item_image",
                   className: R.catalog_item_image,
-                  src: eC
+                  src: tC
                 })
               }), e.jsx("div", {
                 className: H(R.bold),
@@ -13330,7 +13366,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
                 children: e.jsx("img", {
                   alt: "item_image",
                   className: R.catalog_item_image,
-                  src: nC
+                  src: sC
                 })
               }), e.jsx("div", {
                 className: H(R.bold),
@@ -13350,7 +13386,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
                 children: e.jsx("img", {
                   alt: "item_image",
                   className: R.catalog_item_image,
-                  src: tC
+                  src: nC
                 })
               }), e.jsx("div", {
                 className: H(R.bold),
@@ -13417,8 +13453,8 @@ const Pg = u.memo(() => (u.useEffect(() => {
     my_squad: "/my-squad",
     my_profile: "/my-profile"
   },
-  iC = Object.values(ct),
-  oC = () => e.jsx(Pa, {
+  oC = Object.values(ct),
+  rC = () => e.jsx(Ia, {
     children: e.jsxs(br, {
       children: [e.jsx(ee, {
         path: "/welcome",
@@ -13452,7 +13488,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         children: e.jsx(ad, {})
       }), e.jsx(ee, {
         path: "/secrets",
-        children: e.jsx(aC, {})
+        children: e.jsx(iC, {})
       }), e.jsx(ee, {
         path: ct.mining,
         children: e.jsx(k_, {})
@@ -13476,7 +13512,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
         children: e.jsx(x1, {})
       }), e.jsx(ee, {
         path: "/tournament",
-        children: e.jsx(BI, {})
+        children: e.jsx(DI, {})
       }), e.jsx(ee, {
         path: "/energy-over",
         children: e.jsx(Pj, {})
@@ -13492,59 +13528,59 @@ const Pg = u.memo(() => (u.useEffect(() => {
       })]
     })
   }),
-  rC = "_layout_1djp8_1",
-  cC = "_loading_container_1djp8_8",
-  lC = "_image_container_1djp8_20",
-  dC = "_image_1djp8_20",
-  uC = "_text_1djp8_29",
+  cC = "_layout_1djp8_1",
+  lC = "_loading_container_1djp8_8",
+  dC = "_image_container_1djp8_20",
+  uC = "_image_1djp8_20",
+  mC = "_text_1djp8_29",
   $t = {
-    layout: rC,
-    loading_container: cC,
-    image_container: lC,
-    image: dC,
-    text: uC
+    layout: cC,
+    loading_container: lC,
+    image_container: dC,
+    image: uC,
+    text: mC
   },
-  mC = "_buttons_container_rjvnl_1",
-  AC = "_group_rjvnl_8",
-  pC = "_left_rjvnl_15",
-  hC = "_middle_rjvnl_21",
-  gC = "_right_rjvnl_29",
-  _C = "_number_rjvnl_36",
-  fC = "_button_rjvnl_1",
-  xC = "_ratings_button_rjvnl_55",
-  yC = "_stars_button_rjvnl_62",
-  vC = "_shop_button_rjvnl_70",
-  wC = "_burger_button_rjvnl_79",
-  jC = "_relative_button_rjvnl_89",
-  bC = "_telegram_button_rjvnl_116",
-  NC = "_button_img_rjvnl_124",
-  PC = "_avatar_img_rjvnl_129",
-  IC = "_open_menu_button_rjvnl_134",
-  CC = "_open_menu_button_image_rjvnl_144",
-  SC = "_my_pixels_amount_rjvnl_149",
-  TC = "_header_content_rjvnl_154",
+  AC = "_buttons_container_rjvnl_1",
+  pC = "_group_rjvnl_8",
+  hC = "_left_rjvnl_15",
+  gC = "_middle_rjvnl_21",
+  _C = "_right_rjvnl_29",
+  fC = "_number_rjvnl_36",
+  xC = "_button_rjvnl_1",
+  yC = "_ratings_button_rjvnl_55",
+  vC = "_stars_button_rjvnl_62",
+  wC = "_shop_button_rjvnl_70",
+  jC = "_burger_button_rjvnl_79",
+  bC = "_relative_button_rjvnl_89",
+  NC = "_telegram_button_rjvnl_116",
+  PC = "_button_img_rjvnl_124",
+  IC = "_avatar_img_rjvnl_129",
+  CC = "_open_menu_button_rjvnl_134",
+  SC = "_open_menu_button_image_rjvnl_144",
+  TC = "_my_pixels_amount_rjvnl_149",
+  EC = "_header_content_rjvnl_154",
   xe = {
-    buttons_container: mC,
-    group: AC,
-    left: pC,
-    middle: hC,
-    right: gC,
-    number: _C,
-    button: fC,
-    ratings_button: xC,
-    stars_button: yC,
-    shop_button: vC,
-    burger_button: wC,
-    relative_button: jC,
-    telegram_button: bC,
-    button_img: NC,
-    avatar_img: PC,
-    open_menu_button: IC,
-    open_menu_button_image: CC,
-    my_pixels_amount: SC,
-    header_content: TC
+    buttons_container: AC,
+    group: pC,
+    left: hC,
+    middle: gC,
+    right: _C,
+    number: fC,
+    button: xC,
+    ratings_button: yC,
+    stars_button: vC,
+    shop_button: wC,
+    burger_button: jC,
+    relative_button: bC,
+    telegram_button: NC,
+    button_img: PC,
+    avatar_img: IC,
+    open_menu_button: CC,
+    open_menu_button_image: SC,
+    my_pixels_amount: TC,
+    header_content: EC
   },
-  EC = () => c(Be) ? null : e.jsxs("button", {
+  BC = () => c(Be) ? null : e.jsxs("button", {
     className: `${xe.button} ${xe.telegram_button}`,
     onPointerUp: () => {
       ce("https://t.me/notpixel")
@@ -13561,7 +13597,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       n.pathname === t ? s.push("/") : s.push(t)
     }
   },
-  BC = () => {
+  DC = () => {
     const t = Us("/claiming"),
       n = c(a => a.user.pixelCoins);
     return c(Be) ? e.jsxs("button", {
@@ -13580,15 +13616,15 @@ const Pg = u.memo(() => (u.useEffect(() => {
       })]
     }) : null
   },
-  DC = "data:image/svg+xml,%3c?xml%20version='1.0'%20?%3e%3csvg%20viewBox='0%200%2032%2032'%20xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:none;}%3c/style%3e%3c/defs%3e%3ctitle/%3e%3cg%20fill='%23e0dd8e'%20data-name='Layer%202'%20id='Layer_2'%3e%3cpath%20d='M24,29H8a3,3,0,0,1-3-3V16a1,1,0,0,1,2,0V26a1,1,0,0,0,1,1H24a1,1,0,0,0,1-1V16a1,1,0,0,1,2,0V26A3,3,0,0,1,24,29Z'/%3e%3cpath%20d='M15,29H10a1,1,0,0,1-1-1V22a3,3,0,0,1,3-3h1a3,3,0,0,1,3,3v6A1,1,0,0,1,15,29Zm-4-2h3V22a1,1,0,0,0-1-1H12a1,1,0,0,0-1,1Z'/%3e%3cpath%20d='M25,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0v-.76L24.38,7H7.62L5,12.24V13a2,2,0,0,0,4,0,1,1,0,0,1,2,0,4,4,0,0,1-8,0V12a1,1,0,0,1,.11-.45l3-6A1,1,0,0,1,7,5H25a1,1,0,0,1,.89.55l3,6A1,1,0,0,1,29,12v1A4,4,0,0,1,25,17Z'/%3e%3cpath%20d='M13,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0,1,1,0,0,1,2,0A4,4,0,0,1,13,17Z'/%3e%3cpath%20d='M19,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0,1,1,0,0,1,2,0A4,4,0,0,1,19,17Z'/%3e%3cpath%20d='M22,22H19a1,1,0,0,1,0-2h3a1,1,0,0,1,0,2Z'/%3e%3c/g%3e%3cg%20id='frame'%3e%3crect%20class='cls-1'%20height='32'%20width='32'/%3e%3c/g%3e%3c/svg%3e",
-  kC = () => {
+  kC = "data:image/svg+xml,%3c?xml%20version='1.0'%20?%3e%3csvg%20viewBox='0%200%2032%2032'%20xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:none;}%3c/style%3e%3c/defs%3e%3ctitle/%3e%3cg%20fill='%23e0dd8e'%20data-name='Layer%202'%20id='Layer_2'%3e%3cpath%20d='M24,29H8a3,3,0,0,1-3-3V16a1,1,0,0,1,2,0V26a1,1,0,0,0,1,1H24a1,1,0,0,0,1-1V16a1,1,0,0,1,2,0V26A3,3,0,0,1,24,29Z'/%3e%3cpath%20d='M15,29H10a1,1,0,0,1-1-1V22a3,3,0,0,1,3-3h1a3,3,0,0,1,3,3v6A1,1,0,0,1,15,29Zm-4-2h3V22a1,1,0,0,0-1-1H12a1,1,0,0,0-1,1Z'/%3e%3cpath%20d='M25,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0v-.76L24.38,7H7.62L5,12.24V13a2,2,0,0,0,4,0,1,1,0,0,1,2,0,4,4,0,0,1-8,0V12a1,1,0,0,1,.11-.45l3-6A1,1,0,0,1,7,5H25a1,1,0,0,1,.89.55l3,6A1,1,0,0,1,29,12v1A4,4,0,0,1,25,17Z'/%3e%3cpath%20d='M13,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0,1,1,0,0,1,2,0A4,4,0,0,1,13,17Z'/%3e%3cpath%20d='M19,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0,1,1,0,0,1,2,0A4,4,0,0,1,19,17Z'/%3e%3cpath%20d='M22,22H19a1,1,0,0,1,0-2h3a1,1,0,0,1,0,2Z'/%3e%3c/g%3e%3cg%20id='frame'%3e%3crect%20class='cls-1'%20height='32'%20width='32'/%3e%3c/g%3e%3c/svg%3e",
+  RC = () => {
     const t = Us("/stars");
     return c(Be) ? e.jsx("button", {
       className: `${xe.shop_button}`,
       onPointerUp: t,
       children: e.jsx("img", {
         alt: "icon",
-        src: DC,
+        src: kC,
         style: {
           width: 24,
           height: 24
@@ -13596,7 +13632,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       })
     }) : null
   },
-  RC = () => {
+  MC = () => {
     const t = Us("/invite-frens");
     return c(Be) ? e.jsx("button", {
       className: `${xe.stars_button}`,
@@ -13607,7 +13643,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       })
     }) : null
   },
-  MC = () => {
+  UC = () => {
     const t = g(),
       n = c(vo),
       s = () => {
@@ -13626,7 +13662,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       })
     })
   },
-  UC = () => {
+  FC = () => {
     const t = Us("/daily");
     return c(Be) ? e.jsx("button", {
       className: `${xe.stars_button}`,
@@ -13641,13 +13677,13 @@ const Pg = u.memo(() => (u.useEffect(() => {
     className: xe.buttons_container,
     children: [e.jsxs("div", {
       className: `${xe.group} ${xe.left}`,
-      children: [e.jsx(MC, {}), e.jsx(RC, {})]
+      children: [e.jsx(UC, {}), e.jsx(MC, {})]
     }), e.jsx("div", {
       className: `${xe.group} ${xe.middle}`,
-      children: e.jsx(BC, {})
+      children: e.jsx(DC, {})
     }), e.jsxs("div", {
       className: `${xe.group} ${xe.right}`,
-      children: [e.jsx(UC, {}), e.jsx(EC, {}), e.jsx(kC, {})]
+      children: [e.jsx(FC, {}), e.jsx(BC, {}), e.jsx(RC, {})]
     })]
   })),
   pi = {
@@ -13664,7 +13700,7 @@ const Pg = u.memo(() => (u.useEffect(() => {
       className: n.join(" ")
     })) : null
   },
-  FC = () => {
+  OC = () => {
     const t = c(mn),
       n = js(),
       s = c(Vc),
@@ -13692,23 +13728,23 @@ const Pg = u.memo(() => (u.useEffect(() => {
     })
   };
 let gi = "/";
-const OC = () => {
+const QC = () => {
     let t = js(),
       n = K();
     return u.useEffect(() => {
       const s = () => {
-        iC.includes(t.pathname) ? n.push("/") : n.goBack()
+        oC.includes(t.pathname) ? n.push("/") : n.goBack()
       };
       return window.Telegram.WebApp.onEvent("backButtonClicked", s), t.pathname !== gi && (t.pathname === "/" ? window.Telegram.WebApp.BackButton.hide() : window.Telegram.WebApp.BackButton.show(), gi = t.pathname), () => {
         window.Telegram.WebApp.offEvent("backButtonClicked", s)
       }
     }, [t, n]), null
   },
-  QC = "_layout_ppin4_1",
-  zC = {
-    layout: QC
+  zC = "_layout_ppin4_1",
+  LC = {
+    layout: zC
   },
-  LC = () => {
+  qC = () => {
     const t = u.useRef(),
       n = c(a => a.progress.command),
       s = c(a => a.progress.counter);
@@ -13732,57 +13768,57 @@ const OC = () => {
       }
     }, [n, s]), tt.createPortal(e.jsx("div", {
       ref: t,
-      className: zC.layout
+      className: LC.layout
     }), document.body)
   },
-  qC = "_container_11ui8_1",
-  HC = "_header_11ui8_13",
-  GC = "_close_container_11ui8_23",
-  JC = "_close_11ui8_23",
-  VC = "_title_11ui8_48",
-  YC = "_frens_count_11ui8_53",
-  XC = "_body_11ui8_58",
-  WC = "_content_11ui8_68",
-  KC = "_image_container_11ui8_75",
-  ZC = "_image_11ui8_75",
-  $C = "_image_container_charges_11ui8_84",
-  eS = "_image_charges_11ui8_89",
-  tS = "_description_container_11ui8_94",
-  nS = "_bold_11ui8_102",
-  sS = "_gray_11ui8_107",
-  aS = "_center_11ui8_111",
-  iS = "_benefits_container_11ui8_115",
-  oS = "_benefits_item_11ui8_123",
-  rS = "_benefits_icon_container_11ui8_128",
-  cS = "_icon_invite_11ui8_132",
-  lS = "_footer_11ui8_136",
-  dS = "_button_11ui8_141",
+  HC = "_container_11ui8_1",
+  GC = "_header_11ui8_13",
+  JC = "_close_container_11ui8_23",
+  VC = "_close_11ui8_23",
+  YC = "_title_11ui8_48",
+  XC = "_frens_count_11ui8_53",
+  WC = "_body_11ui8_58",
+  KC = "_content_11ui8_68",
+  ZC = "_image_container_11ui8_75",
+  $C = "_image_11ui8_75",
+  e2 = "_image_container_charges_11ui8_84",
+  t2 = "_image_charges_11ui8_89",
+  n2 = "_description_container_11ui8_94",
+  s2 = "_bold_11ui8_102",
+  a2 = "_gray_11ui8_107",
+  i2 = "_center_11ui8_111",
+  o2 = "_benefits_container_11ui8_115",
+  r2 = "_benefits_item_11ui8_123",
+  c2 = "_benefits_icon_container_11ui8_128",
+  l2 = "_icon_invite_11ui8_132",
+  d2 = "_footer_11ui8_136",
+  u2 = "_button_11ui8_141",
   B = {
-    container: qC,
-    header: HC,
-    close_container: GC,
-    close: JC,
-    title: VC,
-    frens_count: YC,
-    body: XC,
-    content: WC,
-    image_container: KC,
-    image: ZC,
-    image_container_charges: $C,
-    image_charges: eS,
-    description_container: tS,
-    bold: nS,
-    gray: sS,
-    center: aS,
-    benefits_container: iS,
-    benefits_item: oS,
-    benefits_icon_container: rS,
-    icon_invite: cS,
-    footer: lS,
-    button: dS
+    container: HC,
+    header: GC,
+    close_container: JC,
+    close: VC,
+    title: YC,
+    frens_count: XC,
+    body: WC,
+    content: KC,
+    image_container: ZC,
+    image: $C,
+    image_container_charges: e2,
+    image_charges: t2,
+    description_container: n2,
+    bold: s2,
+    gray: a2,
+    center: i2,
+    benefits_container: o2,
+    benefits_item: r2,
+    benefits_icon_container: c2,
+    icon_invite: l2,
+    footer: d2,
+    button: u2
   },
-  uS = "data:image/png;base64,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",
-  mS = () => {
+  m2 = "data:image/png;base64,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",
+  A2 = () => {
     var o, r;
     const t = g(),
       n = c(l => l.main.showInviteFrensPopup),
@@ -13824,7 +13860,7 @@ const OC = () => {
               children: e.jsx("img", {
                 alt: "image",
                 className: B.image,
-                src: uS
+                src: m2
               })
             }), e.jsxs("div", {
               className: B.description_container,
@@ -13875,63 +13911,63 @@ const OC = () => {
       })
     })
   },
-  AS = "_container_13215_1",
-  pS = "_header_13215_9",
-  hS = "_close_13215_19",
-  gS = "_title_13215_31",
-  _S = "_body_13215_36",
-  fS = "_image_container_13215_49",
-  xS = "_image_13215_49",
-  yS = "_content_container_13215_60",
-  vS = "_description_container_13215_68",
-  wS = "_description_item_13215_75",
-  jS = "_amount_selector_container_13215_82",
-  bS = "_amount_selector_button_13215_88",
-  NS = "_amount_selector_count_13215_101",
-  PS = "_button_container_13215_112",
-  IS = "_crypto_button_container_13215_118",
-  CS = "_error_13215_132",
-  SS = "_button_13215_112",
-  TS = "_star_color_13215_153",
-  ES = "_tokens_selector_13215_159",
-  BS = "_tokens_title_13215_164",
-  DS = "_connect_wallet_text_title_13215_171",
-  kS = "_tokens_container_13215_180",
-  RS = "_token_item_13215_187",
-  MS = "_token_image_container_13215_198",
-  US = "_token_image_13215_198",
-  FS = "_sale_box_13215_208",
-  OS = "_sale_text_13215_220",
+  p2 = "_container_13215_1",
+  h2 = "_header_13215_9",
+  g2 = "_close_13215_19",
+  _2 = "_title_13215_31",
+  f2 = "_body_13215_36",
+  x2 = "_image_container_13215_49",
+  y2 = "_image_13215_49",
+  v2 = "_content_container_13215_60",
+  w2 = "_description_container_13215_68",
+  j2 = "_description_item_13215_75",
+  b2 = "_amount_selector_container_13215_82",
+  N2 = "_amount_selector_button_13215_88",
+  P2 = "_amount_selector_count_13215_101",
+  I2 = "_button_container_13215_112",
+  C2 = "_crypto_button_container_13215_118",
+  S2 = "_error_13215_132",
+  T2 = "_button_13215_112",
+  E2 = "_star_color_13215_153",
+  B2 = "_tokens_selector_13215_159",
+  D2 = "_tokens_title_13215_164",
+  k2 = "_connect_wallet_text_title_13215_171",
+  R2 = "_tokens_container_13215_180",
+  M2 = "_token_item_13215_187",
+  U2 = "_token_image_container_13215_198",
+  F2 = "_token_image_13215_198",
+  O2 = "_sale_box_13215_208",
+  Q2 = "_sale_text_13215_220",
   Y = {
-    container: AS,
-    header: pS,
-    close: hS,
-    title: gS,
-    body: _S,
-    image_container: fS,
-    image: xS,
-    content_container: yS,
-    description_container: vS,
-    description_item: wS,
-    amount_selector_container: jS,
-    amount_selector_button: bS,
-    amount_selector_count: NS,
-    button_container: PS,
-    crypto_button_container: IS,
-    error: CS,
-    button: SS,
-    star_color: TS,
-    tokens_selector: ES,
-    tokens_title: BS,
-    connect_wallet_text_title: DS,
-    tokens_container: kS,
-    token_item: RS,
-    token_image_container: MS,
-    token_image: US,
-    sale_box: FS,
-    sale_text: OS
+    container: p2,
+    header: h2,
+    close: g2,
+    title: _2,
+    body: f2,
+    image_container: x2,
+    image: y2,
+    content_container: v2,
+    description_container: w2,
+    description_item: j2,
+    amount_selector_container: b2,
+    amount_selector_button: N2,
+    amount_selector_count: P2,
+    button_container: I2,
+    crypto_button_container: C2,
+    error: S2,
+    button: T2,
+    star_color: E2,
+    tokens_selector: B2,
+    tokens_title: D2,
+    connect_wallet_text_title: k2,
+    tokens_container: R2,
+    token_item: M2,
+    token_image_container: U2,
+    token_image: F2,
+    sale_box: O2,
+    sale_text: Q2
   },
-  QS = () => {
+  z2 = () => {
     const t = g(),
       n = c(a => a.shop.activeProductCardId),
       s = c(a => a.shop.products[n]);
@@ -13955,7 +13991,7 @@ const OC = () => {
       })]
     })
   },
-  zS = () => {
+  L2 = () => {
     const t = c(a => a.shop.activeProductCardId),
       n = c(a => a.shop.products[t]),
       s = c(a => a.shop.amount);
@@ -13968,7 +14004,7 @@ const OC = () => {
       })
     })
   },
-  LS = () => {
+  q2 = () => {
     const t = c(s => s.shop.activeProductCardId),
       n = c(s => s.shop.products[t]);
     return e.jsx("div", {
@@ -13979,11 +14015,11 @@ const OC = () => {
       })
     })
   },
-  qS = () => {
+  H2 = () => {
     const t = g(),
       n = c(i => i.shop.crypto),
       s = c(i => i.shop.selectedCurrency);
-    return c(Ve) !== he ? null : e.jsxs("div", {
+    return c(Je) !== he ? null : e.jsxs("div", {
       className: Y.tokens_selector,
       children: [e.jsx("div", {
         className: Y.tokens_title,
@@ -14021,7 +14057,7 @@ const OC = () => {
       })]
     })
   },
-  HS = () => {
+  G2 = () => {
     const t = c(s => s.shop.selectedCurrency),
       n = c(s => s.shop.crypto).filter(s => s.currency_id === t)[0];
     return t === 1 ? e.jsx("span", {
@@ -14043,7 +14079,7 @@ const OC = () => {
       src: n.image
     })
   },
-  GS = ({
+  J2 = ({
     success: t
   }) => {
     const n = c(l => l.shop.activeProductCardId),
@@ -14055,7 +14091,7 @@ const OC = () => {
     return t ? e.jsx(ie.Fragment, {
       children: "Success, wait 1-5 min!"
     }) : e.jsxs(ie.Fragment, {
-      children: ["Buy for", e.jsx(HS, {}), Math.round(o * (r ? s : 1) * 100) / 100, e.jsx("div", {
+      children: ["Buy for", e.jsx(G2, {}), Math.round(o * (r ? s : 1) * 100) / 100, e.jsx("div", {
         className: Y.sale_box,
         children: e.jsx("span", {
           className: Y.sale_text,
@@ -14064,7 +14100,7 @@ const OC = () => {
       })]
     })
   },
-  JS = ({
+  V2 = ({
     setError: t,
     setRunParticle: n
   }) => {
@@ -14080,25 +14116,25 @@ const OC = () => {
     const D = vs();
     if (c(w => w.shop.selectedCurrency) === 1 || D === "") return null;
     const j = async w => {
-      const ge = qe.beginCell().storeUint(0, 32).storeStringTail(w.txMemCode).endCell(),
-        Qe = {
+      const ge = Le.beginCell().storeUint(0, 32).storeStringTail(w.txMemCode).endCell(),
+        Oe = {
           validUntil: Math.floor(Date.now() / 1e3) + 600,
           messages: [{
-            address: la,
-            amount: String(qe.toNano(w.strAmount)),
+            address: da,
+            amount: String(Le.toNano(w.strAmount)),
             payload: ge.toBoc().toString("base64")
           }]
         };
-      await f.sendTransaction(Qe), n(!0), h(!0), d(A.fulfilled)
+      await f.sendTransaction(Oe), n(!0), h(!0), d(A.fulfilled)
     }, T = async w => {
       const ge = new Qs.HttpProvider("https://toncenter.com/api/v2/jsonRPC"),
         Ye = await new Qs.token.jetton.JettonMinter(ge, {
           address: Zr[i]
         }).getJettonWalletAddress(new Qs.utils.Address(D)),
-        cr = qe.Address.parse(D),
-        lr = qe.Address.parse(la),
-        dr = qe.beginCell().storeUint(0, 32).storeStringTail(w.txMemCode).endCell(),
-        ur = qe.beginCell().storeUint(260734629, 32).storeUint(0, 64).storeCoins(qe.toNano(w.strAmount)).storeAddress(lr).storeAddress(cr).storeBit(0).storeCoins(qe.toNano("0.01")).storeBit(1).storeRef(dr).endCell(),
+        cr = Le.Address.parse(D),
+        lr = Le.Address.parse(da),
+        dr = Le.beginCell().storeUint(0, 32).storeStringTail(w.txMemCode).endCell(),
+        ur = Le.beginCell().storeUint(260734629, 32).storeUint(0, 64).storeCoins(Le.toNano(w.strAmount)).storeAddress(lr).storeAddress(cr).storeBit(0).storeCoins(Le.toNano("0.01")).storeBit(1).storeRef(dr).endCell(),
         mr = {
           validUntil: Math.floor(Date.now() / 1e3) + 600,
           messages: [{
@@ -14133,12 +14169,12 @@ const OC = () => {
           }
         }
       },
-      children: e.jsx(GS, {
+      children: e.jsx(J2, {
         success: m
       })
     })
   },
-  VS = () => {
+  Y2 = () => {
     const [t, n] = ws(), s = vs(), a = c(i => i.shop.selectedCurrency);
     return s !== "" || a === 1 ? null : e.jsx("button", {
       className: Y.button,
@@ -14150,7 +14186,7 @@ const OC = () => {
       children: "Connect TON wallet"
     })
   },
-  YS = ({
+  X2 = ({
     success: t
   }) => {
     const n = c(o => o.shop.activeProductCardId),
@@ -14167,7 +14203,7 @@ const OC = () => {
       }), a.prices[0].price * (i ? s : 1)]
     })
   },
-  XS = ({
+  W2 = ({
     setError: t,
     setRunParticle: n
   }) => {
@@ -14199,20 +14235,20 @@ const OC = () => {
                 const T = Number(a);
                 if (j === "paid") {
                   if (T >= 9 && T <= 11) {
-                    const Qe = {
+                    const Oe = {
                       9: 1,
                       10: 2,
                       11: 3
                     };
                     s(Ze({
                       product: 1,
-                      amount: Qe[T]
+                      amount: Oe[T]
                     })), s(Ze({
                       product: 2,
-                      amount: Qe[T]
+                      amount: Oe[T]
                     })), s(Ze({
                       product: 6,
-                      amount: Qe[T]
+                      amount: Oe[T]
                     }))
                   } else s(Ze({
                     product: a,
@@ -14229,35 +14265,35 @@ const OC = () => {
       },
       children: e.jsx("button", {
         className: Y.button,
-        children: e.jsx(YS, {
+        children: e.jsx(X2, {
           success: d
         })
       })
     })
   },
-  WS = () => (c(Ve) === he, null),
-  KS = () => {
+  K2 = () => (c(Je) === he, null),
+  Z2 = () => {
     const [t, n] = u.useState(null), [s, a] = u.useState(!1);
     return e.jsxs("div", {
       className: Y.crypto_button_container,
-      children: [e.jsx(qS, {}), e.jsx(WS, {}), e.jsx(eo, {
+      children: [e.jsx(H2, {}), e.jsx(K2, {}), e.jsx(eo, {
         runParticle: s,
         setRunParticle: a
       }), t && e.jsx("div", {
         className: Y.error,
         children: " Failure. Something went wrong."
-      }), e.jsx(JS, {
+      }), e.jsx(V2, {
         setError: n,
         setRunParticle: a
-      }), e.jsx(XS, {
+      }), e.jsx(W2, {
         setError: n,
         setRunParticle: a
-      }), e.jsx(VS, {
+      }), e.jsx(Y2, {
         setError: n
       })]
     })
   },
-  ZS = () => {
+  $2 = () => {
     g();
     const t = c(i => i.shop.activeProductCardId),
       n = c(i => i.shop.amount);
@@ -14269,17 +14305,17 @@ const OC = () => {
       })
     })
   },
-  $S = () => e.jsxs("div", {
+  eS = () => e.jsxs("div", {
     className: Y.body,
     onPointerUp: t => {
       t.stopPropagation()
     },
-    children: [e.jsx(zS, {}), e.jsxs("div", {
+    children: [e.jsx(L2, {}), e.jsxs("div", {
       className: Y.content_container,
-      children: [e.jsx(LS, {}), e.jsx(ZS, {})]
-    }), e.jsx(KS, {})]
+      children: [e.jsx(q2, {}), e.jsx($2, {})]
+    }), e.jsx(Z2, {})]
   }),
-  e2 = () => {
+  tS = () => {
     const t = g(),
       n = c(s => s.shop.show);
     return tt.createPortal(e.jsx(ke, {
@@ -14287,36 +14323,36 @@ const OC = () => {
       show: n,
       children: e.jsxs("div", {
         className: Y.container,
-        children: [e.jsx(QS, {}), e.jsx($S, {})]
+        children: [e.jsx(z2, {}), e.jsx(eS, {})]
       })
     }), document.body)
   },
-  t2 = "_layout_j8oqn_1",
-  n2 = "_container_j8oqn_13",
-  s2 = "_header_j8oqn_19",
-  a2 = "_title_j8oqn_29",
-  i2 = "_body_j8oqn_34",
-  o2 = "_image_container_j8oqn_46",
-  r2 = "_image_j8oqn_46",
-  c2 = "_description_container_j8oqn_57",
-  l2 = "_text_j8oqn_66",
-  d2 = "_button_container_j8oqn_70",
-  u2 = "_button_j8oqn_70",
-  Le = {
-    layout: t2,
-    container: n2,
-    header: s2,
-    title: a2,
-    body: i2,
-    image_container: o2,
-    image: r2,
-    description_container: c2,
-    text: l2,
-    button_container: d2,
-    button: u2
+  nS = "_layout_j8oqn_1",
+  sS = "_container_j8oqn_13",
+  aS = "_header_j8oqn_19",
+  iS = "_title_j8oqn_29",
+  oS = "_body_j8oqn_34",
+  rS = "_image_container_j8oqn_46",
+  cS = "_image_j8oqn_46",
+  lS = "_description_container_j8oqn_57",
+  dS = "_text_j8oqn_66",
+  uS = "_button_container_j8oqn_70",
+  mS = "_button_j8oqn_70",
+  ze = {
+    layout: nS,
+    container: sS,
+    header: aS,
+    title: iS,
+    body: oS,
+    image_container: rS,
+    image: cS,
+    description_container: lS,
+    text: dS,
+    button_container: uS,
+    button: mS
   },
-  m2 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACABAMAAAAxEHz4AAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAABhQTFRFR3BM////+8sH4qsEoJDhMJjTe2y0AAAAichSjAAAAAF0Uk5TAEDm2GYAAADISURBVHja7dkxCsJAEIXhdNZeYRDtkxMIQzzB4gVkbCUK7/oOrEZHgq2z8v7mscV+TaqwHWMsa6hNIoKQiOx8CKQHVgCGWl+BaWlAIC8A4DqEHl/+YypyIUCAQCtAL3MEGgVEZGtmmLupqohsfOARSA+IZ2YnVfU5AyilHH1U9VBPhUATgKqOZlavPHs7EUgOeBXZ6JcINAisQwTSA4h/rqq69ysEmgGi8wJGM4tD4J+BGGqLALzOI5AeiE6s8wj8GuAjEmNZuwMoowLyPmOZ5gAAAABJRU5ErkJggg==",
-  A2 = `precision highp float;
+  AS = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACABAMAAAAxEHz4AAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAABhQTFRFR3BM////+8sH4qsEoJDhMJjTe2y0AAAAichSjAAAAAF0Uk5TAEDm2GYAAADISURBVHja7dkxCsJAEIXhdNZeYRDtkxMIQzzB4gVkbCUK7/oOrEZHgq2z8v7mscV+TaqwHWMsa6hNIoKQiOx8CKQHVgCGWl+BaWlAIC8A4DqEHl/+YypyIUCAQCtAL3MEGgVEZGtmmLupqohsfOARSA+IZ2YnVfU5AyilHH1U9VBPhUATgKqOZlavPHs7EUgOeBXZ6JcINAisQwTSA4h/rqq69ysEmgGi8wJGM4tD4J+BGGqLALzOI5AeiE6s8wj8GuAjEmNZuwMoowLyPmOZ5gAAAABJRU5ErkJggg==",
+  pS = `precision highp float;
 
 uniform float u_AnimationDuration;
 uniform float u_ParticleSize;
@@ -14409,7 +14445,7 @@ void main() {
     // Calculate particle coordinate on texture
     v_ParticleCoord = (position - textureOffset) / originalTextureSize;
 }`,
-  p2 = `precision mediump float;
+  hS = `precision mediump float;
 
 uniform sampler2D u_Texture;
 varying vec2 v_ParticleCoord;
@@ -14440,29 +14476,29 @@ void main() {
     gl_FragColor = vec4(textureColor.xyz, alpha);
 }`,
   ar = 7200,
-  h2 = 1;
+  gS = 1;
 let y = null,
   we = null,
   Sn = -1,
   ls = 0;
-async function g2() {
-  if (y = _2().getContext("webgl"), !y) {
+async function _S() {
+  if (y = fS().getContext("webgl"), !y) {
     console.log("Your browser doesn't support WebGL :(");
     return
   }
-  await f2(), y2()
+  await xS(), vS()
 }
 
-function _2() {
+function fS() {
   const t = document.createElement("canvas");
   return t.id = "canvasSnap", t.width = window.innerWidth, t.height = window.innerHeight, t.style.width = `${window.innerWidth}px`, t.style.height = `${window.innerHeight}px`, t.style.position = "fixed", t.style.top = "50%", t.style.left = "50%", t.style.zIndex = "1010", t.style.transform = "translate(-50%, -50%)", t.style.opacity = "0", t.style.transition = "2s ease opacity", document.body.appendChild(t), window.getComputedStyle(t).opacity, t.style.opacity = "1", t
 }
-async function f2() {
-  y.enable(y.BLEND), y.blendFunc(y.SRC_ALPHA, y.ONE_MINUS_SRC_ALPHA), y.clearColor(0, 0, 0, 0), y.viewport(0, 0, y.canvas.width, y.canvas.height), we = await x2(y), y.useProgram(we)
+async function xS() {
+  y.enable(y.BLEND), y.blendFunc(y.SRC_ALPHA, y.ONE_MINUS_SRC_ALPHA), y.clearColor(0, 0, 0, 0), y.viewport(0, 0, y.canvas.width, y.canvas.height), we = await yS(y), y.useProgram(we)
 }
-async function x2(t, n, s) {
-  const a = A2,
-    i = p2,
+async function yS(t, n, s) {
+  const a = pS,
+    i = hS,
     o = _i(t, a, t.VERTEX_SHADER),
     r = _i(t, i, t.FRAGMENT_SHADER),
     l = t.createProgram();
@@ -14474,22 +14510,22 @@ function _i(t, n, s) {
   return t.shaderSource(a, n), t.compileShader(a), t.getShaderParameter(a, t.COMPILE_STATUS) ? a : (console.error("Shader compilation failure:", t.getShaderInfoLog(a)), t.deleteShader(a), null)
 }
 
-function y2(t) {
+function vS(t) {
   const n = new Image;
   n.src = `${Ni}`, n.onload = () => {
-    v2(n), b2(), ir()
+    wS(n), NS(), ir()
   }
 }
 
-function v2(t) {
-  const n = w2(t);
+function wS(t) {
+  const n = jS(t);
   var s = y.createTexture();
   y.bindTexture(y.TEXTURE_2D, s), y.texParameteri(y.TEXTURE_2D, y.TEXTURE_WRAP_S, y.CLAMP_TO_EDGE), y.texParameteri(y.TEXTURE_2D, y.TEXTURE_WRAP_T, y.CLAMP_TO_EDGE), y.texParameteri(y.TEXTURE_2D, y.TEXTURE_MIN_FILTER, y.NEAREST), y.texParameteri(y.TEXTURE_2D, y.TEXTURE_MAG_FILTER, y.NEAREST), y.texImage2D(y.TEXTURE_2D, 0, y.RGBA, y.RGBA, y.UNSIGNED_BYTE, n);
   const a = y.getUniformLocation(we, "u_Texture");
   y.uniform1i(a, 0)
 }
 
-function w2(t) {
+function jS(t) {
   const n = document.createElement("canvas");
   n.width = t.width, n.height = t.height;
   const a = n.getContext("2d").createImageData(E.width, E.height);
@@ -14497,7 +14533,7 @@ function w2(t) {
   return a
 }
 
-function j2() {
+function bS() {
   const t = window.innerHeight,
     n = window.innerWidth;
   return n > t ? {
@@ -14519,7 +14555,7 @@ function j2() {
   }
 }
 
-function b2() {
+function NS() {
   const {
     viewportWidth: t,
     viewportHeight: n,
@@ -14528,8 +14564,8 @@ function b2() {
     textureLeft: i,
     textureTop: o,
     min: r
-  } = j2();
-  ls = r * r, Ke(y, we, "u_AnimationDuration", ar), Ke(y, we, "u_ParticleSize", h2), Ke(y, we, "u_ViewportWidth", t), Ke(y, we, "u_ViewportHeight", n), Ke(y, we, "u_TextureWidth", s), Ke(y, we, "u_TextureHeight", a), Ke(y, we, "u_TextureLeft", i), Ke(y, we, "u_TextureTop", o);
+  } = bS();
+  ls = r * r, Ke(y, we, "u_AnimationDuration", ar), Ke(y, we, "u_ParticleSize", gS), Ke(y, we, "u_ViewportWidth", t), Ke(y, we, "u_ViewportHeight", n), Ke(y, we, "u_TextureWidth", s), Ke(y, we, "u_TextureHeight", a), Ke(y, we, "u_TextureLeft", i), Ke(y, we, "u_TextureTop", o);
   const l = new Array(ls);
   for (let h = 0; h < ls; h++) l[h] = h;
   const d = y.createBuffer();
@@ -14539,10 +14575,10 @@ function b2() {
 }
 
 function ir() {
-  requestAnimationFrame(N2)
+  requestAnimationFrame(PS)
 }
 
-function N2(t) {
+function PS(t) {
   y.clear(y.COLOR_BUFFER_BIT), Sn == -1 && (Sn = t);
   const s = t - Sn;
   if (s > ar) {
@@ -14556,45 +14592,45 @@ function Ke(t, n, s, a) {
   const i = t.getUniformLocation(n, s);
   t.uniform1f(i, a)
 }
-const P2 = () => {
+const IS = () => {
     const t = K(),
       n = g(),
       s = c(a => a.main.showPixanosEvent);
     return e.jsx(ke, {
       show: s,
       children: e.jsxs("div", {
-        className: Le.container,
+        className: ze.container,
         children: [e.jsx("div", {
-          className: Le.header,
+          className: ze.header,
           children: e.jsx("span", {
-            className: Le.title,
+            className: ze.title,
             children: "I AM INEVITABLE"
           })
         }), e.jsxs("div", {
-          className: Le.body,
+          className: ze.body,
           children: [e.jsx("div", {
-            className: Le.image_container,
+            className: ze.image_container,
             children: e.jsx("img", {
               alt: "img",
-              className: Le.image,
-              src: m2
+              className: ze.image,
+              src: AS
             })
           }), e.jsxs("div", {
-            className: Le.description_container,
+            className: ze.description_container,
             children: [e.jsxs("span", {
-              className: Le.text,
+              className: ze.text,
               children: ["@pavel paid 40,000 stars and used ", e.jsx("br", {}), " ", e.jsx("b", {
                 children: "Thanos' Snap"
               }), ". Every second pixel goes ", e.jsx("br", {}), " to @pavel."]
             }), e.jsx("span", {
-              className: Le.text,
+              className: ze.text,
               children: "Squad @notcoin."
             })]
           }), e.jsx("button", {
-            className: Le.button,
+            className: ze.button,
             onPointerUp: () => {
               var a, i;
-              v.viewport.viewport.fit(), v.viewport.viewport.moveCenter(v.viewport.viewport.worldWidth / 2, v.viewport.viewport.worldHeight / 2), g2(), t.push("/"), n(ep()), (i = (a = window.Telegram.WebApp) == null ? void 0 : a.HapticFeedback) == null || i.notificationOccurred("error")
+              v.viewport.viewport.fit(), v.viewport.viewport.moveCenter(v.viewport.viewport.worldWidth / 2, v.viewport.viewport.worldHeight / 2), _S(), t.push("/"), n(ep()), (i = (a = window.Telegram.WebApp) == null ? void 0 : a.HapticFeedback) == null || i.notificationOccurred("error")
             },
             children: "Whoosh!"
           })]
@@ -14602,7 +14638,7 @@ const P2 = () => {
       })
     })
   },
-  I2 = () => {
+  CS = () => {
     var o, r;
     const t = c(l => l.user.user),
       n = g(),
@@ -14693,7 +14729,7 @@ const P2 = () => {
       })
     })
   },
-  C2 = () => js().pathname === "/" ? null : e.jsx("div", {
+  SS = () => js().pathname === "/" ? null : e.jsx("div", {
     style: {
       position: "fixed",
       left: 0,
@@ -14704,15 +14740,15 @@ const P2 = () => {
       zIndex: 99
     }
   }),
-  S2 = "_layout_1f2lr_1",
-  T2 = "_item_1f2lr_19",
-  E2 = "_image_1f2lr_38",
+  TS = "_layout_1f2lr_1",
+  ES = "_item_1f2lr_19",
+  BS = "_image_1f2lr_38",
   or = {
-    layout: S2,
-    item: T2,
-    image: E2
+    layout: TS,
+    item: ES,
+    image: BS
   },
-  B2 = ({
+  DS = ({
     item: t
   }) => {
     const n = g(),
@@ -14736,7 +14772,7 @@ const P2 = () => {
     let a = t.icon ? t.icon : "";
     return u.useEffect(() => {
       const i = setTimeout(() => {
-        n(Xa(t.id))
+        n(Wa(t.id))
       }, 3e3);
       return () => {
         clearTimeout(i)
@@ -14751,7 +14787,7 @@ const P2 = () => {
       },
       className: or.item,
       onPointerUp: () => {
-        n(Xa(t.id))
+        n(Wa(t.id))
       },
       children: [e.jsx(b, {
         size: 20,
@@ -14759,36 +14795,36 @@ const P2 = () => {
       }), t.text]
     })
   },
-  D2 = () => {
+  kS = () => {
     const t = c(n => n.toast.items);
     return tt.createPortal(e.jsx("div", {
       className: or.layout,
-      children: e.jsx(Pa, {
-        children: t.map(n => e.jsx(B2, {
+      children: e.jsx(Ia, {
+        children: t.map(n => e.jsx(DS, {
           item: n
         }, n.id))
       })
     }), document.body)
   },
-  k2 = "_layout_1nuac_1",
-  R2 = "_container_1nuac_19",
-  M2 = "_image_container_1nuac_30",
-  U2 = "_image_1nuac_30",
-  F2 = "_text_container_1nuac_42",
-  O2 = "_title_1nuac_49",
-  Q2 = "_button_container_1nuac_55",
-  z2 = "_button_1nuac_55",
+  RS = "_layout_1nuac_1",
+  MS = "_container_1nuac_19",
+  US = "_image_container_1nuac_30",
+  FS = "_image_1nuac_30",
+  OS = "_text_container_1nuac_42",
+  QS = "_title_1nuac_49",
+  zS = "_button_container_1nuac_55",
+  LS = "_button_1nuac_55",
   rt = {
-    layout: k2,
-    container: R2,
-    image_container: M2,
-    image: U2,
-    text_container: F2,
-    title: O2,
-    button_container: Q2,
-    button: z2
+    layout: RS,
+    container: MS,
+    image_container: US,
+    image: FS,
+    text_container: OS,
+    title: QS,
+    button_container: zS,
+    button: LS
   },
-  L2 = () => {
+  qS = () => {
     const t = g();
     return c(s => s.main.showNoFlagsPopup) ? tt.createPortal(e.jsx("div", {
       className: rt.layout,
@@ -14830,7 +14866,7 @@ const P2 = () => {
       })
     }), document.body) : null
   },
-  q2 = ({
+  HS = ({
     isPopupContent: t = !0
   }) => {
     const n = t ? "Squad" : "My Squad",
@@ -14855,7 +14891,7 @@ const P2 = () => {
       })]
     })
   },
-  H2 = () => {
+  GS = () => {
     const t = g(),
       {
         item: n
@@ -14871,56 +14907,56 @@ const P2 = () => {
         onPointerUp: a => {
           a.stopPropagation()
         },
-        children: [n.dataSource === Ue.userFromPixelInfo && e.jsx(wa, {
+        children: [n.dataSource === Ue.userFromPixelInfo && e.jsx(ja, {
           isPopupContent: s
-        }), n.dataSource === Ue.userFromRating && e.jsx(wa, {
+        }), n.dataSource === Ue.userFromRating && e.jsx(ja, {
           isPopupContent: s
-        }), n.dataSource === Ue.squadFromData && e.jsx(q2, {})]
+        }), n.dataSource === Ue.squadFromData && e.jsx(HS, {})]
       })
     })
   },
-  G2 = "_overlay_1f88c_1",
-  J2 = "_top_container_1f88c_10",
-  V2 = "_bottom_container_1f88c_15",
-  Y2 = "_side_menu_1f88c_20",
-  X2 = "_menu_safe_area_inset_1f88c_36",
-  W2 = "_menu_header_1f88c_40",
-  K2 = "_close_button_1f88c_53",
-  Z2 = "_menu_list_1f88c_58",
-  $2 = "_icon_1f88c_79",
-  eT = "_icon_not_pixel_1f88c_87",
-  tT = "_menu_list_li_1f88c_97",
-  nT = "_menu_list_text_1f88c_103",
-  sT = "_menu_list_new_item_1f88c_107",
-  aT = "_button_wrapper_1f88c_130",
-  iT = "_button_content_1f88c_139",
-  oT = "_footer_1f88c_146",
-  rT = "_avatar_1f88c_152",
-  cT = "_ratings_image_container_1f88c_159",
-  lT = "_ratings_image_1f88c_159",
+  JS = "_overlay_1f88c_1",
+  VS = "_top_container_1f88c_10",
+  YS = "_bottom_container_1f88c_15",
+  XS = "_side_menu_1f88c_20",
+  WS = "_menu_safe_area_inset_1f88c_36",
+  KS = "_menu_header_1f88c_40",
+  ZS = "_close_button_1f88c_53",
+  $S = "_menu_list_1f88c_58",
+  eT = "_icon_1f88c_79",
+  tT = "_icon_not_pixel_1f88c_87",
+  nT = "_menu_list_li_1f88c_97",
+  sT = "_menu_list_text_1f88c_103",
+  aT = "_menu_list_new_item_1f88c_107",
+  iT = "_button_wrapper_1f88c_130",
+  oT = "_button_content_1f88c_139",
+  rT = "_footer_1f88c_146",
+  cT = "_avatar_1f88c_152",
+  lT = "_ratings_image_container_1f88c_159",
+  dT = "_ratings_image_1f88c_159",
   G = {
-    overlay: G2,
-    top_container: J2,
-    bottom_container: V2,
-    side_menu: Y2,
-    menu_safe_area_inset: X2,
-    menu_header: W2,
-    close_button: K2,
-    menu_list: Z2,
-    icon: $2,
-    icon_not_pixel: eT,
-    menu_list_li: tT,
-    menu_list_text: nT,
-    menu_list_new_item: sT,
-    button_wrapper: aT,
-    button_content: iT,
-    footer: oT,
-    avatar: rT,
-    ratings_image_container: cT,
-    ratings_image: lT
+    overlay: JS,
+    top_container: VS,
+    bottom_container: YS,
+    side_menu: XS,
+    menu_safe_area_inset: WS,
+    menu_header: KS,
+    close_button: ZS,
+    menu_list: $S,
+    icon: eT,
+    icon_not_pixel: tT,
+    menu_list_li: nT,
+    menu_list_text: sT,
+    menu_list_new_item: aT,
+    button_wrapper: iT,
+    button_content: oT,
+    footer: rT,
+    avatar: cT,
+    ratings_image_container: lT,
+    ratings_image: dT
   },
   fi = [.215, .61, .355, 1],
-  dT = {
+  uT = {
     hidden: {
       x: "-100%",
       transition: {
@@ -14938,13 +14974,13 @@ const P2 = () => {
       }
     }
   },
-  uT = "_button_25266_1",
-  mT = "_decor_25266_13",
-  AT = "_dark_25266_22",
+  mT = "_button_25266_1",
+  AT = "_decor_25266_13",
+  pT = "_dark_25266_22",
   xi = {
-    button: uT,
-    decor: mT,
-    dark: AT
+    button: mT,
+    decor: AT,
+    dark: pT
   },
   yi = ({
     children: t,
@@ -14958,15 +14994,15 @@ const P2 = () => {
     style: a,
     children: t
   }),
-  pT = "_layout_4kkfr_1",
-  hT = "_line_4kkfr_14",
-  gT = "_button_4kkfr_19",
+  hT = "_layout_4kkfr_1",
+  gT = "_line_4kkfr_14",
+  _T = "_button_4kkfr_19",
   Bt = {
-    layout: pT,
-    line: hT,
-    button: gT
+    layout: hT,
+    line: gT,
+    button: _T
   },
-  _T = ({
+  fT = ({
     className: t = void 0
   }) => {
     const n = g(),
@@ -15003,16 +15039,16 @@ const P2 = () => {
       })
     })
   },
-  fT = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAABtQTFRFR3BM////////////////////////////////Fv0dDgAAAAh0Uk5TABU6XISq0+/2d3cmAAABKElEQVR42u3Z24rDMAxFUV1s6fz/Fw+FlA4lpGOj2Ew566kPKWxEQ2NFiIiIiIiIiIiI6L/RFrgQTeVWGvggbikwPwQ+Cj+YVLHAlChKcExzKaCJaak1A9g7gg7M61UBfSDmeS0DGMAABlQFNACI8YAAgPYNAY6H8YCyPyPDg40FvL5WAA9tNKAdg6u6DVLHAjSPjwX8NYKGa+9XuhQ+k41NAMfYSjRMalIkMCWkiiUmpMneAltwJlx5RlTz1hJ/kK25qdxCvQcuRfetB/RQuZ1l1Q+/viBNZGdBmiyiHSe6yjqeeJMua3ngl3BZT70nAOTsrV95ZmDADvbcW8bEUrJ+eRmLE7xgI1e9vExdO4C9I+g40WUdnNoewPdJREREREREREREU34Aqms7WGCxI2EAAAAASUVORK5CYII=",
-  xT = "_layout_eiymv_1",
-  yT = "_container_eiymv_7",
+  xT = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAABtQTFRFR3BM////////////////////////////////Fv0dDgAAAAh0Uk5TABU6XISq0+/2d3cmAAABKElEQVR42u3Z24rDMAxFUV1s6fz/Fw+FlA4lpGOj2Ew566kPKWxEQ2NFiIiIiIiIiIiI6L/RFrgQTeVWGvggbikwPwQ+Cj+YVLHAlChKcExzKaCJaak1A9g7gg7M61UBfSDmeS0DGMAABlQFNACI8YAAgPYNAY6H8YCyPyPDg40FvL5WAA9tNKAdg6u6DVLHAjSPjwX8NYKGa+9XuhQ+k41NAMfYSjRMalIkMCWkiiUmpMneAltwJlx5RlTz1hJ/kK25qdxCvQcuRfetB/RQuZ1l1Q+/viBNZGdBmiyiHSe6yjqeeJMua3ngl3BZT70nAOTsrV95ZmDADvbcW8bEUrJ+eRmLE7xgI1e9vExdO4C9I+g40WUdnNoewPdJREREREREREREU34Aqms7WGCxI2EAAAAASUVORK5CYII=",
+  yT = "_layout_eiymv_1",
+  vT = "_container_eiymv_7",
   vi = {
-    layout: xT,
-    container: yT
+    layout: yT,
+    container: vT
   },
-  vT = () => localStorage.getItem("canvasFps") ? [Number(localStorage.getItem("canvasFps"))] : [60],
-  wT = () => {
-    const [t, n] = ie.useState(vT());
+  wT = () => localStorage.getItem("canvasFps") ? [Number(localStorage.getItem("canvasFps"))] : [60],
+  jT = () => {
+    const [t, n] = ie.useState(wT());
     return u.useEffect(() => {
       localStorage.setItem("canvasFps", String(t[0])), v.ticker.setFps(t[0])
     }, [t]), e.jsx("div", {
@@ -15059,10 +15095,10 @@ const P2 = () => {
       })
     })
   },
-  jT = () => {
+  bT = () => {
     const t = K(),
       n = g();
-    c(Oe);
+    c(Ve);
     const s = vs(),
       [a, i] = ws();
     c(Hd);
@@ -15079,7 +15115,7 @@ const P2 = () => {
         Ot(h)
       };
     return e.jsx(e.Fragment, {
-      children: e.jsx(Pa, {
+      children: e.jsx(Ia, {
         children: o && e.jsxs(e.Fragment, {
           children: [e.jsx(sn.div, {
             className: G.overlay,
@@ -15101,7 +15137,7 @@ const P2 = () => {
             initial: "hidden",
             animate: "visible",
             exit: "hidden",
-            variants: dT,
+            variants: uT,
             children: [e.jsxs("div", {
               className: G.top_container,
               children: [e.jsx("div", {
@@ -15144,7 +15180,7 @@ const P2 = () => {
                     children: e.jsx("img", {
                       alt: "noavatar",
                       className: G.ratings_image,
-                      src: fT
+                      src: xT
                     })
                   }), e.jsx("span", {
                     className: G.menu_list_text,
@@ -15193,7 +15229,7 @@ const P2 = () => {
               })]
             }), e.jsxs("div", {
               className: G.bottom_container,
-              children: [e.jsx(wT, {}), e.jsxs("div", {
+              children: [e.jsx(jT, {}), e.jsxs("div", {
                 className: G.button_wrapper,
                 children: [s !== "" && e.jsx(yi, {
                   onPointerUp: () => {
@@ -15234,76 +15270,76 @@ const P2 = () => {
                     })]
                   })
                 })]
-              }), e.jsx(_T, {})]
+              }), e.jsx(fT, {})]
             })]
           })]
         })
       })
     })
   },
-  bT = "_container_n1egb_1",
-  NT = "_header_n1egb_11",
-  PT = "_title_n1egb_24",
-  IT = "_close_container_n1egb_30",
-  CT = "_close_n1egb_30",
-  ST = "_body_n1egb_54",
-  TT = "_content_n1egb_65",
-  ET = "_time_left_container_n1egb_71",
-  BT = "_timer_n1egb_75",
-  DT = "_image_container_n1egb_79",
-  kT = "_image_n1egb_79",
-  RT = "_description_container_n1egb_89",
-  MT = "_bold_n1egb_98",
-  UT = "_gray_n1egb_103",
-  FT = "_center_n1egb_107",
-  OT = "_footer_n1egb_111",
-  QT = "_button_n1egb_117",
-  zT = "_image_container_charges_n1egb_149",
-  LT = "_image_charges_n1egb_153",
+  NT = "_container_n1egb_1",
+  PT = "_header_n1egb_11",
+  IT = "_title_n1egb_24",
+  CT = "_close_container_n1egb_30",
+  ST = "_close_n1egb_30",
+  TT = "_body_n1egb_54",
+  ET = "_content_n1egb_65",
+  BT = "_time_left_container_n1egb_71",
+  DT = "_timer_n1egb_75",
+  kT = "_image_container_n1egb_79",
+  RT = "_image_n1egb_79",
+  MT = "_description_container_n1egb_89",
+  UT = "_bold_n1egb_98",
+  FT = "_gray_n1egb_103",
+  OT = "_center_n1egb_107",
+  QT = "_footer_n1egb_111",
+  zT = "_button_n1egb_117",
+  LT = "_image_container_charges_n1egb_149",
+  qT = "_image_charges_n1egb_153",
   fe = {
-    container: bT,
-    header: NT,
-    title: PT,
-    close_container: IT,
-    close: CT,
-    body: ST,
-    content: TT,
-    time_left_container: ET,
-    timer: BT,
-    image_container: DT,
-    image: kT,
-    description_container: RT,
-    bold: MT,
-    gray: UT,
-    center: FT,
-    footer: OT,
-    button: QT,
-    image_container_charges: zT,
-    image_charges: LT
+    container: NT,
+    header: PT,
+    title: IT,
+    close_container: CT,
+    close: ST,
+    body: TT,
+    content: ET,
+    time_left_container: BT,
+    timer: DT,
+    image_container: kT,
+    image: RT,
+    description_container: MT,
+    bold: UT,
+    gray: FT,
+    center: OT,
+    footer: QT,
+    button: zT,
+    image_container_charges: LT,
+    image_charges: qT
   };
-class qT {
+class HT {
   static async checkOffer() {
     return I.post("offer/check")
   }
 }
-const HT = "_layout_1at34_1",
-  GT = "_container_1at34_10",
-  JT = "_item_1at34_14",
-  ra = {
-    layout: HT,
-    container: GT,
-    item: JT
+const GT = "_layout_1at34_1",
+  JT = "_container_1at34_10",
+  VT = "_item_1at34_14",
+  ca = {
+    layout: GT,
+    container: JT,
+    item: VT
   },
-  VT = 8,
-  YT = 16,
-  XT = 500,
+  YT = 8,
+  XT = 16,
+  WT = 500,
   rr = 800,
   wi = window.innerWidth,
   ji = 100,
-  WT = () => Array.from(Array(100)).map(() => {
-    const t = z(VT, YT),
+  KT = () => Array.from(Array(100)).map(() => {
+    const t = z(YT, XT),
       n = `hsl(${z(0,360)} , 70%, 50%)`,
-      s = z(XT, rr),
+      s = z(WT, rr),
       a = z(-wi, wi),
       i = z(-ji, ji);
     return {
@@ -15316,11 +15352,11 @@ const HT = "_layout_1at34_1",
       opacity: !1
     }
   }),
-  KT = u.memo(({
+  ZT = u.memo(({
     runParticle: t,
     setRunParticle: n
   }) => {
-    const [s, a] = u.useState(WT()), [i, o] = u.useState(!1);
+    const [s, a] = u.useState(KT()), [i, o] = u.useState(!1);
     return u.useEffect(() => {
       t && setTimeout(() => {
         o(!0), setTimeout(() => {
@@ -15328,14 +15364,14 @@ const HT = "_layout_1at34_1",
         }, rr)
       }, 200)
     }, [t]), e.jsx("div", {
-      className: ra.layout,
+      className: ca.layout,
       style: {
         visibility: t ? "visible" : "hidden"
       },
       children: e.jsx("div", {
-        className: ra.container,
+        className: ca.container,
         children: s.map((r, l) => e.jsx("div", {
-          className: ra.item,
+          className: ca.item,
           style: {
             width: r.size,
             height: r.size,
@@ -15348,10 +15384,10 @@ const HT = "_layout_1at34_1",
       })
     })
   }),
-  ZT = () => {
+  $T = () => {
     const t = g(),
-      n = c(Ve),
-      s = c(Oe),
+      n = c(Je),
+      s = c(Ve),
       a = c(_ => _.shop.limitedGood),
       i = c(_ => _.shop.limitedEnd),
       o = c(_ => _.shop.showLimitedGoodPopup),
@@ -15362,7 +15398,7 @@ const HT = "_layout_1at34_1",
       [M, D] = u.useState(!1);
     return u.useEffect(() => {
       const _ = async () => {
-        const j = await qT.checkOffer();
+        const j = await HT.checkOffer();
         if (j.status === 200 && j.data) {
           const T = j.data;
           T.is_actual && (t(rc({
@@ -15436,7 +15472,7 @@ const HT = "_layout_1at34_1",
           })
         }), e.jsxs("div", {
           className: fe.footer,
-          children: [e.jsx(KT, {
+          children: [e.jsx(ZT, {
             runParticle: M,
             setRunParticle: D
           }), !d && e.jsxs("button", {
@@ -15490,53 +15526,53 @@ const HT = "_layout_1at34_1",
       })
     }) : null
   },
-  $T = "_container_q0ezh_1",
-  eE = "_header_q0ezh_11",
-  tE = "_title_q0ezh_17",
-  nE = "_close_container_q0ezh_23",
-  sE = "_close_q0ezh_23",
-  aE = "_body_q0ezh_47",
-  iE = "_content_q0ezh_59",
-  oE = "_time_left_container_q0ezh_65",
-  rE = "_timer_q0ezh_69",
-  cE = "_image_container_q0ezh_73",
-  lE = "_image_q0ezh_73",
-  dE = "_glow_q0ezh_91",
-  uE = "_rotate_q0ezh_1",
-  mE = "_glow_reverse_q0ezh_100",
-  AE = "_description_container_q0ezh_110",
-  pE = "_bold_q0ezh_119",
-  hE = "_gray_q0ezh_124",
-  gE = "_center_q0ezh_128",
-  _E = "_button_q0ezh_132",
+  eE = "_container_q0ezh_1",
+  tE = "_header_q0ezh_11",
+  nE = "_title_q0ezh_17",
+  sE = "_close_container_q0ezh_23",
+  aE = "_close_q0ezh_23",
+  iE = "_body_q0ezh_47",
+  oE = "_content_q0ezh_59",
+  rE = "_time_left_container_q0ezh_65",
+  cE = "_timer_q0ezh_69",
+  lE = "_image_container_q0ezh_73",
+  dE = "_image_q0ezh_73",
+  uE = "_glow_q0ezh_91",
+  mE = "_rotate_q0ezh_1",
+  AE = "_glow_reverse_q0ezh_100",
+  pE = "_description_container_q0ezh_110",
+  hE = "_bold_q0ezh_119",
+  gE = "_gray_q0ezh_124",
+  _E = "_center_q0ezh_128",
+  fE = "_button_q0ezh_132",
   ve = {
-    container: $T,
-    header: eE,
-    title: tE,
-    close_container: nE,
-    close: sE,
-    body: aE,
-    content: iE,
-    time_left_container: oE,
-    timer: rE,
-    image_container: cE,
-    image: lE,
-    glow: dE,
-    rotate: uE,
-    glow_reverse: mE,
-    description_container: AE,
-    bold: pE,
-    gray: hE,
-    center: gE,
-    button: _E
+    container: eE,
+    header: tE,
+    title: nE,
+    close_container: sE,
+    close: aE,
+    body: iE,
+    content: oE,
+    time_left_container: rE,
+    timer: cE,
+    image_container: lE,
+    image: dE,
+    glow: uE,
+    rotate: mE,
+    glow_reverse: AE,
+    description_container: pE,
+    bold: hE,
+    gray: gE,
+    center: _E,
+    button: fE
   },
-  fE = () => {
+  xE = () => {
     const t = g(),
       n = K(),
-      s = c(Oe),
+      s = c(Ve),
       [a, i] = u.useState(!1),
       o = "showCreateTournamentTemplatePopup";
-    return u.useEffect(() => (Ua(s) && Li() && (localStorage.getItem(o) || i(!0)), () => {}), [s]), e.jsx(ke, {
+    return u.useEffect(() => (Fa(s) && Li() && (localStorage.getItem(o) || i(!0)), () => {}), [s]), e.jsx(ke, {
       show: a,
       children: e.jsx("div", {
         className: ve.container,
@@ -15570,11 +15606,11 @@ const HT = "_layout_1at34_1",
               children: [e.jsx("img", {
                 alt: "image",
                 className: ve.glow,
-                src: ja
+                src: ba
               }), e.jsx("img", {
                 alt: "image",
                 className: ve.glow_reverse,
-                src: ja
+                src: ba
               }), e.jsx("img", {
                 alt: "image",
                 className: ve.image,
@@ -15595,61 +15631,61 @@ const HT = "_layout_1at34_1",
       })
     })
   },
-  xE = "_layout_xga4i_1",
-  yE = "_container_xga4i_14",
-  vE = "_header_xga4i_20",
-  wE = "_close_xga4i_25",
-  jE = "_body_xga4i_38",
-  bE = "_image_container_xga4i_42",
-  NE = "_image_xga4i_42",
-  PE = "_glow_xga4i_55",
-  IE = "_forward_xga4i_62",
-  CE = "_rotate_xga4i_1",
-  SE = "_reverse_xga4i_66",
-  TE = "_text_container_xga4i_70",
-  EE = "_title_xga4i_78",
-  BE = "_description_xga4i_82",
-  DE = "_footer_xga4i_86",
-  kE = "_button_xga4i_90",
+  yE = "_layout_xga4i_1",
+  vE = "_container_xga4i_14",
+  wE = "_header_xga4i_20",
+  jE = "_close_xga4i_25",
+  bE = "_body_xga4i_38",
+  NE = "_image_container_xga4i_42",
+  PE = "_image_xga4i_42",
+  IE = "_glow_xga4i_55",
+  CE = "_forward_xga4i_62",
+  SE = "_rotate_xga4i_1",
+  TE = "_reverse_xga4i_66",
+  EE = "_text_container_xga4i_70",
+  BE = "_title_xga4i_78",
+  DE = "_description_xga4i_82",
+  kE = "_footer_xga4i_86",
+  RE = "_button_xga4i_90",
   _e = {
-    layout: xE,
-    container: yE,
-    header: vE,
-    close: wE,
-    body: jE,
-    image_container: bE,
-    image: NE,
-    glow: PE,
-    forward: IE,
-    rotate: CE,
-    reverse: SE,
-    text_container: TE,
-    title: EE,
-    description: BE,
-    footer: DE,
-    button: kE
+    layout: yE,
+    container: vE,
+    header: wE,
+    close: jE,
+    body: bE,
+    image_container: NE,
+    image: PE,
+    glow: IE,
+    forward: CE,
+    rotate: SE,
+    reverse: TE,
+    text_container: EE,
+    title: BE,
+    description: DE,
+    footer: kE,
+    button: RE
   },
-  RE = "_layout_a9x11_1",
-  ME = "_container_a9x11_10",
-  UE = "_star_a9x11_14",
-  FE = "_move_a9x11_1",
-  ca = {
-    layout: RE,
-    container: ME,
-    star: UE,
-    move: FE
+  ME = "_layout_a9x11_1",
+  UE = "_container_a9x11_10",
+  FE = "_star_a9x11_14",
+  OE = "_move_a9x11_1",
+  la = {
+    layout: ME,
+    container: UE,
+    star: FE,
+    move: OE
   },
-  OE = u.memo(() => {
+  QE = u.memo(() => {
     const t = Array.from(Array(30));
     return e.jsx("div", {
-      className: ca.layout,
+      className: la.layout,
       children: e.jsx("div", {
-        className: ca.container,
+        className: la.container,
         children: t.map((n, s) => {
           const a = z(4, 14);
           return e.jsx(b, {
             size: a,
-            className: ca.star,
+            className: la.star,
             style: {
               animationDelay: `-${s*300}ms`,
               transform: `translate(${z(-80,-170)*(s%2===1?1:-1)}px, ${z(-100,100)}px)`
@@ -15660,10 +15696,10 @@ const HT = "_layout_1at34_1",
       })
     })
   }, () => !1),
-  QE = () => {
+  zE = () => {
     const t = g(),
       [n, s] = u.useState(null),
-      a = c(Oe);
+      a = c(Ve);
     c(m => m.reward.id);
     const i = c(m => m.reward.rewardUserId),
       o = c(m => m.reward.showPopup),
@@ -15719,13 +15755,13 @@ const HT = "_layout_1at34_1",
             className: _e.body,
             children: [e.jsxs("div", {
               className: _e.image_container,
-              children: [e.jsx(OE, {}), e.jsx("img", {
+              children: [e.jsx(QE, {}), e.jsx("img", {
                 alt: "glow",
-                src: xa,
+                src: ya,
                 className: H(_e.glow, _e.forward)
               }), e.jsx("img", {
                 alt: "glow",
-                src: xa,
+                src: ya,
                 className: H(_e.glow, _e.reverse)
               }), e.jsx("img", {
                 alt: "img",
@@ -15757,25 +15793,25 @@ const HT = "_layout_1at34_1",
     })
   };
 window.Telegram.WebApp.DeviceOrientation;
-const zE = "_layout_1tvc9_1",
-  LE = "_container_1tvc9_5",
-  qE = "_close_button_1tvc9_14",
-  HE = "_title_container_1tvc9_22",
-  GE = "_image_container_1tvc9_28",
-  JE = "_image_1tvc9_28",
-  VE = "_text_container_1tvc9_47",
-  YE = "_button_container_1tvc9_52",
+const LE = "_layout_1tvc9_1",
+  qE = "_container_1tvc9_5",
+  HE = "_close_button_1tvc9_14",
+  GE = "_title_container_1tvc9_22",
+  JE = "_image_container_1tvc9_28",
+  VE = "_image_1tvc9_28",
+  YE = "_text_container_1tvc9_47",
+  XE = "_button_container_1tvc9_52",
   We = {
-    layout: zE,
-    container: LE,
-    close_button: qE,
-    title_container: HE,
-    image_container: GE,
-    image: JE,
-    text_container: VE,
-    button_container: YE
+    layout: LE,
+    container: qE,
+    close_button: HE,
+    title_container: GE,
+    image_container: JE,
+    image: VE,
+    text_container: YE,
+    button_container: XE
   },
-  XE = () => {
+  WE = () => {
     const t = c(i => i.main.startParams),
       [n, s] = u.useState(null),
       a = () => {
@@ -15841,11 +15877,11 @@ const zE = "_layout_1tvc9_1",
       })
     })
   },
-  WE = () => e.jsxs("div", {
+  KE = () => e.jsxs("div", {
     className: $t.layout,
-    children: [e.jsx(LC, {}), e.jsx(FC, {}), e.jsx(Pg, {}), e.jsx(oC, {}), e.jsx(OC, {}), e.jsx(C2, {}), e.jsx(L2, {}), e.jsx(H2, {}), e.jsx(mS, {}), e.jsx(I2, {}), e.jsx(ZT, {}), e.jsx(fE, {}), e.jsx(QE, {}), e.jsx(XE, {}), e.jsx(e2, {}), e.jsx(P2, {}), e.jsx(D2, {}), e.jsx(jT, {})]
+    children: [e.jsx(qC, {}), e.jsx(OC, {}), e.jsx(Pg, {}), e.jsx(rC, {}), e.jsx(QC, {}), e.jsx(SS, {}), e.jsx(qS, {}), e.jsx(GS, {}), e.jsx(A2, {}), e.jsx(CS, {}), e.jsx($T, {}), e.jsx(xE, {}), e.jsx(zE, {}), e.jsx(WE, {}), e.jsx(tS, {}), e.jsx(IS, {}), e.jsx(kS, {}), e.jsx(bT, {})]
   }),
-  KE = () => {
+  ZE = () => {
     const t = g(),
       n = c(s => s.main.startAppTs);
     return u.useEffect(() => {
@@ -15857,7 +15893,7 @@ const zE = "_layout_1tvc9_1",
       }
     }, [n]), null
   },
-  ZE = () => {
+  $E = () => {
     var i, o;
     const t = g(),
       n = ((o = (i = window == null ? void 0 : window.Telegram) == null ? void 0 : i.WebApp) == null ? void 0 : o.initData) && window.Telegram.WebApp.initData !== "",
@@ -15903,7 +15939,7 @@ const zE = "_layout_1tvc9_1",
       }
     }, [t])
   },
-  $E = () => (u.useEffect(() => {
+  eB = () => (u.useEffect(() => {
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1, document.body.style.overflowY = "hidden", document.body.style.marginTop = "100px", document.body.style.height = window.innerHeight + 100 + "px", document.body.style.paddingBottom = "100px", setTimeout(() => {
         window.scrollTo(0, 100)
       }, 1), document.body.addEventListener("scroll", () => {
@@ -15953,31 +15989,31 @@ const zE = "_layout_1tvc9_1",
       })
     }
   }, []), null),
-  eB = "_layout_ieygs_1",
-  tB = "_container_ieygs_8",
-  nB = "_logo_container_ieygs_17",
-  sB = "_logo_ieygs_17",
-  aB = "_animate_ieygs_1",
-  iB = "_center_ieygs_37",
-  oB = "_title_ieygs_51",
-  rB = "_description_ieygs_58",
-  cB = "_button_container_ieygs_63",
-  lB = "_button_ieygs_63",
-  dB = "_b_ieygs_63",
+  tB = "_layout_ieygs_1",
+  nB = "_container_ieygs_8",
+  sB = "_logo_container_ieygs_17",
+  aB = "_logo_ieygs_17",
+  iB = "_animate_ieygs_1",
+  oB = "_center_ieygs_37",
+  rB = "_title_ieygs_51",
+  cB = "_description_ieygs_58",
+  lB = "_button_container_ieygs_63",
+  dB = "_button_ieygs_63",
+  uB = "_b_ieygs_63",
   ft = {
-    layout: eB,
-    container: tB,
-    logo_container: nB,
-    logo: sB,
-    animate: aB,
-    center: iB,
-    title: oB,
-    description: rB,
-    button_container: cB,
-    button: lB,
-    b: dB
+    layout: tB,
+    container: nB,
+    logo_container: sB,
+    logo: aB,
+    animate: iB,
+    center: oB,
+    title: rB,
+    description: cB,
+    button_container: lB,
+    button: dB,
+    b: uB
   },
-  uB = () => {
+  mB = () => {
     const t = c(xo);
     return e.jsx("div", {
       className: ft.layout,
@@ -16004,14 +16040,14 @@ const zE = "_layout_1tvc9_1",
       })
     })
   },
-  mB = "/assets/loading-D8SQALTR.gif",
-  AB = () => e.jsxs("div", {
+  AB = "/assets/loading-D8SQALTR.gif",
+  pB = () => e.jsxs("div", {
     className: $t.loading_container,
     children: [e.jsx("div", {
       className: $t.image_container,
       children: e.jsx("img", {
         alt: "img",
-        src: mB,
+        src: AB,
         className: $t.image
       })
     }), e.jsx("div", {
@@ -16019,7 +16055,7 @@ const zE = "_layout_1tvc9_1",
       children: "Preparing pixels..."
     })]
   }),
-  pB = () => {
+  hB = () => {
     const t = g();
     u.useEffect(() => {
       const n = (s, a) => {
@@ -16033,13 +16069,13 @@ const zE = "_layout_1tvc9_1",
         })
       };
       n("colors", s => {
-        Array.isArray(s) && s.length > 0 ? (t(HA(s)), t(Ba(s[0]))) : console.warn("Полученные данные цветов не являются непустым массивом")
+        Array.isArray(s) && s.length > 0 ? (t(HA(s)), t(Da(s[0]))) : console.warn("Полученные данные цветов не являются непустым массивом")
       }), n("boosts", s => {
         t(Sd(s))
       })
     }, [t])
   },
-  hB = () => {
+  gB = () => {
     const t = g(),
       n = c(h => h.main.startParams),
       s = async () => {
@@ -16058,7 +16094,7 @@ const zE = "_layout_1tvc9_1",
         }
       }, i = async h => {
         try {
-          const f = await t(Je.getReferredTemplate()).unwrap();
+          const f = await t(Ge.getReferredTemplate()).unwrap();
           await v.mainImage.worldTemplate.add({
             ...f,
             url: `${f.url}?time=${Date.now()}`,
@@ -16069,7 +16105,7 @@ const zE = "_layout_1tvc9_1",
         }
       }, o = async h => {
         try {
-          const f = await t(Je.getTemplateById({
+          const f = await t(Ge.getTemplateById({
             id: h
           }));
           if (f.payload && f.payload.id !== 0) {
@@ -16084,7 +16120,7 @@ const zE = "_layout_1tvc9_1",
           console.error("Ошибка получения подключенного трафарета:", f)
         }
       }, r = async h => {
-        if (!Ua(h)) return Promise.resolve();
+        if (!Fa(h)) return Promise.resolve();
         try {
           t(Ds.getMyTemplate({
             id: h.id
@@ -16094,12 +16130,12 @@ const zE = "_layout_1tvc9_1",
         }
       }, l = async () => {
         try {
-          await t(Je.getWorldTemplate())
+          await t(Ge.getWorldTemplate())
         } catch (h) {
           console.error("Ошибка получения подключенного трафарета:", h)
         }
       }, d = () => {
-        n.squadId && t(ha(n.squadId))
+        n.squadId && t(ga(n.squadId))
       }, m = async () => {
         const [h] = await Promise.all([s()]);
         h && (await Promise.all([a(), i(h.templateId), o(h.id), l(), r(h)]), d())
@@ -16108,7 +16144,7 @@ const zE = "_layout_1tvc9_1",
       m()
     }, [t])
   },
-  gB = () => {
+  _B = () => {
     const t = K();
     u.useEffect(() => {
       Li() ? localStorage.getItem("skipIntro") || (t.push("/welcome"), localStorage.setItem("skipIntro", "true")) : zt.get("skipIntro", (n, s) => {
@@ -16116,7 +16152,7 @@ const zE = "_layout_1tvc9_1",
       })
     }, [t])
   },
-  ba = t => {
+  Na = t => {
     let n = "unknown",
       s = "unknown";
     return /android/i.test(t) ? (n = "mobile", s = "android") : /iPad|iPhone|iPod/.test(t) ? (n = "mobile", s = "ios") : /Windows NT/i.test(t) ? (n = "desktop", s = "windows") : /Macintosh/i.test(t) ? (n = "desktop", s = "macos") : (n = "unknown", s = "unknown"), {
@@ -16124,7 +16160,7 @@ const zE = "_layout_1tvc9_1",
       os: s
     }
   },
-  _B = t => {
+  fB = t => {
     let n = "unknown",
       s = "unknown";
     const a = t.toLowerCase();
@@ -16148,7 +16184,7 @@ const zE = "_layout_1tvc9_1",
         break;
       default:
         const i = navigator.userAgent,
-          o = ba(i);
+          o = Na(i);
         n = o.deviceType, s = o.os;
         break
     }
@@ -16157,7 +16193,7 @@ const zE = "_layout_1tvc9_1",
       os: s
     }
   },
-  fB = () => {
+  xB = () => {
     const t = g(),
       n = c(s => s.auth.authData);
     u.useEffect(() => {
@@ -16168,16 +16204,16 @@ const zE = "_layout_1tvc9_1",
       if (n && n !== "")
         if ((r = (o = window == null ? void 0 : window.Telegram) == null ? void 0 : o.WebApp) != null && r.platform) {
           s = window.Telegram.WebApp.platform;
-          const l = _B(s);
+          const l = fB(s);
           a = l.deviceType, i = l.os
         } else {
           const l = navigator.userAgent,
-            d = ba(l);
+            d = Na(l);
           a = d.deviceType, i = d.os
         }
       else {
         const l = navigator.userAgent,
-          d = ba(l);
+          d = Na(l);
         a = d.deviceType, i = d.os
       }
       t(Hc({
@@ -16187,7 +16223,7 @@ const zE = "_layout_1tvc9_1",
       }))
     }, [t, n])
   },
-  xB = () => {
+  yB = () => {
     const t = g(),
       {
         t: n,
@@ -16198,15 +16234,15 @@ const zE = "_layout_1tvc9_1",
       s.changeLanguage(a)
     }, [t, a])
   },
-  yB = () => {
+  vB = () => {
     const t = g(),
       n = c(a => a.shop.selectedCurrency),
-      s = c(Ve);
+      s = c(Je);
     u.useEffect(() => {
       s === he && n === 1 && t(on(2)), s !== he && t(on(1))
     }, [s])
   },
-  vB = () => {
+  wB = () => {
     const t = g(),
       n = window.Telegram.WebApp,
       s = c(mn);
@@ -16225,26 +16261,26 @@ const zE = "_layout_1tvc9_1",
       }
     }, [s]), null
   },
-  wB = ({
+  jB = ({
     children: t
   }) => {
-    vB(), KE(), ZE(), fB(), xB(), yB();
+    wB(), ZE(), $E(), xB(), yB(), vB();
     const n = c(l => l.main.timeLimit),
       s = c(l => l.user.getUserFetchStatus),
       a = s === A.rejected && !ut.app.disableBetaError,
       i = s === A.pending || s === A.idle,
       o = n;
-    return window.Telegram && !window.Telegram.WebApp.isVersionAtLeast(Kr) && $E(), pB(), hB(), gB(), a || o ? e.jsx(uB, {}) : i ? e.jsx(AB, {}) : e.jsx(e.Fragment, {
+    return window.Telegram && !window.Telegram.WebApp.isVersionAtLeast(Kr) && eB(), hB(), gB(), _B(), a || o ? e.jsx(mB, {}) : i ? e.jsx(pB, {}) : e.jsx(e.Fragment, {
       children: t
     })
   };
 
-function jB() {
-  return e.jsx(wB, {
-    children: e.jsx(WE, {})
+function bB() {
+  return e.jsx(jB, {
+    children: e.jsx(KE, {})
   })
 }
-const bB = {
+const NB = {
     main: {
       paintButtonText: "Paint",
       paintButtonMax: "max",
@@ -16314,10 +16350,10 @@ const bB = {
       }
     }
   },
-  NB = {
-    translation: bB
-  },
   PB = {
+    translation: NB
+  },
+  IB = {
     main: {
       paintButtonText: "Paint",
       paintButtonMax: "max",
@@ -16387,13 +16423,13 @@ const bB = {
       }
     }
   },
-  IB = {
-    translation: PB
+  CB = {
+    translation: IB
   };
 Ir.use(Nr).init({
   resources: {
-    en: NB,
-    ru: IB
+    en: PB,
+    ru: CB
   },
   lng: "en",
   fallbackLng: "en",
@@ -16404,8 +16440,8 @@ Ir.use(Nr).init({
 jg(vn);
 ec(vn);
 VA(vn);
-const CB = hr.createRoot(document.getElementById("root"));
-CB.render(e.jsx(ie.StrictMode, {
+const SB = hr.createRoot(document.getElementById("root"));
+SB.render(e.jsx(ie.StrictMode, {
   children: e.jsx(xr, {
     store: vn,
     children: e.jsx(Pr, {
@@ -16421,7 +16457,7 @@ CB.render(e.jsx(ie.StrictMode, {
         uiPreferences: {
           theme: vr.DARK
         },
-        children: e.jsx(jB, {})
+        children: e.jsx(bB, {})
       })
     })
   })
