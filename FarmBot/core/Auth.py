@@ -39,7 +39,7 @@ class Auth:
         try:
             tgWebData = urllib.parse.quote_plus(self.tgWebData)
 
-            url = f"{self.start_param}#tgWebAppData={tgWebData}&tgWebAppVersion=6.7&tgWebAppPlatform=android&tgWebAppSideMenuUnavail=1"
+            url = f"{self.start_param}#tgWebAppData={tgWebData}&tgWebAppVersion=7.10&tgWebAppPlatform=android&tgWebAppSideMenuUnavail=1"
 
             response, headers = self.http.get(
                 url=url,

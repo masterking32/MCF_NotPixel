@@ -16,6 +16,7 @@ from .core.Tasks import Tasks
 from .core.Repaint import Repaint
 from .core.Upgrades import Upgrades
 from .core.Squad import Squad
+from .core.Offer import Offer
 
 from utilities.utilities import getConfig
 
@@ -123,6 +124,14 @@ class FarmBot:
                     f"<r>⭕ Error getting mining status (<c>{self.account_name}</c>)</r>"
                 )
                 return
+
+            offer = Offer(
+                log=self.log,
+                httpRequest=self.http,
+                account_name=self.account_name,
+            )
+
+            offer_check = offer.check()
 
             status_user_balance = status.get("userBalance", 0)
             status_speed_per_second = status.get("speedPerSecond", 0)

@@ -89,42 +89,56 @@ class Repaint:
             self.log.info(
                 f"<g>🖼️ Getting templates for <c>{self.account_name}</c>...</g>"
             )
-            templates = self.get_template_list()
-            if templates is None:
-                return
+            # templates = self.get_template_list()
+            # if templates is None:
+            #     return
 
-            template_id = random.choice(
-                [
-                    95736407,
-                    1211823521,
-                    6172166098,
-                    1367422017,
-                    6488265864,
-                ]
-            )
+            # template_id = random.choice(
+            #     [
+            #         95736407,
+            #         1211823521,
+            #         6172166098,
+            #         1367422017,
+            #         6488265864,
+            #     ]
+            # )
             # template = random.choice(templates)
             # template_id = template.get("templateId", None)
-            if template_id is None:
-                self.log.error(
-                    f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
-                )
-                return
-            template = self.get_template(template_id)
-            if template is None:
-                self.log.error(
-                    f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
-                )
-                return
+            # if template_id is None:
+            #     self.log.error(
+            #         f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
+            #     )
+            #     return
+            # template = self.get_template(template_id)
+            # if template is None:
+            #     self.log.error(
+            #         f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
+            #     )
+            #     return
 
             my_template = self.get_my_template()
             if my_template is None:
                 my_template = {}
+                self.log.error(
+                    f"<y>🟡 Account <c>{self.account_name}</c> has no template right now, so we cannot set it at this moment because it is not available on Notpixel at this time.</y>"
+                )
+                return
 
-            if my_template.get("id", 0) != template_id:
+            image_url = my_template.get("url", None)
+            if image_url is None:
+                self.log.error(
+                    f"<y>🟡 Unable to get image URL for <c>{self.account_name}</c></y>"
+                )
+                return
+
+            template_id = my_template.get("id", None)
+            valid_template_list = [1367422017, 95736407, 1137547747]
+            if template_id not in valid_template_list:
                 self.log.info(
                     f"<g>🖼️ Setting template for <c>{self.account_name}</c>...</g>"
                 )
                 await asyncio.sleep(1)
+                template_id = random.choice(valid_template_list)
                 self.set_template(template_id)
                 await asyncio.sleep(1)
                 my_template = self.get_my_template()
@@ -137,15 +151,22 @@ class Repaint:
                         f"<y>🟡 Unable to get template for <c>{self.account_name}</c></y>"
                     )
                     return
+                image_url = my_template.get("url", None)
+
+            self.log.info(
+                f"<g>🖼️ Painting template <c>{image_url}</c> for <c>{self.account_name}</c>...</g>"
+            )
 
             image_x = my_template.get("x", 0)
             image_y = my_template.get("y", 0)
+            imageSize = my_template.get("imageSize", 0)
 
             await asyncio.sleep(3)
             self.log.info(
                 f"<g>📷 Fetching pixels for the template <c>{template_id}</c> from the API for account <c>{self.account_name}</c>...</g>"
             )
-            response = self.get_api_tasks_list(template_id)
+
+            response = self.get_api_tasks_list(template_id, imageSize)
             if response is None:
                 return
 
@@ -178,7 +199,17 @@ class Repaint:
                 pixel_x = str(pixel_x).zfill(3)
                 pixel_id = int(f"{pixel_y}{pixel_x}")
 
-                self.start_repaint(pixel_id, pixel_color)
+                paint_resp = self.start_repaint(pixel_id, pixel_color)
+
+                if paint_resp is None:
+                    return
+
+                if "balance" in paint_resp:
+                    balance = paint_resp["balance"]
+                    self.log.info(
+                        f"<g>💰 New balance after painting: <c>{balance}</c></g>"
+                    )
+
                 charges -= 1
 
                 # No wait like fast mode.
@@ -201,15 +232,20 @@ class Repaint:
                     "newColor": pixel_newColor,
                 }
             )
-            self.http.post(
+
+            respo = self.http.post(
                 url="api/v1/repaint/start",
                 data=data,
             )
 
+            if respo is None:
+                return None
+
+            return respo
         except Exception as e:
             self.log.error(f"<y>🟡 Error for <c>{self.account_name}</c>: {e}</y>")
 
-    def get_api_tasks_list(self, image_id):
+    def get_api_tasks_list(self, image_id, imageSize):
         if self.license_key is None:
             return None
 
@@ -219,6 +255,7 @@ class Repaint:
             "action": "get_task",
             "task_type": "get_image_pixels",
             "image_id": image_id,
+            "imageSize": imageSize,
         }
 
         response = apiObj.get_task_answer(self.license_key, data)
