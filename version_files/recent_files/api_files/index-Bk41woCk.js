@@ -3795,7 +3795,7 @@ const Dn = L("mining/info", async () => (await Is.info()).data),
       s = c(o => o.user.country),
       a = xm(),
       i = 512;
-    return Pm > 4 ? null : e.jsx(re, {
+    return Pm > 1 && !n ? null : e.jsx(re, {
       action: () => {
         le("https://t.me/UnitsWallet_bot/UnitsWallet?startapp=0xBC0bDC536BDf6B7c6e1Dbd1c70eE7ca21B59f426"), a("task_units_wallet", {
           props: {
