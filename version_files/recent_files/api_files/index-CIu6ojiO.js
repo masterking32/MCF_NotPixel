@@ -289,7 +289,7 @@ S.interceptors.request.use(function(t) {
   return s ? t.headers.Authorization = `initData ${s}` : delete t.headers.Authorization, t
 });
 S.interceptors.request.use(function(t) {
-  return $r.includes(t.url), t
+  return $r.includes(t.url) && (t.headers.npx = "ddd06525-4373-4111-8995-bade3fc87be2"), t
 });
 S.interceptors.response.use(t => t, t => Promise.reject(t));
 class W {
