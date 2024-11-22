@@ -126,13 +126,13 @@ class FarmBot:
                 )
                 return
 
-            offer = Offer(
-                log=self.log,
-                httpRequest=self.http,
-                account_name=self.account_name,
-            )
+            # offer = Offer(
+            #     log=self.log,
+            #     httpRequest=self.http,
+            #     account_name=self.account_name,
+            # )
 
-            offer_check = offer.check()
+            # offer_check = offer.check()
 
             status_user_balance = status.get("userBalance", 0)
             status_speed_per_second = status.get("speedPerSecond", 0)
