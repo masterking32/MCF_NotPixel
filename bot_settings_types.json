@@ -56,6 +56,13 @@
     "description": "Automatically joins a squad, If you are not in one."
   },
   {
+    "key": "auto_finish_secret_mission",
+    "name": "Auto Finish Secret Mission",
+    "type": "checkbox",
+    "default_value": "on",
+    "description": "Automatically finishes secret mission when available."
+  },
+  {
     "key": "check_interval",
     "name": "Check interval (seconds)",
     "type": "number",

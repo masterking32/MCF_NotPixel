@@ -17,6 +17,7 @@ from .core.Repaint import Repaint
 from .core.Upgrades import Upgrades
 from .core.Squad import Squad
 from .core.Offer import Offer
+from .core.Secrets import Secrets
 
 from utilities.utilities import getConfig
 
@@ -159,6 +160,17 @@ class FarmBot:
             self.log.info(
                 f"<g>└─ 🔋 Charges: <c>{status_charges}/{status_max_charges}</c></g>"
             )
+
+            secrets = Secrets(
+                log=self.log,
+                httpRequest=self.http,
+                account_name=self.account_name,
+                status=status,
+                license_key=license_key,
+            )
+
+            if getConfig("auto_finish_secret_mission", True):
+                secrets.finish_secret_mission()
 
             buy = Buy(
                 log=self.log,
