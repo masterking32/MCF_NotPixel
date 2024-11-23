@@ -62,6 +62,15 @@
     "default_value": "on",
     "description": "Automatically finishes secret mission when available."
   },
+
+  {
+    "key": "ignore_select_template",
+    "name": "Select Template for New Accounts",
+    "type": "checkbox",
+    "default_value": "off",
+    "description": "It is not safe to enable this option. By enabling this option, the bot will select a random template for new accounts. Selecting a template is not available for all accounts at this moment."
+  },
+
   {
     "key": "check_interval",
     "name": "Check interval (seconds)",

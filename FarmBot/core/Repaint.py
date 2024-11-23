@@ -10,6 +10,8 @@ import random
 import time
 from mcf_utils.api import API
 
+from utilities.utilities import getConfig
+
 
 class Repaint:
     def __init__(self, log, httpRequest, account_name, license_key):
@@ -122,7 +124,14 @@ class Repaint:
                 self.log.error(
                     f"<y>🟡 Account <c>{self.account_name}</c> has no template right now, so we cannot set it at this moment because it is not available on Notpixel at this time.</y>"
                 )
-                return
+
+                if getConfig("ignore_select_template", False) == False:
+                    return
+
+                my_template = {
+                    "id": 1234,
+                    "url": "https://notpixel.io/NO_IMAGE",
+                }
 
             image_url = my_template.get("url", None)
             if image_url is None:
