@@ -67,7 +67,7 @@
     "key": "ignore_select_template",
     "name": "Select Template for New Accounts",
     "type": "checkbox",
-    "default_value": "off",
+    "default_value": "on",
     "description": "It is not safe to enable this option. By enabling this option, the bot will select a random template for new accounts. Selecting a template is not available for all accounts at this moment."
   },
 

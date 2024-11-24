@@ -121,11 +121,10 @@ class Repaint:
             my_template = self.get_my_template()
             if my_template is None:
                 my_template = {}
-                self.log.error(
-                    f"<y>🟡 Account <c>{self.account_name}</c> has no template right now, so we cannot set it at this moment because it is not available on Notpixel at this time.</y>"
-                )
-
-                if getConfig("ignore_select_template", False) == False:
+                if getConfig("ignore_select_template", True) == False:
+                    self.log.error(
+                        f"<y>🟡 Account <c>{self.account_name}</c> has no template right now, so we cannot set it at this moment because it is not available on Notpixel at this time.</y>"
+                    )
                     return
 
                 my_template = {
