@@ -3868,7 +3868,7 @@ const Bn = L("mining/info", async () => (await Is.info()).data),
     ps: !0
   },
   Mm = O(0, 100),
-  Um = Mm <= 20,
+  Um = Mm <= 50,
   Fm = () => {
     const t = j.nerdGame;
     c(r => r.main.settings);
