@@ -4391,7 +4391,7 @@ const sp = (t, n) => {
     }), lt.on("publication", function(a) {
       if (a.channel === "event:message") {
         JSON.parse(new TextDecoder().decode(a.data)).forEach(r => {
-          r.user === n || !cn || (r.type === Qs.bomb && v.mainImage.bomb.boomWithDebounce(ps(JSON.parse(r.data).PixelID)), r.type === Qs.pumpkin && v.mainImage.pumpkin.boomWithDebounce(ps(JSON.parse(r.data).PixelID)), r.type === Qs.pixanos && yt.dispatch(po(JSON.parse(r.data))))
+          r.user === n || !cn || (r.type === Qs.bomb && v.mainImage.bomb.boomWithDebounce(ps(JSON.parse(r.data).info.pixelId)), r.type === Qs.pumpkin && v.mainImage.pumpkin.boomWithDebounce(ps(JSON.parse(r.data).info.pixelId)), r.type === Qs.pixanos && yt.dispatch(po(JSON.parse(r.data))))
         });
         return
       }
