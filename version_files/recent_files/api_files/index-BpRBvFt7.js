@@ -3720,7 +3720,7 @@ const Qn = L("mining/info", async () => (await Es.info()).data),
   }),
   Bm = 31 * 1e3,
   Dm = F(0, 100),
-  km = Dm <= 20;
+  km = Dm <= 50;
 let ti = !1;
 const ni = () => {
     const t = localStorage.getItem("adsgramNextView") || Date.now();
