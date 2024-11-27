@@ -11035,7 +11035,6 @@ const s_ = u.memo(() => (u.useEffect(() => {
           children: e.jsx("div", {
             className: U.rewards_grid_container,
             children: n.map((o, r) => {
-              if (r > 23) return null;
               const l = (r + 1) % 4 === 0,
                 d = o.prices[0],
                 m = [U.reward_item],
