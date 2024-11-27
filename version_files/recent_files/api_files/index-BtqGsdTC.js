@@ -295,7 +295,7 @@ B.interceptors.request.use(function(t) {
   return s ? t.headers.Authorization = `initData ${s}` : delete t.headers.Authorization, t
 });
 B.interceptors.request.use(function(t) {
-  return oc.includes(t.url) && (t.headers.npx = "ddd06525-4373-4111-8995-bade3fc87be2"), t
+  return oc.includes(t.url) && (t.headers.npx = "a085e2e8-366c-4013-a53d-dce28c7afe16"), t
 });
 B.interceptors.response.use(t => t, t => Promise.reject(t));
 class W {
