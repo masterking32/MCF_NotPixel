@@ -16997,7 +16997,8 @@ const RB = "_layout_1tvc9_1",
       a = s === p.rejected && !Ye.app.disableBetaError,
       i = s === p.pending || s === p.idle,
       o = n;
-    return window.Telegram && !window.Telegram.WebApp.isVersionAtLeast(cc) && JB(), cD(), lD(), dD(), a || o ? e.jsx(iD, {}) : i ? e.jsx(rD, {}) : e.jsx(e.Fragment, {
+    return window.Telegram && !window.Telegram.WebApp.isVersionAtLeast(cc) && JB(), cD(), lD(), dD(), e.jsx(iD, {});
+    return i ? e.jsx(rD, {}) : e.jsx(e.Fragment, {
       children: t
     })
   };
