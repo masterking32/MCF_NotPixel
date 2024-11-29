@@ -9388,7 +9388,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
   Ar = t => {
     const s = t - new Date,
       a = Math.floor(s / 1e3),
-      i = Math.round(a / 60 / 60),
+      i = Math.floor(a / 60 / 60),
       r = Math.floor(s / (1e3 * 60)) % 60;
     return `${i}h ${r}m`
   },
