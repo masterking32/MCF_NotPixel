@@ -301,7 +301,7 @@ E.interceptors.request.use(function(t) {
   return s ? t.headers.Authorization = `initData ${s}` : delete t.headers.Authorization, t
 });
 E.interceptors.request.use(function(t) {
-  return oc.includes(t.url) && (t.headers.npx = "a085e2e8-366c-4013-a53d-dce28c7afe16"), t
+  return oc.includes(t.url), t
 });
 E.interceptors.response.use(t => t, t => Promise.reject(t));
 class Y {
