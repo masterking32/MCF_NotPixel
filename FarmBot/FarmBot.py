@@ -52,6 +52,7 @@ class FarmBot:
         self.log.info(
             f"<g>🤖 Starting NotPixel farming for account <cyan>{self.account_name}</cyan>...</g>"
         )
+        return
 
         try:
             self.http = HttpRequest(
