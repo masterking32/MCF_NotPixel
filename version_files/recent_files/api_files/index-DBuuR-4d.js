@@ -8,7 +8,7 @@ var wr = (t, n, s) => n in t ? vr(t, n, {
 var zs = (t, n, s) => wr(t, typeof n != "symbol" ? n + "" : n, s);
 import {
   j as e,
-  r as u,
+  r as m,
   R as ae
 } from "./react-DjWS3H3h.js";
 import {
@@ -1167,8 +1167,8 @@ const yc = {
   }) => {
     var d;
     const i = _(),
-      o = c(m => m.shop.selectedCurrency),
-      r = (d = t.prices.filter(m => m.currency_id === o)[0]) == null ? void 0 : d.price,
+      o = c(u => u.shop.selectedCurrency),
+      r = (d = t.prices.filter(u => u.currency_id === o)[0]) == null ? void 0 : d.price,
       l = [Ae.info_row];
     return e.jsxs("div", {
       className: l.join(" "),
@@ -1309,7 +1309,7 @@ const yc = {
   ml = t => t.device.safeAreaInset,
   Al = Gi.reducer,
   pl = () => {
-    const [t, n] = u.useState("Stars"), s = c(nt);
+    const [t, n] = m.useState("Stars"), s = c(nt);
     return e.jsx("div", {
       className: Js.panel,
       children: ["Star Shop"].map(a => e.jsxs("div", {
@@ -1529,7 +1529,7 @@ const yc = {
       ...s
     },
     children: t
-  }) : null, Hl = u.memo(() => {
+  }) : null, Hl = m.memo(() => {
     console.log("render");
     const t = Array.from(Array(30)),
       n = c(nt);
@@ -1726,7 +1726,7 @@ const yc = {
       n = c(Ui),
       s = c(i => i.shop.selectedCurrency),
       a = c(nt);
-    return c(be), u.useEffect(() => {
+    return c(be), m.useEffect(() => {
       a === ye && s === 1 && t(rn(2))
     }, [a]), a !== ye ? null : e.jsx("div", {
       className: st.layout,
@@ -1777,7 +1777,7 @@ const yc = {
   } = $i.actions, hd = $i.reducer, gd = () => {
     const t = _(),
       n = c(nt),
-      [s, a] = u.useState(1);
+      [s, a] = m.useState(1);
     return e.jsx("img", {
       alt: "img",
       className: Ae.stars_img,
@@ -1796,7 +1796,7 @@ const yc = {
       n = c(i => i.shop.products),
       s = c(i => i.shop.available),
       a = c(nt);
-    return u.useEffect(() => {}, []), e.jsxs(le, {
+    return m.useEffect(() => {}, []), e.jsxs(le, {
       children: [e.jsxs("div", {
         className: Ae.stars_img_container,
         children: [e.jsx(gd, {}), e.jsx(Hl, {
@@ -2386,7 +2386,7 @@ const yc = {
     container: Od,
     bubble: Qd,
     move: zd
-  }, qd = u.memo(({
+  }, qd = m.memo(({
     color: t
   }) => {
     const n = Array.from(Array(200));
@@ -2697,16 +2697,16 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
     setRunParticle: s
   }) => {
     const a = _(),
-      i = c(m => m.mining.claimStatus),
-      [o, r] = u.useState(!1),
-      l = c(m => m.mining.info),
+      i = c(u => u.mining.claimStatus),
+      [o, r] = m.useState(!1),
+      l = c(u => u.mining.info),
       {
         reward: d
       } = uu({
         info: l,
         secFromInit: n
       });
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       o && setTimeout(() => {
         r(!1)
       }, 2e3)
@@ -2724,10 +2724,10 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
         },
         className: lt.button,
         onPointerUp: async () => {
-          var m, h;
+          var u, h;
           try {
             const g = await a(Ne.claim()).unwrap();
-            await a(Pt(g.claimed)), s(!0), (h = (m = window.Telegram.WebApp) == null ? void 0 : m.HapticFeedback) == null || h.notificationOccurred("success")
+            await a(Pt(g.claimed)), s(!0), (h = (u = window.Telegram.WebApp) == null ? void 0 : u.HapticFeedback) == null || h.notificationOccurred("success")
           } catch (g) {
             r(!0), console.warn(g)
           }
@@ -2787,12 +2787,12 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
       opacity: !1
     }
   }),
-  ao = u.memo(({
+  ao = m.memo(({
     runParticle: t,
     setRunParticle: n
   }) => {
-    const [s, a] = u.useState(yu()), [i, o] = u.useState(!1);
-    return u.useEffect(() => {
+    const [s, a] = m.useState(yu()), [i, o] = m.useState(!1);
+    return m.useEffect(() => {
       t && setTimeout(() => {
         o(!0), setTimeout(() => {
           n(!1), o(!1)
@@ -2833,15 +2833,15 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
   },
   ju = () => {
     const t = c(d => d.mining.info),
-      [n, s] = u.useState(0),
+      [n, s] = m.useState(0),
       a = t.fromStart + n,
       i = c(d => d.main.settings.MinTimeToClaim),
       o = wu(a, i),
-      [r, l] = u.useState(!1);
-    return u.useEffect(() => {
+      [r, l] = m.useState(!1);
+    return m.useEffect(() => {
       let d = null;
       if (t !== null) {
-        const m = () => {
+        const u = () => {
           const h = (Date.now() - t.initTs) / 1e3;
           if (h + t.fromStart > t.maxMiningTime) {
             clearInterval(d);
@@ -2849,7 +2849,7 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
           }
           s(h)
         };
-        m(), d = setInterval(m, 100)
+        u(), d = setInterval(u, 100)
       }
       return () => {
         clearInterval(d)
@@ -2943,12 +2943,12 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
   }) => {
     const l = _(),
       d = [A.info_row],
-      m = c(j => j.mining.tasks[n]),
+      u = c(j => j.mining.tasks[n]),
       g = c(j => j.mining.checkStatuses[n]) === p.pending,
       I = c(j => j.mining.checkError[n]),
       b = c(j => j.mining.toggleAction[n]),
-      f = u.useRef();
-    return n && g && d.push(A.info_row_pending), u.useEffect(() => {
+      f = m.useRef();
+    return n && g && d.push(A.info_row_pending), m.useEffect(() => {
       let j = null;
       return I && setTimeout(() => {
         l(eu({
@@ -2963,12 +2963,12 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
       ref: f,
       id: i,
       style: {
-        opacity: m ? .3 : 1
+        opacity: u ? .3 : 1
       },
       children: e.jsx("div", {
         className: d.join(" "),
         onPointerUp: () => {
-          !n || m || g || I || (a && l(to({
+          !n || u || g || I || (a && l(to({
             action: n,
             value: !b
           })), a && b || a && !s ? a() : s && l(Ne.checkTask({
@@ -3484,7 +3484,7 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
       r = Sr(),
       l = s.TokensForWalletVerification,
       d = c(h => h.mining.infoStatus),
-      m = async () => {
+      u = async () => {
         if (i || !o) return;
         if (r) {
           await a.disconnect(), t(z({
@@ -3510,7 +3510,7 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
           text: "Something went wrong, try again"
         }))
       };
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       var h;
       !o || d !== p.fulfilled || r && (i || (h = r == null ? void 0 : r.connectItems) != null && h.tonProof && !("error" in r.connectItems.tonProof) && X.checkTonProof(r.connectItems.tonProof.proof, r.account).then(g => {
         g.status === 200 && g.data.success ? t(Ne.checkTask({
@@ -3523,7 +3523,7 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
       }))
     }, [r, o, d, i]), e.jsx(te, {
       boost: n,
-      action: m,
+      action: u,
       enableCheck: !1,
       reward: l,
       children: e.jsxs("div", {
@@ -3733,7 +3733,7 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
     setShow: n,
     children: s
   }) => {
-    const [a, i] = u.useState(!1), [o, r] = As(() => ({
+    const [a, i] = m.useState(!1), [o, r] = As(() => ({
       from: {
         transform: "translateY(100%)"
       },
@@ -3750,7 +3750,7 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
         easing: ps.easeOutCubic
       }
     }));
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       t ? (i(!0), r.start({
         transform: "translateY(0%)"
       }), d.start({
@@ -3767,28 +3767,28 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
         style: {
           ...l
         },
-        onPointerUp: m => {
-          m.stopPropagation(), n(!1)
+        onPointerUp: u => {
+          u.stopPropagation(), n(!1)
         },
-        onTouchMove: m => {
-          m.stopPropagation()
+        onTouchMove: u => {
+          u.stopPropagation()
         },
-        onPointerMove: m => {
-          m.stopPropagation()
+        onPointerMove: u => {
+          u.stopPropagation()
         }
       }), e.jsx(hs.div, {
         className: $a.popup,
         style: {
           ...o
         },
-        onPointerUp: m => {
-          m.stopPropagation()
+        onPointerUp: u => {
+          u.stopPropagation()
         },
-        onTouchMove: m => {
-          m.stopPropagation()
+        onTouchMove: u => {
+          u.stopPropagation()
         },
-        onPointerMove: m => {
-          m.stopPropagation()
+        onPointerMove: u => {
+          u.stopPropagation()
         },
         children: s
       })]
@@ -3799,7 +3799,7 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
       n = w.pixelInNickname,
       s = c(l => l.main.settings),
       a = c(l => l.mining.tasks[n]),
-      [i, o] = u.useState(!1),
+      [i, o] = m.useState(!1),
       r = 256;
     return e.jsxs(te, {
       action: () => {
@@ -3863,8 +3863,8 @@ const zn = Q("mining/info", async () => (await Es.info()).data),
                   id: performance.now(),
                   text: "Copied!"
                 })), o(!1), setTimeout(() => {
-                  var d, m;
-                  (m = (d = window.Telegram) == null ? void 0 : d.WebApp) == null || m.close()
+                  var d, u;
+                  (u = (d = window.Telegram) == null ? void 0 : d.WebApp) == null || u.close()
                 }, 500)) : t(z({
                   id: performance.now(),
                   text: "Can't copy!"
@@ -3918,12 +3918,12 @@ const ti = () => {
     const o = c(b => b.mining.tasks[i]),
       r = c(b => b.user.country),
       l = ro(),
-      [d, m] = u.useState(ti()),
-      [h, g] = u.useState(ei),
+      [d, u] = m.useState(ti()),
+      [h, g] = m.useState(ei),
       I = 16;
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       const b = setInterval(() => {
-        m(ti())
+        u(ti())
       }, 1e3);
       return () => {
         clearInterval(b)
@@ -4249,8 +4249,8 @@ const ti = () => {
   }),
   tA = () => {
     const t = _(),
-      [n, s] = u.useState(!1);
-    return u.useEffect(() => {
+      [n, s] = m.useState(!1);
+    return m.useEffect(() => {
       function a(i) {
         i.ctrlKey && i.altKey && i.keyCode === 67 && (async () => {
           try {
@@ -4282,7 +4282,7 @@ const ti = () => {
     const t = _(),
       n = c(a => a.user.pixelsForSaleOffset),
       s = c(a => a.user.pixelsForSaleLimit);
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       t(Nt.getPixelsForSale({
         offset: n,
         limit: s
@@ -4849,12 +4849,12 @@ const Tp = (t, n) => {
           else if (a.channel === `personal:user#${n}`) {
             const d = JSON.parse(new TextDecoder().decode(r));
             if (d.type === Pp[1] && yt.getState().daily.list.entities[d.good_id]) {
-              const m = yt.getState().daily.list.entities[d.good_id],
-                h = m.name,
-                g = m.prices[0].quantity;
+              const u = yt.getState().daily.list.entities[d.good_id],
+                h = u.name,
+                g = u.prices[0].quantity;
               yt.dispatch(z({
                 id: performance.now(),
-                text: `Transaction for daily ${m.id} completed! Got ${h} x${g}. Refresh the app.`,
+                text: `Transaction for daily ${u.id} completed! Got ${h} x${g}. Refresh the app.`,
                 icon: ""
               }))
             }
@@ -5275,14 +5275,14 @@ const Tp = (t, n) => {
   $p = () => {
     const t = _(),
       n = c(h => h.mining.charges),
-      s = u.useRef(n),
+      s = m.useRef(n),
       a = c(h => h.mining.addedCharges),
-      i = u.useRef(0),
+      i = m.useRef(0),
       o = c(h => h.mining.reChargeTs),
       r = c(h => h.mining.reChargeSpeed),
       l = c(h => h.mining.maxCharges),
-      [d, m] = u.useState(0);
-    return u.useEffect(() => {
+      [d, u] = m.useState(0);
+    return m.useEffect(() => {
       const h = () => {
         if (s.current >= l) {
           g = requestAnimationFrame(h);
@@ -5292,15 +5292,15 @@ const Tp = (t, n) => {
           f = Math.floor((I - o) / r) - i.current;
         f > 0 && s.current < l && (t(no(f)), t(iu(f)));
         let j = (I - o) % r;
-        m(j * 100 / r), g = requestAnimationFrame(h)
+        u(j * 100 / r), g = requestAnimationFrame(h)
       };
       let g = requestAnimationFrame(h);
       return () => {
         cancelAnimationFrame(g), i.current = 0
       }
-    }, [o]), u.useEffect(() => {
-      s.current = n, n === l && m(0)
-    }, [n]), u.useEffect(() => {
+    }, [o]), m.useEffect(() => {
+      s.current = n, n === l && u(0)
+    }, [n]), m.useEffect(() => {
       i.current = a
     }, [a]), e.jsxs(ae.Fragment, {
       children: [e.jsx(Xp, {}), e.jsx(Zp, {
@@ -5368,16 +5368,16 @@ const Tp = (t, n) => {
     fontWeight: s = 600,
     gap: a = 6
   }) => {
-    const [i, o] = u.useState(!0), [r, l] = u.useState(0), d = r === 0 ? `translateY(${a/2}px)` : `translateY(-${a/2+(n+a)*r-a}px)`;
-    return u.useEffect(() => {
+    const [i, o] = m.useState(!0), [r, l] = m.useState(0), d = r === 0 ? `translateY(${a/2}px)` : `translateY(-${a/2+(n+a)*r-a}px)`;
+    return m.useEffect(() => {
       o(!1);
-      const m = setTimeout(() => {
+      const u = setTimeout(() => {
         o(!0)
       }, 500);
       return () => {
-        clearTimeout(m)
+        clearTimeout(u)
       }
-    }, [r]), u.useEffect(() => {
+    }, [r]), m.useEffect(() => {
       l(t)
     }, [t]), e.jsx("div", {
       className: Wt.layout,
@@ -5402,14 +5402,14 @@ const Tp = (t, n) => {
             visibility: i ? "hidden" : "visible",
             gap: a
           },
-          children: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(m => e.jsx("span", {
+          children: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(u => e.jsx("span", {
             className: Wt.digit,
             style: {
               fontSize: n,
               fontWeight: s
             },
-            children: m
-          }, m))
+            children: u
+          }, u))
         })]
       })
     })
@@ -5490,8 +5490,8 @@ const Eh = async ({
       product: 1,
       amount: 1
     })), (d = (l = window.Telegram.WebApp) == null ? void 0 : l.HapticFeedback) == null || d.notificationOccurred("error"))
-  } catch (m) {
-    console.log("error", m)
+  } catch (u) {
+    console.log("error", u)
   } finally {
     ta = !1, t(Ze({
       command: Se.finish
@@ -6421,7 +6421,7 @@ const qh = "/assets/halloween2-l9FmXxVI.png",
     activeColor: l,
     state: d
   }) => {
-    let m = !1;
+    let u = !1;
     if (n <= 0)
       if (d && d.main.fastEnergy) {
         if (ds.length > 0 && !(await Promise.allSettled(ds)).every(I => I.status === p.fulfilled || I.status === p.rejected)) return;
@@ -6430,9 +6430,9 @@ const qh = "/assets/halloween2-l9FmXxVI.png",
           state: d
         });
         if (h === p.pending) return;
-        ds.length = 0, h || (m = !0)
-      } else m = !0;
-    if (m) {
+        ds.length = 0, h || (u = !0)
+      } else u = !0;
+    if (u) {
       xg({
         history: t,
         dispatch: s,
@@ -6456,7 +6456,7 @@ const qh = "/assets/halloween2-l9FmXxVI.png",
       r = c(f => f.canvas.coords),
       l = c(f => f.main.fastMode),
       d = c(f => f.main.currentFastType),
-      m = c(f => f.main.fastEnergy),
+      u = c(f => f.main.fastEnergy),
       h = c(f => f.shop.available[1]),
       g = c(f => f.shop.products[1]),
       I = {
@@ -6489,7 +6489,7 @@ const qh = "/assets/halloween2-l9FmXxVI.png",
       },
       children: [e.jsx($p, {}), e.jsx("span", {
         className: oe.button_text,
-        children: o === 0 ? h > 0 && m ? e.jsxs("div", {
+        children: o === 0 ? h > 0 && u ? e.jsxs("div", {
           className: oe.inner_wrapper_button,
           style: {
             gap: "8px"
@@ -7192,11 +7192,11 @@ class n_ {
           width: T.width
         }),
         {
-          r: m,
+          r: u,
           g: h,
           b: g
         } = wt(i[o]);
-      this.imageData[d] = m, this.imageData[d + 1] = h, this.imageData[d + 2] = g, this.imageData[d + 3] = 255
+      this.imageData[d] = u, this.imageData[d + 1] = h, this.imageData[d + 2] = g, this.imageData[d + 3] = 255
     }
     this.updateTexture()
   }
@@ -7228,8 +7228,8 @@ class n_ {
           d = await (await fetch(n, {
             method: "GET"
           })).blob(),
-          m = URL.createObjectURL(d);
-        r.src = m, r.onload = () => {
+          u = URL.createObjectURL(d);
+        r.src = u, r.onload = () => {
           s(r)
         }, r.onerror = h => {
           a += 1, a < 5 && setTimeout(() => {
@@ -7280,15 +7280,15 @@ class n_ {
       r = s * s,
       l = Math.floor(r * a),
       d = o(n),
-      m = Array.from(Array(l));
-    for (let g = 0; g < l; g++) m[g] = g + 1;
+      u = Array.from(Array(l));
+    for (let g = 0; g < l; g++) u[g] = g + 1;
     for (let g = l + 1; g <= r; g++) {
       const I = Math.floor(d() * g) + 1;
-      I <= l && (m[I - 1] = g)
+      I <= l && (u[I - 1] = g)
     }
     const h = wt(i);
-    for (let g = 0; g < m.length; g++) {
-      const I = m[g];
+    for (let g = 0; g < u.length; g++) {
+      const I = u[g];
       if (g < 20) {
         const b = xs(I);
         console.log(`i: ${g}, id: ${I}, x: ${b.x}, y: ${b.y}`)
@@ -7444,7 +7444,7 @@ function l_() {
     }
   })
 }
-const d_ = u.memo(() => (u.useEffect(() => {
+const d_ = m.memo(() => (m.useEffect(() => {
     oi || (l_(), oi = !0)
   }, []), Xe.createPortal(e.jsx("canvas", {
     id: "canvasHolder",
@@ -7535,7 +7535,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
   },
   __ = () => {
     const t = _();
-    return nA(), u.useEffect(() => () => {
+    return nA(), m.useEffect(() => () => {
       t(od()), t(Wi({
         offset: 0
       })), t(id({
@@ -7678,7 +7678,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
   M_ = () => {
     const {
       t
-    } = Be(), n = pe.paintReward, s = c(m => m.main.settings.UpgradeRepaint), a = c(m => m.mining.boosts[n]), {
+    } = Be(), n = pe.paintReward, s = c(u => u.main.settings.UpgradeRepaint), a = c(u => u.mining.boosts[n]), {
       repaintReward: i
     } = c(Jt), o = a >= i, r = Math.min(i, a + 1), l = Math.min(i, a), d = s == null ? void 0 : s.levels[r];
     return e.jsxs(Fa, {
@@ -7701,7 +7701,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
   U_ = () => {
     const {
       t
-    } = Be(), n = pe.reChargeSpeed, s = c(m => m.main.settings.UpgradeChargeRestoration), a = c(m => m.mining.boosts[n]), {
+    } = Be(), n = pe.reChargeSpeed, s = c(u => u.main.settings.UpgradeChargeRestoration), a = c(u => u.mining.boosts[n]), {
       restorationSpeed: i
     } = c(Jt), o = a >= i, r = Math.min(i, a + 1), l = Math.min(i, a), d = s == null ? void 0 : s.levels[r];
     return e.jsxs(Fa, {
@@ -7724,7 +7724,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
   F_ = () => {
     const {
       t
-    } = Be(), n = pe.energyLimit, s = c(m => m.main.settings.UpgradeChargeCount), a = c(m => m.mining.boosts[n]), {
+    } = Be(), n = pe.energyLimit, s = c(u => u.main.settings.UpgradeChargeCount), a = c(u => u.mining.boosts[n]), {
       chargesCount: i
     } = c(Jt), o = a >= i, r = Math.min(i, a + 1), l = Math.min(i, a), d = s == null ? void 0 : s.levels[r];
     return e.jsxs(Fa, {
@@ -8295,11 +8295,11 @@ const d_ = u.memo(() => (u.useEffect(() => {
       n = c(i => i.ratings.list),
       s = c(i => i.ratings.league),
       a = c(i => i.ratings.status);
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       t(Ra.personal({
         league: s
       }))
-    }, [s]), u.useEffect(() => () => {
+    }, [s]), m.useEffect(() => () => {
       t(Mh())
     }, []), a !== p.fulfilled ? null : e.jsxs(ae.Fragment, {
       children: [e.jsx(ex, {}), n.map((i, o) => e.jsx($f, {
@@ -8308,7 +8308,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
       }, o))]
     })
   },
-  nx = () => (u.useState("Day"), null),
+  nx = () => (m.useState("Day"), null),
   sx = ({
     children: t
   }) => e.jsx("div", {
@@ -8440,7 +8440,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
   lx = () => {
     const t = _(),
       n = c(s => s.ratings.league);
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       t(Ra.squad({
         league: n
       }))
@@ -8487,7 +8487,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
   fx = "/assets/icon_squad-_NF17RUb.gif",
   xx = "/assets/icon_squad_secret-B-fF264Z.gif",
   yx = () => {
-    const [t, n] = u.useState(0);
+    const [t, n] = m.useState(0);
     return e.jsx("div", {
       className: U.squads_img_container,
       children: e.jsx("img", {
@@ -8501,7 +8501,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
     })
   },
   vx = () => {
-    const [t, n] = u.useState("Squads"), s = c(a => a.ratings.status);
+    const [t, n] = m.useState("Squads"), s = c(a => a.ratings.status);
     return e.jsxs(le, {
       children: [e.jsx(yx, {}), e.jsx(Zf, {
         selectedSection: t,
@@ -8549,16 +8549,16 @@ const d_ = u.memo(() => (u.useEffect(() => {
     })
   },
   bx = () => {
-    const [t, n] = u.useState(!0), [s, a] = u.useState(!1), i = c(r => r.canvas.coords), o = u.useRef(null);
-    return u.useEffect(() => () => {
+    const [t, n] = m.useState(!0), [s, a] = m.useState(!1), i = c(r => r.canvas.coords), o = m.useRef(null);
+    return m.useEffect(() => () => {
       o.current !== null && (clearTimeout(o.current), o.current = null)
     }, []), e.jsxs("div", {
       className: oe.pixel_info_container,
       children: [t && e.jsxs("div", {
         className: oe.pixel_info_text,
         onPointerUp: async r => {
-          var d, m;
-          r.stopPropagation(), await Gt(`${mt}?startapp=x${i.x}_y${i.y}`) ? (m = (d = window.Telegram.WebApp) == null ? void 0 : d.HapticFeedback) == null || m.notificationOccurred("success") : a(!0), n(!1), o.current = setTimeout(() => {
+          var d, u;
+          r.stopPropagation(), await Gt(`${mt}?startapp=x${i.x}_y${i.y}`) ? (u = (d = window.Telegram.WebApp) == null ? void 0 : d.HapticFeedback) == null || u.notificationOccurred("success") : a(!0), n(!1), o.current = setTimeout(() => {
             a(!1), n(!0), o.current = null
           }, 4e3)
         },
@@ -8608,11 +8608,11 @@ const d_ = u.memo(() => (u.useEffect(() => {
     })
   },
   Ex = t => {
-    const n = u.useRef(),
-      s = u.useRef();
-    return u.useEffect(() => {
+    const n = m.useRef(),
+      s = m.useRef();
+    return m.useEffect(() => {
       n.current = t
-    }), u.useEffect(() => {
+    }), m.useEffect(() => {
       const a = i => {
         s.current && n.current && !s.current.contains(i.target) && n.current(i)
       };
@@ -8841,7 +8841,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
   ay = ({
     color: t
   }) => {
-    const [n, s] = u.useState(!1), a = u.useRef(null), i = _();
+    const [n, s] = m.useState(!1), a = m.useRef(null), i = _();
     return e.jsx("div", {
       style: {
         backgroundColor: t,
@@ -8896,7 +8896,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
     const n = _(),
       s = c(i => i.canvas.coords),
       a = c(i => i.main.showUserAndSquadPopup);
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       if (s !== null && (t || a)) {
         const i = $e(s);
         n(Bs.getPixelInfo({
@@ -8923,8 +8923,8 @@ const d_ = u.memo(() => (u.useEffect(() => {
           easing: ps.easeOutCubic
         }
       })),
-      r = u.useRef(null);
-    return u.useEffect(() => {
+      r = m.useRef(null);
+    return m.useEffect(() => {
       if (t !== null && r.current !== null) {
         const l = t ? r.current.offsetHeight : 0;
         o.start({
@@ -8977,8 +8977,8 @@ const d_ = u.memo(() => (u.useEffect(() => {
     })
   },
   gy = () => {
-    const [t, n] = u.useState(!1), [s, a] = u.useState(1), i = c(r => r.main.fastMode), o = c(r => r.main.currentFastType);
-    return u.useEffect(() => {
+    const [t, n] = m.useState(!1), [s, a] = m.useState(1), i = c(r => r.main.fastMode), o = c(r => r.main.currentFastType);
+    return m.useEffect(() => {
       (i || o) && n(!1)
     }, [i, o]), e.jsx("div", {
       className: oe.order_panel,
@@ -9036,9 +9036,9 @@ const d_ = u.memo(() => (u.useEffect(() => {
     })
   },
   wy = () => {
-    const t = u.useRef(null),
-      n = u.useRef(null);
-    u.useEffect(() => () => {
+    const t = m.useRef(null),
+      n = m.useRef(null);
+    m.useEffect(() => () => {
       clearInterval(t.current)
     }, []);
     const s = () => {
@@ -9067,14 +9067,14 @@ const d_ = u.memo(() => (u.useEffect(() => {
     })
   },
   jy = () => {
-    const t = u.useRef(null),
-      n = u.useRef(null),
+    const t = m.useRef(null),
+      n = m.useRef(null),
       s = () => {
         performance.now() - n.current < 200 && v.viewport.zoomOut(), clearInterval(t.current)
       };
-    return u.useEffect(() => () => {
+    return m.useEffect(() => () => {
       clearInterval(t.current)
-    }, []), u.useEffect(() => (window.addEventListener("blur", s), () => {
+    }, []), m.useEffect(() => (window.addEventListener("blur", s), () => {
       window.removeEventListener("blur", s)
     }), []), e.jsx("button", {
       className: C.button,
@@ -9107,14 +9107,14 @@ const d_ = u.memo(() => (u.useEffect(() => {
       n = [C.button],
       s = c(r => r.shop.limitedGood),
       a = c(r => r.shop.limitedEnd),
-      [i, o] = u.useState(null);
-    return u.useEffect(() => {
+      [i, o] = m.useState(null);
+    return m.useEffect(() => {
       let r = null;
       if (a) {
         const l = () => {
           const d = Date.now(),
-            m = Math.max(0, Math.ceil((a - d) / 1e3));
-          o(m)
+            u = Math.max(0, Math.ceil((a - d) / 1e3));
+          o(u)
         };
         l(), r = setInterval(l, 1e3)
       }
@@ -9177,7 +9177,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
   }) => {
     const n = _(),
       s = c(Gn);
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       const a = setTimeout(() => {
         n(Fp(t.id))
       }, 1e3);
@@ -9256,7 +9256,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
     show: n,
     onPointerUp: s = () => {}
   }) => {
-    const [a, i] = u.useState(!1), [o, r] = As(() => ({
+    const [a, i] = m.useState(!1), [o, r] = As(() => ({
       from: {
         opacity: 0
       },
@@ -9265,7 +9265,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
         easing: ps.easeOutCubic
       }
     }));
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       n ? (i(!0), r.start({
         opacity: 1
       })) : n || r.start({
@@ -9287,9 +9287,9 @@ const d_ = u.memo(() => (u.useEffect(() => {
   nv = () => {
     const t = _(),
       n = c(o => o.main.referrerSquadId),
-      [s, a] = u.useState(null),
+      [s, a] = m.useState(null),
       i = c(o => o.user.user);
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       if (n) try {
         (async () => {
           const r = await X.getSquadInfo({
@@ -9425,7 +9425,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
   }) => {
     const n = _(),
       s = c(o => o.template.opacity),
-      [a, i] = u.useState(!1);
+      [a, i] = m.useState(!1);
     return e.jsxs("div", {
       style: {
         display: "flex",
@@ -9493,7 +9493,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
         renderThumb: ({
           props: o,
           isDragged: r
-        }) => u.createElement("div", {
+        }) => m.createElement("div", {
           ...o,
           key: o.key,
           style: {
@@ -9602,7 +9602,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
     const s = _(),
       a = c(be),
       i = a.friends || 64,
-      [o] = u.useState([16, 32, 64, 128]);
+      [o] = m.useState([16, 32, 64, 128]);
     return e.jsxs("div", {
       className: $.template_size,
       children: [e.jsx("div", {
@@ -10166,7 +10166,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
     const t = _(),
       n = c(a => a.history.list),
       s = c(a => a.history.status);
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       t(Ma.get({
         offset: 0,
         limit: 50
@@ -10515,13 +10515,13 @@ const d_ = u.memo(() => (u.useEffect(() => {
     className: n = "",
     text: s = "Copy referral link"
   }) => {
-    const [a, i] = u.useState(null), o = u.useRef(null);
+    const [a, i] = m.useState(null), o = m.useRef(null);
     return e.jsxs("div", {
       className: `${Fj.link} ${n}`,
       onPointerUp: async r => {
-        var d, m;
+        var d, u;
         const l = await Gt(t);
-        r.stopPropagation(), l ? (i("Copied!"), (m = (d = window.Telegram.WebApp) == null ? void 0 : d.HapticFeedback) == null || m.notificationOccurred("success")) : i("Can't copy :-("), clearTimeout(o.current), o.current = setTimeout(() => {
+        r.stopPropagation(), l ? (i("Copied!"), (u = (d = window.Telegram.WebApp) == null ? void 0 : d.HapticFeedback) == null || u.notificationOccurred("success")) : i("Can't copy :-("), clearTimeout(o.current), o.current = setTimeout(() => {
           i(null)
         }, 3e3)
       },
@@ -10771,7 +10771,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
       return a + `${i}px ${o}px #fff, `
     }, "").replace(/,(\s+)?$/, "")
   },
-  tb = u.memo(() => e.jsx("div", {
+  tb = m.memo(() => e.jsx("div", {
     className: Sn.layout,
     children: e.jsx("div", {
       className: Sn.container,
@@ -10789,10 +10789,10 @@ const d_ = u.memo(() => (u.useEffect(() => {
   }), () => !1),
   nb = () => {
     const t = Z(),
-      [n, s] = u.useState(0),
-      [a, i] = u.useState(0),
-      [o, r] = u.useState(0);
-    return u.useEffect(() => {
+      [n, s] = m.useState(0),
+      [a, i] = m.useState(0),
+      [o, r] = m.useState(0);
+    return m.useEffect(() => {
       try {
         X.getStats().then(l => {
           const d = l.data;
@@ -10897,22 +10897,22 @@ const d_ = u.memo(() => (u.useEffect(() => {
   vb = () => {
     const t = _(),
       n = Z(),
-      s = c(m => m.mining.maxCharges),
-      a = c(m => m.mining.charges),
-      i = c(m => m.mining.reChargeSpeed),
+      s = c(u => u.mining.maxCharges),
+      a = c(u => u.mining.charges),
+      i = c(u => u.mining.reChargeSpeed),
       o = xb(i),
-      r = c(m => m.mining.reChargeTs),
-      [l, d] = u.useState("");
-    return u.useEffect(() => {
+      r = c(u => u.mining.reChargeTs),
+      [l, d] = m.useState("");
+    return m.useEffect(() => {
       if (a !== 0) return () => {};
-      const m = setInterval(() => {
+      const u = setInterval(() => {
         const g = Date.now() - r,
           I = i - g,
           b = Math.round(I / 1e3);
         d(yb(b))
       }, 500);
       return () => {
-        clearInterval(m)
+        clearInterval(u)
       }
     }, [r, i, a]), e.jsxs(le, {
       children: [e.jsx("div", {
@@ -11129,10 +11129,10 @@ const d_ = u.memo(() => (u.useEffect(() => {
       o = c(f => f.daily.getFirstDailyFetchStatus),
       r = i === p.fulfilled,
       l = Ns(),
-      [d, m] = An(),
-      [h, g] = u.useState(!1),
+      [d, u] = An(),
+      [h, g] = m.useState(!1),
       I = c(nt);
-    u.useEffect(() => {
+    m.useEffect(() => {
       if (!a || !r) return;
       const f = localStorage.getItem(s);
       if (f) {
@@ -11267,10 +11267,10 @@ const d_ = u.memo(() => (u.useEffect(() => {
     const t = _(),
       n = c(co.selectAll),
       s = c(o => o.daily.selected),
-      [a, i] = u.useState(null);
-    return u.useEffect(() => {
+      [a, i] = m.useState(null);
+    return m.useEffect(() => {
       t(eg.getList())
-    }, []), u.useEffect(() => {
+    }, []), m.useEffect(() => {
       let o = 0;
       for (let r = 0; r < n.length; r++) {
         const l = n[r];
@@ -11282,8 +11282,8 @@ const d_ = u.memo(() => (u.useEffect(() => {
       if (o && e1(new Date, new Date(o))) {
         const r = new Date(o),
           d = new Date(Date.UTC(r.getUTCFullYear(), r.getUTCMonth(), r.getUTCDate() + 1, 0, 0, 0, 0)) - new Date,
-          m = Math.floor(d / 1e3);
-        i(m)
+          u = Math.floor(d / 1e3);
+        i(u)
       }
     }, [n]), e.jsxs(le, {
       children: [e.jsx("div", {
@@ -11309,11 +11309,11 @@ const d_ = u.memo(() => (u.useEffect(() => {
             children: n.map((o, r) => {
               const l = (r + 1) % 4 === 0,
                 d = o.prices[0],
-                m = [R.reward_item],
+                u = [R.reward_item],
                 h = [R.reward_item_amount],
                 g = [R.reward_item_title];
-              return o.id === s && (m.push(R.reward_item_active), h.push(R.reward_item_amount_active)), l && g.push(R.reward_item_title_premium), l && !o.active && h.push(R.reward_item_amount_premium), e.jsxs("div", {
-                className: m.join(" "),
+              return o.id === s && (u.push(R.reward_item_active), h.push(R.reward_item_amount_active)), l && g.push(R.reward_item_title_premium), l && !o.active && h.push(R.reward_item_amount_premium), e.jsxs("div", {
+                className: u.join(" "),
                 onPointerUp: () => {
                   t(z({
                     id: performance.now(),
@@ -11536,15 +11536,15 @@ const d_ = u.memo(() => (u.useEffect(() => {
   },
   B1 = () => {
     const t = _(),
-      n = u.useRef(null),
-      s = u.useRef(0),
-      a = c(m => m.template.listStatus),
-      i = c(m => m.template.listOffset),
-      o = c(m => m.template.listLimit),
-      r = c(m => m.template.list),
-      [l, d] = u.useState(!1);
-    return u.useEffect(() => {
-      let m = null;
+      n = m.useRef(null),
+      s = m.useRef(0),
+      a = c(u => u.template.listStatus),
+      i = c(u => u.template.listOffset),
+      o = c(u => u.template.listLimit),
+      r = c(u => u.template.list),
+      [l, d] = m.useState(!1);
+    return m.useEffect(() => {
+      let u = null;
       if (n.current && a === p.fulfilled && !l) {
         const h = {
             rootMargin: "0px",
@@ -11558,12 +11558,12 @@ const d_ = u.memo(() => (u.useEffect(() => {
               })), b.unobserve(n.current))
             })
           };
-        m = new IntersectionObserver(g, h), m.observe(n.current)
+        u = new IntersectionObserver(g, h), u.observe(n.current)
       }
       return () => {
-        m && n.current && m.unobserve(n.current)
+        u && n.current && u.unobserve(n.current)
       }
-    }, [a, i, o, l]), u.useEffect(() => {
+    }, [a, i, o, l]), m.useEffect(() => {
       s.current === r.length && r.length !== 0 && d(!0), s.current = r.length
     }, [r]), l ? null : e.jsx("div", {
       className: ws.button_container,
@@ -11587,7 +11587,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
       s = c(o => o.template.listLimit),
       a = c(o => o.template.list),
       i = c(o => o.template.referredTemplate);
-    return u.useEffect(() => (t(Je.getList({
+    return m.useEffect(() => (t(Je.getList({
       offset: n,
       limit: s
     })), () => {
@@ -11723,7 +11723,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
   m0 = () => {
     const t = _(),
       n = c(d => d.template.templateInfoPopupId),
-      [s, a] = u.useState(!1),
+      [s, a] = m.useState(!1),
       i = c(d => d.user.user),
       o = c(d => d.template.referredTemplate),
       r = n === i.id,
@@ -11747,12 +11747,12 @@ const d_ = u.memo(() => (u.useEffect(() => {
                 id: performance.now(),
                 text: "Success!"
               }));
-              const m = await t(Je.getTemplateById({
+              const u = await t(Je.getTemplateById({
                   id: n
                 })),
                 h = {
-                  ...m.payload,
-                  url: `${m.payload.url}?time=${Date.now()}`,
+                  ...u.payload,
+                  url: `${u.payload.url}?time=${Date.now()}`,
                   type: ge.referred
                 };
               t(Jh(h)), v.mainImage.worldTemplate.deleteTemplate(o.id), v.mainImage.worldTemplate.add(h), t(wn())
@@ -11771,10 +11771,10 @@ const d_ = u.memo(() => (u.useEffect(() => {
   },
   A0 = () => {
     const t = _(),
-      [n, s] = u.useState(null),
+      [n, s] = m.useState(null),
       a = c(o => o.template.showTemplateInfoPopup),
       i = c(o => o.template.templateInfoPopupId);
-    return u.useEffect(() => (i && (async () => {
+    return m.useEffect(() => (i && (async () => {
       try {
         const r = await t(Je.getTemplateById({
           id: i
@@ -11972,11 +11972,11 @@ const d_ = u.memo(() => (u.useEffect(() => {
     return null
   },
   ht = (t = !0) => {
-    const [n, s] = u.useState({
+    const [n, s] = m.useState({
       ready: !1,
       data: null
     }), a = k0(), i = c(be);
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       n && s({
         ready: !0,
         data: i
@@ -12307,7 +12307,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
   lN = ({
     isPopupContent: t = !0
   }) => {
-    const [n, s] = u.useState("info");
+    const [n, s] = m.useState("info");
     return e.jsxs("div", {
       style: {
         width: "100%"
@@ -12367,7 +12367,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
   mN = () => {
     const t = _(),
       n = c(be);
-    return u.useEffect(() => (n && n.id && t(gg.getListByUserId({
+    return m.useEffect(() => (n && n.id && t(gg.getListByUserId({
       userId: n.id
     })), () => {
       t(Ag())
@@ -12674,7 +12674,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
     data: t,
     ready: n
   }) => {
-    const [s, a] = u.useState("info");
+    const [s, a] = m.useState("info");
     return e.jsxs("div", {
       style: {
         width: "100%"
@@ -12694,7 +12694,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
       n = c(o => o.user.user),
       a = c(o => o.squad.getInfoFetchStatus) === p.fulfilled,
       i = c(o => o.squad.info);
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       n && n.squad && n.squad.id && t(Ms.getInfo({
         id: n.squad.id
       }))
@@ -12789,8 +12789,8 @@ const d_ = u.memo(() => (u.useEffect(() => {
         const g = qt.deltaE(qt(cn(a, i, o)), qt(h));
         g < d && (d = g, l = h)
       }
-      const m = wt(l);
-      t.data[s] = m.r, t.data[s + 1] = m.g, t.data[s + 2] = m.b, t.data[s + 3] = 255
+      const u = wt(l);
+      t.data[s] = u.r, t.data[s + 1] = u.g, t.data[s + 2] = u.b, t.data[s + 3] = 255
     }
   },
   WN = ({
@@ -12803,7 +12803,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
       o = Z(),
       r = c(h => h.template.myTemplate),
       l = c(h => h.user.user),
-      [d, m] = u.useState(!1);
+      [d, u] = m.useState(!1);
     return e.jsx("div", {
       className: $.file_button_container,
       children: e.jsx("button", {
@@ -12811,7 +12811,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
         className: $.file_button,
         onPointerUp: async () => {
           try {
-            m(!0);
+            u(!0);
             const h = new Blob([n.data], {
               type: "application/octet-stream"
             });
@@ -12839,13 +12839,13 @@ const d_ = u.memo(() => (u.useEffect(() => {
               text: "Error, try again",
               icon: ""
             }));
-            m(!1)
+            u(!1)
           } catch {
             i(z({
               id: performance.now(),
               text: "Use another coordinates",
               icon: ""
-            })), m(!1)
+            })), u(!1)
           }
         },
         children: "Create template"
@@ -12857,7 +12857,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
     setTemplateSize: n,
     coords: s,
     setCoords: a
-  }) => (u.useState([16, 32, 64, 128]), e.jsxs("div", {
+  }) => (m.useState([16, 32, 64, 128]), e.jsxs("div", {
     className: $.template_coords,
     children: [e.jsx("div", {
       className: $.template_coordinates_title,
@@ -12920,11 +12920,11 @@ const d_ = u.memo(() => (u.useEffect(() => {
   }),
   $N = () => {
     _(), c(be);
-    const [t, n] = u.useState(null), [s, a] = u.useState(null), [i, o] = u.useState(null), [r, l] = u.useState(16), [d, m] = u.useState({
+    const [t, n] = m.useState(null), [s, a] = m.useState(null), [i, o] = m.useState(null), [r, l] = m.useState(16), [d, u] = m.useState({
       x: "",
       y: ""
-    }), [h, g] = u.useState(!1);
-    return u.useEffect(() => {}, []), u.useEffect(() => {
+    }), [h, g] = m.useState(!1);
+    return m.useEffect(() => {}, []), m.useEffect(() => {
       if (t !== null) {
         g(!0);
         const I = async () => {
@@ -12956,7 +12956,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
         setTemplateSize: l
       }), i !== null && e.jsx(KN, {
         coords: d,
-        setCoords: m,
+        setCoords: u,
         templateSize: r,
         setTemplateSize: l
       }), t === null && e.jsx(JN, {
@@ -13014,8 +13014,8 @@ const d_ = u.memo(() => (u.useEffect(() => {
         const g = qt.deltaE(qt(cn(a, i, o)), qt(h));
         g < d && (d = g, l = h)
       }
-      const m = wt(l);
-      t.data[s] = m.r, t.data[s + 1] = m.g, t.data[s + 2] = m.b, t.data[s + 3] = 255
+      const u = wt(l);
+      t.data[s] = u.r, t.data[s + 1] = u.g, t.data[s + 2] = u.b, t.data[s + 3] = 255
     }
   },
   hI = "_instruction_container_17lvx_1",
@@ -13142,7 +13142,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
     templateSize: t,
     setTemplateSize: n
   }) => {
-    const [s] = u.useState([32]);
+    const [s] = m.useState([32]);
     return e.jsxs("div", {
       className: ce.template_size,
       children: [e.jsx("div", {
@@ -13169,11 +13169,11 @@ const d_ = u.memo(() => (u.useEffect(() => {
   }) => null,
   VI = () => {
     _(), c(be);
-    const [t, n] = u.useState(null), [s, a] = u.useState(null), [i, o] = u.useState(null), [r, l] = u.useState(32), [d, m] = u.useState({
+    const [t, n] = m.useState(null), [s, a] = m.useState(null), [i, o] = m.useState(null), [r, l] = m.useState(32), [d, u] = m.useState({
       x: 0,
       y: 0
-    }), [h, g] = u.useState(!1);
-    return u.useEffect(() => {
+    }), [h, g] = m.useState(!1);
+    return m.useEffect(() => {
       if (t !== null) {
         g(!0);
         const I = async () => {
@@ -13210,7 +13210,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
         setTemplateSize: l
       }), i !== null && e.jsx(GI, {
         coords: d,
-        setCoords: m,
+        setCoords: u,
         templateSize: r,
         setTemplateSize: l
       })]
@@ -13323,7 +13323,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
   hC = () => {
     const t = _(),
       n = c(IA.selectAll);
-    return u.useEffect(() => (t(Us.getRandomList()), () => {
+    return m.useEffect(() => (t(Us.getRandomList()), () => {
       t(rg())
     }), []), e.jsxs("div", {
       className: js.layout,
@@ -13790,7 +13790,7 @@ const d_ = u.memo(() => (u.useEffect(() => {
       ...n
     }
   }),
-  SP = u.memo(() => {
+  SP = m.memo(() => {
     const t = Array.from(Array(30));
     return e.jsx("div", {
       className: bs.layout,
@@ -13923,33 +13923,33 @@ const d_ = u.memo(() => (u.useEffect(() => {
   },
   aS = () => {
     const t = _(),
-      [n, s] = u.useState(""),
-      [a, i] = u.useState(!1),
-      [o, r] = u.useState(!1),
-      [l, d] = u.useState({
+      [n, s] = m.useState(""),
+      [a, i] = m.useState(!1),
+      [o, r] = m.useState(!1),
+      [l, d] = m.useState({
         count: 0,
         limit: 1e4
       }),
-      [m, h] = u.useState({
+      [u, h] = m.useState({
         count: 0,
         limit: 1e4
       }),
-      [g, I] = u.useState({
+      [g, I] = m.useState({
         count: 0,
         limit: 1
       }),
-      [b, f] = u.useState({
+      [b, f] = m.useState({
         count: 0,
         limit: 5e3
       });
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       let j = null;
       return o && (j = setTimeout(() => {
         r(!1)
       }, 5e3)), () => {
         clearTimeout(j)
       }
-    }, [o]), u.useEffect(() => {
+    }, [o]), m.useEffect(() => {
       (async () => {
         const G = await X.getSecretStats();
         G.status === 200 && G.data && G.data.forEach(q => {
@@ -14040,9 +14040,9 @@ const d_ = u.memo(() => (u.useEffect(() => {
               }), e.jsxs("div", {
                 className: F(S.gray),
                 children: [xt({
-                  num: m.count
+                  num: u.count
                 }), "/", xt({
-                  num: m.limit
+                  num: u.limit
                 })]
               })]
             }), e.jsxs("div", {
@@ -14449,7 +14449,7 @@ let yi = "/";
 const OS = () => {
     let t = Is(),
       n = Z();
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       const s = () => {
         iS.includes(t.pathname) ? n.push("/") : n.goBack()
       };
@@ -14463,26 +14463,26 @@ const OS = () => {
     layout: QS
   },
   qS = () => {
-    const t = u.useRef(),
+    const t = m.useRef(),
       n = c(a => a.progress.command),
       s = c(a => a.progress.counter);
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       let a = null,
         i = 0,
         o = null,
         r = 2e3,
         l = 80,
         d = null,
-        m = null;
+        u = null;
       const h = g => {
         a === null && (a = g);
         const b = (g - a) / r;
         o !== g && (i = Math.min(b * l, l), t.current && (t.current.style.width = `${i}%`)), o = g, i < l && (d = requestAnimationFrame(h))
       };
-      return n === Se.start && (d = requestAnimationFrame(h), t.current && (t.current.style.display = "block")), n === Se.finish && (t.current && (t.current.style.width = "100%"), m = setTimeout(() => {
+      return n === Se.start && (d = requestAnimationFrame(h), t.current && (t.current.style.display = "block")), n === Se.finish && (t.current && (t.current.style.width = "100%"), u = setTimeout(() => {
         t.current && (t.current.style.display = "none", t.current.style.width = "0")
       }, 300)), () => {
-        d !== null && cancelAnimationFrame(d), m !== null && clearTimeout(m)
+        d !== null && cancelAnimationFrame(d), u !== null && clearTimeout(u)
       }
     }, [n, s]), Xe.createPortal(e.jsx("div", {
       ref: t,
@@ -14834,8 +14834,8 @@ const OS = () => {
       a = c(K => K.shop.activeProductCardId),
       i = c(K => K.shop.selectedCurrency),
       o = c(K => K.shop.amount),
-      [r, l] = u.useState(p.idle),
-      [d, m] = u.useState(!1),
+      [r, l] = m.useState(p.idle),
+      [d, u] = m.useState(!1),
       [h, g] = An(),
       b = (ze = c(K => K.shop.products[a]).prices.filter(K => K.currency_id === i)[0]) == null ? void 0 : ze.price,
       f = Ns();
@@ -14850,7 +14850,7 @@ const OS = () => {
             payload: _e.toBoc().toString("base64")
           }]
         };
-      await h.sendTransaction(Ha), n(!0), m(!0), l(p.fulfilled)
+      await h.sendTransaction(Ha), n(!0), u(!0), l(p.fulfilled)
     }, q = async K => {
       const _e = new Ls.HttpProvider("https://toncenter.com/api/v2/jsonRPC"),
         hr = await new Ls.token.jetton.JettonMinter(_e, {
@@ -14868,7 +14868,7 @@ const OS = () => {
             payload: xr.toBoc().toString("base64")
           }]
         };
-      await h.sendTransaction(yr), n(!0), m(!0), l(p.fulfilled)
+      await h.sendTransaction(yr), n(!0), u(!0), l(p.fulfilled)
     };
     return b ? e.jsx("button", {
       className: Y.button,
@@ -14939,8 +14939,8 @@ const OS = () => {
       a = c(g => g.shop.activeProductCardId),
       i = c(g => g.shop.products[a]),
       o = c(g => g.shop.amount),
-      [r, l] = u.useState(p.idle),
-      [d, m] = u.useState(!1);
+      [r, l] = m.useState(p.idle),
+      [d, u] = m.useState(!1);
     return c(g => g.shop.selectedCurrency) !== 1 ? null : e.jsx("div", {
       className: Y.button_container,
       onPointerUp: async g => {
@@ -14981,7 +14981,7 @@ const OS = () => {
                 product: a,
                 amount: I
               }));
-              m(!0), (ze = (q = window.Telegram.WebApp) == null ? void 0 : q.HapticFeedback) == null || ze.notificationOccurred("error"), n(!0)
+              u(!0), (ze = (q = window.Telegram.WebApp) == null ? void 0 : q.HapticFeedback) == null || ze.notificationOccurred("error"), n(!0)
             } else t("Error, try again.")
           })
         } catch {
@@ -14999,7 +14999,7 @@ const OS = () => {
   },
   K2 = () => (c(nt) === ye, null),
   Z2 = () => {
-    const [t, n] = u.useState(null), [s, a] = u.useState(!1);
+    const [t, n] = m.useState(null), [s, a] = m.useState(!1);
     return e.jsxs("div", {
       className: Y.crypto_button_container,
       children: [e.jsx(H2, {}), e.jsx(K2, {}), e.jsx(ao, {
@@ -15059,13 +15059,13 @@ const nT = () => {
       n = c(f => f.shop.activeProductCardId),
       s = c(f => f.shop.amount),
       i = c(f => f.shop.products[n]).isOnePiece,
-      [o, r] = u.useState([s]),
-      [l, d] = u.useState(Bn(s).max),
-      [m, h] = u.useState(Bn(s).step),
+      [o, r] = m.useState([s]),
+      [l, d] = m.useState(Bn(s).max),
+      [u, h] = m.useState(Bn(s).step),
       g = l === 5e3 ? "5000" : `${l}+`,
       I = f => {
         const j = f[0];
-        t(Ps(wi(j, m))), r([wi(j, m)])
+        t(Ps(wi(j, u))), r([wi(j, u)])
       },
       b = f => {
         const j = f[0];
@@ -15075,8 +15075,8 @@ const nT = () => {
       className: vi.container,
       children: [e.jsx(vt.Range, {
         values: o,
-        step: m,
-        min: m,
+        step: u,
+        min: u,
         max: l,
         rtl: !1,
         onChange: I,
@@ -15102,7 +15102,7 @@ const nT = () => {
               background: vt.getTrackBackground({
                 values: o,
                 colors: ["var(--btn-primary-bg-color)", "var(--btn-header-bg-color)"],
-                min: m,
+                min: u,
                 max: l,
                 rtl: !1
               }),
@@ -15114,7 +15114,7 @@ const nT = () => {
         renderThumb: ({
           props: f,
           isDragged: j
-        }) => u.createElement("div", {
+        }) => m.createElement("div", {
           ...f,
           key: f.key,
           style: {
@@ -15411,8 +15411,8 @@ function MT(t) {
   ms = l * l, Ke(y, je, "u_AnimationDuration", ur), Ke(y, je, "u_ParticleSize", CT), Ke(y, je, "u_ViewportWidth", n), Ke(y, je, "u_ViewportHeight", s), Ke(y, je, "u_TextureWidth", a), Ke(y, je, "u_TextureHeight", i), Ke(y, je, "u_TextureLeft", o), Ke(y, je, "u_TextureTop", r);
   const d = new Array(ms);
   for (let g = 0; g < ms; g++) d[g] = g;
-  const m = y.createBuffer();
-  y.bindBuffer(y.ARRAY_BUFFER, m), y.bufferData(y.ARRAY_BUFFER, new Float32Array(d), y.STATIC_DRAW);
+  const u = y.createBuffer();
+  y.bindBuffer(y.ARRAY_BUFFER, u), y.bufferData(y.ARRAY_BUFFER, new Float32Array(d), y.STATIC_DRAW);
   const h = y.getAttribLocation(je, "a_ParticleIndex");
   y.enableVertexAttribArray(h), y.vertexAttribPointer(h, 1, y.FLOAT, !1, 0, 0)
 }
@@ -15661,7 +15661,7 @@ const FT = () => {
         }
       };
     let a = t.icon ? t.icon : "";
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       const i = setTimeout(() => {
         n(Wa(t.id))
       }, 3e3);
@@ -15942,7 +15942,7 @@ const FT = () => {
   kE = () => localStorage.getItem("canvasFps") ? [Number(localStorage.getItem("canvasFps"))] : [60],
   RE = () => {
     const [t, n] = ae.useState(kE());
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       localStorage.setItem("canvasFps", String(t[0])), v.ticker.setFps(t[0])
     }, [t]), e.jsx("div", {
       className: Ci.layout,
@@ -15971,7 +15971,7 @@ const FT = () => {
           }),
           renderThumb: ({
             props: s
-          }) => u.createElement("div", {
+          }) => m.createElement("div", {
             ...s,
             key: s.key,
             style: {
@@ -16003,7 +16003,7 @@ const FT = () => {
       d = h => {
         n(jt(!1)), t.push(h)
       },
-      m = () => {
+      u = () => {
         const h = `${window.location.origin}/stars?initData=${btoa(window.Telegram.WebApp.initData)}`;
         Ht(h)
       };
@@ -16147,7 +16147,7 @@ const FT = () => {
                     })]
                   })
                 }), e.jsx(Ii, {
-                  onPointerUp: m,
+                  onPointerUp: u,
                   variant: "dark",
                   style: {
                     width: "90%"
@@ -16202,12 +16202,12 @@ const FT = () => {
       opacity: !1
     }
   });
-u.memo(({
+m.memo(({
   runParticle: t,
   setRunParticle: n
 }) => {
-  const [s, a] = u.useState(LE()), [i, o] = u.useState(!1);
-  return u.useEffect(() => {
+  const [s, a] = m.useState(LE()), [i, o] = m.useState(!1);
+  return m.useEffect(() => {
     t && setTimeout(() => {
       o(!0), setTimeout(() => {
         n(!1), o(!1)
@@ -16282,9 +16282,9 @@ const HE = "_container_gb8eq_1",
   mB = () => {
     const t = Z(),
       n = c(be),
-      [s, a] = u.useState(!1),
+      [s, a] = m.useState(!1),
       i = "showCreateTournamentTemplatePopup";
-    return u.useEffect(() => (Vi() && (localStorage.getItem(i) || a(!0)), () => {}), [n]), e.jsx(Qe, {
+    return m.useEffect(() => (Vi() && (localStorage.getItem(i) || a(!0)), () => {}), [n]), e.jsx(Qe, {
       show: s,
       children: e.jsx("div", {
         className: fe.container,
@@ -16400,7 +16400,7 @@ const HE = "_container_gb8eq_1",
     star: EB,
     move: BB
   },
-  DB = u.memo(() => {
+  DB = m.memo(() => {
     const t = Array.from(Array(30));
     return e.jsx("div", {
       className: da.layout,
@@ -16423,32 +16423,32 @@ const HE = "_container_gb8eq_1",
   }, () => !1),
   kB = () => {
     const t = _(),
-      [n, s] = u.useState(null),
+      [n, s] = m.useState(null),
       a = c(be);
-    c(m => m.reward.id);
-    const i = c(m => m.reward.rewardUserId),
-      o = c(m => m.reward.showPopup),
-      [r, l] = u.useState(!1),
+    c(u => u.reward.id);
+    const i = c(u => u.reward.rewardUserId),
+      o = c(u => u.reward.showPopup),
+      [r, l] = m.useState(!1),
       d = async () => {
         if (r && (t(mg()), t(hg()), n && n.good_id)) {
-          const m = await X.claimRewardById({
+          const u = await X.claimRewardById({
             rewardId: i,
             userId: a.id
           });
-          (m.status === 200 || m.status === 204) && t(zt({
+          (u.status === 200 || u.status === 204) && t(zt({
             product: n.good_id,
             amount: 1
           }))
         }
       };
-    return u.useEffect(() => {
-      const m = setTimeout(() => {
+    return m.useEffect(() => {
+      const u = setTimeout(() => {
         l(!0)
       }, 1e3);
       return () => {
-        clearTimeout(m)
+        clearTimeout(u)
       }
-    }, []), u.useEffect(() => (i && (async () => {
+    }, []), m.useEffect(() => (i && (async () => {
       const h = await X.getRewardById({
         rewardId: i
       });
@@ -16461,8 +16461,8 @@ const HE = "_container_gb8eq_1",
       onPointerUp: d,
       children: e.jsx("div", {
         className: xe.layout,
-        onPointerUp: m => {
-          m.stopPropagation()
+        onPointerUp: u => {
+          u.stopPropagation()
         },
         children: e.jsxs("div", {
           className: xe.container,
@@ -16507,8 +16507,8 @@ const HE = "_container_gb8eq_1",
             className: xe.footer,
             children: e.jsx("button", {
               className: xe.button,
-              onPointerUp: m => {
-                m.stopPropagation(), d()
+              onPointerUp: u => {
+                u.stopPropagation(), d()
               },
               children: "Claim"
             })
@@ -16538,11 +16538,11 @@ const RB = "_layout_1tvc9_1",
   },
   LB = () => {
     const t = c(i => i.main.startParams),
-      [n, s] = u.useState(null),
+      [n, s] = m.useState(null),
       a = () => {
         s(null)
       };
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       if (t.showTemplate && t.refId) try {
         (async () => {
           const o = await Re.getTournamentTemplateById({
@@ -16610,7 +16610,7 @@ const RB = "_layout_1tvc9_1",
     const t = _(),
       n = c(a => a.main.startAppTs),
       s = c(be);
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       if (s && (s.id === 555832576 || s.id === 2096307477)) return;
       const a = setInterval(() => {
         Date.now() - n > 30 * 60 * 1e3 && (t(Dp()), clearInterval(a))
@@ -16655,7 +16655,7 @@ const RB = "_layout_1tvc9_1",
           return console.log("cant parse language code", l), "en"
         }
       };
-    u.useEffect(() => {
+    m.useEffect(() => {
       const {
         isTMA: r,
         authData: l
@@ -16666,7 +16666,7 @@ const RB = "_layout_1tvc9_1",
       }
     }, [t])
   },
-  JB = () => (u.useEffect(() => {
+  JB = () => (m.useEffect(() => {
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1, document.body.style.overflowY = "hidden", document.body.style.marginTop = "100px", document.body.style.height = window.innerHeight + 100 + "px", document.body.style.paddingBottom = "100px", setTimeout(() => {
         window.scrollTo(0, 100)
       }, 1), document.body.addEventListener("scroll", () => {
@@ -16705,8 +16705,8 @@ const RB = "_layout_1tvc9_1",
           if (o || r) a.preventDefault();
           else if (i) {
             const d = l.scrollTop,
-              m = a.changedTouches[0].clientY;
-            d <= 0 && t < m && a.cancelable && a.preventDefault()
+              u = a.changedTouches[0].clientY;
+            d <= 0 && t < u && a.cancelable && a.preventDefault()
           } else a.preventDefault()
         };
       document.documentElement.addEventListener("touchstart", n, {
@@ -16784,7 +16784,7 @@ const RB = "_layout_1tvc9_1",
   }),
   cD = () => {
     const t = _();
-    u.useEffect(() => {
+    m.useEffect(() => {
       const n = (s, a) => {
         Vt.get(s, (i, o) => {
           if (i === null && o !== "") try {
@@ -16863,17 +16863,17 @@ const RB = "_layout_1tvc9_1",
         }
       }, d = () => {
         n.squadId && t(ga(n.squadId))
-      }, m = async () => {
+      }, u = async () => {
         const [h] = await Promise.all([s()]);
         h && (await Promise.all([a(), i(h.templateId), o(h.id), l(), r(h)]), d())
       };
-    u.useEffect(() => {
-      m()
+    m.useEffect(() => {
+      u()
     }, [t])
   },
   dD = () => {
     const t = Z();
-    u.useEffect(() => {
+    m.useEffect(() => {
       Vi() ? localStorage.getItem("skipIntro") || (t.push("/welcome"), localStorage.setItem("skipIntro", "true")) : Vt.get("skipIntro", (n, s) => {
         n === null && s !== "" || (n !== null && console.error("Ошибка при получении skipIntro:", n), t.push("/welcome"))
       })
@@ -16923,7 +16923,7 @@ const RB = "_layout_1tvc9_1",
   mD = () => {
     const t = _(),
       n = c(s => s.auth.authData);
-    u.useEffect(() => {
+    m.useEffect(() => {
       var o, r;
       let s = "unknown",
         a = "unknown",
@@ -16957,7 +16957,7 @@ const RB = "_layout_1tvc9_1",
         i18n: s
       } = Be(),
       a = c(i => i.user.languageCode);
-    u.useEffect(() => {
+    m.useEffect(() => {
       s.changeLanguage(a)
     }, [t, a])
   },
@@ -16965,7 +16965,7 @@ const RB = "_layout_1tvc9_1",
     const t = _(),
       n = c(a => a.shop.selectedCurrency),
       s = c(nt);
-    u.useEffect(() => {
+    m.useEffect(() => {
       s === ye && n === 1 && t(rn(2)), s !== ye && t(rn(1))
     }, [s])
   },
@@ -16973,14 +16973,14 @@ const RB = "_layout_1tvc9_1",
     const t = _(),
       n = window.Telegram.WebApp,
       s = c(Ct);
-    return u.useEffect(() => {
+    return m.useEffect(() => {
       function a() {
         console.log("is fullscreen: ", this.isFullscreen), t(cl(this.isFullscreen))
       }
       return n.onEvent("fullscreenChanged", a), () => {
         n.offEvent("fullscreenChanged", a)
       }
-    }, [t]), u.useEffect(() => {
+    }, [t]), m.useEffect(() => {
       if (v) {
         const a = window.innerWidth,
           i = window.innerHeight;
@@ -16991,14 +16991,21 @@ const RB = "_layout_1tvc9_1",
   gD = ({
     children: t
   }) => {
-    hD(), GB(), VB(), mD(), AD(), pD();
-    const n = c(l => l.main.timeLimit),
-      s = c(l => l.user.getUserFetchStatus),
-      a = s === p.rejected && !Ye.app.disableBetaError,
-      i = s === p.pending || s === p.idle,
-      o = n;
-    return window.Telegram && !window.Telegram.WebApp.isVersionAtLeast(cc) && JB(), cD(), lD(), dD(), e.jsx(iD, {});
-    return i ? e.jsx(rD, {}) : e.jsx(e.Fragment, {
+    const [n, s] = m.useState(!0);
+    m.useEffect(() => {
+      function u(h) {
+        h.ctrlKey && h.altKey && h.keyCode === 67 && (async () => s(!1))()
+      }
+      return window.addEventListener("keydown", u), () => {
+        window.removeEventListener("keydown", u)
+      }
+    }, []), hD(), GB(), VB(), mD(), AD(), pD();
+    const a = c(u => u.main.timeLimit),
+      i = c(u => u.user.getUserFetchStatus),
+      o = i === p.rejected && !Ye.app.disableBetaError,
+      r = i === p.pending || i === p.idle,
+      l = a;
+    return window.Telegram && !window.Telegram.WebApp.isVersionAtLeast(cc) && JB(), cD(), lD(), dD(), o || l || n ? e.jsx(iD, {}) : r ? e.jsx(rD, {}) : e.jsx(e.Fragment, {
       children: t
     })
   };
