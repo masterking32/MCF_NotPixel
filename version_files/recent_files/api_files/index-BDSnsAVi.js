@@ -580,7 +580,7 @@ const bc = {
       13: {
         id: 13,
         name: "Pixanos' Snap",
-        description: "Discolor ½ of the world. The price “Pixanos' Snap” X2 for everyone. No PX.",
+        description: "Discolor ½ of the world. Your name will appear in History. No reward, just fun.",
         image_url: Ps,
         price: 4e3,
         prices: [{
@@ -896,7 +896,7 @@ const bc = {
     },
     getProductsStatus: p.idle,
     useProductStatus: p.idle,
-    order: [9, 10, 11, 1, 2, 6, 13, 4],
+    order: [9, 10, 11, 1, 2, 6, 4],
     selectedCurrency: 1,
     crypto: [{
       currency_id: 1,
@@ -16867,7 +16867,7 @@ const Ak = "_layout_1tvc9_1",
       n = c(a => a.main.startAppTs),
       s = c(je);
     return u.useEffect(() => {
-      if (s && s.id === 555832576) return;
+      if (s && (s.id === 555832576 || s.id === 2096307477)) return;
       const a = setInterval(() => {
         Date.now() - n > 30 * 60 * 1e3 && (t(Lp()), clearInterval(a))
       }, 100);
