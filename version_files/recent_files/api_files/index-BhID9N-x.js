@@ -17529,8 +17529,7 @@ const yD = "_layout_15tw0_1",
       a = s === p.rejected && !_t.app.disableBetaError,
       i = s === p.pending || s === p.idle,
       o = n;
-    return window.Telegram && !window.Telegram.WebApp.isVersionAtLeast(Nc) && BD(), JD(), XD(), YD(), e.jsx(HD, {});
-    return i ? e.jsx(VD, {}) : e.jsx(e.Fragment, {
+    return window.Telegram && !window.Telegram.WebApp.isVersionAtLeast(Nc) && BD(), JD(), XD(), YD(), a || o ? e.jsx(HD, {}) : i ? e.jsx(VD, {}) : e.jsx(e.Fragment, {
       children: t
     })
   };
