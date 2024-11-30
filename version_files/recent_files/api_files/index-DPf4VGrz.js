@@ -623,31 +623,31 @@ const Oc = {
         prices: [{
           currency_id: 1,
           currency_name: "XTR",
-          price: 2e4
+          price: 4e4
         }, {
           currency_id: 2,
           currency_name: "TON",
-          price: 35
+          price: 70
         }, {
           currency_id: 3,
           currency_name: "NOT",
-          price: 26e3
+          price: 52e3
         }, {
           currency_id: 5,
           currency_name: "DOGS",
-          price: 31e4
+          price: 62e4
         }, {
           currency_id: 6,
           currency_name: "ANON",
-          price: 5e4
+          price: 1e5
         }, {
           currency_id: 7,
           currency_name: "CATI",
-          price: 450
+          price: 900
         }, {
           currency_id: 9,
           currency_name: "Major",
-          price: 200
+          price: 400
         }],
         currency: "XTR",
         isOnePiece: !0
@@ -929,7 +929,7 @@ const Oc = {
     },
     getProductsStatus: A.idle,
     useProductStatus: A.idle,
-    order: [9, 10, 11, 1, 2, 6, 4],
+    order: [9, 10, 11, 1, 2, 6, 13, 4],
     selectedCurrency: 1,
     crypto: [{
       currency_id: 1,
