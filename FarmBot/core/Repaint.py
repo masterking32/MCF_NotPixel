@@ -83,6 +83,7 @@ class Repaint:
             )
 
     async def do_repaint(self, charges=0):
+        return
         try:
             self.log.info(
                 f"<g>🎨 Repainting <c>{charges}</c> pixels for <c>{self.account_name}</c>...</g>"
