@@ -929,7 +929,7 @@ const Oc = {
     },
     getProductsStatus: A.idle,
     useProductStatus: A.idle,
-    order: [9, 10, 11, 1, 2, 6, 13, 4],
+    order: [9, 10, 11, 1, 2, 6, 4],
     selectedCurrency: 1,
     crypto: [{
       currency_id: 1,
