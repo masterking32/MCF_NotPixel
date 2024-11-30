@@ -74,7 +74,7 @@ import {
   A as Da
 } from "./framer-motion-BggZOsGS.js";
 import {
-  u as Me,
+  u as Re,
   T as Ws,
   i as ec
 } from "./react-i18next-DUbAQzaN.js";
@@ -1380,7 +1380,7 @@ const Fc = {
   Gl = "_diamond_btihg_70",
   Vl = "_logo_link_btihg_72",
   Jl = "_logo_btihg_72",
-  Be = {
+  Ee = {
     header: Rl,
     header_bottom_container: Ml,
     header_bottom: Ul,
@@ -1396,7 +1396,7 @@ const Fc = {
     logo: Jl
   },
   Xl = () => e.jsx("div", {
-    className: Be.header_placeholder
+    className: Ee.header_placeholder
   }),
   Is = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI0AAAC0CAYAAACpK6/AAAAAAXNSR0IArs4c6QAABc1JREFUeJzt3U2K3FYUhuGqpIONIYEQMslSegO9gqygt5BleAtZQVbgDWQpmYRgsMHYI3sQLISsK51X91dV7zNqytX10xzO5ytdHV0fn54v9+rvN3/2/gin9F3vD6DzsWiEXR+fnj/3/hCNXb/+8ONPP+8++c1fr9GL58T9WeLSTiPMohH2sPFv141/+yoSbSO8TuR3ayj1vYZipxFm0Qjbiqd5a70mHo/o9TqrbT+yYqok57sXF1nlpVZzdhphFo2whwv/33up/+03e52OkTQ3ciStRv/8+fOostMIs2iEPVwGaJuVTG32/bu304ONo6r7gbtgJKUeX40qO40wi0bYkdXTCCKRutpma0fV4NsbIgdCPyd+np5jpxFm0QgbffVU6nxNl6gaUCSGUs+f2GmEWTTCllsjSu2yy1F7C8FQUZWzRSFi/ruL90r9nVdrwHNPymLRCFte9xRpWTUiY4RdbbttuRS6RaHG53HnnpqyaIRtxVNKqfg4vDk8KOdzTu/bIA4OXxvV6zyXnUaYRSMsunoq9n6VX7/U+xaJg8xISukeVXYaYRaNsBZDjXodMEw5HFWRc1Lzc1gLu+/137//TD//8utv+5+sU1TZaYRZNMJabCwvFUmlDjwWj8JSkfTi5avr7PHpdzeiCl1OW4qdRphFI6zFxvLakZTzXjVWcIcj6dPHD6uP50RVDXYaYRaNsK2Zezly2mPqd7uPe51PL3/6/Y/U03Yjbx4x8+hZRFUkklLvW5WdRphFI2z0qRHdIylifk5qcaDvcFR57kk3xaIRFlo95bS7xrc7zJmCjqRWUgcug52MHElzdhphFo2wrZ17aIWSao+LFt3rfFDO6xe5BsrrnnTXLBph0XNPuxEW3C0WiYYam8+LXPeUo8ZwoV7sNMIsGmG5WyNQOz1woK/UuafD0UbjYH6gL3Uj+GBUHf4MtdlphFk0wqrs3AvGUKk755bSZbvFaNETYacRZtEIq7WxnF6DM8IEiUnOiuke2GmEWTTCasXT3GpU0QNcl3LnnladcRUzRw+c5nxfO40wi0ZYi3haFdlKEYwtpOBY18nGUKPigjFU9XoxO40wi0ZY63hCM+IGXNE02/WXGUPo9enf2U4jzKIR1m31dAlEVcogsdXyfBma4ze3uNS3yFw+O40wi0ZYz3hKOcUgo0u/u/pO5pH0/cMPq3+fyKAkupKy0wizaISNGE8j6xWRtSero+9lpxFm0Qgznnb0OpAYuZw5NU429ZxS7DTCLBphxtP5rK6kWt50w04jzKIRZjydwIHBUFWv87LTCLNohBlP59blcmM7jTCLRpjxBLSczNDyNSk7jTCLRpjxtGKEyQwjs9MIs2iE3XU8jTyZYWR2GmEWjbC7jqeFoSYzjMxOI8yiEWY87eg1mWFkdhphFo2w0eOp5epjqMkMI7PTCLNohI0YT+gWgalbAaZupJ56zdEmM4zMTiPMohHWOp6KXKfT4O603SczjMxOI8yiEXZ9fHqObJAufp+jkc+/LFZShzeQj/wdc9hphFk0wqKrp5uJngPuNoZS7DTCLBph1xPd/k+DsNMIs2iEdTtPkrOlQX3ZaYRZNMKqbI2IrMjev3tb463VgJ1GmEUjrMXOveLbKnJ4MDOfnUaYRSOs58byUpe+7tqIpNXLZm9pwkMNdhphFo2w1vE0WiSlHjeqNthphFk0wlrE0wgH7lYjaT5PLzLW1aj6n51GmEUj7PQTDnIi6cXLV9P3//TxQ2Q6BBq4dKvsNMIsGmEjztzLQSNp9fGNCeQ3OeKVstMIs2iEPdAblOdosMrYnZU3j55Sq6d7Y6cRZtEIW66eamxdqNrSN6aOo6jygF6cnUaYRSPspg7u5UTVgpG0wU4jzKIRVnIkbLNN4xE0qi5GUpidRphFIwyvniK38BtNMKpWn69v2WmEWTTCcDydJZJSjJ58dhphFo2waDwNdeBOfdlphFk0wiwaYRaNMItG2BcEweyO2PEKqwAAAABJRU5ErkJggg==",
   Yl = () => {
@@ -4427,7 +4427,7 @@ const wo = gn.getSelectors(t => t.tournament.approvedTemplatesList),
     })]
   }),
   VA = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-  Ue = t => {
+  Me = t => {
     const n = new Date().getFullYear(),
       s = t.getFullYear(),
       a = s === n ? "" : s,
@@ -4441,7 +4441,7 @@ const wo = gn.getSelectors(t => t.tournament.approvedTemplatesList),
     date: t
   }) => e.jsx("div", {
     className: ee.pixelDate,
-    children: Ue(new Date(t))
+    children: Me(new Date(t))
   }),
   XA = ({
     coords: t
@@ -4655,13 +4655,13 @@ class ip {
     this.line !== null && this.pixel !== null && (this.line.alpha = 1, this.pixel.alpha = 1)
   }
 }
-const De = {
+const Be = {
     idle: "idle",
     start: "start",
     finish: "finish"
   },
   op = {
-    command: De.idle,
+    command: Be.idle,
     counter: 0
   },
   Po = he({
@@ -5519,7 +5519,7 @@ const Yp = (t, n) => {
     setAuthData: Xh
   } = Mo.actions,
   Uo = t => t.auth.isTMA,
-  Fe = t => t.auth.isAuth,
+  Ue = t => t.auth.isAuth,
   Yh = Mo.reducer;
 let da = !1;
 const Wh = async ({
@@ -5535,7 +5535,7 @@ const Wh = async ({
   if (s === a) return !1;
   if (da) return A.pending;
   da = !0, t(tt({
-    command: De.start
+    command: Be.start
   }));
   try {
     (await t(Qs.useProduct({
@@ -5549,13 +5549,13 @@ const Wh = async ({
     console.log("error", u)
   } finally {
     da = !1, t(tt({
-      command: De.finish
+      command: Be.finish
     }))
   }
   return !0
 }, Kh = () => {
   const t = g(),
-    n = c(Fe),
+    n = c(Ue),
     s = 1,
     a = c(d => d.shop.available[s]),
     o = 10 + String(a).length * 6,
@@ -5807,7 +5807,7 @@ Gs.startListening({
   matcher: ye(qs.getPriceMask.pending, Dt.getPixelsForSale.pending, Dt.getPixelsSold.pending, Ha.get.pending),
   effect: (t, n) => {
     n.dispatch(tt({
-      command: De.start
+      command: Be.start
     }))
   }
 });
@@ -5815,7 +5815,7 @@ Gs.startListening({
   matcher: ye(qs.getPriceMask.fulfilled, Dt.getPixelsForSale.fulfilled, Dt.getPixelsSold.fulfilled, Ha.get.fulfilled),
   effect: (t, n) => {
     n.dispatch(tt({
-      command: De.finish
+      command: Be.finish
     }))
   }
 });
@@ -5823,7 +5823,7 @@ Gs.startListening({
   matcher: ye(qs.getPriceMask.rejected),
   effect: (t, n) => {
     t.error.code !== "ERR_CANCELED" && n.dispatch(tt({
-      command: De.finish
+      command: Be.finish
     }))
   }
 });
@@ -5900,7 +5900,7 @@ const og = Vo.reducer,
     getInfo: os
   };
 let dn = null;
-class Oe {
+class Fe {
   static async uploadTemplate({
     blob: n,
     posX: s,
@@ -5978,25 +5978,25 @@ class Oe {
 const rg = "/assets/halloween2-l9FmXxVI.png",
   cg = F("template/subscribe", async ({
     id: t
-  }) => (await Oe.subscribeToTemplate({
+  }) => (await Fe.subscribeToTemplate({
     id: t
   })).data),
   rs = F("template/getTemplateList", async ({
     offset: t,
     limit: n
-  }) => (await Oe.getTemplatesList({
+  }) => (await Fe.getTemplatesList({
     offset: t,
     limit: n
   })).data),
   lg = F("template/getAvailableSizes", async ({
     userId: t
-  }) => (await Oe.getAvailableSizes({
+  }) => (await Fe.getAvailableSizes({
     userId: t
   })).data),
-  cs = F("template/getReferredTemplate", async () => (await Oe.getReferredTemplate()).data),
+  cs = F("template/getReferredTemplate", async () => (await Fe.getReferredTemplate()).data),
   Na = F("template/getMyTemplate", async ({
     id: t
-  }) => (await Oe.getTemplateById({
+  }) => (await Fe.getTemplateById({
     id: t
   })).data),
   ls = F("template/getWorldTemplate", async () => ({
@@ -6169,7 +6169,7 @@ const rg = "/assets/halloween2-l9FmXxVI.png",
     },
     children: t
   }),
-  ke = ({
+  De = ({
     active: t,
     setActive: n,
     children: s
@@ -6181,7 +6181,7 @@ const rg = "/assets/halloween2-l9FmXxVI.png",
     children: s
   }),
   Ko = t => t ? t.friends >= Pc.friendsForTemplateCreation || t.isContractor : !1,
-  Te = {
+  Se = {
     create: "create",
     main: "main",
     result: "result"
@@ -6194,17 +6194,17 @@ const rg = "/assets/halloween2-l9FmXxVI.png",
       i = c(r => r.tournament.myTemplate),
       o = i && i.approved;
     return e.jsxs(rn, {
-      children: [a && o && e.jsx(ke, {
-        active: n === Te.create,
-        setActive: () => t(_n(Te.create)),
+      children: [a && o && e.jsx(De, {
+        active: n === Se.create,
+        setActive: () => t(_n(Se.create)),
         children: "My template"
-      }), e.jsx(ke, {
-        active: n === Te.main,
-        setActive: () => t(_n(Te.main)),
+      }), e.jsx(De, {
+        active: n === Se.main,
+        setActive: () => t(_n(Se.main)),
         children: "Tournament"
-      }), e.jsx(ke, {
-        active: n === Te.result,
-        setActive: () => t(_n(Te.result)),
+      }), e.jsx(De, {
+        active: n === Se.result,
+        setActive: () => t(_n(Se.result)),
         children: "My results"
       })]
     })
@@ -6221,25 +6221,25 @@ const ms = F("tournament/getPeriods", async () => (await Zo.getPeriods()).data),
   As = F("tournament/getResults", async () => (await Zo.getResults()).data),
   ps = F("tournament/getMyTemplate", async ({
     id: t
-  }) => (await Oe.getTournamentTemplateById({
+  }) => (await Fe.getTournamentTemplateById({
     id: t
   })).data),
-  hs = F("tournament/getSelectedTemplate", async () => (await Oe.getSelectedTemplate()).data),
+  hs = F("tournament/getSelectedTemplate", async () => (await Fe.getSelectedTemplate()).data),
   gs = F("tournament/getApprovedTemplatesList", async ({
     offset: t,
     limit: n
-  }) => (await Oe.getApprovedTemplatesList({
+  }) => (await Fe.getApprovedTemplatesList({
     offset: t,
     limit: n
   })).data),
-  _s = F("tournament/getRandomTemplatesList", async () => (await Oe.getRandomTemplates()).data),
+  _s = F("tournament/getRandomTemplatesList", async () => (await Fe.getRandomTemplates()).data),
   fs = F("tournament/selectTemplate", async ({
     id: t
-  }) => (await Oe.subscribeToTournamentTemplate({
+  }) => (await Fe.subscribeToTournamentTemplate({
     id: t
   })).data),
   Ng = {
-    activeTab: Te.main,
+    activeTab: Se.main,
     showTournamentDetailsPopup: !1,
     showRoundRewardsPopup: !1,
     activeTournamentTemplate: null,
@@ -6258,7 +6258,8 @@ const ms = F("tournament/getPeriods", async () => (await Zo.getPeriods()).data),
     selectTemplateStatus: A.idle,
     randomTemplatesListStatus: A.idle,
     periodsStatus: A.idle,
-    resultsStatus: A.idle
+    resultsStatus: A.idle,
+    selectedTemplateStatus: A.idle
   },
   $o = he({
     name: "tournament",
@@ -6317,14 +6318,18 @@ const ms = F("tournament/getPeriods", async () => (await Zo.getPeriods()).data),
         n.resultsStatus = A.fulfilled, n.results = s.payload.rounds
       }).addCase(As.rejected, (n, s) => {
         n.resultsStatus = A.rejected
-      }).addCase(hs.pending, n => {}).addCase(hs.fulfilled, (n, s) => {
+      }).addCase(hs.pending, n => {
+        n.selectedTemplateStatus = A.pending
+      }).addCase(hs.fulfilled, (n, s) => {
         s.payload.id && (n.selectedTemplate = {
           ...s.payload,
           imageSize: s.payload.size || s.payload.imageSize,
           type: We.referred,
           url: `${s.payload.url}?time=${Date.now()}`
-        })
-      }).addCase(hs.rejected, (n, s) => {}).addCase(gs.pending, n => {
+        }), n.selectedTemplateStatus = A.fulfilled
+      }).addCase(hs.rejected, (n, s) => {
+        n.selectedTemplateStatus = A.rejected
+      }).addCase(gs.pending, n => {
         n.approvedTemplatesListStatus = A.pending
       }).addCase(gs.fulfilled, (n, s) => {
         s.payload && s.payload.list && (gn.addMany(n.approvedTemplatesList, s.payload.list), n.approvedTemplatesListOffset += 16, n.approvedTemplatesListTotal = Math.max(s.payload.total, n.approvedTemplatesListTotal)), n.approvedTemplatesListStatus = A.fulfilled
@@ -6361,7 +6366,7 @@ const ms = F("tournament/getPeriods", async () => (await Zo.getPeriods()).data),
     closeTournamentTemplateInfoPopup: _i,
     setSelectedTemplate: sr
   } = $o.actions,
-  Re = {
+  ke = {
     getMyTemplate: ps,
     getSelectedTemplate: hs,
     getApprovedList: gs,
@@ -6370,7 +6375,7 @@ const ms = F("tournament/getPeriods", async () => (await Zo.getPeriods()).data),
     getPeriods: ms,
     getResults: As
   },
-  Ce = t => {
+  Oe = t => {
     const n = t.tournament.activePeriod;
     return n && n.ID && n.PeriodType === "round" ? n.RoundID : null
   },
@@ -6385,7 +6390,7 @@ const ms = F("tournament/getPeriods", async () => (await Zo.getPeriods()).data),
     return null
   },
   ir = t => {
-    const n = Ce(t);
+    const n = Oe(t);
     if (!n) return null;
     const s = t.tournament.results;
     if (!s) return null;
@@ -6470,7 +6475,7 @@ const ms = F("tournament/getPeriods", async () => (await Zo.getPeriods()).data),
   Rg = or.reducer,
   En = en();
 En.startListening({
-  matcher: ye(Re.getMyTemplate.fulfilled),
+  matcher: ye(ke.getMyTemplate.fulfilled),
   effect: (t, n) => {
     const s = n.getState();
     if (s.tournament.myTemplate) {
@@ -6480,7 +6485,7 @@ En.startListening({
   }
 });
 En.startListening({
-  matcher: ye(Re.getSelectedTemplate.fulfilled, sr),
+  matcher: ye(ke.getSelectedTemplate.fulfilled, sr),
   effect: (t, n) => {
     const s = n.getState();
     if (s.tournament.selectedTemplate) {
@@ -6855,7 +6860,7 @@ const zg = ({
   }, Lg = () => {
     const t = g(),
       n = 2,
-      s = c(Fe),
+      s = c(Ue),
       a = c(d => d.shop.available[n]);
     c(d => d.main.fastMode);
     const i = c(d => d.main.currentFastType),
@@ -6934,7 +6939,7 @@ const zg = ({
   }, Vg = () => {
     const t = g(),
       n = 6,
-      s = c(Fe),
+      s = c(Ue),
       a = c(d => d.shop.available[n]);
     c(d => d.main.fastMode);
     const i = c(d => d.main.currentFastType),
@@ -7047,7 +7052,7 @@ const h_ = ({
   }, __ = () => {
     const t = g(),
       n = 7,
-      s = c(Fe),
+      s = c(Ue),
       a = c(d => d.shop.available[n]);
     c(d => d.main.fastMode);
     const i = c(d => d.main.currentFastType),
@@ -7276,7 +7281,7 @@ class v_ {
       x: -1,
       y: -1
     }, this.initImage(), o(a), this.initEvents(), this.store.dispatch(tt({
-      command: De.start
+      command: Be.start
     })), !ya() && this.loadAllChunks().then(() => {
       const r = a.getState().main.startParams.coords;
       r && (y.viewport.viewport.animate({
@@ -7362,7 +7367,7 @@ class v_ {
       s = this.getImageData(n, E.width, E.height);
     for (let a = 0; a < s.length; a += 4) this.imageData[a + 3] === 0 && (this.imageData[a] = s[a], this.imageData[a + 1] = s[a + 1], this.imageData[a + 2] = s[a + 2], this.imageData[a + 3] = s[a + 3]);
     this.updateTexture(), this.store.dispatch(tt({
-      command: De.finish
+      command: Be.finish
     }))
   }
   async loadFromCentrifuge(n) {
@@ -7370,7 +7375,7 @@ class v_ {
       a = this.getImageData(n, E.width, E.height);
     for (let i = 0; i < a.length; i += 4) this.imageData[i + 3] === 0 && (this.imageData[i] = a[i], this.imageData[i + 1] = a[i + 1], this.imageData[i + 2] = a[i + 2], this.imageData[i + 3] = a[i + 3]);
     this.updateTexture(), this.store.dispatch(tt({
-      command: De.finish
+      command: Be.finish
     })), console.log(performance.now() - s)
   }
   async loadChunk({
@@ -7399,7 +7404,7 @@ class v_ {
     this.updateTexture(), n < 15 ? await this.loadChunk({
       chunkIndex: n + 1
     }) : this.store.dispatch(tt({
-      command: De.finish
+      command: Be.finish
     }))
   }
   updateTexture() {
@@ -7835,7 +7840,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   K_ = "_level_text_8sbvi_53",
   Z_ = "_status_container_8sbvi_58",
   $_ = "_status_8sbvi_58",
-  Ee = {
+  Te = {
     boost_item: q_,
     image_container: L_,
     image: H_,
@@ -7857,7 +7862,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   }) => {
     const i = g();
     return e.jsx("div", {
-      className: Ee.boost_item,
+      className: Te.boost_item,
       onPointerUp: () => {
         a || (i(ah(n)), i(qa(!0)))
       },
@@ -7867,9 +7872,9 @@ const S_ = m.memo(() => (m.useEffect(() => {
   Ya = ({
     isMax: t
   }) => t ? null : e.jsx("div", {
-    className: Ee.status_container,
+    className: Te.status_container,
     children: e.jsx("div", {
-      className: Ee.status,
+      className: Te.status,
       children: e.jsx(b, {
         size: 20,
         children: ""
@@ -7879,10 +7884,10 @@ const S_ = m.memo(() => (m.useEffect(() => {
   Wa = ({
     src: t
   }) => e.jsx("div", {
-    className: Ee.image_container,
+    className: Te.image_container,
     children: e.jsx("img", {
       alt: "image",
-      className: Ee.image,
+      className: Te.image,
       src: t
     })
   }),
@@ -7891,7 +7896,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     isMax: n
   }) => n ? "Max" : e.jsxs(te.Fragment, {
     children: [e.jsx(G, {}), "  ", e.jsx("span", {
-      className: Ee.price_text,
+      className: Te.price_text,
       children: t
     })]
   }),
@@ -7903,24 +7908,24 @@ const S_ = m.memo(() => (m.useEffect(() => {
   }) => {
     const {
       t: i
-    } = Me();
+    } = Re();
     return e.jsx("div", {
-      className: Ee.content_container,
+      className: Te.content_container,
       children: e.jsxs("div", {
-        className: Ee.content,
+        className: Te.content,
         children: [e.jsx("div", {
-          className: Ee.item_title_container,
+          className: Te.item_title_container,
           children: t
         }), e.jsxs("div", {
-          className: Ee.item_reward_container,
+          className: Te.item_reward_container,
           children: [e.jsx(ef, {
             price: s,
             isMax: a
           }), "  ", e.jsx("span", {
-            className: Ee.dot,
+            className: Te.dot,
             children: "•"
           }), "  ", e.jsxs("span", {
-            className: Ee.level_text,
+            className: Te.level_text,
             children: [n, " ", i("mining.boosts.level")]
           })]
         })]
@@ -7931,7 +7936,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   tf = () => {
     const {
       t
-    } = Me(), n = pe.paintReward, s = c(u => u.main.settings.UpgradeRepaint), a = c(u => u.mining.boosts[n]), {
+    } = Re(), n = pe.paintReward, s = c(u => u.main.settings.UpgradeRepaint), a = c(u => u.mining.boosts[n]), {
       repaintReward: i
     } = c(on), o = a >= i, r = Math.min(i, a + 1), l = Math.min(i, a), d = s == null ? void 0 : s.levels[r];
     return e.jsxs(Xa, {
@@ -7954,7 +7959,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   nf = () => {
     const {
       t
-    } = Me(), n = pe.reChargeSpeed, s = c(u => u.main.settings.UpgradeChargeRestoration), a = c(u => u.mining.boosts[n]), {
+    } = Re(), n = pe.reChargeSpeed, s = c(u => u.main.settings.UpgradeChargeRestoration), a = c(u => u.mining.boosts[n]), {
       restorationSpeed: i
     } = c(on), o = a >= i, r = Math.min(i, a + 1), l = Math.min(i, a), d = s == null ? void 0 : s.levels[r];
     return e.jsxs(Xa, {
@@ -7977,7 +7982,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   sf = () => {
     const {
       t
-    } = Me(), n = pe.energyLimit, s = c(u => u.main.settings.UpgradeChargeCount), a = c(u => u.mining.boosts[n]), {
+    } = Re(), n = pe.energyLimit, s = c(u => u.main.settings.UpgradeChargeCount), a = c(u => u.mining.boosts[n]), {
       chargesCount: i
     } = c(on), o = a >= i, r = Math.min(i, a + 1), l = Math.min(i, a), d = s == null ? void 0 : s.levels[r];
     return e.jsxs(Xa, {
@@ -8028,7 +8033,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     const a = g(),
       {
         t: i
-      } = Me(),
+      } = Re(),
       o = d => {
         a(qa(d))
       },
@@ -8060,7 +8065,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   gf = () => {
     const {
       t
-    } = Me(), n = pe.paintReward, s = c(d => d.main.settings.UpgradeRepaint), a = c(d => d.mining.boosts[n]), {
+    } = Re(), n = pe.paintReward, s = c(d => d.main.settings.UpgradeRepaint), a = c(d => d.mining.boosts[n]), {
       repaintReward: i
     } = c(on), o = Math.min(i, a + 1), r = (s == null ? void 0 : s.levels[a]) || {
       Boost: 1
@@ -8095,7 +8100,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   _f = () => {
     const {
       t
-    } = Me(), n = pe.reChargeSpeed, s = c(d => d.main.settings.UpgradeChargeRestoration), a = c(d => d.mining.boosts[n]), {
+    } = Re(), n = pe.reChargeSpeed, s = c(d => d.main.settings.UpgradeChargeRestoration), a = c(d => d.mining.boosts[n]), {
       restorationSpeed: i
     } = c(on), o = Math.min(i, a + 1), r = (s == null ? void 0 : s.levels[a]) || {
       ChargeBoost: 6e5
@@ -8130,7 +8135,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   ff = () => {
     const {
       t
-    } = Me(), n = pe.energyLimit, s = c(d => d.main.settings.UpgradeChargeCount), a = c(d => d.mining.boosts[n]), {
+    } = Re(), n = pe.energyLimit, s = c(d => d.main.settings.UpgradeChargeCount), a = c(d => d.mining.boosts[n]), {
       chargesCount: i
     } = c(on), o = Math.min(i, a + 1), r = s == null ? void 0 : s.levels[o], l = c(d => d.mining.maxCharges);
     return e.jsxs(Za, {
@@ -8195,11 +8200,11 @@ const S_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       n = c(s => s.mining.activeTab);
     return e.jsxs(rn, {
-      children: [e.jsx(ke, {
+      children: [e.jsx(De, {
         active: n === "tasks",
         setActive: () => t(va("tasks")),
         children: "Tasks"
-      }), e.jsx(ke, {
+      }), e.jsx(De, {
         active: n === "boosts",
         setActive: () => t(va("boosts")),
         children: "Boosts"
@@ -8251,7 +8256,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       {
         t: n
-      } = Me("translation", {
+      } = Re("translation", {
         keyPrefix: "mining.popup"
       }),
       s = c(r => r.main.showMiningDetailsPopup),
@@ -8296,7 +8301,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       {
         t: n
-      } = Me("translation", {
+      } = Re("translation", {
         keyPrefix: "mining"
       });
     return e.jsxs(le, {
@@ -8398,7 +8403,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       s = c(i => i.ratings.league),
       a = c(uo);
     return e.jsx(rn, {
-      children: ["bronze", "silver", "gold", "platinum"].map(i => e.jsxs(ke, {
+      children: ["bronze", "silver", "gold", "platinum"].map(i => e.jsxs(De, {
         active: s === i,
         setActive: () => {
           s !== i && n(qo(i))
@@ -8920,7 +8925,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     const t = c(o => o.canvas.pixelInfo),
       n = c(o => o.canvas.getPixelInfoFetchStatus),
       s = t !== null && n === A.fulfilled,
-      a = () => Ue(new Date(t.pixel.dateObtained));
+      a = () => Me(new Date(t.pixel.dateObtained));
     if (!s) return e.jsx(qe, {
       show: !s,
       children: e.jsx("span", {
@@ -9202,7 +9207,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       })]
     })
   },
-  Ey = () => c(Fe) ? null : e.jsxs("button", {
+  Ey = () => c(Ue) ? null : e.jsxs("button", {
     className: oe.button,
     onPointerUp: () => {
       ue("https://t.me/notpixel")
@@ -9217,7 +9222,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     })]
   }),
   By = () => e.jsx(Fg, {}),
-  Dy = () => c(Fe) ? e.jsx(By, {}) : e.jsx(Ey, {}),
+  Dy = () => c(Ue) ? e.jsx(By, {}) : e.jsx(Ey, {}),
   ky = () => {
     const t = c(s => s.main.fastMode),
       n = c(s => s.main.currentFastType);
@@ -9389,7 +9394,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       })]
     }) : null
   },
-  Gy = () => c(Fe) ? e.jsx("div", {
+  Gy = () => c(Ue) ? e.jsx("div", {
     className: I.buttons_container,
     children: e.jsx(Hy, {})
   }) : null,
@@ -9460,7 +9465,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   sv = () => {
     const t = K(),
       n = hr(new Date(Date.UTC(2024, 10, 30, 9, 0, 0))),
-      s = c(Ce);
+      s = c(Oe);
     return e.jsx("div", {
       className: Ne.layout,
       onPointerUp: () => {
@@ -9557,7 +9562,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   bv = "_text_container_1v16g_55",
   Nv = "_button_container_1v16g_60",
   Iv = "_button_1v16g_60",
-  Se = {
+  Ce = {
     layout: gv,
     container: _v,
     close_button: fv,
@@ -9631,14 +9636,14 @@ const S_ = m.memo(() => (m.useEffect(() => {
         t(ba(null))
       },
       children: e.jsx("div", {
-        className: Se.layout,
+        className: Ce.layout,
         onPointerUp: o => {
           o.stopPropagation()
         },
         children: e.jsxs("div", {
-          className: Se.container,
+          className: Ce.container,
           children: [e.jsx("div", {
-            className: Se.close_button,
+            className: Ce.close_button,
             onPointerUp: () => {
               t(ba(null))
             },
@@ -9647,30 +9652,30 @@ const S_ = m.memo(() => (m.useEffect(() => {
               children: ""
             })
           }), e.jsx("div", {
-            className: Se.title_container,
+            className: Ce.title_container,
             children: e.jsx("span", {
               children: "Friend's squad invitation"
             })
           }), e.jsxs("div", {
-            className: Se.image_container,
+            className: Ce.image_container,
             children: [e.jsx("img", {
               alt: "img",
-              className: `${Se.image} ${Se.first_image}`,
+              className: `${Ce.image} ${Ce.first_image}`,
               src: s === null ? Kt : s.logo
             }), e.jsx("img", {
               alt: "img",
-              className: `${Se.image} ${Se.second_image}`,
+              className: `${Ce.image} ${Ce.second_image}`,
               src: i === null || i.userPic === "" ? bt : i.userPic
             })]
           }), e.jsx("div", {
-            className: Se.text_container,
+            className: Ce.text_container,
             children: e.jsxs("span", {
               children: ["Your friend is a part of the", " ", s === null ? "" : `"${s.name}"`, " squad. Ready to team up?"]
             })
           }), e.jsx("div", {
-            className: Se.button_container,
+            className: Ce.button_container,
             children: e.jsxs("button", {
-              className: Se.button,
+              className: Ce.button,
               onPointerUp: () => {
                 s !== null && ue(`https://t.me/${Bt}?startapp=${btoa(`id=${s.id}`)}`)
               },
@@ -9828,7 +9833,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       n = K(),
       s = c(l => l.tournament.myTemplate),
       a = c(l => l.tournament.activeTournamentTemplate),
-      i = c(Ce);
+      i = c(Oe);
     if (!s) return null;
     const o = [ht.button],
       r = a === s.id;
@@ -9836,7 +9841,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       className: o.join(" "),
       onPointerUp: () => {
         if (!i) {
-          t(_n(Te.create)), n.push("/tournament");
+          t(_n(Se.create)), n.push("/tournament");
           return
         }
         r ? t(Va()) : (y.viewport.viewport.animate({
@@ -9862,12 +9867,12 @@ const S_ = m.memo(() => (m.useEffect(() => {
       a = c(l => l.tournament.activeTournamentTemplate),
       i = s && a === s.id,
       o = [ht.button],
-      r = c(Ce);
+      r = c(Oe);
     return i && o.push(ht.enabled), s || o.push(ht.animation), e.jsxs("button", {
       className: o.join(" "),
       onPointerUp: l => {
         if (!s || !r) {
-          t(_n(Te.main)), n.push("/tournament");
+          t(_n(Se.main)), n.push("/tournament");
           return
         }
         i ? t(Va()) : (y.viewport.viewport.animate({
@@ -10054,7 +10059,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
         }), e.jsx("div", {
           className: x.date_text,
           children: e.jsx("span", {
-            children: Ue(new Date(t.dateTime))
+            children: Me(new Date(t.dateTime))
           })
         })]
       }), e.jsx("div", {
@@ -10105,7 +10110,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
         }), e.jsx("div", {
           className: x.date_text,
           children: e.jsx("span", {
-            children: Ue(new Date(t.dateTime))
+            children: Me(new Date(t.dateTime))
           })
         })]
       }), e.jsx("div", {
@@ -10134,7 +10139,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       }), e.jsx("div", {
         className: x.date_text,
         children: e.jsx("span", {
-          children: Ue(new Date(t.dateTime))
+          children: Me(new Date(t.dateTime))
         })
       })]
     }), e.jsx("div", {
@@ -10162,7 +10167,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       }), e.jsx("div", {
         className: x.date_text,
         children: e.jsx("span", {
-          children: Ue(new Date(t.dateTime))
+          children: Me(new Date(t.dateTime))
         })
       })]
     }), e.jsx("div", {
@@ -10190,7 +10195,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       }), e.jsx("div", {
         className: x.date_text,
         children: e.jsx("span", {
-          children: Ue(new Date(t.dateTime))
+          children: Me(new Date(t.dateTime))
         })
       })]
     }), e.jsx("div", {
@@ -10216,7 +10221,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       }), e.jsx("div", {
         className: x.date_text,
         children: e.jsx("span", {
-          children: Ue(new Date(t.dateTime))
+          children: Me(new Date(t.dateTime))
         })
       })]
     }), e.jsx("div", {
@@ -10244,7 +10249,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       }), e.jsx("div", {
         className: x.date_text,
         children: e.jsx("span", {
-          children: Ue(new Date(t.dateTime))
+          children: Me(new Date(t.dateTime))
         })
       })]
     }), e.jsx("div", {
@@ -10272,7 +10277,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       }), e.jsx("div", {
         className: x.date_text,
         children: e.jsx("span", {
-          children: Ue(new Date(t.dateTime))
+          children: Me(new Date(t.dateTime))
         })
       })]
     }), e.jsxs("div", {
@@ -10299,7 +10304,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       }), e.jsx("div", {
         className: x.date_text,
         children: e.jsx("span", {
-          children: Ue(new Date(t.dateTime))
+          children: Me(new Date(t.dateTime))
         })
       })]
     }), e.jsx("div", {
@@ -10327,7 +10332,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       }), e.jsx("div", {
         className: x.date_text,
         children: e.jsx("span", {
-          children: Ue(new Date(t.dateTime))
+          children: Me(new Date(t.dateTime))
         })
       })]
     }), e.jsx("div", {
@@ -10735,7 +10740,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   qj = () => {
     const {
       t
-    } = Me("translation", {
+    } = Re("translation", {
       keyPrefix: "frens"
     }), n = c(o => o.user.user), s = c(o => o.main.settings);
     let a = `${vt}?startapp=f${(n==null?void 0:n.id)||""}`;
@@ -11897,11 +11902,11 @@ const S_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       n = c(s => s.template.activeTab);
     return e.jsxs(rn, {
-      children: [e.jsx(ke, {
+      children: [e.jsx(De, {
         active: n === "my",
         setActive: () => t(gi("my")),
         children: "My template"
-      }), e.jsx(ke, {
+      }), e.jsx(De, {
         active: n === "catalog",
         setActive: () => t(gi("catalog")),
         children: "Catalog"
@@ -12391,15 +12396,15 @@ const S_ = m.memo(() => (m.useEffect(() => {
     setActive: n
   }) => e.jsxs(rn, {
     style: {},
-    children: [e.jsx(ke, {
+    children: [e.jsx(De, {
       active: t === "info",
       setActive: () => n("info"),
       children: "Info"
-    }), e.jsx(ke, {
+    }), e.jsx(De, {
       active: t === "achievements",
       setActive: () => n("achievements"),
       children: "Achievements"
-    }), e.jsx(ke, {
+    }), e.jsx(De, {
       active: t === "inventory",
       setActive: () => n("inventory"),
       children: "Inventory"
@@ -12810,7 +12815,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     setActive: n
   }) => e.jsx(rn, {
     style: {},
-    children: e.jsx(ke, {
+    children: e.jsx(De, {
       active: t === "info",
       setActive: () => n("info"),
       children: "Info"
@@ -13094,7 +13099,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
             const h = new Blob([n.data], {
               type: "application/octet-stream"
             });
-            if ((await Oe.uploadTemplate({
+            if ((await Fe.uploadTemplate({
                 blob: h,
                 posX: s,
                 posY: a
@@ -13589,7 +13594,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
           },
           d = (u, h) => {
             u.forEach(_ => {
-              _.intersectionRatio >= 1 && (t(Re.getApprovedList({
+              _.intersectionRatio >= 1 && (t(ke.getApprovedList({
                 offset: a,
                 limit: i
               })), h.unobserve(n.current))
@@ -13613,7 +13618,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
         disabled: s === A.pending,
         className: Ye.button,
         onPointerUp: () => {
-          t(Re.getApprovedList({
+          t(ke.getApprovedList({
             offset: a,
             limit: i
           }))
@@ -13627,7 +13632,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       n = c(i => i.tournament.approvedTemplatesListOffset),
       s = c(i => i.tournament.approvedTemplatesListLimit),
       a = c(wo.selectAll);
-    return m.useEffect(() => (t(Re.getApprovedList({
+    return m.useEffect(() => (t(ke.getApprovedList({
       offset: n,
       limit: s
     })), () => {
@@ -13654,7 +13659,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
         disabled: n === A.pending,
         className: Ye.button,
         onPointerUp: () => {
-          t(Re.getRandomList())
+          t(ke.getRandomList())
         },
         children: "Show another templates"
       })
@@ -13670,7 +13675,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       n = c(wo.selectAll),
       a = c(i => i.tournament.selectedTemplate) ? 15 : 16;
-    return m.useEffect(() => (t(Re.getRandomList()), () => {
+    return m.useEffect(() => (t(ke.getRandomList()), () => {
       t(nr())
     }), []), e.jsxs("div", {
       className: Ye.layout,
@@ -13705,7 +13710,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     className: Nr.round_indicator
   }),
   qP = () => {
-    const t = c(Ce),
+    const t = c(Oe),
       n = c(ar);
     return t ? e.jsxs("div", {
       className: lt.round_info_container,
@@ -13738,7 +13743,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     })
   },
   LP = () => {
-    const t = c(Ce),
+    const t = c(Oe),
       n = c(s => s.tournament.periodsStatus);
     return e.jsxs("div", {
       children: [e.jsx(qP, {}), t && n === A.fulfilled && e.jsx(EP, {}), !t && n === A.fulfilled && e.jsx(kP, {})]
@@ -13794,7 +13799,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     result: t
   }) => {
     const n = g(),
-      s = c(Ce);
+      s = c(Oe);
     if (!t) return null;
     const a = t.repaints_to_win - t.repaints,
       i = a < 0,
@@ -13891,10 +13896,10 @@ const S_ = m.memo(() => (m.useEffect(() => {
   },
   pC = () => {
     const t = c(Ig);
-    return c(Ce), null
+    return c(Oe), null
   },
   hC = () => {
-    const t = c(Ce);
+    const t = c(Oe);
     if (!t) return null;
     const n = Li[t];
     return e.jsxs("div", {
@@ -13903,7 +13908,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     })
   },
   gC = () => {
-    const t = c(Ce),
+    const t = c(Oe),
       n = c(ar),
       s = hr(new Date(Date.UTC(2024, 10, 30, 9, 0, 0)));
     return t ? null : e.jsxs("div", {
@@ -13921,7 +13926,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       n = c(s => s.tournament.resultsStatus);
     return m.useEffect(() => {
-      n === A.idle && t(Re.getResults())
+      n === A.idle && t(ke.getResults())
     }, [n]), e.jsxs("div", {
       children: [e.jsx(hC, {}), e.jsx(gC, {}), e.jsx(AC, {}), e.jsx(pC, {})]
     })
@@ -13930,7 +13935,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     const t = c(n => n.tournament.activeTab);
     return e.jsxs("div", {
       className: UI.info_layout,
-      children: [t === Te.create && e.jsx(gP, {}), t === Te.main && e.jsx(LP, {}), t === Te.result && e.jsx(_C, {})]
+      children: [t === Se.create && e.jsx(gP, {}), t === Se.main && e.jsx(LP, {}), t === Se.result && e.jsx(_C, {})]
     })
   },
   xC = () => e.jsxs(te.Fragment, {
@@ -14066,7 +14071,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       onPointerUp: async () => {
         try {
           if (o) return;
-          (await a(Re.selectTemplate({
+          (await a(ke.selectTemplate({
             id: t.id
           }))).meta.requestStatus === A.fulfilled && a(sr(t))
         } catch (r) {
@@ -14084,7 +14089,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
       s = c(r => r.tournament.selectedTemplate),
       a = t.id === n.id,
       i = s !== null && t.id === s.id,
-      o = c(Ce);
+      o = c(Oe);
     return a ? e.jsx("div", {
       className: Z.not_button,
       children: "Your template. Cute!"
@@ -14099,7 +14104,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       n = c(a => a.tournament.showTemplateInfoPopup),
       s = c(a => a.tournament.templateDataInfoPopup);
-    return c(Ce), !s || !n ? null : Ke.createPortal(e.jsx(Le, {
+    return c(Oe), !s || !n ? null : Ke.createPortal(e.jsx(Le, {
       onPointerUp: () => t(_i()),
       show: n,
       children: e.jsx("div", {
@@ -14875,7 +14880,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
     my_pixels_amount: x2,
     header_content: y2
   },
-  v2 = () => c(Fe) ? null : e.jsxs("button", {
+  v2 = () => c(Ue) ? null : e.jsxs("button", {
     className: `${ve.button} ${ve.telegram_button}`,
     onPointerUp: () => {
       ue("https://t.me/notpixel")
@@ -14895,7 +14900,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   w2 = () => {
     const t = Ys("/claiming"),
       n = c(a => a.user.pixelCoins);
-    return c(Fe) ? e.jsxs("button", {
+    return c(Ue) ? e.jsxs("button", {
       className: `${ve.button}`,
       onPointerUp: t,
       children: [e.jsx(G, {
@@ -14914,7 +14919,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   j2 = "data:image/svg+xml,%3c?xml%20version='1.0'%20?%3e%3csvg%20viewBox='0%200%2032%2032'%20xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:none;}%3c/style%3e%3c/defs%3e%3ctitle/%3e%3cg%20fill='%23e0dd8e'%20data-name='Layer%202'%20id='Layer_2'%3e%3cpath%20d='M24,29H8a3,3,0,0,1-3-3V16a1,1,0,0,1,2,0V26a1,1,0,0,0,1,1H24a1,1,0,0,0,1-1V16a1,1,0,0,1,2,0V26A3,3,0,0,1,24,29Z'/%3e%3cpath%20d='M15,29H10a1,1,0,0,1-1-1V22a3,3,0,0,1,3-3h1a3,3,0,0,1,3,3v6A1,1,0,0,1,15,29Zm-4-2h3V22a1,1,0,0,0-1-1H12a1,1,0,0,0-1,1Z'/%3e%3cpath%20d='M25,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0v-.76L24.38,7H7.62L5,12.24V13a2,2,0,0,0,4,0,1,1,0,0,1,2,0,4,4,0,0,1-8,0V12a1,1,0,0,1,.11-.45l3-6A1,1,0,0,1,7,5H25a1,1,0,0,1,.89.55l3,6A1,1,0,0,1,29,12v1A4,4,0,0,1,25,17Z'/%3e%3cpath%20d='M13,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0,1,1,0,0,1,2,0A4,4,0,0,1,13,17Z'/%3e%3cpath%20d='M19,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0,1,1,0,0,1,2,0A4,4,0,0,1,19,17Z'/%3e%3cpath%20d='M22,22H19a1,1,0,0,1,0-2h3a1,1,0,0,1,0,2Z'/%3e%3c/g%3e%3cg%20id='frame'%3e%3crect%20class='cls-1'%20height='32'%20width='32'/%3e%3c/g%3e%3c/svg%3e",
   b2 = () => {
     const t = Ys("/stars");
-    return c(Fe) ? e.jsx("button", {
+    return c(Ue) ? e.jsx("button", {
       className: `${ve.shop_button}`,
       onPointerUp: t,
       children: e.jsx("img", {
@@ -14929,7 +14934,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   },
   N2 = () => {
     const t = Ys("/invite-frens");
-    return c(Fe) ? e.jsx("button", {
+    return c(Ue) ? e.jsx("button", {
       className: `${ve.stars_button}`,
       onPointerUp: t,
       children: e.jsx(b, {
@@ -14959,7 +14964,7 @@ const S_ = m.memo(() => (m.useEffect(() => {
   },
   P2 = () => {
     const t = Ys("/daily");
-    return c(Fe) ? e.jsx("button", {
+    return c(Ue) ? e.jsx("button", {
       className: `${ve.stars_button}`,
       onPointerUp: t,
       children: e.jsx(b, {
@@ -14982,15 +14987,15 @@ const S_ = m.memo(() => (m.useEffect(() => {
     })]
   })),
   Ti = {
-    bronze: Be.bronze,
-    silver: Be.silver,
-    gold: Be.gold,
-    platinum: Be.platinum,
-    diamond: Be.diamond
+    bronze: Ee.bronze,
+    silver: Ee.silver,
+    gold: Ee.gold,
+    platinum: Ee.platinum,
+    diamond: Ee.diamond
   },
   Ei = () => {
     const t = c(s => s.user.user),
-      n = [Be.league];
+      n = [Ee.league];
     return t !== null && Ti.hasOwnProperty(t.league) ? (n.push(Ti[t.league]), e.jsx("div", {
       className: n.join(" ")
     })) : null
@@ -15003,21 +15008,21 @@ const S_ = m.memo(() => (m.useEffect(() => {
     c(Pl);
     const i = `calc(16px + ${s.top+a.top}px)`;
     return t ? t && n.pathname === "/" ? e.jsx("div", {
-      className: Be.header_bottom_container,
+      className: Ee.header_bottom_container,
       style: {
         top: i
       },
       children: e.jsx("div", {
-        className: Be.header_bottom,
+        className: Ee.header_bottom,
         children: e.jsxs("div", {
-          className: Be.header_content,
+          className: Ee.header_content,
           children: [e.jsx(Ei, {}), e.jsx(Si, {})]
         })
       })
     }) : null : e.jsx("div", {
-      className: Be.header,
+      className: Ee.header,
       children: e.jsxs("div", {
-        className: Be.header_content,
+        className: Ee.header_content,
         children: [e.jsx(Ei, {}), e.jsx(Si, {})]
       })
     })
@@ -15056,7 +15061,7 @@ const S2 = () => {
         const N = (_ - a) / r;
         o !== _ && (i = Math.min(N * l, l), t.current && (t.current.style.width = `${i}%`)), o = _, i < l && (d = requestAnimationFrame(h))
       };
-      return n === De.start && (d = requestAnimationFrame(h), t.current && (t.current.style.display = "block")), n === De.finish && (t.current && (t.current.style.width = "100%"), u = setTimeout(() => {
+      return n === Be.start && (d = requestAnimationFrame(h), t.current && (t.current.style.display = "block")), n === Be.finish && (t.current && (t.current.style.width = "100%"), u = setTimeout(() => {
         t.current && (t.current.style.display = "none", t.current.style.width = "0")
       }, 300)), () => {
         d !== null && cancelAnimationFrame(d), u !== null && clearTimeout(u)
@@ -17144,15 +17149,15 @@ const SD = "_layout_15tw0_1",
   UD = () => {
     const t = c(r => r.main.startParams),
       [n, s] = m.useState(null),
-      a = c(r => r.tournament.periodsStatus),
-      i = c(Ce),
+      a = c(r => r.tournament.selectedTemplate),
+      i = c(r => r.tournament.selectedTemplateStatus),
       o = () => {
         s(null)
       };
     return m.useEffect(() => {
-      if (t.showTemplate && t.refId && a === A.fulfilled && !i) try {
+      if (t.showTemplate && t.refId && (i === A.fulfilled || i === A.rejected) && !a) try {
         (async () => {
-          const l = await Oe.getTournamentTemplateById({
+          const l = await Fe.getTournamentTemplateById({
             id: t.refId
           });
           if (l.status === 200 && l.data && l.data.approved) {
@@ -17161,7 +17166,7 @@ const SD = "_layout_15tw0_1",
           }
         })()
       } catch {}
-    }, [t, a, i]), e.jsx(Le, {
+    }, [t, s, i]), e.jsx(Le, {
       show: n,
       onPointerUp: o,
       children: e.jsx("div", {
@@ -17422,7 +17427,7 @@ const SD = "_layout_15tw0_1",
         }
       }, a = async () => {
         try {
-          t(Re.getPeriods())
+          t(ke.getPeriods())
         } catch (u) {
           console.error("Ошибка получения периодов:", u)
         }
@@ -17435,7 +17440,7 @@ const SD = "_layout_15tw0_1",
       }, o = async u => {
         if (!Ko(u)) return Promise.resolve();
         try {
-          t(Re.getMyTemplate({
+          t(ke.getMyTemplate({
             id: u.id
           }))
         } catch (h) {
@@ -17443,7 +17448,7 @@ const SD = "_layout_15tw0_1",
         }
       }, r = async () => {
         try {
-          t(Re.getSelectedTemplate())
+          t(ke.getSelectedTemplate())
         } catch (u) {
           console.error("Ошибка получения выбранного турнирного трафарета:", u)
         }
@@ -17541,7 +17546,7 @@ const SD = "_layout_15tw0_1",
       {
         t: n,
         i18n: s
-      } = Me(),
+      } = Re(),
       a = c(i => i.user.languageCode);
     m.useEffect(() => {
       s.changeLanguage(a)
