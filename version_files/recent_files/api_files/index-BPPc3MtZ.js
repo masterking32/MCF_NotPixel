@@ -619,39 +619,35 @@ const Fc = {
         name: "Pixanos' Snap",
         description: "Discolor ½ of the world. Your name will appear in History. No reward, just fun.",
         image_url: Us,
-        price: 4e3,
+        price: 2e4,
         prices: [{
           currency_id: 1,
           currency_name: "XTR",
-          price: 1
+          price: 2e4
         }, {
           currency_id: 2,
           currency_name: "TON",
-          price: 1
+          price: 35
         }, {
           currency_id: 3,
           currency_name: "NOT",
-          price: 1
+          price: 26e3
         }, {
           currency_id: 5,
           currency_name: "DOGS",
-          price: 1
+          price: 31e4
         }, {
           currency_id: 6,
           currency_name: "ANON",
-          price: 1
+          price: 5e4
         }, {
           currency_id: 7,
           currency_name: "CATI",
-          price: 1
-        }, {
-          currency_id: 8,
-          currency_name: "X",
-          price: 1
+          price: 450
         }, {
           currency_id: 9,
           currency_name: "Major",
-          price: 1
+          price: 200
         }],
         currency: "XTR",
         isOnePiece: !0
@@ -933,7 +929,7 @@ const Fc = {
     },
     getProductsStatus: A.idle,
     useProductStatus: A.idle,
-    order: [9, 10, 11, 1, 2, 6, 4],
+    order: [9, 10, 11, 1, 2, 6, 13, 4],
     selectedCurrency: 1,
     crypto: [{
       currency_id: 1,
