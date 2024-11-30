@@ -13891,7 +13891,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       n = c(s => s.tournament.resultsStatus);
     return m.useEffect(() => {
-      n !== p.fulfilled && t(Ie.getResults())
+      n !== p.pending && t(Ie.getResults())
     }, [n]), e.jsxs("div", {
       children: [e.jsx(dC, {}), e.jsx(uC, {}), e.jsx(cC, {}), e.jsx(lC, {})]
     })
