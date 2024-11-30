@@ -9400,7 +9400,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
       a = Math.floor(s / 1e3),
       i = Math.floor(a / 60 / 60),
       r = Math.floor(s / (1e3 * 60)) % 60;
-    return i === 0 && r < 30 ? "soon" : `in ${i}h ${r}m`
+    return i <= 0 && r < 30 ? "soon" : `in ${i}h ${r}m`
   },
   Ka = "/assets/gold_pixel-CRD2C_ap.gif",
   Ky = () => {
