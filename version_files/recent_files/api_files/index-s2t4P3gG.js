@@ -1380,7 +1380,7 @@ const Uc = {
   Hl = "_diamond_btihg_70",
   Gl = "_logo_link_btihg_72",
   Vl = "_logo_btihg_72",
-  De = {
+  Be = {
     header: kl,
     header_bottom_container: Rl,
     header_bottom: Ml,
@@ -1396,7 +1396,7 @@ const Uc = {
     logo: Vl
   },
   Jl = () => e.jsx("div", {
-    className: De.header_placeholder
+    className: Be.header_placeholder
   }),
   Is = "data:image/png;base64,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",
   Xl = () => {
@@ -1752,7 +1752,7 @@ const Uc = {
   } = io.actions, co = t => {
     const n = t.user.user;
     return n === null ? null : n.league || null
-  }, Id = t => t.user.userPic, Pe = t => t.user.user, Pd = io.reducer, Dt = {
+  }, Id = t => t.user.userPic, Ie = t => t.user.user, Pd = io.reducer, Dt = {
     getPixelsForSale: Vn,
     getPixelsForSaleTotal: Jn,
     getPixelsSold: Xn,
@@ -1762,7 +1762,7 @@ const Uc = {
       n = c(Ji),
       s = c(i => i.shop.selectedCurrency),
       a = c(it);
-    return c(Pe), m.useEffect(() => {
+    return c(Ie), m.useEffect(() => {
       a === xe && s === 1 && t(yn(2))
     }, [a]), a !== xe ? null : e.jsx("div", {
       className: ot.layout,
@@ -2684,7 +2684,7 @@ const Wn = F("mining/info", async () => (await zs.info()).data),
     setTask: v4
   } = uo.actions,
   bu = uo.reducer,
-  Ce = {
+  Pe = {
     info: Wn,
     claim: Kn,
     checkTask: Zn,
@@ -2762,7 +2762,7 @@ const Wn = F("mining/info", async () => (await zs.info()).data),
         onPointerUp: async () => {
           var u, h;
           try {
-            const _ = await a(Ce.claim()).unwrap();
+            const _ = await a(Pe.claim()).unwrap();
             await a(Mt(_.claimed)), s(!0), (h = (u = window.Telegram.WebApp) == null ? void 0 : u.HapticFeedback) == null || h.notificationOccurred("success")
           } catch (_) {
             r(!0), console.warn(_)
@@ -3007,7 +3007,7 @@ const Wn = F("mining/info", async () => (await zs.info()).data),
           !n || u || _ || E || (a && l(mo({
             action: n,
             value: !N
-          })), a && N || a && !s ? a() : s && l(Ce.checkTask({
+          })), a && N || a && !s ? a() : s && l(Pe.checkTask({
             key: n,
             reward: o
           })))
@@ -3549,7 +3549,7 @@ const Wn = F("mining/info", async () => (await zs.info()).data),
     return m.useEffect(() => {
       var h;
       !o || d !== p.fulfilled || r && (i || (h = r == null ? void 0 : r.connectItems) != null && h.tonProof && !("error" in r.connectItems.tonProof) && Y.checkTonProof(r.connectItems.tonProof.proof, r.account).then(_ => {
-        _.status === 200 && _.data.success ? t(Ce.checkTask({
+        _.status === 200 && _.data.success ? t(Pe.checkTask({
           key: n,
           reward: l
         })) : t(z({
@@ -3916,7 +3916,7 @@ const Wn = F("mining/info", async () => (await zs.info()).data),
             children: e.jsx("button", {
               className: rt.pixel_copy_button,
               onPointerUp: () => {
-                t(Ce.checkTask({
+                t(Pe.checkTask({
                   key: n,
                   reward: r
                 })), o(!1)
@@ -3944,7 +3944,7 @@ const li = () => {
     return Math.max(Math.ceil((t - Date.now()) / 1e3), 0)
   },
   $m = () => {
-    c(Pe);
+    c(Ie);
     const t = g(),
       n = Ym(),
       s = c(Pl),
@@ -4194,7 +4194,7 @@ const li = () => {
   },
   dA = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAACyklEQVR4nO2cT0iTYRzH361ZyRRqFcxDgoaQFV2SoCVERBBdFC/ZIejQxUs3L96Vrtmx6DwjJCQqpA4NZuHAP4FDREYWZixd6DbMZZvwe/YeLDef9X3/Hb6fy3ds75732WdfePb+Yb6Wc50lg/w3fqrDoEAQCgShQBAKBKFAEAoEoUAQCgShQBAKBKFAEAoEoUAQCgShQBAKBKFAEAoEoUAQCgShQBAKBAl4dWL1wSOSkd4ByXdP+tULPp+b0/oHNhDEM3cmhJpOSV7ve1R1u1KxKDk62CO5/bvgwOwqwwaCuNbA5rOdkpduDVgy3uuH9yQ31r5ZMp4ubCCIYw08f+2OZPuV207szvgQHZT8kozbuh82EMT2Bl7sui/ZcuGG/Z9mDz4+fyBPLn2K2TI+Gwhi+5HI7PhTyeDRsGQuo1bJ1o6blu5nI/1ZMjU1LnkgcFDSruaZsIEgtjdwazMnmf3xVbLxxEnJdGpGsrCZlTzefEbycOMxrXFTiVeS+fX0rufN5i1OvrToE1SHDQRx/Ejk6t0hre2Kf7Ylw20dkrNvHkv6A3Va75uPj4Iz1YMNBHG8gYfqGyQjmsfAKwsJyf2aZ5KMPcMmWCNsIIjjZ6TNVTmXWZFsCDVZMu7S9FtLxqkVNhDEtWsiiTF15nnfVVnzGkg+m7FiWjXDBoK4flVuYkQ1sOKqXKr+IyEZGyk/cudqHRsI4noDzVU5n/kuGQyFd71eqtDA5TnzTLO714nZQBDP3JkwOTYsqXusvL62bPOM9GADQTx3b0w8qhp4uXxPjP+v34HJ91H1wOeN754NBPFcAwu/yqvyT3WmuWioVXh1cUpt4JHmmbCBIJ7/35jTkW7J+YkXrs9lL9hAEP5zEQgbCEKBIBQIQoEgFAhCgSAUCEKBIBQIQoEgFAhCgSAUCEKBIBQIQoEgFAhCgSAUCEKBIBSIYBjGDiltmN/9syZ+AAAAAElFTkSuQmCC",
   uA = () => {
-    const t = c(Pe),
+    const t = c(Ie),
       n = w.spendCrypto,
       s = c(i => i.mining.tasks[n]),
       a = 512;
@@ -4645,13 +4645,13 @@ class tp {
     this.line !== null && this.pixel !== null && (this.line.alpha = 1, this.pixel.alpha = 1)
   }
 }
-const ke = {
+const De = {
     idle: "idle",
     start: "start",
     finish: "finish"
   },
   np = {
-    command: ke.idle,
+    command: De.idle,
     counter: 0
   },
   No = he({
@@ -5516,7 +5516,7 @@ const Vh = async ({
   if (s === a) return !1;
   if (da) return p.pending;
   da = !0, t(tt({
-    command: ke.start
+    command: De.start
   }));
   try {
     (await t(Qs.useProduct({
@@ -5530,7 +5530,7 @@ const Vh = async ({
     console.log("error", u)
   } finally {
     da = !1, t(tt({
-      command: ke.finish
+      command: De.finish
     }))
   }
   return !0
@@ -5695,13 +5695,13 @@ const La = {
   eg = zo.reducer,
   wt = en();
 wt.startListening({
-  matcher: ye(Ce.info.fulfilled),
+  matcher: ye(Pe.info.fulfilled),
   effect: (t, n) => {
     t.payload.activated && (n.dispatch(vd(t.payload.totalUserPixels)), n.dispatch(ro(t.payload.userBalance))), n.dispatch(Fc(t.payload.goods))
   }
 });
 wt.startListening({
-  matcher: ye(Ce.checkTask.fulfilled),
+  matcher: ye(Pe.checkTask.fulfilled),
   effect: (t, n) => {
     const s = t.meta.arg.key,
       a = t.payload[s],
@@ -5720,7 +5720,7 @@ wt.startListening({
   }
 });
 wt.startListening({
-  matcher: ye(Ce.checkBoost.fulfilled),
+  matcher: ye(Pe.checkBoost.fulfilled),
   effect: (t, n) => {
     const s = t.meta.arg.key,
       a = t.payload[s];
@@ -5734,7 +5734,7 @@ wt.startListening({
   }
 });
 wt.startListening({
-  matcher: ye(Ce.checkBoost.fulfilled),
+  matcher: ye(Pe.checkBoost.fulfilled),
   effect: (t, n) => {
     const s = n.getState(),
       a = s.main.settings,
@@ -5757,7 +5757,7 @@ wt.startListening({
   }
 });
 wt.startListening({
-  matcher: ye(Ce.checkTask.rejected),
+  matcher: ye(Pe.checkTask.rejected),
   effect: (t, n) => {
     n.dispatch(z({
       id: performance.now(),
@@ -5767,7 +5767,7 @@ wt.startListening({
   }
 });
 wt.startListening({
-  matcher: ye(Ce.checkBoost.rejected),
+  matcher: ye(Pe.checkBoost.rejected),
   effect: (t, n) => {
     n.dispatch(z({
       id: performance.now(),
@@ -5788,7 +5788,7 @@ Gs.startListening({
   matcher: ye(Ls.getPriceMask.pending, Dt.getPixelsForSale.pending, Dt.getPixelsSold.pending, La.get.pending),
   effect: (t, n) => {
     n.dispatch(tt({
-      command: ke.start
+      command: De.start
     }))
   }
 });
@@ -5796,7 +5796,7 @@ Gs.startListening({
   matcher: ye(Ls.getPriceMask.fulfilled, Dt.getPixelsForSale.fulfilled, Dt.getPixelsSold.fulfilled, La.get.fulfilled),
   effect: (t, n) => {
     n.dispatch(tt({
-      command: ke.finish
+      command: De.finish
     }))
   }
 });
@@ -5804,7 +5804,7 @@ Gs.startListening({
   matcher: ye(Ls.getPriceMask.rejected),
   effect: (t, n) => {
     t.error.code !== "ERR_CANCELED" && n.dispatch(tt({
-      command: ke.finish
+      command: De.finish
     }))
   }
 });
@@ -6150,7 +6150,7 @@ const sg = "/assets/halloween2-l9FmXxVI.png",
     },
     children: t
   }),
-  Re = ({
+  ke = ({
     active: t,
     setActive: n,
     children: s
@@ -6162,7 +6162,7 @@ const sg = "/assets/halloween2-l9FmXxVI.png",
     children: s
   }),
   Yo = t => t ? t.friends >= Ic.friendsForTemplateCreation || t.isContractor : !1,
-  Ee = {
+  Te = {
     create: "create",
     main: "main",
     result: "result"
@@ -6170,22 +6170,22 @@ const sg = "/assets/halloween2-l9FmXxVI.png",
   yg = () => {
     const t = g(),
       n = c(r => r.tournament.activeTab),
-      s = c(Pe),
+      s = c(Ie),
       a = Yo(s),
       i = c(r => r.tournament.myTemplate),
       o = i && i.approved;
     return e.jsxs(rn, {
-      children: [a && o && e.jsx(Re, {
-        active: n === Ee.create,
-        setActive: () => t(_n(Ee.create)),
+      children: [a && o && e.jsx(ke, {
+        active: n === Te.create,
+        setActive: () => t(_n(Te.create)),
         children: "My template"
-      }), e.jsx(Re, {
-        active: n === Ee.main,
-        setActive: () => t(_n(Ee.main)),
+      }), e.jsx(ke, {
+        active: n === Te.main,
+        setActive: () => t(_n(Te.main)),
         children: "Tournament"
-      }), e.jsx(Re, {
-        active: n === Ee.result,
-        setActive: () => t(_n(Ee.result)),
+      }), e.jsx(ke, {
+        active: n === Te.result,
+        setActive: () => t(_n(Te.result)),
         children: "My results"
       })]
     })
@@ -6220,7 +6220,7 @@ const ms = F("tournament/getPeriods", async () => (await Wo.getPeriods()).data),
     id: t
   })).data),
   vg = {
-    activeTab: Ee.main,
+    activeTab: Te.main,
     showTournamentDetailsPopup: !1,
     showRoundRewardsPopup: !1,
     activeTournamentTemplate: null,
@@ -6342,7 +6342,7 @@ const ms = F("tournament/getPeriods", async () => (await Wo.getPeriods()).data),
     closeTournamentTemplateInfoPopup: pi,
     setSelectedTemplate: nr
   } = Ko.actions,
-  Ie = {
+  Re = {
     getMyTemplate: ps,
     getSelectedTemplate: hs,
     getApprovedList: gs,
@@ -6351,7 +6351,7 @@ const ms = F("tournament/getPeriods", async () => (await Wo.getPeriods()).data),
     getPeriods: ms,
     getResults: As
   },
-  Se = t => {
+  Ce = t => {
     const n = t.tournament.activePeriod;
     return n && n.ID && n.PeriodType === "round" ? n.RoundID : null
   },
@@ -6366,7 +6366,7 @@ const ms = F("tournament/getPeriods", async () => (await Wo.getPeriods()).data),
     return null
   },
   ar = t => {
-    const n = Se(t);
+    const n = Ce(t);
     if (!n) return null;
     const s = t.tournament.results;
     if (!s) return null;
@@ -6451,7 +6451,7 @@ const ms = F("tournament/getPeriods", async () => (await Wo.getPeriods()).data),
   Eg = ir.reducer,
   En = en();
 En.startListening({
-  matcher: ye(Ie.getMyTemplate.fulfilled),
+  matcher: ye(Re.getMyTemplate.fulfilled),
   effect: (t, n) => {
     const s = n.getState();
     if (s.tournament.myTemplate) {
@@ -6461,7 +6461,7 @@ En.startListening({
   }
 });
 En.startListening({
-  matcher: ye(Ie.getSelectedTemplate.fulfilled, nr),
+  matcher: ye(Re.getSelectedTemplate.fulfilled, nr),
   effect: (t, n) => {
     const s = n.getState();
     if (s.tournament.selectedTemplate) {
@@ -6537,7 +6537,7 @@ const Bn = Lr({
         rewardUserId: r.data.reward_user.id
       }))), t(ro(r.data.balance)))
     } catch (r) {
-      console.log(r, r.response.data.code === 16), r.response.data.code === 16 && t(Ce.info())
+      console.log(r, r.response.data.code === 16), r.response.data.code === 16 && t(Pe.info())
     }
   }, Dg = ({
     history: t,
@@ -7254,7 +7254,7 @@ class __ {
       x: -1,
       y: -1
     }, this.initImage(), o(a), this.initEvents(), this.store.dispatch(tt({
-      command: ke.start
+      command: De.start
     })), !xa() && this.loadAllChunks().then(() => {
       const r = a.getState().main.startParams.coords;
       r && (y.viewport.viewport.animate({
@@ -7340,7 +7340,7 @@ class __ {
       s = this.getImageData(n, T.width, T.height);
     for (let a = 0; a < s.length; a += 4) this.imageData[a + 3] === 0 && (this.imageData[a] = s[a], this.imageData[a + 1] = s[a + 1], this.imageData[a + 2] = s[a + 2], this.imageData[a + 3] = s[a + 3]);
     this.updateTexture(), this.store.dispatch(tt({
-      command: ke.finish
+      command: De.finish
     }))
   }
   async loadFromCentrifuge(n) {
@@ -7348,7 +7348,7 @@ class __ {
       a = this.getImageData(n, T.width, T.height);
     for (let i = 0; i < a.length; i += 4) this.imageData[i + 3] === 0 && (this.imageData[i] = a[i], this.imageData[i + 1] = a[i + 1], this.imageData[i + 2] = a[i + 2], this.imageData[i + 3] = a[i + 3]);
     this.updateTexture(), this.store.dispatch(tt({
-      command: ke.finish
+      command: De.finish
     })), console.log(performance.now() - s)
   }
   async loadChunk({
@@ -7377,7 +7377,7 @@ class __ {
     this.updateTexture(), n < 15 ? await this.loadChunk({
       chunkIndex: n + 1
     }) : this.store.dispatch(tt({
-      command: ke.finish
+      command: De.finish
     }))
   }
   updateTexture() {
@@ -7813,7 +7813,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
   J_ = "_level_text_8sbvi_53",
   X_ = "_status_container_8sbvi_58",
   Y_ = "_status_8sbvi_58",
-  Be = {
+  Ee = {
     boost_item: F_,
     image_container: O_,
     image: Q_,
@@ -7835,7 +7835,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
   }) => {
     const i = g();
     return e.jsx("div", {
-      className: Be.boost_item,
+      className: Ee.boost_item,
       onPointerUp: () => {
         a || (i(eh(n)), i(Qa(!0)))
       },
@@ -7845,9 +7845,9 @@ const N_ = m.memo(() => (m.useEffect(() => {
   Va = ({
     isMax: t
   }) => t ? null : e.jsx("div", {
-    className: Be.status_container,
+    className: Ee.status_container,
     children: e.jsx("div", {
-      className: Be.status,
+      className: Ee.status,
       children: e.jsx(b, {
         size: 20,
         children: ""
@@ -7857,10 +7857,10 @@ const N_ = m.memo(() => (m.useEffect(() => {
   Ja = ({
     src: t
   }) => e.jsx("div", {
-    className: Be.image_container,
+    className: Ee.image_container,
     children: e.jsx("img", {
       alt: "image",
-      className: Be.image,
+      className: Ee.image,
       src: t
     })
   }),
@@ -7869,7 +7869,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
     isMax: n
   }) => n ? "Max" : e.jsxs(ae.Fragment, {
     children: [e.jsx(G, {}), "  ", e.jsx("span", {
-      className: Be.price_text,
+      className: Ee.price_text,
       children: t
     })]
   }),
@@ -7883,22 +7883,22 @@ const N_ = m.memo(() => (m.useEffect(() => {
       t: i
     } = Me();
     return e.jsx("div", {
-      className: Be.content_container,
+      className: Ee.content_container,
       children: e.jsxs("div", {
-        className: Be.content,
+        className: Ee.content,
         children: [e.jsx("div", {
-          className: Be.item_title_container,
+          className: Ee.item_title_container,
           children: t
         }), e.jsxs("div", {
-          className: Be.item_reward_container,
+          className: Ee.item_reward_container,
           children: [e.jsx(W_, {
             price: s,
             isMax: a
           }), "  ", e.jsx("span", {
-            className: Be.dot,
+            className: Ee.dot,
             children: "•"
           }), "  ", e.jsxs("span", {
-            className: Be.level_text,
+            className: Ee.level_text,
             children: [n, " ", i("mining.boosts.level")]
           })]
         })]
@@ -8023,7 +8023,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
           className: re.button,
           disabled: l,
           onPointerUp: async () => {
-            l || (await a(Ce.checkBoost({
+            l || (await a(Pe.checkBoost({
               key: n,
               price: s
             })), o(!1))
@@ -8173,11 +8173,11 @@ const N_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       n = c(s => s.mining.activeTab);
     return e.jsxs(rn, {
-      children: [e.jsx(Re, {
+      children: [e.jsx(ke, {
         active: n === "tasks",
         setActive: () => t(ya("tasks")),
         children: "Tasks"
-      }), e.jsx(Re, {
+      }), e.jsx(ke, {
         active: n === "boosts",
         setActive: () => t(ya("boosts")),
         children: "Boosts"
@@ -8376,7 +8376,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
       s = c(i => i.ratings.league),
       a = c(co);
     return e.jsx(rn, {
-      children: ["bronze", "silver", "gold", "platinum"].map(i => e.jsxs(Re, {
+      children: ["bronze", "silver", "gold", "platinum"].map(i => e.jsxs(ke, {
         active: s === i,
         setActive: () => {
           s !== i && n(Qo(i))
@@ -9434,7 +9434,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
   Zy = () => {
     const t = K(),
       n = pr(new Date(Date.UTC(2024, 10, 30, 9, 0, 0))),
-      s = c(Se);
+      s = c(Ce);
     return e.jsx("div", {
       className: be.layout,
       onPointerUp: () => {
@@ -9531,7 +9531,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
   xv = "_text_container_1v16g_55",
   yv = "_button_container_1v16g_60",
   vv = "_button_1v16g_60",
-  Te = {
+  Se = {
     layout: uv,
     container: mv,
     close_button: Av,
@@ -9605,14 +9605,14 @@ const N_ = m.memo(() => (m.useEffect(() => {
         t(ja(null))
       },
       children: e.jsx("div", {
-        className: Te.layout,
+        className: Se.layout,
         onPointerUp: o => {
           o.stopPropagation()
         },
         children: e.jsxs("div", {
-          className: Te.container,
+          className: Se.container,
           children: [e.jsx("div", {
-            className: Te.close_button,
+            className: Se.close_button,
             onPointerUp: () => {
               t(ja(null))
             },
@@ -9621,30 +9621,30 @@ const N_ = m.memo(() => (m.useEffect(() => {
               children: ""
             })
           }), e.jsx("div", {
-            className: Te.title_container,
+            className: Se.title_container,
             children: e.jsx("span", {
               children: "Friend's squad invitation"
             })
           }), e.jsxs("div", {
-            className: Te.image_container,
+            className: Se.image_container,
             children: [e.jsx("img", {
               alt: "img",
-              className: `${Te.image} ${Te.first_image}`,
+              className: `${Se.image} ${Se.first_image}`,
               src: s === null ? Kt : s.logo
             }), e.jsx("img", {
               alt: "img",
-              className: `${Te.image} ${Te.second_image}`,
+              className: `${Se.image} ${Se.second_image}`,
               src: i === null || i.userPic === "" ? jt : i.userPic
             })]
           }), e.jsx("div", {
-            className: Te.text_container,
+            className: Se.text_container,
             children: e.jsxs("span", {
               children: ["Your friend is a part of the", " ", s === null ? "" : `"${s.name}"`, " squad. Ready to team up?"]
             })
           }), e.jsx("div", {
-            className: Te.button_container,
+            className: Se.button_container,
             children: e.jsxs("button", {
-              className: Te.button,
+              className: Se.button,
               onPointerUp: () => {
                 s !== null && ue(`https://t.me/${Bt}?startapp=${btoa(`id=${s.id}`)}`)
               },
@@ -9802,7 +9802,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
       n = K(),
       s = c(l => l.tournament.myTemplate),
       a = c(l => l.tournament.activeTournamentTemplate),
-      i = c(Se);
+      i = c(Ce);
     if (!s) return null;
     const o = [pt.button],
       r = a === s.id;
@@ -9810,7 +9810,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
       className: o.join(" "),
       onPointerUp: () => {
         if (!i) {
-          t(_n(Ee.create)), n.push("/tournament");
+          t(_n(Te.create)), n.push("/tournament");
           return
         }
         r ? t(Ha()) : (y.viewport.viewport.animate({
@@ -9836,12 +9836,12 @@ const N_ = m.memo(() => (m.useEffect(() => {
       a = c(l => l.tournament.activeTournamentTemplate),
       i = s && a === s.id,
       o = [pt.button],
-      r = c(Se);
+      r = c(Ce);
     return i && o.push(pt.enabled), s || o.push(pt.animation), e.jsxs("button", {
       className: o.join(" "),
       onPointerUp: l => {
         if (!s || !r) {
-          t(_n(Ee.main)), n.push("/tournament");
+          t(_n(Te.main)), n.push("/tournament");
           return
         }
         i ? t(Ha()) : (y.viewport.viewport.animate({
@@ -11618,7 +11618,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
     setTemplateSize: n
   }) => {
     const s = g(),
-      a = c(Pe),
+      a = c(Ie),
       i = a.friends || 64,
       [o] = m.useState([16, 32, 64, 128]);
     return e.jsxs("div", {
@@ -11871,11 +11871,11 @@ const N_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       n = c(s => s.template.activeTab);
     return e.jsxs(rn, {
-      children: [e.jsx(Re, {
+      children: [e.jsx(ke, {
         active: n === "my",
         setActive: () => t(Ai("my")),
         children: "My template"
-      }), e.jsx(Re, {
+      }), e.jsx(ke, {
         active: n === "catalog",
         setActive: () => t(Ai("catalog")),
         children: "Catalog"
@@ -12228,7 +12228,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
     const [n, s] = m.useState({
       ready: !1,
       data: null
-    }), a = $0(), i = c(Pe);
+    }), a = $0(), i = c(Ie);
     return m.useEffect(() => {
       n && s({
         ready: !0,
@@ -12365,15 +12365,15 @@ const N_ = m.memo(() => (m.useEffect(() => {
     setActive: n
   }) => e.jsxs(rn, {
     style: {},
-    children: [e.jsx(Re, {
+    children: [e.jsx(ke, {
       active: t === "info",
       setActive: () => n("info"),
       children: "Info"
-    }), e.jsx(Re, {
+    }), e.jsx(ke, {
       active: t === "achievements",
       setActive: () => n("achievements"),
       children: "Achievements"
-    }), e.jsx(Re, {
+    }), e.jsx(ke, {
       active: t === "inventory",
       setActive: () => n("inventory"),
       children: "Inventory"
@@ -12619,7 +12619,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
   },
   EN = () => {
     const t = g(),
-      n = c(Pe);
+      n = c(Ie);
     return m.useEffect(() => (n && n.id && t(Tg.getListByUserId({
       userId: n.id
     })), () => {
@@ -12784,7 +12784,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
     setActive: n
   }) => e.jsx(rn, {
     style: {},
-    children: e.jsx(Re, {
+    children: e.jsx(ke, {
       active: t === "info",
       setActive: () => n("info"),
       children: "Info"
@@ -13172,7 +13172,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
     })]
   }),
   fI = () => {
-    g(), c(Pe);
+    g(), c(Ie);
     const [t, n] = m.useState(null), [s, a] = m.useState(null), [i, o] = m.useState(null), [r, l] = m.useState(16), [d, u] = m.useState({
       x: "",
       y: ""
@@ -13421,7 +13421,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
     setCoords: n
   }) => null,
   uP = () => {
-    g(), c(Pe);
+    g(), c(Ie);
     const [t, n] = m.useState(null), [s, a] = m.useState(null), [i, o] = m.useState(null), [r, l] = m.useState(32), [d, u] = m.useState({
       x: 0,
       y: 0
@@ -13564,7 +13564,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
           },
           d = (u, h) => {
             u.forEach(_ => {
-              _.intersectionRatio >= 1 && (t(Ie.getApprovedList({
+              _.intersectionRatio >= 1 && (t(Re.getApprovedList({
                 offset: a,
                 limit: i
               })), h.unobserve(n.current))
@@ -13588,7 +13588,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
         disabled: s === p.pending,
         className: Ye.button,
         onPointerUp: () => {
-          t(Ie.getApprovedList({
+          t(Re.getApprovedList({
             offset: a,
             limit: i
           }))
@@ -13602,7 +13602,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
       n = c(i => i.tournament.approvedTemplatesListOffset),
       s = c(i => i.tournament.approvedTemplatesListLimit),
       a = c(yo.selectAll);
-    return m.useEffect(() => (t(Ie.getApprovedList({
+    return m.useEffect(() => (t(Re.getApprovedList({
       offset: n,
       limit: s
     })), () => {
@@ -13629,7 +13629,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
         disabled: n === p.pending,
         className: Ye.button,
         onPointerUp: () => {
-          t(Ie.getRandomList())
+          t(Re.getRandomList())
         },
         children: "Show another templates"
       })
@@ -13645,7 +13645,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       n = c(yo.selectAll),
       a = c(i => i.tournament.selectedTemplate) ? 15 : 16;
-    return m.useEffect(() => (t(Ie.getRandomList()), () => {
+    return m.useEffect(() => (t(Re.getRandomList()), () => {
       t(er())
     }), []), e.jsxs("div", {
       className: Ye.layout,
@@ -13680,7 +13680,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
     className: br.round_indicator
   }),
   UP = () => {
-    const t = c(Se),
+    const t = c(Ce),
       n = c(sr);
     return t ? e.jsxs("div", {
       className: lt.round_info_container,
@@ -13713,7 +13713,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
     })
   },
   FP = () => {
-    const t = c(Se);
+    const t = c(Ce);
     return e.jsxs("div", {
       children: [e.jsx(UP, {}), t && e.jsx(IP, {}), !t && e.jsx(SP, {})]
     })
@@ -13767,7 +13767,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
   rC = ({
     result: t
   }) => {
-    const n = c(Se);
+    const n = c(Ce);
     if (!t) return null;
     const s = t.repaints_to_win - t.repaints,
       a = s < 0,
@@ -13861,10 +13861,10 @@ const N_ = m.memo(() => (m.useEffect(() => {
   },
   lC = () => {
     const t = c(wg);
-    return c(Se), null
+    return c(Ce), null
   },
   dC = () => {
-    const t = c(Se);
+    const t = c(Ce);
     if (!t) return null;
     const n = Qi[t];
     return e.jsxs("div", {
@@ -13873,7 +13873,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
     })
   },
   uC = () => {
-    const t = c(Se),
+    const t = c(Ce),
       n = c(sr),
       s = pr(new Date(Date.UTC(2024, 10, 30, 9, 0, 0)));
     return t ? null : e.jsxs("div", {
@@ -13891,7 +13891,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       n = c(s => s.tournament.resultsStatus);
     return m.useEffect(() => {
-      n !== p.pending && t(Ie.getResults())
+      n === p.idle && t(Re.getResults())
     }, [n]), e.jsxs("div", {
       children: [e.jsx(dC, {}), e.jsx(uC, {}), e.jsx(cC, {}), e.jsx(lC, {})]
     })
@@ -13900,7 +13900,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
     const t = c(n => n.tournament.activeTab);
     return e.jsxs("div", {
       className: BI.info_layout,
-      children: [t === Ee.create && e.jsx(uP, {}), t === Ee.main && e.jsx(FP, {}), t === Ee.result && e.jsx(mC, {})]
+      children: [t === Te.create && e.jsx(uP, {}), t === Te.main && e.jsx(FP, {}), t === Te.result && e.jsx(mC, {})]
     })
   },
   pC = () => e.jsxs(ae.Fragment, {
@@ -14036,7 +14036,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
       onPointerUp: async () => {
         try {
           if (o) return;
-          (await a(Ie.selectTemplate({
+          (await a(Re.selectTemplate({
             id: t.id
           }))).meta.requestStatus === p.fulfilled && a(nr(t))
         } catch (r) {
@@ -14054,7 +14054,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
       s = c(r => r.tournament.selectedTemplate),
       a = t.id === n.id,
       i = s !== null && t.id === s.id,
-      o = c(Se);
+      o = c(Ce);
     return a ? e.jsx("div", {
       className: Z.not_button,
       children: "Your template. Cute!"
@@ -14069,7 +14069,7 @@ const N_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       n = c(i => i.tournament.showTemplateInfoPopup),
       s = c(i => i.tournament.templateDataInfoPopup),
-      a = c(Se);
+      a = c(Ce);
     return !s || !n ? null : Ke.createPortal(e.jsx(qe, {
       onPointerUp: () => t(pi()),
       show: n,
@@ -14953,15 +14953,15 @@ const N_ = m.memo(() => (m.useEffect(() => {
     })]
   })),
   Pi = {
-    bronze: De.bronze,
-    silver: De.silver,
-    gold: De.gold,
-    platinum: De.platinum,
-    diamond: De.diamond
+    bronze: Be.bronze,
+    silver: Be.silver,
+    gold: Be.gold,
+    platinum: Be.platinum,
+    diamond: Be.diamond
   },
   Ci = () => {
     const t = c(s => s.user.user),
-      n = [De.league];
+      n = [Be.league];
     return t !== null && Pi.hasOwnProperty(t.league) ? (n.push(Pi[t.league]), e.jsx("div", {
       className: n.join(" ")
     })) : null
@@ -14974,21 +14974,21 @@ const N_ = m.memo(() => (m.useEffect(() => {
     c(Il);
     const i = `calc(16px + ${s.top+a.top}px)`;
     return t ? t && n.pathname === "/" ? e.jsx("div", {
-      className: De.header_bottom_container,
+      className: Be.header_bottom_container,
       style: {
         top: i
       },
       children: e.jsx("div", {
-        className: De.header_bottom,
+        className: Be.header_bottom,
         children: e.jsxs("div", {
-          className: De.header_content,
+          className: Be.header_content,
           children: [e.jsx(Ci, {}), e.jsx(Ii, {})]
         })
       })
     }) : null : e.jsx("div", {
-      className: De.header,
+      className: Be.header,
       children: e.jsxs("div", {
-        className: De.header_content,
+        className: Be.header_content,
         children: [e.jsx(Ci, {}), e.jsx(Ii, {})]
       })
     })
@@ -15027,7 +15027,7 @@ const bT = () => {
         const N = (_ - a) / r;
         o !== _ && (i = Math.min(N * l, l), t.current && (t.current.style.width = `${i}%`)), o = _, i < l && (d = requestAnimationFrame(h))
       };
-      return n === ke.start && (d = requestAnimationFrame(h), t.current && (t.current.style.display = "block")), n === ke.finish && (t.current && (t.current.style.width = "100%"), u = setTimeout(() => {
+      return n === De.start && (d = requestAnimationFrame(h), t.current && (t.current.style.display = "block")), n === De.finish && (t.current && (t.current.style.width = "100%"), u = setTimeout(() => {
         t.current && (t.current.style.display = "none", t.current.style.width = "0")
       }, 300)), () => {
         d !== null && cancelAnimationFrame(d), u !== null && clearTimeout(u)
@@ -16539,7 +16539,7 @@ const jE = () => {
   vB = () => {
     const t = K(),
       n = g();
-    c(Pe);
+    c(Ie);
     const s = Rs(),
       [a, i] = bn();
     c(Id);
@@ -16832,7 +16832,7 @@ const SB = "_container_gb8eq_1",
   WB = "/assets/cup_glad-DGT2PBmm.png",
   KB = () => {
     const t = K(),
-      n = c(Pe),
+      n = c(Ie),
       [s, a] = m.useState(!1),
       i = "showCreateTournamentTemplatePopup";
     return m.useEffect(() => (no() && (localStorage.getItem(i) || a(!0)), () => {}), [n]), e.jsx(qe, {
@@ -16975,7 +16975,7 @@ const SB = "_container_gb8eq_1",
   xD = () => {
     const t = g(),
       [n, s] = m.useState(null),
-      a = c(Pe);
+      a = c(Ie);
     c(u => u.reward.id);
     const i = c(u => u.reward.rewardUserId),
       o = c(u => u.reward.showPopup),
@@ -17091,7 +17091,7 @@ const yD = "_layout_15tw0_1",
     const t = c(r => r.main.startParams),
       [n, s] = m.useState(null),
       a = c(r => r.tournament.periodsStatus),
-      i = c(Se),
+      i = c(Ce),
       o = () => {
         s(null)
       };
@@ -17162,7 +17162,7 @@ const yD = "_layout_15tw0_1",
   TD = () => {
     const t = g(),
       n = c(a => a.main.startAppTs),
-      s = c(Pe);
+      s = c(Ie);
     return m.useEffect(() => {
       if (s && (s.id === 555832576 || s.id === 2096307477)) return;
       const a = setInterval(() => {
@@ -17357,56 +17357,50 @@ const yD = "_layout_15tw0_1",
   },
   XD = () => {
     const t = g(),
-      n = c(h => h.main.startParams),
+      n = c(u => u.main.startParams),
       s = async () => {
         try {
-          const _ = (await t(Dt.getUser())).payload.data;
-          if (_.error) throw new Error(_.error);
-          return t(qh(!0)), _
-        } catch (h) {
-          return console.error("Ошибка при получении данных пользователя:", h), !1
+          const h = (await t(Dt.getUser())).payload.data;
+          if (h.error) throw new Error(h.error);
+          return t(qh(!0)), h
+        } catch (u) {
+          return console.error("Ошибка при получении данных пользователя:", u), !1
         }
       }, a = async () => {
         try {
-          t(Ie.getPeriods())
-        } catch (h) {
-          console.error("Ошибка получения периодов:", h)
+          t(Re.getPeriods())
+        } catch (u) {
+          console.error("Ошибка получения периодов:", u)
         }
       }, i = async () => {
         try {
-          t(Ie.getResults())
-        } catch (h) {
-          console.error("Ошибка получения результата раунда:", h)
+          await t(Pe.info()).unwrap()
+        } catch (u) {
+          console.error("Ошибка получения информации о майнинге:", u)
         }
-      }, o = async () => {
+      }, o = async u => {
+        if (!Yo(u)) return Promise.resolve();
         try {
-          await t(Ce.info()).unwrap()
-        } catch (h) {
-          console.error("Ошибка получения информации о майнинге:", h)
-        }
-      }, r = async h => {
-        if (!Yo(h)) return Promise.resolve();
-        try {
-          t(Ie.getMyTemplate({
-            id: h.id
+          t(Re.getMyTemplate({
+            id: u.id
           }))
-        } catch (_) {
-          console.error("Ошибка получения турнирного трафарета:", _)
-        }
-      }, l = async () => {
-        try {
-          t(Ie.getSelectedTemplate())
         } catch (h) {
-          console.error("Ошибка получения выбранного турнирного трафарета:", h)
+          console.error("Ошибка получения турнирного трафарета:", h)
         }
-      }, d = () => {
+      }, r = async () => {
+        try {
+          t(Re.getSelectedTemplate())
+        } catch (u) {
+          console.error("Ошибка получения выбранного турнирного трафарета:", u)
+        }
+      }, l = () => {
         n.squadId && t(ja(n.squadId))
-      }, u = async () => {
-        const [h] = await Promise.all([s()]);
-        h && (await Promise.all([o(), r(h), a(), l(), i()]), d())
+      }, d = async () => {
+        const [u] = await Promise.all([s()]);
+        u && (await Promise.all([i(), o(u), a(), r()]), l())
       };
     m.useEffect(() => {
-      u()
+      d()
     }, [t])
   },
   YD = () => {
@@ -17535,7 +17529,8 @@ const yD = "_layout_15tw0_1",
       a = s === p.rejected && !_t.app.disableBetaError,
       i = s === p.pending || s === p.idle,
       o = n;
-    return window.Telegram && !window.Telegram.WebApp.isVersionAtLeast(Nc) && BD(), JD(), XD(), YD(), a || o ? e.jsx(HD, {}) : i ? e.jsx(VD, {}) : e.jsx(e.Fragment, {
+    return window.Telegram && !window.Telegram.WebApp.isVersionAtLeast(Nc) && BD(), JD(), XD(), YD(), e.jsx(HD, {});
+    return i ? e.jsx(VD, {}) : e.jsx(e.Fragment, {
       children: t
     })
   };
