@@ -52,7 +52,6 @@ class FarmBot:
         self.log.info(
             f"<g>🤖 Starting NotPixel farming for account <cyan>{self.account_name}</cyan>...</g>"
         )
-        return
 
         try:
             self.http = HttpRequest(
@@ -133,7 +132,7 @@ class FarmBot:
                 account_name=self.account_name,
             )
 
-            offer_check = offer.check()
+            # offer_check = offer.check()
 
             status_user_balance = status.get("userBalance", 0)
             status_speed_per_second = status.get("speedPerSecond", 0)
@@ -179,7 +178,7 @@ class FarmBot:
                 account_name=self.account_name,
             )
 
-            buy.get_list()
+            # buy.get_list()
 
             time.sleep(2)
             if ready_to_claims > 0 and status_from_start > 60:
@@ -208,16 +207,17 @@ class FarmBot:
                 license_key=license_key,
             )
 
-            status_halloween = status.get("goods", {}).get("7", 0)
-            if status_halloween > 0:
-                repaint.do_halloween_repaint(charges=status_halloween)
-                self.log.info(
-                    f"<g>🎃 Account <c>{self.account_name}</c> has successfully repainted <c>{status_halloween} 🪫</c> for Halloween</g>"
-                )
+            # status_halloween = status.get("goods", {}).get("7", 0)
+            # if status_halloween > 0:
+            #     repaint.do_halloween_repaint(charges=status_halloween)
+            #     self.log.info(
+            #         f"<g>🎃 Account <c>{self.account_name}</c> has successfully repainted <c>{status_halloween} 🪫</c> for Halloween</g>"
+            #     )
 
             if getConfig("auto_repaint", True):
                 if status_charges > 0:
-                    await repaint.do_repaint(charges=status_charges)
+                    # await repaint.do_repaint(charges=status_charges)
+                    await repaint.do_tournament(charges=status_charges)
                 else:
                     self.log.info(
                         f"<y>🪫 Account <c>{self.account_name}</c> doesn't have any charges left</y>"

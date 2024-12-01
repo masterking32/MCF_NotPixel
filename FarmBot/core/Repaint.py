@@ -83,7 +83,6 @@ class Repaint:
             )
 
     async def do_repaint(self, charges=0):
-        return
         try:
             self.log.info(
                 f"<g>🎨 Repainting <c>{charges}</c> pixels for <c>{self.account_name}</c>...</g>"
@@ -92,6 +91,7 @@ class Repaint:
             self.log.info(
                 f"<g>🖼️ Getting templates for <c>{self.account_name}</c>...</g>"
             )
+
             # templates = self.get_template_list()
             # if templates is None:
             #     return
@@ -232,6 +232,122 @@ class Repaint:
             self.log.error(
                 f"<r>❌ Error repainting pixels for <c>{self.account_name}</c>: {e}</r>"
             )
+
+    def get_tournament_template(self):
+        try:
+            response = self.http.get(f"/api/v1/tournament/template/subscribe/my")
+            if response is None:
+                return None
+
+            return response
+        except Exception as e:
+            self.log.error(f"<r>❌ Error getting tournament template: {e}</r>")
+            return None
+
+    async def do_tournament(self, charges=0):
+        try:
+            self.log.info(
+                f"<g>🎨 Repainting <c>{charges}</c> pixels for <c>{self.account_name}</c>...</g>"
+            )
+
+            self.log.info(
+                f"<g>🖼️ Getting tournament template for <c>{self.account_name}</c>...</g>"
+            )
+
+            template = self.get_tournament_template()
+            template_id = None
+            image_size = 32
+            image_x = 0
+            image_y = 0
+            if template is None:
+                self.log.info(
+                    f"<y>🟡 Account <c>{self.account_name}</c> has no tournament template right now!</y>"
+                )
+
+                tournament_templates = self.get_tournament_template_list()
+
+                if tournament_templates is None or "list" not in tournament_templates:
+                    self.log.error(
+                        f"<y>🟡 Unable to get tournament templates for <c>{self.account_name}</c></y>"
+                    )
+                    return
+
+                template = random.choice(tournament_templates["list"])
+                template_id = template.get("id", None)
+                self.log.info(
+                    f"<g>🖼️ Setting tournament template for <c>{self.account_name}</c>...</g>"
+                )
+
+                set_template = self.put_tournament_template(template_id)
+                if set_template is False:
+                    self.log.error(
+                        f"<y>🟡 Unable to set tournament template for <c>{self.account_name}</c></y>"
+                    )
+                    return
+
+                self.log.info(
+                    f"<g>✅ Tournament template set for <c>{self.account_name}</c></g>"
+                )
+            else:
+                template_id = template.get("id", None)
+
+            if template_id is None:
+                self.log.error(
+                    f"<y>🟡 Unable to get tournament template for <c>{self.account_name}</c></y>"
+                )
+                return
+
+            self.log.info(
+                f"<g>🖼️ Painting tournament template <c>{template_id}</c> for <c>{self.account_name}</c>...</g>"
+            )
+
+            self.log.info(
+                f"<y>📷 Currently, painting is not supported for tournaments...</y>"
+            )
+
+            return
+
+            image_size = template.get("size", 32)
+            image_x = template.get("x", 0)
+            image_y = template.get("y", 0)
+
+            self.log.info(
+                f"<g>📷 Fetching pixels for the tournament template <c>{template_id}</c> from the API for account <c>{self.account_name}</c>...</g>"
+            )
+
+        except Exception as e:
+            self.log.error(
+                f"<r>❌ Error repainting pixels for <c>{self.account_name}</c>: {e}</r>"
+            )
+
+    def put_tournament_template(self, template_id):
+        try:
+            response = self.http.put(
+                f"/api/v1/tournament/template/subscribe/{template_id}",
+                only_json_response=False,
+                display_errors=False,
+            )
+
+            if response is None:
+                return False
+
+            return True
+        except Exception as e:
+            self.log.error(f"<r>❌ Error setting tournament template: {e}</r>")
+            return False
+
+    def get_tournament_template_list(self):
+        try:
+            response = self.http.get(
+                f"/api/v1/tournament/template/list?limit=16&offset=128"
+            )
+            if response is None:
+                return None
+
+            return response
+        except Exception as e:
+            self.log.error(f"<r>❌ Error getting tournament templates: {e}</r>")
+            return None
 
     def start_repaint(self, pixel_id, pixel_newColor):
         try:
