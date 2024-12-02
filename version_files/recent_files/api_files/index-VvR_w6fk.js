@@ -10271,7 +10271,7 @@ const D_ = m.memo(() => (m.useEffect(() => {
     }), e.jsx("div", {
       className: x.value_container,
       children: e.jsxs("span", {
-        className: `${x.value_text} ${x.positive_color}`,
+        className: `${x.value_text} ${t.balanceChange>=0?x.positive_color:x.negative_color}`,
         children: [t.balanceChange >= 0 ? "+" : "-", t.balanceChange]
       })
     })]
