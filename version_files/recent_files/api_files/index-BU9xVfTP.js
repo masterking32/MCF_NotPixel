@@ -10220,7 +10220,7 @@ const B_ = m.memo(() => (m.useEffect(() => {
       className: x.value_container,
       children: e.jsxs("span", {
         className: `${x.value_text} ${x.positive_color}`,
-        children: ["+", t.balanceChange]
+        children: [t.balanceChange >= 0 ? "+" : "-", t.balanceChange]
       })
     })]
   }),
