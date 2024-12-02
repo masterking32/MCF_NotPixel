@@ -235,7 +235,9 @@ class Repaint:
 
     def get_tournament_template(self):
         try:
-            response = self.http.get(f"/api/v1/tournament/template/subscribe/my")
+            response = self.http.get(
+                f"/api/v1/tournament/template/subscribe/my", display_errors=False
+            )
             if response is None:
                 return None
 
@@ -301,19 +303,64 @@ class Repaint:
                 f"<g>🖼️ Painting tournament template <c>{template_id}</c> for <c>{self.account_name}</c>...</g>"
             )
 
-            self.log.info(
-                f"<y>📷 Currently, painting is not supported for tournaments...</y>"
-            )
-
-            return
-
             image_size = template.get("size", 32)
             image_x = template.get("x", 0)
             image_y = template.get("y", 0)
+            image_url = template.get("url", None)
 
             self.log.info(
                 f"<g>📷 Fetching pixels for the tournament template <c>{template_id}</c> from the API for account <c>{self.account_name}</c>...</g>"
             )
+
+            response = self.get_api_tasks_list(template_id, image_size, image_url)
+            if response is None:
+                return
+
+            if self.pixels is None:
+                self.log.error(
+                    f"<y>🟡 Unable to get pixels for <c>{self.account_name}</c></y>"
+                )
+                return
+
+            while charges > 0:
+                if self.pixels is None or len(self.pixels) == 0:
+                    break
+
+                random_pixel = self.pixels.pop()
+                if random_pixel is None:
+                    break
+
+                pixel_x = random_pixel.get("x", 0) + image_x
+                pixel_y = random_pixel.get("y", 0) + image_y
+                pixel_color = random_pixel.get("color", "#000000")
+
+                if pixel_x < 0 or pixel_y < 0:
+                    continue
+
+                self.log.info(
+                    f"<g>🎨 Repainting pixel at X: <c>{pixel_x}</c>, Y: <c>{pixel_y}</c> with color: <c>{pixel_color}</c> for account: <c>{self.account_name}</c>...</g>"
+                )
+
+                pixel_x += 1
+                pixel_x = str(pixel_x).zfill(3)
+                pixel_id = int(f"{pixel_y}{pixel_x}")
+
+                paint_resp = self.start_repaint(pixel_id, pixel_color)
+
+                if paint_resp is None:
+                    return
+
+                if "balance" in paint_resp:
+                    balance = paint_resp["balance"]
+                    self.log.info(
+                        f"<g>💰 New balance after painting: <c>{balance}</c></g>"
+                    )
+
+                charges -= 1
+
+                # No wait like fast mode.
+                # sleep_random = random.randint(5, 10)
+                # await asyncio.sleep(sleep_random)
 
         except Exception as e:
             self.log.error(
@@ -339,7 +386,7 @@ class Repaint:
     def get_tournament_template_list(self):
         try:
             response = self.http.get(
-                f"/api/v1/tournament/template/list?limit=16&offset=128"
+                f"/api/v1/tournament/template/list?limit=16&offset=96"
             )
             if response is None:
                 return None
@@ -370,7 +417,7 @@ class Repaint:
         except Exception as e:
             self.log.error(f"<y>🟡 Error for <c>{self.account_name}</c>: {e}</y>")
 
-    def get_api_tasks_list(self, image_id, imageSize):
+    def get_api_tasks_list(self, image_id, imageSize, tournament_url=None):
         if self.license_key is None:
             return None
 
@@ -382,6 +429,9 @@ class Repaint:
             "image_id": image_id,
             "imageSize": imageSize,
         }
+
+        if tournament_url is not None:
+            data["tournament"] = tournament_url
 
         response = apiObj.get_task_answer(self.license_key, data)
 
