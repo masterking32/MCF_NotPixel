@@ -9475,7 +9475,7 @@ const D_ = m.memo(() => (m.useEffect(() => {
     className: Ie.text,
     children: [e.jsx("span", {
       className: Ie.gold,
-      children: "Round 1"
+      children: "Round 2"
     }), e.jsx(iy, {})]
   }),
   ry = () => {
