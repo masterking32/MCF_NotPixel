@@ -1247,7 +1247,7 @@ const Hc = {
         })]
       }), a === "sale" && e.jsx("div", {
         className: Ae.info_row_sale,
-        children: "-75%"
+        children: "-50%"
       }), a === "limited" && e.jsx("div", {
         style: {
           backgroundColor: "#026e4f",
@@ -1864,7 +1864,7 @@ const Hc = {
               const o = n[i];
               let r = !((i === 4 || i === 5) && s[i] > 0);
               {
-                let l = i >= 9 && i <= 11 ? "limited" : "regular";
+                let l = i >= 9 && i <= 11 ? "limited" : "sale";
                 return e.jsx(vl, {
                   item: o,
                   active: r,
@@ -13473,7 +13473,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       n = c(a => a.tournament.myTemplate);
     let s = Vt.review;
-    return n && n.approved && (s = Vt.approved), n && n.deletedAt && (s = Vt.rejected), e.jsxs("div", {
+    return n && n.approved && (s = Vt.approved), n && (n.deletedAt || n.approved === !1) && (s = Vt.rejected), e.jsxs("div", {
       className: $.instruction_container,
       children: [n && e.jsx("div", {
         children: "Current template:"
@@ -14021,7 +14021,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
       i = a < 0,
       o = t.template,
       r = o.rank,
-      l = r < o.lastSurvivalRank,
+      l = r <= o.lastSurvivalRank,
       d = o.lastSurvivalRepaints - o.repaints,
       u = i && l,
       h = s && s === t.round_id,
