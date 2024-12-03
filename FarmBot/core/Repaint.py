@@ -246,7 +246,20 @@ class Repaint:
             self.log.error(f"<r>❌ Error getting tournament template: {e}</r>")
             return None
 
-    async def do_tournament(self, charges=0):
+    def get_tournament_priods(self):
+        try:
+            response = self.http.get(
+                f"/api/v1/tournament/periods", display_errors=False
+            )
+            if response is None:
+                return None
+
+            return response
+        except Exception as e:
+            self.log.error(f"<r>❌ Error getting tournament periods: {e}</r>")
+            return None
+
+    async def do_tournament(self, charges=0, round_id=0, is_break=False):
         try:
             self.log.info(
                 f"<g>🎨 Repainting <c>{charges}</c> pixels for <c>{self.account_name}</c>...</g>"
@@ -308,6 +321,9 @@ class Repaint:
             image_y = template.get("y", 0)
             image_url = template.get("url", None)
 
+            # board_size = 2048 / round_id
+            board_size = 1024
+
             self.log.info(
                 f"<g>📷 Fetching pixels for the tournament template <c>{template_id}</c> from the API for account <c>{self.account_name}</c>...</g>"
             )
@@ -330,20 +346,25 @@ class Repaint:
                 if random_pixel is None:
                     break
 
-                pixel_x = random_pixel.get("x", 0) + image_x
-                pixel_y = random_pixel.get("y", 0) + image_y
+                pixel_x = random_pixel.get("x", 0)
+                pixel_y = random_pixel.get("y", 0)
                 pixel_color = random_pixel.get("color", "#000000")
 
                 if pixel_x < 0 or pixel_y < 0:
                     continue
 
-                self.log.info(
-                    f"<g>🎨 Repainting pixel at X: <c>{pixel_x}</c>, Y: <c>{pixel_y}</c> with color: <c>{pixel_color}</c> for account: <c>{self.account_name}</c>...</g>"
-                )
+                pixel_id = (board_size * (pixel_y + image_y)) + pixel_x + image_x + 1
+                if pixel_id > board_size * board_size or pixel_id < 1:
+                    self.log.error(
+                        f"<y>🟡 Pixel ID out of range for <c>{self.account_name}</c></y>"
+                    )
+                    continue
 
-                pixel_x += 1
-                pixel_x = str(pixel_x).zfill(3)
-                pixel_id = int(f"{pixel_y}{pixel_x}")
+                pixel_x += image_x
+                pixel_y += image_y
+                self.log.info(
+                    f"<g>🎨 Repainting pixel at X: <c>{pixel_x}</c>, Y: <c>{pixel_y}</c>, pixel id: <c>{pixel_id}</c> with color: <c>{pixel_color}</c> for account: <c>{self.account_name}</c>...</g>"
+                )
 
                 paint_resp = self.start_repaint(pixel_id, pixel_color)
 
@@ -357,7 +378,6 @@ class Repaint:
                     )
 
                 charges -= 1
-
                 # No wait like fast mode.
                 # sleep_random = random.randint(5, 10)
                 # await asyncio.sleep(sleep_random)
@@ -386,7 +406,7 @@ class Repaint:
     def get_tournament_template_list(self):
         try:
             response = self.http.get(
-                f"/api/v1/tournament/template/list?limit=16&offset=96"
+                f"/api/v1/tournament/template/list/random?limit=16"
             )
             if response is None:
                 return None

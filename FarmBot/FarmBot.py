@@ -169,6 +169,15 @@ class FarmBot:
                 license_key=license_key,
             )
 
+            repaint = Repaint(
+                log=self.log,
+                httpRequest=self.http,
+                account_name=self.account_name,
+                license_key=license_key,
+            )
+
+            priods = repaint.get_tournament_priods()
+
             if getConfig("auto_finish_secret_mission", True):
                 secrets.finish_secret_mission()
 
@@ -200,13 +209,6 @@ class FarmBot:
             else:
                 self.log.info(f"<y>🟡 Auto-finish tasks is disabled</y>")
 
-            repaint = Repaint(
-                log=self.log,
-                httpRequest=self.http,
-                account_name=self.account_name,
-                license_key=license_key,
-            )
-
             # status_halloween = status.get("goods", {}).get("7", 0)
             # if status_halloween > 0:
             #     repaint.do_halloween_repaint(charges=status_halloween)
@@ -217,7 +219,45 @@ class FarmBot:
             if getConfig("auto_repaint", True):
                 if status_charges > 0:
                     # await repaint.do_repaint(charges=status_charges)
-                    await repaint.do_tournament(charges=status_charges)
+                    if (
+                        priods is not None
+                        and "activePeriod" in priods
+                        and "PeriodType" in priods["activePeriod"]
+                    ):
+                        if (
+                            priods["activePeriod"]["PeriodType"] == "round"
+                            and "RoundID" in priods["activePeriod"]
+                            and priods["activePeriod"].get("RoundID", 0) > 0
+                        ):
+                            round_id = priods["activePeriod"].get("RoundID", 0)
+                            self.log.info(
+                                f"<g>🎯 Account <c>{self.account_name}</c> is in a round <c>{round_id}</c></g>"
+                            )
+
+                            await repaint.do_tournament(
+                                charges=status_charges,
+                                round_id=round_id,
+                                is_break=False,
+                            )
+                        elif priods["activePeriod"]["PeriodType"] == "break":
+                            self.log.info(
+                                f"<g>🎨 Account <c>{self.account_name}</c> is in a tournament break</g>"
+                            )
+
+                            await repaint.do_tournament(
+                                charges=status_charges,
+                                round_id=0,
+                                is_break=True,
+                            )
+                        else:
+                            self.log.info(
+                                f"<g>🎨 Account <c>{self.account_name}</c> is not in a tournament 2</g>"
+                            )
+                    else:
+                        self.log.info(
+                            f"<g>🎨 Account <c>{self.account_name}</c> is not in a tournament</g>"
+                        )
+
                 else:
                     self.log.info(
                         f"<y>🪫 Account <c>{self.account_name}</c> doesn't have any charges left</y>"
