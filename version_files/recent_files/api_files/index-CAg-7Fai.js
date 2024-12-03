@@ -351,7 +351,7 @@ C.interceptors.request.use(function(t) {
   return Bc.includes(t.url), t
 });
 C.interceptors.response.use(t => t, t => Promise.reject(t));
-class Y {
+class W {
   static async getPrices() {
     return C.get("/image/prices")
   }
@@ -533,7 +533,7 @@ F("main/startTransaction", async ({
   pixelId: t,
   newColor: n,
   buyerWallet: s
-}) => (await Y.startTransaction({
+}) => (await W.startTransaction({
   pixelId: t,
   newColor: n,
   buyerWallet: s
@@ -987,12 +987,12 @@ const Hc = {
     limitedEnd: null,
     showLimitedGoodPopup: !1
   },
-  Gn = F("shop/getProducts", async () => (await Y.getProducts()).data),
+  Gn = F("shop/getProducts", async () => (await W.getProducts()).data),
   Xn = F("shop/useProduct", async ({
     pixelId: t,
     productId: n,
     color: s
-  }) => (await Y.useProduct({
+  }) => (await W.useProduct({
     pixelId: t,
     productId: n,
     color: s
@@ -1069,8 +1069,8 @@ const Hc = {
     }
   }),
   {
-    setProductCard: it,
-    showProductCard: ot,
+    setProductCard: ot,
+    showProductCard: rt,
     hideProductCard: Qa,
     increaseAmount: Y4,
     decreaseAmount: W4,
@@ -1218,7 +1218,7 @@ const Hc = {
     return e.jsxs("div", {
       className: l.join(" "),
       onPointerUp: () => {
-        n && (i(it(t.id)), i(ot()))
+        n && (i(ot(t.id)), i(rt()))
       },
       children: [e.jsxs("div", {
         className: Ae.info_row_content,
@@ -1346,7 +1346,7 @@ const Hc = {
     setDeviceInfo: Bl,
     setFullscreen: El
   } = co.actions,
-  rt = t => t.device.platform,
+  ct = t => t.device.platform,
   Dl = t => t.device.os,
   kl = t => t.device.deviceType,
   wt = t => t.device.fullscreen,
@@ -1354,7 +1354,7 @@ const Hc = {
   uo = t => t.device.safeAreaInset,
   Rl = co.reducer,
   Ml = () => {
-    const [t, n] = m.useState("Stars"), s = c(rt);
+    const [t, n] = m.useState("Stars"), s = c(ct);
     return e.jsx("div", {
       className: aa.panel,
       children: ["Star Shop"].map(a => e.jsxs("div", {
@@ -1579,7 +1579,7 @@ const Hc = {
   }) : null, Ad = m.memo(() => {
     console.log("render");
     const t = Array.from(Array(30)),
-      n = c(rt);
+      n = c(ct);
     return e.jsx("div", {
       className: On.layout,
       children: e.jsx("div", {
@@ -1618,7 +1618,7 @@ const Hc = {
         children: "Pay support"
       })
     })
-  }, _d = "_layout_gx8in_1", fd = "_container_gx8in_5", xd = "_item_gx8in_11", yd = "_active_gx8in_20", vd = "_image_container_gx8in_24", wd = "_image_gx8in_24", jd = "_item_text_container_gx8in_34", bd = "_item_text_gx8in_34", ct = {
+  }, _d = "_layout_gx8in_1", fd = "_container_gx8in_5", xd = "_item_gx8in_11", yd = "_active_gx8in_20", vd = "_image_container_gx8in_24", wd = "_image_gx8in_24", jd = "_item_text_container_gx8in_34", bd = "_item_text_gx8in_34", lt = {
     layout: _d,
     container: fd,
     item: xd,
@@ -1649,20 +1649,20 @@ const Hc = {
   }, Jn = F("user/getUserPixels", async ({
     offset: t,
     limit: n
-  }) => (await Y.getUserPixels({
+  }) => (await W.getUserPixels({
     offset: t,
     limit: n
-  })).data), Yn = F("user/getPixelsForSaleTotal", async () => (await Y.getUserPixelsCount()).data), Wn = F("user/getUserPixelsSold", async ({
+  })).data), Yn = F("user/getPixelsForSaleTotal", async () => (await W.getUserPixelsCount()).data), Wn = F("user/getUserPixelsSold", async ({
     offset: t,
     limit: n
-  }, s) => (await Y.getUserPixelsSold({
+  }, s) => (await W.getUserPixelsSold({
     offset: t,
     limit: n
   })).data), Kn = F("user/getUser", async (t, {
     rejectWithValue: n
   }) => {
     try {
-      const s = await Y.getUser();
+      const s = await W.getUser();
       if (s.data.error) return n(s.data.error);
       const a = s.headers.get("cf-ipcountry");
       return {
@@ -1772,32 +1772,32 @@ const Hc = {
     const t = g(),
       n = c(za),
       s = c(i => i.shop.selectedCurrency),
-      a = c(rt);
+      a = c(ct);
     return c(Oe), m.useEffect(() => {
       a === fe && s === 1 && t(wn(2))
     }, [a]), a !== fe ? null : e.jsx("div", {
-      className: ct.layout,
+      className: lt.layout,
       children: e.jsx("div", {
-        className: ct.container,
+        className: lt.container,
         children: n.map(i => {
           if (i.currency_id === 1) return null;
           const o = s === i.currency_id;
           return e.jsxs("div", {
-            className: M(ct.item, o ? ct.active : ""),
+            className: M(lt.item, o ? lt.active : ""),
             onPointerUp: () => {
               t(wn(i.currency_id))
             },
             children: [e.jsx("div", {
-              className: ct.image_container,
+              className: lt.image_container,
               children: e.jsx("img", {
                 alt: "img",
-                className: ct.image,
+                className: lt.image,
                 src: i.image
               })
             }), e.jsx("div", {
-              className: ct.item_text_container,
+              className: lt.item_text_container,
               children: e.jsx("span", {
-                className: ct.item_text,
+                className: lt.item_text,
                 children: i.name
               })
             })]
@@ -1823,7 +1823,7 @@ const Hc = {
     removeToast: Ai
   } = fo.actions, Od = fo.reducer, Fd = () => {
     const t = g(),
-      n = c(rt),
+      n = c(ct),
       [s, a] = m.useState(1);
     return e.jsx("img", {
       alt: "img",
@@ -1842,7 +1842,7 @@ const Hc = {
     const t = c(i => i.shop.order),
       n = c(i => i.shop.products),
       s = c(i => i.shop.available),
-      a = c(rt);
+      a = c(ct);
     return m.useEffect(() => {}, []), e.jsxs(le, {
       children: [e.jsxs("div", {
         className: Ae.stars_img_container,
@@ -3543,7 +3543,7 @@ const Zn = F("mining/info", async () => (await qs.info()).data),
         a.setConnectRequestParameters({
           state: "loading"
         });
-        const h = await Y.generateTonProofPayload();
+        const h = await W.generateTonProofPayload();
         if (h.status === 200 && h.data && h.data.payload) {
           const _ = h.data;
           a.setConnectRequestParameters({
@@ -3559,7 +3559,7 @@ const Zn = F("mining/info", async () => (await qs.info()).data),
       };
     return m.useEffect(() => {
       var h;
-      !o || d !== A.fulfilled || r && (i || (h = r == null ? void 0 : r.connectItems) != null && h.tonProof && !("error" in r.connectItems.tonProof) && Y.checkTonProof(r.connectItems.tonProof.proof, r.account).then(_ => {
+      !o || d !== A.fulfilled || r && (i || (h = r == null ? void 0 : r.connectItems) != null && h.tonProof && !("error" in r.connectItems.tonProof) && W.checkTonProof(r.connectItems.tonProof.proof, r.account).then(_ => {
         _.status === 200 && _.data.success ? t(ve.checkTask({
           key: n,
           reward: l
@@ -3760,7 +3760,7 @@ const Zn = F("mining/info", async () => (await qs.info()).data),
   Vm = "_pixel_image_265n2_1",
   Jm = "_pixel_copy_button_265n2_25",
   Ym = "_gray_265n2_35",
-  lt = {
+  dt = {
     pixel_image_popup: Gm,
     pixel_image_text_container: Xm,
     pixel_image: Vm,
@@ -3871,7 +3871,7 @@ const Zn = F("mining/info", async () => (await qs.info()).data),
               className: p.row_title,
               children: ["Add Pixel", " ", e.jsx("img", {
                 alt: "pixelimage",
-                className: lt.pixel_image,
+                className: dt.pixel_image,
                 src: la
               }), " ", "to your Telegram name"]
             })
@@ -3887,24 +3887,24 @@ const Zn = F("mining/info", async () => (await qs.info()).data),
         show: i,
         setShow: o,
         children: e.jsxs("div", {
-          className: lt.pixel_image_popup,
+          className: dt.pixel_image_popup,
           children: [e.jsxs("div", {
-            className: lt.pixel_image_text_container,
+            className: dt.pixel_image_text_container,
             children: [e.jsx("span", {
               children: "Add pixel"
             }), e.jsx("img", {
               alt: "emoji",
-              className: lt.pixel_image,
+              className: dt.pixel_image,
               src: la
             }), " ", e.jsx("span", {
               children: "emoji to your nickname!"
             })]
           }), e.jsx("div", {
-            className: lt.gray,
+            className: dt.gray,
             children: "This is step 1 of the TGE."
           }), e.jsx("div", {
             children: e.jsxs("button", {
-              className: lt.pixel_copy_button,
+              className: dt.pixel_copy_button,
               onPointerUp: async () => {
                 sn("▪️") ? (t(O({
                   id: performance.now(),
@@ -3919,13 +3919,13 @@ const Zn = F("mining/info", async () => (await qs.info()).data),
               },
               children: ["Copy", e.jsx("img", {
                 alt: "emoji",
-                className: lt.pixel_image,
+                className: dt.pixel_image,
                 src: la
               }), " ", "and close app"]
             })
           }), e.jsx("div", {
             children: e.jsx("button", {
-              className: lt.pixel_copy_button,
+              className: dt.pixel_copy_button,
               onPointerUp: () => {
                 t(ve.checkTask({
                   key: n,
@@ -4488,7 +4488,7 @@ const Co = fn.getSelectors(t => t.tournament.approvedTemplatesList),
     x: (t - 1) % B.width,
     y: Math.floor((t - 1) / B.height)
   }),
-  at = ({
+  it = ({
     x: t,
     y: n
   }) => t + n * B.width + 1,
@@ -4525,22 +4525,22 @@ const Co = fn.getSelectors(t => t.tournament.approvedTemplatesList),
   ns = F("canvas/repaint", async ({
     pixelId: t,
     newColor: n
-  }) => (await Y.startRepaint({
+  }) => (await W.startRepaint({
     pixelId: t,
     newColor: n
   })).data);
 let Yt = null;
 const Ia = F("canvas/getPixelInfo", async ({
     id: t
-  }) => (Yt !== null && (Yt.abort(), Yt = null), Yt = new AbortController, (await Y.getPixelInfo({
+  }) => (Yt !== null && (Yt.abort(), Yt = null), Yt = new AbortController, (await W.getPixelInfo({
     id: t,
     signal: Yt.signal
   })).data)),
-  ss = F("canvas/getPrices", async () => (await Y.getPrices()).data),
+  ss = F("canvas/getPrices", async () => (await W.getPrices()).data),
   as = F("canvas/getPriceMask", async ({
     price: t
   }) => {
-    const n = await Y.getPriceMask({
+    const n = await W.getPriceMask({
         price: t
       }),
       s = new Uint8Array(n.data);
@@ -4588,7 +4588,7 @@ const Ia = F("canvas/getPixelInfo", async ({
         }
       },
       addPaintCoords: (t, n) => {
-        xt(n.payload) && (t.stats = at(n.payload) ^ 3201282)
+        xt(n.payload) && (t.stats = it(n.payload) ^ 3201282)
       }
     },
     extraReducers: t => {
@@ -4697,7 +4697,7 @@ const Re = {
     }
   }),
   {
-    setProgressCommand: st
+    setProgressCommand: at
   } = Do.actions,
   mp = Do.reducer,
   Ap = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkBAMAAACCzIhnAAAAElBMVEVHcEz/////96f/uQD/WQDnERFRxRXOAAAAAXRSTlMAQObYZgAAAKRJREFUeNrt1MENgzAQRNEVUEBqmKUA5DF3C7sApJj+W4kQKcCjHLP//m6jsSiKoiiKon9uKjpZbYZIPEEkM6ESQCW8hQto2r7ExwnwkH2YzHhikUk+h8mSHuLCBBIO3K3j5O0HEgAfJz1XOAGOk0Y2eKVJJB2eFdKvnnbShFpl3clTIWRtVSJGdmYWhdR8ceubQuZiLCa1mDWTe8UzR1EURT/0AVQMHG7ZD4ErAAAAAElFTkSuQmCC",
@@ -4843,9 +4843,9 @@ const an = ko,
   Zp = {
     1: 1
   };
-let mt;
+let At;
 const $p = t => {
-  mt = t
+  At = t
 };
 let Pa = 0;
 setInterval(() => {
@@ -4861,7 +4861,7 @@ window.addEventListener("focus", () => {
 document.addEventListener("visibilitychange", () => {
   document.hidden ? bn = !1 : bn = !0
 });
-let pt = null;
+let st = null;
 const eh = (t, n) => {
     let s = {
       token: t
@@ -4870,7 +4870,7 @@ const eh = (t, n) => {
       data: new TextEncoder().encode(JSON.stringify({
         token: t
       }))
-    }), pt = new sc(Fa.replace("https", "wss").replace("api/v1/", "connection/websocket"), s), pt.on("connected", function(a) {
+    }), st = new sc(Fa.replace("https", "wss").replace("api/v1/", "connection/websocket"), s), st.on("connected", function(a) {
       if (console.log(`connected over ${a.transport}`), !ba()) return;
       console.log("centrifuge image");
       const i = new Blob([a.data], {
@@ -4879,7 +4879,7 @@ const eh = (t, n) => {
         o = new Image;
       o.src = URL.createObjectURL(i), o.onload = () => {
         y.mainImage.loadFromCentrifuge(o).then(() => {
-          const l = mt.getState().main.startParams.coords;
+          const l = At.getState().main.startParams.coords;
           l && (y.viewport.viewport.animate({
             scale: 60,
             time: 400,
@@ -4887,19 +4887,19 @@ const eh = (t, n) => {
               x: l.x + .5,
               y: l.y + .5
             }
-          }), y.mainImage.selectedPixel.draw(l), mt.dispatch(kt(l)))
+          }), y.mainImage.selectedPixel.draw(l), At.dispatch(kt(l)))
         })
       }
-    }), pt.on("disconnected", function(a) {
+    }), st.on("disconnected", function(a) {
       console.log(`disconnected: ${a.code}, ${a.reason}`)
-    }), pt.on("error", function(a) {
+    }), st.on("error", function(a) {
       console.log(a)
-    }), pt.on("publication", function(a) {
+    }), st.on("publication", function(a) {
       if (a.channel === "event:message") {
         JSON.parse(new TextDecoder().decode(a.data)).forEach(r => {
           const l = JSON.parse(r.data);
-          if (r.type === ta.pixanos && mt.dispatch(ih(l)), l.user.userId === n || !bn) return;
-          const u = mt.getState().canvas.animations;
+          if (r.type === ta.pixanos && At.dispatch(ih(l)), l.user.userId === n || !bn) return;
+          const u = At.getState().canvas.animations;
           if (r.type === ta.bomb) {
             const h = Es(l.info.pixelId);
             u && y.mainImage.bomb.boomWithDebounce(h), y.mainImage.paintSquare({
@@ -4926,11 +4926,11 @@ const eh = (t, n) => {
           }), y.mainImage.paintPixelsFromCentrifuge(l);
           else if (a.channel === `personal:user#${n}`) {
             const d = JSON.parse(new TextDecoder().decode(r));
-            if (d.type === Zp[1] && mt.getState().daily.list.entities[d.good_id]) {
-              const u = mt.getState().daily.list.entities[d.good_id],
+            if (d.type === Zp[1] && At.getState().daily.list.entities[d.good_id]) {
+              const u = At.getState().daily.list.entities[d.good_id],
                 h = u.name,
                 _ = u.prices[0].quantity;
-              mt.dispatch(O({
+              At.dispatch(O({
                 id: performance.now(),
                 text: `Transaction for daily ${u.id} completed! Got ${h} x${_}. Refresh the app.`,
                 icon: ""
@@ -4939,7 +4939,7 @@ const eh = (t, n) => {
           } else console.log("unknown channel", a)
         }
       })
-    }), pt.connect()
+    }), st.connect()
   },
   th = () => !1,
   nh = {
@@ -5121,7 +5121,7 @@ const eh = (t, n) => {
     initialState: nh,
     reducers: {
       setTimeLimit: t => {
-        t.timeLimit = !0, pt && pt.disconnect()
+        t.timeLimit = !0, st && st.disconnect()
       },
       updateSettings: (t, n) => {
         t.settings = {
@@ -5554,10 +5554,10 @@ const tg = async ({
   state: o
 }) => {
   var l, d;
-  if (!n && o && (n = o.shop.available[1], s = o.mining.charges, a = o.mining.maxCharges, i = o.shop.useProductStatus), !n || n === 0) return t(Qs(10)), t(it(1)), t(ot()), t(Oo()), !1;
+  if (!n && o && (n = o.shop.available[1], s = o.mining.charges, a = o.mining.maxCharges, i = o.shop.useProductStatus), !n || n === 0) return t(Qs(10)), t(ot(1)), t(rt()), t(Oo()), !1;
   if (s === a) return !1;
   if (Aa) return A.pending;
-  Aa = !0, t(st({
+  Aa = !0, t(at({
     command: Re.start
   }));
   try {
@@ -5571,7 +5571,7 @@ const tg = async ({
   } catch (u) {
     console.log("error", u)
   } finally {
-    Aa = !1, t(st({
+    Aa = !1, t(at({
       command: Re.finish
     }))
   }
@@ -5589,7 +5589,7 @@ const tg = async ({
     onPointerUp: async () => {
       if (r) t(Oo());
       else {
-        if (!a || a === 0) return t(it(s)), t(ot()), !1;
+        if (!a || a === 0) return t(ot(s)), t(rt()), !1;
         t(ah())
       }
     },
@@ -5704,7 +5704,7 @@ const is = F("ratings/personal", async ({
   rs = F("history/get", async ({
     offset: t,
     limit: n
-  }) => (await Y.getHistory({
+  }) => (await W.getHistory({
     offset: t,
     limit: n
   })).data),
@@ -5829,7 +5829,7 @@ const Vs = tn();
 Vs.startListening({
   matcher: xe(Hs.getPriceMask.pending, Dt.getPixelsForSale.pending, Dt.getPixelsSold.pending, Wa.get.pending),
   effect: (t, n) => {
-    n.dispatch(st({
+    n.dispatch(at({
       command: Re.start
     }))
   }
@@ -5837,7 +5837,7 @@ Vs.startListening({
 Vs.startListening({
   matcher: xe(Hs.getPriceMask.fulfilled, Dt.getPixelsForSale.fulfilled, Dt.getPixelsSold.fulfilled, Wa.get.fulfilled),
   effect: (t, n) => {
-    n.dispatch(st({
+    n.dispatch(at({
       command: Re.finish
     }))
   }
@@ -5845,7 +5845,7 @@ Vs.startListening({
 Vs.startListening({
   matcher: xe(Hs.getPriceMask.rejected),
   effect: (t, n) => {
-    t.error.code !== "ERR_CANCELED" && n.dispatch(st({
+    t.error.code !== "ERR_CANCELED" && n.dispatch(at({
       command: Re.finish
     }))
   }
@@ -5896,7 +5896,7 @@ const dg = {
   },
   cs = F("squad/getSquadInfo", async ({
     id: t
-  }) => (await Y.getSquadInfo({
+  }) => (await W.getSquadInfo({
     id: t
   })).data),
   Zo = he({
@@ -6132,8 +6132,8 @@ const mg = "/assets/halloween2-l9FmXxVI.png",
     getDailyListFetchStatus: A.idle,
     getFirstDailyFetchStatus: A.idle
   },
-  ms = F("daily/getList", async () => (await Y.getDailyList()).data),
-  As = F("daily/getFirstDaily", async () => (await Y.getFirstDaily()).data),
+  ms = F("daily/getList", async () => (await W.getDailyList()).data),
+  As = F("daily/getFirstDaily", async () => (await W.getFirstDaily()).data),
   nr = he({
     name: "daily",
     initialState: vg,
@@ -6429,12 +6429,12 @@ const ps = F("tournament/getPeriods", async () => (await ir.getPeriods()).data),
   Eg = or.reducer,
   vs = F("reward/getList", async ({
     userId: t
-  }) => (await Y.getRewards({
+  }) => (await W.getRewards({
     userId: t
   })).data),
   ha = F("reward/getById", async ({
     rewardId: t
-  }) => (await Y.getRewardById({
+  }) => (await W.getRewardById({
     rewardId: t
   })).data),
   Dg = {
@@ -6574,22 +6574,25 @@ const kn = Yr({
       flyCoords: n,
       repaintRewardType: i
     })), y.mainImage.paintPixel({
-      id: at(s),
+      id: it(s),
       color: Tt(a)
     }), y.mainImage.updateTexture(), await t(Yp(a)), await t(rp(s)), await t(Su());
-    const o = Y.startRepaint({
-      pixelId: at(s),
-      newColor: a
-    });
-    ws.push(o);
     try {
-      const r = await o;
-      r.status === 200 && (r.data.reward_user && r.data.reward_user.reward_id && (y.mainImage.reward.add(s), t(kg({
-        rewardId: r.data.reward_user.reward_id,
-        rewardUserId: r.data.reward_user.id
-      }))), t(go(r.data.balance)))
-    } catch (r) {
-      console.log(r, r.response.data.code === 16), r.response.data.code === 16 && t(ve.info())
+      const o = new TextEncoder().encode(JSON.stringify({
+          type: 0,
+          pixelId: it(s),
+          color: a
+        })),
+        r = await st.rpc("repaint", o);
+      ws.push(r);
+      const l = await r,
+        d = JSON.parse(new TextDecoder().decode(new Uint8Array(l.data)));
+      d && d.balance && (t(go(d.balance)), d.reward_user && d.reward_user.reward_id && (y.mainImage.reward.add(s), t(kg({
+        rewardId: d.reward_user.reward_id,
+        rewardUserId: d.reward_user.id
+      }))))
+    } catch (o) {
+      o.code && o.code === 5e3 && t(ve.info())
     }
   }, Lg = ({
     history: t,
@@ -6875,11 +6878,11 @@ const Xg = ({
   }) => {
     var r, l;
     if (!a && i && (a = i.shop.available[2]), !a || a === 0) {
-      n(Qs(10)), n(it(2)), n(ot()), n(Ot());
+      n(Qs(10)), n(ot(2)), n(rt()), n(Ot());
       return
     }
     y.mainImage.bomb.boom(t), n(Ls.useProduct({
-      pixelId: at(t),
+      pixelId: it(t),
       productId: 2
     })), n(Mt(s * Xg(t))), n(zs({
       product: 2,
@@ -6900,7 +6903,7 @@ const Xg = ({
         if (i === "bomb") {
           t(Ot());
           return
-        }!a || a === 0 ? (t(it(n)), t(ot())) : t(Xs("bomb"))
+        }!a || a === 0 ? (t(ot(n)), t(rt())) : t(Xs("bomb"))
       },
       children: [e.jsx("img", {
         alt: "img",
@@ -6948,7 +6951,7 @@ const Xg = ({
   }) => {
     var l, d;
     if (!i && o && (i = o.shop.available[6]), !i || i === 0) {
-      n(Qs(10)), n(it(6)), n(ot()), n(Ot());
+      n(Qs(10)), n(ot(6)), n(rt()), n(Ot());
       return
     }
     y.mainImage.paintSquare({
@@ -6957,7 +6960,7 @@ const Xg = ({
       size: 3,
       colors: Array.from(Array(3 * 3), () => a)
     }), n(Ls.useProduct({
-      pixelId: at(t),
+      pixelId: it(t),
       productId: 6,
       color: a
     })), n(Mt(s * Yg(t))), n(zs({
@@ -6979,7 +6982,7 @@ const Xg = ({
         if (i === "paintcan") {
           t(Ot());
           return
-        }!a || a === 0 ? (t(it(n)), t(ot())) : t(Xs("paintcan"))
+        }!a || a === 0 ? (t(ot(n)), t(rt())) : t(Xs("paintcan"))
       },
       children: [e.jsx("img", {
         alt: "img",
@@ -7071,7 +7074,7 @@ const y_ = ({
       return
     }
     y.mainImage.pumpkin.boom(t), n(Ls.useProduct({
-      pixelId: at(t),
+      pixelId: it(t),
       productId: 7
     })), n(Mt(s * y_(t))), n(zs({
       product: 7,
@@ -7092,7 +7095,7 @@ const y_ = ({
         if (i === "pumpkin") {
           t(Ot());
           return
-        }!a || a === 0 ? (t(it(n)), t(ot())) : t(Xs("pumpkin"))
+        }!a || a === 0 ? (t(ot(n)), t(rt())) : t(Xs("pumpkin"))
       },
       children: [e.jsx("img", {
         alt: "img",
@@ -7308,7 +7311,7 @@ class I_ {
     }), this.imageData = null, this.texture = null, this.sprite = null, this.timeout = null, this.lastPointerUpTs = Date.now(), this.lastPaintCoords = {
       x: -1,
       y: -1
-    }, this.initImage(), o(a), this.initEvents(), this.store.dispatch(st({
+    }, this.initImage(), o(a), this.initEvents(), this.store.dispatch(at({
       command: Re.start
     })), !ba() && this.loadAllChunks().then(() => {
       const r = a.getState().main.startParams.coords;
@@ -7394,7 +7397,7 @@ class I_ {
     const n = await this.loadImage(kc),
       s = this.getImageData(n, B.width, B.height);
     for (let a = 0; a < s.length; a += 4) this.imageData[a + 3] === 0 && (this.imageData[a] = s[a], this.imageData[a + 1] = s[a + 1], this.imageData[a + 2] = s[a + 2], this.imageData[a + 3] = s[a + 3]);
-    this.updateTexture(), this.store.dispatch(st({
+    this.updateTexture(), this.store.dispatch(at({
       command: Re.finish
     }))
   }
@@ -7402,7 +7405,7 @@ class I_ {
     const s = performance.now(),
       a = this.getImageData(n, B.width, B.height);
     for (let i = 0; i < a.length; i += 4) this.imageData[i + 3] === 0 && (this.imageData[i] = a[i], this.imageData[i + 1] = a[i + 1], this.imageData[i + 2] = a[i + 2], this.imageData[i + 3] = a[i + 3]);
-    this.updateTexture(), this.store.dispatch(st({
+    this.updateTexture(), this.store.dispatch(at({
       command: Re.finish
     })), console.log(performance.now() - s)
   }
@@ -7431,7 +7434,7 @@ class I_ {
     }
     this.updateTexture(), n < 15 ? await this.loadChunk({
       chunkIndex: n + 1
-    }) : this.store.dispatch(st({
+    }) : this.store.dispatch(at({
       command: Re.finish
     }))
   }
@@ -7498,7 +7501,7 @@ class I_ {
     coords: s
   }) {
     let a = 0;
-    s ? a = at(s) : a = Number(n);
+    s ? a = it(s) : a = Number(n);
     const i = (a - 1) * 4,
       o = this.imageData[i],
       r = this.imageData[i + 1],
@@ -7781,7 +7784,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
   }),
   U_ = () => c(Xa.selectAll).map(n => e.jsx(M_, {
     item: n
-  }, at({
+  }, it({
     x: n.x,
     y: n.y
   }))),
@@ -9184,7 +9187,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
       a = c(i => i.main.showUserAndSquadPopup);
     return m.useEffect(() => {
       if (s !== null && (t || a)) {
-        const i = at(s);
+        const i = it(s);
         n(Hs.getPixelInfo({
           id: i
         }))
@@ -9655,7 +9658,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
     return m.useEffect(() => {
       if (n) try {
         (async () => {
-          const r = await Y.getSquadInfo({
+          const r = await W.getSquadInfo({
             id: n
           });
           r.data.squad && r.data.squad.id !== null && a(r.data.squad)
@@ -10787,7 +10790,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
       [r, l] = m.useState([]);
     return m.useEffect(() => {
       const d = async () => {
-        const u = await Y.getRevShareInfo();
+        const u = await W.getRevShareInfo();
         u.status === 200 && u.data && l(u.data)
       };
       n && n.friends >= 1e4 && d()
@@ -11077,7 +11080,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
       [o, r] = m.useState(0);
     return m.useEffect(() => {
       try {
-        Y.getStats().then(l => {
+        W.getStats().then(l => {
           const d = l.data;
           console.log(d), s(d.totalBalances), i(d.totalPlayers), r(d.totalRepaints)
         })
@@ -11297,7 +11300,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
         }), e.jsxs("div", {
           className: H.variant_item,
           onPointerUp: () => {
-            t(it(1)), t(ot()), n.push("/stars")
+            t(ot(1)), t(rt()), n.push("/stars")
           },
           children: [e.jsx("div", {
             className: H.variant_left_container,
@@ -11416,7 +11419,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
       l = Us(),
       [d, u] = In(),
       [h, _] = m.useState(!1),
-      b = c(rt);
+      b = c(ct);
     m.useEffect(() => {
       if (!a || !r) return;
       const f = localStorage.getItem(s);
@@ -11428,7 +11431,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
     const N = async () => {
       try {
         const f = a.prices[0],
-          j = await Y.startShopTransaction({
+          j = await W.startShopTransaction({
             buyerWallet: l,
             currencyId: 2,
             daily: !0,
@@ -13957,7 +13960,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
   uC = "_title_1d52c_7",
   mC = "_description_1d52c_12",
   AC = "_round_status_container_1d52c_17",
-  dt = {
+  ut = {
     round_info_container: dC,
     title: uC,
     description: mC,
@@ -13979,31 +13982,31 @@ const k_ = m.memo(() => (m.useEffect(() => {
     const t = c(Ne),
       n = c(Ys);
     return t ? e.jsxs("div", {
-      className: dt.round_info_container,
+      className: ut.round_info_container,
       children: [e.jsxs("div", {
         children: [e.jsxs("div", {
-          className: dt.title,
+          className: ut.title,
           children: ["Top ", Oa[t].templateThreshold, " ", "templates will win"]
         }), e.jsx("div", {
-          className: dt.description,
+          className: ut.description,
           children: "Most active painters gets rewarded"
         })]
       }), e.jsxs("div", {
-        className: dt.round_status_container,
+        className: ut.round_status_container,
         children: [e.jsx(Er, {}), " on"]
       })]
     }) : e.jsxs("div", {
-      className: dt.round_info_container,
+      className: ut.round_info_container,
       children: [e.jsxs("div", {
         children: [e.jsxs("div", {
-          className: dt.title,
+          className: ut.title,
           children: ["Preparing round ", n]
         }), e.jsx("div", {
-          className: dt.description,
+          className: ut.description,
           children: "Select one template"
         })]
       }), e.jsxs("div", {
-        className: dt.round_status_container,
+        className: ut.round_status_container,
         children: [e.jsx(gC, {}), " Soon"]
       })]
     })
@@ -14835,7 +14838,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
       }
     }, [o]), m.useEffect(() => {
       (async () => {
-        const q = await Y.getSecretStats();
+        const q = await W.getSecretStats();
         q.status === 200 && q.data && q.data.forEach(G => {
           G.group_name === Ln.Ghost && d({
             count: G.usage_count,
@@ -15007,7 +15010,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
             onPointerUp: async () => {
               i(!0);
               try {
-                const j = await Y.checkSecret({
+                const j = await W.checkSecret({
                   key: n
                 });
                 if (j.status === 200) {
@@ -15046,7 +15049,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
       })
     })
   },
-  At = {
+  pt = {
     ratings: "/ratings",
     stars: "/stars",
     mining: "/claiming",
@@ -15055,7 +15058,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
     my_squad: "/my-squad",
     my_profile: "/my-profile"
   },
-  j2 = Object.values(At),
+  j2 = Object.values(pt),
   b2 = () => e.jsx(Ua, {
     children: e.jsxs(ic, {
       children: [e.jsx(ae, {
@@ -15065,16 +15068,16 @@ const k_ = m.memo(() => (m.useEffect(() => {
         path: "/invite-frens",
         children: e.jsx(Wj, {})
       }), e.jsx(ae, {
-        path: At.stars,
+        path: pt.stars,
         children: e.jsx(zd, {})
       }), e.jsx(ae, {
         path: "/info",
         children: e.jsx(Vd, {})
       }), e.jsx(ae, {
-        path: At.my_squad,
+        path: pt.my_squad,
         children: e.jsx(LI, {})
       }), e.jsx(ae, {
-        path: At.my_profile,
+        path: pt.my_profile,
         children: e.jsx(cI, {})
       }), e.jsx(ae, {
         path: "/rules",
@@ -15092,25 +15095,25 @@ const k_ = m.memo(() => (m.useEffect(() => {
         path: "/secrets",
         children: e.jsx(w2, {})
       }), e.jsx(ae, {
-        path: At.mining,
+        path: pt.mining,
         children: e.jsx(qf, {})
       }), e.jsx(ae, {
         path: "/ratings/awards",
         children: e.jsx(Ww, {})
       }), e.jsx(ae, {
-        path: At.ratings,
+        path: pt.ratings,
         children: e.jsx(Gx, {})
       }), e.jsx(ae, {
         path: "/daily",
         children: e.jsx(S1, {})
       }), e.jsx(ae, {
-        path: At.history,
+        path: pt.history,
         children: e.jsx(Ow, {})
       }), e.jsx(ae, {
         path: "/template/create",
         children: e.jsx(YI, {})
       }), e.jsx(ae, {
-        path: At.template,
+        path: pt.template,
         children: e.jsx(lN, {})
       }), e.jsx(ae, {
         path: "/tournament",
@@ -15541,7 +15544,7 @@ const sT = () => {
   nB = "_token_image_19qal_210",
   sB = "_sale_box_19qal_220",
   aB = "_sale_text_19qal_232",
-  W = {
+  Y = {
     container: BT,
     header: ET,
     close: DT,
@@ -15576,12 +15579,12 @@ const sT = () => {
       n = c(a => a.shop.activeProductCardId),
       s = c(a => a.shop.products[n]);
     return e.jsxs("div", {
-      className: W.header,
+      className: Y.header,
       onPointerUp: a => {
         a.stopPropagation()
       },
       children: [e.jsx("div", {
-        className: W.close,
+        className: Y.close,
         onPointerUp: () => {
           t(Qa())
         },
@@ -15590,7 +15593,7 @@ const sT = () => {
           children: ""
         })
       }), e.jsx("div", {
-        className: W.title,
+        className: Y.title,
         children: s.name
       })]
     })
@@ -15600,10 +15603,10 @@ const sT = () => {
       n = c(a => a.shop.products[t]),
       s = c(a => a.shop.amount);
     return e.jsx("div", {
-      className: W.image_container,
+      className: Y.image_container,
       children: e.jsx("img", {
         alt: "img",
-        className: W.image,
+        className: Y.image,
         src: oo(n.id, s)
       })
     })
@@ -15612,9 +15615,9 @@ const sT = () => {
     const t = c(s => s.shop.activeProductCardId),
       n = c(s => s.shop.products[t]);
     return e.jsx("div", {
-      className: W.description_container,
+      className: Y.description_container,
       children: e.jsx("span", {
-        className: W.description_item,
+        className: Y.description_item,
         children: n.description
       })
     })
@@ -15623,16 +15626,16 @@ const sT = () => {
     const t = g(),
       n = c(za),
       s = c(i => i.shop.selectedCurrency);
-    return c(rt) !== fe ? null : e.jsxs("div", {
-      className: W.tokens_selector,
+    return c(ct) !== fe ? null : e.jsxs("div", {
+      className: Y.tokens_selector,
       children: [e.jsx("div", {
-        className: W.tokens_title,
+        className: Y.tokens_title,
         children: "Select token"
       }), e.jsx("div", {
         children: e.jsx("div", {
-          className: W.tokens_container,
+          className: Y.tokens_container,
           children: n.map(i => i.currency_id === 1 ? null : e.jsxs("div", {
-            className: W.token_item,
+            className: Y.token_item,
             style: {
               color: i.currency_id === s ? "#FFFFFF" : void 0
             },
@@ -15645,10 +15648,10 @@ const sT = () => {
                 children: s === i.currency_id ? "" : ""
               })
             }), e.jsx("div", {
-              className: W.token_image_container,
+              className: Y.token_image_container,
               children: e.jsx("img", {
                 alt: "img",
-                className: W.token_image,
+                className: Y.token_image,
                 src: i.image
               })
             }), e.jsx("div", {
@@ -15665,7 +15668,7 @@ const sT = () => {
     const t = c(s => s.shop.selectedCurrency),
       n = c(s => s.shop.crypto).filter(s => s.currency_id === t)[0];
     return t === 1 ? e.jsx("span", {
-      className: W.star_color,
+      className: Y.star_color,
       style: {
         paddingRight: 4,
         marginBottom: -5
@@ -15701,9 +15704,9 @@ const sT = () => {
     });
     if (o) return e.jsxs(ee.Fragment, {
       children: ["Buy for ", e.jsx(lB, {}), Math.round(o * (r ? s : 1) * 100) / 100, e.jsx("div", {
-        className: W.sale_box,
+        className: Y.sale_box,
         children: e.jsx("span", {
-          className: W.sale_text,
+          className: Y.sale_text,
           children: "-30% "
         })
       })]
@@ -15755,7 +15758,7 @@ const sT = () => {
       await h.sendTransaction(Gr), n(!0), u(!0), l(A.fulfilled)
     };
     return N ? e.jsx("button", {
-      className: W.button,
+      className: Y.button,
       onPointerUp: async V => {
         if (V.stopPropagation(), t(!1), d) {
           s(Qa()), l(A.idle);
@@ -15764,7 +15767,7 @@ const sT = () => {
         if (r !== A.pending) {
           l(A.pending);
           try {
-            const we = await Y.startShopTransaction({
+            const we = await W.startShopTransaction({
               buyerWallet: f,
               currencyId: i,
               quantity: o,
@@ -15782,14 +15785,14 @@ const sT = () => {
         success: d
       })
     }) : e.jsx("div", {
-      className: W.not_available,
+      className: Y.not_available,
       children: "Not available"
     })
   },
   mB = () => {
     const [t, n] = In(), s = Us(), a = c(i => i.shop.selectedCurrency);
     return s !== "" || a === 1 ? null : e.jsx("button", {
-      className: W.button,
+      className: Y.button,
       onPointerUp: async i => {
         i.stopPropagation(), i.preventDefault(), setTimeout(() => {
           t.openModal()
@@ -15810,7 +15813,7 @@ const sT = () => {
     }) : e.jsxs(ee.Fragment, {
       children: ["Buy for", e.jsx(I, {
         size: 18,
-        className: W.star_color,
+        className: Y.star_color,
         children: ""
       }), a.prices[0].price * (i ? s : 1)]
     })
@@ -15826,7 +15829,7 @@ const sT = () => {
       [r, l] = m.useState(A.idle),
       [d, u] = m.useState(!1);
     return c(_ => _.shop.selectedCurrency) !== 1 ? null : e.jsx("div", {
-      className: W.button_container,
+      className: Y.button_container,
       onPointerUp: async _ => {
         var N;
         if (_.stopPropagation(), d) {
@@ -15837,7 +15840,7 @@ const sT = () => {
         l(A.pending);
         const b = i.isOnePiece ? 1 : o;
         try {
-          const f = await Y.buy({
+          const f = await W.buy({
             type: Number(a),
             qty: b
           });
@@ -15874,23 +15877,23 @@ const sT = () => {
         l(A.fulfilled)
       },
       children: e.jsx("button", {
-        className: W.button,
+        className: Y.button,
         children: e.jsx(AB, {
           success: d
         })
       })
     })
   },
-  hB = () => (c(rt) === fe, null),
+  hB = () => (c(ct) === fe, null),
   gB = () => {
     const [t, n] = m.useState(null), [s, a] = m.useState(!1);
     return e.jsxs("div", {
-      className: W.crypto_button_container,
+      className: Y.crypto_button_container,
       children: [e.jsx(cB, {}), e.jsx(hB, {}), e.jsx(jo, {
         runParticle: s,
         setRunParticle: a
       }), t && e.jsx("div", {
-        className: W.error,
+        className: Y.error,
         children: " Failure. Something went wrong."
       }), e.jsx(uB, {
         setError: n,
@@ -15908,9 +15911,9 @@ const sT = () => {
     const t = c(i => i.shop.activeProductCardId),
       n = c(i => i.shop.amount);
     return c(i => i.shop.products[t]).isOnePiece ? null : e.jsx("div", {
-      className: W.amount_selector_container,
+      className: Y.amount_selector_container,
       children: e.jsxs("div", {
-        className: W.amount_selector_count,
+        className: Y.amount_selector_count,
         children: ["× ", n]
       })
     })
@@ -16019,12 +16022,12 @@ const yB = () => {
     })
   },
   vB = () => e.jsxs("div", {
-    className: W.body,
+    className: Y.body,
     onPointerUp: t => {
       t.stopPropagation()
     },
     children: [e.jsx(oB, {}), e.jsxs("div", {
-      className: W.content_container,
+      className: Y.content_container,
       children: [e.jsx(rB, {}), e.jsx(_B, {}), e.jsx(yB, {})]
     }), e.jsx(gB, {})]
   }),
@@ -16033,7 +16036,7 @@ const yB = () => {
     return $e.createPortal(e.jsx(Ge, {
       show: t,
       children: e.jsxs("div", {
-        className: W.container,
+        className: Y.container,
         children: [e.jsx(iB, {}), e.jsx(vB, {})]
       })
     }), document.body)
@@ -16589,7 +16592,7 @@ const nE = () => {
   hE = "_title_1nuac_49",
   gE = "_button_container_1nuac_55",
   _E = "_button_1nuac_55",
-  ut = {
+  mt = {
     layout: dE,
     container: uE,
     image_container: mE,
@@ -16602,20 +16605,20 @@ const nE = () => {
   fE = () => {
     const t = g();
     return c(s => s.main.showNoFlagsPopup) ? $e.createPortal(e.jsx("div", {
-      className: ut.layout,
+      className: mt.layout,
       children: e.jsxs("div", {
-        className: ut.container,
+        className: mt.container,
         children: [e.jsx("div", {
-          className: ut.image_container,
+          className: mt.image_container,
           children: e.jsx("img", {
             alt: "img",
-            className: ut.image,
+            className: mt.image,
             src: Ks
           })
         }), e.jsxs("div", {
-          className: ut.text_container,
+          className: mt.text_container,
           children: [e.jsx("div", {
-            className: ut.title,
+            className: mt.title,
             children: "Wow! Note Pixel 2.0!"
           }), e.jsx("div", {
             children: "Meet the Gorgeous Templates!"
@@ -16629,9 +16632,9 @@ const nE = () => {
             children: "Ordo ab chao! Enjoy."
           })]
         }), e.jsx("div", {
-          className: ut.button_container,
+          className: mt.button_container,
           children: e.jsx("button", {
-            className: ut.button,
+            className: mt.button,
             onPointerUp: () => {
               t(dh(!1))
             },
@@ -17361,7 +17364,7 @@ const AD = "_container_gb8eq_1",
       [r, l] = m.useState(!1),
       d = async () => {
         if (r && (t(Rg()), t(Og()), n && n.good_id)) {
-          const u = await Y.claimRewardById({
+          const u = await W.claimRewardById({
             rewardId: i,
             userId: a.id
           });
@@ -17379,7 +17382,7 @@ const AD = "_container_gb8eq_1",
         clearTimeout(u)
       }
     }, []), m.useEffect(() => (i && (async () => {
-      const h = await Y.getRewardById({
+      const h = await W.getRewardById({
         rewardId: i
       });
       if (h.status === 200) {
@@ -17875,7 +17878,7 @@ const ak = "_layout_15tw0_1",
   Uk = () => {
     const t = g(),
       n = c(a => a.shop.selectedCurrency),
-      s = c(rt);
+      s = c(ct);
     m.useEffect(() => {
       s === fe && n === 1 && t(wn(2)), s !== fe && t(wn(1))
     }, [s])
