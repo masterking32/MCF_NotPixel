@@ -260,6 +260,7 @@ class Repaint:
             return None
 
     async def do_tournament(self, charges=0, round_id=0, is_break=False):
+        return
         try:
             self.log.info(
                 f"<g>🎨 Repainting <c>{charges}</c> pixels for <c>{self.account_name}</c>...</g>"
