@@ -14021,7 +14021,7 @@ const k_ = m.memo(() => (m.useEffect(() => {
       i = a < 0,
       o = t.template,
       r = o.rank,
-      l = r <= o.lastSurvivalRank,
+      l = r < o.lastSurvivalRank,
       d = o.lastSurvivalRepaints - o.repaints,
       u = i && l,
       h = s && s === t.round_id,
