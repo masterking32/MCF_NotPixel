@@ -556,7 +556,7 @@ const qc = {
         }, {
           currency_id: 2,
           currency_name: "TON",
-          price: .12
+          price: .1
         }, {
           currency_id: 3,
           currency_name: "NOT",
@@ -568,19 +568,19 @@ const qc = {
         }, {
           currency_id: 6,
           currency_name: "ANON",
-          price: 160
+          price: 180
         }, {
           currency_id: 7,
           currency_name: "CATI",
-          price: 1.3
+          price: 1.4
         }, {
           currency_id: 8,
           currency_name: "X",
-          price: 4e3
+          price: 4200
         }, {
           currency_id: 9,
           currency_name: "Major",
-          price: .7
+          price: .8
         }],
         currency: "XTR",
         isOnePiece: !1
@@ -598,7 +598,7 @@ const qc = {
         }, {
           currency_id: 2,
           currency_name: "TON",
-          price: .24
+          price: .2
         }, {
           currency_id: 3,
           currency_name: "NOT",
@@ -610,19 +610,19 @@ const qc = {
         }, {
           currency_id: 6,
           currency_name: "ANON",
-          price: 320
+          price: 360
         }, {
           currency_id: 7,
           currency_name: "CATI",
-          price: 2.6
+          price: 2.8
         }, {
           currency_id: 8,
           currency_name: "X",
-          price: 8e3
+          price: 8400
         }, {
           currency_id: 9,
           currency_name: "Major",
-          price: 1.4
+          price: 1.6
         }],
         currency: "XTR",
         isOnePiece: !1
@@ -678,7 +678,7 @@ const qc = {
         }, {
           currency_id: 2,
           currency_name: "TON",
-          price: .48
+          price: .4
         }, {
           currency_id: 3,
           currency_name: "NOT",
@@ -690,19 +690,19 @@ const qc = {
         }, {
           currency_id: 6,
           currency_name: "ANON",
-          price: 640
+          price: 720
         }, {
           currency_id: 7,
           currency_name: "CATI",
-          price: 5.2
+          price: 5.6
         }, {
           currency_id: 8,
           currency_name: "X",
-          price: 16e3
+          price: 16800
         }, {
           currency_id: 9,
           currency_name: "Major",
-          price: 2.8
+          price: 3.2
         }],
         currency: "XTR",
         isOnePiece: !0
@@ -746,7 +746,7 @@ const qc = {
         }, {
           currency_id: 2,
           currency_name: "TON",
-          price: .12
+          price: .1
         }, {
           currency_id: 3,
           currency_name: "NOT",
@@ -758,19 +758,19 @@ const qc = {
         }, {
           currency_id: 6,
           currency_name: "ANON",
-          price: 160
+          price: 180
         }, {
           currency_id: 7,
           currency_name: "CATI",
-          price: 1.3
+          price: 1.4
         }, {
           currency_id: 8,
           currency_name: "X",
-          price: 4e3
+          price: 4200
         }, {
           currency_id: 9,
           currency_name: "Major",
-          price: .7
+          price: .8
         }],
         currency: "XTR",
         isOnePiece: !1
@@ -814,7 +814,7 @@ const qc = {
         }, {
           currency_id: 2,
           currency_name: "TON",
-          price: .36
+          price: .3
         }, {
           currency_id: 3,
           currency_name: "NOT",
@@ -826,19 +826,19 @@ const qc = {
         }, {
           currency_id: 6,
           currency_name: "ANON",
-          price: 480
+          price: 540
         }, {
           currency_id: 7,
           currency_name: "CATI",
-          price: 3.9
+          price: 4.2
         }, {
           currency_id: 8,
           currency_name: "X",
-          price: 12e3
+          price: 12600
         }, {
           currency_id: 9,
           currency_name: "Major",
-          price: 2.1
+          price: 2.4
         }],
         currency: "XTR",
         isOnePiece: !0
@@ -856,7 +856,7 @@ const qc = {
         }, {
           currency_id: 2,
           currency_name: "TON",
-          price: .6
+          price: .5
         }, {
           currency_id: 3,
           currency_name: "NOT",
@@ -868,19 +868,19 @@ const qc = {
         }, {
           currency_id: 6,
           currency_name: "ANON",
-          price: 800
+          price: 900
         }, {
           currency_id: 7,
           currency_name: "CATI",
-          price: 6.5
+          price: 7
         }, {
           currency_id: 8,
           currency_name: "X",
-          price: 2e4
+          price: 21e3
         }, {
           currency_id: 9,
           currency_name: "Major",
-          price: 3.5
+          price: 4
         }],
         currency: "XTR",
         isOnePiece: !0
@@ -898,7 +898,7 @@ const qc = {
         }, {
           currency_id: 2,
           currency_name: "TON",
-          price: .96
+          price: .8
         }, {
           currency_id: 3,
           currency_name: "NOT",
@@ -910,19 +910,19 @@ const qc = {
         }, {
           currency_id: 6,
           currency_name: "ANON",
-          price: 1280
+          price: 1440
         }, {
           currency_id: 7,
           currency_name: "CATI",
-          price: 10.4
+          price: 11.2
         }, {
           currency_id: 8,
           currency_name: "X",
-          price: 32e3
+          price: 33600
         }, {
           currency_id: 9,
           currency_name: "Major",
-          price: 5.6
+          price: 6.4
         }],
         currency: "XTR",
         isOnePiece: !0
@@ -942,7 +942,7 @@ const qc = {
     },
     getProductsStatus: A.idle,
     useProductStatus: A.idle,
-    order: [9, 10, 11, 1, 2, 6, 13, 4],
+    order: [1, 2, 6, 13, 4],
     selectedCurrency: 1,
     crypto: [{
       currency_id: 1,
