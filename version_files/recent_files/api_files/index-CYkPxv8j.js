@@ -9623,7 +9623,7 @@ const L_ = A.memo(() => (A.useEffect(() => {
   },
   gv = () => {
     const t = W(),
-      n = vr(new Date(Date.UTC(2024, 10, 30, 9, 0, 0))),
+      n = vr(new Date(Date.UTC(2024, 11, 5, 9, 0, 0))),
       s = c(be);
     return e.jsx("div", {
       className: Ce.layout,
