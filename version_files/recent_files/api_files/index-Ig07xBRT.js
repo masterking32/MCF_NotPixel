@@ -1564,7 +1564,7 @@ const qc = {
   }, dd = "_link_1fn8i_1", ud = "_telegram_icons_1fn8i_13", mo = {
     link: dd,
     telegram_icons: ud
-  }, I = ({
+  }, N = ({
     children: t,
     className: n = "",
     style: s = {},
@@ -1586,7 +1586,7 @@ const qc = {
         className: Un.container,
         children: t.map((s, a) => {
           const i = M(4, 14);
-          return n === _e ? e.jsx(I, {
+          return n === _e ? e.jsx(N, {
             size: i,
             className: Un.star,
             style: {
@@ -2990,22 +2990,22 @@ const Kn = O("mining/info", async () => (await Ls.info()).data),
   }) => {
     const l = g(),
       d = [p.info_row],
-      u = c(j => j.mining.tasks[n]),
-      _ = c(j => j.mining.checkStatuses[n]) === A.pending,
-      b = c(j => j.mining.checkError[n]),
-      N = c(j => j.mining.toggleAction[n]),
+      u = c(b => b.mining.tasks[n]),
+      _ = c(b => b.mining.checkStatuses[n]) === A.pending,
+      j = c(b => b.mining.checkError[n]),
+      P = c(b => b.mining.toggleAction[n]),
       f = m.useRef();
     return n && _ && d.push(p.info_row_pending), m.useEffect(() => {
-      let j = null;
-      return b && setTimeout(() => {
+      let b = null;
+      return j && setTimeout(() => {
         l(wu({
           key: n,
           value: !1
         }))
       }, 4e3), () => {
-        clearTimeout(j)
+        clearTimeout(b)
       }
-    }, [b]), e.jsx("div", {
+    }, [j]), e.jsx("div", {
       className: p.row_container,
       ref: f,
       id: i,
@@ -3015,10 +3015,10 @@ const Kn = O("mining/info", async () => (await Ls.info()).data),
       children: e.jsx("div", {
         className: d.join(" "),
         onPointerUp: () => {
-          !n || u || _ || b || (a && l(xo({
+          !n || u || _ || j || (a && l(xo({
             action: n,
-            value: !N
-          })), a && N || a && !s ? a() : s && l(ye.checkTask({
+            value: !P
+          })), a && P || a && !s ? a() : s && l(ye.checkTask({
             key: n,
             reward: o
           })))
@@ -3033,13 +3033,13 @@ const Kn = O("mining/info", async () => (await Ls.info()).data),
     boost: t
   }) => c(s => s.mining.tasks[t]) ? e.jsx("div", {
     className: p.row_icon_container,
-    children: e.jsx(I, {
+    children: e.jsx(N, {
       size: 20,
       children: ""
     })
   }) : e.jsx("div", {
     className: p.row_icon_container,
-    children: e.jsx(I, {
+    children: e.jsx(N, {
       size: 20,
       children: ""
     })
@@ -3198,7 +3198,7 @@ const Kn = O("mining/info", async () => (await Ls.info()).data),
           })]
         }), e.jsx("div", {
           className: p.row_icon_container,
-          children: e.jsx(I, {
+          children: e.jsx(N, {
             size: 20,
             children: ""
           })
@@ -3961,25 +3961,25 @@ const _i = () => {
       s = c(Dl),
       a = v.adsgram,
       i = v.watchAd;
-    c(N => N.mining.tasks[a]);
-    const o = c(N => N.mining.tasks[i]),
-      r = c(N => N.user.country),
+    c(P => P.mining.tasks[a]);
+    const o = c(P => P.mining.tasks[i]),
+      r = c(P => P.user.country),
       l = No(),
       [d, u] = m.useState(_i()),
       [h, _] = m.useState(gi),
-      b = 16;
+      j = 16;
     return m.useEffect(() => {
-      const N = setInterval(() => {
+      const P = setInterval(() => {
         u(_i())
       }, 1e3);
       return () => {
-        clearInterval(N)
+        clearInterval(P)
       }
     }, []), !sA || h || s !== "mobile" || o === !1 ? null : e.jsxs(ne, {
       enableCheck: !1,
       action: () => {
-        d === 0 && n.show().then(N => {
-          t(Rt(b)), t(U({
+        d === 0 && n.show().then(P => {
+          t(Rt(j)), t(U({
             id: performance.now(),
             text: "16 PX earned!",
             icon: ""
@@ -3989,7 +3989,7 @@ const _i = () => {
               result: !0
             }
           })
-        }).catch(N => {
+        }).catch(P => {
           t(U({
             id: performance.now(),
             text: "Something went wrong."
@@ -4002,7 +4002,7 @@ const _i = () => {
         })
       },
       boost: a,
-      reward: b,
+      reward: j,
       children: [e.jsx("div", {
         style: {
           width: 100,
@@ -4038,7 +4038,7 @@ const _i = () => {
           }), d === 0 && e.jsxs("div", {
             children: ["Get ", e.jsx(G, {
               className: p.not_pixel_icon
-            }), " ", b, " for each AD"]
+            }), " ", j, " for each AD"]
           }), d !== 0 && e.jsx("div", {
             children: `Wait ${d} sec`
           })]
@@ -5311,7 +5311,7 @@ const $p = (t, n) => {
         className: Lt.container,
         children: [e.jsxs("div", {
           className: Lt.placeholder,
-          children: [e.jsx(I, {
+          children: [e.jsx(N, {
             children: ""
           }), e.jsxs("span", {
             children: [" ", n]
@@ -5321,7 +5321,7 @@ const $p = (t, n) => {
           })]
         }), e.jsxs("div", {
           className: Lt.counter,
-          children: [e.jsx(I, {
+          children: [e.jsx(N, {
             children: ""
           }), e.jsxs("span", {
             children: [" ", n]
@@ -5361,11 +5361,11 @@ const $p = (t, n) => {
           _ = requestAnimationFrame(h);
           return
         }
-        const b = Date.now(),
-          f = Math.floor((b - o) / r) - i.current;
+        const j = Date.now(),
+          f = Math.floor((j - o) / r) - i.current;
         f > 0 && s.current < l && (t(yo(f)), t(Pu(f)));
-        let j = (b - o) % r;
-        u(j * 100 / r), _ = requestAnimationFrame(h)
+        let b = (j - o) % r;
+        u(b * 100 / r), _ = requestAnimationFrame(h)
       };
       let _ = requestAnimationFrame(h);
       return () => {
@@ -5396,7 +5396,7 @@ const $p = (t, n) => {
   Rh = "_button_image_91s2c_130",
   Mh = "_animation_91s2c_147",
   Uh = "_shake_91s2c_1",
-  P = {
+  I = {
     layout: jh,
     container: bh,
     buttons_container: Nh,
@@ -5578,9 +5578,9 @@ const eg = async ({
     a = c(d => d.shop.available[s]),
     o = 10 + String(a).length * 6,
     r = c(d => d.main.fastEnergy),
-    l = [P.button, P.fast_type_button];
-  return r && l.push(P.fast_mode_button_enabled), n ? e.jsxs("button", {
-    className: `${l.join(" ")} ${P.shop_button}`,
+    l = [I.button, I.fast_type_button];
+  return r && l.push(I.fast_mode_button_enabled), n ? e.jsxs("button", {
+    className: `${l.join(" ")} ${I.shop_button}`,
     onPointerUp: async () => {
       if (r) t(Uo());
       else {
@@ -5590,14 +5590,14 @@ const eg = async ({
     },
     children: [e.jsx("img", {
       alt: "img",
-      className: P.button_image,
+      className: I.button_image,
       src: ao
     }), e.jsx("div", {
-      className: P.available,
+      className: I.available,
       style: {
         width: o
       },
-      children: !a || a === 0 ? e.jsx(I, {
+      children: !a || a === 0 ? e.jsx(N, {
         children: ""
       }) : e.jsx(Tn, {
         number: a,
@@ -6211,13 +6211,12 @@ const ug = "/assets/halloween2-l9FmXxVI.png",
   },
   Cg = () => {
     const t = g(),
-      n = c(r => r.tournament.activeTab),
+      n = c(o => o.tournament.activeTab),
       s = c(Ue),
       a = sr(s),
-      i = c(r => r.tournament.myTemplate),
-      o = i && i.approved;
+      i = c(o => o.tournament.myTemplate);
     return e.jsxs(on, {
-      children: [a && o && e.jsx(Re, {
+      children: [a && i && e.jsx(Re, {
         active: n === Be.create,
         setActive: () => t(fn(Be.create)),
         children: "My template"
@@ -6609,7 +6608,7 @@ const Dn = Jr({
     let u = !1;
     if (n <= 0)
       if (d && d.main.fastEnergy) {
-        if (vs.length > 0 && !(await Promise.allSettled(vs)).every(b => b.status === A.fulfilled || b.status === A.rejected)) return;
+        if (vs.length > 0 && !(await Promise.allSettled(vs)).every(j => j.status === A.fulfilled || j.status === A.rejected)) return;
         const h = await eg({
           dispatch: s,
           state: d
@@ -6644,12 +6643,12 @@ const Dn = Jr({
       u = c(f => f.main.fastEnergy),
       h = c(f => f.shop.available[1]),
       _ = c(f => f.shop.products[1]),
-      b = {
+      j = {
         bomb: 2,
         paintcan: 6,
         pumpkin: 7
       },
-      N = c(f => f.shop.products[b[d]]);
+      P = c(f => f.shop.products[j[d]]);
     return e.jsxs("button", {
       className: oe.button,
       onPointerUp: f => {
@@ -6696,7 +6695,7 @@ const Dn = Jr({
           })]
         }) : "No energy" : l ? e.jsxs("span", {
           className: oe.flash_mode_button_text,
-          children: ["Fast mode ", e.jsx(I, {
+          children: ["Fast mode ", e.jsx(N, {
             size: 12,
             children: ""
           })]
@@ -6715,9 +6714,9 @@ const Dn = Jr({
             children: [e.jsx("img", {
               alt: "img",
               className: oe.image,
-              src: N.image_url
+              src: P.image_url
             }), e.jsx("span", {
-              children: N.name
+              children: P.name
             })]
           })]
         }) : "Paint"
@@ -6891,9 +6890,9 @@ const Gg = ({
     c(d => d.main.fastMode);
     const i = c(d => d.main.currentFastType),
       r = 10 + String(a).length * 6,
-      l = [P.button, P.fast_type_button];
-    return i === "bomb" && l.push(P.fast_mode_button_enabled), s ? e.jsxs("button", {
-      className: `${l.join(" ")} ${P.shop_button}`,
+      l = [I.button, I.fast_type_button];
+    return i === "bomb" && l.push(I.fast_mode_button_enabled), s ? e.jsxs("button", {
+      className: `${l.join(" ")} ${I.shop_button}`,
       onPointerUp: () => {
         if (i === "bomb") {
           t(Ut());
@@ -6902,14 +6901,14 @@ const Gg = ({
       },
       children: [e.jsx("img", {
         alt: "img",
-        className: P.button_image,
+        className: I.button_image,
         src: no
       }), e.jsx("div", {
-        className: P.available,
+        className: I.available,
         style: {
           width: r
         },
-        children: !a || a === 0 ? e.jsx(I, {
+        children: !a || a === 0 ? e.jsx(N, {
           children: ""
         }) : e.jsx(Tn, {
           number: a,
@@ -6970,9 +6969,9 @@ const Gg = ({
     c(d => d.main.fastMode);
     const i = c(d => d.main.currentFastType),
       r = 10 + String(a).length * 6,
-      l = [P.button, P.fast_type_button];
-    return i === "paintcan" && l.push(P.fast_mode_button_enabled), s ? e.jsxs("button", {
-      className: `${l.join(" ")} ${P.shop_button}`,
+      l = [I.button, I.fast_type_button];
+    return i === "paintcan" && l.push(I.fast_mode_button_enabled), s ? e.jsxs("button", {
+      className: `${l.join(" ")} ${I.shop_button}`,
       onPointerUp: () => {
         if (i === "paintcan") {
           t(Ut());
@@ -6981,14 +6980,14 @@ const Gg = ({
       },
       children: [e.jsx("img", {
         alt: "img",
-        className: P.button_image,
+        className: I.button_image,
         src: so
       }), e.jsx("div", {
-        className: P.available,
+        className: I.available,
         style: {
           width: r
         },
-        children: !a || a === 0 ? e.jsx(I, {
+        children: !a || a === 0 ? e.jsx(N, {
           children: ""
         }) : e.jsx(Tn, {
           number: a,
@@ -7077,9 +7076,9 @@ const f_ = ({
     c(d => d.main.fastMode);
     const i = c(d => d.main.currentFastType),
       r = 10 + String(a).length * 6,
-      l = [P.button, P.fast_type_button];
-    return i === "pumpkin" && l.push(P.fast_mode_button_enabled), !s || !a || a === 0 ? null : e.jsxs("button", {
-      className: `${l.join(" ")} ${P.shop_button}`,
+      l = [I.button, I.fast_type_button];
+    return i === "pumpkin" && l.push(I.fast_mode_button_enabled), !s || !a || a === 0 ? null : e.jsxs("button", {
+      className: `${l.join(" ")} ${I.shop_button}`,
       onPointerUp: () => {
         if (i === "pumpkin") {
           t(Ut());
@@ -7088,14 +7087,14 @@ const f_ = ({
       },
       children: [e.jsx("img", {
         alt: "img",
-        className: P.button_image,
+        className: I.button_image,
         src: Yi
       }), e.jsx("div", {
-        className: P.available,
+        className: I.available,
         style: {
           width: r
         },
-        children: !a || a === 0 ? e.jsx(I, {
+        children: !a || a === 0 ? e.jsx(N, {
           children: ""
         }) : e.jsx(Tn, {
           number: a,
@@ -7547,12 +7546,12 @@ class b_ {
   }
   pixanosRepaint(n, s, a, i) {
     const o = _ => {
-        let b = 1664525,
-          N = 1013904223,
+        let j = 1664525,
+          P = 1013904223,
           f = 4294967296,
-          j = _ >>> 0;
+          b = _ >>> 0;
         return function() {
-          return j = (b * j + N) % f, j / f
+          return b = (j * b + P) % f, b / f
         }
       },
       r = s * s,
@@ -7561,18 +7560,18 @@ class b_ {
       u = Array.from(Array(l));
     for (let _ = 0; _ < l; _++) u[_] = _ + 1;
     for (let _ = l + 1; _ <= r; _++) {
-      const b = Math.floor(d() * _) + 1;
-      b <= l && (u[b - 1] = _)
+      const j = Math.floor(d() * _) + 1;
+      j <= l && (u[j - 1] = _)
     }
     const h = St(i);
     for (let _ = 0; _ < u.length; _++) {
-      const b = u[_];
+      const j = u[_];
       if (_ < 20) {
-        const N = Bs(b);
-        console.log(`i: ${_}, id: ${b}, x: ${N.x}, y: ${N.y}`)
+        const P = Bs(j);
+        console.log(`i: ${_}, id: ${j}, x: ${P.x}, y: ${P.y}`)
       }
       this.paintPixel({
-        id: b,
+        id: j,
         color: h
       })
     }
@@ -7895,7 +7894,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
     className: Ee.status_container,
     children: e.jsx("div", {
       className: Ee.status,
-      children: e.jsx(I, {
+      children: e.jsx(N, {
         size: 20,
         children: ""
       })
@@ -8431,7 +8430,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
         children: [e.jsxs("span", {
           className: Q.active_league_text,
           children: [" ", i, " "]
-        }), i === a && t && e.jsx(I, {
+        }), i === a && t && e.jsx(N, {
           className: `${Q.icon_leagueflag}`,
           children: ""
         })]
@@ -8620,7 +8619,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
         onPointerUp: () => {
           de(`https://t.me/${Bt}`)
         },
-        children: ["Join the squad ", e.jsx(I, {
+        children: ["Join the squad ", e.jsx(N, {
           children: ""
         })]
       })
@@ -8840,7 +8839,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
             a(!1), n(!0), o.current = null
           }, 4e3)
         },
-        children: [`${i.x}, ${i.y}`, " ", e.jsx(I, {
+        children: [`${i.x}, ${i.y}`, " ", e.jsx(N, {
           size: 14,
           children: ""
         })]
@@ -9323,7 +9322,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
       performance.now() - n.current < 200 && y.viewport.zoomIn(), clearInterval(t.current)
     };
     return e.jsx("button", {
-      className: P.button,
+      className: I.button,
       onPointerDown: () => {
         n.current = performance.now(), t.current = setInterval(() => {
           y.viewport.zoomIn()
@@ -9355,7 +9354,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
     }, []), m.useEffect(() => (window.addEventListener("blur", s), () => {
       window.removeEventListener("blur", s)
     }), []), e.jsx("button", {
-      className: P.button,
+      className: I.button,
       onPointerDown: () => {
         n.current = performance.now(), t.current = setInterval(() => {
           y.viewport.zoomOut()
@@ -9377,12 +9376,12 @@ const E_ = m.memo(() => (m.useEffect(() => {
     })
   },
   Xy = () => e.jsxs("div", {
-    className: P.buttons_container,
+    className: I.buttons_container,
     children: [e.jsx(Hy, {}), e.jsx(Gy, {})]
   }),
   Vy = () => {
     const t = g(),
-      n = [P.button],
+      n = [I.button],
       s = c(r => r.shop.limitedGood),
       a = c(r => r.shop.limitedEnd),
       [i, o] = m.useState(null);
@@ -9400,28 +9399,28 @@ const E_ = m.memo(() => (m.useEffect(() => {
         r && clearInterval(r)
       }
     }, [a]), s ? e.jsxs("button", {
-      className: `${n.join(" ")} ${P.shop_button}`,
+      className: `${n.join(" ")} ${I.shop_button}`,
       onPointerUp: () => {
         t(Gc())
       },
       children: [e.jsx("img", {
         alt: "img",
-        className: P.button_image,
+        className: I.button_image,
         src: s.image_url
       }), e.jsx("div", {
-        className: P.limited_good_timer,
+        className: I.limited_good_timer,
         children: id(i)
       })]
     }) : null
   },
   Jy = () => c(Fe) ? e.jsx("div", {
-    className: P.buttons_container,
+    className: I.buttons_container,
     children: e.jsx(Vy, {})
   }) : null,
   Yy = () => e.jsx("div", {
-    className: P.layout,
+    className: I.layout,
     children: e.jsxs("div", {
-      className: P.container,
+      className: I.container,
       children: [e.jsx(Xy, {}), e.jsx(Jy, {})]
     })
   }),
@@ -9458,14 +9457,14 @@ const E_ = m.memo(() => (m.useEffect(() => {
       i = t && t.rank || 0,
       o = t && t.template && t.template.rank || 0;
     return n !== A.fulfilled ? null : e.jsxs($.Fragment, {
-      children: ["  ", e.jsx(I, {
+      children: ["  ", e.jsx(N, {
         size: 14,
         className: a ? Pe.winning : Pe.loosing,
         children: ""
       }), " ", e.jsx("span", {
         className: a ? Pe.winning : Pe.loosing,
         children: o
-      }), " ", e.jsx(I, {
+      }), " ", e.jsx(N, {
         size: 14,
         className: s ? Pe.winning : Pe.loosing,
         children: ""
@@ -9670,7 +9669,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
             onPointerUp: () => {
               t(Pa(null))
             },
-            children: e.jsx(I, {
+            children: e.jsx(N, {
               size: 26,
               children: ""
             })
@@ -9907,7 +9906,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
           }
         }), t(Wa(s.id)))
       },
-      children: [s === null && e.jsx(I, {
+      children: [s === null && e.jsx(N, {
         className: pt.gray,
         size: 24,
         children: ""
@@ -9940,15 +9939,15 @@ const E_ = m.memo(() => (m.useEffect(() => {
     const t = g(),
       n = c(i => i.main.fastMode);
     if (!c(i => i.canvas.coords)) return null;
-    const a = [P.button, P.fast_type_button, P.shop_button];
-    return n && a.push(P.fast_mode_button_enabled), e.jsx("button", {
+    const a = [I.button, I.fast_type_button, I.shop_button];
+    return n && a.push(I.fast_mode_button_enabled), e.jsx("button", {
       className: a.join(" "),
       onPointerUp: () => {
         t(n ? Hs() : Mo())
       },
       children: e.jsx("img", {
         alt: "img",
-        className: P.button_image,
+        className: I.button_image,
         src: to
       })
     })
@@ -9960,7 +9959,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
       a = c(l => l.main.currentFastType),
       i = c(l => l.shop.available);
     if (!n || !(i[4] > 0)) return null;
-    const r = [P.button, P.shop_button, P.fast_type_button];
+    const r = [I.button, I.shop_button, I.fast_type_button];
     return e.jsxs("button", {
       className: r.join(" "),
       onPointerUp: () => {
@@ -9971,28 +9970,28 @@ const E_ = m.memo(() => (m.useEffect(() => {
         t(Xa(l))
       },
       children: [e.jsx("div", {
-        className: P.disabled_button_cover,
+        className: I.disabled_button_cover,
         style: {
           opacity: s || a ? .7 : 0
         }
       }), e.jsx("img", {
         alt: "img",
-        className: P.button_image,
+        className: I.button_image,
         src: eo
       })]
     })
   },
   sw = () => {
-    const t = [P.button, P.shop_button, P.fast_type_button],
-      n = [P.button_image];
-    return c(a => a.main.pixanosProcessing) && n.push(P.animation), e.jsxs("button", {
+    const t = [I.button, I.shop_button, I.fast_type_button],
+      n = [I.button_image];
+    return c(a => a.main.pixanosProcessing) && n.push(I.animation), e.jsxs("button", {
       className: t.join(" "),
       style: {
         borderRadius: "0 var(--border-radius) var(--border-radius) 0",
         pointerEvents: "none"
       },
       children: [e.jsx("div", {
-        className: P.disabled_button_cover,
+        className: I.disabled_button_cover,
         style: {
           opacity: .7,
           borderRadius: "0 var(--border-radius) var(--border-radius) 0"
@@ -10007,7 +10006,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
   aw = () => c(n => n.canvas.coords) === null ? null : e.jsx("div", {
     className: Si.layout,
     children: e.jsxs("div", {
-      className: Si.container + " " + P.container__bottom,
+      className: Si.container + " " + I.container__bottom,
       children: [e.jsx(Wg, {}), e.jsx(Vg, {}), e.jsx(y_, {}), e.jsx(tg, {}), e.jsx(tw, {}), e.jsx(nw, {}), e.jsx(sw, {})]
     })
   }),
@@ -10650,7 +10649,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
         onPointerUp: () => {
           tn("https://ton.org/en/open-league")
         },
-        children: ["Details on ton.org ", e.jsx(I, {
+        children: ["Details on ton.org ", e.jsx(N, {
           size: 16,
           children: ""
         })]
@@ -10760,7 +10759,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
       },
       children: [a === null ? e.jsx("span", {
         children: s
-      }) : a, a === null ? e.jsx(I, {
+      }) : a, a === null ? e.jsx(N, {
         size: 20,
         children: ""
       }) : ""]
@@ -10931,13 +10930,13 @@ const E_ = m.memo(() => (m.useEffect(() => {
               children: [e.jsx("span", {
                 className: E.gray,
                 children: t("benefits.title6")
-              }), i < 1e4 && e.jsx(I, {
+              }), i < 1e4 && e.jsx(N, {
                 size: 16,
                 style: {
                   marginLeft: 3
                 },
                 children: ""
-              }), i >= 1e4 && e.jsx(I, {
+              }), i >= 1e4 && e.jsx(N, {
                 size: 16,
                 style: {
                   marginLeft: 3
@@ -11182,9 +11181,9 @@ const E_ = m.memo(() => (m.useEffect(() => {
       if (a !== 0) return () => {};
       const u = setInterval(() => {
         const _ = Date.now() - r,
-          b = i - _,
-          N = Math.round(b / 1e3);
-        d(Sb(N))
+          j = i - _,
+          P = Math.round(j / 1e3);
+        d(Sb(P))
       }, 500);
       return () => {
         clearInterval(u)
@@ -11229,7 +11228,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
           className: q.variant_item,
           children: [e.jsx("div", {
             className: q.variant_left_container,
-            children: e.jsx(I, {
+            children: e.jsx(N, {
               size: 28,
               children: ""
             })
@@ -11262,7 +11261,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
           },
           children: [e.jsx("div", {
             className: q.variant_left_container,
-            children: e.jsx(I, {
+            children: e.jsx(N, {
               size: 28,
               children: ""
             })
@@ -11281,7 +11280,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
             })]
           }), e.jsx("div", {
             className: q.variant_right_container,
-            children: e.jsx(I, {
+            children: e.jsx(N, {
               size: 20,
               children: ""
             })
@@ -11293,7 +11292,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
           },
           children: [e.jsx("div", {
             className: q.variant_left_container,
-            children: e.jsx(I, {
+            children: e.jsx(N, {
               size: 28,
               children: ""
             })
@@ -11312,7 +11311,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
             })]
           }), e.jsx("div", {
             className: q.variant_right_container,
-            children: e.jsx(I, {
+            children: e.jsx(N, {
               size: 20,
               children: ""
             })
@@ -11408,31 +11407,31 @@ const E_ = m.memo(() => (m.useEffect(() => {
       l = Ms(),
       [d, u] = Nn(),
       [h, _] = m.useState(!1),
-      b = c(rt);
+      j = c(rt);
     m.useEffect(() => {
       if (!a || !r) return;
       const f = localStorage.getItem(s);
       if (f) {
-        const j = JSON.parse(f);
-        j.dailyId === a.id && Date.now() - j.ts < 10 * 60 * 1e3 ? _(!0) : _(!1), Date.now() - j.ts >= 10 * 60 * 1e3 && localStorage.removeItem(s)
+        const b = JSON.parse(f);
+        b.dailyId === a.id && Date.now() - b.ts < 10 * 60 * 1e3 ? _(!0) : _(!1), Date.now() - b.ts >= 10 * 60 * 1e3 && localStorage.removeItem(s)
       }
     }, [a]);
-    const N = async () => {
+    const P = async () => {
       try {
         const f = a.prices[0],
-          j = await Y.startShopTransaction({
+          b = await Y.startShopTransaction({
             buyerWallet: l,
             currencyId: 2,
             daily: !0,
             quantity: f.quantity,
             goodId: a.id
           }),
-          L = Xe.beginCell().storeUint(0, 32).storeStringTail(j.data.txMemCode).endCell(),
+          L = Xe.beginCell().storeUint(0, 32).storeStringTail(b.data.txMemCode).endCell(),
           H = {
             validUntil: Math.floor(Date.now() / 1e3) + 600,
             messages: [{
               address: wa,
-              amount: String(Xe.toNano(j.data.strAmount)),
+              amount: String(Xe.toNano(b.data.strAmount)),
               payload: L.toBoc().toString("base64")
             }]
           },
@@ -11454,8 +11453,8 @@ const E_ = m.memo(() => (m.useEffect(() => {
     };
     if (r) {
       const f = a.prices[0];
-      let j = `Claim for ${f.price} TON`;
-      return t && (j = `Claim in ${ad(t)}`), h && (j = "Pending transaction..."), e.jsxs("div", {
+      let b = `Claim for ${f.price} TON`;
+      return t && (b = `Claim in ${ad(t)}`), h && (b = "Pending transaction..."), e.jsxs("div", {
         className: k.content,
         children: [e.jsx("div", {
           className: k.description_container,
@@ -11487,17 +11486,17 @@ const E_ = m.memo(() => (m.useEffect(() => {
           })
         }), e.jsxs("div", {
           className: k.claim_button_container,
-          children: [b !== _e && e.jsx("button", {
+          children: [j !== _e && e.jsx("button", {
             className: k.no_button,
             children: "Desktop version only"
-          }), l !== "" && b === _e && e.jsx("button", {
+          }), l !== "" && j === _e && e.jsx("button", {
             disabled: o === A.pending || h,
             className: k.claim_button,
             onPointerUp: async () => {
-              t || h || N()
+              t || h || P()
             },
-            children: j
-          }), l === "" && b === _e && e.jsx("button", {
+            children: b
+          }), l === "" && j === _e && e.jsx("button", {
             className: k.claim_button,
             onPointerUp: async () => {
               await d.openModal()
@@ -11651,8 +11650,8 @@ const E_ = m.memo(() => (m.useEffect(() => {
                 h = [k.reward_item_amount],
                 _ = [k.reward_item_title];
               o.id === s && (u.push(k.reward_item_active), h.push(k.reward_item_amount_active)), l && _.push(k.reward_item_title_premium), l && !o.active && h.push(k.reward_item_amount_premium);
-              let b = d1;
-              return r >= 8 && r <= 15 && (b = u1), r >= 16 && r <= 23 && (b = m1), r >= 24 && r <= 31 && (b = A1), e.jsxs("div", {
+              let j = d1;
+              return r >= 8 && r <= 15 && (j = u1), r >= 16 && r <= 23 && (j = m1), r >= 24 && r <= 31 && (j = A1), e.jsxs("div", {
                 className: u.join(" "),
                 onPointerUp: () => {
                   t(U({
@@ -11667,7 +11666,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
                     className: _.join(" "),
                     children: ["Day ", r + 1]
                   }), e.jsx("img", {
-                    src: b,
+                    src: j,
                     style: {
                       position: "absolute",
                       bottom: -12
@@ -11685,7 +11684,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
                   })]
                 }), !o.daily && e.jsx("div", {
                   className: k.reward_item_completed,
-                  children: e.jsx(I, {
+                  children: e.jsx(N, {
                     size: 36,
                     style: {
                       fontWeight: 600
@@ -11888,7 +11887,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
           className: hn.template_image_info_layout,
           children: e.jsxs("div", {
             className: hn.template_image_info_container,
-            children: [e.jsx(I, {
+            children: [e.jsx(N, {
               children: ""
             }), e.jsx("span", {
               children: Zt(Math.max(0, t.subscribers))
@@ -11976,12 +11975,12 @@ const E_ = m.memo(() => (m.useEffect(() => {
             rootMargin: "0px",
             threshold: 1
           },
-          _ = (b, N) => {
-            b.forEach(f => {
+          _ = (j, P) => {
+            j.forEach(f => {
               f.intersectionRatio >= 1 && (t(kt.getList({
                 offset: i,
                 limit: o
-              })), N.unobserve(n.current))
+              })), P.unobserve(n.current))
             })
           };
         u = new IntersectionObserver(_, h), u.observe(n.current)
@@ -12230,7 +12229,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
                 show: !1
               }))
             },
-            children: e.jsx(I, {
+            children: e.jsx(N, {
               size: 26,
               children: ""
             })
@@ -12766,7 +12765,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
       onPointerUp: () => {
         t(Fo())
       },
-      children: e.jsx(I, {
+      children: e.jsx(N, {
         size: 26,
         children: ""
       })
@@ -13082,7 +13081,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
           })]
         }), e.jsx("div", {
           className: B.content_top_arrow,
-          children: e.jsx(I, {
+          children: e.jsx(N, {
             children: ""
           })
         })]
@@ -13253,15 +13252,15 @@ const E_ = m.memo(() => (m.useEffect(() => {
                 posY: a
               })).status === 200) {
               r && y.mainImage.worldTemplate.deleteTemplate(r.id);
-              const b = await i(kt.getTemplateById({
+              const j = await i(kt.getTemplateById({
                   id: l.id
                 })),
-                N = {
-                  ...b.payload,
-                  url: `${b.payload.url}?time=${Date.now()}`,
+                P = {
+                  ...j.payload,
+                  url: `${j.payload.url}?time=${Date.now()}`,
                   type: Ke.my
                 };
-              i(_g(N)), i($o()), await y.mainImage.worldTemplate.add(N), i(U({
+              i(_g(P)), i($o()), await y.mainImage.worldTemplate.add(P), i(U({
                 id: performance.now(),
                 text: "Create successfully!",
                 icon: ""
@@ -13359,21 +13358,21 @@ const E_ = m.memo(() => (m.useEffect(() => {
     return m.useEffect(() => {}, []), m.useEffect(() => {
       if (t !== null) {
         _(!0);
-        const b = async () => {
-          const N = document.createElement("canvas"),
-            f = N.getContext("2d");
+        const j = async () => {
+          const P = document.createElement("canvas"),
+            f = P.getContext("2d");
           f.imageSmoothingEnabled = !1;
-          const j = t.width / t.height;
+          const b = t.width / t.height;
           let L, H;
-          j > 1 ? (L = r, H = r / j) : (H = r, L = r * j);
+          b > 1 ? (L = r, H = r / b) : (H = r, L = r * b);
           const Ne = (r - L) / 2,
             X = (r - H) / 2;
-          N.width = r, N.height = r, f.drawImage(t, Ne, X, L, H);
+          P.width = r, P.height = r, f.drawImage(t, Ne, X, L, H);
           const ve = f.getImageData(0, 0, r, r);
-          qI(ve), f.putImageData(ve, 0, 0), a(ve), o(N.toDataURL())
+          qI(ve), f.putImageData(ve, 0, 0), a(ve), o(P.toDataURL())
         };
         setTimeout(() => {
-          b().then(() => {
+          j().then(() => {
             _(!1)
           })
         }, 100)
@@ -13574,7 +13573,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
     templateSize: t,
     setTemplateSize: n
   }) => {
-    const [s] = m.useState([128]);
+    const [s] = m.useState([t]);
     return e.jsxs("div", {
       className: Z.template_size,
       children: [e.jsx("div", {
@@ -13689,67 +13688,74 @@ const E_ = m.memo(() => (m.useEffect(() => {
   },
   LP = () => {
     g(), c(Ue);
-    const [t, n] = m.useState(null), [s, a] = m.useState(null), [i, o] = m.useState(null), [r, l] = m.useState(128), [d, u] = m.useState({
-      x: 0,
-      y: 0
-    }), [h, _] = m.useState(!1), b = c(Js), N = Ua[b];
+    const t = c(Js),
+      n = Ua[t],
+      [s, a] = m.useState(null),
+      [i, o] = m.useState(null),
+      [r, l] = m.useState(null),
+      [d, u] = m.useState(n == null ? void 0 : n.templateSize),
+      [h, _] = m.useState({
+        x: 0,
+        y: 0
+      }),
+      [j, P] = m.useState(!1);
     return m.useEffect(() => {
-      if (t !== null) {
-        _(!0);
+      if (s !== null) {
+        P(!0);
         const f = async () => {
-          const j = document.createElement("canvas"),
-            L = j.getContext("2d");
+          const b = document.createElement("canvas"),
+            L = b.getContext("2d");
           L.imageSmoothingEnabled = !1;
-          const H = t.width / t.height;
+          const H = s.width / s.height;
           let Ne, X;
-          H > 1 ? (Ne = r, X = r / H) : (X = r, Ne = r * H);
-          const ve = (r - Ne) / 2,
-            Rn = (r - X) / 2;
-          j.width = r, j.height = r, L.drawImage(t, ve, Rn, Ne, X);
-          const cn = L.getImageData(0, 0, r, r);
-          cP(cn), L.putImageData(cn, 0, 0), a(cn), o(j.toDataURL())
+          H > 1 ? (Ne = d, X = d / H) : (X = d, Ne = d * H);
+          const ve = (d - Ne) / 2,
+            Rn = (d - X) / 2;
+          b.width = d, b.height = d, L.drawImage(s, ve, Rn, Ne, X);
+          const cn = L.getImageData(0, 0, d, d);
+          cP(cn), L.putImageData(cn, 0, 0), o(cn), l(b.toDataURL())
         };
         setTimeout(() => {
           f().then(() => {
-            _(!1)
+            P(!1)
           })
         }, 100)
       }
-    }, [t, r]), e.jsxs("div", {
+    }, [s, d]), e.jsxs("div", {
       style: {
         display: "flex",
         flexDirection: "column",
         gap: 14
       },
-      children: [i === null && e.jsx(MP, {}), i !== null && e.jsx(UP, {
-        loading: h,
-        dataUrl: i,
-        templateSize: r
-      }), i !== null && e.jsx(OP, {
-        templateSize: r,
-        setTemplateSize: l
-      }), i !== null && e.jsx(FP, {
-        coords: d,
-        setCoords: u,
-        templateSize: r,
-        setTemplateSize: l
+      children: [r === null && e.jsx(MP, {}), r !== null && e.jsx(UP, {
+        loading: j,
+        dataUrl: r,
+        templateSize: d
+      }), r !== null && e.jsx(OP, {
+        templateSize: d,
+        setTemplateSize: u
+      }), r !== null && e.jsx(FP, {
+        coords: h,
+        setCoords: _,
+        templateSize: d,
+        setTemplateSize: u
       }), e.jsxs("div", {
         style: {
           marginTop: 20,
           textAlign: "center"
         },
-        children: ["To participate in the new round, please upload a new template! Size:", N == null ? void 0 : N.templateSize, "х", N == null ? void 0 : N.templateSize, ".Templates with no artistic value will be rejected."]
-      }), t === null && e.jsx(QP, {
-        setFile: n,
-        templateSize: r,
-        loading: h
-      }), t !== null && e.jsx(zP, {
-        loading: h,
-        imageData: s,
-        setFile: n,
-        setDataUrl: o,
-        posX: d.x,
-        posY: d.y
+        children: ["To participate in the new round, please upload a new template! Size:", n == null ? void 0 : n.templateSize, "х", n == null ? void 0 : n.templateSize, ".Templates with no artistic value will be rejected."]
+      }), s === null && e.jsx(QP, {
+        setFile: a,
+        templateSize: d,
+        loading: j
+      }), s !== null && e.jsx(zP, {
+        loading: j,
+        imageData: i,
+        setFile: a,
+        setDataUrl: l,
+        posX: h.x,
+        posY: h.y
       })]
     })
   },
@@ -14068,7 +14074,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
       u = i && l,
       h = s && s === t.round_id,
       _ = h ? "Winning" : "Won",
-      b = h ? "😔 Losing" : "😔 Lost";
+      j = h ? "😔 Losing" : "😔 Lost";
     return e.jsxs("div", {
       className: F.round_container,
       onPointerUp: () => {
@@ -14087,7 +14093,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
           children: _
         }), !u && e.jsx("div", {
           className: R(F.round_status_fail, F.fail),
-          children: b
+          children: j
         })]
       }), e.jsxs("div", {
         className: F.round_main_info,
@@ -14367,7 +14373,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
       children: "Your template. Cute!"
     }) : i ? e.jsxs("div", {
       className: K.not_button,
-      children: ["Selected template ", e.jsx(I, {
+      children: ["Selected template ", e.jsx(N, {
         size: 18,
         children: ""
       })]
@@ -14395,7 +14401,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
             onPointerUp: () => {
               t(Aa())
             },
-            children: e.jsx(I, {
+            children: e.jsx(N, {
               size: 26,
               children: ""
             })
@@ -14810,20 +14816,20 @@ const E_ = m.memo(() => (m.useEffect(() => {
         count: 0,
         limit: 1e4
       }),
-      [_, b] = m.useState({
+      [_, j] = m.useState({
         count: 0,
         limit: 1
       }),
-      [N, f] = m.useState({
+      [P, f] = m.useState({
         count: 0,
         limit: 5e3
       });
     return m.useEffect(() => {
-      let j = null;
-      return o && (j = setTimeout(() => {
+      let b = null;
+      return o && (b = setTimeout(() => {
         r(!1)
       }, 5e3)), () => {
-        clearTimeout(j)
+        clearTimeout(b)
       }
     }, [o]), m.useEffect(() => {
       (async () => {
@@ -14835,7 +14841,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
           }), H.group_name === zn.Mythical && h({
             count: H.usage_count,
             limit: H.limit
-          }), H.group_name === zn.Magical && b({
+          }), H.group_name === zn.Magical && j({
             count: H.usage_count,
             limit: H.limit
           }), H.group_name === zn.Dogs && f({
@@ -14869,8 +14875,8 @@ const E_ = m.memo(() => (m.useEffect(() => {
             className: S.input,
             placeholder: "Enter your word here, fren",
             value: n,
-            onChange: j => {
-              let L = j.target.value;
+            onChange: b => {
+              let L = b.target.value;
               s(L)
             }
           })]
@@ -14936,9 +14942,9 @@ const E_ = m.memo(() => (m.useEffect(() => {
               }), e.jsxs("div", {
                 className: R(S.gray),
                 children: [ze({
-                  num: N.count
+                  num: P.count
                 }), "/", ze({
-                  num: N.limit
+                  num: P.limit
                 })]
               })]
             }), e.jsxs("div", {
@@ -14999,11 +15005,11 @@ const E_ = m.memo(() => (m.useEffect(() => {
             onPointerUp: async () => {
               i(!0);
               try {
-                const j = await Y.checkSecret({
+                const b = await Y.checkSecret({
                   key: n
                 });
-                if (j.status === 200) {
-                  const L = j.data;
+                if (b.status === 200) {
+                  const L = b.data;
                   if (L.secretWord.success) {
                     let H = "Success!";
                     L.secretWord.reward && (H += ` ${L.secretWord.reward} PX earned`), t(U({
@@ -15231,7 +15237,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
     return c(Fe) ? e.jsx("button", {
       className: `${xe.stars_button}`,
       onPointerUp: t,
-      children: e.jsx(I, {
+      children: e.jsx(N, {
         size: 20,
         children: ""
       })
@@ -15250,7 +15256,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
     return e.jsx("button", {
       className: xe.burger_button,
       onPointerUp: s,
-      children: e.jsx(I, {
+      children: e.jsx(N, {
         size: 28,
         children: ""
       })
@@ -15261,7 +15267,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
     return c(Fe) ? e.jsx("button", {
       className: `${xe.stars_button}`,
       onPointerUp: t,
-      children: e.jsx(I, {
+      children: e.jsx(N, {
         size: 20,
         children: ""
       })
@@ -15352,8 +15358,8 @@ const tT = () => {
         u = null;
       const h = _ => {
         a === null && (a = _);
-        const N = (_ - a) / r;
-        o !== _ && (i = Math.min(N * l, l), t.current && (t.current.style.width = `${i}%`)), o = _, i < l && (d = requestAnimationFrame(h))
+        const P = (_ - a) / r;
+        o !== _ && (i = Math.min(P * l, l), t.current && (t.current.style.width = `${i}%`)), o = _, i < l && (d = requestAnimationFrame(h))
       };
       return n === ke.start && (d = requestAnimationFrame(h), t.current && (t.current.style.display = "block")), n === ke.finish && (t.current && (t.current.style.width = "100%"), u = setTimeout(() => {
         t.current && (t.current.style.display = "none", t.current.style.width = "0")
@@ -15439,7 +15445,7 @@ const tT = () => {
               onPointerUp: () => {
                 t(da())
               },
-              children: e.jsx(I, {
+              children: e.jsx(N, {
                 size: 20,
                 children: ""
               })
@@ -15577,7 +15583,7 @@ const tT = () => {
         onPointerUp: () => {
           t(Fa())
         },
-        children: e.jsx(I, {
+        children: e.jsx(N, {
           size: 30,
           children: ""
         })
@@ -15632,7 +15638,7 @@ const tT = () => {
               t(vn(i.currency_id))
             },
             children: [e.jsx("div", {
-              children: e.jsx(I, {
+              children: e.jsx(N, {
                 size: 28,
                 children: s === i.currency_id ? "" : ""
               })
@@ -15713,7 +15719,7 @@ const tT = () => {
       [r, l] = m.useState(A.idle),
       [d, u] = m.useState(!1),
       [h, _] = Nn(),
-      N = (Ne = c(X => X.shop.products[a]).prices.filter(X => X.currency_id === i)[0]) == null ? void 0 : Ne.price,
+      P = (Ne = c(X => X.shop.products[a]).prices.filter(X => X.currency_id === i)[0]) == null ? void 0 : Ne.price,
       f = Ms();
     if (c(X => X.shop.selectedCurrency) === 1 || f === "") return null;
     const L = async X => {
@@ -15746,7 +15752,7 @@ const tT = () => {
         };
       await h.sendTransaction(Hr), n(!0), u(!0), l(A.fulfilled)
     };
-    return N ? e.jsx("button", {
+    return P ? e.jsx("button", {
       className: J.button,
       onPointerUp: async X => {
         if (X.stopPropagation(), t(!1), d) {
@@ -15800,7 +15806,7 @@ const tT = () => {
     return t ? e.jsx($.Fragment, {
       children: "You bought it!"
     }) : e.jsxs($.Fragment, {
-      children: ["Buy for", e.jsx(I, {
+      children: ["Buy for", e.jsx(N, {
         size: 18,
         className: J.star_color,
         children: ""
@@ -15820,23 +15826,23 @@ const tT = () => {
     return c(_ => _.shop.selectedCurrency) !== 1 ? null : e.jsx("div", {
       className: J.button_container,
       onPointerUp: async _ => {
-        var N;
+        var P;
         if (_.stopPropagation(), d) {
           s(Fa()), l(A.idle);
           return
         }
         if (r === A.pending) return;
         l(A.pending);
-        const b = i.isOnePiece ? 1 : o;
+        const j = i.isOnePiece ? 1 : o;
         try {
           const f = await Y.buy({
             type: Number(a),
-            qty: b
+            qty: j
           });
-          f.status === 200 && ((N = f == null ? void 0 : f.data) == null ? void 0 : N.ok) === !0 && window.Telegram.WebApp.openInvoice(f.data.result, j => {
+          f.status === 200 && ((P = f == null ? void 0 : f.data) == null ? void 0 : P.ok) === !0 && window.Telegram.WebApp.openInvoice(f.data.result, b => {
             var H, Ne;
             const L = Number(a);
-            if (j === "paid") {
+            if (b === "paid") {
               if (L >= 9 && L <= 11) {
                 const X = {
                   9: 1,
@@ -15855,7 +15861,7 @@ const tT = () => {
                 }))
               } else s(Yt({
                 product: a,
-                amount: b
+                amount: j
               }));
               u(!0), (Ne = (H = window.Telegram.WebApp) == null ? void 0 : H.HapticFeedback) == null || Ne.notificationOccurred("error"), n(!0)
             } else t("Error, try again.")
@@ -15939,13 +15945,13 @@ const fB = () => {
       [l, d] = m.useState(Ln(s).max),
       [u, h] = m.useState(Ln(s).step),
       _ = l === 5e3 ? "5000" : `${l}+`,
-      b = f => {
-        const j = f[0];
-        t(Fs(Fi(j, u))), r([Fi(j, u)])
+      j = f => {
+        const b = f[0];
+        t(Fs(Fi(b, u))), r([Fi(b, u)])
       },
-      N = f => {
-        const j = f[0];
-        j === l && (d(Ln(j).max), h(Ln(j).step))
+      P = f => {
+        const b = f[0];
+        b === l && (d(Ln(b).max), h(Ln(b).step))
       };
     return i ? null : e.jsxs("div", {
       className: Oi.container,
@@ -15955,11 +15961,11 @@ const fB = () => {
         min: u,
         max: l,
         rtl: !1,
-        onChange: b,
-        onFinalChange: N,
+        onChange: j,
+        onFinalChange: P,
         renderTrack: ({
           props: f,
-          children: j
+          children: b
         }) => e.jsx("div", {
           onMouseDown: f.onMouseDown,
           onTouchStart: f.onTouchStart,
@@ -15984,12 +15990,12 @@ const fB = () => {
               }),
               alignSelf: "center"
             },
-            children: j
+            children: b
           })
         }),
         renderThumb: ({
           props: f,
-          isDragged: j
+          isDragged: b
         }) => m.createElement("div", {
           ...f,
           key: f.key,
@@ -16432,7 +16438,7 @@ const eE = () => {
             },
             children: e.jsx("div", {
               className: D.close,
-              children: e.jsx(I, {
+              children: e.jsx(N, {
                 size: 30,
                 children: ""
               })
@@ -16556,7 +16562,7 @@ const eE = () => {
       onPointerUp: () => {
         n(mi(t.id))
       },
-      children: [e.jsx(I, {
+      children: [e.jsx(N, {
         size: 20,
         children: a
       }), t.text]
@@ -16961,7 +16967,7 @@ const eE = () => {
                   onPointerUp: () => d("/"),
                   children: [e.jsx("div", {
                     className: V.icon,
-                    children: e.jsx(I, {
+                    children: e.jsx(N, {
                       size: 24,
                       children: ""
                     })
@@ -17008,7 +17014,7 @@ const eE = () => {
                   onPointerUp: () => d("/secrets"),
                   children: [e.jsx("div", {
                     className: V.icon,
-                    children: e.jsx(I, {
+                    children: e.jsx(N, {
                       size: 24,
                       children: ""
                     })
@@ -17021,7 +17027,7 @@ const eE = () => {
                   onPointerUp: () => d("/daily"),
                   children: [e.jsx("div", {
                     className: V.icon,
-                    children: e.jsx(I, {
+                    children: e.jsx(N, {
                       size: 24,
                       children: ""
                     })
@@ -17034,7 +17040,7 @@ const eE = () => {
                   onPointerUp: () => d("/history"),
                   children: [e.jsx("div", {
                     className: V.icon,
-                    children: e.jsx(I, {
+                    children: e.jsx(N, {
                       size: 24,
                       children: ""
                     })
@@ -17060,7 +17066,7 @@ const eE = () => {
                     className: V.button_content,
                     children: [e.jsx("span", {
                       children: "Disconnect TON"
-                    }), e.jsx(I, {
+                    }), e.jsx(N, {
                       size: 20,
                       style: {
                         fontWeight: 400
@@ -17078,7 +17084,7 @@ const eE = () => {
                     className: V.button_content,
                     children: [e.jsx("span", {
                       children: "Desktop version"
-                    }), e.jsx(I, {
+                    }), e.jsx(N, {
                       size: 20,
                       style: {
                         fontWeight: 400
@@ -17224,7 +17230,7 @@ const uD = "_container_gb8eq_1",
                 onPointerUp: () => {
                   a(!1)
                 },
-                children: e.jsx(I, {
+                children: e.jsx(N, {
                   size: 20,
                   children: ""
                 })
@@ -17330,7 +17336,7 @@ const uD = "_container_gb8eq_1",
         className: va.container,
         children: t.map((n, s) => {
           const a = M(4, 14);
-          return e.jsx(I, {
+          return e.jsx(N, {
             size: a,
             className: va.star,
             style: {
@@ -17393,7 +17399,7 @@ const uD = "_container_gb8eq_1",
             children: e.jsx("div", {
               className: ge.close,
               onPointerUp: d,
-              children: e.jsx(I, {
+              children: e.jsx(N, {
                 size: 24,
                 children: ""
               })
@@ -17491,7 +17497,7 @@ const nk = "_layout_15tw0_1",
           children: [e.jsx("div", {
             className: et.close_button,
             onPointerUp: o,
-            children: e.jsx(I, {
+            children: e.jsx(N, {
               size: 26,
               children: ""
             })
