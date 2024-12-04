@@ -1134,10 +1134,7 @@ const qc = {
     showLimitedGoodsPopup: Vc,
     hideLimitedGoodsPopup: hR
   } = to.actions,
-  za = t => {
-    const n = t.user.user;
-    return !n || n.id !== 395492139 ? t.shop.crypto.filter(s => s.currency_id !== 4) : t.shop.crypto
-  },
+  za = t => t.shop.crypto,
   Xc = to.reducer,
   zs = {
     getProducts: qn,
@@ -4516,7 +4513,7 @@ const xi = () => {
   },
   Om = () => e.jsxs("div", {
     className: m.info_container,
-    children: [e.jsx(om, {}), e.jsx(Im, {}), e.jsx(Bm, {}), e.jsx(km, {}), e.jsx(Qm, {}), e.jsx(wm, {}), e.jsx(gm, {}), e.jsx(mm, {}), e.jsx(Am, {}), e.jsx(NA, {}), e.jsx(la, {
+    children: [e.jsx(om, {}), e.jsx(wm, {}), e.jsx(Im, {}), e.jsx(Bm, {}), e.jsx(km, {}), e.jsx(Qm, {}), e.jsx(gm, {}), e.jsx(mm, {}), e.jsx(Am, {}), e.jsx(NA, {}), e.jsx(la, {
       text: "Quick start"
     }), e.jsx(CA, {}), e.jsx(SA, {}), e.jsx(TA, {}), e.jsx(la, {
       text: "Special"
@@ -10107,14 +10104,14 @@ const W_ = A.memo(() => (A.useEffect(() => {
   hw = () => {
     const t = g(),
       n = W(),
-      s = c(l => l.tournament.selectedTemplate),
-      a = c(l => l.tournament.activeTournamentTemplate),
+      s = c(d => d.tournament.selectedTemplate),
+      a = c(d => d.tournament.activeTournamentTemplate),
       i = s && a === s.id,
       o = [pt.button],
       r = c(be);
-    return i && o.push(pt.enabled), s || o.push(pt.animation), e.jsxs("button", {
+    return c(d => d.tournament.selectedTemplateStatus) === p.pending ? null : (i && o.push(pt.enabled), s || o.push(pt.animation), e.jsxs("button", {
       className: o.join(" "),
-      onPointerUp: l => {
+      onPointerUp: d => {
         if (!s || !r) {
           t(xn(Te.main)), n.push("/tournament");
           return
@@ -10137,7 +10134,7 @@ const W_ = A.memo(() => (A.useEffect(() => {
         className: pt.image,
         src: `${s.url}`
       })]
-    })
+    }))
   },
   gw = () => e.jsx(te.Fragment, {
     children: e.jsx("div", {
