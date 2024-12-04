@@ -10400,7 +10400,7 @@ const L_ = A.memo(() => (A.useEffect(() => {
       children: [e.jsxs("div", {
         children: [e.jsx("span", {
           className: x.title_text,
-          children: t.details.type
+          children: `${t.details.type} ${t.details.round_id?"for round №"+t.details.round_id:""}`
         }), e.jsx("span", {
           className: x.hint_text,
           children: "Special"
