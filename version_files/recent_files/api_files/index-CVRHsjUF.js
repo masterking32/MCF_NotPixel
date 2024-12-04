@@ -13574,7 +13574,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
     templateSize: t,
     setTemplateSize: n
   }) => {
-    const [s] = m.useState([64]);
+    const [s] = m.useState([128]);
     return e.jsxs("div", {
       className: Z.template_size,
       children: [e.jsx("div", {
@@ -13689,7 +13689,7 @@ const E_ = m.memo(() => (m.useEffect(() => {
   },
   LP = () => {
     g(), c(Ue);
-    const [t, n] = m.useState(null), [s, a] = m.useState(null), [i, o] = m.useState(null), [r, l] = m.useState(64), [d, u] = m.useState({
+    const [t, n] = m.useState(null), [s, a] = m.useState(null), [i, o] = m.useState(null), [r, l] = m.useState(128), [d, u] = m.useState({
       x: 0,
       y: 0
     }), [h, _] = m.useState(!1), b = c(Js), N = Ua[b];
