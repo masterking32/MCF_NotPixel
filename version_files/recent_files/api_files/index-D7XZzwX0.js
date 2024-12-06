@@ -6582,7 +6582,7 @@ const hs = O("tournament/getPeriods", async () => (await rr.getPeriods()).data),
           ...s.payload,
           imageSize: s.payload.size || s.payload.imageSize,
           type: Ze.referred,
-          url: `${s.payload.url}?time=${Date.now()}`
+          url: `${s.payload.url}`
         }), n.selectedTemplateStatus = p.fulfilled
       }).addCase(fs.rejected, (n, s) => {
         n.selectedTemplateStatus = p.rejected
@@ -6591,7 +6591,7 @@ const hs = O("tournament/getPeriods", async () => (await rr.getPeriods()).data),
       }).addCase(xs.fulfilled, (n, s) => {
         s.payload && s.payload.list && (_n.addMany(n.approvedTemplatesList, s.payload.list.map(a => ({
           ...a,
-          url: `${a.url}?time=${Date.now()}`
+          url: `${a.url}`
         }))), n.approvedTemplatesListOffset += 16, n.approvedTemplatesListTotal = Math.max(s.payload.total, n.approvedTemplatesListTotal)), n.approvedTemplatesListStatus = p.fulfilled
       }).addCase(xs.rejected, (n, s) => {
         n.approvedTemplatesListStatus = p.rejected
@@ -6600,7 +6600,7 @@ const hs = O("tournament/getPeriods", async () => (await rr.getPeriods()).data),
       }).addCase(ys.fulfilled, (n, s) => {
         s.payload && s.payload.list && _n.setAll(n.approvedTemplatesList, s.payload.list.map(a => ({
           ...a,
-          url: `${a.url}?time=${Date.now()}}`
+          url: `${a.url}`
         }))), n.randomTemplatesListStatus = p.fulfilled
       }).addCase(ys.rejected, (n, s) => {
         n.randomTemplatesListStatus = p.rejected
@@ -6610,7 +6610,7 @@ const hs = O("tournament/getPeriods", async () => (await rr.getPeriods()).data),
         s.payload.id && (n.selectedTemplate = {
           ...s.payload,
           type: Ze.referred,
-          url: `${s.payload.url}?time=${Date.now()}`
+          url: `${s.payload.url}`
         }), n.selectTemplateStatus = p.fulfilled
       }).addCase(vs.rejected, (n, s) => {
         n.selectTemplateStatus = p.rejected
