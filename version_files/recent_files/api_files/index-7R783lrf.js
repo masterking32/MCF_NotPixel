@@ -6591,14 +6591,17 @@ const hs = O("tournament/getPeriods", async () => (await rr.getPeriods()).data),
       }).addCase(xs.fulfilled, (n, s) => {
         s.payload && s.payload.list && (_n.addMany(n.approvedTemplatesList, s.payload.list.map(a => ({
           ...a,
-          url: `${a.url}?time=${Date.now()}_${a.id}`
+          url: `${a.url}?time=${Date.now()}`
         }))), n.approvedTemplatesListOffset += 16, n.approvedTemplatesListTotal = Math.max(s.payload.total, n.approvedTemplatesListTotal)), n.approvedTemplatesListStatus = p.fulfilled
       }).addCase(xs.rejected, (n, s) => {
         n.approvedTemplatesListStatus = p.rejected
       }).addCase(ys.pending, n => {
         n.randomTemplatesListStatus = p.pending
       }).addCase(ys.fulfilled, (n, s) => {
-        s.payload && s.payload.list && _n.setAll(n.approvedTemplatesList, s.payload.list), n.randomTemplatesListStatus = p.fulfilled
+        s.payload && s.payload.list && _n.setAll(n.approvedTemplatesList, s.payload.list.map(a => ({
+          ...a,
+          url: `${a.url}?time=${Date.now()}}`
+        }))), n.randomTemplatesListStatus = p.fulfilled
       }).addCase(ys.rejected, (n, s) => {
         n.randomTemplatesListStatus = p.rejected
       }).addCase(vs.pending, n => {
