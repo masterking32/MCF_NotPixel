@@ -5234,7 +5234,7 @@ const cs = U("tournament/getPeriods", async () => (await Go.getPeriods()).data),
     resultsStatus: p.idle,
     selectedTemplateStatus: p.idle
   },
-  pn = "?r=1",
+  pn = "?time=2",
   qo = pe({
     name: "tournament",
     initialState: _h,
@@ -13842,7 +13842,7 @@ const Z_ = m.memo(() => (m.useEffect(() => {
           children: [e.jsx("img", {
             alt: "img",
             className: te.image,
-            src: n ? n.url : ea,
+            src: n ? `${n.url}?time=${Date.now()}` : ea,
             onPointerUp: () => {
               n.id && n.id !== 0 && t(ti(n))
             }
