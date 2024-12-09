@@ -5234,7 +5234,7 @@ const cs = U("tournament/getPeriods", async () => (await Lo.getPeriods()).data),
     resultsStatus: p.idle,
     selectedTemplateStatus: p.idle
   },
-  An = "?r=5",
+  An = "?r=6",
   Ho = pe({
     name: "tournament",
     initialState: gh,
