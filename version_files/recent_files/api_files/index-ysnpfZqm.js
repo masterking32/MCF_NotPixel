@@ -2766,10 +2766,10 @@ const ts = U("mining/info", async () => (await Vs.info()).data),
     checkTask: ss,
     checkBoost: as
   },
-  Be = "data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5%200C2.23858%200%200%202.23858%200%205V27C0%2029.7614%202.23858%2032%205%2032H27C29.7614%2032%2032%2029.7614%2032%2027V5C32%202.23858%2029.7614%200%2027%200H5ZM21.4261%2010.5739H10.5739V21.4261H21.4261V10.5739Z'%20fill='white'/%3e%3c/svg%3e",
+  Ce = "data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5%200C2.23858%200%200%202.23858%200%205V27C0%2029.7614%202.23858%2032%205%2032H27C29.7614%2032%2032%2029.7614%2032%2027V5C32%202.23858%2029.7614%200%2027%200H5ZM21.4261%2010.5739H10.5739V21.4261H21.4261V10.5739Z'%20fill='white'/%3e%3c/svg%3e",
   Ou = "data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5%200C2.23858%200%200%202.23858%200%205V27C0%2029.7614%202.23858%2032%205%2032H27C29.7614%2032%2032%2029.7614%2032%2027V5C32%202.23858%2029.7614%200%2027%200H5ZM21.4261%2010.5739H10.5739V21.4261H21.4261V10.5739Z'%20fill='%238794a1'/%3e%3c/svg%3e",
   Qu = {
-    white: Be,
+    white: Ce,
     gray: Ou
   },
   Q = ({
@@ -5107,7 +5107,7 @@ const an = zo,
     })
   };
 let An = null;
-class Se {
+class Te {
   static async uploadTemplate({
     blob: n,
     posX: s,
@@ -5194,21 +5194,21 @@ const cs = U("tournament/getPeriods", async () => (await Go.getPeriods()).data),
   ls = U("tournament/getResults", async () => (await Go.getResults()).data),
   ds = U("tournament/getMyTemplate", async ({
     id: t
-  }) => (await Se.getTournamentTemplateById({
+  }) => (await Te.getTournamentTemplateById({
     id: t
   })).data),
-  us = U("tournament/getSelectedTemplate", async () => (await Se.getSelectedTemplate()).data),
+  us = U("tournament/getSelectedTemplate", async () => (await Te.getSelectedTemplate()).data),
   ms = U("tournament/getApprovedTemplatesList", async ({
     offset: t,
     limit: n
-  }) => (await Se.getApprovedTemplatesList({
+  }) => (await Te.getApprovedTemplatesList({
     offset: t,
     limit: n
   })).data),
-  As = U("tournament/getRandomTemplatesList", async () => (await Se.getRandomTemplates()).data),
+  As = U("tournament/getRandomTemplatesList", async () => (await Te.getRandomTemplates()).data),
   ps = U("tournament/selectTemplate", async ({
     id: t
-  }) => (await Se.subscribeToTournamentTemplate({
+  }) => (await Te.subscribeToTournamentTemplate({
     id: t
   })).data),
   _h = {
@@ -6516,25 +6516,25 @@ const Mg = pr.reducer,
   Ug = "/assets/halloween2-l9FmXxVI.png",
   Og = U("template/subscribe", async ({
     id: t
-  }) => (await Se.subscribeToTemplate({
+  }) => (await Te.subscribeToTemplate({
     id: t
   })).data),
   ys = U("template/getTemplateList", async ({
     offset: t,
     limit: n
-  }) => (await Se.getTemplatesList({
+  }) => (await Te.getTemplatesList({
     offset: t,
     limit: n
   })).data),
   Qg = U("template/getAvailableSizes", async ({
     userId: t
-  }) => (await Se.getAvailableSizes({
+  }) => (await Te.getAvailableSizes({
     userId: t
   })).data),
-  ws = U("template/getReferredTemplate", async () => (await Se.getReferredTemplate()).data),
+  ws = U("template/getReferredTemplate", async () => (await Te.getReferredTemplate()).data),
   Da = U("template/getMyTemplate", async ({
     id: t
-  }) => (await Se.getTemplateById({
+  }) => (await Te.getTemplateById({
     id: t
   })).data),
   js = U("template/getWorldTemplate", async () => ({
@@ -9248,7 +9248,7 @@ const Z_ = m.memo(() => (m.useEffect(() => {
   Cv = "_gold_14a3l_37",
   Pv = "_winning_14a3l_44",
   Sv = "_loosing_14a3l_48",
-  Pe = {
+  Se = {
     layout: jv,
     container: bv,
     image: Nv,
@@ -9276,17 +9276,17 @@ const Z_ = m.memo(() => (m.useEffect(() => {
     return n !== p.fulfilled ? null : e.jsxs(ne.Fragment, {
       children: ["  ", e.jsx(N, {
         size: 14,
-        className: a ? Pe.winning : Pe.loosing,
+        className: a ? Se.winning : Se.loosing,
         children: ""
       }), " ", e.jsx("span", {
-        className: a ? Pe.winning : Pe.loosing,
+        className: a ? Se.winning : Se.loosing,
         children: o
       }), " ", e.jsx(N, {
         size: 14,
-        className: s ? Pe.winning : Pe.loosing,
+        className: s ? Se.winning : Se.loosing,
         children: ""
       }), " ", e.jsx("span", {
-        className: s ? Pe.winning : Pe.loosing,
+        className: s ? Se.winning : Se.loosing,
         children: i
       })]
     })
@@ -9296,9 +9296,9 @@ const Z_ = m.memo(() => (m.useEffect(() => {
       n = c(fh),
       s = n ? ui(new Date(n.EndTime)) : null;
     return e.jsxs("span", {
-      className: Pe.text,
+      className: Se.text,
       children: [e.jsxs("span", {
-        className: Pe.gold,
+        className: Se.gold,
         children: ["Round ", t, " ", s ? `ends ${s}` : ""]
       }), e.jsx(Tv, {})]
     })
@@ -9309,15 +9309,15 @@ const Z_ = m.memo(() => (m.useEffect(() => {
       s = c(xh),
       a = ui(s ? new Date(s.StartTime) : null);
     return e.jsx("div", {
-      className: Pe.layout,
+      className: Se.layout,
       onPointerUp: () => {
         t.push("/tournament")
       },
       children: e.jsxs("div", {
-        className: Pe.container,
+        className: Se.container,
         children: [e.jsx("img", {
           alt: "img",
-          className: Pe.image,
+          className: Se.image,
           src: mi
         }), !n && e.jsxs("span", {
           children: ["Starts ", a]
@@ -9404,7 +9404,7 @@ const Z_ = m.memo(() => (m.useEffect(() => {
   $v = "_text_container_1v16g_55",
   ey = "_button_container_1v16g_60",
   ty = "_button_1v16g_60",
-  Te = {
+  Be = {
     layout: qv,
     container: Xv,
     close_button: Vv,
@@ -9480,14 +9480,14 @@ const Z_ = m.memo(() => (m.useEffect(() => {
         t(Ea(null))
       },
       children: e.jsx("div", {
-        className: Te.layout,
+        className: Be.layout,
         onPointerUp: o => {
           o.stopPropagation()
         },
         children: e.jsxs("div", {
-          className: Te.container,
+          className: Be.container,
           children: [e.jsx("div", {
-            className: Te.close_button,
+            className: Be.close_button,
             onPointerUp: () => {
               t(Ea(null))
             },
@@ -9496,30 +9496,30 @@ const Z_ = m.memo(() => (m.useEffect(() => {
               children: ""
             })
           }), e.jsx("div", {
-            className: Te.title_container,
+            className: Be.title_container,
             children: e.jsx("span", {
               children: "Friend's squad invitation"
             })
           }), e.jsxs("div", {
-            className: Te.image_container,
+            className: Be.image_container,
             children: [e.jsx("img", {
               alt: "img",
-              className: `${Te.image} ${Te.first_image}`,
+              className: `${Be.image} ${Be.first_image}`,
               src: s === null ? Zt : s.logo
             }), e.jsx("img", {
               alt: "img",
-              className: `${Te.image} ${Te.second_image}`,
+              className: `${Be.image} ${Be.second_image}`,
               src: i === null || i.userPic === "" ? bt : i.userPic
             })]
           }), e.jsx("div", {
-            className: Te.text_container,
+            className: Be.text_container,
             children: e.jsxs("span", {
               children: ["Your friend is a part of the", " ", s === null ? "" : `"${s.name}"`, " squad. Ready to team up?"]
             })
           }), e.jsx("div", {
-            className: Te.button_container,
+            className: Be.button_container,
             children: e.jsxs("button", {
-              className: Te.button,
+              className: Be.button,
               onPointerUp: () => {
                 s !== null && se(`https://t.me/${_t}?startapp=${btoa(`id=${s.id}`)}`)
               },
@@ -13563,7 +13563,7 @@ const Z_ = m.memo(() => (m.useEffect(() => {
             const h = new Blob([n.data], {
               type: "application/octet-stream"
             });
-            if ((await Se.uploadTemplate({
+            if ((await Te.uploadTemplate({
                 blob: h,
                 posX: s,
                 posY: a
@@ -13976,7 +13976,7 @@ const Z_ = m.memo(() => (m.useEffect(() => {
             const _ = new Blob([n.data], {
               type: "application/octet-stream"
             });
-            (await Se.uploadTournamentTemplate({
+            (await Te.uploadTournamentTemplate({
               blob: _,
               posX: s,
               posY: a
@@ -14852,61 +14852,65 @@ const Z_ = m.memo(() => (m.useEffect(() => {
   },
   c2 = [{
     name: "Total $PX for painters",
-    value: 511488e4,
-    image: Be
+    value: 493824e4,
+    image: Ce
   }, {
     name: "Total $PX for template owners",
-    value: 16e7,
-    image: Be
+    value: 144e6,
+    image: Ce
   }, {
     name: "Winning templates",
-    value: 32,
+    value: 16,
     image: null
   }, {
     name: "Winners per template",
-    value: 2040,
+    value: 4088,
     image: null
   }, {
     name: "Total winners",
-    value: 65280,
+    value: 65408,
     image: null
   }],
   l2 = [{
     name: "Template owner",
-    value: 5e6,
-    image: Be
+    value: 9e6,
+    image: Ce
   }, {
     name: "Top 8",
-    value: 25e5,
-    image: Be
+    value: 45e5,
+    image: Ce
   }, {
     name: "9-24",
-    value: 125e4,
-    image: Be
+    value: 2e6,
+    image: Ce
   }, {
     name: "25-56",
-    value: 625e3,
-    image: Be
+    value: 1e6,
+    image: Ce
   }, {
     name: "57-120",
-    value: 3e5,
-    image: Be
+    value: 5e5,
+    image: Ce
   }, {
     name: "121-248",
-    value: 15e4,
-    image: Be
+    value: 25e4,
+    image: Ce
   }, {
     name: "249-504",
-    value: 8e4,
-    image: Be
+    value: 125e3,
+    image: Ce
   }, {
     name: "505-1016",
-    value: 4e4,
-    image: Be
+    value: 7e4,
+    image: Ce
   }, {
     name: "1017-2040",
+    value: 35e3,
+    image: Ce
+  }, {
+    name: "2041-4088",
     value: 2e4,
-    image: Be
+    image: Ce
   }],
   d2 = () => {
     const t = g(),
@@ -14929,7 +14933,7 @@ const Z_ = m.memo(() => (m.useEffect(() => {
           className: be.column_rev
         }), e.jsx("div", {
           className: be.title,
-          children: "Round 5"
+          children: "Round 6"
         }), e.jsx("div", {
           className: be.table_container,
           children: c2.map((a, i) => e.jsxs("div", {
@@ -14993,7 +14997,7 @@ const Z_ = m.memo(() => (m.useEffect(() => {
         t(Vo(!0))
       },
       children: [e.jsx("span", {
-        children: "Round 5"
+        children: "Round 6"
       }), " ", e.jsx("span", {
         className: `telegram_icons ${zi.icon}`,
         children: ""
@@ -16514,7 +16518,7 @@ void main() {
   Gr = 7200,
   uE = 1;
 let w = null,
-  Ce = null,
+  Pe = null,
   Vn = -1,
   Ss = 0;
 async function mE(t) {
@@ -16530,7 +16534,7 @@ function AE() {
   return t.id = "canvasSnap", t.width = window.innerWidth, t.height = window.innerHeight, t.style.width = `${window.innerWidth}px`, t.style.height = `${window.innerHeight}px`, t.style.position = "fixed", t.style.top = "50%", t.style.left = "50%", t.style.zIndex = "980", t.style.transform = "translate(-50%, -50%)", t.style.opacity = "0", t.style.transition = "2s ease opacity", document.body.appendChild(t), window.getComputedStyle(t).opacity, t.style.opacity = "1", t
 }
 async function pE() {
-  w.enable(w.BLEND), w.blendFunc(w.SRC_ALPHA, w.ONE_MINUS_SRC_ALPHA), w.clearColor(0, 0, 0, 0), w.viewport(0, 0, w.canvas.width, w.canvas.height), Ce = await hE(w), w.useProgram(Ce)
+  w.enable(w.BLEND), w.blendFunc(w.SRC_ALPHA, w.ONE_MINUS_SRC_ALPHA), w.clearColor(0, 0, 0, 0), w.viewport(0, 0, w.canvas.width, w.canvas.height), Pe = await hE(w), w.useProgram(Pe)
 }
 async function hE(t, n, s) {
   const a = lE,
@@ -16558,7 +16562,7 @@ function _E(t) {
   const n = fE();
   var s = w.createTexture();
   w.bindTexture(w.TEXTURE_2D, s), w.texParameteri(w.TEXTURE_2D, w.TEXTURE_WRAP_S, w.CLAMP_TO_EDGE), w.texParameteri(w.TEXTURE_2D, w.TEXTURE_WRAP_T, w.CLAMP_TO_EDGE), w.texParameteri(w.TEXTURE_2D, w.TEXTURE_MIN_FILTER, w.NEAREST), w.texParameteri(w.TEXTURE_2D, w.TEXTURE_MAG_FILTER, w.NEAREST), w.texImage2D(w.TEXTURE_2D, 0, w.RGBA, w.RGBA, w.UNSIGNED_BYTE, n);
-  const a = w.getUniformLocation(Ce, "u_Texture");
+  const a = w.getUniformLocation(Pe, "u_Texture");
   w.uniform1i(a, 0)
 }
 
@@ -16600,12 +16604,12 @@ function vE(t) {
     textureTop: r,
     min: l
   } = xE(t);
-  Ss = l * l, it(w, Ce, "u_AnimationDuration", Gr), it(w, Ce, "u_ParticleSize", uE), it(w, Ce, "u_ViewportWidth", n), it(w, Ce, "u_ViewportHeight", s), it(w, Ce, "u_TextureWidth", a), it(w, Ce, "u_TextureHeight", i), it(w, Ce, "u_TextureLeft", o), it(w, Ce, "u_TextureTop", r);
+  Ss = l * l, it(w, Pe, "u_AnimationDuration", Gr), it(w, Pe, "u_ParticleSize", uE), it(w, Pe, "u_ViewportWidth", n), it(w, Pe, "u_ViewportHeight", s), it(w, Pe, "u_TextureWidth", a), it(w, Pe, "u_TextureHeight", i), it(w, Pe, "u_TextureLeft", o), it(w, Pe, "u_TextureTop", r);
   const d = new Array(Ss);
   for (let _ = 0; _ < Ss; _++) d[_] = _;
   const u = w.createBuffer();
   w.bindBuffer(w.ARRAY_BUFFER, u), w.bufferData(w.ARRAY_BUFFER, new Float32Array(d), w.STATIC_DRAW);
-  const h = w.getAttribLocation(Ce, "a_ParticleIndex");
+  const h = w.getAttribLocation(Pe, "a_ParticleIndex");
   w.enableVertexAttribArray(h), w.vertexAttribPointer(h, 1, w.FLOAT, !1, 0, 0)
 }
 
@@ -16620,7 +16624,7 @@ function yE(t) {
     Vn = -1, document.getElementById("canvasSnap").remove();
     return
   }
-  it(w, Ce, "u_ElapsedTime", s), w.drawArrays(w.POINTS, 0, Ss), qr()
+  it(w, Pe, "u_ElapsedTime", s), w.drawArrays(w.POINTS, 0, Ss), qr()
 }
 
 function it(t, n, s, a) {
@@ -17781,7 +17785,7 @@ const bk = "_layout_15tw0_1",
     return m.useEffect(() => {
       if (t.showTemplate && t.refId && (i === p.fulfilled && a && a.id !== t.refId || i === p.rejected)) try {
         (async () => {
-          const l = await Se.getTournamentTemplateById({
+          const l = await Te.getTournamentTemplateById({
             id: t.refId
           });
           if (l.status === 200 && l.data && l.data.approved) {
