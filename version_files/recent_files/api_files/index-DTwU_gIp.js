@@ -2763,16 +2763,16 @@ const es = U("mining/info", async () => (await Xs.info()).data),
     setTask: GR
   } = jo.actions,
   Ru = jo.reducer,
-  be = {
+  Ne = {
     info: es,
     claim: ts,
     checkTask: ns,
     checkBoost: ss
   },
-  Ne = "data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5%200C2.23858%200%200%202.23858%200%205V27C0%2029.7614%202.23858%2032%205%2032H27C29.7614%2032%2032%2029.7614%2032%2027V5C32%202.23858%2029.7614%200%2027%200H5ZM21.4261%2010.5739H10.5739V21.4261H21.4261V10.5739Z'%20fill='white'/%3e%3c/svg%3e",
+  be = "data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5%200C2.23858%200%200%202.23858%200%205V27C0%2029.7614%202.23858%2032%205%2032H27C29.7614%2032%2032%2029.7614%2032%2027V5C32%202.23858%2029.7614%200%2027%200H5ZM21.4261%2010.5739H10.5739V21.4261H21.4261V10.5739Z'%20fill='white'/%3e%3c/svg%3e",
   Mu = "data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5%200C2.23858%200%200%202.23858%200%205V27C0%2029.7614%202.23858%2032%205%2032H27C29.7614%2032%2032%2029.7614%2032%2027V5C32%202.23858%2029.7614%200%2027%200H5ZM21.4261%2010.5739H10.5739V21.4261H21.4261V10.5739Z'%20fill='%238794a1'/%3e%3c/svg%3e",
   Uu = {
-    white: Ne,
+    white: be,
     gray: Mu
   },
   F = ({
@@ -2841,7 +2841,7 @@ const es = U("mining/info", async () => (await Xs.info()).data),
         onPointerUp: async () => {
           var u, h;
           try {
-            const _ = await a(be.claim()).unwrap();
+            const _ = await a(Ne.claim()).unwrap();
             await a(an(_.claimed)), s(!0), (h = (u = window.Telegram.WebApp) == null ? void 0 : u.HapticFeedback) == null || h.notificationOccurred("success")
           } catch (_) {
             r(!0), console.warn(_)
@@ -3086,7 +3086,7 @@ const es = U("mining/info", async () => (await Xs.info()).data),
           !n || u || _ || w || (a && l(bo({
             action: n,
             value: !D
-          })), a && D || a && !s ? a() : s && l(be.checkTask({
+          })), a && D || a && !s ? a() : s && l(Ne.checkTask({
             key: n,
             reward: o
           })))
@@ -3628,7 +3628,7 @@ const es = U("mining/info", async () => (await Xs.info()).data),
     return A.useEffect(() => {
       var h;
       !o || d !== p.fulfilled || r && (i || (h = r == null ? void 0 : r.connectItems) != null && h.tonProof && !("error" in r.connectItems.tonProof) && X.checkTonProof(r.connectItems.tonProof.proof, r.account).then(_ => {
-        _.status === 200 && _.data.success ? t(be.checkTask({
+        _.status === 200 && _.data.success ? t(Ne.checkTask({
           key: n,
           reward: l
         })) : t(H({
@@ -3950,7 +3950,7 @@ const es = U("mining/info", async () => (await Xs.info()).data),
             unknown: "unknown",
             added: "added",
             missed: "missed"
-          }.added ? (t(be.checkTask({
+          }.added ? (t(Ne.checkTask({
             key: s,
             reward: i
           })), t(H({
@@ -4001,7 +4001,7 @@ const es = U("mining/info", async () => (await Xs.info()).data),
       action: () => {
         window.Telegram.WebApp.requestEmojiStatusAccess(r => {
           r ? window.Telegram.WebApp.setEmojiStatus("5447461825023072674", {}, l => {
-            l ? (t(be.checkTask({
+            l ? (t(Ne.checkTask({
               key: s,
               reward: a
             })), t(H({
@@ -6223,13 +6223,13 @@ const ai = {
   Ig = lr.reducer,
   bt = tn();
 bt.startListening({
-  matcher: he(be.info.fulfilled),
+  matcher: he(Ne.info.fulfilled),
   effect: (t, n) => {
     t.payload.activated && (n.dispatch(Ed(t.payload.totalUserPixels)), n.dispatch(vo(t.payload.userBalance))), n.dispatch(Zc(t.payload.goods))
   }
 });
 bt.startListening({
-  matcher: he(be.checkTask.fulfilled),
+  matcher: he(Ne.checkTask.fulfilled),
   effect: (t, n) => {
     const s = t.meta.arg.key,
       a = t.payload[s],
@@ -6248,7 +6248,7 @@ bt.startListening({
   }
 });
 bt.startListening({
-  matcher: he(be.checkBoost.fulfilled),
+  matcher: he(Ne.checkBoost.fulfilled),
   effect: (t, n) => {
     const s = t.meta.arg.key,
       a = t.payload[s];
@@ -6262,7 +6262,7 @@ bt.startListening({
   }
 });
 bt.startListening({
-  matcher: he(be.checkBoost.fulfilled),
+  matcher: he(Ne.checkBoost.fulfilled),
   effect: (t, n) => {
     const s = n.getState(),
       a = s.main.settings,
@@ -6285,7 +6285,7 @@ bt.startListening({
   }
 });
 bt.startListening({
-  matcher: he(be.checkTask.rejected),
+  matcher: he(Ne.checkTask.rejected),
   effect: (t, n) => {
     n.dispatch(H({
       id: performance.now(),
@@ -6295,7 +6295,7 @@ bt.startListening({
   }
 });
 bt.startListening({
-  matcher: he(be.checkBoost.rejected),
+  matcher: he(Ne.checkBoost.rejected),
   effect: (t, n) => {
     n.dispatch(H({
       id: performance.now(),
@@ -6759,7 +6759,7 @@ const On = tc({
         rewardUserId: d.reward_user.id
       }))))
     } catch (o) {
-      o.code && o.code === 5e3 && t(be.info())
+      o.code && o.code === 5e3 && t(Ne.info())
     }
   }, Kg = ({
     history: t,
@@ -8251,7 +8251,7 @@ const H_ = A.memo(() => (A.useEffect(() => {
           className: le.button,
           disabled: l,
           onPointerUp: async () => {
-            l || (await a(be.checkBoost({
+            l || (await a(Ne.checkBoost({
               key: n,
               price: s
             })), o(!1))
@@ -14747,65 +14747,69 @@ const H_ = A.memo(() => (A.useEffect(() => {
   },
   e2 = [{
     name: "Total $PX for painters",
-    value: 493824e4,
-    image: Ne
+    value: 52224e5,
+    image: be
   }, {
     name: "Total $PX for template owners",
-    value: 144e6,
-    image: Ne
+    value: 128e6,
+    image: be
   }, {
     name: "Winning templates",
-    value: 16,
+    value: 8,
     image: null
   }, {
     name: "Winners per template",
-    value: 4088,
+    value: 8184,
     image: null
   }, {
     name: "Total winners",
-    value: 65408,
+    value: 65472,
     image: null
   }],
   t2 = [{
     name: "Template owner",
-    value: 9e6,
-    image: Ne
+    value: 16e6,
+    image: be
   }, {
     name: "Top 8",
-    value: 45e5,
-    image: Ne
+    value: 8e6,
+    image: be
   }, {
     name: "9-24",
-    value: 2e6,
-    image: Ne
+    value: 4e6,
+    image: be
   }, {
     name: "25-56",
-    value: 1e6,
-    image: Ne
+    value: 2e6,
+    image: be
   }, {
     name: "57-120",
-    value: 5e5,
-    image: Ne
+    value: 1e6,
+    image: be
   }, {
     name: "121-248",
-    value: 25e4,
-    image: Ne
+    value: 5e5,
+    image: be
   }, {
     name: "249-504",
-    value: 125e3,
-    image: Ne
+    value: 25e4,
+    image: be
   }, {
     name: "505-1016",
-    value: 7e4,
-    image: Ne
+    value: 125e3,
+    image: be
   }, {
     name: "1017-2040",
-    value: 35e3,
-    image: Ne
+    value: 6e4,
+    image: be
   }, {
     name: "2041-4088",
+    value: 3e4,
+    image: be
+  }, {
+    name: "4089-8184",
     value: 2e4,
-    image: Ne
+    image: be
   }],
   n2 = () => {
     const t = g(),
@@ -14828,7 +14832,7 @@ const H_ = A.memo(() => (A.useEffect(() => {
           className: je.column_rev
         }), e.jsx("div", {
           className: je.title,
-          children: "Round 6"
+          children: "Round 7"
         }), e.jsx("div", {
           className: je.table_container,
           children: e2.map((a, i) => e.jsxs("div", {
@@ -14892,7 +14896,7 @@ const H_ = A.memo(() => (A.useEffect(() => {
         t(qo(!0))
       },
       children: [e.jsx("span", {
-        children: "Round 6"
+        children: "Round 7"
       }), " ", e.jsx("span", {
         className: `telegram_icons ${Qi.icon}`,
         children: ""
@@ -18166,7 +18170,7 @@ const gk = "_layout_15tw0_1",
         }
       }, i = async () => {
         try {
-          await t(be.info()).unwrap()
+          await t(Ne.info()).unwrap()
         } catch (u) {
           console.error("Ошибка получения информации о майнинге:", u)
         }
