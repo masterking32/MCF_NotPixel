@@ -5129,7 +5129,7 @@ const rs = U("tournament/getPeriods", async () => (await Lo.getPeriods()).data),
     resultsStatus: p.idle,
     selectedTemplateStatus: p.idle
   },
-  hn = "?time=3",
+  hn = "?time=415",
   Ho = pe({
     name: "tournament",
     initialState: lh,
@@ -17808,11 +17808,11 @@ const gk = "_layout_15tw0_1",
   Zk = () => {
     const t = g(),
       n = c(r => r.main.showPixanosRating),
-      s = c(r => r.main.pixanosRatingData);
+      s = c(r => r.main.pixanosRatingData),
+      a = c(r => r.color.active);
     if (!s) return null;
-    const a = s[0],
-      i = a.user.squad,
-      o = c(r => r.color.active);
+    const i = s[0],
+      o = i.user.squad;
     return e.jsx(ze, {
       show: n,
       onPointerUp: () => {
@@ -17844,25 +17844,25 @@ const gk = "_layout_15tw0_1",
               className: $.buyer_info,
               children: [e.jsx("img", {
                 alt: "avatar",
-                src: a.user.userPic && a.user.userPic !== "" ? a.user.userPic : et,
+                src: i.user.userPic && i.user.userPic !== "" ? i.user.userPic : et,
                 className: $.avatar
               }), " ", e.jsx("span", {
                 className: $.name,
-                children: a.user.firstName
-              }), i && e.jsx("span", {
+                children: i.user.firstName
+              }), o && e.jsx("span", {
                 children: "from"
-              }), i && e.jsxs("div", {
+              }), o && e.jsxs("div", {
                 className: $.squad_info,
                 children: [e.jsx("img", {
                   alt: "avatar",
-                  src: i.logo && i.logo !== "" ? i.logo : Et,
+                  src: o.logo && o.logo !== "" ? o.logo : Et,
                   className: $.squad_avatar
                 }), e.jsx(An, {
-                  address: `${xt}?startapp=${btoa(`id=${i.squadId}`)}`,
-                  display: i.name,
+                  address: `${xt}?startapp=${btoa(`id=${o.squadId}`)}`,
+                  display: o.name,
                   limit: 36
                 })]
-              }), i && e.jsx("span", {
+              }), o && e.jsx("span", {
                 children: "squad"
               }), e.jsxs("div", {
                 style: {
@@ -17877,7 +17877,7 @@ const gk = "_layout_15tw0_1",
                     children: "Pixanos' Snap"
                   })
                 }), e.jsx("span", {
-                  children: Wk(new Date(a.info.datetime))
+                  children: Wk(new Date(i.info.datetime))
                 })]
               })]
             }), e.jsx("div", {
@@ -17917,7 +17917,7 @@ const gk = "_layout_15tw0_1",
                   const d = await X.buy({
                     type: 13,
                     qty: 1,
-                    pixanosColor: o
+                    pixanosColor: a
                   });
                   d.status === 200 && ((l = d == null ? void 0 : d.data) == null ? void 0 : l.ok) === !0 && window.Telegram.WebApp.openInvoice(d.data.result, u => {
                     var h, _;
