@@ -6750,7 +6750,7 @@ const On = nc({
           pixelId: dt(s),
           color: a
         })),
-        r = await ct.rpc("repaint", o);
+        r = await ct.rpc("repaintTournament", o);
       Is.push(r);
       const l = await r,
         d = JSON.parse(new TextDecoder().decode(new Uint8Array(l.data)));
