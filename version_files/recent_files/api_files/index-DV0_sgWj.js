@@ -14779,7 +14779,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
   },
   r2 = [{
     name: "Total $PX for painters",
-    value: 52224e5,
+    value: 507904e4,
     image: be
   }, {
     name: "Total $PX for template owners",
@@ -14787,7 +14787,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
     image: be
   }, {
     name: "Winning templates",
-    value: 8,
+    value: 4,
     image: null
   }, {
     name: "Winners per template",
@@ -14795,52 +14795,52 @@ const q_ = m.memo(() => (m.useEffect(() => {
     image: null
   }, {
     name: "Total winners",
-    value: 65472,
+    value: 32736,
     image: null
   }],
   c2 = [{
     name: "Template owner",
-    value: 16e6,
+    value: 32e6,
     image: be
   }, {
     name: "Top 8",
-    value: 8e6,
+    value: 16e6,
     image: be
   }, {
     name: "9-24",
-    value: 4e6,
+    value: 8e6,
     image: be
   }, {
     name: "25-56",
-    value: 2e6,
+    value: 4e6,
     image: be
   }, {
     name: "57-120",
-    value: 1e6,
+    value: 2e6,
     image: be
   }, {
     name: "121-248",
-    value: 5e5,
+    value: 1e6,
     image: be
   }, {
     name: "249-504",
-    value: 25e4,
+    value: 5e5,
     image: be
   }, {
     name: "505-1016",
-    value: 125e3,
+    value: 25e4,
     image: be
   }, {
     name: "1017-2040",
-    value: 6e4,
+    value: 125e3,
     image: be
   }, {
     name: "2041-4088",
-    value: 3e4,
+    value: 6e4,
     image: be
   }, {
     name: "4089-8184",
-    value: 2e4,
+    value: 3e4,
     image: be
   }],
   l2 = () => {
@@ -14864,7 +14864,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
           className: je.column_rev
         }), e.jsx("div", {
           className: je.title,
-          children: "Round 7"
+          children: "Round 8"
         }), e.jsx("div", {
           className: je.table_container,
           children: r2.map((a, i) => e.jsxs("div", {
@@ -14928,7 +14928,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
         t(Vo(!0))
       },
       children: [e.jsx("span", {
-        children: "Round 7"
+        children: "Round 8"
       }), " ", e.jsx("span", {
         className: `telegram_icons ${zi.icon}`,
         children: ""
