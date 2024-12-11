@@ -5129,7 +5129,7 @@ const rs = U("tournament/getPeriods", async () => (await Go.getPeriods()).data),
     resultsStatus: p.idle,
     selectedTemplateStatus: p.idle
   },
-  hn = "?time=1501",
+  hn = "?time=1502",
   qo = pe({
     name: "tournament",
     initialState: dh,
@@ -9650,12 +9650,13 @@ const q_ = m.memo(() => (m.useEffect(() => {
   },
   wy = () => {
     const t = g(),
-      n = c(o => o.template.worldTemplate),
-      s = c(o => o.template.active) === Pe.world,
+      n = c(r => r.template.worldTemplate),
+      s = c(r => r.template.active) === Pe.world,
       a = c(ve),
-      i = [wa.button];
-    return s && i.push(wa.enabled), n === null || a ? null : e.jsx("button", {
-      className: i.join(" "),
+      i = c(r => r.tournament.periodsStatus),
+      o = [wa.button];
+    return s && o.push(wa.enabled), n === null || a || i !== p.fulfilled ? null : e.jsx("button", {
+      className: o.join(" "),
       onPointerUp: () => {
         t(s ? oi() : kg(Pe.world))
       },
