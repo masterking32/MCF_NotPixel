@@ -5129,7 +5129,7 @@ const rs = U("tournament/getPeriods", async () => (await Go.getPeriods()).data),
     resultsStatus: p.idle,
     selectedTemplateStatus: p.idle
   },
-  hn = "?time=10",
+  hn = "?time=1501",
   qo = pe({
     name: "tournament",
     initialState: dh,
@@ -5262,12 +5262,12 @@ const rs = U("tournament/getPeriods", async () => (await Go.getPeriods()).data),
     getPeriods: rs,
     getResults: cs
   },
-  ye = t => {
+  ve = t => {
     const n = t.tournament.activePeriod;
     return n && n.ID && n.PeriodType === "round" ? n.RoundID : null
   },
   uh = t => {
-    const n = ye(t);
+    const n = ve(t);
     if (!n) return null;
     const s = t.tournament.periods;
     for (let a = 0; a < s.length; a++) {
@@ -5297,7 +5297,7 @@ const rs = U("tournament/getPeriods", async () => (await Go.getPeriods()).data),
     return null
   },
   Zo = t => {
-    const n = ye(t);
+    const n = ve(t);
     if (!n) return null;
     const s = t.tournament.results;
     if (!s) return null;
@@ -9187,7 +9187,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
     })
   },
   Nv = () => {
-    const t = c(ye),
+    const t = c(ve),
       n = c(uh),
       s = n ? Ai(new Date(n.EndTime)) : null;
     return e.jsxs("span", {
@@ -9200,7 +9200,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
   },
   Iv = () => {
     const t = Y(),
-      n = c(ye),
+      n = c(ve),
       s = c(mh),
       a = Ai(s ? new Date(s.StartTime) : null);
     return e.jsx("div", {
@@ -9576,7 +9576,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
       n = Y(),
       s = c(l => l.tournament.myTemplate),
       a = c(l => l.tournament.activeTournamentTemplate),
-      i = c(ye);
+      i = c(ve);
     if (!s) return null;
     const o = [gt.button],
       r = a === s.id;
@@ -9610,7 +9610,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
       a = c(d => d.tournament.activeTournamentTemplate),
       i = s && a === s.id,
       o = [gt.button],
-      r = c(ye);
+      r = c(ve);
     return c(d => d.tournament.selectedTemplateStatus) === p.pending ? null : (i && o.push(gt.enabled), s || o.push(gt.animation), e.jsxs("button", {
       className: o.join(" "),
       onPointerUp: d => {
@@ -9650,11 +9650,12 @@ const q_ = m.memo(() => (m.useEffect(() => {
   },
   wy = () => {
     const t = g(),
-      n = c(i => i.template.worldTemplate),
-      s = c(i => i.template.active) === Pe.world,
-      a = [wa.button];
-    return s && a.push(wa.enabled), n === null ? null : e.jsx("button", {
-      className: a.join(" "),
+      n = c(o => o.template.worldTemplate),
+      s = c(o => o.template.active) === Pe.world,
+      a = c(ve),
+      i = [wa.button];
+    return s && i.push(wa.enabled), n === null || a ? null : e.jsx("button", {
+      className: i.join(" "),
       onPointerUp: () => {
         t(s ? oi() : kg(Pe.world))
       },
@@ -13845,7 +13846,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
     setFile: t,
     loading: n
   }) => {
-    if (c(ye)) return null;
+    if (c(ve)) return null;
     const a = ["image/png", "image/webp", "image/svg+xml", "image/gif", "image/bmp", "image/tiff"];
     return e.jsxs("div", {
       className: te.file_button_container,
@@ -13891,7 +13892,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
     Y();
     const l = c(_ => _.user.user),
       [d, u] = m.useState(!1);
-    return c(ye) ? null : e.jsx("div", {
+    return c(ve) ? null : e.jsx("div", {
       className: te.file_button_container,
       children: e.jsx("button", {
         disabled: t || d,
@@ -14197,7 +14198,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
     className: Ur.round_indicator
   }),
   MP = () => {
-    const t = c(ye),
+    const t = c(ve),
       n = c(kn);
     return t ? e.jsxs("div", {
       className: At.round_info_container,
@@ -14230,7 +14231,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
     })
   },
   UP = () => {
-    const t = c(ye),
+    const t = c(ve),
       n = c(s => s.tournament.periodsStatus);
     return e.jsxs("div", {
       children: [e.jsx(MP, {}), t && n === p.fulfilled && e.jsx(NP, {}), !t && n === p.fulfilled && e.jsx(PP, {})]
@@ -14286,7 +14287,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
     result: t
   }) => {
     const n = g(),
-      s = c(ye);
+      s = c(ve);
     if (!t) return null;
     const a = t.round_id,
       i = t.repaints_to_win - t.repaints,
@@ -14403,7 +14404,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
     }) : null
   },
   cS = () => {
-    const t = c(ye);
+    const t = c(ve);
     if (!t) return null;
     const n = La[t];
     return e.jsxs("div", {
@@ -14412,7 +14413,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
     })
   },
   lS = () => {
-    const t = c(ye),
+    const t = c(ve),
       n = c(kn),
       s = Ai(new Date(Date.UTC(2024, 10, 30, 9, 0, 0)));
     return t ? null : e.jsxs("div", {
@@ -14593,7 +14594,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
       s = c(r => r.tournament.selectedTemplate),
       a = t.id === n.id,
       i = s !== null && t.id === s.id,
-      o = c(ye);
+      o = c(ve);
     return a ? e.jsx("div", {
       className: ee.not_button,
       children: "Your template. Cute!"
@@ -14612,7 +14613,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
       n = Y(),
       s = c(i => i.tournament.showTemplateInfoPopup),
       a = c(i => i.tournament.templateDataInfoPopup);
-    return c(ye), !a || !s ? null : tt.createPortal(e.jsx(Le, {
+    return c(ve), !a || !s ? null : tt.createPortal(e.jsx(Le, {
       onPointerUp: () => t(pa()),
       show: s,
       children: e.jsx("div", {
@@ -15401,7 +15402,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
   uT = "_open_menu_button_image_rjvnl_144",
   mT = "_my_pixels_amount_rjvnl_149",
   AT = "_header_content_rjvnl_154",
-  ve = {
+  ye = {
     buttons_container: Y2,
     group: W2,
     left: Z2,
@@ -15423,7 +15424,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
     header_content: AT
   },
   pT = () => c(ze) ? null : e.jsxs("button", {
-    className: `${ve.button} ${ve.telegram_button}`,
+    className: `${ye.button} ${ye.telegram_button}`,
     onPointerUp: () => {
       se("https://t.me/notpixel")
     },
@@ -15443,11 +15444,11 @@ const q_ = m.memo(() => (m.useEffect(() => {
     const t = ta("/claiming"),
       n = c(a => a.user.pixelCoins);
     return c(ze) ? e.jsxs("button", {
-      className: `${ve.button}`,
+      className: `${ye.button}`,
       onPointerUp: t,
       children: [e.jsx(F, {
         size: 16,
-        className: ve.button_img
+        className: ye.button_img
       }), e.jsx("div", {
         style: {
           transform: "translateY(1px)"
@@ -15462,7 +15463,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
   _T = () => {
     const t = ta("/stars");
     return c(ze) ? e.jsx("button", {
-      className: `${ve.shop_button}`,
+      className: `${ye.shop_button}`,
       onPointerUp: t,
       children: e.jsx("img", {
         alt: "icon",
@@ -15477,7 +15478,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
   fT = () => {
     const t = ta("/invite-frens");
     return c(ze) ? e.jsx("button", {
-      className: `${ve.stars_button}`,
+      className: `${ye.stars_button}`,
       onPointerUp: t,
       children: e.jsx(N, {
         size: 20,
@@ -15496,7 +15497,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
         t(Et(!0))
       };
     return e.jsx("button", {
-      className: ve.burger_button,
+      className: ye.burger_button,
       onPointerUp: s,
       children: e.jsx(N, {
         size: 28,
@@ -15507,7 +15508,7 @@ const q_ = m.memo(() => (m.useEffect(() => {
   vT = () => {
     const t = ta("/daily");
     return c(ze) ? e.jsx("button", {
-      className: `${ve.stars_button}`,
+      className: `${ye.stars_button}`,
       onPointerUp: t,
       children: e.jsx(N, {
         size: 20,
@@ -15516,15 +15517,15 @@ const q_ = m.memo(() => (m.useEffect(() => {
     }) : null
   },
   Li = ne.memo(() => e.jsxs("div", {
-    className: ve.buttons_container,
+    className: ye.buttons_container,
     children: [e.jsxs("div", {
-      className: `${ve.group} ${ve.left}`,
+      className: `${ye.group} ${ye.left}`,
       children: [e.jsx(xT, {}), e.jsx(fT, {})]
     }), e.jsx("div", {
-      className: `${ve.group} ${ve.middle}`,
+      className: `${ye.group} ${ye.middle}`,
       children: e.jsx(hT, {})
     }), e.jsxs("div", {
-      className: `${ve.group} ${ve.right}`,
+      className: `${ye.group} ${ye.right}`,
       children: [e.jsx(vT, {}), e.jsx(pT, {}), e.jsx(_T, {})]
     })]
   })),
