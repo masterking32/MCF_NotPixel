@@ -5305,10 +5305,11 @@ const rs = U("tournament/getPeriods", async () => (await Go.getPeriods()).data),
     return a.length > 0 ? a[0] : null
   },
   Ah = t => t.tournament.results,
-  ph = qo.reducer,
-  hh = {
-    1: 1
-  };
+  ph = qo.reducer;
+window.getComputedStyle(document.body).getPropertyValue("--canvas-bg-color");
+const hh = {
+  1: 1
+};
 let ot;
 const gh = t => {
   ot = t
