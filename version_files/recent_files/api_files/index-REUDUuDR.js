@@ -6916,7 +6916,7 @@ const zn = rc({
           pixelId: ut(s),
           color: a
         })),
-        r = await lt.rpc("repaintTournament", o);
+        r = await lt.rpc("rеpаintTournаment", o);
       Bs.push(r);
       const l = await r,
         d = JSON.parse(new TextDecoder().decode(new Uint8Array(l.data)));
