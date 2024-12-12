@@ -9312,7 +9312,7 @@ const ox = A.memo(() => (A.useEffect(() => {
         className: Cn.image
       }), e.jsx("div", {
         className: Cn.button_text,
-        children: "Aidrop"
+        children: "Airdrop"
       })]
     })
   },
