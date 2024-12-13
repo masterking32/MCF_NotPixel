@@ -18788,7 +18788,7 @@ const d4 = "_layout_15tw0_1",
   };
 
 function vR() {
-  return console.log("version:", window.Telegram.WebApp.version), window.Telegram.WebApp.isVersionAtLeast("8.0") ? e.jsx(xR, {
+  return console.log("version:", window.Telegram.WebApp.version), console.log("version:", window.Telegram.WebApp), window.Telegram.WebApp.isVersionAtLeast("8.0") || window.Telegram.WebApp.isVersionAtLeast("6.0") && window.Telegram.WebApp.platform === "unknown" ? e.jsx(xR, {
     children: e.jsx(Y4, {})
   }) : e.jsx(fR, {})
 }
