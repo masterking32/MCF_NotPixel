@@ -14557,16 +14557,19 @@ const ix = m.memo(() => (m.useEffect(() => {
         borderRadius: 15,
         backgroundColor: "#161D26",
         paddingInline: 20,
-        paddingBlock: 1,
+        paddingBlock: 14,
         marginBottom: 18
       },
-      children: [e.jsxs("p", {
+      children: [e.jsxs("div", {
         children: ["After ", e.jsx("b", {
           children: "Round 8"
         }), " wraps up, we’re taking a breather for a fair recount. Results drop on ", e.jsx("b", {
           children: "Dec. 16"
         }), ". So, kick back this weekend."]
-      }), e.jsxs("p", {
+      }), e.jsxs("div", {
+        style: {
+          marginTop: "1em"
+        },
         children: ["Any bot points are getting axed from the templates. Rankings will show the real MVPs (Based on the top", e.jsx("b", {
           children: " 8,184 real players"
         }), " of each template)."]
