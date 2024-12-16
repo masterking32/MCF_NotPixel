@@ -5558,7 +5558,7 @@ const Mh = (t, n, s) => {
         })
       }
     }), dt.on("disconnected", function(o) {
-      console.log(`disconnected: ${o.code}, ${o.reason}`)
+      console.log(`_disconnected: ${o.code}, ${o.reason}`)
     }), dt.on("error", function(o) {
       console.log(o)
     }), dt.on("publication", function(o) {
