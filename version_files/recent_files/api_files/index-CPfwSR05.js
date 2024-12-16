@@ -597,7 +597,7 @@ class V {
     quantity: o,
     activeColor: r
   }) {
-    let l = "#171f2a";
+    let l = "#171F2A";
     return r && At[r] && (l = r), C.post("/transactions/start", {
       buyerWallet: n,
       goodId: s,
