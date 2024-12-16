@@ -597,7 +597,7 @@ class V {
     quantity: o,
     activeColor: r
   }) {
-    let l = "#171F2A";
+    let l = s === 13 ? "#171F2A" : void 0;
     return r && At[r] && (l = r), C.post("/transactions/start", {
       buyerWallet: n,
       goodId: s,
@@ -1446,7 +1446,7 @@ const hl = {
         })]
       }), a === "sale" && e.jsx("div", {
         className: pe.info_row_sale,
-        children: "-50%"
+        children: "-75%"
       }), a === "limited" && e.jsx("div", {
         style: {
           backgroundColor: "#026e4f",
