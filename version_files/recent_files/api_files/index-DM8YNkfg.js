@@ -14165,9 +14165,9 @@ const pf = m.memo(() => (m.useEffect(() => {
                 children: e.jsxs("div", {
                   children: [e.jsx("span", {
                     children: "Time-limited check"
-                  }), " ", e.jsx("span", {
+                  }), " ", e.jsx("br", {}), e.jsx("span", {
                     className: D.gray,
-                    children: "• Dec. 16-20"
+                    children: " Dec. 16-20"
                   })]
                 })
               }), e.jsx(jn, {
