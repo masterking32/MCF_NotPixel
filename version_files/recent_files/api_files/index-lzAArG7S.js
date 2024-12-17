@@ -6963,7 +6963,7 @@ const Gn = Ac({
       Ts.push(r);
       const l = await r,
         d = JSON.parse(new TextDecoder().decode(new Uint8Array(l.data)));
-      console.log(d), d && d.balance && (t(Eo(d.balance)), d.reward_user && d.reward && (b.mainImage.reward.add(s), t(u_({
+      console.log(d), d && d.balance && (t(Eo(d.balance)), d.reward_user && (b.mainImage.reward.add(s), t(u_({
         rewardId: d.reward_user.reward_id,
         rewardUserId: d.reward_user.id,
         reward: d.reward,
