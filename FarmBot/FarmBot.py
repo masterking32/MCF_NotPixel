@@ -105,6 +105,11 @@ class FarmBot:
                 )
                 return
 
+            if me["websocketToken"] is None or me["websocketToken"] == "":
+                self.log.warning(
+                    f"<y>🟡 Account <c>{self.account_name}</c> encountered issues, possibly flagged as a bot by NotPixel.</y>"
+                )
+
             me_id = me.get("id", 0)
             if me_id == 0:
                 self.log.info(
