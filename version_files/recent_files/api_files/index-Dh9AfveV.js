@@ -18142,14 +18142,9 @@ const Sk = "_container_gb8eq_1",
       h = a.image_url || Ga,
       g = "",
       v = "goods";
-    if (a.user.token !== "") {
-      v = "crypto", h = Ga;
-      const w = a.user.currency_id;
-      d = a.user.token, u = "Yo, you hit the crypto jackpot! Nice one, fam!", r.forEach(f => {
-        f.currency_id === w && (h = f.image)
-      }), g = a.user.amount + " "
-    }
-    return e.jsx(Ye, {
+    return a.user.token !== "" && (v = "crypto", h = Ga, a.user.currency_id, d = a.user.token, u = "Yo, you hit the crypto jackpot! Nice one, fam!", r.forEach(w => {
+      w.name === d && (h = w.image)
+    }), g = a.user.amount + " "), e.jsx(Ye, {
       show: s,
       onPointerUp: l,
       children: e.jsx("div", {
