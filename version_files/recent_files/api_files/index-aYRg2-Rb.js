@@ -14857,7 +14857,7 @@ const mf = m.memo(() => (m.useEffect(() => {
         }), e.jsx("div", {
           className: G.past_rounds_divider
         })]
-      }), t.map(s => n && n === s.round_id ? null : e.jsx(Kr, {
+      }), t.map(s => n && n === s.round_id || s.round_id === 9 ? null : e.jsx(Kr, {
         result: s
       }, s.round_id))]
     }) : null
