@@ -15245,15 +15245,15 @@ const pf = A.memo(() => (A.useEffect(() => {
   },
   sB = [{
     name: "Total $PX for painters",
-    value: 509952e4,
+    value: 512e7,
     image: Ie
   }, {
-    name: "Total $PX for template owners",
+    name: "$PX for template owner",
     value: 128e6,
     image: Ie
   }, {
     name: "Winning templates",
-    value: 2,
+    value: 1,
     image: null
   }, {
     name: "Winners per template",
@@ -15261,52 +15261,52 @@ const pf = A.memo(() => (A.useEffect(() => {
     image: null
   }, {
     name: "Total winners",
-    value: 16368,
+    value: 8184,
     image: null
   }],
   aB = [{
     name: "Template owner",
-    value: 64e6,
+    value: 128e6,
     image: Ie
   }, {
     name: "Top 8",
-    value: 32e6,
+    value: 64e6,
     image: Ie
   }, {
     name: "9-24",
-    value: 16e6,
+    value: 32e6,
     image: Ie
   }, {
     name: "25-56",
-    value: 8e6,
+    value: 16e6,
     image: Ie
   }, {
     name: "57-120",
-    value: 4e6,
+    value: 8e6,
     image: Ie
   }, {
     name: "121-248",
-    value: 2e6,
+    value: 4e6,
     image: Ie
   }, {
     name: "249-504",
-    value: 1e6,
+    value: 2e6,
     image: Ie
   }, {
     name: "505-1016",
-    value: 5e5,
+    value: 1e6,
     image: Ie
   }, {
     name: "1017-2040",
-    value: 25e4,
+    value: 5e5,
     image: Ie
   }, {
     name: "2041-4088",
-    value: 125e3,
+    value: 25e4,
     image: Ie
   }, {
     name: "4089-8184",
-    value: 6e4,
+    value: 125e3,
     image: Ie
   }],
   iB = () => {
@@ -15330,7 +15330,7 @@ const pf = A.memo(() => (A.useEffect(() => {
           className: Ne.column_rev
         }), e.jsx("div", {
           className: Ne.title,
-          children: "Round 9"
+          children: "Round 10"
         }), e.jsx("div", {
           className: Ne.table_container,
           children: sB.map((a, i) => e.jsxs("div", {
@@ -15394,7 +15394,7 @@ const pf = A.memo(() => (A.useEffect(() => {
         t(ir(!0))
       },
       children: [e.jsx("span", {
-        children: "Round 9"
+        children: "Round 10"
       }), " ", e.jsx("span", {
         className: `telegram_icons ${eo.icon}`,
         children: ""
