@@ -14090,28 +14090,28 @@ const Tf = m.memo(() => (m.useEffect(() => {
       })]
     })
   },
-  sP = "_layout_1zjtv_1",
-  aP = "_container_1zjtv_9",
-  iP = "_header_1zjtv_18",
-  oP = "_bg_image_1zjtv_25",
-  rP = "_title_1zjtv_34",
-  cP = "_description_1zjtv_43",
-  lP = "_timer_1zjtv_52",
-  dP = "_timer_inner_1zjtv_61",
-  uP = "_timer_text_1zjtv_69",
-  mP = "_line_1zjtv_73",
-  AP = "_requirements_title_1zjtv_79",
-  pP = "_requirements_1zjtv_79",
-  hP = "_item_1zjtv_94",
-  gP = "_item_image_1zjtv_107",
-  _P = "_main_info_1zjtv_113",
-  fP = "_other_criteria_1zjtv_120",
-  xP = "_gray_1zjtv_125",
-  vP = "_soon_1zjtv_129",
-  yP = "_icon_1zjtv_133",
-  wP = "_completed_icon_1zjtv_144",
-  jP = "_not_completed_icon_1zjtv_148",
-  Q = {
+  sP = "_layout_10ga3_1",
+  aP = "_container_10ga3_9",
+  iP = "_header_10ga3_18",
+  oP = "_bg_image_10ga3_25",
+  rP = "_title_10ga3_34",
+  cP = "_description_10ga3_43",
+  lP = "_timer_10ga3_52",
+  dP = "_timer_inner_10ga3_61",
+  uP = "_timer_text_10ga3_69",
+  mP = "_line_10ga3_73",
+  AP = "_requirements_title_10ga3_79",
+  pP = "_requirements_10ga3_79",
+  hP = "_item_10ga3_94",
+  gP = "_item_image_10ga3_107",
+  _P = "_main_info_10ga3_113",
+  fP = "_other_criteria_10ga3_120",
+  xP = "_gray_10ga3_125",
+  vP = "_soon_10ga3_129",
+  yP = "_icon_10ga3_134",
+  wP = "_completed_icon_10ga3_145",
+  jP = "_not_completed_icon_10ga3_149",
+  U = {
     layout: sP,
     container: aP,
     header: iP,
@@ -14137,13 +14137,13 @@ const Tf = m.memo(() => (m.useEffect(() => {
   In = ({
     success: t
   }) => t ? e.jsx("div", {
-    className: O(Q.completed_icon, Q.icon),
+    className: O(U.completed_icon, U.icon),
     children: e.jsx(I, {
       size: 14,
       children: ""
     })
   }) : e.jsx("div", {
-    className: O(Q.not_completed_icon, Q.icon),
+    className: O(U.not_completed_icon, U.icon),
     children: e.jsx(I, {
       size: 14,
       children: ""
@@ -14366,61 +14366,61 @@ const Tf = m.memo(() => (m.useEffect(() => {
       },
       [R, C] = m.useState(!1),
       be = M => {
-        x && (M = !1), C(M)
+        C(!1), x && (M = !1), C(M)
       };
     return e.jsxs(ue, {
       children: [e.jsx(FP, {
         show: R,
         setShow: be
       }), e.jsx("div", {
-        className: Q.layout,
+        className: U.layout,
         children: e.jsxs("div", {
-          className: Q.container,
+          className: U.container,
           children: [e.jsxs("div", {
-            className: Q.header,
+            className: U.header,
             children: [e.jsx("div", {}), e.jsx("img", {
               alt: "image",
               src: TP,
-              className: Q.bg_image
+              className: U.bg_image
             }), e.jsx("div", {
-              className: Q.title,
+              className: U.title,
               children: "AIRDROP"
             }), e.jsx("div", {
-              className: Q.description,
+              className: U.description,
               children: "Meet the requirements to get the PX Airdrop"
             }), e.jsx("div", {
-              className: Q.timer,
+              className: U.timer,
               children: e.jsxs("div", {
-                className: Q.timer_inner,
+                className: U.timer_inner,
                 children: [e.jsx(I, {
                   children: ""
                 }), e.jsx("span", {
-                  className: Q.timer_text,
+                  className: U.timer_text,
                   children: "Mining will end on Dec. 20"
                 })]
               })
             })]
           }), e.jsx("div", {
-            className: Q.line
+            className: U.line
           }), e.jsxs("div", {
-            className: Q.requirements_title,
+            className: U.requirements_title,
             children: [e.jsx("div", {
               children: "Required"
             }), e.jsxs("div", {
-              className: Q.gray,
+              className: U.gray,
               children: [j, "/3 completed to get airdrop"]
             })]
           }), e.jsxs("div", {
-            className: Q.requirements,
+            className: U.requirements,
             children: [e.jsxs("div", {
-              className: Q.item,
+              className: U.item,
               children: [e.jsx("div", {
                 children: e.jsx("img", {
-                  className: Q.item_image,
+                  className: U.item_image,
                   src: SP
                 })
               }), e.jsx("div", {
-                className: Q.main_info,
+                className: U.main_info,
                 children: e.jsxs("div", {
                   children: ["Total balance: 100 000 ", e.jsx(z, {})]
                 })
@@ -14428,7 +14428,7 @@ const Tf = m.memo(() => (m.useEffect(() => {
                 success: l
               })]
             }), e.jsxs("div", {
-              className: Q.item,
+              className: U.item,
               onPointerUp: async () => {
                 h || (n.push("/claiming"), setTimeout(() => {
                   const M = document.getElementById("ton_wallet_connect_task_div");
@@ -14439,11 +14439,11 @@ const Tf = m.memo(() => (m.useEffect(() => {
               },
               children: [e.jsx("div", {
                 children: e.jsx("img", {
-                  className: Q.item_image,
+                  className: U.item_image,
                   src: PP
                 })
               }), e.jsx("div", {
-                className: Q.main_info,
+                className: U.main_info,
                 children: e.jsx("div", {
                   children: "Connect TON"
                 })
@@ -14451,36 +14451,39 @@ const Tf = m.memo(() => (m.useEffect(() => {
                 success: h
               })]
             }), e.jsxs("div", {
-              className: Q.item,
+              className: U.item,
               onPointerUp: be,
               children: [e.jsx("div", {
                 children: e.jsx("img", {
-                  className: Q.item_image,
+                  className: U.item_image,
                   src: IP
                 })
-              }), e.jsx("div", {
-                className: Q.main_info,
-                children: e.jsx("div", {
+              }), e.jsxs("div", {
+                className: U.main_info,
+                children: [e.jsx("div", {
                   children: e.jsx("span", {
                     children: "TON Captcha"
                   })
-                })
+                }), e.jsx("span", {
+                  className: U.soon,
+                  children: "Soon"
+                })]
               }), e.jsx(In, {
                 success: x
               })]
             })]
           }), e.jsxs("div", {
-            className: Q.requirements_title,
+            className: U.requirements_title,
             children: [e.jsx("div", {
               children: "Optional"
             }), e.jsx("div", {
-              className: Q.gray,
+              className: U.gray,
               children: "boost your airdrop"
             })]
           }), e.jsxs("div", {
-            className: Q.requirements,
+            className: U.requirements,
             children: [e.jsxs("div", {
-              className: Q.item,
+              className: U.item,
               onPointerUp: async () => {
                 if (d) return;
                 const M = await t(xe.checkTask({
@@ -14492,17 +14495,17 @@ const Tf = m.memo(() => (m.useEffect(() => {
               },
               children: [e.jsx("div", {
                 children: e.jsx("img", {
-                  className: Q.item_image,
+                  className: U.item_image,
                   src: NP
                 })
               }), e.jsx("div", {
-                className: Q.main_info,
+                className: U.main_info,
                 children: "Purchases for Stars"
               }), e.jsx(In, {
                 success: d
               })]
             }), e.jsxs("div", {
-              className: Q.item,
+              className: U.item,
               onPointerUp: async () => {
                 if (u) return;
                 const M = await t(xe.checkTask({
@@ -14514,35 +14517,35 @@ const Tf = m.memo(() => (m.useEffect(() => {
               },
               children: [e.jsx("div", {
                 children: e.jsx("img", {
-                  className: Q.item_image,
+                  className: U.item_image,
                   src: bP
                 })
               }), e.jsx("div", {
-                className: Q.main_info,
+                className: U.main_info,
                 children: "Purchases for crypto"
               }), e.jsx(In, {
                 success: u
               })]
             }), e.jsxs("div", {
-              className: Q.item,
+              className: U.item,
               onPointerUp: () => {
                 n.push("/daily")
               },
               children: [e.jsx("div", {
                 children: e.jsx("img", {
-                  className: Q.item_image,
+                  className: U.item_image,
                   src: CP
                 })
               }), e.jsx("div", {
-                className: Q.main_info,
+                className: U.main_info,
                 children: "Daily check-ins"
               }), e.jsxs("div", {
-                className: Q.gray,
+                className: U.gray,
                 children: [f, " completed"]
               })]
             })]
           }), e.jsx("div", {
-            className: O(Q.other_criteria, Q.gray),
+            className: O(U.other_criteria, U.gray),
             children: "Other activity criteria will also be considered"
           }), e.jsx("div", {
             style: {
@@ -16428,7 +16431,7 @@ const qB = () => {
   pE = "_icon_invite_11ui8_132",
   hE = "_footer_11ui8_136",
   gE = "_button_11ui8_141",
-  U = {
+  Q = {
     container: WB,
     header: JB,
     close_container: ZB,
@@ -16464,19 +16467,19 @@ const qB = () => {
       show: n,
       onPointerUp: () => t(Ea()),
       children: e.jsxs("div", {
-        className: U.container,
+        className: Q.container,
         onPointerUp: l => {
           l.stopPropagation()
         },
         children: [e.jsxs("div", {
-          className: U.header,
+          className: Q.header,
           children: [e.jsx("div", {
-            className: U.title,
+            className: Q.title,
             children: "Invite frens "
           }), e.jsx("div", {
-            className: U.close_container,
+            className: Q.close_container,
             children: e.jsx("div", {
-              className: U.close,
+              className: Q.close,
               onPointerUp: () => {
                 t(Ea())
               },
@@ -16487,56 +16490,56 @@ const qB = () => {
             })
           })]
         }), e.jsx("div", {
-          className: U.body,
+          className: Q.body,
           children: e.jsxs("div", {
-            className: U.content,
+            className: Q.content,
             children: [e.jsx("div", {
-              className: U.image_container,
+              className: Q.image_container,
               children: e.jsx("img", {
                 alt: "image",
-                className: U.image,
+                className: Q.image,
                 src: _E
               })
             }), e.jsxs("div", {
-              className: U.description_container,
+              className: Q.description_container,
               children: [e.jsxs("span", {
-                className: U.bold,
+                className: Q.bold,
                 children: ["Your frens:  ", e.jsx("span", {
-                  className: U.frens_count,
+                  className: Q.frens_count,
                   children: (s == null ? void 0 : s.friends) || 0
                 })]
               }), e.jsxs("span", {
                 children: ["Invite more! You and your", e.jsx("br", {}), " frens will get bonuses:"]
               })]
             }), e.jsxs("div", {
-              className: U.benefits_container,
+              className: Q.benefits_container,
               children: [e.jsx("div", {}), e.jsxs("div", {
-                className: U.benefits_item,
+                className: Q.benefits_item,
                 children: ["No Premium:   ", " ", e.jsx("div", {
-                  className: U.benefits_icon_container,
+                  className: Q.benefits_icon_container,
                   children: e.jsx(z, {
                     size: 16,
-                    className: U.icon_invite
+                    className: Q.icon_invite
                   })
                 }), a.InitialCoins]
               }), e.jsx("div", {}), " ", e.jsx("div", {}), e.jsxs("div", {
-                className: U.benefits_item,
+                className: Q.benefits_item,
                 children: ["Premium:   ", " ", e.jsx("div", {
-                  className: U.benefits_icon_container,
+                  className: Q.benefits_icon_container,
                   children: e.jsx(z, {
                     size: 16,
-                    className: U.icon_invite
+                    className: Q.icon_invite
                   })
                 }), a.RefRewardCoinsPremium]
               }), e.jsx("div", {})]
             })]
           })
         }), e.jsxs("div", {
-          className: U.footer,
+          className: Q.footer,
           children: [e.jsx(qt, {
             url: i
           }), e.jsx("button", {
-            className: U.button,
+            className: Q.button,
             onPointerUp: l => {
               l.stopPropagation(), ee(`https://t.me/share/url?url=${i}`), t(Ea())
             },
@@ -17477,22 +17480,22 @@ const qk = () => {
       show: s,
       onPointerUp: () => n(ka()),
       children: e.jsxs("div", {
-        className: U.container,
+        className: Q.container,
         onPointerUp: l => {
           l.stopPropagation()
         },
         children: [e.jsxs("div", {
-          className: U.header,
+          className: Q.header,
           children: [e.jsx("div", {
-            className: U.title,
+            className: Q.title,
             children: "Oops!"
           }), e.jsx("div", {
-            className: U.close_container,
+            className: Q.close_container,
             onPointerUp: () => {
               n(ka())
             },
             children: e.jsx("div", {
-              className: U.close,
+              className: Q.close,
               children: e.jsx(I, {
                 size: 30,
                 children: ""
@@ -17500,54 +17503,54 @@ const qk = () => {
             })
           })]
         }), e.jsx("div", {
-          className: U.body,
+          className: Q.body,
           children: e.jsxs("div", {
-            className: U.content,
+            className: Q.content,
             children: [e.jsx("div", {
-              className: U.image_container_charges,
+              className: Q.image_container_charges,
               children: e.jsx("img", {
                 alt: "image",
-                className: U.image_charges,
+                className: Q.image_charges,
                 src: Jr
               })
             }), e.jsxs("div", {
-              className: U.description_container,
+              className: Q.description_container,
               children: [e.jsx("span", {
-                className: U.bold,
+                className: Q.bold,
                 children: "The energy is over!"
               }), e.jsxs("span", {
-                className: U.center,
+                className: Q.center,
                 children: ["Wait for the energy to recover.", e.jsx("br", {}), "Invite frens and get a bonus:"]
               })]
             }), e.jsxs("div", {
-              className: U.benefits_container,
+              className: Q.benefits_container,
               children: [e.jsx("div", {}), e.jsxs("div", {
-                className: U.benefits_item,
+                className: Q.benefits_item,
                 children: ["No Premium:   ", " ", e.jsx("div", {
-                  className: U.benefits_icon_container,
+                  className: Q.benefits_icon_container,
                   children: e.jsx(z, {
                     size: 16,
-                    className: U.icon_invite
+                    className: Q.icon_invite
                   })
                 }), a.InitialCoins]
               }), e.jsx("div", {}), " ", e.jsx("div", {}), e.jsxs("div", {
-                className: U.benefits_item,
+                className: Q.benefits_item,
                 children: ["Premium:   ", " ", e.jsx("div", {
-                  className: U.benefits_icon_container,
+                  className: Q.benefits_icon_container,
                   children: e.jsx(z, {
                     size: 16,
-                    className: U.icon_invite
+                    className: Q.icon_invite
                   })
                 }), " ", a.RefRewardCoinsPremium]
               }), e.jsx("div", {})]
             })]
           })
         }), e.jsxs("div", {
-          className: U.footer,
+          className: Q.footer,
           children: [e.jsx(qt, {
             url: i
           }), e.jsx("button", {
-            className: U.button,
+            className: Q.button,
             onPointerUp: l => {
               l.stopPropagation(), window.Telegram.WebApp.openLink(`https://t.me/share/url?url=${i}`), n(ka())
             },
