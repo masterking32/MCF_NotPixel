@@ -14467,11 +14467,11 @@ const Ff = A.memo(() => (A.useEffect(() => {
                 src: ro
               }), "Connect TON"]
             })]
-          }), l && o !== "" && !g(e.jsx("button", {
+          }), l && o !== "" && !g && e.jsx("button", {
             className: Ze.button,
             onPointerUp: x,
             children: "Request a code"
-          })), e.jsx("div", {
+          }), e.jsx("div", {
             className: Ze.divider
           }), e.jsxs("div", {
             children: [e.jsxs("div", {
