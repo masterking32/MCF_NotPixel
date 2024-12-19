@@ -14328,8 +14328,11 @@ const Pf = m.memo(() => (m.useEffect(() => {
       Ne = c(Qe),
       ye = Ne ? String(Ne.id) : null,
       ke = ye && {
+        0: !0,
         1: !0,
-        3: !0
+        2: !0,
+        3: !0,
+        4: !0
       } [ye[ye.length - 1]],
       mt = W => {
         (x || !ke) && (W = !1), C(W)
