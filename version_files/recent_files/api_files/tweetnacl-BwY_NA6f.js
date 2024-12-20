@@ -6,7 +6,7 @@ import {
 } from "./ethjs-unit-bvdJTi0B.js";
 import {
   r as P0
-} from "./tonweb-BaiZR3hJ.js";
+} from "./tonweb-BSP0R_jA.js";
 var g0 = {
   exports: {}
 };

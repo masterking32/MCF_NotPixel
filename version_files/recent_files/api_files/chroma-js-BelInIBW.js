@@ -1803,6 +1803,3 @@ Object.assign(E, {
   scales: $0,
   valid: M0
 });
-export {
-  E as c
-};

@@ -15,26 +15,25 @@ import {
   c as g0,
   r as B0,
   b as F0,
-  d as A0,
-  a as y0
+  d as A0
 } from "./@ledgerhq-BW4RAlPi.js";
 import {
-  n as p0
-} from "./tweetnacl-DeYMGiLl.js";
+  n as y0
+} from "./tweetnacl-BwY_NA6f.js";
 import {
-  l as m0
+  l as p0
 } from "./ethjs-unit-bvdJTi0B.js";
 import {
-  r as b0
+  r as m0
 } from "./isomorphic-webcrypto-Cp7ugTe2.js";
-const E0 = {},
-  v0 = Object.freeze(Object.defineProperty({
+const b0 = {},
+  E0 = Object.freeze(Object.defineProperty({
     __proto__: null,
-    default: E0
+    default: b0
   }, Symbol.toStringTag, {
     value: "Module"
   })),
-  D0 = w0(v0);
+  v0 = w0(E0);
 var fr = {
   exports: {}
 };
@@ -365,11 +364,11 @@ fr.exports;
         m = b & 8191,
         E = b >>> 13,
         At = d[1] | 0,
-        x = At & 8191,
+        S = At & 8191,
         I = At >>> 13,
-        Sr = d[2] | 0,
-        $ = Sr & 8191,
-        R = Sr >>> 13,
+        xr = d[2] | 0,
+        $ = xr & 8191,
+        R = xr >>> 13,
         Ir = d[3] | 0,
         k = Ir & 8191,
         P = Ir >>> 13,
@@ -423,25 +422,25 @@ fr.exports;
         gt = Qr >>> 13;
       c.negative = r.negative ^ o.negative, c.length = 19, h = Math.imul(m, J), i = Math.imul(m, j), i = i + Math.imul(E, J) | 0, f = Math.imul(E, j);
       var ve = (B + h | 0) + ((i & 8191) << 13) | 0;
-      B = (f + (i >>> 13) | 0) + (ve >>> 26) | 0, ve &= 67108863, h = Math.imul(x, J), i = Math.imul(x, j), i = i + Math.imul(I, J) | 0, f = Math.imul(I, j), h = h + Math.imul(m, z) | 0, i = i + Math.imul(m, tt) | 0, i = i + Math.imul(E, z) | 0, f = f + Math.imul(E, tt) | 0;
+      B = (f + (i >>> 13) | 0) + (ve >>> 26) | 0, ve &= 67108863, h = Math.imul(S, J), i = Math.imul(S, j), i = i + Math.imul(I, J) | 0, f = Math.imul(I, j), h = h + Math.imul(m, z) | 0, i = i + Math.imul(m, tt) | 0, i = i + Math.imul(E, z) | 0, f = f + Math.imul(E, tt) | 0;
       var De = (B + h | 0) + ((i & 8191) << 13) | 0;
-      B = (f + (i >>> 13) | 0) + (De >>> 26) | 0, De &= 67108863, h = Math.imul($, J), i = Math.imul($, j), i = i + Math.imul(R, J) | 0, f = Math.imul(R, j), h = h + Math.imul(x, z) | 0, i = i + Math.imul(x, tt) | 0, i = i + Math.imul(I, z) | 0, f = f + Math.imul(I, tt) | 0, h = h + Math.imul(m, et) | 0, i = i + Math.imul(m, rt) | 0, i = i + Math.imul(E, et) | 0, f = f + Math.imul(E, rt) | 0;
+      B = (f + (i >>> 13) | 0) + (De >>> 26) | 0, De &= 67108863, h = Math.imul($, J), i = Math.imul($, j), i = i + Math.imul(R, J) | 0, f = Math.imul(R, j), h = h + Math.imul(S, z) | 0, i = i + Math.imul(S, tt) | 0, i = i + Math.imul(I, z) | 0, f = f + Math.imul(I, tt) | 0, h = h + Math.imul(m, et) | 0, i = i + Math.imul(m, rt) | 0, i = i + Math.imul(E, et) | 0, f = f + Math.imul(E, rt) | 0;
       var Me = (B + h | 0) + ((i & 8191) << 13) | 0;
-      B = (f + (i >>> 13) | 0) + (Me >>> 26) | 0, Me &= 67108863, h = Math.imul(k, J), i = Math.imul(k, j), i = i + Math.imul(P, J) | 0, f = Math.imul(P, j), h = h + Math.imul($, z) | 0, i = i + Math.imul($, tt) | 0, i = i + Math.imul(R, z) | 0, f = f + Math.imul(R, tt) | 0, h = h + Math.imul(x, et) | 0, i = i + Math.imul(x, rt) | 0, i = i + Math.imul(I, et) | 0, f = f + Math.imul(I, rt) | 0, h = h + Math.imul(m, st) | 0, i = i + Math.imul(m, it) | 0, i = i + Math.imul(E, st) | 0, f = f + Math.imul(E, it) | 0;
+      B = (f + (i >>> 13) | 0) + (Me >>> 26) | 0, Me &= 67108863, h = Math.imul(k, J), i = Math.imul(k, j), i = i + Math.imul(P, J) | 0, f = Math.imul(P, j), h = h + Math.imul($, z) | 0, i = i + Math.imul($, tt) | 0, i = i + Math.imul(R, z) | 0, f = f + Math.imul(R, tt) | 0, h = h + Math.imul(S, et) | 0, i = i + Math.imul(S, rt) | 0, i = i + Math.imul(I, et) | 0, f = f + Math.imul(I, rt) | 0, h = h + Math.imul(m, st) | 0, i = i + Math.imul(m, it) | 0, i = i + Math.imul(E, st) | 0, f = f + Math.imul(E, it) | 0;
       var _e = (B + h | 0) + ((i & 8191) << 13) | 0;
-      B = (f + (i >>> 13) | 0) + (_e >>> 26) | 0, _e &= 67108863, h = Math.imul(W, J), i = Math.imul(W, j), i = i + Math.imul(L, J) | 0, f = Math.imul(L, j), h = h + Math.imul(k, z) | 0, i = i + Math.imul(k, tt) | 0, i = i + Math.imul(P, z) | 0, f = f + Math.imul(P, tt) | 0, h = h + Math.imul($, et) | 0, i = i + Math.imul($, rt) | 0, i = i + Math.imul(R, et) | 0, f = f + Math.imul(R, rt) | 0, h = h + Math.imul(x, st) | 0, i = i + Math.imul(x, it) | 0, i = i + Math.imul(I, st) | 0, f = f + Math.imul(I, it) | 0, h = h + Math.imul(m, nt) | 0, i = i + Math.imul(m, ot) | 0, i = i + Math.imul(E, nt) | 0, f = f + Math.imul(E, ot) | 0;
-      var xe = (B + h | 0) + ((i & 8191) << 13) | 0;
-      B = (f + (i >>> 13) | 0) + (xe >>> 26) | 0, xe &= 67108863, h = Math.imul(O, J), i = Math.imul(O, j), i = i + Math.imul(H, J) | 0, f = Math.imul(H, j), h = h + Math.imul(W, z) | 0, i = i + Math.imul(W, tt) | 0, i = i + Math.imul(L, z) | 0, f = f + Math.imul(L, tt) | 0, h = h + Math.imul(k, et) | 0, i = i + Math.imul(k, rt) | 0, i = i + Math.imul(P, et) | 0, f = f + Math.imul(P, rt) | 0, h = h + Math.imul($, st) | 0, i = i + Math.imul($, it) | 0, i = i + Math.imul(R, st) | 0, f = f + Math.imul(R, it) | 0, h = h + Math.imul(x, nt) | 0, i = i + Math.imul(x, ot) | 0, i = i + Math.imul(I, nt) | 0, f = f + Math.imul(I, ot) | 0, h = h + Math.imul(m, at) | 0, i = i + Math.imul(m, lt) | 0, i = i + Math.imul(E, at) | 0, f = f + Math.imul(E, lt) | 0;
+      B = (f + (i >>> 13) | 0) + (_e >>> 26) | 0, _e &= 67108863, h = Math.imul(W, J), i = Math.imul(W, j), i = i + Math.imul(L, J) | 0, f = Math.imul(L, j), h = h + Math.imul(k, z) | 0, i = i + Math.imul(k, tt) | 0, i = i + Math.imul(P, z) | 0, f = f + Math.imul(P, tt) | 0, h = h + Math.imul($, et) | 0, i = i + Math.imul($, rt) | 0, i = i + Math.imul(R, et) | 0, f = f + Math.imul(R, rt) | 0, h = h + Math.imul(S, st) | 0, i = i + Math.imul(S, it) | 0, i = i + Math.imul(I, st) | 0, f = f + Math.imul(I, it) | 0, h = h + Math.imul(m, nt) | 0, i = i + Math.imul(m, ot) | 0, i = i + Math.imul(E, nt) | 0, f = f + Math.imul(E, ot) | 0;
       var Se = (B + h | 0) + ((i & 8191) << 13) | 0;
-      B = (f + (i >>> 13) | 0) + (Se >>> 26) | 0, Se &= 67108863, h = Math.imul(K, J), i = Math.imul(K, j), i = i + Math.imul(q, J) | 0, f = Math.imul(q, j), h = h + Math.imul(O, z) | 0, i = i + Math.imul(O, tt) | 0, i = i + Math.imul(H, z) | 0, f = f + Math.imul(H, tt) | 0, h = h + Math.imul(W, et) | 0, i = i + Math.imul(W, rt) | 0, i = i + Math.imul(L, et) | 0, f = f + Math.imul(L, rt) | 0, h = h + Math.imul(k, st) | 0, i = i + Math.imul(k, it) | 0, i = i + Math.imul(P, st) | 0, f = f + Math.imul(P, it) | 0, h = h + Math.imul($, nt) | 0, i = i + Math.imul($, ot) | 0, i = i + Math.imul(R, nt) | 0, f = f + Math.imul(R, ot) | 0, h = h + Math.imul(x, at) | 0, i = i + Math.imul(x, lt) | 0, i = i + Math.imul(I, at) | 0, f = f + Math.imul(I, lt) | 0, h = h + Math.imul(m, ct) | 0, i = i + Math.imul(m, ht) | 0, i = i + Math.imul(E, ct) | 0, f = f + Math.imul(E, ht) | 0;
+      B = (f + (i >>> 13) | 0) + (Se >>> 26) | 0, Se &= 67108863, h = Math.imul(O, J), i = Math.imul(O, j), i = i + Math.imul(H, J) | 0, f = Math.imul(H, j), h = h + Math.imul(W, z) | 0, i = i + Math.imul(W, tt) | 0, i = i + Math.imul(L, z) | 0, f = f + Math.imul(L, tt) | 0, h = h + Math.imul(k, et) | 0, i = i + Math.imul(k, rt) | 0, i = i + Math.imul(P, et) | 0, f = f + Math.imul(P, rt) | 0, h = h + Math.imul($, st) | 0, i = i + Math.imul($, it) | 0, i = i + Math.imul(R, st) | 0, f = f + Math.imul(R, it) | 0, h = h + Math.imul(S, nt) | 0, i = i + Math.imul(S, ot) | 0, i = i + Math.imul(I, nt) | 0, f = f + Math.imul(I, ot) | 0, h = h + Math.imul(m, at) | 0, i = i + Math.imul(m, lt) | 0, i = i + Math.imul(E, at) | 0, f = f + Math.imul(E, lt) | 0;
+      var xe = (B + h | 0) + ((i & 8191) << 13) | 0;
+      B = (f + (i >>> 13) | 0) + (xe >>> 26) | 0, xe &= 67108863, h = Math.imul(K, J), i = Math.imul(K, j), i = i + Math.imul(q, J) | 0, f = Math.imul(q, j), h = h + Math.imul(O, z) | 0, i = i + Math.imul(O, tt) | 0, i = i + Math.imul(H, z) | 0, f = f + Math.imul(H, tt) | 0, h = h + Math.imul(W, et) | 0, i = i + Math.imul(W, rt) | 0, i = i + Math.imul(L, et) | 0, f = f + Math.imul(L, rt) | 0, h = h + Math.imul(k, st) | 0, i = i + Math.imul(k, it) | 0, i = i + Math.imul(P, st) | 0, f = f + Math.imul(P, it) | 0, h = h + Math.imul($, nt) | 0, i = i + Math.imul($, ot) | 0, i = i + Math.imul(R, nt) | 0, f = f + Math.imul(R, ot) | 0, h = h + Math.imul(S, at) | 0, i = i + Math.imul(S, lt) | 0, i = i + Math.imul(I, at) | 0, f = f + Math.imul(I, lt) | 0, h = h + Math.imul(m, ct) | 0, i = i + Math.imul(m, ht) | 0, i = i + Math.imul(E, ct) | 0, f = f + Math.imul(E, ht) | 0;
       var Ie = (B + h | 0) + ((i & 8191) << 13) | 0;
-      B = (f + (i >>> 13) | 0) + (Ie >>> 26) | 0, Ie &= 67108863, h = Math.imul(V, J), i = Math.imul(V, j), i = i + Math.imul(G, J) | 0, f = Math.imul(G, j), h = h + Math.imul(K, z) | 0, i = i + Math.imul(K, tt) | 0, i = i + Math.imul(q, z) | 0, f = f + Math.imul(q, tt) | 0, h = h + Math.imul(O, et) | 0, i = i + Math.imul(O, rt) | 0, i = i + Math.imul(H, et) | 0, f = f + Math.imul(H, rt) | 0, h = h + Math.imul(W, st) | 0, i = i + Math.imul(W, it) | 0, i = i + Math.imul(L, st) | 0, f = f + Math.imul(L, it) | 0, h = h + Math.imul(k, nt) | 0, i = i + Math.imul(k, ot) | 0, i = i + Math.imul(P, nt) | 0, f = f + Math.imul(P, ot) | 0, h = h + Math.imul($, at) | 0, i = i + Math.imul($, lt) | 0, i = i + Math.imul(R, at) | 0, f = f + Math.imul(R, lt) | 0, h = h + Math.imul(x, ct) | 0, i = i + Math.imul(x, ht) | 0, i = i + Math.imul(I, ct) | 0, f = f + Math.imul(I, ht) | 0, h = h + Math.imul(m, dt) | 0, i = i + Math.imul(m, ft) | 0, i = i + Math.imul(E, dt) | 0, f = f + Math.imul(E, ft) | 0;
+      B = (f + (i >>> 13) | 0) + (Ie >>> 26) | 0, Ie &= 67108863, h = Math.imul(V, J), i = Math.imul(V, j), i = i + Math.imul(G, J) | 0, f = Math.imul(G, j), h = h + Math.imul(K, z) | 0, i = i + Math.imul(K, tt) | 0, i = i + Math.imul(q, z) | 0, f = f + Math.imul(q, tt) | 0, h = h + Math.imul(O, et) | 0, i = i + Math.imul(O, rt) | 0, i = i + Math.imul(H, et) | 0, f = f + Math.imul(H, rt) | 0, h = h + Math.imul(W, st) | 0, i = i + Math.imul(W, it) | 0, i = i + Math.imul(L, st) | 0, f = f + Math.imul(L, it) | 0, h = h + Math.imul(k, nt) | 0, i = i + Math.imul(k, ot) | 0, i = i + Math.imul(P, nt) | 0, f = f + Math.imul(P, ot) | 0, h = h + Math.imul($, at) | 0, i = i + Math.imul($, lt) | 0, i = i + Math.imul(R, at) | 0, f = f + Math.imul(R, lt) | 0, h = h + Math.imul(S, ct) | 0, i = i + Math.imul(S, ht) | 0, i = i + Math.imul(I, ct) | 0, f = f + Math.imul(I, ht) | 0, h = h + Math.imul(m, dt) | 0, i = i + Math.imul(m, ft) | 0, i = i + Math.imul(E, dt) | 0, f = f + Math.imul(E, ft) | 0;
       var Ue = (B + h | 0) + ((i & 8191) << 13) | 0;
-      B = (f + (i >>> 13) | 0) + (Ue >>> 26) | 0, Ue &= 67108863, h = Math.imul(Q, J), i = Math.imul(Q, j), i = i + Math.imul(Z, J) | 0, f = Math.imul(Z, j), h = h + Math.imul(V, z) | 0, i = i + Math.imul(V, tt) | 0, i = i + Math.imul(G, z) | 0, f = f + Math.imul(G, tt) | 0, h = h + Math.imul(K, et) | 0, i = i + Math.imul(K, rt) | 0, i = i + Math.imul(q, et) | 0, f = f + Math.imul(q, rt) | 0, h = h + Math.imul(O, st) | 0, i = i + Math.imul(O, it) | 0, i = i + Math.imul(H, st) | 0, f = f + Math.imul(H, it) | 0, h = h + Math.imul(W, nt) | 0, i = i + Math.imul(W, ot) | 0, i = i + Math.imul(L, nt) | 0, f = f + Math.imul(L, ot) | 0, h = h + Math.imul(k, at) | 0, i = i + Math.imul(k, lt) | 0, i = i + Math.imul(P, at) | 0, f = f + Math.imul(P, lt) | 0, h = h + Math.imul($, ct) | 0, i = i + Math.imul($, ht) | 0, i = i + Math.imul(R, ct) | 0, f = f + Math.imul(R, ht) | 0, h = h + Math.imul(x, dt) | 0, i = i + Math.imul(x, ft) | 0, i = i + Math.imul(I, dt) | 0, f = f + Math.imul(I, ft) | 0, h = h + Math.imul(m, ut) | 0, i = i + Math.imul(m, Ct) | 0, i = i + Math.imul(E, ut) | 0, f = f + Math.imul(E, Ct) | 0;
+      B = (f + (i >>> 13) | 0) + (Ue >>> 26) | 0, Ue &= 67108863, h = Math.imul(Q, J), i = Math.imul(Q, j), i = i + Math.imul(Z, J) | 0, f = Math.imul(Z, j), h = h + Math.imul(V, z) | 0, i = i + Math.imul(V, tt) | 0, i = i + Math.imul(G, z) | 0, f = f + Math.imul(G, tt) | 0, h = h + Math.imul(K, et) | 0, i = i + Math.imul(K, rt) | 0, i = i + Math.imul(q, et) | 0, f = f + Math.imul(q, rt) | 0, h = h + Math.imul(O, st) | 0, i = i + Math.imul(O, it) | 0, i = i + Math.imul(H, st) | 0, f = f + Math.imul(H, it) | 0, h = h + Math.imul(W, nt) | 0, i = i + Math.imul(W, ot) | 0, i = i + Math.imul(L, nt) | 0, f = f + Math.imul(L, ot) | 0, h = h + Math.imul(k, at) | 0, i = i + Math.imul(k, lt) | 0, i = i + Math.imul(P, at) | 0, f = f + Math.imul(P, lt) | 0, h = h + Math.imul($, ct) | 0, i = i + Math.imul($, ht) | 0, i = i + Math.imul(R, ct) | 0, f = f + Math.imul(R, ht) | 0, h = h + Math.imul(S, dt) | 0, i = i + Math.imul(S, ft) | 0, i = i + Math.imul(I, dt) | 0, f = f + Math.imul(I, ft) | 0, h = h + Math.imul(m, ut) | 0, i = i + Math.imul(m, Ct) | 0, i = i + Math.imul(E, ut) | 0, f = f + Math.imul(E, Ct) | 0;
       var Te = (B + h | 0) + ((i & 8191) << 13) | 0;
-      B = (f + (i >>> 13) | 0) + (Te >>> 26) | 0, Te &= 67108863, h = Math.imul(Y, J), i = Math.imul(Y, j), i = i + Math.imul(X, J) | 0, f = Math.imul(X, j), h = h + Math.imul(Q, z) | 0, i = i + Math.imul(Q, tt) | 0, i = i + Math.imul(Z, z) | 0, f = f + Math.imul(Z, tt) | 0, h = h + Math.imul(V, et) | 0, i = i + Math.imul(V, rt) | 0, i = i + Math.imul(G, et) | 0, f = f + Math.imul(G, rt) | 0, h = h + Math.imul(K, st) | 0, i = i + Math.imul(K, it) | 0, i = i + Math.imul(q, st) | 0, f = f + Math.imul(q, it) | 0, h = h + Math.imul(O, nt) | 0, i = i + Math.imul(O, ot) | 0, i = i + Math.imul(H, nt) | 0, f = f + Math.imul(H, ot) | 0, h = h + Math.imul(W, at) | 0, i = i + Math.imul(W, lt) | 0, i = i + Math.imul(L, at) | 0, f = f + Math.imul(L, lt) | 0, h = h + Math.imul(k, ct) | 0, i = i + Math.imul(k, ht) | 0, i = i + Math.imul(P, ct) | 0, f = f + Math.imul(P, ht) | 0, h = h + Math.imul($, dt) | 0, i = i + Math.imul($, ft) | 0, i = i + Math.imul(R, dt) | 0, f = f + Math.imul(R, ft) | 0, h = h + Math.imul(x, ut) | 0, i = i + Math.imul(x, Ct) | 0, i = i + Math.imul(I, ut) | 0, f = f + Math.imul(I, Ct) | 0, h = h + Math.imul(m, wt) | 0, i = i + Math.imul(m, gt) | 0, i = i + Math.imul(E, wt) | 0, f = f + Math.imul(E, gt) | 0;
+      B = (f + (i >>> 13) | 0) + (Te >>> 26) | 0, Te &= 67108863, h = Math.imul(Y, J), i = Math.imul(Y, j), i = i + Math.imul(X, J) | 0, f = Math.imul(X, j), h = h + Math.imul(Q, z) | 0, i = i + Math.imul(Q, tt) | 0, i = i + Math.imul(Z, z) | 0, f = f + Math.imul(Z, tt) | 0, h = h + Math.imul(V, et) | 0, i = i + Math.imul(V, rt) | 0, i = i + Math.imul(G, et) | 0, f = f + Math.imul(G, rt) | 0, h = h + Math.imul(K, st) | 0, i = i + Math.imul(K, it) | 0, i = i + Math.imul(q, st) | 0, f = f + Math.imul(q, it) | 0, h = h + Math.imul(O, nt) | 0, i = i + Math.imul(O, ot) | 0, i = i + Math.imul(H, nt) | 0, f = f + Math.imul(H, ot) | 0, h = h + Math.imul(W, at) | 0, i = i + Math.imul(W, lt) | 0, i = i + Math.imul(L, at) | 0, f = f + Math.imul(L, lt) | 0, h = h + Math.imul(k, ct) | 0, i = i + Math.imul(k, ht) | 0, i = i + Math.imul(P, ct) | 0, f = f + Math.imul(P, ht) | 0, h = h + Math.imul($, dt) | 0, i = i + Math.imul($, ft) | 0, i = i + Math.imul(R, dt) | 0, f = f + Math.imul(R, ft) | 0, h = h + Math.imul(S, ut) | 0, i = i + Math.imul(S, Ct) | 0, i = i + Math.imul(I, ut) | 0, f = f + Math.imul(I, Ct) | 0, h = h + Math.imul(m, wt) | 0, i = i + Math.imul(m, gt) | 0, i = i + Math.imul(E, wt) | 0, f = f + Math.imul(E, gt) | 0;
       var Ne = (B + h | 0) + ((i & 8191) << 13) | 0;
-      B = (f + (i >>> 13) | 0) + (Ne >>> 26) | 0, Ne &= 67108863, h = Math.imul(Y, z), i = Math.imul(Y, tt), i = i + Math.imul(X, z) | 0, f = Math.imul(X, tt), h = h + Math.imul(Q, et) | 0, i = i + Math.imul(Q, rt) | 0, i = i + Math.imul(Z, et) | 0, f = f + Math.imul(Z, rt) | 0, h = h + Math.imul(V, st) | 0, i = i + Math.imul(V, it) | 0, i = i + Math.imul(G, st) | 0, f = f + Math.imul(G, it) | 0, h = h + Math.imul(K, nt) | 0, i = i + Math.imul(K, ot) | 0, i = i + Math.imul(q, nt) | 0, f = f + Math.imul(q, ot) | 0, h = h + Math.imul(O, at) | 0, i = i + Math.imul(O, lt) | 0, i = i + Math.imul(H, at) | 0, f = f + Math.imul(H, lt) | 0, h = h + Math.imul(W, ct) | 0, i = i + Math.imul(W, ht) | 0, i = i + Math.imul(L, ct) | 0, f = f + Math.imul(L, ht) | 0, h = h + Math.imul(k, dt) | 0, i = i + Math.imul(k, ft) | 0, i = i + Math.imul(P, dt) | 0, f = f + Math.imul(P, ft) | 0, h = h + Math.imul($, ut) | 0, i = i + Math.imul($, Ct) | 0, i = i + Math.imul(R, ut) | 0, f = f + Math.imul(R, Ct) | 0, h = h + Math.imul(x, wt) | 0, i = i + Math.imul(x, gt) | 0, i = i + Math.imul(I, wt) | 0, f = f + Math.imul(I, gt) | 0;
+      B = (f + (i >>> 13) | 0) + (Ne >>> 26) | 0, Ne &= 67108863, h = Math.imul(Y, z), i = Math.imul(Y, tt), i = i + Math.imul(X, z) | 0, f = Math.imul(X, tt), h = h + Math.imul(Q, et) | 0, i = i + Math.imul(Q, rt) | 0, i = i + Math.imul(Z, et) | 0, f = f + Math.imul(Z, rt) | 0, h = h + Math.imul(V, st) | 0, i = i + Math.imul(V, it) | 0, i = i + Math.imul(G, st) | 0, f = f + Math.imul(G, it) | 0, h = h + Math.imul(K, nt) | 0, i = i + Math.imul(K, ot) | 0, i = i + Math.imul(q, nt) | 0, f = f + Math.imul(q, ot) | 0, h = h + Math.imul(O, at) | 0, i = i + Math.imul(O, lt) | 0, i = i + Math.imul(H, at) | 0, f = f + Math.imul(H, lt) | 0, h = h + Math.imul(W, ct) | 0, i = i + Math.imul(W, ht) | 0, i = i + Math.imul(L, ct) | 0, f = f + Math.imul(L, ht) | 0, h = h + Math.imul(k, dt) | 0, i = i + Math.imul(k, ft) | 0, i = i + Math.imul(P, dt) | 0, f = f + Math.imul(P, ft) | 0, h = h + Math.imul($, ut) | 0, i = i + Math.imul($, Ct) | 0, i = i + Math.imul(R, ut) | 0, f = f + Math.imul(R, Ct) | 0, h = h + Math.imul(S, wt) | 0, i = i + Math.imul(S, gt) | 0, i = i + Math.imul(I, wt) | 0, f = f + Math.imul(I, gt) | 0;
       var $e = (B + h | 0) + ((i & 8191) << 13) | 0;
       B = (f + (i >>> 13) | 0) + ($e >>> 26) | 0, $e &= 67108863, h = Math.imul(Y, et), i = Math.imul(Y, rt), i = i + Math.imul(X, et) | 0, f = Math.imul(X, rt), h = h + Math.imul(Q, st) | 0, i = i + Math.imul(Q, it) | 0, i = i + Math.imul(Z, st) | 0, f = f + Math.imul(Z, it) | 0, h = h + Math.imul(V, nt) | 0, i = i + Math.imul(V, ot) | 0, i = i + Math.imul(G, nt) | 0, f = f + Math.imul(G, ot) | 0, h = h + Math.imul(K, at) | 0, i = i + Math.imul(K, lt) | 0, i = i + Math.imul(q, at) | 0, f = f + Math.imul(q, lt) | 0, h = h + Math.imul(O, ct) | 0, i = i + Math.imul(O, ht) | 0, i = i + Math.imul(H, ct) | 0, f = f + Math.imul(H, ht) | 0, h = h + Math.imul(W, dt) | 0, i = i + Math.imul(W, ft) | 0, i = i + Math.imul(L, dt) | 0, f = f + Math.imul(L, ft) | 0, h = h + Math.imul(k, ut) | 0, i = i + Math.imul(k, Ct) | 0, i = i + Math.imul(P, ut) | 0, f = f + Math.imul(P, Ct) | 0, h = h + Math.imul($, wt) | 0, i = i + Math.imul($, gt) | 0, i = i + Math.imul(R, wt) | 0, f = f + Math.imul(R, gt) | 0;
       var Re = (B + h | 0) + ((i & 8191) << 13) | 0;
@@ -459,7 +458,7 @@ fr.exports;
       var He = (B + h | 0) + ((i & 8191) << 13) | 0;
       B = (f + (i >>> 13) | 0) + (He >>> 26) | 0, He &= 67108863, h = Math.imul(Y, wt), i = Math.imul(Y, gt), i = i + Math.imul(X, wt) | 0, f = Math.imul(X, gt);
       var Ke = (B + h | 0) + ((i & 8191) << 13) | 0;
-      return B = (f + (i >>> 13) | 0) + (Ke >>> 26) | 0, Ke &= 67108863, w[0] = ve, w[1] = De, w[2] = Me, w[3] = _e, w[4] = xe, w[5] = Se, w[6] = Ie, w[7] = Ue, w[8] = Te, w[9] = Ne, w[10] = $e, w[11] = Re, w[12] = ke, w[13] = Pe, w[14] = We, w[15] = Le, w[16] = Oe, w[17] = He, w[18] = Ke, B !== 0 && (w[19] = B, c.length++), c
+      return B = (f + (i >>> 13) | 0) + (Ke >>> 26) | 0, Ke &= 67108863, w[0] = ve, w[1] = De, w[2] = Me, w[3] = _e, w[4] = Se, w[5] = xe, w[6] = Ie, w[7] = Ue, w[8] = Te, w[9] = Ne, w[10] = $e, w[11] = Re, w[12] = ke, w[13] = Pe, w[14] = We, w[15] = Le, w[16] = Oe, w[17] = He, w[18] = Ke, B !== 0 && (w[19] = B, c.length++), c
     };
     Math.imul || (vt = D);
 
@@ -872,7 +871,7 @@ fr.exports;
     }, n.prototype.redPow = function(r) {
       return s(this.red && !r.red, "redPow(normalNum)"), this.red._verify1(this), this.red.pow(this, r)
     };
-    var xt = {
+    var St = {
       k256: null,
       p224: null,
       p192: null,
@@ -926,10 +925,10 @@ fr.exports;
     }
     l(Nt, bt);
 
-    function xr() {
+    function Sr() {
       bt.call(this, "p192", "ffffffff ffffffff ffffffff fffffffe ffffffff ffffffff")
     }
-    l(xr, bt);
+    l(Sr, bt);
 
     function Ee() {
       bt.call(this, "25519", "7fffffffffffffff ffffffffffffffff ffffffffffffffff ffffffffffffffed")
@@ -942,14 +941,14 @@ fr.exports;
       }
       return o !== 0 && (r.words[r.length++] = o), r
     }, n._prime = function(r) {
-      if (xt[r]) return xt[r];
+      if (St[r]) return St[r];
       var o;
       if (r === "k256") o = new qt;
       else if (r === "p224") o = new Nt;
-      else if (r === "p192") o = new xr;
+      else if (r === "p192") o = new Sr;
       else if (r === "p25519") o = new Ee;
       else throw new Error("Unknown prime " + r);
-      return xt[r] = o, o
+      return St[r] = o, o
     };
 
     function U(C) {
@@ -1007,10 +1006,10 @@ fr.exports;
         i = this.m.bitLength();
       for (i = new n(2 * i * i).toRed(this); this.pow(i, h).cmp(B) !== 0;) i.redIAdd(B);
       for (var f = this.pow(i, d), b = this.pow(r, d.addn(1).iushrn(1)), m = this.pow(r, d), E = u; m.cmp(w) !== 0;) {
-        for (var At = m, x = 0; At.cmp(w) !== 0; x++) At = At.redSqr();
-        s(x < E);
-        var I = this.pow(f, new n(1).iushln(E - x - 1));
-        b = b.redMul(I), f = I.redSqr(), m = m.redMul(f), E = x
+        for (var At = m, S = 0; At.cmp(w) !== 0; S++) At = At.redSqr();
+        s(S < E);
+        var I = this.pow(f, new n(1).iushln(E - S - 1));
+        b = b.redMul(I), f = I.redSqr(), m = m.redMul(f), E = S
       }
       return b
     }, U.prototype.invm = function(r) {
@@ -1077,21 +1076,21 @@ fr.exports;
     }
   })(a, g0)
 })(fr);
-var M0 = fr.exports;
-const ur = M0,
-  pe = p0,
-  ps = m0,
+var D0 = fr.exports;
+const ur = D0,
+  pe = y0,
+  ps = p0,
   ms = typeof self < "u" && self.crypto && self.crypto.subtle;
 let bs = null;
-ms || (bs = b0);
+ms || (bs = m0);
 
-function _0(a) {
+function M0(a) {
   return ms ? crypto.subtle.digest("SHA-256", a) : bs.subtle.digest({
     name: "SHA-256"
   }, a)
 }
 
-function x0(a) {
+function _0(a) {
   if (!ur.isBN(a) && typeof a != "string") throw new Error("Please pass numbers as strings or BN objects to avoid precision errors.");
   return ps.toWei(a, "gwei")
 }
@@ -1107,13 +1106,13 @@ for (let a = 0; a <= 255; a++) {
   t.length < 2 && (t = "0" + t), Es.push(t), er[t] = a
 }
 
-function I0(a) {
+function x0(a) {
   const t = [];
   for (let e = 0; e < a.byteLength; e++) t.push(Es[a[e]]);
   return t.join("")
 }
 
-function U0(a) {
+function I0(a) {
   a = a.toLowerCase();
   const t = a.length;
   if (t % 2 !== 0) throw "hex string must have length a multiple of 2";
@@ -1128,26 +1127,26 @@ function U0(a) {
   return s
 }
 
-function T0(a, t = 1) {
+function U0(a, t = 1) {
   let e, s;
   t === 1 && (e = new ArrayBuffer(a.length), s = new Uint8Array(e)), t === 2 && (e = new ArrayBuffer(a.length * 2), s = new Uint16Array(e)), t === 4 && (e = new ArrayBuffer(a.length * 4), s = new Uint32Array(e));
   for (let l = 0, n = a.length; l < n; l++) s[l] = a.charCodeAt(l);
   return new Uint8Array(s.buffer)
 }
 
-function N0(a, t) {
+function T0(a, t) {
   a ^= 4294967295;
   for (let s = 0; s < t.length; s++) a ^= t[s], a = a & 1 ? a >>> 1 ^ 2197175160 : a >>> 1, a = a & 1 ? a >>> 1 ^ 2197175160 : a >>> 1, a = a & 1 ? a >>> 1 ^ 2197175160 : a >>> 1, a = a & 1 ? a >>> 1 ^ 2197175160 : a >>> 1, a = a & 1 ? a >>> 1 ^ 2197175160 : a >>> 1, a = a & 1 ? a >>> 1 ^ 2197175160 : a >>> 1, a = a & 1 ? a >>> 1 ^ 2197175160 : a >>> 1, a = a & 1 ? a >>> 1 ^ 2197175160 : a >>> 1;
   return a ^ 4294967295
 }
 
-function $0(a) {
-  const t = N0(0, a),
+function N0(a) {
+  const t = T0(0, a),
     e = new ArrayBuffer(4);
   return new DataView(e).setUint32(0, t, !1), new Uint8Array(e).reverse()
 }
 
-function R0(a) {
+function $0(a) {
   let e = 0;
   const s = new Uint8Array(a.length + 2);
   s.set(a);
@@ -1158,12 +1157,12 @@ function R0(a) {
   return new Uint8Array([Math.floor(e / 256), e % 256])
 }
 
-function k0(a, t) {
+function R0(a, t) {
   const e = new Uint8Array(a.length + t.length);
   return e.set(a), e.set(t, a.length), e
 }
 
-function P0(a, t) {
+function k0(a, t) {
   return a.toString() === t.toString()
 }
 const Tt = (() => {
@@ -1174,7 +1173,7 @@ const Tt = (() => {
   return a.push("+"), a.push("/"), a
 })();
 
-function W0(a) {
+function P0(a) {
   let t = "",
     e;
   const s = a.length;
@@ -1186,11 +1185,11 @@ function vs(a) {
   return typeof self > "u" ? Ut.from(a, "base64").toString("binary") : atob(a)
 }
 
-function L0(a) {
+function W0(a) {
   return typeof self > "u" ? Ut.from(a, "binary").toString("base64") : btoa(a)
 }
 
-function O0(a) {
+function L0(a) {
   const t = vs(a),
     e = t.length,
     s = new Uint8Array(e);
@@ -1198,58 +1197,58 @@ function O0(a) {
   return s
 }
 
-function H0(a, t) {
+function O0(a, t) {
   let e = 0;
   for (let s = 0; s < a; s++) e *= 256, e += t[s];
   return e
 }
 
-function K0(a) {
+function H0(a) {
   return pe.sign.keyPair.fromSeed(a)
 }
 
-function q0() {
+function K0() {
   return pe.sign.keyPair()
 }
 
-function V0() {
+function q0() {
   return pe.sign.keyPair().secretKey.slice(0, 32)
 }
 var me = {
     BN: ur,
     nacl: pe,
-    sha256: _0,
+    sha256: M0,
     fromNano: S0,
-    toNano: x0,
-    bytesToHex: I0,
-    hexToBytes: U0,
-    stringToBytes: T0,
-    crc32c: $0,
-    crc16: R0,
-    concatBytes: k0,
-    bytesToBase64: W0,
-    base64ToBytes: O0,
+    toNano: _0,
+    bytesToHex: x0,
+    hexToBytes: I0,
+    stringToBytes: U0,
+    crc32c: N0,
+    crc16: $0,
+    concatBytes: R0,
+    bytesToBase64: P0,
+    base64ToBytes: L0,
     base64toString: vs,
-    stringToBase64: L0,
-    compareBytes: P0,
-    readNBytesUIntFromArray: H0,
-    keyPairFromSeed: K0,
-    newKeyPair: q0,
-    newSeed: V0
+    stringToBase64: W0,
+    compareBytes: k0,
+    readNBytesUIntFromArray: O0,
+    keyPairFromSeed: H0,
+    newKeyPair: K0,
+    newSeed: q0
   },
   Ds = {};
 const {
   crc16: Ms,
-  hexToBytes: G0,
-  bytesToHex: Q0,
-  stringToBytes: Z0,
-  base64toString: Y0,
-  stringToBase64: X0
+  hexToBytes: V0,
+  bytesToHex: G0,
+  stringToBytes: Q0,
+  base64toString: Z0,
+  stringToBase64: Y0
 } = me, rr = 17, _s = 81, sr = 128;
 
-function J0(a) {
+function X0(a) {
   if (a.length !== 48) throw new Error("User-friendly address should contain strictly 48 characters");
-  const t = Z0(Y0(a));
+  const t = Q0(Z0(a));
   if (t.length !== 36) throw "Unknown address type: byte length is not equal to 36";
   const e = t.slice(0, 34),
     s = t.slice(34, 36),
@@ -1270,7 +1269,7 @@ function J0(a) {
     hashPart: y
   }
 }
-let j0 = class ir {
+let J0 = class ir {
   static isValid(t) {
     try {
       return new ir(t), !0
@@ -1291,10 +1290,10 @@ let j0 = class ir {
       if (s !== 0 && s !== -1) throw new Error("Invalid address wc " + t);
       const l = e[1];
       if (l.length !== 64) throw new Error("Invalid address hex " + t);
-      this.isUserFriendly = !1, this.wc = s, this.hashPart = G0(l), this.isTestOnly = !1, this.isBounceable = !1
+      this.isUserFriendly = !1, this.wc = s, this.hashPart = V0(l), this.isTestOnly = !1, this.isBounceable = !1
     } else {
       this.isUserFriendly = !0;
-      const e = J0(t);
+      const e = X0(t);
       this.wc = e.workchain, this.hashPart = e.hashPart, this.isTestOnly = e.isTestOnly, this.isBounceable = e.isBounceable
     }
   }
@@ -1306,18 +1305,18 @@ let j0 = class ir {
       g[0] = n, g[1] = this.wc, g.set(this.hashPart, 2);
       const F = new Uint8Array(36);
       F.set(g), F.set(Ms(g), 34);
-      let A = X0(String.fromCharCode.apply(null, new Uint8Array(F)));
+      let A = Y0(String.fromCharCode.apply(null, new Uint8Array(F)));
       return e && (A = A.replace(/\+/g, "-").replace(/\//g, "_")), A
-    } else return this.wc + ":" + Q0(this.hashPart)
+    } else return this.wc + ":" + G0(this.hashPart)
   }
 };
-Ds.default = j0;
-var xs = {};
+Ds.default = J0;
+var Ss = {};
 const {
-  hexToBytes: z0,
-  bytesToHex: tn
+  hexToBytes: j0,
+  bytesToHex: z0
 } = me;
-let en = class nr {
+let tn = class nr {
   static isValid(t) {
     try {
       return new nr(t), !0
@@ -1333,22 +1332,22 @@ let en = class nr {
       this.bytes = t
     } else if (typeof t == "string") {
       if (t.length !== 64) throw new Error("invalid adnl hex length");
-      this.bytes = z0(t)
+      this.bytes = j0(t)
     } else throw new Error("unsupported type")
   }
   toHex() {
-    let t = tn(this.bytes);
+    let t = z0(this.bytes);
     for (; t.length < 64;) t = "0" + t;
     return t
   }
 };
-xs.default = en;
-var Ss = {};
+Ss.default = tn;
+var xs = {};
 const {
-  hexToBytes: rn,
-  bytesToHex: sn
+  hexToBytes: en,
+  bytesToHex: rn
 } = me;
-let nn = class or {
+let sn = class or {
   static isValid(t) {
     try {
       return new or(t), !0
@@ -1364,40 +1363,40 @@ let nn = class or {
       this.bytes = t
     } else if (typeof t == "string") {
       if (t.length !== 64) throw new Error("invalid bag id hex length");
-      this.bytes = rn(t)
+      this.bytes = en(t)
     } else throw new Error("unsupported type")
   }
   toHex() {
-    let t = sn(this.bytes);
+    let t = rn(this.bytes);
     for (; t.length < 64;) t = "0" + t;
     return t
   }
 };
-Ss.default = nn;
+xs.default = sn;
 const {
   BN: Is,
-  nacl: on,
-  sha256: an,
-  fromNano: ln,
-  toNano: cn,
-  bytesToHex: hn,
-  hexToBytes: dn,
-  stringToBytes: fn,
-  crc32c: un,
-  crc16: Cn,
-  concatBytes: wn,
-  bytesToBase64: gn,
-  base64ToBytes: Bn,
-  base64toString: Fn,
-  stringToBase64: An,
-  compareBytes: yn,
-  readNBytesUIntFromArray: pn,
-  keyPairFromSeed: mn,
-  newKeyPair: bn,
-  newSeed: En
-} = me, Us = Ds.default, vn = xs.default, Dn = Ss.default;
+  nacl: nn,
+  sha256: on,
+  fromNano: an,
+  toNano: ln,
+  bytesToHex: cn,
+  hexToBytes: hn,
+  stringToBytes: dn,
+  crc32c: fn,
+  crc16: un,
+  concatBytes: Cn,
+  bytesToBase64: wn,
+  base64ToBytes: gn,
+  base64toString: Bn,
+  stringToBase64: Fn,
+  compareBytes: An,
+  readNBytesUIntFromArray: yn,
+  keyPairFromSeed: pn,
+  newKeyPair: mn,
+  newSeed: bn
+} = me, Us = Ds.default, En = Ss.default, vn = xs.default;
 
-function Mn(a) {
+function Dn(a) {
   const t = "ton://transfer/";
   if (!a.startsWith(t)) throw new Error("must starts with " + t);
   const e = a.substring(t.length).split("?");
@@ -1427,42 +1426,42 @@ function Mn(a) {
   return l
 }
 
-function _n(a, t, e) {
+function Mn(a, t, e) {
   let s = "ton://transfer/" + a;
   const l = [];
   return t && l.push("amount=" + t), e && l.push("text=" + encodeURIComponent(e)), l.length === 0 ? s : s + "?" + l.join("&")
 }
-var S = {
+var x = {
   Address: Us,
-  AdnlAddress: vn,
-  StorageBagId: Dn,
+  AdnlAddress: En,
+  StorageBagId: vn,
   BN: Is,
-  nacl: on,
-  sha256: an,
-  fromNano: ln,
-  toNano: cn,
-  bytesToHex: hn,
-  hexToBytes: dn,
-  stringToBytes: fn,
-  crc32c: un,
-  crc16: Cn,
-  concatBytes: wn,
-  bytesToBase64: gn,
-  base64ToBytes: Bn,
-  base64toString: Fn,
-  stringToBase64: An,
-  compareBytes: yn,
-  readNBytesUIntFromArray: pn,
-  parseTransferUrl: Mn,
-  formatTransferUrl: _n,
-  keyPairFromSeed: mn,
-  newKeyPair: bn,
-  newSeed: En
+  nacl: nn,
+  sha256: on,
+  fromNano: an,
+  toNano: ln,
+  bytesToHex: cn,
+  hexToBytes: hn,
+  stringToBytes: dn,
+  crc32c: fn,
+  crc16: un,
+  concatBytes: Cn,
+  bytesToBase64: wn,
+  base64ToBytes: gn,
+  base64toString: Bn,
+  stringToBase64: Fn,
+  compareBytes: An,
+  readNBytesUIntFromArray: yn,
+  parseTransferUrl: Dn,
+  formatTransferUrl: Mn,
+  keyPairFromSeed: pn,
+  newKeyPair: mn,
+  newSeed: bn
 };
 const {
   BN: Yt,
-  bytesToHex: xn
-} = S;
+  bytesToHex: _n
+} = x;
 let Sn = class Ts {
   constructor(t) {
     this.array = Uint8Array.from({
@@ -1580,7 +1579,7 @@ let Sn = class Ts {
   }
   toHex() {
     if (this.cursor % 4 === 0) {
-      const t = xn(this.array.slice(0, Math.ceil(this.cursor / 8))).toUpperCase();
+      const t = _n(this.array.slice(0, Math.ceil(this.cursor / 8))).toUpperCase();
       return this.cursor % 8 === 0 ? t : t.substr(0, t.length - 1)
     } else {
       const t = this.clone();
@@ -1604,12 +1603,12 @@ var Cr = {
 };
 const {
   BN: Pt,
-  Address: In,
-  bytesToHex: Un
-} = S, {
-  BitString: Tn
+  Address: xn,
+  bytesToHex: In
+} = x, {
+  BitString: Un
 } = Cr;
-let Nn = class {
+let Tn = class {
   constructor(t, e, s) {
     this.array = t, this.length = e, this.readCursor = 0, this.refs = s, this.refCursor = 0
   }
@@ -1627,7 +1626,7 @@ let Nn = class {
     return this.readCursor++, t
   }
   loadBits(t) {
-    const e = new Tn(t);
+    const e = new Un(t);
     for (let s = 0; s < t; s++) e.writeBit(this.loadBit());
     return e.array
   }
@@ -1662,7 +1661,7 @@ let Nn = class {
     if (this.loadBit()) throw new Error("unsupported address type");
     const e = this.loadInt(8).toNumber(),
       s = this.loadBits(256);
-    return new In(e + ":" + Un(s))
+    return new xn(e + ":" + In(s))
   }
   loadRef() {
     if (this.refCursor >= 4) throw new Error("refs overflow");
@@ -1671,22 +1670,22 @@ let Nn = class {
   }
 };
 var Ns = {
-  Slice: Nn
+  Slice: Tn
 };
 const {
   BitString: Zr
 } = Cr, {
-  bytesToBase64: vc,
+  bytesToBase64: bc,
   compareBytes: ie,
   concatBytes: Xt,
   crc32c: $s,
   hexToBytes: re,
   readNBytesUIntFromArray: Ot,
-  sha256: $n,
-  bytesToHex: Dc
-} = S, {
-  Slice: Rn
-} = Ns, Rs = re("B5EE9C72"), kn = re("68ff65f3"), Pn = re("acc3a728");
+  sha256: Nn,
+  bytesToHex: Ec
+} = x, {
+  Slice: $n
+} = Ns, Rs = re("B5EE9C72"), Rn = re("68ff65f3"), kn = re("acc3a728");
 let ks = class {
   constructor() {
     this.bits = new Zr(1023), this.refs = [], this.isExotic = !1
@@ -1768,11 +1767,11 @@ let ks = class {
     return e
   }
   async hash() {
-    return new Uint8Array(await $n(await this.getRepr()))
+    return new Uint8Array(await Nn(await this.getRepr()))
   }
   beginParse() {
     const t = this.refs.map(e => e.beginParse());
-    return new Rn(this.bits.array.slice(), this.bits.length, t)
+    return new $n(this.bits.array.slice(), this.bits.length, t)
   }
   print(t) {
     t = t || "";
@@ -1848,7 +1847,7 @@ async function Ws(a, t, e, s = null) {
   return [t, e]
 }
 
-function Wn(a) {
+function Pn(a) {
   if (a.length < 5) throw "Not enough bytes for magic prefix";
   const t = a,
     e = a.slice(0, 4);
@@ -1858,7 +1857,7 @@ function Wn(a) {
     const D = a[0];
     s = D & 128, l = D & 64, n = D & 32, g = (D & 16) * 2 + (D & 8), F = D % 8
   }
-  if (ie(e, kn) && (s = 1, l = 0, n = 0, g = 0, F = a[0]), ie(e, Pn) && (s = 1, l = 1, n = 0, g = 0, F = a[0]), a = a.slice(1), a.length < 1 + 5 * F) throw "Not enough bytes for encoding cells counters";
+  if (ie(e, Rn) && (s = 1, l = 0, n = 0, g = 0, F = a[0]), ie(e, kn) && (s = 1, l = 1, n = 0, g = 0, F = a[0]), a = a.slice(1), a.length < 1 + 5 * F) throw "Not enough bytes for encoding cells counters";
   const A = a[0];
   a = a.slice(1);
   const y = Ot(F, a);
@@ -1902,7 +1901,7 @@ function Wn(a) {
   }
 }
 
-function Ln(a, t) {
+function Wn(a, t) {
   if (a.length < 2) throw "Not enough bytes to encode cell descriptors";
   const e = a[0],
     s = a[1];
@@ -1923,11 +1922,11 @@ function Ln(a, t) {
 
 function Yr(a) {
   typeof a == "string" && (a = re(a));
-  const t = Wn(a);
+  const t = Pn(a);
   let e = t.cells_data,
     s = [];
   for (let n = 0; n < t.cells_num; n++) {
-    let g = Ln(e, t.size_bytes);
+    let g = Wn(e, t.size_bytes);
     e = g.residue, s.push(g.cell)
   }
   for (let n = t.cells_num - 1; n >= 0; n--) {
@@ -1942,30 +1941,30 @@ function Yr(a) {
   for (let n of t.root_list) l.push(s[n]);
   return l
 }
-var On = {
+var Ln = {
   Cell: ks
 };
 const {
-  BitString: Hn
+  BitString: On
 } = Cr, {
-  Cell: Kn
-} = On, {
-  Slice: qn
+  Cell: Hn
+} = Ln, {
+  Slice: Kn
 } = Ns;
 var _ = {
-  BitString: Hn,
-  Cell: Kn,
-  Slice: qn
+  BitString: On,
+  Cell: Hn,
+  Slice: Kn
 };
 const {
   Cell: Gt
 } = _, {
   Address: $t,
   bytesToBase64: Jt,
-  bytesToHex: Vn,
-  BN: Gn
-} = S;
-let Qn = class Be {
+  bytesToHex: qn,
+  BN: Vn
+} = x;
+let Gn = class Be {
   constructor(t, e) {
     this.provider = t, this.options = e, this.address = e.address ? new $t(e.address) : null, e.wc || (e.wc = this.address ? this.address.wc : 0), this.methods = {}
   }
@@ -1984,7 +1983,7 @@ let Qn = class Be {
       e = this.createDataCell(),
       s = Be.createStateInit(t, e),
       l = await s.hash(),
-      n = new $t(this.options.wc + ":" + Vn(l));
+      n = new $t(this.options.wc + ":" + qn(l));
     return {
       stateInit: s,
       address: n,
@@ -2011,7 +2010,7 @@ let Qn = class Be {
   static createOutMsg(t, e, s, l = null) {
     let n = new Gt;
     s && (s.refs ? n = s : typeof s == "string" ? s.length > 0 && (n.bits.writeUint(0, 32), n.bits.writeString(s)) : n.bits.writeBytes(s));
-    const g = Be.createInternalMessageHeader(new $t(t), new Gn(e));
+    const g = Be.createInternalMessageHeader(new $t(t), new Vn(e));
     return Be.createCommonMsgInfo(g, l, n)
   }
   static createCommonMsgInfo(t, e = null, s = null) {
@@ -2044,18 +2043,18 @@ let Qn = class Be {
   }
 };
 var yt = {
-  Contract: Qn
+  Contract: Gn
 };
 const {
-  Cell: Zn
+  Cell: Qn
 } = _, {
-  Address: Yn,
-  BN: _c,
-  bytesToHex: Xn
-} = S, {
+  Address: Zn,
+  BN: Dc,
+  bytesToHex: Yn
+} = x, {
   Contract: qe
 } = yt;
-let Jn = class {
+let Xn = class {
   constructor(t, e) {
     this.transport = t, this.ton = e, this.ADDRESS_FORMAT_HEX = 0, this.ADDRESS_FORMAT_USER_FRIENDLY = 1, this.ADDRESS_FORMAT_URL_SAFE = 2, this.ADDRESS_FORMAT_BOUNCEABLE = 4, this.ADDRESS_FORMAT_TEST_ONLY = 8
   }
@@ -2081,7 +2080,7 @@ let Jn = class {
       g = n[0],
       F = new Uint8Array(n.slice(1, 1 + g));
     return {
-      address: new Yn("0:" + Xn(F))
+      address: new Zn("0:" + Yn(F))
     }
   }
   async sign(t, e) {
@@ -2103,7 +2102,7 @@ let Jn = class {
       v = M[0],
       T = M.slice(1, 1 + v),
       N = new Uint8Array(T),
-      Ft = new Zn;
+      Ft = new Qn;
     Ft.bits.writeBytes(N), Ft.writeCell(A.signingMessage);
     let D = null,
       vt = null,
@@ -2113,8 +2112,8 @@ let Jn = class {
       D = Nt.stateInit, vt = Nt.code, Dt = Nt.data
     }
     const _t = await e.getAddress(),
-      xt = qe.createExternalMessageHeader(_t),
-      bt = qe.createCommonMsgInfo(xt, D, Ft),
+      St = qe.createExternalMessageHeader(_t),
+      bt = qe.createCommonMsgInfo(St, D, Ft),
       qt = new Promise(Nt => {
         Nt({
           address: _t,
@@ -2130,16 +2129,16 @@ let Jn = class {
     return qe.createMethod(this.ton.provider, qt)
   }
 };
-var jn = Jn,
+var Jn = Xn,
   Ls = {},
   Os = {};
 const {
   BN: Ve,
   base64ToBytes: Xr
-} = S, {
+} = x, {
   Cell: Jr
 } = _;
-let zn = class Ht {
+let jn = class Ht {
   static parseObject(t) {
     const e = t["@type"];
     switch (e) {
@@ -2192,13 +2191,13 @@ let zn = class Ht {
     return t.map(this.makeArg)
   }
 };
-Os.default = zn;
+Os.default = jn;
 const {
-  Cell: to
+  Cell: zn
 } = _, {
-  base64ToBytes: eo
-} = S, ro = Os.default;
-typeof fetch > "u" && (fetch = D0);
+  base64ToBytes: to
+} = x, eo = Os.default;
+typeof fetch > "u" && (fetch = v0);
 const ar = "-9223372036854775808";
 let Hs = class {
   constructor(t, e) {
@@ -2279,7 +2278,7 @@ let Hs = class {
       method: e,
       stack: s
     });
-    return ro.parseResponse(l)
+    return eo.parseResponse(l)
   }
   async getConfigParam(t) {
     const e = await this.send("getConfigParam", {
@@ -2289,7 +2288,7 @@ let Hs = class {
     if (!e.config) throw new Error("getConfigParam expected config");
     if (e.config["@type"] !== "tvm.cell") throw new Error("getConfigParam expected type tvm.cell");
     if (!e.config.bytes) throw new Error("getConfigParam expected bytes");
-    return to.oneFromBoc(eo(e.config.bytes))
+    return zn.oneFromBoc(to(e.config.bytes))
   }
   async getMasterchainInfo() {
     return this.send("getMasterchainInfo", {})
@@ -2327,21 +2326,21 @@ Hs.SHARD_ID_ALL = ar;
 Ls.default = Hs;
 var Ks = {};
 const {
-  Contract: St
+  Contract: xt
 } = yt, {
   Cell: ne
 } = _, {
   nacl: oe,
-  stringToBytes: Ic,
-  Address: Uc,
-  BN: Tc
-} = S;
-let so = class extends St {
+  stringToBytes: Sc,
+  Address: xc,
+  BN: Ic
+} = x;
+let ro = class extends xt {
   constructor(t, e) {
     if (!e.publicKey && !e.address) throw new Error("WalletContract required publicKey or address in options");
     super(t, e), this.methods = {
-      transfer: s => St.createMethod(t, this.createTransferMessage(s.secretKey, s.toAddress, s.amount, s.seqno, s.payload, s.sendMode, !s.secretKey, s.stateInit, s.expireAt)),
-      transfers: s => St.createMethod(t, this.createTransferMessages(s.secretKey, s.seqno, s.messages, !s.secretKey, s.expireAt)),
+      transfer: s => xt.createMethod(t, this.createTransferMessage(s.secretKey, s.toAddress, s.amount, s.seqno, s.payload, s.sendMode, !s.secretKey, s.stateInit, s.expireAt)),
+      transfers: s => xt.createMethod(t, this.createTransferMessages(s.secretKey, s.seqno, s.messages, !s.secretKey, s.expireAt)),
       seqno: () => ({
         call: async () => {
           const s = await this.getAddress();
@@ -2352,7 +2351,7 @@ let so = class extends St {
           return l
         }
       })
-    }, this.deploy = s => St.createMethod(t, this.createInitExternalMessage(s))
+    }, this.deploy = s => xt.createMethod(t, this.createInitExternalMessage(s))
   }
   getName() {
     throw new Error("override me")
@@ -2378,8 +2377,8 @@ let so = class extends St {
       data: n
     } = await this.createStateInit(), g = this.createSigningMessage(), F = oe.sign.detached(await g.hash(), t), A = new ne;
     A.bits.writeBytes(F), A.writeCell(g);
-    const y = St.createExternalMessageHeader(s),
-      p = St.createCommonMsgInfo(y, e, A);
+    const y = xt.createExternalMessageHeader(s),
+      p = xt.createCommonMsgInfo(y, e, A);
     return {
       address: s,
       message: p,
@@ -2406,8 +2405,8 @@ let so = class extends St {
       F = T.stateInit, A = T.code, y = T.data
     }
     const p = await this.getAddress(),
-      M = St.createExternalMessageHeader(p),
-      v = St.createCommonMsgInfo(M, F, g);
+      M = xt.createExternalMessageHeader(p),
+      v = xt.createCommonMsgInfo(M, F, g);
     return {
       address: p,
       message: v,
@@ -2422,7 +2421,7 @@ let so = class extends St {
   async createTransferMessage(t, e, s, l, n = "", g = 3, F = !1, A = null, y = void 0) {
     if (l == null || l < 0) throw new Error("seqno must be number >= 0");
     const p = this.createSigningMessage(l, y);
-    return g == null && (g = 3), p.bits.writeUint8(g), p.refs.push(St.createOutMsg(e, s, n, A)), this.createExternalMessage(p, t, l, F)
+    return g == null && (g = 3), p.bits.writeUint8(g), p.refs.push(xt.createOutMsg(e, s, n, A)), this.createExternalMessage(p, t, l, F)
   }
   async createTransferMessages(t, e, s, l = !1, n = void 0) {
     if (e == null || e < 0) throw new Error("seqno must be number >= 0");
@@ -2430,20 +2429,20 @@ let so = class extends St {
     if (s.length < 1 || s.length > 4) throw new Error("put 1-4 messages");
     for (const F of s) {
       let A = F.sendMode;
-      A == null && (A = 3), g.bits.writeUint8(A), g.refs.push(St.createOutMsg(F.toAddress, F.amount, F.payload, F.stateInit))
+      A == null && (A = 3), g.bits.writeUint8(A), g.refs.push(xt.createOutMsg(F.toAddress, F.amount, F.payload, F.stateInit))
     }
     return this.createExternalMessage(g, t, e, l)
   }
 };
 var Kt = {
-  WalletContract: so
+  WalletContract: ro
 };
 const {
   Cell: wr
 } = _, {
   WalletContract: gr
 } = Kt;
-let io = class extends gr {
+let so = class extends gr {
     constructor(t, e) {
       e.code = wr.oneFromBoc("B5EE9C72410101010044000084FF0020DDA4F260810200D71820D70B1FED44D0D31FD3FFD15112BAF2A122F901541044F910F2A2F80001D31F3120D74A96D307D402FB00DED1A4C8CB1FCBFFC9ED5441FDF089"), super(t, e)
     }
@@ -2451,7 +2450,7 @@ let io = class extends gr {
       return "simpleR1"
     }
   },
-  no = class extends gr {
+  io = class extends gr {
     constructor(t, e) {
       e.code = wr.oneFromBoc("B5EE9C724101010100530000A2FF0020DD2082014C97BA9730ED44D0D70B1FE0A4F260810200D71820D70B1FED44D0D31FD3FFD15112BAF2A122F901541044F910F2A2F80001D31F3120D74A96D307D402FB00DED1A4C8CB1FCBFFC9ED54D0E2786F"), super(t, e)
     }
@@ -2459,7 +2458,7 @@ let io = class extends gr {
       return "simpleR2"
     }
   },
-  oo = class extends gr {
+  no = class extends gr {
     constructor(t, e) {
       e.code = wr.oneFromBoc("B5EE9C7241010101005F0000BAFF0020DD2082014C97BA218201339CBAB19C71B0ED44D0D31FD70BFFE304E0A4F260810200D71820D70B1FED44D0D31FD3FFD15112BAF2A122F901541044F910F2A2F80001D31F3120D74A96D307D402FB00DED1A4C8CB1FCBFFC9ED54B5B86E42"), super(t, e)
     }
@@ -2467,17 +2466,17 @@ let io = class extends gr {
       return "simpleR3"
     }
   };
-var ao = {
-  SimpleWalletContractR1: io,
-  SimpleWalletContractR2: no,
-  SimpleWalletContractR3: oo
+var oo = {
+  SimpleWalletContractR1: so,
+  SimpleWalletContractR2: io,
+  SimpleWalletContractR3: no
 };
 const {
   Cell: Br
 } = _, {
-  WalletContract: lo
+  WalletContract: ao
 } = Kt;
-class qs extends lo {
+class qs extends ao {
   createSigningMessage(t, e) {
     t = t || 0, e = e || Math.floor(Date.now() / 1e3) + 60;
     const s = new Br;
@@ -2487,7 +2486,7 @@ class qs extends lo {
     return s
   }
 }
-let co = class extends qs {
+let lo = class extends qs {
     constructor(t, e) {
       e.code = Br.oneFromBoc("B5EE9C724101010100570000AAFF0020DD2082014C97BA9730ED44D0D70B1FE0A4F2608308D71820D31FD31F01F823BBF263ED44D0D31FD3FFD15131BAF2A103F901541042F910F2A2F800029320D74A96D307D402FB00E8D1A4C8CB1FCBFFC9ED54A1370BB6"), super(t, e)
     }
@@ -2495,7 +2494,7 @@ let co = class extends qs {
       return "v2R1"
     }
   },
-  ho = class extends qs {
+  co = class extends qs {
     constructor(t, e) {
       e.code = Br.oneFromBoc("B5EE9C724101010100630000C2FF0020DD2082014C97BA218201339CBAB19C71B0ED44D0D31FD70BFFE304E0A4F2608308D71820D31FD31F01F823BBF263ED44D0D31FD3FFD15131BAF2A103F901541042F910F2A2F800029320D74A96D307D402FB00E8D1A4C8CB1FCBFFC9ED54044CD7A1"), super(t, e)
     }
@@ -2503,13 +2502,13 @@ let co = class extends qs {
       return "v2R2"
     }
   };
-var fo = {
-  WalletV2ContractR1: co,
-  WalletV2ContractR2: ho
+var ho = {
+  WalletV2ContractR1: lo,
+  WalletV2ContractR2: co
 };
 const {
   BN: Zt
-} = S;
+} = x;
 
 function Vs(a) {
   if (a.loadBits(512), a.loadUint(32).toNumber() !== 698983191) throw new Error("invalid walletId");
@@ -2546,7 +2545,7 @@ function Vs(a) {
   }
 }
 
-function uo(a) {
+function fo(a) {
   const t = a.beginParse();
   if (t.loadUint(2).toNumber() !== 2) throw Error("invalid header");
   if (t.loadAddress() !== null) throw Error("invalid externalSourceAddress");
@@ -2560,18 +2559,18 @@ function uo(a) {
   }
 }
 var Fr = {
-  parseWalletV3TransferQuery: uo,
+  parseWalletV3TransferQuery: fo,
   parseWalletV3TransferBody: Vs
 };
 const {
   Cell: Ae
 } = _, {
-  WalletContract: Co
+  WalletContract: uo
 } = Kt, {
   parseWalletV3TransferQuery: Gs,
   parseWalletV3TransferBody: Qs
 } = Fr;
-class Zs extends Co {
+class Zs extends uo {
   createSigningMessage(t, e) {
     t = t || 0, e = e || Math.floor(Date.now() / 1e3) + 60;
     const s = new Ae;
@@ -2605,19 +2604,19 @@ let yr = class extends Zs {
 };
 yr.parseTransferQuery = Gs;
 yr.parseTransferBody = Qs;
-var wo = {
+var Co = {
   WalletV3ContractR1: Ar,
   WalletV3ContractR2: yr
 };
 const {
   Cell: Ge
 } = _, {
-  WalletContract: go
+  WalletContract: wo
 } = Kt, {
-  parseWalletV3TransferQuery: Bo,
-  parseWalletV3TransferBody: Fo
+  parseWalletV3TransferQuery: go,
+  parseWalletV3TransferBody: Bo
 } = Fr;
-let pr = class extends go {
+let pr = class extends wo {
   constructor(t, e) {
     e.code = Ge.oneFromBoc("B5EE9C72410215010002F5000114FF00F4A413F4BCF2C80B010201200203020148040504F8F28308D71820D31FD31FD31F02F823BBF263ED44D0D31FD31FD3FFF404D15143BAF2A15151BAF2A205F901541064F910F2A3F80024A4C8CB1F5240CB1F5230CBFF5210F400C9ED54F80F01D30721C0009F6C519320D74A96D307D402FB00E830E021C001E30021C002E30001C0039130E30D03A4C8CB1F12CB1FCBFF1112131403EED001D0D3030171B0915BE021D749C120915BE001D31F218210706C7567BD228210626C6E63BDB022821064737472BDB0925F03E002FA403020FA4401C8CA07CBFFC9D0ED44D0810140D721F404305C810108F40A6FA131B3925F05E004D33FC8258210706C7567BA9131E30D248210626C6E63BAE30004060708020120090A005001FA00F404308210706C7567831EB17080185005CB0527CF165003FA02F40012CB69CB1F5210CB3F0052F8276F228210626C6E63831EB17080185005CB0527CF1624FA0214CB6A13CB1F5230CB3F01FA02F4000092821064737472BA8E3504810108F45930ED44D0810140D720C801CF16F400C9ED54821064737472831EB17080185004CB0558CF1622FA0212CB6ACB1FCB3F9410345F04E2C98040FB000201200B0C0059BD242B6F6A2684080A06B90FA0218470D4080847A4937D29910CE6903E9FF9837812801B7810148987159F31840201580D0E0011B8C97ED44D0D70B1F8003DB29DFB513420405035C87D010C00B23281F2FFF274006040423D029BE84C600201200F100019ADCE76A26840206B90EB85FFC00019AF1DF6A26840106B90EB858FC0006ED207FA00D4D422F90005C8CA0715CBFFC9D077748018C8CB05CB0222CF165005FA0214CB6B12CCCCC971FB00C84014810108F451F2A702006C810108D718C8542025810108F451F2A782106E6F746570748018C8CB05CB025004CF16821005F5E100FA0213CB6A12CB1FC971FB00020072810108D718305202810108F459F2A7F82582106473747270748018C8CB05CB025005CF16821005F5E100FA0214CB6A13CB1F12CB3FC973FB00000AF400C9ED5446A9F34F"), super(t, e), this.options.walletId || (this.options.walletId = 698983191 + this.options.wc), this.methods.getPublicKey = this.getPublicKey.bind(this)
   }
@@ -2641,9 +2640,9 @@ let pr = class extends go {
     return this.provider.call2(t.toString(), "get_public_key")
   }
 };
-pr.parseTransferQuery = Bo;
-pr.parseTransferBody = Fo;
-var Ao = {
+pr.parseTransferQuery = go;
+pr.parseTransferBody = Bo;
+var Fo = {
   WalletV4ContractR1: pr
 };
 const {
@@ -2652,16 +2651,16 @@ const {
   Contract: Ze
 } = yt, {
   Address: jr,
-  bytesToHex: yo,
-  BN: Kc,
-  toNano: po
-} = S, {
-  WalletContract: mo
+  bytesToHex: Ao,
+  BN: Oc,
+  toNano: yo
+} = x, {
+  WalletContract: po
 } = Kt, {
-  parseWalletV3TransferQuery: bo,
-  parseWalletV3TransferBody: Eo
+  parseWalletV3TransferQuery: mo,
+  parseWalletV3TransferBody: bo
 } = Fr;
-let mr = class extends mo {
+let mr = class extends po {
   constructor(t, e) {
     e.code = Qe.oneFromBoc("B5EE9C72410214010002D4000114FF00F4A413F4BCF2C80B010201200203020148040504F8F28308D71820D31FD31FD31F02F823BBF264ED44D0D31FD31FD3FFF404D15143BAF2A15151BAF2A205F901541064F910F2A3F80024A4C8CB1F5240CB1F5230CBFF5210F400C9ED54F80F01D30721C0009F6C519320D74A96D307D402FB00E830E021C001E30021C002E30001C0039130E30D03A4C8CB1F12CB1FCBFF1011121302E6D001D0D3032171B0925F04E022D749C120925F04E002D31F218210706C7567BD22821064737472BDB0925F05E003FA403020FA4401C8CA07CBFFC9D0ED44D0810140D721F404305C810108F40A6FA131B3925F07E005D33FC8258210706C7567BA923830E30D03821064737472BA925F06E30D06070201200809007801FA00F40430F8276F2230500AA121BEF2E0508210706C7567831EB17080185004CB0526CF1658FA0219F400CB6917CB1F5260CB3F20C98040FB0006008A5004810108F45930ED44D0810140D720C801CF16F400C9ED540172B08E23821064737472831EB17080185005CB055003CF1623FA0213CB6ACB1FCB3FC98040FB00925F03E20201200A0B0059BD242B6F6A2684080A06B90FA0218470D4080847A4937D29910CE6903E9FF9837812801B7810148987159F31840201580C0D0011B8C97ED44D0D70B1F8003DB29DFB513420405035C87D010C00B23281F2FFF274006040423D029BE84C600201200E0F0019ADCE76A26840206B90EB85FFC00019AF1DF6A26840106B90EB858FC0006ED207FA00D4D422F90005C8CA0715CBFFC9D077748018C8CB05CB0222CF165005FA0214CB6B12CCCCC973FB00C84014810108F451F2A7020070810108D718FA00D33FC8542047810108F451F2A782106E6F746570748018C8CB05CB025006CF165004FA0214CB6A12CB1FCB3FC973FB0002006C810108D718FA00D33F305224810108F459F2A782106473747270748018C8CB05CB025005CF165003FA0213CB6ACB1F12CB3FC973FB00000AF400C9ED54696225E5"), super(t, e), this.options.walletId || (this.options.walletId = 698983191 + this.options.wc), this.methods.deployAndInstallPlugin = s => Ze.createMethod(t, this.deployAndInstallPlugin(s)), this.methods.installPlugin = s => Ze.createMethod(t, this.installPlugin(s)), this.methods.removePlugin = s => Ze.createMethod(t, this.removePlugin(s)), this.methods.getPublicKey = this.getPublicKey.bind(this), this.methods.getWalletId = this.getWalletId.bind(this), this.methods.isPluginInstalled = this.isPluginInstalled.bind(this), this.methods.getPluginsList = this.getPluginsList.bind(this)
   }
@@ -2700,7 +2699,7 @@ let mr = class extends mo {
       queryId: g,
       expireAt: F
     } = t, A = new jr(t.pluginAddress), y = this.createSigningMessage(l, F, !0);
-    return y.bits.writeUint(e ? 2 : 3, 8), y.bits.writeInt(A.wc, 8), y.bits.writeBytes(A.hashPart), y.bits.writeGrams(n || po("0.1")), y.bits.writeUint(g || 0, 64), this.createExternalMessage(y, s, l, !1)
+    return y.bits.writeUint(e ? 2 : 3, 8), y.bits.writeInt(A.wc, 8), y.bits.writeBytes(A.hashPart), y.bits.writeGrams(n || yo("0.1")), y.bits.writeUint(g || 0, 64), this.createExternalMessage(y, s, l, !1)
   }
   async installPlugin(t) {
     return this._setPlugin(t, !0)
@@ -2718,7 +2717,7 @@ let mr = class extends mo {
   }
   async isPluginInstalled(t) {
     t = new jr(t);
-    const e = "0x" + yo(t.hashPart),
+    const e = "0x" + Ao(t.hashPart),
       s = await this.getAddress();
     return !(await this.provider.call2(s.toString(), "is_plugin_installed", [
       ["num", t.wc],
@@ -2731,26 +2730,26 @@ let mr = class extends mo {
     return (await this.provider.call2(e.toString(), "get_plugin_list")).map(t)
   }
 };
-mr.parseTransferQuery = bo;
-mr.parseTransferBody = Eo;
-var vo = {
+mr.parseTransferQuery = mo;
+mr.parseTransferBody = bo;
+var Eo = {
   WalletV4ContractR2: mr
 };
 const {
   SimpleWalletContractR1: Ys,
   SimpleWalletContractR2: Xs,
   SimpleWalletContractR3: Js
-} = ao, {
+} = oo, {
   WalletV2ContractR1: js,
   WalletV2ContractR2: zs
-} = fo, {
+} = ho, {
   WalletV3ContractR1: ti,
   WalletV3ContractR2: ei
-} = wo, {
+} = Co, {
   WalletV4ContractR1: ri
-} = Ao, {
+} = Fo, {
   WalletV4ContractR2: si
-} = vo, ii = {
+} = Eo, ii = {
   simpleR1: Ys,
   simpleR2: Xs,
   simpleR3: Js,
@@ -2776,13 +2775,13 @@ var oi = {};
 const {
   Cell: ae
 } = _, {
-  Address: Gc,
-  BN: Qc,
+  Address: qc,
+  BN: Vc,
   base64ToBytes: zr
-} = S, {
-  WalletContract: Do
+} = x, {
+  WalletContract: vo
 } = Kt, ai = 698983191;
-let li = class extends Do {
+let li = class extends vo {
   constructor(t, e) {
     e.code = ae.oneFromBoc("B5EE9C7241021E01000261000114FF00F4A413F4BCF2C80B010201200203020148040501F2F28308D71820D31FD31FD31F802403F823BB13F2F2F003802251A9BA1AF2F4802351B7BA1BF2F4801F0BF9015410C5F9101AF2F4F8005057F823F0065098F823F0062071289320D74A8E8BD30731D4511BDB3C12B001E8309229A0DF72FB02069320D74A96D307D402FB00E8D103A4476814154330F004ED541D0202CD0607020120131402012008090201200F100201200A0B002D5ED44D0D31FD31FD3FFD3FFF404FA00F404FA00F404D1803F7007434C0C05C6C2497C0F83E900C0871C02497C0F80074C7C87040A497C1383C00D46D3C00608420BABE7114AC2F6C2497C338200A208420BABE7106EE86BCBD20084AE0840EE6B2802FBCBD01E0C235C62008087E4055040DBE4404BCBD34C7E00A60840DCEAA7D04EE84BCBD34C034C7CC0078C3C412040DD78CA00C0D0E00130875D27D2A1BE95B0C60000C1039480AF00500161037410AF0050810575056001010244300F004ED540201201112004548E1E228020F4966FA520933023BB9131E2209835FA00D113A14013926C21E2B3E6308003502323287C5F287C572FFC4F2FFFD00007E80BD00007E80BD00326000431448A814C4E0083D039BE865BE803444E800A44C38B21400FE809004E0083D10C06002012015160015BDE9F780188242F847800C02012017180201481B1C002DB5187E006D88868A82609E00C6207E00C63F04EDE20B30020158191A0017ADCE76A268699F98EB85FFC00017AC78F6A268698F98EB858FC00011B325FB513435C2C7E00017B1D1BE08E0804230FB50F620002801D0D3030178B0925B7FE0FA4031FA403001F001A80EDAA4"), super(t, e), this.options.walletId || (this.options.walletId = ai + this.options.wc), this.methods.getPublicKey = this.getPublicKey.bind(this), this.methods.getWalletId = this.getWalletId.bind(this), this.methods.getLiquidBalance = this.getLiquidBalance.bind(this), this.methods.getNominalRestrictedBalance = this.getNominalRestrictedBalance.bind(this), this.methods.getNominalLockedBalance = this.getNominalLockedBalance.bind(this)
   }
@@ -2825,17 +2824,17 @@ let li = class extends Do {
   }
 };
 li.WALLET_ID_BASE = ai;
-var Mo = {
+var Do = {
   LockupWalletV1: li
 };
 const {
-  Address: _o
-} = S, {
-  Cell: xo
-} = _, So = 0, Io = 1, Uo = 0, Er = 1, ci = a => new TextEncoder().encode(encodeURI(a)), hi = a => new TextDecoder().decode(a), To = a => {
-  const t = new xo;
+  Address: Mo
+} = x, {
+  Cell: _o
+} = _, So = 0, xo = 1, Io = 0, Er = 1, ci = a => new TextEncoder().encode(encodeURI(a)), hi = a => new TextDecoder().decode(a), Uo = a => {
+  const t = new _o;
   return t.bits.writeUint(Er, 8), t.bits.writeBytes(ci(a)), t
-}, No = a => {
+}, To = a => {
   if (a.bits.array[0] !== Er) throw new Error("no OFFCHAIN_CONTENT_PREFIX");
   let t = 0,
     e = a;
@@ -2853,8 +2852,8 @@ const {
   const e = ts(a.bits, 11, 256);
   if (t.toString(10) + ":" + e.toString(16) == "0:0") return null;
   const s = t.toString(10) + ":" + e.toString(16).padStart(64, "0");
-  return new _o(s)
-}, $o = async (a, t) => {
+  return new Mo(s)
+}, No = async (a, t) => {
   const e = await a.call2(t, "royalty_params"),
     s = e[0].toNumber(),
     l = e[1].toNumber(),
@@ -2869,30 +2868,30 @@ const {
 };
 var Et = {
   SNAKE_DATA_PREFIX: So,
-  CHUNK_DATA_PREFIX: Io,
-  ONCHAIN_CONTENT_PREFIX: Uo,
+  CHUNK_DATA_PREFIX: xo,
+  ONCHAIN_CONTENT_PREFIX: Io,
   OFFCHAIN_CONTENT_PREFIX: Er,
   parseAddress: di,
   serializeUri: ci,
   parseUri: hi,
-  createOffchainUriCell: To,
-  parseOffchainUriCell: No,
-  getRoyaltyParams: $o
+  createOffchainUriCell: Uo,
+  parseOffchainUriCell: To,
+  getRoyaltyParams: No
 };
 const {
   Cell: Wt
 } = _, {
   Address: jt,
   BN: It,
-  bytesToHex: Ro
-} = S, {
-  WalletContract: ko
+  bytesToHex: $o
+} = x, {
+  WalletContract: Ro
 } = Kt, {
   parseAddress: es
 } = Et, {
-  Contract: Po
+  Contract: ko
 } = yt, fi = 268, ui = "b5ee9c7241021c010003fb000114ff00f4a413f4bcf2c80b01020120030203b8f28308d71820d31fd31fd31f02f823bbf264ed44d0d31fd31fd3ff305abaf2a15033baf2a202f9014033f910f2a3f800db3c20d74ac0018e99ed44ed45ed47915bed67ed65ed648e82db3ced41edf101f2ff9130e2f841a4f861db3c1b1413020148110402012008050201200706020db9846db3cdb3c81b1a0129ba462db3cf845f846f847f848f849f84af84bf84481b0201200e090201620d0a02016a0c0b012fa2c76cf3e9100723281f2fff2743e112040423d029be84c61b000fa25fb513435c2c7e014bad346d9e36fc22470d4080847a4937d29910ce6903e9ff9837812801b7810148987159f318401b02016e100f0019af1df6a26840106b90eb858fc00019adce76a26840206b90eb85ffc003acd06c2220d749c160915be001d0d3030171b0915be0fa4030db3c01d31fd33ff84b5240c705238210a7733acdbab08ea46c12db3c8210f7733acd01708018c8cb055004cf1623fa0213cb6acb1fcb3fc98040fb00e30e1b141201cef84a5240c7050382107258a69bba13b08ed18e2c01fa407fc8ca0002fa4401c8ca07cbffc9d0f8441023810108f441f86420d74ac200209501d430d001deb312e68210f258a69b32708018c8cb055004cf1623fa0213cb6acb1fcb3fc98040fb00db3c925f03e2130066f848f847f846f845c8cb3fcb1fcb1fcb1ff849fa02f84acf16f84bcf16c9f844f843f842f841c8cb1fcb1fcbfff400ccc9ed54025cd307d4d1f823db3c20c2008e9b22c003f2e06421d0d303fa4031fa40f84a5220c705b3925f04e30d9130e201fb001a1503fa21fa4401c8ca07cbffc9d0f844810108f40a6fa1318f5f330172b0c002f2e06501fa003171d721fa0031fa0031d33f31d31f31d30001c000f2e066d3000193d430d0de2171db3c8e2a31d31f302082104e73744bba21821047657424bab121821056744370bab1018210566f7465bab1f2e067e30e70925f03e220c200191716000e9372fb029130e202ea0170db3c8e6d20d749c2008e63d31f21c00022830bbab122811001bab122821047d54391bab1228210595f07bcbab122821069fb306cbab1228210566f7465bab122821056744370bab1f2e06701c00021d749c200b08e15d3073020c06421c077b121c044b101c057b1f2e0689130e29130e2e30d1918001ad31f308210566f7465baf2e067004401fa4401c3ff925b70e001f833206e925b70e0d020d7498307b9925b70e0d70bffba0060f845f846a05210bc923070e0f845f848a05210b99330f849e0f849f849f84513a1f847a904f846f847a9041023a984a1007eed44d0d31f01f861d31f01f862d3ff01f863f40401f864d401d0d33f01f865d31f01f866d31f01f867d31f01f868fa0001f869fa4001f86afa4001f86bd1d10a20c6a7";
-let vr = class extends ko {
+let vr = class extends Ro {
   constructor(t, e) {
     e.code = Wt.oneFromBoc(ui), super(t, e), this.options.walletId || (this.options.walletId = fi + this.options.wc), this.methods.getPublicKey = this.getPublicKey.bind(this), this.methods.getWalletId = this.getWalletId.bind(this), this.methods.getLockedAmount = this.getLockedAmount.bind(this), this.methods.getVestingData = this.getVestingData.bind(this), this.methods.getWhitelist = this.getWhitelist.bind(this)
   }
@@ -2930,7 +2929,7 @@ let vr = class extends ko {
     if (!this.options.ownerAddress) throw new Error("no ownerAddress");
     if (!(this.options.ownerAddress instanceof jt)) throw new Error("ownerAddress not Address");
     const s = new Wt;
-    s.bits.writeUint(0, 32), s.bits.writeUint(this.options.walletId, 32), s.bits.writeUint(new It(Ro(this.options.publicKey), 16), 256), s.bits.writeBit(!1);
+    s.bits.writeUint(0, 32), s.bits.writeUint(this.options.walletId, 32), s.bits.writeUint(new It($o(this.options.publicKey), 16), 256), s.bits.writeBit(!1);
     const l = new Wt;
     return l.bits.writeUint(this.options.vestingStartTime, 64), l.bits.writeUint(this.options.vestingTotalDuration, 32), l.bits.writeUint(this.options.unlockPeriod, 32), l.bits.writeUint(this.options.cliffDuration, 32), l.bits.writeCoins(this.options.vestingTotalAmount), l.bits.writeAddress(new jt(this.options.vestingSenderAddress)), l.bits.writeAddress(new jt(this.options.ownerAddress)), s.refs[0] = l, s
   }
@@ -2949,7 +2948,7 @@ let vr = class extends ko {
   }
   createInternalTransfer(t) {
     const e = new Wt;
-    return e.bits.writeUint(2809346765, 32), e.bits.writeUint(t.queryId || 0, 64), e.bits.writeUint8(t.sendMode || 3), e.refs.push(Po.createOutMsg(t.address, t.amount, t.payload)), e
+    return e.bits.writeUint(2809346765, 32), e.bits.writeUint(t.queryId || 0, 64), e.bits.writeUint8(t.sendMode || 3), e.refs.push(ko.createOutMsg(t.address, t.amount, t.payload)), e
   }
   async getPublicKey() {
     const t = await this.getAddress();
@@ -3003,14 +3002,14 @@ let vr = class extends ko {
 };
 vr.WALLET_ID_BASE = fi;
 vr.codeHex = ui;
-var Wo = {
+var Po = {
   VestingWalletV1: vr
 };
 const {
   LockupWalletV1: Ye
-} = Mo, {
+} = Do, {
   VestingWalletV1: Xe
-} = Wo;
+} = Po;
 oi.default = {
   LockupWalletV1: Ye,
   VestingWalletV1: Xe,
@@ -3026,10 +3025,10 @@ const {
 } = _, {
   Contract: zt
 } = yt, {
-  Address: Xc,
-  BN: Jc,
+  Address: Zc,
+  BN: Yc,
   nacl: rs
-} = S, wi = "b5ee9c7241021001000228000114ff00f4a413f4bcf2c80b01020120020d02014803040078d020d74bc00101c060b0915be101d0d3030171b0915be0fa4030f828c705b39130e0d31f018210ae42e5a4ba9d8040d721d74cf82a01ed55fb04e030020120050a02027306070011adce76a2686b85ffc00201200809001aabb6ed44d0810122d721d70b3f0018aa3bed44d08307d721d70b1f0201200b0c001bb9a6eed44d0810162d721d70b15800e5b8bf2eda2edfb21ab09028409b0ed44d0810120d721f404f404d33fd315d1058e1bf82325a15210b99f326df82305aa0015a112b992306dde923033e2923033e25230800df40f6fa19ed021d721d70a00955f037fdb31e09130e259800df40f6fa19cd001d721d70a00937fdb31e0915be270801f6f2d48308d718d121f900ed44d0d3ffd31ff404f404d33fd315d1f82321a15220b98e12336df82324aa00a112b9926d32de58f82301de541675f910f2a106d0d31fd4d307d30cd309d33fd315d15168baf2a2515abaf2a6f8232aa15250bcf2a304f823bbf2a35304800df40f6fa199d024d721d70a00f2649130e20e01fe5309800df40f6fa18e13d05004d718d20001f264c858cf16cf8301cf168e1030c824cf40cf8384095005a1a514cf40e2f800c94039800df41704c8cbff13cb1ff40012f40012cb3f12cb15c9ed54f80f21d0d30001f265d3020171b0925f03e0fa4001d70b01c000f2a5fa4031fa0031f401fa0031fa00318060d721d300010f0020f265d2000193d431d19130e272b1fb00b585bf03", gi = 4269, Je = a => {
+} = x, wi = "b5ee9c7241021001000228000114ff00f4a413f4bcf2c80b01020120020d02014803040078d020d74bc00101c060b0915be101d0d3030171b0915be0fa4030f828c705b39130e0d31f018210ae42e5a4ba9d8040d721d74cf82a01ed55fb04e030020120050a02027306070011adce76a2686b85ffc00201200809001aabb6ed44d0810122d721d70b3f0018aa3bed44d08307d721d70b1f0201200b0c001bb9a6eed44d0810162d721d70b15800e5b8bf2eda2edfb21ab09028409b0ed44d0810120d721f404f404d33fd315d1058e1bf82325a15210b99f326df82305aa0015a112b992306dde923033e2923033e25230800df40f6fa19ed021d721d70a00955f037fdb31e09130e259800df40f6fa19cd001d721d70a00937fdb31e0915be270801f6f2d48308d718d121f900ed44d0d3ffd31ff404f404d33fd315d1f82321a15220b98e12336df82324aa00a112b9926d32de58f82301de541675f910f2a106d0d31fd4d307d30cd309d33fd315d15168baf2a2515abaf2a6f8232aa15250bcf2a304f823bbf2a35304800df40f6fa199d024d721d70a00f2649130e20e01fe5309800df40f6fa18e13d05004d718d20001f264c858cf16cf8301cf168e1030c824cf40cf8384095005a1a514cf40e2f800c94039800df41704c8cbff13cb1ff40012f40012cb3f12cb15c9ed54f80f21d0d30001f265d3020171b0925f03e0fa4001d70b01c000f2a5fa4031fa0031f401fa0031fa00318060d721d300010f0020f265d2000193d431d19130e272b1fb00b585bf03", gi = 4269, Je = a => {
   if (!a) throw new Error("invalid timeout");
   if (a < 60 * 10) throw new Error("minimum timeout 10 minute");
   if (a > 60 * 60 * 24 * 30) throw new Error("maximum timeout 30 days")
@@ -3127,13 +3126,13 @@ let Dr = class extends zt {
 };
 Dr.WALLET_ID_BASE = gi;
 Dr.codeHex = wi;
-var Lo = {
+var Wo = {
   HighloadWalletContractV3: Dr
 };
 const ss = 10n,
   ce = 1022n,
   he = 8191n;
-let Oo = class lr {
+let Lo = class lr {
   constructor() {
     this.shift = 0n, this.bitnumber = 0n
   }
@@ -3178,16 +3177,16 @@ let Oo = class lr {
     return this.bitnumber + this.shift * 1023n
   }
 };
-var Ho = {
-  HighloadQueryId: Oo
+var Oo = {
+  HighloadQueryId: Lo
 };
 const {
   HighloadWalletContractV3: je
-} = Lo, {
-  HighloadQueryId: Ko
-} = Ho;
+} = Wo, {
+  HighloadQueryId: Ho
+} = Oo;
 Ci.default = {
-  HighloadQueryId: Ko,
+  HighloadQueryId: Ho,
   HighloadWalletContractV3: je,
   all: {
     "highload-3": je
@@ -3196,28 +3195,28 @@ Ci.default = {
 };
 var Bi = {};
 const {
-  Contract: qo
+  Contract: Ko
 } = yt, {
   Cell: Mt
 } = _, {
-  Address: zc,
-  bytesToBase64: Vo,
-  BN: Go
-} = S, {
+  Address: Jc,
+  bytesToBase64: qo,
+  BN: Vo
+} = x, {
   parseAddress: is
 } = Et, {
-  createOffchainUriCell: Qo,
+  createOffchainUriCell: Go,
   serializeUri: ns,
   parseOffchainUriCell: os,
-  getRoyaltyParams: Zo
+  getRoyaltyParams: Qo
 } = Et;
-let Yo = class extends qo {
+let Zo = class extends Ko {
   constructor(t, e) {
     if (e.wc = 0, e.code = e.code || Mt.oneFromBoc("B5EE9C724102140100021F000114FF00F4A413F4BCF2C80B0102016202030202CD04050201200E0F04E7D10638048ADF000E8698180B8D848ADF07D201800E98FE99FF6A2687D20699FEA6A6A184108349E9CA829405D47141BAF8280E8410854658056B84008646582A802E78B127D010A65B509E58FE59F80E78B64C0207D80701B28B9E382F970C892E000F18112E001718112E001F181181981E0024060708090201200A0B00603502D33F5313BBF2E1925313BA01FA00D43028103459F0068E1201A44343C85005CF1613CB3FCCCCCCC9ED54925F05E200A6357003D4308E378040F4966FA5208E2906A4208100FABE93F2C18FDE81019321A05325BBF2F402FA00D43022544B30F00623BA9302A402DE04926C21E2B3E6303250444313C85005CF1613CB3FCCCCCCC9ED54002C323401FA40304144C85005CF1613CB3FCCCCCCC9ED54003C8E15D4D43010344130C85005CF1613CB3FCCCCCCC9ED54E05F04840FF2F00201200C0D003D45AF0047021F005778018C8CB0558CF165004FA0213CB6B12CCCCC971FB008002D007232CFFE0A33C5B25C083232C044FD003D0032C03260001B3E401D3232C084B281F2FFF2742002012010110025BC82DF6A2687D20699FEA6A6A182DE86A182C40043B8B5D31ED44D0FA40D33FD4D4D43010245F04D0D431D430D071C8CB0701CF16CCC980201201213002FB5DAFDA89A1F481A67FA9A9A860D883A1A61FA61FF480610002DB4F47DA89A1F481A67FA9A9A86028BE09E008E003E00B01A500C6E"), e.royalty > 1) throw new Error("royalty > 1");
     e.royaltyBase = 1e3, e.royaltyFactor = Math.floor(e.royalty * e.royaltyBase), super(t, e), this.methods.getCollectionData = this.getCollectionData.bind(this), this.methods.getNftItemAddressByIndex = this.getNftItemAddressByIndex.bind(this), this.methods.getNftItemContent = this.getNftItemContent.bind(this), this.methods.getRoyaltyParams = this.getRoyaltyParams.bind(this)
   }
   createContentCell(t) {
-    const e = Qo(t.collectionContentUri),
+    const e = Go(t.collectionContentUri),
       s = new Mt;
     s.bits.writeBytes(ns(t.nftItemContentBaseUri));
     const l = new Mt;
@@ -3282,7 +3281,7 @@ let Yo = class extends qo {
     if (s.isInitialized) {
       const l = await this.provider.call2(e.toString(), "get_nft_content", [
         ["num", s.itemIndex.toString(10)],
-        ["tvm.Cell", Vo(await s.contentCell.toBoc(!1))]
+        ["tvm.Cell", qo(await s.contentCell.toBoc(!1))]
       ]);
       s.contentUri = null;
       try {
@@ -3292,7 +3291,7 @@ let Yo = class extends qo {
     return s
   }
   async getNftItemAddressByIndex(t) {
-    t = new Go(t);
+    t = new Vo(t);
     const e = await this.getAddress(),
       s = await this.provider.call2(e.toString(), "get_nft_address_by_index", [
         ["num", t.toString(10)]
@@ -3301,26 +3300,26 @@ let Yo = class extends qo {
   }
   async getRoyaltyParams() {
     const t = await this.getAddress();
-    return Zo(this.provider, t.toString())
+    return Qo(this.provider, t.toString())
   }
 };
-var Xo = {
-  NftCollection: Yo
+var Yo = {
+  NftCollection: Zo
 };
 const {
-  Contract: Jo
+  Contract: Xo
 } = yt, {
   Cell: de
 } = _, {
-  Address: eh,
-  BN: jo
-} = S, {
+  Address: zc,
+  BN: Jo
+} = x, {
   parseAddress: as,
-  getRoyaltyParams: zo
+  getRoyaltyParams: jo
 } = Et, {
-  parseOffchainUriCell: ta
+  parseOffchainUriCell: zo
 } = Et, Fi = "B5EE9C7241020D010001D0000114FF00F4A413F4BCF2C80B0102016202030202CE04050009A11F9FE00502012006070201200B0C02D70C8871C02497C0F83434C0C05C6C2497C0F83E903E900C7E800C5C75C87E800C7E800C3C00812CE3850C1B088D148CB1C17CB865407E90350C0408FC00F801B4C7F4CFE08417F30F45148C2EA3A1CC840DD78C9004F80C0D0D0D4D60840BF2C9A884AEB8C097C12103FCBC20080900113E910C1C2EBCB8536001F65135C705F2E191FA4021F001FA40D20031FA00820AFAF0801BA121945315A0A1DE22D70B01C300209206A19136E220C2FFF2E192218E3E821005138D91C85009CF16500BCF16712449145446A0708010C8CB055007CF165005FA0215CB6A12CB1FCB3F226EB39458CF17019132E201C901FB00104794102A375BE20A00727082108B77173505C8CBFF5004CF1610248040708010C8CB055007CF165005FA0215CB6A12CB1FCB3F226EB39458CF17019132E201C901FB000082028E3526F0018210D53276DB103744006D71708010C8CB055007CF165005FA0215CB6A12CB1FCB3F226EB39458CF17019132E201C901FB0093303234E25502F003003B3B513434CFFE900835D27080269FC07E90350C04090408F80C1C165B5B60001D00F232CFD633C58073C5B3327B5520BF75041B";
-let Ai = class extends Jo {
+let Ai = class extends Xo {
   constructor(t, e) {
     e.wc = 0, e.code = e.code || de.oneFromBoc(Fi), super(t, e), this.methods.getData = this.getData.bind(this)
   }
@@ -3342,7 +3341,7 @@ let Ai = class extends Jo {
       A = e[4];
     let y = null;
     try {
-      y = s && g === null ? ta(A) : null
+      y = s && g === null ? zo(A) : null
     } catch {}
     return {
       isInitialized: s,
@@ -3356,7 +3355,7 @@ let Ai = class extends Jo {
   }
   async createTransferBody(t) {
     const e = new de;
-    return e.bits.writeUint(1607220500, 32), e.bits.writeUint(t.queryId || 0, 64), e.bits.writeAddress(t.newOwnerAddress), e.bits.writeAddress(t.responseAddress), e.bits.writeBit(!1), e.bits.writeCoins(t.forwardAmount || new jo(0)), t.forwardPayload ? t.forwardPayload.refs ? (e.bits.writeBit(!0), e.refs.push(t.forwardPayload)) : (e.bits.writeBit(!1), e.bits.writeBytes(t.forwardPayload)) : e.bits.writeBit(!1), e
+    return e.bits.writeUint(1607220500, 32), e.bits.writeUint(t.queryId || 0, 64), e.bits.writeAddress(t.newOwnerAddress), e.bits.writeAddress(t.responseAddress), e.bits.writeBit(!1), e.bits.writeCoins(t.forwardAmount || new Jo(0)), t.forwardPayload ? t.forwardPayload.refs ? (e.bits.writeBit(!0), e.refs.push(t.forwardPayload)) : (e.bits.writeBit(!1), e.bits.writeBytes(t.forwardPayload)) : e.bits.writeBit(!1), e
   }
   createGetStaticDataBody(t) {
     const e = new de;
@@ -3364,19 +3363,19 @@ let Ai = class extends Jo {
   }
   async getRoyaltyParams() {
     const t = await this.getAddress();
-    return zo(this.provider, t.toString())
+    return jo(this.provider, t.toString())
   }
 };
 Ai.codeHex = Fi;
-var ea = {
+var ta = {
   NftItem: Ai
 };
 const {
-  Contract: ra
+  Contract: ea
 } = yt, {
   Cell: ls
 } = _;
-let sa = class extends ra {
+let ra = class extends ea {
   constructor(t, e) {
     e.wc = 0, e.code = e.code || ls.oneFromBoc("B5EE9C7241010401006D000114FF00F4A413F4BCF2C80B01020120020300AAD23221C700915BE0D0D3030171B0915BE0FA40ED44D0FA403012C705F2E19101D31F01C0018E2BFA003001D4D43021F90070C8CA07CBFFC9D077748018C8CB05CB0258CF165004FA0213CB6BCCCCC971FB00915BE20004F2308EF7CCE7"), super(t, e)
   }
@@ -3385,17 +3384,17 @@ let sa = class extends ra {
     return t.bits.writeAddress(this.options.ownerAddress), t
   }
 };
-var ia = {
-  NftMarketplace: sa
+var sa = {
+  NftMarketplace: ra
 };
 const {
-  Contract: na
+  Contract: ia
 } = yt, {
   Cell: fe
 } = _, {
   parseAddress: ue
 } = Et, yi = "B5EE9C7241020A010001B4000114FF00F4A413F4BCF2C80B01020120020302014804050004F2300202CD0607002FA03859DA89A1F481F481F481F401A861A1F401F481F4006101F7D00E8698180B8D8492F82707D201876A2687D207D207D207D006A18116BA4E10159C71D991B1B2990E382C92F837028916382F970FA01698FC1080289C6C8895D7970FAE99F98FD2018201A642802E78B2801E78B00E78B00FD016664F6AA701363804C9B081B2299823878027003698FE99F9810E000C92F857010C0801F5D41081DCD650029285029185F7970E101E87D007D207D0018384008646582A804E78B28B9D090D0A85AD08A500AFD010AE5B564B8FD80384008646582AC678B2803FD010B65B564B8FD80384008646582A802E78B00FD0109E5B564B8FD80381041082FE61E8A10C00C646582A802E78B117D010A65B509E58F8A40900C8C0029A3110471036454012F004E032363704C0038E4782103B9ACA0015BEF2E1C95312C70559C705B1F2E1CA702082105FCC3D14218010C8CB055006CF1622FA0215CB6A14CB1F14CB3F21CF1601CF16CA0021FA02CA00C98100A0FB00E05F06840FF2F0002ACB3F22CF1658CF16CA0021FA02CA00C98100A0FB00AECABAD1";
-let pi = class extends na {
+let pi = class extends ia {
   constructor(t, e) {
     e.wc = 0, e.code = e.code || fe.oneFromBoc(yi), super(t, e), this.methods.getData = this.getData.bind(this)
   }
@@ -3431,39 +3430,39 @@ let pi = class extends na {
   }
 };
 pi.codeHex = yi;
-var oa = {
+var na = {
   NftSale: pi
 };
 const {
-  NftCollection: aa
-} = Xo, {
-  NftItem: la
-} = ea, {
-  NftMarketplace: ca
-} = ia, {
-  NftSale: ha
-} = oa;
+  NftCollection: oa
+} = Yo, {
+  NftItem: aa
+} = ta, {
+  NftMarketplace: la
+} = sa, {
+  NftSale: ca
+} = na;
 Bi.default = {
-  NftCollection: aa,
-  NftItem: la,
-  NftMarketplace: ca,
-  NftSale: ha
+  NftCollection: oa,
+  NftItem: aa,
+  NftMarketplace: la,
+  NftSale: ca
 };
 var mi = {};
 const {
-  Contract: da
+  Contract: ha
 } = yt, {
   Cell: Rt
 } = _, {
   createOffchainUriCell: cs,
-  parseOffchainUriCell: fa,
+  parseOffchainUriCell: da,
   parseAddress: hs
 } = Et, {
-  Address: nh,
-  BN: ua,
-  bytesToBase64: Ca
-} = S;
-let wa = class extends da {
+  Address: sh,
+  BN: fa,
+  bytesToBase64: ua
+} = x;
+let Ca = class extends ha {
   constructor(t, e) {
     e.wc = 0, e.code = e.code || Rt.oneFromBoc("B5EE9C7241020B010001ED000114FF00F4A413F4BCF2C80B0102016202030202CC040502037A60090A03EFD9910E38048ADF068698180B8D848ADF07D201800E98FE99FF6A2687D007D206A6A18400AA9385D47181A9AA8AAE382F9702480FD207D006A18106840306B90FD001812881A28217804502A906428027D012C678B666664F6AA7041083DEECBEF29385D71811A92E001F1811802600271812F82C207F97840607080093DFC142201B82A1009AA0A01E428027D012C678B00E78B666491646580897A007A00658064907C80383A6465816503E5FFE4E83BC00C646582AC678B28027D0109E5B589666664B8FD80400FE3603FA00FA40F82854120870542013541403C85004FA0258CF1601CF16CCC922C8CB0112F400F400CB00C9F9007074C8CB02CA07CBFFC9D05008C705F2E04A12A1035024C85004FA0258CF16CCCCC9ED5401FA403020D70B01C3008E1F8210D53276DB708010C8CB055003CF1622FA0212CB6ACB1FCB3FC98042FB00915BE200303515C705F2E049FA403059C85004FA0258CF16CCCCC9ED54002E5143C705F2E049D43001C85004FA0258CF16CCCCC9ED54007DADBCF6A2687D007D206A6A183618FC1400B82A1009AA0A01E428027D012C678B00E78B666491646580897A007A00658064FC80383A6465816503E5FFE4E840001FAF16F6A2687D007D206A6A183FAA904051007F09"), super(t, e)
   }
@@ -3475,7 +3474,7 @@ let wa = class extends da {
     const e = new Rt;
     e.bits.writeUint(21, 32), e.bits.writeUint(t.queryId || 0, 64), e.bits.writeAddress(t.destination), e.bits.writeCoins(t.amount);
     const s = new Rt;
-    return s.bits.writeUint(395134233, 32), s.bits.writeUint(t.queryId || 0, 64), s.bits.writeCoins(t.jettonAmount), s.bits.writeAddress(null), s.bits.writeAddress(null), s.bits.writeCoins(new ua(0)), s.bits.writeBit(!1), e.refs[0] = s, e
+    return s.bits.writeUint(395134233, 32), s.bits.writeUint(t.queryId || 0, 64), s.bits.writeCoins(t.jettonAmount), s.bits.writeAddress(null), s.bits.writeAddress(null), s.bits.writeCoins(new fa(0)), s.bits.writeBit(!1), e.refs[0] = s, e
   }
   createChangeAdminBody(t) {
     if (t.newAdminAddress === void 0) throw new Error("Specify newAdminAddress");
@@ -3495,7 +3494,7 @@ let wa = class extends da {
       g = e[3];
     let F = null;
     try {
-      F = fa(g)
+      F = da(g)
     } catch {}
     const A = e[4];
     return {
@@ -3512,30 +3511,30 @@ let wa = class extends da {
       s = new Rt;
     s.bits.writeAddress(t);
     const l = await this.provider.call2(e.toString(), "get_wallet_address", [
-      ["tvm.Slice", Ca(await s.toBoc(!1))]
+      ["tvm.Slice", ua(await s.toBoc(!1))]
     ]);
     return hs(l)
   }
 };
-var ga = {
-  JettonMinter: wa
+var wa = {
+  JettonMinter: Ca
 };
 const {
-  Contract: Ba
+  Contract: ga
 } = yt, {
   Cell: ze
 } = _, {
   parseAddress: ds
 } = Et, {
-  BN: Fa
-} = S, bi = "B5EE9C7241021201000328000114FF00F4A413F4BCF2C80B0102016202030202CC0405001BA0F605DA89A1F401F481F481A8610201D40607020148080900BB0831C02497C138007434C0C05C6C2544D7C0FC02F83E903E900C7E800C5C75C87E800C7E800C00B4C7E08403E29FA954882EA54C4D167C0238208405E3514654882EA58C511100FC02780D60841657C1EF2EA4D67C02B817C12103FCBC2000113E910C1C2EBCB853600201200A0B020120101101F500F4CFFE803E90087C007B51343E803E903E90350C144DA8548AB1C17CB8B04A30BFFCB8B0950D109C150804D50500F214013E809633C58073C5B33248B232C044BD003D0032C032483E401C1D3232C0B281F2FFF274013E903D010C7E801DE0063232C1540233C59C3E8085F2DAC4F3208405E351467232C7C6600C03F73B51343E803E903E90350C0234CFFE80145468017E903E9014D6F1C1551CDB5C150804D50500F214013E809633C58073C5B33248B232C044BD003D0032C0327E401C1D3232C0B281F2FFF274140371C1472C7CB8B0C2BE80146A2860822625A020822625A004AD822860822625A028062849F8C3C975C2C070C008E00D0E0F009ACB3F5007FA0222CF165006CF1625FA025003CF16C95005CC2391729171E25008A813A08208989680AA008208989680A0A014BCF2E2C504C98040FB001023C85004FA0258CF1601CF16CCC9ED5400705279A018A182107362D09CC8CB1F5230CB3F58FA025007CF165007CF16C9718018C8CB0524CF165006FA0215CB6A14CCC971FB0010241023000E10491038375F040076C200B08E218210D53276DB708010C8CB055008CF165004FA0216CB6A12CB1F12CB3FC972FB0093356C21E203C85004FA0258CF1601CF16CCC9ED5400DB3B51343E803E903E90350C01F4CFFE803E900C145468549271C17CB8B049F0BFFCB8B0A0822625A02A8005A805AF3CB8B0E0841EF765F7B232C7C572CFD400FE8088B3C58073C5B25C60063232C14933C59C3E80B2DAB33260103EC01004F214013E809633C58073C5B3327B55200083200835C87B51343E803E903E90350C0134C7E08405E3514654882EA0841EF765F784EE84AC7CB8B174CFCC7E800C04E81408F214013E809633C58073C5B3327B55205ECCF23D";
-let Ei = class extends Ba {
+  BN: Ba
+} = x, bi = "B5EE9C7241021201000328000114FF00F4A413F4BCF2C80B0102016202030202CC0405001BA0F605DA89A1F401F481F481A8610201D40607020148080900BB0831C02497C138007434C0C05C6C2544D7C0FC02F83E903E900C7E800C5C75C87E800C7E800C00B4C7E08403E29FA954882EA54C4D167C0238208405E3514654882EA58C511100FC02780D60841657C1EF2EA4D67C02B817C12103FCBC2000113E910C1C2EBCB853600201200A0B020120101101F500F4CFFE803E90087C007B51343E803E903E90350C144DA8548AB1C17CB8B04A30BFFCB8B0950D109C150804D50500F214013E809633C58073C5B33248B232C044BD003D0032C032483E401C1D3232C0B281F2FFF274013E903D010C7E801DE0063232C1540233C59C3E8085F2DAC4F3208405E351467232C7C6600C03F73B51343E803E903E90350C0234CFFE80145468017E903E9014D6F1C1551CDB5C150804D50500F214013E809633C58073C5B33248B232C044BD003D0032C0327E401C1D3232C0B281F2FFF274140371C1472C7CB8B0C2BE80146A2860822625A020822625A004AD822860822625A028062849F8C3C975C2C070C008E00D0E0F009ACB3F5007FA0222CF165006CF1625FA025003CF16C95005CC2391729171E25008A813A08208989680AA008208989680A0A014BCF2E2C504C98040FB001023C85004FA0258CF1601CF16CCC9ED5400705279A018A182107362D09CC8CB1F5230CB3F58FA025007CF165007CF16C9718018C8CB0524CF165006FA0215CB6A14CCC971FB0010241023000E10491038375F040076C200B08E218210D53276DB708010C8CB055008CF165004FA0216CB6A12CB1F12CB3FC972FB0093356C21E203C85004FA0258CF1601CF16CCC9ED5400DB3B51343E803E903E90350C01F4CFFE803E900C145468549271C17CB8B049F0BFFCB8B0A0822625A02A8005A805AF3CB8B0E0841EF765F7B232C7C572CFD400FE8088B3C58073C5B25C60063232C14933C59C3E80B2DAB33260103EC01004F214013E809633C58073C5B3327B55200083200835C87B51343E803E903E90350C0134C7E08405E3514654882EA0841EF765F784EE84AC7CB8B174CFCC7E800C04E81408F214013E809633C58073C5B3327B55205ECCF23D";
+let Ei = class extends ga {
   constructor(t, e) {
     e.wc = 0, e.code = e.code || ze.oneFromBoc(bi), super(t, e)
   }
   async createTransferBody(t) {
     const e = new ze;
-    return e.bits.writeUint(260734629, 32), e.bits.writeUint(t.queryId || 0, 64), e.bits.writeCoins(t.jettonAmount), e.bits.writeAddress(t.toAddress), e.bits.writeAddress(t.responseAddress), e.bits.writeBit(!1), e.bits.writeCoins(t.forwardAmount || new Fa(0)), t.forwardPayload ? t.forwardPayload.refs ? (e.bits.writeBit(!0), e.refs.push(t.forwardPayload)) : (e.bits.writeBit(!1), e.bits.writeBytes(t.forwardPayload)) : e.bits.writeBit(!1), e
+    return e.bits.writeUint(260734629, 32), e.bits.writeUint(t.queryId || 0, 64), e.bits.writeCoins(t.jettonAmount), e.bits.writeAddress(t.toAddress), e.bits.writeAddress(t.responseAddress), e.bits.writeBit(!1), e.bits.writeCoins(t.forwardAmount || new Ba(0)), t.forwardPayload ? t.forwardPayload.refs ? (e.bits.writeBit(!0), e.refs.push(t.forwardPayload)) : (e.bits.writeBit(!1), e.bits.writeBytes(t.forwardPayload)) : e.bits.writeBit(!1), e
   }
   async createBurnBody(t) {
     const e = new ze;
@@ -3557,28 +3556,28 @@ let Ei = class extends Ba {
   }
 };
 Ei.codeHex = bi;
-var Aa = {
+var Fa = {
   JettonWallet: Ei
 };
 const {
-  JettonMinter: ya
-} = ga, {
-  JettonWallet: pa
-} = Aa;
+  JettonMinter: Aa
+} = wa, {
+  JettonWallet: ya
+} = Fa;
 mi.default = {
-  JettonMinter: ya,
-  JettonWallet: pa
+  JettonMinter: Aa,
+  JettonWallet: ya
 };
-const ma = 10 * 1e3,
-  ba = 1 * 1e3,
+const pa = 10 * 1e3,
+  ma = 1 * 1e3,
   fs = a => ({
     workchain: a.workchain,
     shardId: a.shard,
     shardBlockNumber: a.seqno
   });
-let Ea = class {
+let ba = class {
   constructor(t, e, s, l) {
-    this.provider = t, this.storage = e, this.onBlock = s, this.startMcBlockNumber = l ? l.startMcBlockNumber : void 0, this.mcInterval = (l ? l.mcInterval : void 0) || ma, this.shardsInterval = (l ? l.shardsInterval : void 0) || ba
+    this.provider = t, this.storage = e, this.onBlock = s, this.startMcBlockNumber = l ? l.startMcBlockNumber : void 0, this.mcInterval = (l ? l.mcInterval : void 0) || pa, this.shardsInterval = (l ? l.shardsInterval : void 0) || ma
   }
   async start() {
     if (this.stop(), !this.startMcBlockNumber && (this.startMcBlockNumber = (await this.provider.getMasterchainInfo()).last.seqno, !this.startMcBlockNumber)) throw new Error("Cannot get start mc block number from provider");
@@ -3636,10 +3635,10 @@ let Ea = class {
     clearInterval(this.mcIntervalId), clearInterval(this.shardsIntervalId)
   }
 };
-var va = {
-  BlockSubscription: Ea
+var Ea = {
+  BlockSubscription: ba
 };
-let Da = class {
+let va = class {
   constructor(t) {
     this.masterchainBlocks = {}, this.shardchainBlocks = {}, this.logFunction = t
   }
@@ -3674,29 +3673,29 @@ let Da = class {
       }
   }
 };
-var Ma = {
-  InMemoryBlockStorage: Da
+var Da = {
+  InMemoryBlockStorage: va
 };
 const {
-  BlockSubscription: _a
-} = va, {
-  InMemoryBlockStorage: xa
-} = Ma;
+  BlockSubscription: Ma
+} = Ea, {
+  InMemoryBlockStorage: _a
+} = Da;
 var Sa = {
-  BlockSubscription: _a,
-  InMemoryBlockStorage: xa
+  BlockSubscription: Ma,
+  InMemoryBlockStorage: _a
 };
 const {
   Contract: Ce
 } = yt, {
   Cell: te
 } = _, {
-  hexToBytes: hh,
+  hexToBytes: lh,
   BN: us,
-  nacl: dh,
-  bytesToBase64: fh
-} = S;
-let Ia = class extends Ce {
+  nacl: ch,
+  bytesToBase64: hh
+} = x;
+let xa = class extends Ce {
   constructor(t, e) {
     e.code = te.oneFromBoc("B5EE9C7241020F01000262000114FF00F4A413F4BCF2C80B0102012002030201480405036AF230DB3C5335A127A904F82327A128A90401BC5135A0F823B913B0F29EF800725210BE945387F0078E855386DB3CA4E2F82302DB3C0B0C0D0202CD06070121A0D0C9B67813F488DE0411F488DE0410130B048FD6D9E05E8698198FD201829846382C74E2F841999E98F9841083239BA395D497803F018B841083AB735BBED9E702984E382D9C74688462F863841083AB735BBED9E70156BA4E09040B0A0A080269F10FD22184093886D9E7C12C1083239BA39384008646582A803678B2801FD010A65B5658F89659FE4B9FD803FC1083239BA396D9E40E0A04F08E8D108C5F0C708210756E6B77DB3CE00AD31F308210706C7567831EB15210BA8F48305324A126A904F82326A127A904BEF27109FA4430A619F833D078D721D70B3F5260A11BBE8E923036F82370708210737562732759DB3C5077DE106910581047103645135042DB3CE0395F076C2232821064737472BA0A0A0D09011A8E897F821064737472DB3CE0300A006821B39982100400000072FB02DE70F8276F118010C8CB055005CF1621FA0214F40013CB6912CB1F830602948100A032DEC901FB000030ED44D0FA40FA40FA00D31FD31FD31FD31FD31FD307D31F30018021FA443020813A98DB3C01A619F833D078D721D70B3FA070F8258210706C7567228018C8CB055007CF165004FA0215CB6A12CB1F13CB3F01FA02CB00C973FB000E0040C8500ACF165008CF165006FA0214CB1F12CB1FCB1FCB1FCB1FCB07CB1FC9ED54005801A615F833D020D70B078100D1BA95810088D721DED307218100DDBA028100DEBA12B1F2E047D33F30A8AB0FE5855AB4"), super(t, e), this.methods.pay = () => Ce.createMethod(t, this.createPayExternalMessage()), this.methods.getSubscriptionData = this.getSubscriptionData.bind(this)
   }
@@ -3751,12 +3750,12 @@ let Ia = class extends Ce {
     }
   }
 };
-var Ua = {
-  SubscriptionContract: Ia
+var Ia = {
+  SubscriptionContract: xa
 };
 const {
   Cell: pt
-} = _, Ta = (a, t) => {
+} = _, Ua = (a, t) => {
   if (t.length !== 256 / 8) throw new Error("invalid publicKey length");
   a.bits.writeBytes(t)
 }, be = (a, t) => {
@@ -3770,131 +3769,131 @@ const {
     if (a.bits.writeBit(1), a.refs.length >= 4) throw new Error("refs overflow");
     a.refs.push(t)
   } else a.bits.writeBit(0)
-}, Di = vi, Mi = 1768843636, _i = 1131179891, xi = 1128492404, Si = 1433289580, Ii = 1130915665, Ui = 1131168622, Ti = 1130910580, Ni = 1741148801, Na = 235282626, $a = 1433884798, Ra = 2040604399, ka = 521476815, Pa = 143567410, Wa = 1727459433, $i = 625158801, La = -572749638, Oa = a => {
+}, Di = vi, Mi = 1768843636, _i = 1131179891, Si = 1128492404, xi = 1433289580, Ii = 1130915665, Ui = 1131168622, Ti = 1130910580, Ni = 1741148801, Ta = 235282626, Na = 1433884798, $a = 2040604399, Ra = 521476815, ka = 143567410, Pa = 1727459433, $i = 625158801, Wa = -572749638, La = a => {
   const t = new pt;
   return t.bits.writeUint(Ni, 32), t.bits.writeCoins(a.coinsA), t.bits.writeCoins(a.coinsB), t
-}, Ha = a => {
+}, Oa = a => {
   const t = new pt;
   return t.bits.writeUint(Mi, 32), t.bits.writeUint(a.channelId, 128), t.bits.writeCoins(a.balanceA), t.bits.writeCoins(a.balanceB), t
-}, Ka = a => {
+}, Ha = a => {
   const t = new pt;
   return t.bits.writeUint(_i, 32), t.bits.writeUint(a.channelId, 128), t.bits.writeCoins(a.balanceA), t.bits.writeCoins(a.balanceB), t.bits.writeUint(a.seqnoA, 64), t.bits.writeUint(a.seqnoB, 64), t
+}, Ka = a => {
+  const t = new pt;
+  return t.bits.writeUint(Si, 32), t.bits.writeUint(a.channelId, 128), t.bits.writeUint(a.seqnoA, 64), t.bits.writeUint(a.seqnoB, 64), t
 }, qa = a => {
   const t = new pt;
-  return t.bits.writeUint(xi, 32), t.bits.writeUint(a.channelId, 128), t.bits.writeUint(a.seqnoA, 64), t.bits.writeUint(a.seqnoB, 64), t
+  return t.bits.writeCoins(a.amount), t.writeCell(a.condition), t
 }, Va = a => {
   const t = new pt;
-  return t.bits.writeCoins(a.amount), t.writeCell(a.condition), t
+  return t.bits.writeUint(a.seqno, 64), t.bits.writeCoins(a.sentCoins), Di(t, a.conditionals), t
 }, Ga = a => {
   const t = new pt;
-  return t.bits.writeUint(a.seqno, 64), t.bits.writeCoins(a.sentCoins), Di(t, a.conditionals), t
+  return t.bits.writeUint(Ti, 32), t.bits.writeUint(a.channelId, 128), t.writeCell(a.semiChannelBody), vi(t, a.counterpartySemiChannelBody), t
 }, Qa = a => {
   const t = new pt;
-  return t.bits.writeUint(Ti, 32), t.bits.writeUint(a.channelId, 128), t.writeCell(a.semiChannelBody), vi(t, a.counterpartySemiChannelBody), t
+  return be(t, a.signature), t.writeCell(a.state), t
 }, Za = a => {
   const t = new pt;
-  return be(t, a.signature), t.writeCell(a.state), t
+  return t.bits.writeUint(xi, 32), t.bits.writeUint(a.channelId, 128), t.refs[0] = a.signedSemiChannelStateA, t.refs[1] = a.signedSemiChannelStateB, t
 }, Ya = a => {
   const t = new pt;
-  return t.bits.writeUint(Si, 32), t.bits.writeUint(a.channelId, 128), t.refs[0] = a.signedSemiChannelStateA, t.refs[1] = a.signedSemiChannelStateB, t
+  return t.bits.writeUint(Ii, 32), t.bits.writeUint(a.channelId, 128), t.refs[0] = a.signedSemiChannelStateA, t.refs[1] = a.signedSemiChannelStateB, t
 }, Xa = a => {
   const t = new pt;
-  return t.bits.writeUint(Ii, 32), t.bits.writeUint(a.channelId, 128), t.refs[0] = a.signedSemiChannelStateA, t.refs[1] = a.signedSemiChannelStateB, t
-}, Ja = a => {
-  const t = new pt;
   return t.bits.writeUint(Ui, 32), t.bits.writeUint(a.channelId, 128), Di(t, a.conditionalsToSettle), t
-}, ja = () => {
+}, Ja = () => {
   const a = new pt;
   return a.bits.writeUint($i, 32), a
-}, za = a => {
+}, ja = a => {
   const t = new pt;
   return t.bits.writeUint(a.op, 32), t.bits.writeBit(a.isA), be(t, a.signature), t.writeCell(a.cell), t
-}, tl = a => {
+}, za = a => {
   const t = new pt;
   return t.bits.writeUint(a.op, 32), t.refs[0] = cr(a.signatureA), t.refs[1] = cr(a.signatureB), t.writeCell(a.cell), t
 };
-var el = {
-  writePublicKey: Ta,
+var tl = {
+  writePublicKey: Ua,
   writeSignature: be,
   createSignatureCell: cr,
   tag_init: Mi,
   tag_cooperative_close: _i,
-  tag_cooperative_commit: xi,
-  tag_start_uncooperative_close: Si,
+  tag_cooperative_commit: Si,
+  tag_start_uncooperative_close: xi,
   tag_challenge_state: Ii,
   tag_settle_conditionals: Ui,
   tag_state: Ti,
   op_top_up_balance: Ni,
-  op_init_channel: Na,
-  op_cooperative_close: $a,
-  op_cooperative_commit: Ra,
-  op_start_uncooperative_close: ka,
-  op_challenge_quarantined_state: Pa,
-  op_settle_conditionals: Wa,
+  op_init_channel: Ta,
+  op_cooperative_close: Na,
+  op_cooperative_commit: $a,
+  op_start_uncooperative_close: Ra,
+  op_challenge_quarantined_state: ka,
+  op_settle_conditionals: Pa,
   op_finish_uncooperative_close: $i,
-  op_channel_closed: La,
-  createTopUpBalance: Oa,
-  createInitChannelBody: Ha,
-  createCooperativeCloseChannelBody: Ka,
-  createCooperativeCommitBody: qa,
-  createConditionalPayment: Va,
-  createSemiChannelBody: Ga,
-  createSemiChannelState: Qa,
-  createSignedSemiChannelState: Za,
-  createStartUncooperativeCloseBody: Ya,
-  createChallengeQuarantinedStateBody: Xa,
-  createSettleConditionalsBody: Ja,
-  createFinishUncooperativeClose: ja,
-  createOneSignature: za,
-  createTwoSignature: tl
+  op_channel_closed: Wa,
+  createTopUpBalance: La,
+  createInitChannelBody: Oa,
+  createCooperativeCloseChannelBody: Ha,
+  createCooperativeCommitBody: Ka,
+  createConditionalPayment: qa,
+  createSemiChannelBody: Va,
+  createSemiChannelState: Ga,
+  createSignedSemiChannelState: Qa,
+  createStartUncooperativeCloseBody: Za,
+  createChallengeQuarantinedStateBody: Ya,
+  createSettleConditionalsBody: Xa,
+  createFinishUncooperativeClose: Ja,
+  createOneSignature: ja,
+  createTwoSignature: za
 };
 const {
-  Contract: rl
+  Contract: el
 } = yt, {
   Cell: we
 } = _, {
   nacl: ee,
-  hexToBytes: sl,
+  hexToBytes: rl,
   BN: Qt
-} = S, {
+} = x, {
   parseAddress: Cs
 } = Et, {
   writePublicKey: ws,
-  writeSignature: Ch,
-  createSignatureCell: wh,
-  tag_init: gh,
-  tag_cooperative_close: Bh,
-  tag_cooperative_commit: Fh,
-  tag_start_uncooperative_close: Ah,
-  tag_challenge_state: yh,
-  tag_settle_conditionals: ph,
-  tag_state: mh,
-  op_top_up_balance: bh,
-  op_init_channel: il,
-  op_cooperative_close: nl,
-  op_cooperative_commit: ol,
-  op_start_uncooperative_close: al,
-  op_challenge_quarantined_state: ll,
-  op_settle_conditionals: cl,
-  op_finish_uncooperative_close: Eh,
-  op_channel_closed: vh,
-  createTopUpBalance: hl,
-  createInitChannelBody: dl,
+  writeSignature: fh,
+  createSignatureCell: uh,
+  tag_init: Ch,
+  tag_cooperative_close: wh,
+  tag_cooperative_commit: gh,
+  tag_start_uncooperative_close: Bh,
+  tag_challenge_state: Fh,
+  tag_settle_conditionals: Ah,
+  tag_state: yh,
+  op_top_up_balance: ph,
+  op_init_channel: sl,
+  op_cooperative_close: il,
+  op_cooperative_commit: nl,
+  op_start_uncooperative_close: ol,
+  op_challenge_quarantined_state: al,
+  op_settle_conditionals: ll,
+  op_finish_uncooperative_close: mh,
+  op_channel_closed: bh,
+  createTopUpBalance: cl,
+  createInitChannelBody: hl,
   createCooperativeCloseChannelBody: gs,
-  createCooperativeCommitBody: fl,
-  createConditionalPayment: Dh,
+  createCooperativeCommitBody: dl,
+  createConditionalPayment: Eh,
   createSemiChannelBody: ge,
   createSemiChannelState: Bs,
-  createSignedSemiChannelState: ul,
-  createStartUncooperativeCloseBody: Cl,
-  createChallengeQuarantinedStateBody: wl,
-  createSettleConditionalsBody: gl,
-  createFinishUncooperativeClose: Bl,
-  createOneSignature: Fl,
-  createTwoSignature: Al
-} = el, Ri = "B5EE9C72410230010007FB000114FF00F4A413F4BCF2C80B0102012002030201480405000AF26C21F0190202CB06070201202E2F020120080902012016170201200A0B0201200C0D0009D3610F80CC001D6B5007434C7FE8034C7CC1BC0FE19E0201580E0F0201201011002D3E11DBC4BE11DBC43232C7FE11DBC47E80B2C7F2407320008B083E1B7B51343480007E187E80007E18BE80007E18F4FFC07E1934FFC07E1974DFC07E19BC01887080A7F4C7C07E1A34C7C07E1A7D01007E1AB7807080E535007E1AF7BE1B2002012012130201201415008D3E13723E11BE117E113E10540132803E10BE80BE10FE8084F2FFC4B2FFF2DFFC02887080A7FE12BE127E121400F2C7C4B2C7FD0037807080E53E12C073253E1333C5B8B27B5520004D1C3C02FE106CFCB8193E803E800C3E1096283E18BE10C0683E18FE10BE10E8006EFCB819BC032000CF1D3C02FE106CFCB819348020C235C6083E4040E4BE1124BE117890CC3E443CB81974C7C060841A5B9A5D2EBCB81A3E118074DFD66EBCB81CBE803E800C3E1094882FBE10D4882FAC3CB819807E18BE18FE12F43E800C3E10BE10E80068006E7CB8199FFE187C0320004120843777222E9C20043232C15401B3C594013E808532DA84B2C7F2DFF2407EC02002012018190201D42B2C0201201A1B0201201E1F0201201C1D00E5473F00BD401D001D401D021F90102D31F01821043436D74BAF2E068F84601D37F59BAF2E072F844544355F910F8454330F910B0F2E065D33FD33F30F84822B9F84922B9B0F2E06C21F86820F869F84A6E915B8E19F84AD0D33FFA003171D721D33F305033BC02BCB1936DF86ADEE2F800F00C8006F3E12F43E800C7E903E900C3E09DBC41CBE10D62F24CC20C1B7BE10FE11963C03FE10BE11A04020BC03DC3E185C3E189C3E18DB7E1ABC032000B51D3C02F5007400750074087E4040B4C7C0608410DB1BDCEEBCB81A3E118074DFD66EBCB81CBE111510D57E443E1150CC3E442C3CB8197E80007E18BE80007E18F4CFF4CFCC3E1208AE7E1248AE6C3CB81B007E1A3E1A7E003C042001C1573F00BF84A6EF2E06AD2008308D71820F9012392F84492F845E24130F910F2E065D31F018210556E436CBAF2E068F84601D37F59BAF2E072D401D08308D71820F901F8444130F910F2E06501D430D08308D71820F901F8454130F910F2E06501820020120222301FED31F01821043685374BAF2E068F84601D37F59BAF2E072D33FFA00F404552003D200019AD401D0D33FFA00F40430937F206DE2303205D31F01821043685374BAF2E068F84601D37F59BAF2E072D33FFA00F404552003D200019AD401D0D33FFA00F40430937F206DE23032F8485280BEF8495250BEB0524BBE1AB0527ABE19210064B05215BE14B05248BE17B0F2E06970F82305C8CB3F5004FA0215F40015CB3F5004FA0212F400CB1F12CA00CA00C9F86AF00C01C31CFC02FE129BACFCB81AF48020C235C6083E4048E4BE1124BE1178904C3E443CB81974C7C0608410DA19D46EBCB81A3E118074DFD66EBCB81CB5007420C235C6083E407E11104C3E443CB81940750C3420C235C6083E407E11504C3E443CB81940602403F71CFC02FE129BACFCB81AF48020C235C6083E4048E4BE1124BE1178904C3E443CB81974C7C0608410DB10DBAEBCB81A3E118074DFD66EBCB81CBD010C3E12B434CFFE803D0134CFFE803D0134C7FE11DBC4148828083E08EE7CB81BBE11DBC4A83E08EF3CB81C34800C151D5A64D6D4C8F7A2B98E82A49B08B8C3816028292A01FCD31F01821043685374BAF2E068F84601D37F59BAF2E072D33FFA00F404552003D200019AD401D0D33FFA00F40430937F206DE2303205D31F01821043685374BAF2E068F84601D37F59BAF2E072D33FFA00F404552003D200019AD401D0D33FFA00F40430937F206DE230325339BE5381BEB0F8495250BEB0F8485290BEB02502FE5237BE16B05262BEB0F2E06927C20097F84918BEF2E0699137E222C20097F84813BEF2E0699132E2F84AD0D33FFA00F404D33FFA00F404D31FF8476F105220A0F823BCF2E06FD200D20030B3F2E073209C3537373A5274BC5263BC12B18E11323939395250BC5299BC18B14650134440E25319BAB3F2E06D9130E30D7F05C82627002496F8476F1114A098F8476F1117A00603E203003ECB3F5004FA0215F40012CB3F5004FA0213F400CB1F12CA00CA00C9F86AF00C00620A8020F4966FA5208E213050038020F4666FA1208E1001FA00ED1E15DA119450C3A00B9133E2923430E202926C21E2B31B000C3535075063140038C8CB3F5004FA0212F400CB3F5003FA0213F400CB1FCA00C9F86AF00C00D51D3C02FE129BACFCB81AFE12B434CFFE803D010C74CFFE803D010C74C7CC3E11DBC4283E11DBC4A83E08EE7CB81C7E003E10886808E87E18BE10D400E816287E18FE10F04026BE10BE10E83E189C3E18F7BE10B04026BE10FE10A83E18DC3E18F780693E1A293E1A7C042001F53B7EF4C7C8608419F1F4A06EA4CC7C037808608403818830AEA54C7C03B6CC780C882084155DD61FAEA54C3C0476CC780820841E6849BBEEA54C3C04B6CC7808208407C546B3EEA54C3C0576CC780820840223AA8CAEA54C3C05B6CC7808208419BDBC1A6EA54C3C05F6CC780C60840950CAA46EA53C0636CC78202D0008840FF2F00075BC7FE3A7805FC25E87D007D207D20184100D0CAF6A1EC7C217C21B7817C227C22B7817C237C23FC247C24B7817C2524C3B7818823881B22A021984008DBD0CABA7805FC20C8B870FC253748B8F07C256840206B90FD0018C020EB90FD0018B8EB90E98F987C23B7882908507C11DE491839707C23B788507C23B789507C11DE48B9F03A4331C4966";
+  createSignedSemiChannelState: fl,
+  createStartUncooperativeCloseBody: ul,
+  createChallengeQuarantinedStateBody: Cl,
+  createSettleConditionalsBody: wl,
+  createFinishUncooperativeClose: gl,
+  createOneSignature: Bl,
+  createTwoSignature: Fl
+} = tl, Ri = "B5EE9C72410230010007FB000114FF00F4A413F4BCF2C80B0102012002030201480405000AF26C21F0190202CB06070201202E2F020120080902012016170201200A0B0201200C0D0009D3610F80CC001D6B5007434C7FE8034C7CC1BC0FE19E0201580E0F0201201011002D3E11DBC4BE11DBC43232C7FE11DBC47E80B2C7F2407320008B083E1B7B51343480007E187E80007E18BE80007E18F4FFC07E1934FFC07E1974DFC07E19BC01887080A7F4C7C07E1A34C7C07E1A7D01007E1AB7807080E535007E1AF7BE1B2002012012130201201415008D3E13723E11BE117E113E10540132803E10BE80BE10FE8084F2FFC4B2FFF2DFFC02887080A7FE12BE127E121400F2C7C4B2C7FD0037807080E53E12C073253E1333C5B8B27B5520004D1C3C02FE106CFCB8193E803E800C3E1096283E18BE10C0683E18FE10BE10E8006EFCB819BC032000CF1D3C02FE106CFCB819348020C235C6083E4040E4BE1124BE117890CC3E443CB81974C7C060841A5B9A5D2EBCB81A3E118074DFD66EBCB81CBE803E800C3E1094882FBE10D4882FAC3CB819807E18BE18FE12F43E800C3E10BE10E80068006E7CB8199FFE187C0320004120843777222E9C20043232C15401B3C594013E808532DA84B2C7F2DFF2407EC02002012018190201D42B2C0201201A1B0201201E1F0201201C1D00E5473F00BD401D001D401D021F90102D31F01821043436D74BAF2E068F84601D37F59BAF2E072F844544355F910F8454330F910B0F2E065D33FD33F30F84822B9F84922B9B0F2E06C21F86820F869F84A6E915B8E19F84AD0D33FFA003171D721D33F305033BC02BCB1936DF86ADEE2F800F00C8006F3E12F43E800C7E903E900C3E09DBC41CBE10D62F24CC20C1B7BE10FE11963C03FE10BE11A04020BC03DC3E185C3E189C3E18DB7E1ABC032000B51D3C02F5007400750074087E4040B4C7C0608410DB1BDCEEBCB81A3E118074DFD66EBCB81CBE111510D57E443E1150CC3E442C3CB8197E80007E18BE80007E18F4CFF4CFCC3E1208AE7E1248AE6C3CB81B007E1A3E1A7E003C042001C1573F00BF84A6EF2E06AD2008308D71820F9012392F84492F845E24130F910F2E065D31F018210556E436CBAF2E068F84601D37F59BAF2E072D401D08308D71820F901F8444130F910F2E06501D430D08308D71820F901F8454130F910F2E06501820020120222301FED31F01821043685374BAF2E068F84601D37F59BAF2E072D33FFA00F404552003D200019AD401D0D33FFA00F40430937F206DE2303205D31F01821043685374BAF2E068F84601D37F59BAF2E072D33FFA00F404552003D200019AD401D0D33FFA00F40430937F206DE23032F8485280BEF8495250BEB0524BBE1AB0527ABE19210064B05215BE14B05248BE17B0F2E06970F82305C8CB3F5004FA0215F40015CB3F5004FA0212F400CB1F12CA00CA00C9F86AF00C01C31CFC02FE129BACFCB81AF48020C235C6083E4048E4BE1124BE1178904C3E443CB81974C7C0608410DA19D46EBCB81A3E118074DFD66EBCB81CB5007420C235C6083E407E11104C3E443CB81940750C3420C235C6083E407E11504C3E443CB81940602403F71CFC02FE129BACFCB81AF48020C235C6083E4048E4BE1124BE1178904C3E443CB81974C7C0608410DB10DBAEBCB81A3E118074DFD66EBCB81CBD010C3E12B434CFFE803D0134CFFE803D0134C7FE11DBC4148828083E08EE7CB81BBE11DBC4A83E08EF3CB81C34800C151D5A64D6D4C8F7A2B98E82A49B08B8C3816028292A01FCD31F01821043685374BAF2E068F84601D37F59BAF2E072D33FFA00F404552003D200019AD401D0D33FFA00F40430937F206DE2303205D31F01821043685374BAF2E068F84601D37F59BAF2E072D33FFA00F404552003D200019AD401D0D33FFA00F40430937F206DE230325339BE5381BEB0F8495250BEB0F8485290BEB02502FE5237BE16B05262BEB0F2E06927C20097F84918BEF2E0699137E222C20097F84813BEF2E0699132E2F84AD0D33FFA00F404D33FFA00F404D31FF8476F105220A0F823BCF2E06FD200D20030B3F2E073209C3537373A5274BC5263BC12B18E11323939395250BC5299BC18B14650134440E25319BAB3F2E06D9130E30D7F05C82627002496F8476F1114A098F8476F1117A00603E203003ECB3F5004FA0215F40012CB3F5004FA0213F400CB1F12CA00CA00C9F86AF00C00620A8020F4966FA5208E213050038020F4666FA1208E1001FA00ED1E15DA119450C3A00B9133E2923430E202926C21E2B31B000C3535075063140038C8CB3F5004FA0212F400CB3F5003FA0213F400CB1FCA00C9F86AF00C00D51D3C02FE129BACFCB81AFE12B434CFFE803D010C74CFFE803D010C74C7CC3E11DBC4283E11DBC4A83E08EE7CB81C7E003E10886808E87E18BE10D400E816287E18FE10F04026BE10BE10E83E189C3E18F7BE10B04026BE10FE10A83E18DC3E18F780693E1A293E1A7C042001F53B7EF4C7C8608419F1F4A06EA4CC7C037808608403818830AEA54C7C03B6CC780C882084155DD61FAEA54C3C0476CC780820841E6849BBEEA54C3C04B6CC7808208407C546B3EEA54C3C0576CC780820840223AA8CAEA54C3C05B6CC7808208419BDBC1A6EA54C3C05F6CC780C60840950CAA46EA53C0636CC78202D0008840FF2F00075BC7FE3A7805FC25E87D007D207D20184100D0CAF6A1EC7C217C21B7817C227C22B7817C237C23FC247C24B7817C2524C3B7818823881B22A021984008DBD0CABA7805FC20C8B870FC253748B8F07C256840206B90FD0018C020EB90FD0018B8EB90E98F987C23B7882908507C11DE491839707C23B788507C23B789507C11DE48B9F03A4331C4966";
 var Lt;
-let ki = (Lt = class extends rl {
+let ki = (Lt = class extends el {
   constructor(t, e) {
     e.publicKeyA = e.isA ? e.myKeyPair.publicKey : e.hisPublicKey, e.publicKeyB = e.isA ? e.hisPublicKey : e.myKeyPair.publicKey, e.wc = e.wc || 0, e.code = e.code || we.oneFromBoc(Ri), super(t, e)
   }
@@ -3910,7 +3909,7 @@ let ki = (Lt = class extends rl {
   async createOneSignature(t, e) {
     const s = ee.sign.detached(await e.hash(), this.options.myKeyPair.secretKey);
     return {
-      cell: Fl({
+      cell: Bl({
         op: t,
         isA: this.options.isA,
         signature: s,
@@ -3924,7 +3923,7 @@ let ki = (Lt = class extends rl {
       n = this.options.isA ? l : e,
       g = this.options.isA ? e : l;
     return {
-      cell: Al({
+      cell: Fl({
         op: t,
         signatureA: n,
         signatureB: g,
@@ -3934,22 +3933,22 @@ let ki = (Lt = class extends rl {
     }
   }
   async createTopUpBalance(t) {
-    return hl(t)
+    return cl(t)
   }
   async createInitChannel(t) {
-    return this.createOneSignature(il, dl({
+    return this.createOneSignature(sl, hl({
       ...t,
       channelId: this.options.channelId
     }))
   }
   async createCooperativeCloseChannel(t) {
-    return t.hisSignature || (t.hisSignature = new Uint8Array(512 / 8)), this.createTwoSignature(nl, t.hisSignature, gs({
+    return t.hisSignature || (t.hisSignature = new Uint8Array(512 / 8)), this.createTwoSignature(il, t.hisSignature, gs({
       ...t,
       channelId: this.options.channelId
     }))
   }
   async createCooperativeCommit(t) {
-    return t.hisSignature || (t.hisSignature = new Uint8Array(512 / 8)), this.createTwoSignature(ol, t.hisSignature, fl({
+    return t.hisSignature || (t.hisSignature = new Uint8Array(512 / 8)), this.createTwoSignature(nl, t.hisSignature, dl({
       ...t,
       channelId: this.options.channelId
     }))
@@ -3970,7 +3969,7 @@ let ki = (Lt = class extends rl {
       }),
       s = ee.sign.detached(await e.hash(), this.options.myKeyPair.secretKey);
     return {
-      cell: ul({
+      cell: fl({
         signature: s,
         state: e
       }),
@@ -4032,25 +4031,25 @@ let ki = (Lt = class extends rl {
     return ee.sign.detached.verify(l, e, this.options.isA ? this.options.publicKeyB : this.options.publicKeyA)
   }
   async createStartUncooperativeClose(t) {
-    return this.createOneSignature(al, Cl({
+    return this.createOneSignature(ol, ul({
       ...t,
       channelId: this.options.channelId
     }))
   }
   async createChallengeQuarantinedState(t) {
-    return this.createOneSignature(ll, wl({
+    return this.createOneSignature(al, Cl({
       ...t,
       channelId: this.options.channelId
     }))
   }
   async createSettleConditionals(t) {
-    return this.createOneSignature(cl, gl({
+    return this.createOneSignature(ll, wl({
       ...t,
       channelId: this.options.channelId
     }))
   }
   async createFinishUncooperativeClose() {
-    return Bl()
+    return gl()
   }
   async getChannelState() {
     const t = await this.getAddress();
@@ -4058,8 +4057,8 @@ let ki = (Lt = class extends rl {
   }
   async getData() {
     const t = _t => {
-        let xt = _t.toString(16);
-        return xt.length % 2 !== 0 && (xt = "0" + xt), sl(xt)
+        let St = _t.toString(16);
+        return St.length % 2 !== 0 && (St = "0" + St), rl(St)
       },
       e = await this.getAddress(),
       s = await this.provider.call2(e.toString(), "get_channel_data", []),
@@ -4135,13 +4134,13 @@ let ki = (Lt = class extends rl {
   }
 }, Vt(Lt, "STATE_UNINITED", 0), Vt(Lt, "STATE_OPEN", 1), Vt(Lt, "STATE_CLOSURE_STARTED", 2), Vt(Lt, "STATE_SETTLING_CONDITIONALS", 3), Vt(Lt, "STATE_AWAITING_FINALIZATION", 4), Lt);
 ki.codeHex = Ri;
-var yl = {
+var Al = {
   PaymentChannel: ki
 };
 const {
   PaymentChannel: Pi
-} = yl;
-let pl = class {
+} = Al;
+let yl = class {
   constructor(t) {
     this.provider = t
   }
@@ -4149,58 +4148,58 @@ let pl = class {
     return new Pi(this.provider, t)
   }
 };
-var ml = {
-    Payments: pl,
+var pl = {
+    Payments: yl,
     PaymentChannel: Pi
   },
   Wi = {},
   Li = {};
 const {
-  parseAddress: bl
+  parseAddress: ml
 } = Et, {
-  AdnlAddress: El,
-  StorageBagId: vl,
+  AdnlAddress: bl,
+  StorageBagId: El,
   BN: Fs,
-  sha256: Dl,
-  bytesToHex: Ml,
-  bytesToBase64: _l
-} = S, {
+  sha256: vl,
+  bytesToHex: Dl,
+  bytesToBase64: Ml
+} = x, {
   Cell: se
 } = _, hr = "dns_next_resolver", Oi = "wallet", Hi = "site", Ki = "storage", qi = async a => {
   if (!a) return new Fs(0);
   const t = new TextEncoder().encode(a),
-    e = new Uint8Array(await Dl(t));
-  return new Fs(Ml(e), 16)
-}, xl = a => {
+    e = new Uint8Array(await vl(t));
+  return new Fs(Dl(e), 16)
+}, _l = a => {
   const t = new se;
   return t.bits.writeUint(40915, 16), t.bits.writeAddress(a), t.bits.writeUint(0, 8), t
 }, Sl = a => {
   const t = new se;
   return t.bits.writeUint(44289, 16), t.bits.writeBytes(a.bytes), t.bits.writeUint(0, 8), t
-}, Il = a => {
+}, xl = a => {
   const t = new se;
   return t.bits.writeUint(29811, 16), t.bits.writeBytes(a.bytes), t
-}, Ul = a => {
+}, Il = a => {
   const t = new se;
   return t.bits.writeUint(47763, 16), t.bits.writeAddress(a), t
 }, Vi = (a, t, e) => {
   if (a.bits.array[0] !== t || a.bits.array[1] !== e) throw new Error("Invalid dns record value prefix");
-  return a.bits.array = a.bits.array.slice(2), bl(a)
+  return a.bits.array = a.bits.array.slice(2), ml(a)
 }, Gi = a => Vi(a, 159, 211), dr = a => Vi(a, 186, 147), Qi = a => {
   if (a.bits.array[0] !== 173 || a.bits.array[1] !== 1) throw new Error("Invalid dns record value prefix");
   const t = a.bits.array.slice(2, 34);
-  return new El(t)
+  return new bl(t)
 }, Mr = a => {
   if (a.bits.array[0] !== 116 || a.bits.array[1] !== 115) throw new Error("Invalid dns record value prefix");
   const t = a.bits.array.slice(2, 34);
-  return new vl(t)
+  return new El(t)
 }, Zi = a => a ? a.bits.array[0] === 173 || a.bits.array[1] === 1 ? Qi(a) : Mr(a) : null, Yi = async (a, t, e, s, l) => {
   const n = e.length * 8,
     g = new se;
   g.bits.writeBytes(e);
   const F = await qi(s),
     A = await a.call2(t, "dnsresolve", [
-      ["tvm.Slice", _l(await g.toBoc(!1))],
+      ["tvm.Slice", Ml(await g.toBoc(!1))],
       ["num", F.toString()]
     ]);
   if (A.length !== 2) throw new Error("Invalid dnsresolve response");
@@ -4232,7 +4231,7 @@ const {
   });
   let e = t.reverse().join("\0") + "\0";
   return e.length < 126 && (e = "\0" + e), new TextEncoder().encode(e)
-}, Tl = async (a, t, e, s, l) => {
+}, Ul = async (a, t, e, s, l) => {
   const n = Xi(e);
   return Yi(a, t, n, s, l)
 };
@@ -4243,34 +4242,34 @@ var _r = {
   DNS_CATEGORY_STORAGE: Ki,
   categoryToBN: qi,
   domainToBytes: Xi,
-  createSmartContractAddressRecord: xl,
+  createSmartContractAddressRecord: _l,
   createAdnlAddressRecord: Sl,
-  createNextResolverRecord: Ul,
+  createNextResolverRecord: Il,
   parseSmartContractAddressRecord: Gi,
   parseAdnlAddressRecord: Qi,
   parseStorageBagIdRecord: Mr,
   parseSiteRecord: Zi,
   parseNextResolverRecord: dr,
-  createStorageBagIdRecord: Il,
-  dnsResolve: Tl
+  createStorageBagIdRecord: xl,
+  dnsResolve: Ul
 };
 const {
-  Address: Nl,
-  bytesToHex: $l
-} = S, {
-  DNS_CATEGORY_NEXT_RESOLVER: Rl,
+  Address: Tl,
+  bytesToHex: Nl
+} = x, {
+  DNS_CATEGORY_NEXT_RESOLVER: $l,
   DNS_CATEGORY_SITE: Ji,
   DNS_CATEGORY_WALLET: ji,
-  DNS_CATEGORY_STORAGE: kl,
-  createSmartContractAddressRecord: Pl,
-  createAdnlAddressRecord: Wl,
-  createStorageBagIdRecord: Ll,
-  createNextResolverRecord: Ol,
-  parseSmartContractAddressRecord: Hl,
-  parseAdnlAddressRecord: Kl,
-  parseStorageBagIdRecord: ql,
-  parseSiteRecord: Vl,
-  parseNextResolverRecord: Gl,
+  DNS_CATEGORY_STORAGE: Rl,
+  createSmartContractAddressRecord: kl,
+  createAdnlAddressRecord: Pl,
+  createStorageBagIdRecord: Wl,
+  createNextResolverRecord: Ll,
+  parseSmartContractAddressRecord: Ol,
+  parseAdnlAddressRecord: Hl,
+  parseStorageBagIdRecord: Kl,
+  parseSiteRecord: ql,
+  parseNextResolverRecord: Vl,
   dnsResolve: zi
 } = _r;
 let mt = class {
@@ -4280,8 +4279,8 @@ let mt = class {
   async getRootDnsAddress() {
     const e = (await this.provider.getConfigParam(4)).bits.array;
     if (e.length !== 256 / 8) throw new Error("Invalid ConfigParam 4 length " + e.length);
-    const s = $l(e);
-    return new Nl("-1:" + s)
+    const s = Nl(e);
+    return new Tl("-1:" + s)
   }
   async resolve(t, e, s) {
     const l = await this.getRootDnsAddress();
@@ -4295,32 +4294,32 @@ let mt = class {
   }
 };
 mt.resolve = zi;
-mt.createSmartContractAddressRecord = Pl;
-mt.createAdnlAddressRecord = Wl;
-mt.createStorageBagIdRecord = Ll;
-mt.createNextResolverRecord = Ol;
-mt.parseNextResolverRecord = Gl;
-mt.parseAdnlAddressRecord = Kl;
-mt.parseStorageBagIdRecord = ql;
-mt.parseSiteRecord = Vl;
-mt.parseSmartContractAddressRecord = Hl;
-mt.DNS_CATEGORY_NEXT_RESOLVER = Rl;
+mt.createSmartContractAddressRecord = kl;
+mt.createAdnlAddressRecord = Pl;
+mt.createStorageBagIdRecord = Wl;
+mt.createNextResolverRecord = Ll;
+mt.parseNextResolverRecord = Vl;
+mt.parseAdnlAddressRecord = Hl;
+mt.parseStorageBagIdRecord = Kl;
+mt.parseSiteRecord = ql;
+mt.parseSmartContractAddressRecord = Ol;
+mt.DNS_CATEGORY_NEXT_RESOLVER = $l;
 mt.DNS_CATEGORY_WALLET = ji;
 mt.DNS_CATEGORY_SITE = Ji;
-mt.DNS_CATEGORY_STORAGE = kl;
+mt.DNS_CATEGORY_STORAGE = Rl;
 Li.default = mt;
 const {
-  Contract: Ql
+  Contract: Gl
 } = yt, {
   Cell: As
 } = _, {
-  parseAddress: Zl
+  parseAddress: Ql
 } = Et, {
-  dnsResolve: Yl
+  dnsResolve: Zl
 } = _r, {
-  parseOffchainUriCell: Xl
+  parseOffchainUriCell: Yl
 } = Et;
-let Jl = class extends Ql {
+let Xl = class extends Gl {
   constructor(t, e) {
     if (e.wc = 0, e.code = e.code, super(t, e), !e.collectionContent && !e.address) throw new Error("required collectionContent cell");
     this.methods.getCollectionData = this.getCollectionData.bind(this), this.methods.getNftItemAddressByIndex = this.getNftItemAddressByIndex.bind(this), this.methods.getNftItemContent = this.getNftItemContent.bind(this), this.methods.resolve = this.resolve.bind(this)
@@ -4335,7 +4334,7 @@ let Jl = class extends Ql {
       s = e[0].toNumber(),
       l = e[1];
     return {
-      collectionContentUri: Xl(l),
+      collectionContentUri: Yl(l),
       collectionContent: l,
       ownerAddress: null,
       nextItemIndex: s
@@ -4349,30 +4348,30 @@ let Jl = class extends Ql {
       s = await this.provider.call2(e.toString(), "get_nft_address_by_index", [
         ["num", t.toString()]
       ]);
-    return Zl(s)
+    return Ql(s)
   }
   async resolve(t, e, s) {
     const l = await this.getAddress();
-    return Yl(this.provider, l.toString(), t, e, s)
+    return Zl(this.provider, l.toString(), t, e, s)
   }
 };
-var jl = {
-  DnsCollection: Jl
+var Jl = {
+  DnsCollection: Xl
 };
 const {
-  Contract: zl
+  Contract: jl
 } = yt, {
   Cell: Fe
 } = _, {
-  Address: Ih,
-  BN: tc
-} = S, {
+  Address: Sh,
+  BN: zl
+} = x, {
   parseAddress: tr
 } = Et, {
-  dnsResolve: ec,
-  categoryToBN: rc
+  dnsResolve: tc,
+  categoryToBN: ec
 } = _r;
-let t0 = class extends zl {
+let t0 = class extends jl {
   constructor(t, e) {
     e.wc = 0, e.code = e.code, super(t, e), this.methods.getData = this.getData.bind(this), this.methods.getDomain = this.getDomain.bind(this), this.methods.getAuctionInfo = this.getAuctionInfo.bind(this), this.methods.getLastFillUpTime = this.getLastFillUpTime.bind(this), this.methods.resolve = this.resolve.bind(this)
   }
@@ -4398,7 +4397,7 @@ let t0 = class extends zl {
   }
   async createTransferBody(t) {
     const e = new Fe;
-    return e.bits.writeUint(1607220500, 32), e.bits.writeUint(t.queryId || 0, 64), e.bits.writeAddress(t.newOwnerAddress), e.bits.writeAddress(t.responseAddress), e.bits.writeBit(!1), e.bits.writeCoins(t.forwardAmount || new tc(0)), e.bits.writeBit(!1), t.forwardPayload && e.bits.writeBytes(t.forwardPayload), e
+    return e.bits.writeUint(1607220500, 32), e.bits.writeUint(t.queryId || 0, 64), e.bits.writeAddress(t.newOwnerAddress), e.bits.writeAddress(t.responseAddress), e.bits.writeBit(!1), e.bits.writeCoins(t.forwardAmount || new zl(0)), e.bits.writeBit(!1), t.forwardPayload && e.bits.writeBytes(t.forwardPayload), e
   }
   createGetStaticDataBody(t) {
     const e = new Fe;
@@ -4427,59 +4426,59 @@ let t0 = class extends zl {
   }
   async resolve(t, e, s) {
     const l = await this.getAddress();
-    return ec(this.provider, l.toString(), t, e, s)
+    return tc(this.provider, l.toString(), t, e, s)
   }
 };
 t0.createChangeContentEntryBody = async a => {
   const t = new Fe;
-  return t.bits.writeUint(1320284409, 32), t.bits.writeUint(a.queryId || 0, 64), t.bits.writeUint(await rc(a.category), 256), a.value && (t.refs[0] = a.value), t
+  return t.bits.writeUint(1320284409, 32), t.bits.writeUint(a.queryId || 0, 64), t.bits.writeUint(await ec(a.category), 256), a.value && (t.refs[0] = a.value), t
 };
-var sc = {
+var rc = {
   DnsItem: t0
 };
-const ic = Li.default,
+const sc = Li.default,
   {
-    DnsCollection: nc
-  } = jl,
+    DnsCollection: ic
+  } = Jl,
   {
-    DnsItem: oc
-  } = sc;
+    DnsItem: nc
+  } = rc;
 Wi.default = {
-  Dns: ic,
-  DnsCollection: nc,
-  DnsItem: oc
+  Dns: sc,
+  DnsCollection: ic,
+  DnsItem: nc
 };
-const ye = S,
+const ye = x,
   e0 = ye.Address,
   r0 = _,
-  ac = jn,
+  oc = Jn,
   s0 = Ls.default,
   {
     Contract: i0
   } = yt,
   n0 = Ks.default,
   o0 = oi.default,
-  lc = Ci.default,
-  cc = Bi.default,
+  ac = Ci.default,
+  lc = Bi.default,
   ys = mi.default,
   {
     BlockSubscription: a0,
     InMemoryBlockStorage: l0
   } = Sa,
   {
-    SubscriptionContract: hc
-  } = Ua,
+    SubscriptionContract: cc
+  } = Ia,
   {
     Payments: c0,
-    PaymentChannel: dc
-  } = ml,
-  fc = B0.default,
-  uc = F0.default,
-  Cc = A0.default,
+    PaymentChannel: hc
+  } = pl,
+  dc = B0.default,
+  fc = F0.default,
+  uc = A0.default,
   {
     Dns: h0,
-    DnsCollection: wc,
-    DnsItem: gc
+    DnsCollection: Cc,
+    DnsItem: wc
   } = Wi.default,
   d0 = "0.0.66";
 class Bt {
@@ -4507,28 +4506,26 @@ Bt.HttpProvider = s0;
 Bt.Contract = i0;
 Bt.Wallets = n0;
 Bt.LockupWallets = o0;
-Bt.SubscriptionContract = hc;
+Bt.SubscriptionContract = cc;
 Bt.BlockSubscription = a0;
 Bt.InMemoryBlockStorage = l0;
 Bt.ledger = {
-  TransportWebUSB: fc,
-  TransportWebHID: uc,
-  BluetoothTransport: Cc,
-  AppTon: ac
+  TransportWebUSB: dc,
+  TransportWebHID: fc,
+  BluetoothTransport: uc,
+  AppTon: oc
 };
 Bt.token = {
-  nft: cc,
+  nft: lc,
   ft: ys,
   jetton: ys
 };
-Bt.HighloadWallets = lc;
+Bt.HighloadWallets = ac;
 Bt.dns = h0;
-Bt.dns.DnsCollection = wc;
-Bt.dns.DnsItem = gc;
+Bt.dns.DnsCollection = Cc;
+Bt.dns.DnsItem = wc;
 Bt.payments = c0;
-Bt.payments.PaymentChannel = dc;
-var Bc = Bt;
-const Th = y0(Bc);
+Bt.payments.PaymentChannel = hc;
 export {
-  Th as T, D0 as r
+  v0 as r
 };
