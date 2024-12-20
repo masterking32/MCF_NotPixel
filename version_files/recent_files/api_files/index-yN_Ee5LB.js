@@ -212,7 +212,7 @@ const kc = "_stars_img_container_1wci0_1",
   },
   $c = 24 * 60 * 60 * 1e3,
   St = "https://t.me/notpixel/app",
-  v = {
+  f = {
     addToHomeScreen: "addToHomeScreen",
     addEmoji: "addEmoji",
     adsgram: "adsgram",
@@ -2797,11 +2797,11 @@ class la {
   }) {
     let s = n,
       a = "";
-    if (n === v["channel:notpixel_channel"] || n === v["channel:notcoin_pre_release"] || n === v["channel:purego"] || n === v["channel:seinarukiro"] || n === v["channel:sscaleton"] || n === v["channel:waketonup"] || n === v["channel:GameDevDead"] || n === v["channel:zaegd"] || n === v["channel:fakedonalds"] || n === v["channel:pushinton"] || n === v["channel:notcoin"]) {
+    if (n === f["channel:notpixel_channel"] || n === f["channel:notcoin_pre_release"] || n === f["channel:purego"] || n === f["channel:probablyinsomnia"] || n === f["channel:tonbeholder"] || n === f["channel:notaspidey"] || n === f["channel:nuvov"] || n === f["channel:seinarukiro"] || n === f["channel:sscaleton"] || n === f["channel:waketonup"] || n === f["channel:GameDevDead"] || n === f["channel:zaegd"] || n === f["channel:fakedonalds"] || n === f["channel:pushinton"] || n === f["channel:notcoin"]) {
       const i = n.split(":");
       s = i[0], a = `?name=${i[1]}`
     }
-    if (n === v["x:notpixel"] || n === v["x:notcoin"]) {
+    if (n === f["x:notpixel"] || n === f["x:notcoin"]) {
       const i = n.split(":");
       s = i[0], a = `?name=${i[1]}`
     }
@@ -2831,45 +2831,45 @@ const ps = G("mining/info", async () => (await la.info()).data),
     },
     checkError: {},
     toggleAction: {
-      [v.invite3frens]: !0,
-      [v.makePixelAvatar]: !0,
-      [v.boostChannelNotPixel]: !0,
-      [v.boostChannelNotCoin]: !0,
-      [v.walletVerification]: !0,
-      [v["channel:notpixel_channel"]]: !0,
-      [v["channel:notcoin_pre_release"]]: !0,
-      [v["channel:purego"]]: !0,
-      [v["channel:seinarukiro"]]: !0,
-      [v["channel:sscaleton"]]: !0,
-      [v["channel:waketonup"]]: !0,
-      [v["channel:notcoin"]]: !0,
-      [v["channel:GameDevDead"]]: !0,
-      [v["channel:zaegd"]]: !0,
-      [v["channel:fakedonalds"]]: !0,
-      [v["channel:pushinton"]]: !0,
-      [v["channel:probablyinsomnia"]]: !0,
-      [v["channel:tonbeholder"]]: !0,
-      [v["channel:notaspidey"]]: !0,
-      [v["channel:nuvov"]]: !0,
-      [v["x:notpixel"]]: !0,
-      [v["x:notcoin"]]: !0,
-      [v.jettonTask]: !0,
-      [v.solitaireGame]: !0,
-      [v.tonDurakGame]: !0,
-      [v.earnCoin]: !0,
-      [v.earnCoin2]: !0,
-      [v.frogApp]: !0,
-      [v.tonPoker]: !0,
-      [v.flappyBird]: !0,
-      [v.stickerStore]: !0,
-      [v.boink2]: !0,
-      [v.duckChain]: !0,
-      [v.starHash]: !0,
-      [v.trmnl]: !0,
-      [v.hauntedSpace]: !0,
-      [v.capsGame]: !0,
-      [v.taskTypeCampaign5_74739]: !0,
-      [v.taskTypeCampaign6_74738]: !0
+      [f.invite3frens]: !0,
+      [f.makePixelAvatar]: !0,
+      [f.boostChannelNotPixel]: !0,
+      [f.boostChannelNotCoin]: !0,
+      [f.walletVerification]: !0,
+      [f["channel:notpixel_channel"]]: !0,
+      [f["channel:notcoin_pre_release"]]: !0,
+      [f["channel:purego"]]: !0,
+      [f["channel:seinarukiro"]]: !0,
+      [f["channel:sscaleton"]]: !0,
+      [f["channel:waketonup"]]: !0,
+      [f["channel:notcoin"]]: !0,
+      [f["channel:GameDevDead"]]: !0,
+      [f["channel:zaegd"]]: !0,
+      [f["channel:fakedonalds"]]: !0,
+      [f["channel:pushinton"]]: !0,
+      [f["channel:probablyinsomnia"]]: !0,
+      [f["channel:tonbeholder"]]: !0,
+      [f["channel:notaspidey"]]: !0,
+      [f["channel:nuvov"]]: !0,
+      [f["x:notpixel"]]: !0,
+      [f["x:notcoin"]]: !0,
+      [f.jettonTask]: !0,
+      [f.solitaireGame]: !0,
+      [f.tonDurakGame]: !0,
+      [f.earnCoin]: !0,
+      [f.earnCoin2]: !0,
+      [f.frogApp]: !0,
+      [f.tonPoker]: !0,
+      [f.flappyBird]: !0,
+      [f.stickerStore]: !0,
+      [f.boink2]: !0,
+      [f.duckChain]: !0,
+      [f.starHash]: !0,
+      [f.trmnl]: !0,
+      [f.hauntedSpace]: !0,
+      [f.capsGame]: !0,
+      [f.taskTypeCampaign5_74739]: !0,
+      [f.taskTypeCampaign6_74738]: !0
     },
     infoStatus: p.idle,
     claimStatus: p.idle,
@@ -3304,12 +3304,12 @@ const ps = G("mining/info", async () => (await la.info()).data),
       d = [u.info_row],
       A = c(y => y.mining.tasks[n]),
       g = c(y => y.mining.checkStatuses[n]) === p.pending,
-      f = c(y => y.mining.checkError[n]),
+      x = c(y => y.mining.checkError[n]),
       j = c(y => y.mining.toggleAction[n]),
-      x = m.useRef();
+      v = m.useRef();
     return n && g && d.push(u.info_row_pending), m.useEffect(() => {
       let y = null;
-      return f && setTimeout(() => {
+      return x && setTimeout(() => {
         l(Ku({
           key: n,
           value: !1
@@ -3317,9 +3317,9 @@ const ps = G("mining/info", async () => (await la.info()).data),
       }, 4e3), () => {
         clearTimeout(y)
       }
-    }, [f]), e.jsx("div", {
+    }, [x]), e.jsx("div", {
       className: u.row_container,
-      ref: x,
+      ref: v,
       id: i,
       style: {
         opacity: A ? .3 : 1
@@ -3327,7 +3327,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
       children: e.jsx("div", {
         className: d.join(" "),
         onPointerUp: () => {
-          !n || A || g || f || (a && l(qo({
+          !n || A || g || x || (a && l(qo({
             action: n,
             value: !j
           })), a && j || a && !s ? a() : s && l(xe.checkTask({
@@ -3357,7 +3357,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
     })
   }),
   JA = () => {
-    const t = v.premium,
+    const t = f.premium,
       n = c(a => a.main.settings),
       s = c(a => a.mining.tasks[t]);
     return e.jsx(q, {
@@ -3393,7 +3393,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
   },
   Xo = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABJmlDQ1BBZG9iZSBSR0IgKDE5OTgpAAAoz2NgYDJwdHFyZRJgYMjNKykKcndSiIiMUmA/z8DGwMwABonJxQWOAQE+IHZefl4qAwb4do2BEURf1gWZxUAa4EouKCoB0n+A2CgltTiZgYHRAMjOLi8pAIozzgGyRZKywewNIHZRSJAzkH0EyOZLh7CvgNhJEPYTELsI6Akg+wtIfTqYzcQBNgfClgGxS1IrQPYyOOcXVBZlpmeUKBhaWloqOKbkJ6UqBFcWl6TmFit45iXnFxXkFyWWpKYA1ULcBwaCEIWgENMAarTQZKAyAMUDhPU5EBy+jGJnEGIIkFxaVAZlMjIZE+YjzJgjwcDgv5SBgeUPQsykl4FhgQ4DA/9UhJiaIQODgD4Dw745AMDGT/0ZOjZcAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGh2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNi4wLWMwMDYgNzkuMTY0NjQ4LCAyMDIxLzAxLzEyLTE1OjUyOjI5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjIuMiAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDI0LTA5LTI0VDEwOjM5OjA5KzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyNC0wOS0yNFQxMToyMjo0OCswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyNC0wOS0yNFQxMToyMjo0OCswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MWVkZTI5YTMtOTM2ZS1jNjQxLWJkZDEtNDNmMTA2NTY3ZjMzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjkzNjNmMjgyLWIxOTMtZGY0ZS1hYWEyLWE1OGY3Mjg0Mjk0NSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjkzNjNmMjgyLWIxOTMtZGY0ZS1hYWEyLWE1OGY3Mjg0Mjk0NSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6OTM2M2YyODItYjE5My1kZjRlLWFhYTItYTU4ZjcyODQyOTQ1IiBzdEV2dDp3aGVuPSIyMDI0LTA5LTI0VDEwOjM5OjA5KzA0OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuMiAoV2luZG93cykiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmM3ZDdlOWUzLTBhNTEtYzU0ZS1iZTVlLWU2MmY5MzE1ZWMwNyIgc3RFdnQ6d2hlbj0iMjAyNC0wOS0yNFQxMToxNzoyOSswNDowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjIgKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxZWRlMjlhMy05MzZlLWM2NDEtYmRkMS00M2YxMDY1NjdmMzMiIHN0RXZ0OndoZW49IjIwMjQtMDktMjRUMTE6MjI6NDgrMDQ6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi4yIChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7U6VMbAAABP0lEQVR42u3asW6DMBSF4TxQp861oWQLmGYpsUkfos/QF2+Prw1RhypbisSPzoCDY93P1wyRcnh67naVA2DAgAEDBgwYMGDAgAEDBgwYMGDA+wN/P/ACDBgwYMCAAQMGDHhv4I/Pr7sBDBjwdsGPXAcwYMCAAQMGzK8lwIABAwYMGDBgwIDvpQmpGaLrL66flCZEP6Z2nNsx6d5pOOToPs8Mcxuur285mvNrwhDbkLowK8fxqujpy2lStLh9PW4CrGqsrHfFnSY/1OIKpsSGs+1C1S7mZLtQ5wtc0gmspyG5Pto+XrQjbivgRfsX2Hp+o3bnmmMe1oNQY332pdXnfAR8PTsC52ylw3LmWCvcWv2tt1Glr11dwcrS5OjXl8KW0icFvBz4LYH5Jx5gwIABAwYMGDBgwIABAwYMGPD/5gdV5YsHhxhyrwAAAABJRU5ErkJggg==",
   ZA = () => {
-    const t = v["channel:notpixel_channel"],
+    const t = f["channel:notpixel_channel"],
       n = c(a => a.main.settings),
       s = c(a => a.mining.tasks[t]);
     return e.jsx(q, {
@@ -3431,7 +3431,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
     })
   },
   KA = () => {
-    const t = v["x:notpixel"],
+    const t = f["x:notpixel"],
       n = c(a => a.main.settings),
       s = c(a => a.mining.tasks[t]);
     return e.jsx(q, {
@@ -3474,7 +3474,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
   }) => isNaN(t) ? null : new Intl.NumberFormat("en-US").format(t),
   em = () => {
     const t = te(),
-      n = v.invite1fren;
+      n = f.invite1fren;
     let s = c(i => i.user.user);
     const a = c(i => i.main.settings);
     return s === null ? null : e.jsx(q, {
@@ -3520,7 +3520,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
   },
   tm = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQBAMAAAB8P++eAAAAAXNSR0IArs4c6QAAAB5QTFRFHCk/9fPq//Bh0cq8/9YA/8cA/ZIAqZyM9mYAiF8iNQ3eYAAAALRJREFUeNrt1TGRRTEMQ1FTMAVTMAVBWC0EUQiFUAjbHe/M+5lfvcIpcxs1p5fdbrdujAiehIyKB6FbVDoGYRbhFjgHAwoznIOENCOgY1DEVIB2BgY0Jf6Amog3+Eu+wIA051RVE2jCfyawHKGi6EEbawlPrrnSmjDXIt2L0d3lbei55O5O0qtsw/T06jOjC0fml+vCLbfrw5GZD8vRhFtW2/VgyfGwcn1YtNrsHd4bvd16/QEV+IbgR8VccAAAAABJRU5ErkJggg==",
   nm = () => {
-    const t = v.paint20pixels,
+    const t = f.paint20pixels,
       n = c(i => i.main.settings),
       s = c(i => i.mining.info),
       a = c(i => i.mining.tasks[t]);
@@ -3558,7 +3558,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
   sm = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQBAMAAAB8P++eAAAAAXNSR0IArs4c6QAAABVQTFRFHCk//PuG/+wo/8gA/5IA9mYAb0QgBXY6pgAAAJ9JREFUeNrt1TGNBEEQQ9GiUBQ+BVMwBVMY/hBOVxptvFJXtv0DRy933W6/lkCrkO5uFqF60h4EuoE1KLq6u9AWhKegHtiCotvuRlvQggTkFYhctkB2WRxDYstvssMhlJ0IDUOJrUOYKtNMjapyBifRbwzagLxuC5pP3oHxx2UDjtQ0bgGOnFJrsPLOGoz/11mCsuw8T2xZX8P7zbfbQX+axVI3GU07RQAAAABJRU5ErkJggg==",
   am = () => {
     const t = te(),
-      n = v.invite3frens;
+      n = f.invite3frens;
     let s = c(o => o.user.user);
     const a = c(o => o.main.settings),
       i = c(o => o.mining.tasks[n]);
@@ -3598,7 +3598,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
   },
   im = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQBAMAAAB8P++eAAAAAXNSR0IArs4c6QAAABtQTFRFHCk/8/Dl/+Qy/9sA/8cA/6lU86MA2YQQn1IBegOu8wAAAIlJREFUeNrt1DERA0EMQ1FTCAVTMAVROAqiYAqGnfFFTbpM1tWNf/0aNbJt27a/ig5zEKEwAOXc3SUHINtJghMQHyc5APkNeQ6B8JdluzkYZubdCLwS8LLCFLyuWwLeBZAHUK5lhAvSzmFWEdG0p+QBVFWV5E1B0g6hbFKlzUBRZtmvcN96257eG1BkaXWD691mAAAAAElFTkSuQmCC",
   om = () => {
-    const t = v.joinSquad;
+    const t = f.joinSquad;
     let n = c(i => i.user.user);
     const s = c(i => i.main.settings),
       a = c(i => i.mining.tasks[t]);
@@ -3636,7 +3636,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
   Ai = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQBAMAAAB8P++eAAAAAXNSR0IArs4c6QAAABhQTFRFHCk//9dK/7cA/pYA2n0AvlkAmjEAXjEUlqfz5AAAAKhJREFUeNrt1cFpRFEMQ1G1oBbUglpwC2pBLUz74Q8hmeXA8/JdMMZw9sbtdjvJohNLpBYgB5i0TWYCDA8hC7/iNB7LL6M8gwKAKh1bfF86gy6AcP5hfQYhAKUfyDc0DiEMVMpYpAHhGMKtObGo1FiAMGplqIGxAgPEIz97Bz61KZ7W4IjahchgGY6WoSmuQqcm92D/WoPU8Jk9+OvWYD/6Gt5nerud9AMgnFxPBQmwaAAAAABJRU5ErkJggg==",
   rm = () => {
     var o, r;
-    const t = v.leagueBonusSilver,
+    const t = f.leagueBonusSilver,
       n = c(l => l.main.settings),
       s = (r = (o = window.Telegram.WebApp.initDataUnsafe) == null ? void 0 : o.user) == null ? void 0 : r.is_premium,
       a = c(l => l.mining.tasks[t]),
@@ -3674,8 +3674,8 @@ const ps = G("mining/info", async () => (await la.info()).data),
   },
   cm = () => {
     var r, l;
-    const t = v.leagueBonusGold,
-      n = c(d => d.mining.tasks[v.leagueBonusSilver]),
+    const t = f.leagueBonusGold,
+      n = c(d => d.mining.tasks[f.leagueBonusSilver]),
       s = c(d => d.main.settings),
       a = (l = (r = window.Telegram.WebApp.initDataUnsafe) == null ? void 0 : r.user) == null ? void 0 : l.is_premium,
       i = c(d => d.mining.tasks[t]),
@@ -3713,8 +3713,8 @@ const ps = G("mining/info", async () => (await la.info()).data),
   },
   lm = () => {
     var r, l;
-    const t = v.leagueBonusPlatinum,
-      n = c(d => d.mining.tasks[v.leagueBonusGold]),
+    const t = f.leagueBonusPlatinum,
+      n = c(d => d.mining.tasks[f.leagueBonusGold]),
       s = c(d => d.main.settings),
       a = (l = (r = window.Telegram.WebApp.initDataUnsafe) == null ? void 0 : r.user) == null ? void 0 : l.is_premium,
       i = c(d => d.mining.tasks[t]),
@@ -3753,7 +3753,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
   dm = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABJmlDQ1BBZG9iZSBSR0IgKDE5OTgpAAAoz2NgYDJwdHFyZRJgYMjNKykKcndSiIiMUmA/z8DGwMwABonJxQWOAQE+IHZefl4qAwb4do2BEURf1gWZxUAa4EouKCoB0n+A2CgltTiZgYHRAMjOLi8pAIozzgGyRZKywewNIHZRSJAzkH0EyOZLh7CvgNhJEPYTELsI6Akg+wtIfTqYzcQBNgfClgGxS1IrQPYyOOcXVBZlpmeUKBhaWloqOKbkJ6UqBFcWl6TmFit45iXnFxXkFyWWpKYA1ULcBwaCEIWgENMAarTQZKAyAMUDhPU5EBy+jGJnEGIIkFxaVAZlMjIZE+YjzJgjwcDgv5SBgeUPQsykl4FhgQ4DA/9UhJiaIQODgD4Dw745AMDGT/0ZOjZcAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGh2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNi4wLWMwMDYgNzkuMTY0NjQ4LCAyMDIxLzAxLzEyLTE1OjUyOjI5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjIuMiAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDI0LTA5LTI0VDExOjA1OjE0KzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyNC0wOS0yNFQxMToyMjoxMyswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyNC0wOS0yNFQxMToyMjoxMyswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGU1YjQ1ZGMtMDA0MC0xNTRkLWIzYWMtNDRkNGJjOWU4Y2JlIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOmFjOGM1YWVjLWQ0YjctZGQ0YS05ZTJkLTczNjcwMTRkZjQ4NiIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmFjOGM1YWVjLWQ0YjctZGQ0YS05ZTJkLTczNjcwMTRkZjQ4NiI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YWM4YzVhZWMtZDRiNy1kZDRhLTllMmQtNzM2NzAxNGRmNDg2IiBzdEV2dDp3aGVuPSIyMDI0LTA5LTI0VDExOjA1OjE0KzA0OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuMiAoV2luZG93cykiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmM1NDNmYzg1LTZhNjMtZTY0MS1iYzMzLTRiNWU5OWM2NDY5MCIgc3RFdnQ6d2hlbj0iMjAyNC0wOS0yNFQxMToxNzozMCswNDowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjIgKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo0ZTViNDVkYy0wMDQwLTE1NGQtYjNhYy00NGQ0YmM5ZThjYmUiIHN0RXZ0OndoZW49IjIwMjQtMDktMjRUMTE6MjI6MTMrMDQ6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi4yIChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6TN+2hAAAAr0lEQVR42u3auwmAQBAFQAsysgHB3AIEi7AGGz8zMRE8XT94s7z0HTvpsVXddEWlAgYGBgYGBgYGBgYGBgYGBgYGBv49OGVOVBcYGPg8OAXNOM1ZuY4HBi4XnG6eIztcxwMDA78J3tsHGBgYGBgYGBgY+Mvgth/WRCG3b+Yic7vAwKWDo/BR3Ud/LYGBfwbewx9JVBcYGNhRCzAwMDAwMDAwMDAwMDAwMDAwMPDnsgAsAtPYi2unugAAAABJRU5ErkJggg==",
   um = () => {
     const t = te(),
-      n = v.openLeague;
+      n = f.openLeague;
     let s = c(a => a.user.user);
     return c(a => a.main.settings), s === null ? null : e.jsx(q, {
       boost: n,
@@ -3798,7 +3798,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
     })
   }),
   Am = () => {
-    const t = v.spendStars,
+    const t = f.spendStars,
       n = c(a => a.main.settings),
       s = c(a => a.mining.tasks[t]);
     return e.jsx(q, {
@@ -3835,7 +3835,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
   mm = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAABiUlEQVR4nO3coU7DUBhH8UJ4ACQKxyRz8+BROB4DO43lMXBT0+MBcASHRE3yBqD7T6Bpz73tFefnmqXNdvLly93ETq6ub346TXZqOsaAkAEhA0IGhAwIGRAyIGRAyICQASEDQgaEDAgZEDIgZEDIgJABIQNCBoTOSj3o8/11qc8wyWp9W+Q5TiBkQMiAULEdmO4fn9D9u+dt77r080pxAiEDQgaEqu3A3Dnjz139+z8Oh1F3z3UudQIhA0IGhIrtwM3dQ+/6bf8y7ycZkO+vFCcQMiBkQKjYDvz+Ov77ep7LSv0e99fz09D7m8oJhAwIGRCq9l146XNhrXNfcgIhA0IGhKrtwDx35U6i58K8P59f69yXnEDIgJABoWo7MNXeSXPtvOQEQgaEDAgt9q8d55cXveux35WXOvclJxAyIGRAqJl/Lhraia3svOQEQgaEDAg1++9tuRNb2XnJCYQMCBkQmu33wLFa3XnJCYQMCBkQMiBkQMiAkAEhA0IGhAwIGRAyIGRAouu6XySITdXe7YNeAAAAAElFTkSuQmCC",
   pm = () => {
     const t = _(),
-      n = v.walletVerification,
+      n = f.walletVerification,
       s = c(h => h.main.settings),
       [a] = dn(),
       i = c(h => h.mining.tasks[n]),
@@ -3863,11 +3863,11 @@ const ps = G("mining/info", async () => (await la.info()).data),
         });
         const g = await X.generateTonProofPayload();
         if (g.status === 200 && g.data && g.data.payload) {
-          const f = g.data;
+          const x = g.data;
           a.setConnectRequestParameters({
             state: "ready",
             value: {
-              tonProof: f.payload
+              tonProof: x.payload
             }
           }), await a.openModal()
         } else t(z({
@@ -3921,7 +3921,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
   },
   Jo = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABJmlDQ1BBZG9iZSBSR0IgKDE5OTgpAAAoz2NgYDJwdHFyZRJgYMjNKykKcndSiIiMUmA/z8DGwMwABonJxQWOAQE+IHZefl4qAwb4do2BEURf1gWZxUAa4EouKCoB0n+A2CgltTiZgYHRAMjOLi8pAIozzgGyRZKywewNIHZRSJAzkH0EyOZLh7CvgNhJEPYTELsI6Akg+wtIfTqYzcQBNgfClgGxS1IrQPYyOOcXVBZlpmeUKBhaWloqOKbkJ6UqBFcWl6TmFit45iXnFxXkFyWWpKYA1ULcBwaCEIWgENMAarTQZKAyAMUDhPU5EBy+jGJnEGIIkFxaVAZlMjIZE+YjzJgjwcDgv5SBgeUPQsykl4FhgQ4DA/9UhJiaIQODgD4Dw745AMDGT/0ZOjZcAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGh2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNi4wLWMwMDYgNzkuMTY0NjQ4LCAyMDIxLzAxLzEyLTE1OjUyOjI5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjIuMiAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDI0LTA5LTI0VDEwOjEzOjA1KzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyNC0wOS0yNFQxMToyMTo0NSswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyNC0wOS0yNFQxMToyMTo0NSswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OWE1ZTFkNmEtMDFkMy01MTRjLWI1ZGQtZjQ1YTZjZmMzYzU3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNlNWY4MjgyLTc1NjEtMDQ0Zi1hMWM1LTYzN2ViZmQyYjcxNSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjNlNWY4MjgyLTc1NjEtMDQ0Zi1hMWM1LTYzN2ViZmQyYjcxNSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6M2U1ZjgyODItNzU2MS0wNDRmLWExYzUtNjM3ZWJmZDJiNzE1IiBzdEV2dDp3aGVuPSIyMDI0LTA5LTI0VDEwOjEzOjA1KzA0OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuMiAoV2luZG93cykiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjUwMjg3MDBiLTJkNWItMGU0OS05MmYyLWM0Y2U0OWE4ODAwNiIgc3RFdnQ6d2hlbj0iMjAyNC0wOS0yNFQxMToxNzoyNSswNDowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjIgKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo5YTVlMWQ2YS0wMWQzLTUxNGMtYjVkZC1mNDVhNmNmYzNjNTciIHN0RXZ0OndoZW49IjIwMjQtMDktMjRUMTE6MjE6NDUrMDQ6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi4yIChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5KGBqWAAAAxElEQVR42u3aywmDQBQFUAtylQYE9ykgYBHWkMZ1J7OJPHyO8XMedzXI4NlcGMemffWPSgMMDAwMDAwMDAwMDAwMDAxcIVMxwMDA1wBPgQEGBj4XuMQM43dJZB0YGPhc4Mw6MDDwceBfhRSBHVNgwMDA0YNB5gNAvQMGMDDw2st178+SDLjcBxgYeH9wplQyz+fxwMDAW4oqA963wICBgaOXY7UHGBh4O7gskn8FGBjYz6XAwMDAwMDAwMDAwMDAwMC3zAwlcvXsnlyGdQAAAABJRU5ErkJggg==",
   hm = () => {
-    const t = v["channel:notcoin"],
+    const t = f["channel:notcoin"],
       n = c(a => a.main.settings),
       s = c(a => a.mining.tasks[t]);
     return e.jsx(q, {
@@ -3959,7 +3959,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
     })
   },
   gm = () => {
-    const t = v["x:notcoin"],
+    const t = f["x:notcoin"],
       n = c(a => a.main.settings),
       s = c(a => a.mining.tasks[t]);
     return e.jsx(q, {
@@ -3999,7 +3999,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
   Zo = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAACTElEQVR4nO2cvUrDUBiGv7QdVJwcHcTBjvYeegOuTiJaRBA3BwuioqC0UtHB4uDgpXgPOppBHBydRB0kkZPktLHUmvblmE95nyUY22N8+nDy0xCvXKmGQkamQHUYFAhCgSAUCEKBIBQIQoEgFAhCgSAUCEKBIBQIQoEgFAhCgSAUCEKBIBQIQoEgFAhCgSAll4O/vb7I08OdBB/vv/G/9KVQGpPp2XkZn5h0M76TURPylmcwf99shyucFmjlNQ7ir54LoYgnIl6yjH4O408xWoY/rOt9X5gaK+iOJanXLbQ9px8i50AQCgShQBAKBKFAEAoEcXoYMwrHl3NDvau17Oe6vSwQRF2BlsfnwWXNTA1XqitYIIiaAk/acVFZy2uu+NGpmuR8gzILBPkzAk156Xlv+5pz4L8g9znw9CLb3Jf+vZY9sLBAHDV74X5V9VZpX9NY9aOLp3nvgYUF4uRe4Nam37l8/92xoC3vqOZHl+o1lGdhgSBqz4UlVd7hmp45rxcWCKKyQFve3rqO891BsEAQVQXWN/wvX6xrLs/CAkEoEIQCQSgQhAJBKBDE6WGMuTvU3JtX3/cyvf58N4wOY4rm8CUQKSbrvWRdMYiXi2fZxktvhyucFmhurXW58Vmwt/i6QtWTi+5vb6Jleyfs1FZIlbfUissrV6o5b2kXzoEgKp+dZUu8qsdzYq2przwLCwRR/fQ2W6LG8iwsEET1JX3N5VlYIAgFglAgCAWCUCAIBYJQIAgFglAgCAWCUCAIBYJQIAgFglAggoh8Ap/jkinpc8FdAAAAAElFTkSuQmCC",
   _m = () => {
     const t = c(i => i.user.user),
-      n = v.boostChannelNotPixel,
+      n = f.boostChannelNotPixel,
       s = c(i => i.main.settings),
       a = c(i => i.mining.tasks[n]);
     return !t || !t.isPremium ? null : e.jsx(q, {
@@ -4038,7 +4038,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
   },
   fm = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAIZklEQVR4nO1cW6gkRxn+qrp7TvfMnNseEyFgFCVC8rJCnnYXxRdvURHMQlj3wD5pBDcqK2QhkLBvWSWIkgc3PkRNsvoWLwuCiMIBzYO7L+ZJ0E0egiFPZ/ecmTPT1yqpv7vm2jOTOT3TNXH7gz41p7u6p+rr/6//UlXDHj75WYkKxwavqCuGisCCqAgsiIrAgqgILIiKwIKoCCyIisCCqAgsiIrAgqgILIiKwIKoCCyIisCCqAgsiIrAgrBNN+Dkx2qIW4dwI6DpOYDk8DwPlmXR9Xa7nXtfwgX+9p5VcmvHYZxAdnAE6Qc4AofDI1KKNdeGiCO6HoSd3PskU38b5TY2B5UKF4QxCXzEOwBjDA5suGtpMzY2Nqg8PDzs1cs7p8Ak8PkHLUiZTun8+R1RYuv7MKrCuvNFoF6CSZRKoDIY/E5qFE6sb1MZ+D7ibLxrtVpU1uv1nhHRaDabY2R1Oh0kSUKfv/rxHSpvvNUtpzMZSiUwbrcgQ58+W9xLz2XkYUAibXu8WZyPD9dxHPc+R1G4lDbPQqkEehHHEct3PWIOWElK4DS15BIImYQ1ov3CkCaXSuCHd7YQxalboo2CNhIKVy5dggTPlTYNZTyefeGHiuWh830jU65rU7IR4WOek5IoLT2c2RCQ043LwKXBe03BmBVeX1+n8geXvo/N2hoSMDTcNUBMt8yK3CtPX4bDLVz96Y/R6vqk8qNuTlkwRqAe55o1F16tlp6cQZ6+b8N1s/rMuBvzgY5ETJOHsiXwvf19dIPUiGxk0UcRZ3r38bN0vzqeffHFhbVzHnzgY+FFRDNFUOr6wEe3op4E3nznv9R5x6vBkoLe5alTp+jarVu3EEXRxOfoejdv3oQfhfScwI9Ipes1FxEYGAS8rYeW3icjRkR12A8T6nDQ7oJJTt5JJ0gTAgftYCqBut7hUdirV0vS8bCVpJGOFAze1vL7YkSFafCXnI6EcfLnVPeJAil7nwcPW6akxZzDFuP1Iis91DNJrVk8qxkLgTE3Zu8nL1BHv/zcZci7CboOsLe3R9dOnz4Nx3HSent7RPgfnr8K3mRwkxhf/O4V+DzOrXfigUdK7UepBKZaluXtuCApUv8r8iQT1ByG/LxeIhkaiQWp1N6JwMRq2L9SCXzm4kU4TJKkNNdsksB//OI6LKHUT+Lk47uk2cqIaOt65swZKnc+tA1P6S7v+3559f71drkRSakEbqrJIvSNgyJyy6tRyZiEtBNA8CEDolNbTPpgaAIstbo07uXUKxulfms6uM+4PuDXpcSyXF9P5tQzgVIJPDhowUZqHTe31kcIYXj3xu/G7tHEtI+6lKkB3F69VqeffT79vatLbn0+jE9rzoKWtFnSawqlEvjEj17ufX798gUq79u5v5cb/c/ttwEm8NGPPNhzTzTqngfGlcOdGKRrHMYkcHRcU/8LkbowluWM1VdJai4FxApkYAaxAioshgIixiyyyHkx0qCHaAmB2JKwk3toWnMalLH45EOfgBVx4NFPQVr1qfVjcIg33gCSltF2GyeQj3oodky+IJsysaRgMRUfT044lAVjBP7+L3+lce/CuXNoODaFcuv1BiBstP79Jhrd6Us1JONoHProThfUpcMYgZ0wyhxgvdIqlbjEEqgfhXg/SUrT5GEVJpVQMKtsOiNtjMBzX/oClb+6fh2dWFAe79I3L8zxBI6fv/oK2oFZv9C4H9iPY4/njtxTq7Py8LlPfwaMVmIx/Oy1V8ElR73uwmLTrTCDxC9vvWuq2T0YJ9Bbq5ER4YKjHcSUUlVhXMymW2FuZj3lGFbCkVaBR8IkuMoJKgcZHJacrpqRtRoMGidw68Q2rcZSDvXF8+cpjGPDa4gId/b3hyyuIvrlv98uvb2jWJlQTq+yUnnBPMdEESZFX+okW42fu1mpfODO1vZIyqCPjfUGbG4Rkbdvm5c8jZUikLIwE9yZmp2muEw7zqOo9okUxMIl8LEnd0tpOJcxvvadXUQzFiColQ9/uvbK8tqxtCffIyi0Ouvst55AaLnDJ21nbJxKooBKbtd6oRuP0hj2K5sc94uQ1rzs7OzQnIhaeK4MRh6Ulb785j/hRU0kjRrqdrq69eDggMpGozE0R6wWLvnBHcRROj1649prC32zhVQ4AEMihoN5G87E+HRw/jbM7qup1Hw290sHGCxm53iC2fOlhOW7aDsRHkAT4ch3KfIGv18wiTBgEGw5+0gKqXAyI16dChWqMQE3apITrQKPhKsOC0quyixPOHpARgicGLbgCN7H6+d6Z6d00mPBKKTCjz35DWri5uZmfwK840+sr1S5txup5vbPCUbE6S7LbNFRHiQXuG+rDik9UtvR4cJy1sY0wHVd2Nm7vnt3n8o/vvTrhTBZSIXVytJCUkg0cTCWDKiCyFzBCbGwtIi8SeC0fmF4/LSHmrhYuzm3BO4+dRadyKaGuuvbSJiNMAxp+ZmCEJOD/EEJ1FKiNhXKCdu/JkFvROx2u7CykE5JHpVM0ksZhCJQn/PWUjVOOi34IoSVMPz2pd/M9f1Dz573hnbsIcxIqHEnXSVFe9zmGwl6SzZoHni+pKh+SYoYrcH6GSJHcmOB3pCg6x3FymjZiGUxiaz8wIIoNRbWaqYQZ9tetY943OfNK73TjNxxUElgQSxcAutuGhkEQdAzLHkYlMbjQBkxRgbj/2xSSe/1TY3E5M4VnU1TrsoqJLaWp8J85dduLgQL76UepJUqa2lc9MC9SliiBK62fdLuPpsx+zcLS9Mz3w97W/KVy6LGPJVq0lLZ8c38yoaGbdfSLWaM4evfPk+j6uvX5o+Pl0agihboLWcjvTIqKgRbhU3SyIwYZXpUak0yJHOGkxqVH1gEAP4HsRgdoFaJYVAAAAAASUVORK5CYII=",
   xm = () => {
-    const t = v.makePixelAvatar,
+    const t = f.makePixelAvatar,
       n = c(a => a.main.settings),
       s = c(a => a.mining.tasks[t]);
     return e.jsx(q, {
@@ -4076,7 +4076,7 @@ const ps = G("mining/info", async () => (await la.info()).data),
   },
   vm = () => {
     const t = c(i => i.user.user),
-      n = v.boostChannelNotCoin,
+      n = f.boostChannelNotCoin,
       s = c(i => i.main.settings),
       a = c(i => i.mining.tasks[n]);
     return !t || !t.isPremium ? null : e.jsx(q, {
@@ -4205,15 +4205,15 @@ const Fi = () => {
     const t = _(),
       n = bm(),
       s = c(Uo),
-      a = v.adsgram,
-      i = v.watchAd;
+      a = f.adsgram,
+      i = f.watchAd;
     c(j => j.mining.tasks[a]);
     const o = c(j => j.mining.tasks[i]),
       r = c(j => j.user.country),
       l = gt(),
       [d, A] = m.useState(Fi()),
       [h, g] = m.useState(Qi),
-      f = 16;
+      x = 16;
     return m.useEffect(() => {
       const j = setInterval(() => {
         A(Fi())
@@ -4225,7 +4225,7 @@ const Fi = () => {
       enableCheck: !1,
       action: () => {
         d === 0 && n.show().then(j => {
-          t(Et(f)), t(z({
+          t(Et(x)), t(z({
             id: performance.now(),
             text: "16 PX earned!",
             icon: ""
@@ -4248,7 +4248,7 @@ const Fi = () => {
         })
       },
       boost: a,
-      reward: f,
+      reward: x,
       children: [e.jsx("div", {
         style: {
           width: 100,
@@ -4284,7 +4284,7 @@ const Fi = () => {
           }), d === 0 && e.jsxs("div", {
             children: ["Get ", e.jsx(M, {
               className: u.not_pixel_icon
-            }), " ", f, " for each AD"]
+            }), " ", x, " for each AD"]
           }), d !== 0 && e.jsx("div", {
             children: `Wait ${d} sec`
           })]
@@ -4298,7 +4298,7 @@ const Fi = () => {
   Bm = () => {
     const t = _(),
       n = c(Tt),
-      s = v.addToHomeScreen,
+      s = f.addToHomeScreen,
       a = c(o => o.mining.tasks[s]),
       i = 128;
     return n ? e.jsx(q, {
@@ -4352,7 +4352,7 @@ const Fi = () => {
   Em = () => {
     const t = _(),
       n = c(Tt),
-      s = v.addEmoji,
+      s = f.addEmoji,
       a = 256,
       i = c(r => r.mining.tasks[s]),
       o = c(r => r.user.user);
@@ -4408,19 +4408,19 @@ const Fi = () => {
   },
   km = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAADmklEQVR4nO2cz2oTURSHT5OAEUSsgqBQaAl0EbKQLkXBZiMibrrwCXwCFy58ABcufII+gxsp4kYFpcviorgQSgoFC4JFpGAXJpFzM2dycnpnksxx7h3C+SDcOzN3Qubr7/7JZOjSWufOEIzC1EydDhOoxAQqMYFKTKASE6jEBCoxgUpMoBITqMQEKjGBSkygEhOoxAQqMYFKTKASE6jEBCoxgUpMoBITqKRRlQ/y8/sB/D45nqnt5as34NrNVumfaRaiCpTS3teWZjqve3LszquCyCgCuTgubX0wKr/VxnXfNp3TTd4jpsTgAkkeSeBiQMiiOr6uv2ON7o8KfI/YEoNOIlweieHIpFEd5f1IpGFJMvE4vtesY2cZBBXI5UEibB5IHpdI4B8nBsEE+i5QJjALnzDax1MYQ2IwgTJ9ReEyfRJDU5l14CzwFPJ6o14HGPZdHVMYckIJIvB/dC2aROS4OUp0H9bZrLxwArXdl0vzzdyS3v7nYIvsynVhn5A88fJY6EV2JW4moDQS9/TBarrft1acBp0TamaOmkAprb25Am0A2N5ccdtPnn1yZZ7ErLUkSSx7TCxdoEwAv2AUR9KIrx+OJo4jr94eulJ+PwaRWGxXdJFelNKf0scB/dbDNVfHC9x+efdcGy5t781IeK1Wg8FgkJYbj1qpSEjEYVvZ7mOjnrbpDoalTyZBujCmDCVJeT5xHJQij6NIrO9ltLv3t5+2g51e6ZNItDEQ5ZFYFOIumEGpBZLB4Nt57UIQTGA7mRjkNpZ44fK4D0rstLbY7stOz3XfsgmawM7uaVrfv30prVMSIUOOPMa7vg+St1ALaZS32rw43rF7ek4iZMjJSq+EJy/U17loY6CTmSTSJ5LDE0hjp69NaHkQS+DBrzNoXWmOE8lETksg7+5VIJhAl7KkG6M8lIhIkZ0LyxOJ9JE3iWAKIeBvJEETKCVCkkbwiCwCyn+8tQzPX49WiQt5N4YkQjIO5oosyIutDSdxYW9npV2UzcxSpIZ6M9y1RL0bw9MIIpFFOTz749IXYhENVbihOjFhFBz7OCRv4deBPqbNvnnEWgdW9vG2rLWeb38seVDlnzWzFsxyDRhTHlT9d+F57rrEerio9DvS8zw4WYTYzwjaP95RYs9IKzGBSkygEhOoxAQqMYFKTKASE6jEBCoxgUpMoBITqMQEKjGBSkygEhOoxAQqMYFKTKASE6jEBCoxgRoA4B95qZ/x3prlhgAAAABJRU5ErkJggg==",
   Dm = () => {
-    const t = v.unitsWallet;
+    const t = f.unitsWallet;
     return c(n => n.mining.tasks[t]), c(n => n.user.country), null
   },
   Rm = k(0, 100),
   Mm = Rm <= 10,
   Um = () => {
-    const t = v.skinlabTask,
+    const t = f.skinlabTask,
       n = c(s => s.mining.tasks[t]);
     return c(s => s.user.country), !Mm && !n && !pt.isDev, null
   },
   Om = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAACyklEQVR4nO2cT0iTYRzH361ZyRRqFcxDgoaQFV2SoCVERBBdFC/ZIejQxUs3L96Vrtmx6DwjJCQqpA4NZuHAP4FDREYWZixd6DbMZZvwe/YeLDef9X3/Hb6fy3ds75732WdfePb+Yb6Wc50lg/w3fqrDoEAQCgShQBAKBKFAEAoEoUAQCgShQBAKBKFAEAoEoUAQCgShQBAKBKFAEAoEoUAQCgShQBAKBAl4dWL1wSOSkd4ByXdP+tULPp+b0/oHNhDEM3cmhJpOSV7ve1R1u1KxKDk62CO5/bvgwOwqwwaCuNbA5rOdkpduDVgy3uuH9yQ31r5ZMp4ubCCIYw08f+2OZPuV207szvgQHZT8kozbuh82EMT2Bl7sui/ZcuGG/Z9mDz4+fyBPLn2K2TI+Gwhi+5HI7PhTyeDRsGQuo1bJ1o6blu5nI/1ZMjU1LnkgcFDSruaZsIEgtjdwazMnmf3xVbLxxEnJdGpGsrCZlTzefEbycOMxrXFTiVeS+fX0rufN5i1OvrToE1SHDQRx/Ejk6t0hre2Kf7Ylw20dkrNvHkv6A3Va75uPj4Iz1YMNBHG8gYfqGyQjmsfAKwsJyf2aZ5KMPcMmWCNsIIjjZ6TNVTmXWZFsCDVZMu7S9FtLxqkVNhDEtWsiiTF15nnfVVnzGkg+m7FiWjXDBoK4flVuYkQ1sOKqXKr+IyEZGyk/cudqHRsI4noDzVU5n/kuGQyFd71eqtDA5TnzTLO714nZQBDP3JkwOTYsqXusvL62bPOM9GADQTx3b0w8qhp4uXxPjP+v34HJ91H1wOeN754NBPFcAwu/yqvyT3WmuWioVXh1cUpt4JHmmbCBIJ7/35jTkW7J+YkXrs9lL9hAEP5zEQgbCEKBIBQIQoEgFAhCgSAUCEKBIBQIQoEgFAhCgSAUCEKBIBQIQoEgFAhCgSAUCEKBIBSIYBjGDiltmN/9syZ+AAAAAElFTkSuQmCC",
   Qm = () => {
-    const t = v.spendTokens,
+    const t = f.spendTokens,
       n = c(a => a.mining.tasks[t]),
       s = 512;
     return e.jsx(q, {
@@ -4457,7 +4457,7 @@ const Fi = () => {
   zm = k(0, 100),
   Gm = zm <= 100,
   Lm = () => {
-    const t = v.frogApp,
+    const t = f.frogApp,
       n = c(i => i.mining.tasks[t]),
       s = 512,
       a = gt();
@@ -4498,7 +4498,7 @@ const Fi = () => {
   Hm = k(0, 30),
   qm = Hm <= 100,
   Ym = () => {
-    const t = v.earnCoin,
+    const t = f.earnCoin,
       n = c(i => i.mining.tasks[t]),
       s = 512,
       a = gt();
@@ -4539,7 +4539,7 @@ const Fi = () => {
   Wm = k(0, 100),
   Xm = Wm <= 100,
   Jm = () => {
-    const t = v.duckChain,
+    const t = f.duckChain,
       n = c(i => i.mining.tasks[t]),
       s = 512,
       a = gt();
@@ -4580,7 +4580,7 @@ const Fi = () => {
   Km = k(0, 100),
   $m = Km <= 100,
   ep = () => {
-    const t = v.trmnl,
+    const t = f.trmnl,
       n = c(i => i.mining.tasks[t]),
       s = 512,
       a = gt();
@@ -4621,7 +4621,7 @@ const Fi = () => {
   np = k(0, 100),
   sp = np <= 100,
   ap = () => {
-    const t = v.starHash,
+    const t = f.starHash,
       n = c(r => r.mining.tasks[t]),
       s = 512,
       a = gt(),
@@ -4663,7 +4663,7 @@ const Fi = () => {
   op = k(0, 100),
   rp = op <= 100,
   cp = () => {
-    const t = v.stickerStore,
+    const t = f.stickerStore,
       n = c(i => i.mining.tasks[t]),
       s = 1024,
       a = gt();
@@ -4718,19 +4718,19 @@ const Fi = () => {
       n = t ? t.toUpperCase() : "NULL",
       s = lp[n] ? 1 : 2,
       o = s === 1 ? 74738 : 74739,
-      r = v.taskTypeCampaign6_74738,
-      l = v.taskTypeCampaign5_74739,
+      r = f.taskTypeCampaign6_74738,
+      l = f.taskTypeCampaign5_74739,
       d = s === 1 ? r : l,
       A = c(j => j.mining.tasks[r]),
       h = c(j => j.mining.tasks[l]),
       g = A || h,
-      f = 1024;
+      x = 1024;
     return t ? e.jsx(q, {
       action: () => {
         W(`https://t.me/community_bot/join?startapp=id_${o}`)
       },
       boost: d,
-      reward: f,
+      reward: x,
       children: e.jsxs("div", {
         className: u.content,
         children: [!g && e.jsx("div", {
@@ -4750,7 +4750,7 @@ const Fi = () => {
           }), !g && e.jsxs("div", {
             children: ["Get ", e.jsx(M, {
               className: u.not_pixel_icon
-            }), " ", f]
+            }), " ", x]
           })]
         }), e.jsx(J, {
           boost: d
@@ -4760,7 +4760,7 @@ const Fi = () => {
   },
   up = "/assets/task_boinkers-DM7UoyVq.png",
   Ap = () => {
-    const t = v.boink2,
+    const t = f.boink2,
       n = c(a => a.mining.tasks[t]),
       s = gt();
     return e.jsx(q, {
@@ -4797,7 +4797,7 @@ const Fi = () => {
     })
   },
   mp = () => {
-    const t = v.earnCoin2,
+    const t = f.earnCoin2,
       n = c(i => i.mining.tasks[t]),
       s = 512,
       a = gt();
@@ -4836,7 +4836,7 @@ const Fi = () => {
   },
   pp = "/assets/task_insomnia-BNplehCJ.jpg",
   hp = () => {
-    const t = v["channel:probablyinsomnia"],
+    const t = f["channel:probablyinsomnia"],
       n = c(a => a.mining.tasks[t]),
       s = 256;
     return e.jsx(q, {
@@ -4874,7 +4874,7 @@ const Fi = () => {
   },
   gp = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABs1BMVEUpNEplb3zc3uH+/v///v/Exs1HUGKmqbRtcoMqNEr8/P3g4eT+/v7h4uXd3+KMkJw5QVb////NztRqcXt3fYnu7/Li4+Y0PlFQWGn9/f4rNUpmbHyLkJw7QVS5u8KLkpz9/P40P1SAh5Ps6++Fi5ff4OV2fYqjp65OVWiDhpONk58qNEiSmKR1e4YrNErY2t3u7/Fob35WX2zT1NgrNkudoqwvOEx7gY6aoKspNEvo6Ozm5uny8vScoKfv8PIvOkxfZXdGT2KlqrTl5efp6+0pNEn6+fv//f99g5BMVmmTl6Oztb9YX3Cip62LkJvy8fQpNUfw8vQ5Q1drcICkp7Csr7f9///39vmeoq22ucH+//8qNEkxOVHx8PIsNkr7+vuhpa5GTV9PWGj8+/2kqbGhpa/6+fzi4+dUXG7o6ezJys9udoX6+vynq7OKjpoyO1Bkann09fausLjp6OwqNUtlbH3z9Pb//v7Z2t0/RlgtOE2FipcxPFLf3uMrNUspM0m6v8RASVtyeIdTXGvq7O/d3+O3ucC8v8bv8POgpK3JytF+g5ExOk/V19urrrdAS105Q1bODEguAAAAAWJLR0QR4rU9ugAAAAd0SU1FB+gMFBIKKhK+SMQAAAItSURBVFjD7dZVU8NAEAfwpVkKLVo8uLu7e3F3KO7u7u72kWEn08nRQUsz14f8X7KXy/7ycJltAdSoUaPGLuLgoNEIAr5HEBwdtVr7Ap2c8JM4O9sHqNPp9fhFXFzsAXR1xW/i5sYbdHfHH+LhwRP09DQY2GYvL29vHx9f348kT9DPj2309w8IEARRDAwMCmJfFBzMD2S5kBDzOjQUICxM3gkP5wVGRLBgZCRAVBRV0dEAMTFWHIvNwdhYejguLj4+IYFGa2JiUlJyckpKampaGmJ6ekZGZmZWFj2Tnc0HzMlBzM3Ny0PMzy8oKCyk1qKi4mK6lpQAlJYilpWVlyNWVPABKyurqgCqqxENBgCjUT6Emhrar61FrKujj6m+ng/Y0IDY2NjUhNjcbDnIWloAWlsR29ra2xE7OviAnZ3UKopdXd3dPT2Wg7W3t6+vv39ggGqTiQ84OMgCQ0PDwyMjVI2Ojo1ZNWJtDn4cX+PjABMTVE1OAkxNyTuiyA+cnmbJmZnZ2bm5+fmFhcVF9v7SEj9weRl/kZUVfqB0LKur0l9hy6ytra/TVafjCW5s0M/k5ubW1vb2zo6M7e7u7e3vU3Vw8AdOAfDwkJqOjszr42O5kuiTE74gwOkpten1Z2fs3fNzibu4+COnAAhweWk+iqur6+ubm9tb8/ruzgpOARDg/v6zD/vhwUpOARDg8fHpicWen/+BKQJKMZleXl5fjUabYIqAatSoUfPvvAHL6rqN7+GoAAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyNC0xMi0yMFQxODoxMDo0MiswMzowMJIwBWQAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjQtMTItMjBUMTg6MTA6NDIrMDM6MDDjbb3YAAAAAElFTkSuQmCC",
   _p = () => {
-    const t = v["channel:tonbeholder"],
+    const t = f["channel:tonbeholder"],
       n = c(a => a.mining.tasks[t]),
       s = 256;
     return e.jsx(q, {
@@ -4912,7 +4912,7 @@ const Fi = () => {
   },
   fp = "/assets/task_spidey-AcSse4S4.jpg",
   xp = () => {
-    const t = v["channel:notaspidey"],
+    const t = f["channel:notaspidey"],
       n = c(a => a.mining.tasks[t]),
       s = 256;
     return e.jsx(q, {
@@ -4950,7 +4950,7 @@ const Fi = () => {
   },
   vp = "/assets/task_vove-CIOe0-JC.jpg",
   yp = () => {
-    const t = v["channel:nuvov"],
+    const t = f["channel:nuvov"],
       n = c(a => a.mining.tasks[t]),
       s = 256;
     return e.jsx(q, {
@@ -5898,12 +5898,12 @@ const lg = (t, n, s) => {
           if (d.type === wa.pixanos && ut.dispatch(pg(A)), A.user.userId === n || !Fn) return;
           const g = ut.getState().canvas.animations;
           if (d.type === wa.bomb) {
-            const f = Zs(A.info.pixelId);
-            g && b.mainImage.bomb.boomWithDebounce(f)
+            const x = Zs(A.info.pixelId);
+            g && b.mainImage.bomb.boomWithDebounce(x)
           }
           if (d.type === wa.pumpkin) {
-            const f = Zs(A.info.pixelId);
-            b.mainImage.pumpkin.boomWithDebounce(f, g)
+            const x = Zs(A.info.pixelId);
+            b.mainImage.pumpkin.boomWithDebounce(x, g)
           }
         });
         return
@@ -5920,18 +5920,18 @@ const lg = (t, n, s) => {
             const h = JSON.parse(new TextDecoder().decode(d));
             if (h.type === rg[1] && ut.getState().daily.list.entities[h.good_id]) {
               const g = ut.getState().daily.list.entities[h.good_id],
-                f = g.name,
+                x = g.name,
                 j = g.prices[0].quantity;
               ut.dispatch(z({
                 id: performance.now(),
-                text: `Transaction for daily ${g.id} completed! Got ${f} x${j}. Refresh the app.`,
+                text: `Transaction for daily ${g.id} completed! Got ${x} x${j}. Refresh the app.`,
                 icon: ""
               }))
             }
           } else if (o.channel === "event:tournament") {
             const h = JSON.parse(new TextDecoder().decode(d));
-            h.type && h.type === 1 && h.templates.forEach(f => {
-              ut.dispatch(dr(f))
+            h.type && h.type === 1 && h.templates.forEach(x => {
+              ut.dispatch(dr(x))
             })
           } else {
             if (o.channel === "event:mini-game") return;
@@ -6391,10 +6391,10 @@ const lg = (t, n, s) => {
           g = requestAnimationFrame(h);
           return
         }
-        const f = Date.now(),
-          x = Math.floor((f - o) / r) - i.current;
-        x > 0 && s.current < l && (t(Yo(x)), t(sA(x)));
-        let y = (f - o) % r;
+        const x = Date.now(),
+          v = Math.floor((x - o) / r) - i.current;
+        v > 0 && s.current < l && (t(Yo(v)), t(sA(v)));
+        let y = (x - o) % r;
         A(y * 100 / r), g = requestAnimationFrame(h)
       };
       let g = requestAnimationFrame(h);
@@ -6774,7 +6774,7 @@ kt.startListening({
       a = t.payload[s],
       i = t.meta.arg.reward,
       o = t.meta.arg.disableFailPopup;
-    a && (s === v.pumpkin && n.dispatch(sn({
+    a && (s === f.pumpkin && n.dispatch(sn({
       product: 7,
       amount: 6
     })), n.dispatch(Et(i)));
@@ -7331,7 +7331,7 @@ const Xn = xc({
     let A = !1;
     if (n <= 0)
       if (d && d.main.fastEnergy) {
-        if (Fs.length > 0 && !(await Promise.allSettled(Fs)).every(f => f.status === p.fulfilled || f.status === p.rejected)) return;
+        if (Fs.length > 0 && !(await Promise.allSettled(Fs)).every(x => x.status === p.fulfilled || x.status === p.rejected)) return;
         const h = await A_({
           dispatch: s,
           state: d
@@ -7356,27 +7356,27 @@ const Xn = xc({
   }, V_ = () => {
     const t = _(),
       n = te(),
-      s = c(x => x.canvas.pixelInfo),
-      a = c(x => x.color.active),
-      i = c(x => x.user.user),
-      o = c(x => x.mining.charges),
-      r = c(x => x.canvas.coords),
-      l = c(x => x.main.fastMode),
-      d = c(x => x.main.currentFastType),
-      A = c(x => x.main.fastEnergy),
-      h = c(x => x.shop.available[1]),
-      g = c(x => x.shop.products[1]),
-      f = {
+      s = c(v => v.canvas.pixelInfo),
+      a = c(v => v.color.active),
+      i = c(v => v.user.user),
+      o = c(v => v.mining.charges),
+      r = c(v => v.canvas.coords),
+      l = c(v => v.main.fastMode),
+      d = c(v => v.main.currentFastType),
+      A = c(v => v.main.fastEnergy),
+      h = c(v => v.shop.available[1]),
+      g = c(v => v.shop.products[1]),
+      x = {
         bomb: 2,
         paintcan: 6,
         pumpkin: 7
       },
-      j = c(x => x.shop.products[f[d]]);
+      j = c(v => v.shop.products[x[d]]);
     return e.jsxs("button", {
       className: le.button,
-      onPointerUp: x => {
+      onPointerUp: v => {
         if (l) {
-          x.stopPropagation(), t(Aa());
+          v.stopPropagation(), t(Aa());
           return
         }
         Rr({
@@ -7386,8 +7386,8 @@ const Xn = xc({
           activeColor: a,
           user: i,
           flyCoords: {
-            x: x.clientX,
-            y: x.clientY
+            x: v.clientX,
+            y: v.clientY
           },
           paintCoords: r,
           charges: o,
@@ -8278,12 +8278,12 @@ class Sf {
   }
   pixanosRepaint(n, s, a, i) {
     const o = g => {
-        let f = 1664525,
+        let x = 1664525,
           j = 1013904223,
-          x = 4294967296,
+          v = 4294967296,
           y = g >>> 0;
         return function() {
-          return y = (f * y + j) % x, y / x
+          return y = (x * y + j) % v, y / v
         }
       },
       r = s * s,
@@ -8292,18 +8292,18 @@ class Sf {
       A = Array.from(Array(l));
     for (let g = 0; g < l; g++) A[g] = g + 1;
     for (let g = l + 1; g <= r; g++) {
-      const f = Math.floor(d() * g) + 1;
-      f <= l && (A[f - 1] = g)
+      const x = Math.floor(d() * g) + 1;
+      x <= l && (A[x - 1] = g)
     }
     const h = Ot(i);
     for (let g = 0; g < A.length; g++) {
-      const f = A[g];
+      const x = A[g];
       if (g < 20) {
-        const j = Zs(f);
-        console.log(`i: ${g}, id: ${f}, x: ${j.x}, y: ${j.y}`)
+        const j = Zs(x);
+        console.log(`i: ${g}, id: ${x}, x: ${j.x}, y: ${j.y}`)
       }
       this.paintPixel({
-        id: f,
+        id: x,
         color: h
       })
     }
@@ -11830,8 +11830,8 @@ const Uf = m.memo(() => (m.useEffect(() => {
       [o, r] = m.useState(0),
       [l, d] = m.useState(0),
       [A, h] = m.useState(0),
-      [g, f] = m.useState(0),
-      [j, x] = m.useState([]);
+      [g, x] = m.useState(0),
+      [j, v] = m.useState([]);
     return m.useEffect(() => {
       try {
         X.getStats().then(y => {
@@ -11839,7 +11839,7 @@ const Uf = m.memo(() => (m.useEffect(() => {
           s(B.totalPlayers), i(B.totalRepaints)
         }), X.getMoreStats().then(y => {
           const B = y.data;
-          r(B.premium_users), d(B.active_users), h(B.daily_users), f(B.daily_repaints), x(Object.keys(B.top_countries).map(C => ({
+          r(B.premium_users), d(B.active_users), h(B.daily_users), x(B.daily_repaints), v(Object.keys(B.top_countries).map(C => ({
             key: C,
             value: B.top_countries[C]
           })))
@@ -11988,8 +11988,8 @@ const Uf = m.memo(() => (m.useEffect(() => {
       if (a !== 0) return () => {};
       const A = setInterval(() => {
         const g = Date.now() - r,
-          f = i - g,
-          j = Math.round(f / 1e3);
+          x = i - g,
+          j = Math.round(x / 1e3);
         d(M1(j))
       }, 500);
       return () => {
@@ -12208,29 +12208,29 @@ const Uf = m.memo(() => (m.useEffect(() => {
     const n = _(),
       s = "dailyTransactionInfo",
       a = c(D_),
-      i = c(x => x.daily.getDailyListFetchStatus),
-      o = c(x => x.daily.getFirstDailyFetchStatus),
+      i = c(v => v.daily.getDailyListFetchStatus),
+      o = c(v => v.daily.getFirstDailyFetchStatus),
       r = i === p.fulfilled,
       l = Gn(),
       [d, A] = dn(),
       [h, g] = m.useState(!1),
-      f = c(rt);
+      x = c(rt);
     m.useEffect(() => {
       if (!a || !r) return;
-      const x = localStorage.getItem(s);
-      if (x) {
-        const y = JSON.parse(x);
+      const v = localStorage.getItem(s);
+      if (v) {
+        const y = JSON.parse(v);
         y.dailyId === a.id && Date.now() - y.ts < 10 * 60 * 1e3 ? g(!0) : g(!1), Date.now() - y.ts >= 10 * 60 * 1e3 && localStorage.removeItem(s)
       }
     }, [a]);
     const j = async () => {
       try {
-        const x = a.prices[0],
+        const v = a.prices[0],
           y = await X.startShopTransaction({
             buyerWallet: l,
             currencyId: 2,
             daily: !0,
-            quantity: x.quantity,
+            quantity: v.quantity,
             goodId: a.id
           }),
           B = Be.beginCell().storeUint(0, 32).storeStringTail(y.data.txMemCode).endCell(),
@@ -12251,16 +12251,16 @@ const Uf = m.memo(() => (m.useEffect(() => {
           text: "Success! Wait 3-5 min and reload the app.",
           icon: ""
         })), g(!0)
-      } catch (x) {
-        console.warn(x), n(z({
+      } catch (v) {
+        console.warn(v), n(z({
           id: performance.now(),
           text: "Error! Wait 5 min before starting a new transaction."
         }))
       }
     };
     if (r) {
-      const x = a.prices[0];
-      let y = `Claim for ${x.price} TON`;
+      const v = a.prices[0];
+      let y = `Claim for ${v.price} TON`;
       return t && (y = `Claim in ${cl(t)}`), h && (y = "Pending transaction..."), e.jsxs("div", {
         className: L.content,
         children: [e.jsx("div", {
@@ -12281,7 +12281,7 @@ const Uf = m.memo(() => (m.useEffect(() => {
           className: L.title_container,
           children: e.jsx("div", {
             className: L.title,
-            children: `${a.name} x${x.quantity}`
+            children: `${a.name} x${v.quantity}`
           })
         }), e.jsx("div", {
           className: L.how_container,
@@ -12293,17 +12293,17 @@ const Uf = m.memo(() => (m.useEffect(() => {
           })
         }), e.jsxs("div", {
           className: L.claim_button_container,
-          children: [f !== je && e.jsx("button", {
+          children: [x !== je && e.jsx("button", {
             className: L.no_button,
             children: "Desktop version only"
-          }), l !== "" && f === je && e.jsx("button", {
+          }), l !== "" && x === je && e.jsx("button", {
             disabled: o === p.pending || h,
             className: L.claim_button,
             onPointerUp: async () => {
               t || h || j()
             },
             children: y
-          }), l === "" && f === je && e.jsx("button", {
+          }), l === "" && x === je && e.jsx("button", {
             className: L.claim_button,
             onPointerUp: async () => {
               await d.openModal()
@@ -12456,8 +12456,8 @@ const Uf = m.memo(() => (m.useEffect(() => {
                 A = r.prices[0],
                 h = [L.reward_item],
                 g = [L.reward_item_amount],
-                f = [L.reward_item_title];
-              r.id === s && (h.push(L.reward_item_active), g.push(L.reward_item_amount_active)), d && f.push(L.reward_item_title_premium), d && !r.active && g.push(L.reward_item_amount_premium);
+                x = [L.reward_item_title];
+              r.id === s && (h.push(L.reward_item_active), g.push(L.reward_item_amount_active)), d && x.push(L.reward_item_title_premium), d && !r.active && g.push(L.reward_item_amount_premium);
               let j = _0;
               return l >= 8 && l <= 15 && (j = f0), l >= 16 && l <= 23 && (j = x0), l >= 24 && l <= 31 && (j = v0), e.jsxs("div", {
                 className: h.join(" "),
@@ -12471,7 +12471,7 @@ const Uf = m.memo(() => (m.useEffect(() => {
                 children: [e.jsxs("div", {
                   className: L.reward_item_content_container,
                   children: [e.jsxs("div", {
-                    className: f.join(" "),
+                    className: x.join(" "),
                     children: ["Day ", l + 1]
                   }), e.jsx("img", {
                     src: j,
@@ -12783,9 +12783,9 @@ const Uf = m.memo(() => (m.useEffect(() => {
             rootMargin: "0px",
             threshold: 1
           },
-          g = (f, j) => {
-            f.forEach(x => {
-              x.intersectionRatio >= 1 && (t(Pt.getList({
+          g = (x, j) => {
+            x.forEach(v => {
+              v.intersectionRatio >= 1 && (t(Pt.getList({
                 offset: i,
                 limit: o
               })), j.unobserve(n.current))
@@ -14060,12 +14060,12 @@ const Uf = m.memo(() => (m.useEffect(() => {
                 posY: a
               })).status === 200) {
               r && b.mainImage.worldTemplate.deleteTemplate(r.id);
-              const f = await i(Pt.getTemplateById({
+              const x = await i(Pt.getTemplateById({
                   id: l.id
                 })),
                 j = {
-                  ...f.payload,
-                  url: `${f.payload.url}?time=${Date.now()}`,
+                  ...x.payload,
+                  url: `${x.payload.url}?time=${Date.now()}`,
                   type: Re.my
                 };
               i(B_(j)), i(vi()), await b.mainImage.worldTemplate.add(j), i(z({
@@ -14166,21 +14166,21 @@ const Uf = m.memo(() => (m.useEffect(() => {
     return m.useEffect(() => {}, []), m.useEffect(() => {
       if (t !== null) {
         g(!0);
-        const f = async () => {
+        const x = async () => {
           const j = document.createElement("canvas"),
-            x = j.getContext("2d");
-          x.imageSmoothingEnabled = !1;
+            v = j.getContext("2d");
+          v.imageSmoothingEnabled = !1;
           const y = t.width / t.height;
           let B, C;
           y > 1 ? (B = r, C = r / y) : (C = r, B = r * y);
           const Ce = (r - B) / 2,
             be = (r - C) / 2;
-          j.width = r, j.height = r, x.drawImage(t, Ce, be, B, C);
-          const Y = x.getImageData(0, 0, r, r);
-          JI(Y), x.putImageData(Y, 0, 0), a(Y), o(j.toDataURL())
+          j.width = r, j.height = r, v.drawImage(t, Ce, be, B, C);
+          const Y = v.getImageData(0, 0, r, r);
+          JI(Y), v.putImageData(Y, 0, 0), a(Y), o(j.toDataURL())
         };
         setTimeout(() => {
-          f().then(() => {
+          x().then(() => {
             g(!1)
           })
         }, 100)
@@ -14306,13 +14306,13 @@ const Uf = m.memo(() => (m.useEffect(() => {
       [i] = dn(),
       o = Gn(),
       r = dl(o),
-      l = c(y => y.mining.tasks[v.walletVerification]),
+      l = c(y => y.mining.tasks[f.walletVerification]),
       d = c(y => y.user.verificatedWallet),
       A = ri(d),
       h = Ys(A),
       g = c(y => y.user.hasCaptchaCode);
     console.log("connectedUQ: ", o), console.log("connectedEQ: ", r), console.log("verificatedWallet: ", d), console.log("verificatedWalletUQ: ", A), console.log("formattedVerificatedWalletUQ: ", h);
-    const [f, j] = m.useState(""), x = async () => {
+    const [x, j] = m.useState(""), v = async () => {
       try {
         if (d !== r) {
           s(z({
@@ -14391,7 +14391,7 @@ const Uf = m.memo(() => (m.useEffect(() => {
             })]
           }), l && o !== "" && !g && e.jsx("button", {
             className: We.button,
-            onPointerUp: x,
+            onPointerUp: v,
             children: "Request a code"
           }), e.jsx("div", {
             className: We.divider
@@ -14405,7 +14405,7 @@ const Uf = m.memo(() => (m.useEffect(() => {
               children: e.jsx("input", {
                 className: We.input,
                 placeholder: "Enter your code...",
-                value: f,
+                value: x,
                 onChange: y => {
                   j(y.target.value)
                 }
@@ -14416,7 +14416,7 @@ const Uf = m.memo(() => (m.useEffect(() => {
           className: We.button,
           onPointerUp: async () => {
             var y;
-            if (!(!f || f === "")) {
+            if (!(!x || x === "")) {
               if (o === "") {
                 s(z({
                   id: performance.now(),
@@ -14434,7 +14434,7 @@ const Uf = m.memo(() => (m.useEffect(() => {
               try {
                 const B = await s(Fe.checkCaptcha({
                   wallet: r,
-                  captcha: f
+                  captcha: x
                 }));
                 if (B.meta.requestStatus === p.rejected) throw new Error("error");
                 if ((y = B.payload) != null && y.success) s(z({
@@ -14442,7 +14442,7 @@ const Uf = m.memo(() => (m.useEffect(() => {
                   text: "Success!",
                   icon: ""
                 })), s(iA({
-                  task: v.checkCaptcha,
+                  task: f.checkCaptcha,
                   value: !0
                 })), n(!1);
                 else throw new Error("error")
@@ -14468,23 +14468,23 @@ const Uf = m.memo(() => (m.useEffect(() => {
       o = c(pi.selectAll),
       r = c(U => U.daily.getDailyListFetchStatus),
       l = i >= 1e5,
-      d = c(U => U.mining.tasks[v.spendStars]),
-      A = c(U => U.mining.tasks[v.spendTokens]),
-      h = c(U => U.mining.tasks[v.walletVerification]),
+      d = c(U => U.mining.tasks[f.spendStars]),
+      A = c(U => U.mining.tasks[f.spendTokens]),
+      h = c(U => U.mining.tasks[f.walletVerification]),
       g = c(U => U.user.verificatedWalletStatus),
-      f = c(U => U.mining.tasks.checkCaptcha),
+      x = c(U => U.mining.tasks.checkCaptcha),
       j = c(U => U.user.hasCaptchaCode),
-      x = c(U => U.user.hasCaptchaCodeStatus);
+      v = c(U => U.user.hasCaptchaCodeStatus);
     m.useEffect(() => {
       g === p.idle && t(Fe.getVerificatedWallet())
     }, [g]), m.useEffect(() => {
       r === p.idle && t(kr.getList())
     }, [r]), m.useEffect(() => {
-      x === p.idle && t(Fe.checkHasCaptchaCode())
-    }, [x]);
+      v === p.idle && t(Fe.checkHasCaptchaCode())
+    }, [v]);
     let y = 0,
       B = 0;
-    i >= 1e5 && (y += 1), h && (y += 1), f && (y += 1), o.forEach(U => {
+    i >= 1e5 && (y += 1), h && (y += 1), x && (y += 1), o.forEach(U => {
       U.timestamp && (B += 1)
     });
     const C = () => {
@@ -14600,7 +14600,7 @@ const Uf = m.memo(() => (m.useEffect(() => {
                   children: "Soon"
                 })]
               }), e.jsx(In, {
-                success: f
+                success: x
               })]
             })]
           }), e.jsxs("div", {
@@ -14618,11 +14618,11 @@ const Uf = m.memo(() => (m.useEffect(() => {
               onPointerUp: async () => {
                 if (d) return;
                 const U = await t(xe.checkTask({
-                  key: v.spendStars,
+                  key: f.spendStars,
                   reward: 512,
                   disableFailPopup: !0
                 }));
-                U.meta.requestStatus === p.fulfilled && U.payload[v.spendStars] || n.push("/stars")
+                U.meta.requestStatus === p.fulfilled && U.payload[f.spendStars] || n.push("/stars")
               },
               children: [e.jsx("div", {
                 children: e.jsx("img", {
@@ -14640,11 +14640,11 @@ const Uf = m.memo(() => (m.useEffect(() => {
               onPointerUp: async () => {
                 if (A) return;
                 const U = await t(xe.checkTask({
-                  key: v.spendTokens,
+                  key: f.spendTokens,
                   reward: 512,
                   disableFailPopup: !0
                 }));
-                U.meta.requestStatus === p.fulfilled && U.payload[v.spendTokens] || C()
+                U.meta.requestStatus === p.fulfilled && U.payload[f.spendTokens] || C()
               },
               children: [e.jsx("div", {
                 children: e.jsx("img", {
@@ -14895,11 +14895,11 @@ const Uf = m.memo(() => (m.useEffect(() => {
         x: 0,
         y: 0
       }),
-      [f, j] = m.useState(!1);
+      [x, j] = m.useState(!1);
     return m.useEffect(() => {
       if (s !== null) {
         j(!0);
-        const x = async () => {
+        const v = async () => {
           const y = document.createElement("canvas"),
             B = y.getContext("2d");
           B.imageSmoothingEnabled = !1;
@@ -14913,7 +14913,7 @@ const Uf = m.memo(() => (m.useEffect(() => {
           eS(ft), B.putImageData(ft, 0, 0), o(ft), l(y.toDataURL())
         };
         setTimeout(() => {
-          x().then(() => {
+          v().then(() => {
             j(!1)
           })
         }, 100)
@@ -14925,7 +14925,7 @@ const Uf = m.memo(() => (m.useEffect(() => {
         gap: 14
       },
       children: [r === null && e.jsx(PS, {}), r !== null && e.jsx(SS, {
-        loading: f,
+        loading: x,
         dataUrl: r,
         templateSize: d
       }), r !== null && e.jsx(BS, {
@@ -15219,9 +15219,9 @@ const Uf = m.memo(() => (m.useEffect(() => {
     const A = l <= d,
       h = r.lastSurvivalRepaints - r.repaints,
       g = o && A,
-      f = s && s === a,
-      j = f ? "Winning" : "Won",
-      x = f ? "😔 Losing" : "😔 Lost";
+      x = s && s === a,
+      j = x ? "Winning" : "Won",
+      v = x ? "😔 Losing" : "😔 Lost";
     return e.jsxs("div", {
       className: $.round_container,
       onPointerUp: () => {
@@ -15231,16 +15231,16 @@ const Uf = m.memo(() => (m.useEffect(() => {
         className: $.round_title,
         children: [e.jsxs("div", {
           className: $.round_title_text,
-          children: ["Round ", a, " ", f ? "is on" : "has ended"]
+          children: ["Round ", a, " ", x ? "is on" : "has ended"]
         }), e.jsx("div", {
           className: $.round_indicator,
-          children: f && e.jsx(nc, {})
+          children: x && e.jsx(nc, {})
         }), g && e.jsx("div", {
           className: F($.round_status_success, $.success),
           children: j
         }), !g && e.jsx("div", {
           className: F($.round_status_fail, $.fail),
-          children: x
+          children: v
         })]
       }), e.jsxs("div", {
         className: $.round_main_info,
@@ -15949,11 +15949,11 @@ const Uf = m.memo(() => (m.useEffect(() => {
         count: 0,
         limit: 1e4
       }),
-      [g, f] = m.useState({
+      [g, x] = m.useState({
         count: 0,
         limit: 1
       }),
-      [j, x] = m.useState({
+      [j, v] = m.useState({
         count: 0,
         limit: 5e3
       });
@@ -15974,10 +15974,10 @@ const Uf = m.memo(() => (m.useEffect(() => {
           }), C.group_name === ns.Mythical && h({
             count: C.usage_count,
             limit: C.limit
-          }), C.group_name === ns.Magical && f({
+          }), C.group_name === ns.Magical && x({
             count: C.usage_count,
             limit: C.limit
-          }), C.group_name === ns.Dogs && x({
+          }), C.group_name === ns.Dogs && v({
             count: C.usage_count,
             limit: C.limit
           })
@@ -16855,8 +16855,8 @@ const zT = () => {
       [r, l] = m.useState(p.idle),
       [d, A] = m.useState(!1),
       [h, g] = dn(),
-      f = c(Y => Y.color.active),
-      x = (be = c(Y => Y.shop.products[a]).prices.filter(Y => Y.currency_id === i)[0]) == null ? void 0 : be.price,
+      x = c(Y => Y.color.active),
+      v = (be = c(Y => Y.shop.products[a]).prices.filter(Y => Y.currency_id === i)[0]) == null ? void 0 : be.price,
       y = Gn();
     if (c(Y => Y.shop.selectedCurrency) === 1 || y === "") return null;
     const C = async Y => {
@@ -16891,7 +16891,7 @@ const zT = () => {
         };
       await h.sendTransaction(hc), n(!0), A(!0), l(p.fulfilled)
     };
-    return x ? e.jsx("button", {
+    return v ? e.jsx("button", {
       className: ee.button,
       onPointerUp: async Y => {
         if (Y.stopPropagation(), t(!1), d) {
@@ -16906,7 +16906,7 @@ const zT = () => {
               currencyId: i,
               quantity: o,
               goodId: a,
-              activeColor: f
+              activeColor: x
             });
             if (i === 2) await C(U.data);
             else if (i === 3 || i === 4 || i === 5 || i === 6 || i === 7 || i === 8 || i === 9) await Ce(U.data);
@@ -16958,18 +16958,18 @@ const zT = () => {
     setRunParticle: n
   }) => {
     const s = _(),
-      a = c(f => f.shop.activeProductCardId),
-      i = c(f => f.shop.products[a]),
-      o = c(f => f.shop.amount),
+      a = c(x => x.shop.activeProductCardId),
+      i = c(x => x.shop.products[a]),
+      o = c(x => x.shop.amount),
       [r, l] = m.useState(p.idle),
       [d, A] = m.useState(!1),
-      h = c(f => f.shop.selectedCurrency),
-      g = c(f => f.color.active);
+      h = c(x => x.shop.selectedCurrency),
+      g = c(x => x.color.active);
     return h !== 1 ? null : e.jsx("div", {
       className: ee.button_container,
-      onPointerUp: async f => {
-        var x;
-        if (f.stopPropagation(), d) {
+      onPointerUp: async x => {
+        var v;
+        if (x.stopPropagation(), d) {
           s(li()), l(p.idle);
           return
         }
@@ -16982,7 +16982,7 @@ const zT = () => {
             qty: j,
             pixanosColor: g
           });
-          y.status === 200 && ((x = y == null ? void 0 : y.data) == null ? void 0 : x.ok) === !0 && window.Telegram.WebApp.openInvoice(y.data.result, B => {
+          y.status === 200 && ((v = y == null ? void 0 : y.data) == null ? void 0 : v.ok) === !0 && window.Telegram.WebApp.openInvoice(y.data.result, B => {
             var Ce, be;
             const C = Number(a);
             if (B === "paid") {
@@ -17098,19 +17098,19 @@ function co(t, n) {
 }
 const ik = () => {
     const t = _(),
-      n = c(x => x.shop.activeProductCardId),
-      s = c(x => x.shop.amount),
-      i = c(x => x.shop.products[n]).isOnePiece,
+      n = c(v => v.shop.activeProductCardId),
+      s = c(v => v.shop.amount),
+      i = c(v => v.shop.products[n]).isOnePiece,
       [o, r] = m.useState([s]),
       [l, d] = m.useState(ss(s).max),
       [A, h] = m.useState(ss(s).step),
       g = l === 5e3 ? "5000" : `${l}+`,
-      f = x => {
-        const y = x[0];
+      x = v => {
+        const y = v[0];
         t(sa(co(y, A))), r([co(y, A)])
       },
-      j = x => {
-        const y = x[0];
+      j = v => {
+        const y = v[0];
         y === l && (d(ss(y).max), h(ss(y).step))
       };
     return i ? null : e.jsxs("div", {
@@ -17121,22 +17121,22 @@ const ik = () => {
         min: A,
         max: l,
         rtl: !1,
-        onChange: f,
+        onChange: x,
         onFinalChange: j,
         renderTrack: ({
-          props: x,
+          props: v,
           children: y
         }) => e.jsx("div", {
-          onMouseDown: x.onMouseDown,
-          onTouchStart: x.onTouchStart,
+          onMouseDown: v.onMouseDown,
+          onTouchStart: v.onTouchStart,
           style: {
-            ...x.style,
+            ...v.style,
             height: "36px",
             display: "flex",
             width: "100%"
           },
           children: e.jsx("div", {
-            ref: x.ref,
+            ref: v.ref,
             style: {
               height: "4px",
               borderRadius: "2px",
@@ -17154,13 +17154,13 @@ const ik = () => {
           })
         }),
         renderThumb: ({
-          props: x,
+          props: v,
           isDragged: y
         }) => m.createElement("div", {
-          ...x,
-          key: x.key,
+          ...v,
+          key: v.key,
           style: {
-            ...x.style,
+            ...v.style,
             height: "20px",
             width: "20px",
             borderRadius: "50%",
@@ -18083,17 +18083,17 @@ const zk = () => {
       l = () => {
         n(Qt(!1))
       },
-      d = x => {
-        n(Qt(!1)), t.push(x)
+      d = v => {
+        n(Qt(!1)), t.push(v)
       },
       A = () => {
-        const x = `${window.location.origin}/stars?initData=${btoa(window.Telegram.WebApp.initData)}`;
-        Bt(x)
+        const v = `${window.location.origin}/stars?initData=${btoa(window.Telegram.WebApp.initData)}`;
+        Bt(v)
       },
-      h = c(x => x.user.verificatedWallet),
+      h = c(v => v.user.verificatedWallet),
       g = ri(h),
-      f = Ys(g),
-      j = c(x => x.user.verificatedWalletStatus);
+      x = Ys(g),
+      j = c(v => v.user.verificatedWalletStatus);
     return m.useEffect(() => {
       o && j === p.idle && n(Fe.getVerificatedWallet())
     }, [o]), e.jsx(e.Fragment, {
@@ -18216,9 +18216,9 @@ const zk = () => {
               })]
             }), e.jsxs("div", {
               className: K.bottom_container,
-              children: [e.jsx(LD, {}), e.jsx(QD, {}), f && f !== "" && e.jsxs("div", {
+              children: [e.jsx(LD, {}), e.jsx(QD, {}), x && x !== "" && e.jsxs("div", {
                 className: K.verificated_wallet,
-                children: ["Verificated wallet: ", f]
+                children: ["Verificated wallet: ", x]
               }), e.jsxs("div", {
                 className: K.button_wrapper,
                 children: [s !== "" && e.jsx(mo, {
@@ -18545,13 +18545,13 @@ const $D = "_container_gb8eq_1",
       }, []), m.useEffect(() => {
         g === p.idle && a && a.user && a.user.token && a.user.token !== "" && t(Fe.getVerificatedWallet())
       }, [g]), !a) return null;
-    let f = a.name,
+    let x = a.name,
       j = a.description,
-      x = a.image_url || Ka,
+      v = a.image_url || Ka,
       y = "",
       B = "goods";
-    return a.user.token !== "" && (B = "crypto", x = Ka, a.user.currency_id, f = a.user.token, j = "Yo, you hit the crypto jackpot! Nice one, fam!", r.forEach(C => {
-      C.name === f && (x = C.image)
+    return a.user.token !== "" && (B = "crypto", v = Ka, a.user.currency_id, x = a.user.token, j = "Yo, you hit the crypto jackpot! Nice one, fam!", r.forEach(C => {
+      C.name === x && (v = C.image)
     }), y = a.user.amount + " "), e.jsx(Ve, {
       show: s,
       onPointerUp: l,
@@ -18586,14 +18586,14 @@ const $D = "_container_gb8eq_1",
                 className: F(fe.glow, fe.reverse)
               }), e.jsx("img", {
                 alt: "img",
-                src: x,
+                src: v,
                 className: fe.image
               })]
             }), e.jsxs("div", {
               className: fe.text_container,
               children: [e.jsx("div", {
                 className: fe.title,
-                children: y + f
+                children: y + x
               }), e.jsx("div", {
                 className: fe.description,
                 children: j
@@ -19508,12 +19508,12 @@ const Bn = window.Telegram.WebApp.Accelerometer,
               n.push(g)
             }
           } catch {
-            const f = {
+            const x = {
               a: 1.111111,
               b: 1.111111,
               c: 1.111111
             };
-            n.push(f)
+            n.push(x)
           }
           try {
             if (r) {
@@ -19525,12 +19525,12 @@ const Bn = window.Telegram.WebApp.Accelerometer,
               s.push(g)
             }
           } catch {
-            const f = {
+            const x = {
               a: 1.111111,
               b: 1.111111,
               c: 1.111111
             };
-            s.push(f)
+            s.push(x)
           }
           try {
             if (l) {
@@ -19542,12 +19542,12 @@ const Bn = window.Telegram.WebApp.Accelerometer,
               a.push(g)
             }
           } catch {
-            const f = {
+            const x = {
               a: 1.111111,
               b: 1.111111,
               c: 1.111111
             };
-            a.push(f)
+            a.push(x)
           }
         } catch {}
       };
