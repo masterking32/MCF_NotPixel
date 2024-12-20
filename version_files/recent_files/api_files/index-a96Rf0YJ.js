@@ -15312,7 +15312,7 @@ const Uf = m.memo(() => (m.useEffect(() => {
         }), e.jsx("div", {
           className: $.past_rounds_divider
         })]
-      }), t.map(s => n && n === s.round_id || s.round_id === 9 ? null : e.jsx(I2, {
+      }), t.map(s => n && n === s.round_id ? null : e.jsx(I2, {
         result: s
       }, s.round_id))]
     }) : null
