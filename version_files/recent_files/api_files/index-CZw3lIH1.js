@@ -745,7 +745,7 @@ B("main/startTransaction", async ({
 const dc = {
     show: !1,
     activeProductCardId: 1,
-    amount: 1,
+    amount: 50,
     products: {
       1: {
         id: 1,
@@ -756,39 +756,39 @@ const dc = {
         prices: [{
           currency_id: 1,
           currency_name: "XTR",
-          price: 32
+          price: 1
         }, {
           currency_id: 2,
           currency_name: "TON",
-          price: .06
+          price: .002
         }, {
           currency_id: 3,
           currency_name: "NOT",
-          price: 50
+          price: 2
         }, {
           currency_id: 4,
           currency_name: "USDT",
-          price: .35
+          price: .01
         }, {
           currency_id: 5,
           currency_name: "DOGS",
-          price: 600
+          price: 20
         }, {
           currency_id: 6,
           currency_name: "ANON",
-          price: 100
+          price: 3
         }, {
           currency_id: 7,
           currency_name: "CATI",
-          price: .8
+          price: .03
         }, {
           currency_id: 8,
           currency_name: "X",
-          price: 1900
+          price: 60
         }, {
           currency_id: 9,
           currency_name: "Major",
-          price: .5
+          price: .01
         }],
         currency: "XTR",
         isOnePiece: !1
@@ -802,39 +802,39 @@ const dc = {
         prices: [{
           currency_id: 1,
           currency_name: "XTR",
-          price: 64
+          price: 1
         }, {
           currency_id: 2,
           currency_name: "TON",
-          price: .12
+          price: .002
         }, {
           currency_id: 3,
           currency_name: "NOT",
-          price: 100
+          price: 2
         }, {
           currency_id: 4,
           currency_name: "USDT",
-          price: .7
+          price: .01
         }, {
           currency_id: 5,
           currency_name: "DOGS",
-          price: 1200
+          price: 20
         }, {
           currency_id: 6,
           currency_name: "ANON",
-          price: 200
+          price: 3
         }, {
           currency_id: 7,
           currency_name: "CATI",
-          price: 1.6
+          price: .03
         }, {
           currency_id: 8,
           currency_name: "X",
-          price: 3800
+          price: 60
         }, {
           currency_id: 9,
           currency_name: "Major",
-          price: 1
+          price: .01
         }],
         currency: "XTR",
         isOnePiece: !1
@@ -962,39 +962,39 @@ const dc = {
         prices: [{
           currency_id: 1,
           currency_name: "XTR",
-          price: 32
+          price: 1
         }, {
           currency_id: 2,
           currency_name: "TON",
-          price: .06
+          price: .002
         }, {
           currency_id: 3,
           currency_name: "NOT",
-          price: 50
+          price: 2
         }, {
           currency_id: 4,
           currency_name: "USDT",
-          price: .35
+          price: .01
         }, {
           currency_id: 5,
           currency_name: "DOGS",
-          price: 600
+          price: 20
         }, {
           currency_id: 6,
           currency_name: "ANON",
-          price: 100
+          price: 3
         }, {
           currency_id: 7,
           currency_name: "CATI",
-          price: .8
+          price: .03
         }, {
           currency_id: 8,
           currency_name: "X",
-          price: 1900
+          price: 60
         }, {
           currency_id: 9,
           currency_name: "Major",
-          price: .5
+          price: .01
         }],
         currency: "XTR",
         isOnePiece: !1
@@ -1004,27 +1004,43 @@ const dc = {
         name: "Pumpkin",
         description: "A 7x7 pumpkin blast! No reward, just fun. Boo! Boo! Boo! Pumpkin soup canvas.",
         image_url: Do,
-        price: 16,
+        price: 2,
         prices: [{
           currency_id: 1,
           currency_name: "XTR",
-          price: 16
+          price: 2
         }, {
           currency_id: 2,
           currency_name: "TON",
-          price: .04
+          price: .004
         }, {
           currency_id: 3,
           currency_name: "NOT",
-          price: 25
+          price: 4
         }, {
           currency_id: 4,
           currency_name: "USDT",
-          price: 20
+          price: .02
         }, {
           currency_id: 5,
           currency_name: "DOGS",
-          price: 250
+          price: 40
+        }, {
+          currency_id: 6,
+          currency_name: "ANON",
+          price: 6
+        }, {
+          currency_id: 7,
+          currency_name: "CATI",
+          price: .06
+        }, {
+          currency_id: 8,
+          currency_name: "X",
+          price: 120
+        }, {
+          currency_id: 9,
+          currency_name: "Major",
+          price: .02
         }],
         currency: "XTR",
         isOnePiece: !1
@@ -1182,7 +1198,7 @@ const dc = {
     },
     getProductsStatus: u.idle,
     useProductStatus: u.idle,
-    order: [1, 2, 6, 4],
+    order: [1, 2, 6],
     selectedCurrency: 1,
     crypto: [{
       currency_id: 1,
@@ -2119,7 +2135,7 @@ const dc = {
               const i = t[o];
               let r = !((o === 4 || o === 5) && s[o] > 0);
               {
-                let c = o >= 9 && o <= 11 ? "limited" : "sale";
+                let c = o >= 9 && o <= 11 ? "limited" : "not_sale";
                 return e.jsx(Qc, {
                   item: i,
                   active: r,
@@ -7147,20 +7163,19 @@ const yA = p.memo(() => (p.useEffect(() => {
   },
   lg = () => {
     const n = f(),
-      t = l(c => c.canvas.coords),
-      s = l(c => c.main.fastMode),
-      a = l(c => c.main.currentFastType),
-      o = l(c => c.shop.available);
-    if (!t || !(o[4] > 0)) return null;
-    const r = [C.button, C.shop_button, C.fast_type_button];
+      t = l(i => i.canvas.coords),
+      s = l(i => i.main.fastMode),
+      a = l(i => i.main.currentFastType);
+    if (!t) return null;
+    const o = [C.button, C.shop_button, C.fast_type_button];
     return e.jsxs("button", {
-      className: r.join(" "),
+      className: o.join(" "),
       onPointerUp: () => {
         if (s || a) return;
-        const c = w.mainImage.getPixelColor({
+        const i = w.mainImage.getPixelColor({
           coords: t
         });
-        n(Sa(c))
+        n(Sa(i))
       },
       children: [e.jsx("div", {
         className: C.disabled_button_cover,
@@ -7193,13 +7208,13 @@ const yA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  ug = () => e.jsx("div", {
+  ug = () => l(t => t.canvas.coords) ? e.jsx("div", {
     className: eo.layout,
     children: e.jsxs("div", {
       className: eo.container + " " + C.container__bottom,
       children: [e.jsx(Mm, {}), e.jsx(Um, {}), e.jsx(rA, {}), e.jsx(tm, {}), e.jsx(cg, {}), e.jsx(lg, {}), e.jsx(dg, {})]
     })
-  }),
+  }) : null,
   pg = ({
     open: n,
     setOpen: t,
@@ -13815,7 +13830,7 @@ const YN = () => {
       children: [e.jsx(pa.Range, {
         values: i,
         step: m,
-        min: m,
+        min: 50,
         max: c,
         rtl: !1,
         onChange: x,
