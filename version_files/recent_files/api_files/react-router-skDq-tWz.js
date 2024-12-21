@@ -42,9 +42,9 @@ var d = typeof Symbol == "function" && Symbol.for,
   P = d ? Symbol.for("react.provider") : 60109,
   E = d ? Symbol.for("react.context") : 60110,
   N = d ? Symbol.for("react.async_mode") : 60111,
-  L = d ? Symbol.for("react.concurrent_mode") : 60111,
-  U = d ? Symbol.for("react.forward_ref") : 60112,
-  w = d ? Symbol.for("react.suspense") : 60113,
+  w = d ? Symbol.for("react.concurrent_mode") : 60111,
+  L = d ? Symbol.for("react.forward_ref") : 60112,
+  U = d ? Symbol.for("react.suspense") : 60113,
   lt = d ? Symbol.for("react.suspense_list") : 60120,
   A = d ? Symbol.for("react.memo") : 60115,
   R = d ? Symbol.for("react.lazy") : 60116,
@@ -60,16 +60,16 @@ function y(t) {
       case H:
         switch (t = t.type, t) {
           case N:
-          case L:
+          case w:
           case S:
           case M:
           case $:
-          case w:
+          case U:
             return t;
           default:
             switch (t = t && t.$$typeof, t) {
               case E:
-              case U:
+              case L:
               case R:
               case A:
               case P:
@@ -85,21 +85,21 @@ function y(t) {
 }
 
 function Z(t) {
-  return y(t) === L
+  return y(t) === w
 }
 c.AsyncMode = N;
-c.ConcurrentMode = L;
+c.ConcurrentMode = w;
 c.ContextConsumer = E;
 c.ContextProvider = P;
 c.Element = H;
-c.ForwardRef = U;
+c.ForwardRef = L;
 c.Fragment = S;
 c.Lazy = R;
 c.Memo = A;
 c.Portal = I;
 c.Profiler = M;
 c.StrictMode = $;
-c.Suspense = w;
+c.Suspense = U;
 c.isAsyncMode = function(t) {
   return Z(t) || y(t) === N
 };
@@ -114,7 +114,7 @@ c.isElement = function(t) {
   return typeof t == "object" && t !== null && t.$$typeof === H
 };
 c.isForwardRef = function(t) {
-  return y(t) === U
+  return y(t) === L
 };
 c.isFragment = function(t) {
   return y(t) === S
@@ -135,10 +135,10 @@ c.isStrictMode = function(t) {
   return y(t) === $
 };
 c.isSuspense = function(t) {
-  return y(t) === w
+  return y(t) === U
 };
 c.isValidElementType = function(t) {
-  return typeof t == "string" || typeof t == "function" || t === S || t === L || t === M || t === $ || t === w || t === lt || typeof t == "object" && t !== null && (t.$$typeof === R || t.$$typeof === A || t.$$typeof === P || t.$$typeof === E || t.$$typeof === U || t.$$typeof === ht || t.$$typeof === mt || t.$$typeof === dt || t.$$typeof === ft)
+  return typeof t == "string" || typeof t == "function" || t === S || t === w || t === M || t === $ || t === U || t === lt || typeof t == "object" && t !== null && (t.$$typeof === R || t.$$typeof === A || t.$$typeof === P || t.$$typeof === E || t.$$typeof === L || t.$$typeof === ht || t.$$typeof === mt || t.$$typeof === dt || t.$$typeof === ft)
 };
 c.typeOf = y;
 var B = 1073741823,
@@ -351,7 +351,33 @@ function nt(t, e) {
 function $t(t) {
   return m.Children.count(t) === 0
 }
-m.Component;
+var Bt = function(t) {
+  g(e, t);
+
+  function e() {
+    return t.apply(this, arguments) || this
+  }
+  var i = e.prototype;
+  return i.render = function() {
+    var n = this;
+    return m.createElement(_.Consumer, null, function(s) {
+      s || j();
+      var a = n.props.location || s.location,
+        f = n.props.computedMatch ? n.props.computedMatch : n.props.path ? nt(a.pathname, n.props) : s.match,
+        l = C({}, s, {
+          location: a,
+          match: f
+        }),
+        u = n.props,
+        o = u.children,
+        p = u.component,
+        h = u.render;
+      return Array.isArray(o) && $t(o) && (o = null), m.createElement(_.Provider, {
+        value: l
+      }, l.match ? o ? typeof o == "function" ? o(l) : o : p ? m.createElement(p, l) : h ? h(l) : null : typeof o == "function" ? o(l) : null)
+    })
+  }, e
+}(m.Component);
 
 function F(t) {
   return t.charAt(0) === "/" ? t : "/" + t
@@ -383,16 +409,43 @@ function D(t) {
 
 function Y() {}
 m.Component;
-m.Component;
-var rt = m.useContext;
+var Dt = function(t) {
+    g(e, t);
 
-function Bt() {
+    function e() {
+      return t.apply(this, arguments) || this
+    }
+    var i = e.prototype;
+    return i.render = function() {
+      var n = this;
+      return m.createElement(_.Consumer, null, function(s) {
+        s || j();
+        var a = n.props.location || s.location,
+          f, l;
+        return m.Children.forEach(n.props.children, function(u) {
+          if (l == null && m.isValidElement(u)) {
+            f = u;
+            var o = u.props.path || u.props.from;
+            l = o ? nt(a.pathname, C({}, u.props, {
+              path: o
+            })) : s.match
+          }
+        }), l ? m.cloneElement(f, {
+          location: a,
+          computedMatch: l
+        }) : null
+      })
+    }, e
+  }(m.Component),
+  rt = m.useContext;
+
+function jt() {
   return rt(tt)
 }
 
-function Dt() {
+function Ht() {
   return rt(_).location
 }
 export {
-  et as R, Bt as a, _ as c, nt as m, Dt as u
+  et as R, Dt as S, Bt as a, Ht as b, _ as c, nt as m, jt as u
 };
