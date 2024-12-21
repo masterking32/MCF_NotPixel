@@ -49,6 +49,7 @@ class FarmBot:
         self.tgAccount = tgAccount
 
     async def run(self):
+        return
         self.log.info(
             f"<g>🤖 Starting NotPixel farming for account <cyan>{self.account_name}</cyan>...</g>"
         )
