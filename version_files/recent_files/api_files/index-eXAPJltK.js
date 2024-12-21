@@ -5,7 +5,7 @@ var ir = (n, t, s) => t in n ? or(n, t, {
   writable: !0,
   value: s
 }) : n[t] = s;
-var In = (n, t, s) => ir(n, typeof t != "symbol" ? t + "" : t, s);
+var Tn = (n, t, s) => ir(n, typeof t != "symbol" ? t + "" : t, s);
 import {
   j as e,
   r as p,
@@ -47,9 +47,9 @@ import {
   b as pr
 } from "./@tonconnect-CKEjIK8E.js";
 import {
-  u as vs,
-  e as ws,
-  a as bs
+  u as ws,
+  e as bs,
+  a as js
 } from "./@react-spring-BiYD2lL6.js";
 import {
   C as mr
@@ -61,7 +61,7 @@ import {
   u as Y,
   S as hr,
   a as X,
-  b as Es
+  b as Bs
 } from "./react-router-skDq-tWz.js";
 import {
   c as Dt
@@ -71,7 +71,7 @@ import {
   A as ja
 } from "./framer-motion-BggZOsGS.js";
 import {
-  u as Bs,
+  u as Ds,
   i as gr
 } from "./react-i18next-4MQgfZKk.js";
 import {
@@ -312,7 +312,7 @@ const xr = "_stars_img_container_1wci0_1",
   Hr = {
     friendsForTemplateCreation: 128
   },
-  Tn = {
+  En = {
     success: "success",
     neutral: "neutral",
     fail: "fail"
@@ -416,7 +416,7 @@ const Qt = No,
       return !1
     }
   },
-  Ds = async n => {
+  bn = async n => {
     if (navigator.clipboard && window.isSecureContext) try {
       return await navigator.clipboard.writeText(n), Promise.resolve(!0)
     } catch (s) {
@@ -1247,8 +1247,8 @@ const dc = {
     limitedEnd: null,
     showLimitedGoodPopup: !1
   },
-  Mn = D("shop/getProducts", async () => (await F.getProducts()).data),
-  Qn = D("shop/useProduct", async ({
+  Qn = D("shop/getProducts", async () => (await F.getProducts()).data),
+  Fn = D("shop/useProduct", async ({
     pixelId: n,
     productId: t,
     color: s
@@ -1308,22 +1308,22 @@ const dc = {
       }
     },
     extraReducers: n => {
-      n.addCase(Mn.pending, t => {
+      n.addCase(Qn.pending, t => {
         t.getProductsStatus = u.pending
-      }).addCase(Mn.fulfilled, (t, s) => {
+      }).addCase(Qn.fulfilled, (t, s) => {
         s.payload.goodsAvailable.forEach(a => {
           t.products[a.id] = {
             ...t.products[a.id],
             ...a
           }
         }), t.getProductsStatus = u.fulfilled
-      }).addCase(Mn.rejected, t => {
-        t.getProductsStatus = u.rejected
-      }).addCase(Qn.pending, t => {
-        t.useProductStatus = u.pending
-      }).addCase(Qn.fulfilled, (t, s) => {
-        t.useProductStatus = u.fulfilled
       }).addCase(Qn.rejected, t => {
+        t.getProductsStatus = u.rejected
+      }).addCase(Fn.pending, t => {
+        t.useProductStatus = u.pending
+      }).addCase(Fn.fulfilled, (t, s) => {
+        t.useProductStatus = u.fulfilled
+      }).addCase(Fn.rejected, t => {
         t.useProductStatus = u.rejected
       })
     }
@@ -1332,25 +1332,25 @@ const dc = {
     setProductCard: qe,
     showProductCard: Le,
     hideProductCard: Sa,
-    increaseAmount: xE,
-    decreaseAmount: yE,
+    increaseAmount: yE,
+    decreaseAmount: vE,
     setAmount: ks,
     setAvailable: uc,
-    addAvailable: En,
+    addAvailable: Bn,
     subAvailable: Rs,
     setSelectedCurrency: pn,
-    setLimitedGoods: vE,
-    clearLimitedGoods: wE,
+    setLimitedGoods: wE,
+    clearLimitedGoods: bE,
     showLimitedGoodsPopup: pc,
-    hideLimitedGoodsPopup: bE
+    hideLimitedGoodsPopup: jE
   } = Uo.actions,
   Ia = n => n.shop.crypto,
   mc = Uo.reducer,
   Us = {
-    getProducts: Mn,
-    useProduct: Qn
+    getProducts: Qn,
+    useProduct: Fn
   },
-  bn = ({
+  jn = ({
     fontSize: n = 18,
     className: t = "",
     style: s = {}
@@ -1370,7 +1370,7 @@ const dc = {
         paddingRight: 4,
         marginBottom: -4
       },
-      children: e.jsx(bn, {
+      children: e.jsx(jn, {
         fontSize: 14
       })
     }) : e.jsx("img", {
@@ -1740,7 +1740,7 @@ const dc = {
   jl = "_container_13e1w_10",
   Pl = "_star_13e1w_14",
   Cl = "_move_13e1w_1",
-  Bn = {
+  Dn = {
     layout: bl,
     container: jl,
     star: Pl,
@@ -1769,22 +1769,22 @@ const dc = {
     const n = Array.from(Array(30)),
       t = l(Ze);
     return e.jsx("div", {
-      className: Bn.layout,
+      className: Dn.layout,
       children: e.jsx("div", {
-        className: Bn.container,
+        className: Dn.container,
         children: n.map((s, a) => {
           const o = L(4, 14);
           return t === de ? e.jsx(B, {
             size: o,
-            className: Bn.star,
+            className: Dn.star,
             style: {
               animationDelay: `-${a*300}ms`,
               transform: `translate(${L(-80,-170)*(a%2===1?1:-1)}px, ${L(-100,100)}px)`
             },
             children: ""
-          }, a) : e.jsx(bn, {
+          }, a) : e.jsx(jn, {
             fontSize: o,
-            className: Bn.star,
+            className: Dn.star,
             style: {
               animationDelay: `-${a*300}ms`,
               transform: `translate(${L(-80,-170)*(a%2===1?1:-1)}px, ${L(-100,100)}px)`
@@ -1829,9 +1829,9 @@ const dc = {
     item_text_container: Ql,
     item_text: Fl
   },
-  js = fn(),
   Ps = fn(),
-  Cs = fn({
+  Cs = fn(),
+  Ns = fn({
     sortComparer: (n, t) => n.id - t.id
   }),
   Ta = fn(),
@@ -1846,13 +1846,13 @@ const dc = {
     checkCaptchaStatus: u.idle,
     hasCaptchaCode: !1,
     hasCaptchaCodeStatus: u.idle,
-    pixelsForSale: js.getInitialState(),
+    pixelsForSale: Ps.getInitialState(),
     pixelsForSaleOffset: 0,
     pixelsForSaleLimit: 10,
     pixelsForSaleTotal: 0,
     totalPrice: 0,
     pixelCoins: 0,
-    pixelsSold: Ps.getInitialState(),
+    pixelsSold: Cs.getInitialState(),
     pixelsSoldOffset: 0,
     pixelsSoldLimit: 10,
     pixelsSoldTotal: 0,
@@ -1860,31 +1860,31 @@ const dc = {
     pixelsSoldFetchStatus: u.idle,
     getUserFetchStatus: u.idle
   },
-  Fn = D("user/getVerificatedWallet", async () => (await F.getVerificatedWallet()).data),
-  zn = D("user/checkCaptcha", async ({
+  zn = D("user/getVerificatedWallet", async () => (await F.getVerificatedWallet()).data),
+  Hn = D("user/checkCaptcha", async ({
     wallet: n,
     captcha: t
   }) => (await F.checkCaptcha({
     wallet: n,
     captcha: t
   })).data),
-  Hn = D("user/checkHasCaptchaCode", async () => (await F.checkHasCaptchaCode()).data),
-  qn = D("user/getUserPixels", async ({
+  qn = D("user/checkHasCaptchaCode", async () => (await F.checkHasCaptchaCode()).data),
+  Ln = D("user/getUserPixels", async ({
     offset: n,
     limit: t
   }) => (await F.getUserPixels({
     offset: n,
     limit: t
   })).data),
-  Ln = D("user/getPixelsForSaleTotal", async () => (await F.getUserPixelsCount()).data),
-  Vn = D("user/getUserPixelsSold", async ({
+  Vn = D("user/getPixelsForSaleTotal", async () => (await F.getUserPixelsCount()).data),
+  Gn = D("user/getUserPixelsSold", async ({
     offset: n,
     limit: t
   }, s) => (await F.getUserPixelsSold({
     offset: n,
     limit: t
   })).data),
-  Gn = D("user/getUser", async (n, {
+  Xn = D("user/getUser", async (n, {
     rejectWithValue: t
   }) => {
     try {
@@ -1922,7 +1922,7 @@ const dc = {
         n.pixelsForSaleFetchStatus = t.payload.status
       },
       removePixelsForSale: n => {
-        js.removeAll(n.pixelsForSale)
+        Ps.removeAll(n.pixelsForSale)
       },
       setPixelsSoldOffset: (n, t) => {
         n.pixelsSoldOffset = t.payload.offset
@@ -1934,7 +1934,7 @@ const dc = {
         n.pixelsSoldFetchStatus = t.payload.status
       },
       removePixelsSold: n => {
-        Ps.removeAll(n.pixelsSold)
+        Cs.removeAll(n.pixelsSold)
       },
       addPixelCoins: (n, t) => {
         n.pixelCoins += t.payload
@@ -1955,62 +1955,62 @@ const dc = {
       }
     },
     extraReducers: n => {
-      n.addCase(qn.pending, t => {
+      n.addCase(Ln.pending, t => {
         t.pixelsForSaleFetchStatus = u.pending
-      }).addCase(qn.fulfilled, (t, s) => {
-        js.upsertMany(t.pixelsForSale, s.payload.pixels), t.totalPrice = s.payload.totalPrice, t.pixelsForSaleTotal = s.payload.total, t.pixelsForSaleFetchStatus = u.fulfilled
-      }).addCase(qn.rejected, t => {
+      }).addCase(Ln.fulfilled, (t, s) => {
+        Ps.upsertMany(t.pixelsForSale, s.payload.pixels), t.totalPrice = s.payload.totalPrice, t.pixelsForSaleTotal = s.payload.total, t.pixelsForSaleFetchStatus = u.fulfilled
+      }).addCase(Ln.rejected, t => {
         t.pixelsForSaleFetchStatus = u.rejected
-      }).addCase(Fn.pending, t => {
-        t.verificatedWalletStatus = u.pending
-      }).addCase(Fn.fulfilled, (t, s) => {
-        t.verificatedWallet = s.payload.wallet_address, t.verificatedWalletStatus = u.fulfilled
-      }).addCase(Fn.rejected, t => {
-        t.verificatedWalletStatus = u.rejected
-      }).addCase(Hn.pending, t => {
-        t.hasCaptchaCodeStatus = u.pending
-      }).addCase(Hn.fulfilled, (t, s) => {
-        t.hasCaptchaCode = s.payload, t.hasCaptchaCodeStatus = u.fulfilled
-      }).addCase(Hn.rejected, t => {
-        t.hasCaptchaCodeStatus = u.rejected
       }).addCase(zn.pending, t => {
-        t.checkCaptchaStatus = u.pending
+        t.verificatedWalletStatus = u.pending
       }).addCase(zn.fulfilled, (t, s) => {
-        t.checkCaptchaStatus = u.fulfilled
+        t.verificatedWallet = s.payload.wallet_address, t.verificatedWalletStatus = u.fulfilled
       }).addCase(zn.rejected, t => {
+        t.verificatedWalletStatus = u.rejected
+      }).addCase(qn.pending, t => {
+        t.hasCaptchaCodeStatus = u.pending
+      }).addCase(qn.fulfilled, (t, s) => {
+        t.hasCaptchaCode = s.payload, t.hasCaptchaCodeStatus = u.fulfilled
+      }).addCase(qn.rejected, t => {
+        t.hasCaptchaCodeStatus = u.rejected
+      }).addCase(Hn.pending, t => {
+        t.checkCaptchaStatus = u.pending
+      }).addCase(Hn.fulfilled, (t, s) => {
+        t.checkCaptchaStatus = u.fulfilled
+      }).addCase(Hn.rejected, t => {
         t.checkCaptchaStatus = u.rejected
-      }).addCase(Vn.pending, t => {
-        t.pixelsSoldFetchStatus = u.pending
-      }).addCase(Vn.fulfilled, (t, s) => {
-        Ps.upsertMany(t.pixelsSold, s.payload.pixels), t.pixelsSoldTotal = s.payload.total, t.pixelsSoldFetchStatus = u.fulfilled
-      }).addCase(Vn.rejected, t => {
-        t.pixelsSoldFetchStatus = u.rejected
       }).addCase(Gn.pending, t => {
-        t.getUserFetchStatus = u.pending
+        t.pixelsSoldFetchStatus = u.pending
       }).addCase(Gn.fulfilled, (t, s) => {
+        Cs.upsertMany(t.pixelsSold, s.payload.pixels), t.pixelsSoldTotal = s.payload.total, t.pixelsSoldFetchStatus = u.fulfilled
+      }).addCase(Gn.rejected, t => {
+        t.pixelsSoldFetchStatus = u.rejected
+      }).addCase(Xn.pending, t => {
+        t.getUserFetchStatus = u.pending
+      }).addCase(Xn.fulfilled, (t, s) => {
         t.user = {
           ...s.payload.data
         }, t.country = s.payload.country, t.getUserFetchStatus = u.fulfilled
-      }).addCase(Gn.rejected, (t, s) => {
+      }).addCase(Xn.rejected, (t, s) => {
         t.getUserFetchStatus = u.rejected
-      }).addCase(Ln.pending, t => {}).addCase(Ln.fulfilled, (t, s) => {
+      }).addCase(Vn.pending, t => {}).addCase(Vn.fulfilled, (t, s) => {
         t.pixelsForSaleTotal = s.payload.myPixelsCount
-      }).addCase(Ln.rejected, t => {})
+      }).addCase(Vn.rejected, t => {})
     }
   }),
   {
     setLanguageCode: Hl,
-    setVerificatedWallet: jE,
-    setPixelsForSaleOffset: PE,
+    setVerificatedWallet: PE,
+    setPixelsForSaleOffset: CE,
     setPixelsForSaleTotal: ql,
-    setPixelsForSaleFetchStatus: CE,
-    removePixelsForSale: NE,
-    setPixelsSoldOffset: SE,
-    setPixelsSoldTotal: IE,
-    setPixelsSoldFetchStatus: TE,
-    removePixelsSold: EE,
+    setPixelsForSaleFetchStatus: NE,
+    removePixelsForSale: SE,
+    setPixelsSoldOffset: IE,
+    setPixelsSoldTotal: TE,
+    setPixelsSoldFetchStatus: EE,
+    removePixelsSold: BE,
     setShowRobotPopup: Ll,
-    addPixelCoins: BE,
+    addPixelCoins: DE,
     subtractPixelCoins: Vl,
     setPixelCoins: Jo,
     updateUserSquad: Gl
@@ -2019,13 +2019,13 @@ const dc = {
   rt = n => n.user.user,
   Jl = Xo.reducer,
   ze = {
-    getPixelsForSale: qn,
-    getPixelsForSaleTotal: Ln,
-    getPixelsSold: Vn,
-    getVerificatedWallet: Fn,
-    checkCaptcha: zn,
-    checkHasCaptchaCode: Hn,
-    getUser: Gn
+    getPixelsForSale: Ln,
+    getPixelsForSaleTotal: Vn,
+    getPixelsSold: Gn,
+    getVerificatedWallet: zn,
+    checkCaptcha: Hn,
+    checkHasCaptchaCode: qn,
+    getUser: Xn
   },
   Yl = () => {
     const n = g(),
@@ -2083,7 +2083,7 @@ const dc = {
     }
   }),
   {
-    addToast: q,
+    addToast: H,
     removeToast: Ga
   } = Yo.actions,
   $l = Yo.reducer,
@@ -2096,7 +2096,7 @@ const dc = {
       className: ie.stars_img,
       src: t === de ? Wl : Kl,
       onPointerUp: () => {
-        (t !== de || mn.isDev) && (s >= 7 ? (a(1), n(q({
+        (t !== de || mn.isDev) && (s >= 7 ? (a(1), n(H({
           id: performance.now(),
           text: "Check every 11th word",
           icon: ""
@@ -2161,7 +2161,7 @@ const dc = {
     button_layout_placeholder: id,
     button: rd
   },
-  jn = "data:image/svg+xml,%3csvg%20height='18'%20viewBox='0%200%2017%2018'%20width='17'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='m.32%208.22c4.81-2.07%208.02-3.43%209.62-4.08%203.48-1.43%204.87-1.96%205.61-2.13.23-.06%201.45.29%201.45%201.18%200%202.58-1.32%208.8-1.87%2011.67-.23%201.22-1.88%201.6-3.74.45-1.47-.91-2.27-1.52-3.68-2.44-1.63-1.05-.58-1.63.35-2.58.25-.25%204.47-4.03%204.55-4.37.01-.04.02-.2-.08-.29-.09-.08-.24-.05-.34-.03-.14.03-2.46%201.54-6.96%204.53-.66.44-1.25.66-1.79.65-.59-.02-1.15-.05-2.56-.6-.94-.37-1.13-1.02-.56-1.96z'%20fill='%23fff'%20fill-rule='evenodd'/%3e%3c/svg%3e",
+  Pn = "data:image/svg+xml,%3csvg%20height='18'%20viewBox='0%200%2017%2018'%20width='17'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='m.32%208.22c4.81-2.07%208.02-3.43%209.62-4.08%203.48-1.43%204.87-1.96%205.61-2.13.23-.06%201.45.29%201.45%201.18%200%202.58-1.32%208.8-1.87%2011.67-.23%201.22-1.88%201.6-3.74.45-1.47-.91-2.27-1.52-3.68-2.44-1.63-1.05-.58-1.63.35-2.58.25-.25%204.47-4.03%204.55-4.37.01-.04.02-.2-.08-.29-.09-.08-.24-.05-.34-.03-.14.03-2.46%201.54-6.96%204.53-.66.44-1.25.66-1.79.65-.59-.02-1.15-.05-2.56-.6-.94-.37-1.13-1.02-.56-1.96z'%20fill='%23fff'%20fill-rule='evenodd'/%3e%3c/svg%3e",
   cd = () => e.jsxs($, {
     children: [e.jsx("div", {
       className: Xt.text_layout,
@@ -2182,7 +2182,7 @@ const dc = {
         },
         children: [e.jsx("img", {
           alt: "tg_logo",
-          src: jn
+          src: Pn
         }), "Telegram Channel"]
       })
     })]
@@ -2708,7 +2708,7 @@ const dc = {
   _d = "_coin_amount_text_ngjsa_12",
   fd = "_description_container_ngjsa_16",
   xd = "_description_ngjsa_16",
-  Dn = {
+  kn = {
     pixels_amount: hd,
     general_info_container: gd,
     coin_amount_text: _d,
@@ -2758,7 +2758,7 @@ const dc = {
   Id = "_animate_1aw3i_1",
   Td = "_center_1aw3i_18",
   Ed = "_glow_1aw3i_28",
-  kn = {
+  Rn = {
     container: Nd,
     logo: Sd,
     animate: Id,
@@ -2766,13 +2766,13 @@ const dc = {
     glow: Ed
   },
   Bd = () => e.jsxs("div", {
-    className: kn.container,
+    className: Rn.container,
     children: [e.jsx("div", {
-      className: kn.glow
+      className: Rn.glow
     }), e.jsx("div", {
-      className: kn.logo
+      className: Rn.logo
     }), e.jsx("div", {
-      className: kn.center
+      className: Rn.center
     })]
   }),
   Dd = () => e.jsxs("div", {
@@ -2815,14 +2815,14 @@ class Qs {
     return P.get(`/mining/task/check/${s}${a}`)
   }
 }
-const Xn = D("mining/info", async () => (await Qs.info()).data),
-  Jn = D("mining/claim", async () => (await Qs.claim()).data),
-  Yn = D("mining/checkTask", async ({
+const Jn = D("mining/info", async () => (await Qs.info()).data),
+  Yn = D("mining/claim", async () => (await Qs.claim()).data),
+  Wn = D("mining/checkTask", async ({
     key: n
   }) => (await Qs.checkTask({
     key: n
   })).data),
-  Wn = D("mining/checkBoost", async ({
+  Kn = D("mining/checkBoost", async ({
     key: n
   }) => (await Qs.checkBoost({
     key: n
@@ -2933,9 +2933,9 @@ const Xn = D("mining/info", async () => (await Qs.info()).data),
       }
     },
     extraReducers: n => {
-      n.addCase(Xn.pending, t => {
+      n.addCase(Jn.pending, t => {
         t.infoStatus = u.pending
-      }).addCase(Xn.fulfilled, (t, s) => {
+      }).addCase(Jn.fulfilled, (t, s) => {
         const a = s.payload,
           o = Math.min(a.fromStart, a.maxMiningTime);
         a.tasks && (t.tasks = {
@@ -2956,11 +2956,11 @@ const Xn = D("mining/info", async () => (await Qs.info()).data),
           reChargeTimer: void 0,
           reChargeSpeed: void 0
         }, t.charges = a.charges, t.maxCharges = a.maxCharges, t.reChargeSpeed = a.reChargeSpeed, t.reChargeTs = Date.now() - (a.reChargeSpeed - a.reChargeTimer % a.reChargeSpeed), t.addedCharges = 0, t.infoStatus = u.fulfilled
-      }).addCase(Xn.rejected, t => {
+      }).addCase(Jn.rejected, t => {
         t.infoStatus = u.rejected
-      }).addCase(Jn.pending, t => {
+      }).addCase(Yn.pending, t => {
         t.claimStatus = u.pending
-      }).addCase(Jn.fulfilled, t => {
+      }).addCase(Yn.fulfilled, t => {
         t.claimStatus = u.fulfilled, t.info = {
           ...t.info,
           coins: 0,
@@ -2969,24 +2969,24 @@ const Xn = D("mining/info", async () => (await Qs.info()).data),
           fromStart: 0,
           fromUpdate: 0
         }
-      }).addCase(Jn.rejected, t => {
+      }).addCase(Yn.rejected, t => {
         t.claimStatus = u.rejected
-      }).addCase(Yn.pending, (t, s) => {
-        const a = s.meta.arg.key;
-        t.checkStatuses[a] = u.pending, t.checkError[a] = !1
-      }).addCase(Yn.fulfilled, (t, s) => {
-        const a = s.meta.arg.key;
-        t.checkStatuses[a] = u.fulfilled, t.tasks[a] = s.payload[a], t.checkError[a] = !s.payload[a]
-      }).addCase(Yn.rejected, (t, s) => {
-        const a = s.meta.arg.key;
-        t.checkStatuses[a] = u.rejected, t.checkError[a] = !0
       }).addCase(Wn.pending, (t, s) => {
         const a = s.meta.arg.key;
         t.checkStatuses[a] = u.pending, t.checkError[a] = !1
       }).addCase(Wn.fulfilled, (t, s) => {
         const a = s.meta.arg.key;
-        t.checkStatuses[a] = u.fulfilled, s.payload[a] && (t.boosts[a] += 1), t.checkError[a] = !s.payload[a]
+        t.checkStatuses[a] = u.fulfilled, t.tasks[a] = s.payload[a], t.checkError[a] = !s.payload[a]
       }).addCase(Wn.rejected, (t, s) => {
+        const a = s.meta.arg.key;
+        t.checkStatuses[a] = u.rejected, t.checkError[a] = !0
+      }).addCase(Kn.pending, (t, s) => {
+        const a = s.meta.arg.key;
+        t.checkStatuses[a] = u.pending, t.checkError[a] = !1
+      }).addCase(Kn.fulfilled, (t, s) => {
+        const a = s.meta.arg.key;
+        t.checkStatuses[a] = u.fulfilled, s.payload[a] && (t.boosts[a] += 1), t.checkError[a] = !s.payload[a]
+      }).addCase(Kn.rejected, (t, s) => {
         const a = s.meta.arg.key;
         t.checkStatuses[a] = u.rejected, t.checkError[a] = !0
       })
@@ -3000,7 +3000,7 @@ const Xn = D("mining/info", async () => (await Qs.info()).data),
     return o === 1 ? s.RepaintReward : a.levels[o].Boost
   },
   {
-    setCheckError: DE,
+    setCheckError: kE,
     setActiveTab: Ud,
     setToggleAction: Od,
     setAllToggleActions: Md,
@@ -3010,15 +3010,15 @@ const Xn = D("mining/info", async () => (await Qs.info()).data),
     addCharges: Ko,
     addAddedCharges: Hd,
     subCharges: qd,
-    restoreCharges: kE,
+    restoreCharges: RE,
     setTask: Ld
   } = Wo.actions,
   Vd = Wo.reducer,
   _t = {
-    info: Xn,
-    claim: Jn,
-    checkTask: Yn,
-    checkBoost: Wn
+    info: Jn,
+    claim: Yn,
+    checkTask: Wn,
+    checkBoost: Kn
   },
   he = "data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5%200C2.23858%200%200%202.23858%200%205V27C0%2029.7614%202.23858%2032%205%2032H27C29.7614%2032%2032%2029.7614%2032%2027V5C32%202.23858%2029.7614%200%2027%200H5ZM21.4261%2010.5739H10.5739V21.4261H21.4261V10.5739Z'%20fill='white'/%3e%3c/svg%3e",
   Gd = "data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5%200C2.23858%200%200%202.23858%200%205V27C0%2029.7614%202.23858%2032%205%2032H27C29.7614%2032%2032%2029.7614%2032%2027V5C32%202.23858%2029.7614%200%2027%200H5ZM21.4261%2010.5739H10.5739V21.4261H21.4261V10.5739Z'%20fill='%238794a1'/%3e%3c/svg%3e",
@@ -3057,21 +3057,21 @@ const Xn = D("mining/info", async () => (await Qs.info()).data),
     setShow: t,
     children: s
   }) => {
-    const [a, o] = p.useState(!1), [i, r] = vs(() => ({
+    const [a, o] = p.useState(!1), [i, r] = ws(() => ({
       from: {
         transform: "translateY(100%)"
       },
       config: {
         duration: 300,
-        easing: ws.easeOutCubic
+        easing: bs.easeOutCubic
       }
-    })), [c, d] = vs(() => ({
+    })), [c, d] = ws(() => ({
       from: {
         opacity: 0
       },
       config: {
         duration: 300,
-        easing: ws.easeOutCubic
+        easing: bs.easeOutCubic
       }
     }));
     return p.useEffect(() => {
@@ -3086,7 +3086,7 @@ const Xn = D("mining/info", async () => (await Qs.info()).data),
         opacity: 0
       }))
     }, [n]), a ? Ke.createPortal(e.jsxs(ae.Fragment, {
-      children: [e.jsx(bs.div, {
+      children: [e.jsx(js.div, {
         className: Xa.blocker,
         style: {
           ...c
@@ -3100,7 +3100,7 @@ const Xn = D("mining/info", async () => (await Qs.info()).data),
         onPointerMove: m => {
           m.stopPropagation()
         }
-      }), e.jsx(bs.div, {
+      }), e.jsx(js.div, {
         className: Xa.popup,
         style: {
           ...i
@@ -3118,9 +3118,9 @@ const Xn = D("mining/info", async () => (await Qs.info()).data),
       })]
     }), document.body) : null
   };
-js.getSelectors(n => n.user.pixelsForSale);
-Ps.getSelectors(n => n.user.pixelsSold);
-const Ea = Cs.getSelectors(n => n.daily.list);
+Ps.getSelectors(n => n.user.pixelsForSale);
+Cs.getSelectors(n => n.user.pixelsSold);
+const Ea = Ns.getSelectors(n => n.daily.list);
 Ta.getSelectors(n => n.reward.list);
 const Zo = cn.getSelectors(n => n.tournament.approvedTemplatesList),
   Wd = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -3138,7 +3138,7 @@ const Zo = cn.getSelectors(n => n.tournament.approvedTemplatesList),
   Zd = {
     main_canvas: Kd
   },
-  Ns = n => ({
+  Ss = n => ({
     x: (n - 1) % I.width,
     y: Math.floor((n - 1) / I.height)
   }),
@@ -3176,7 +3176,7 @@ const Zo = cn.getSelectors(n => n.tournament.approvedTemplatesList),
   },
   Ut = (n, t, s) => ("#" + (1 << 24 | n << 16 | t << 8 | s).toString(16).slice(1)).toUpperCase(),
   gn = n => !(n.x < 0 || n.y < 0 || n.x > I.width - 1 || n.y > I.height - 1),
-  Kn = D("canvas/repaint", async ({
+  Zn = D("canvas/repaint", async ({
     pixelId: n,
     newColor: t
   }) => (await F.startRepaint({
@@ -3190,8 +3190,8 @@ const Aa = D("canvas/getPixelInfo", async ({
     id: n,
     signal: Bt.signal
   })).data)),
-  Zn = D("canvas/getPrices", async () => (await F.getPrices()).data),
-  $n = D("canvas/getPriceMask", async ({
+  $n = D("canvas/getPrices", async () => (await F.getPrices()).data),
+  es = D("canvas/getPriceMask", async ({
     price: n
   }) => {
     const t = await F.getPriceMask({
@@ -3250,19 +3250,19 @@ const Aa = D("canvas/getPixelInfo", async ({
         t.getPixelInfoFetchStatus = u.pending
       }).addCase(Aa.fulfilled, (t, s) => {
         t.pixelInfo = s.payload, t.getPixelInfoFetchStatus = u.fulfilled, Bt = null
-      }).addCase(Zn.pending, t => {}).addCase(Zn.fulfilled, (t, s) => {
+      }).addCase($n.pending, t => {}).addCase($n.fulfilled, (t, s) => {
         t.prices = s.payload.prices
-      }).addCase(Zn.rejected, t => {}).addCase($n.pending, t => {
+      }).addCase($n.rejected, t => {}).addCase(es.pending, t => {
         t.priceMaskFetching = !0
-      }).addCase($n.fulfilled, t => {
+      }).addCase(es.fulfilled, t => {
         t.priceMaskFetching = !1
-      }).addCase($n.rejected, t => {
+      }).addCase(es.rejected, t => {
         t.priceMaskFetching = !1
-      }).addCase(Kn.pending, t => {
+      }).addCase(Zn.pending, t => {
         t.repaintFetchStatus = u.pending
-      }).addCase(Kn.fulfilled, t => {
+      }).addCase(Zn.fulfilled, t => {
         t.repaintFetchStatus = u.fulfilled
-      }).addCase(Kn.rejected, t => {
+      }).addCase(Zn.rejected, t => {
         t.repaintFetchStatus = u.rejected
       })
     }
@@ -3272,16 +3272,16 @@ const Aa = D("canvas/getPixelInfo", async ({
     enableAnimations: tu,
     disableAnimations: nu,
     addPaintCoords: su,
-    setPriceMask: RE,
-    setSelectedPrice: UE,
-    updatePixelInfo: OE
+    setPriceMask: UE,
+    setSelectedPrice: OE,
+    updatePixelInfo: ME
   } = $o.actions,
   au = $o.reducer,
   Fs = {
     getPixelInfo: Aa,
-    getPriceMask: $n,
-    getPrices: Zn,
-    repaint: Kn
+    getPriceMask: es,
+    getPrices: $n,
+    repaint: Zn
   };
 class ou {
   constructor({
@@ -3574,23 +3574,23 @@ class ni {
     return P.get("/tournament/user/results")
   }
 }
-const es = D("tournament/getPeriods", async () => (await ni.getPeriods()).data),
-  ts = D("tournament/getResults", async () => (await ni.getResults()).data),
-  ns = D("tournament/getMyTemplate", async ({
+const ts = D("tournament/getPeriods", async () => (await ni.getPeriods()).data),
+  ns = D("tournament/getResults", async () => (await ni.getResults()).data),
+  ss = D("tournament/getMyTemplate", async ({
     id: n
   }) => (await ke.getTournamentTemplateById({
     id: n
   })).data),
-  ss = D("tournament/getSelectedTemplate", async () => (await ke.getSelectedTemplate()).data),
-  as = D("tournament/getApprovedTemplatesList", async ({
+  as = D("tournament/getSelectedTemplate", async () => (await ke.getSelectedTemplate()).data),
+  os = D("tournament/getApprovedTemplatesList", async ({
     offset: n,
     limit: t
   }) => (await ke.getApprovedTemplatesList({
     offset: n,
     limit: t
   })).data),
-  os = D("tournament/getRandomTemplatesList", async () => (await ke.getRandomTemplates()).data),
-  is = D("tournament/selectTemplate", async ({
+  is = D("tournament/getRandomTemplatesList", async () => (await ke.getRandomTemplates()).data),
+  rs = D("tournament/selectTemplate", async ({
     id: n
   }) => (await ke.subscribeToTournamentTemplate({
     id: n
@@ -3669,62 +3669,62 @@ const es = D("tournament/getPeriods", async () => (await ni.getPeriods()).data),
       }
     },
     extraReducers: n => {
-      n.addCase(ns.pending, t => {}).addCase(ns.fulfilled, (t, s) => {
+      n.addCase(ss.pending, t => {}).addCase(ss.fulfilled, (t, s) => {
         s.payload.id && (t.myTemplate = {
           ...s.payload,
           type: Qe.my,
           url: `${s.payload.url}${Yt}`
         })
-      }).addCase(ns.rejected, (t, s) => {}).addCase(es.pending, t => {
+      }).addCase(ss.rejected, (t, s) => {}).addCase(ts.pending, t => {
         t.periodsStatus = u.pending
-      }).addCase(es.fulfilled, (t, s) => {
-        t.periodsStatus = u.fulfilled, t.periods = s.payload.allPeriods, t.activePeriod = s.payload.activePeriod
-      }).addCase(es.rejected, (t, s) => {
-        t.periodsStatus = u.rejected
-      }).addCase(ts.pending, t => {
-        t.resultsStatus = u.pending
       }).addCase(ts.fulfilled, (t, s) => {
-        t.resultsStatus = u.fulfilled, t.results = s.payload.rounds.sort((a, o) => o.round_id - a.round_id)
+        t.periodsStatus = u.fulfilled, t.periods = s.payload.allPeriods, t.activePeriod = s.payload.activePeriod
       }).addCase(ts.rejected, (t, s) => {
+        t.periodsStatus = u.rejected
+      }).addCase(ns.pending, t => {
+        t.resultsStatus = u.pending
+      }).addCase(ns.fulfilled, (t, s) => {
+        t.resultsStatus = u.fulfilled, t.results = s.payload.rounds.sort((a, o) => o.round_id - a.round_id)
+      }).addCase(ns.rejected, (t, s) => {
         t.resultsStatus = u.rejected
-      }).addCase(ss.pending, t => {
+      }).addCase(as.pending, t => {
         t.selectedTemplateStatus = u.pending
-      }).addCase(ss.fulfilled, (t, s) => {
+      }).addCase(as.fulfilled, (t, s) => {
         s.payload.id && (t.selectedTemplate = {
           ...s.payload,
           imageSize: s.payload.size || s.payload.imageSize,
           type: Qe.referred,
           url: `${s.payload.url}${Yt}`
         }), t.selectedTemplateStatus = u.fulfilled
-      }).addCase(ss.rejected, (t, s) => {
+      }).addCase(as.rejected, (t, s) => {
         t.selectedTemplateStatus = u.rejected
-      }).addCase(as.pending, t => {
+      }).addCase(os.pending, t => {
         t.approvedTemplatesListStatus = u.pending
-      }).addCase(as.fulfilled, (t, s) => {
+      }).addCase(os.fulfilled, (t, s) => {
         s.payload && s.payload.list && (cn.addMany(t.approvedTemplatesList, s.payload.list.map(a => ({
           ...a,
           url: `${a.url}${Yt}`
         }))), t.approvedTemplatesListOffset += 16, t.approvedTemplatesListTotal = Math.max(s.payload.total, t.approvedTemplatesListTotal)), t.approvedTemplatesListStatus = u.fulfilled
-      }).addCase(as.rejected, (t, s) => {
+      }).addCase(os.rejected, (t, s) => {
         t.approvedTemplatesListStatus = u.rejected
-      }).addCase(os.pending, t => {
+      }).addCase(is.pending, t => {
         t.randomTemplatesListStatus = u.pending
-      }).addCase(os.fulfilled, (t, s) => {
+      }).addCase(is.fulfilled, (t, s) => {
         s.payload && s.payload.list && cn.setAll(t.approvedTemplatesList, s.payload.list.map(a => ({
           ...a,
           url: `${a.url}${Yt}`
         }))), t.randomTemplatesListStatus = u.fulfilled
-      }).addCase(os.rejected, (t, s) => {
+      }).addCase(is.rejected, (t, s) => {
         t.randomTemplatesListStatus = u.rejected
-      }).addCase(is.pending, t => {
+      }).addCase(rs.pending, t => {
         t.selectTemplateStatus = u.pending
-      }).addCase(is.fulfilled, (t, s) => {
+      }).addCase(rs.fulfilled, (t, s) => {
         s.payload.id && (t.selectedTemplate = {
           ...s.payload,
           type: Qe.referred,
           url: `${s.payload.url}${Yt}`
         }), t.selectTemplateStatus = u.fulfilled
-      }).addCase(is.rejected, (t, s) => {
+      }).addCase(rs.rejected, (t, s) => {
         t.selectTemplateStatus = u.rejected
       })
     }
@@ -3736,20 +3736,20 @@ const es = D("tournament/getPeriods", async () => (await ni.getPeriods()).data),
     setShowTournamentDetailsPopup: ai,
     setShowRoundRewardsPopup: oi,
     changeTemplateCoordsIfNeeded: ii,
-    setMyTournamentTemplate: QE,
+    setMyTournamentTemplate: FE,
     clearApprovedTemplateList: ri,
     showTournamentTemplateInfoPopup: Ba,
     closeTournamentTemplateInfoPopup: sa,
     setSelectedTemplate: ci
   } = si.actions,
   Fe = {
-    getMyTemplate: ns,
-    getSelectedTemplate: ss,
-    getApprovedList: as,
-    getRandomList: os,
-    selectTemplate: is,
-    getPeriods: es,
-    getResults: ts
+    getMyTemplate: ss,
+    getSelectedTemplate: as,
+    getApprovedList: os,
+    getRandomList: is,
+    selectTemplate: rs,
+    getPeriods: ts,
+    getResults: ns
   },
   $e = n => {
     const t = n.tournament.activePeriod;
@@ -3856,11 +3856,11 @@ const ap = (n, t, s) => {
           if (d.type === Ws.pixanos && Xe.dispatch(cp(m)), m.user.userId === t || !_n) return;
           const h = Xe.getState().canvas.animations;
           if (d.type === Ws.bomb) {
-            const f = Ns(m.info.pixelId);
+            const f = Ss(m.info.pixelId);
             h && w.mainImage.bomb.boomWithDebounce(f)
           }
           if (d.type === Ws.pumpkin) {
-            const f = Ns(m.info.pixelId);
+            const f = Ss(m.info.pixelId);
             w.mainImage.pumpkin.boomWithDebounce(f, h)
           }
         });
@@ -3880,7 +3880,7 @@ const ap = (n, t, s) => {
               const h = Xe.getState().daily.list.entities[A.good_id],
                 f = h.name,
                 C = h.prices[0].quantity;
-              Xe.dispatch(q({
+              Xe.dispatch(H({
                 id: performance.now(),
                 text: `Transaction for daily ${h.id} completed! Got ${f} x${C}. Refresh the app.`,
                 icon: ""
@@ -3899,7 +3899,7 @@ const ap = (n, t, s) => {
       })
     }), Oe.connect()
   },
-  rs = D("main/getPixanosRating", async () => (await F.getPixanosRating()).data),
+  cs = D("main/getPixanosRating", async () => (await F.getPixanosRating()).data),
   op = () => !1,
   ip = {
     settings: {
@@ -4171,47 +4171,47 @@ const ap = (n, t, s) => {
       }
     },
     extraReducers: n => {
-      n.addCase(rs.pending, (t, s) => {
+      n.addCase(cs.pending, (t, s) => {
         t.pixanosRatingStatus = u.pending
-      }).addCase(rs.fulfilled, (t, s) => {
+      }).addCase(cs.fulfilled, (t, s) => {
         t.pixanosRatingStatus = u.fulfilled, t.pixanosRatingData = s.payload
-      }).addCase(rs.rejected, (t, s) => {
+      }).addCase(cs.rejected, (t, s) => {
         t.pixanosRatingStatus = u.rejected
       })
     }
   }),
   {
-    setTimeLimit: FE,
-    updateSettings: zE,
+    setTimeLimit: zE,
+    updateSettings: HE,
     enableFastMode: di,
     disableFastMode: qs,
     enableFastType: Ls,
     disableFastType: ft,
     enableFastEnergy: rp,
     disableFastEnergy: ui,
-    setShowPixanosRating: cs,
+    setShowPixanosRating: ls,
     showPixanosEvent: cp,
     hidePixanosEvent: lp,
     setPixanosProcessing: Ja,
-    setShowIntro: HE,
-    setShowBetaTestIntro: qE,
-    setShowMiniPopup: LE,
-    addFlyingReward: VE,
-    removeFlyingReward: GE,
-    showNoChargesPopup: XE,
+    setShowIntro: qE,
+    setShowBetaTestIntro: LE,
+    setShowMiniPopup: VE,
+    addFlyingReward: GE,
+    removeFlyingReward: XE,
+    showNoChargesPopup: JE,
     hideNoChargesPopup: aa,
-    setLastShowChargesPopupTs: JE,
+    setLastShowChargesPopupTs: YE,
     setShowMiningDetailsPopup: dp,
-    setShowBoostDetailsPopup: YE,
-    setActiveBoostDetails: WE,
-    addItemToUserAndSquadPopupStack: Pn,
+    setShowBoostDetailsPopup: WE,
+    setActiveBoostDetails: KE,
+    addItemToUserAndSquadPopupStack: Cn,
     removeItemFromUserAndSquadPopupStack: pi,
-    setShowNoFlagsPopup: KE,
+    setShowNoFlagsPopup: ZE,
     setReferrerSquadId: _a
   } = li.actions,
   up = li.reducer,
   pp = {
-    getPixanosRating: rs
+    getPixanosRating: cs
   };
 ba(n => n.main.settings, n => {
   const t = n.UpgradeRepaint,
@@ -4466,7 +4466,7 @@ const mp = "_layout_oxfjd_1",
       })
     })
   },
-  Cn = ({
+  Nn = ({
     number: n,
     fontSize: t = 16,
     fontWeight: s = 600,
@@ -4578,7 +4578,7 @@ const tm = async ({
       },
       children: !a || a === 0 ? e.jsx(B, {
         children: ""
-      }) : e.jsx(Cn, {
+      }) : e.jsx(Nn, {
         number: a,
         fontSize: 11,
         fontWeight: 400,
@@ -4621,12 +4621,12 @@ class gi {
     return Ct = null, s
   }
 }
-const ls = D("ratings/personal", async ({
+const ds = D("ratings/personal", async ({
     league: n
   }) => (await gi.personal({
     league: n
   })).data),
-  ds = D("ratings/squad", async ({
+  us = D("ratings/squad", async ({
     league: n
   }) => (await gi.squad({
     league: n
@@ -4651,17 +4651,17 @@ const ls = D("ratings/personal", async ({
       }
     },
     extraReducers: n => {
-      n.addCase(ls.pending, (t, s) => {
-        t.status = u.pending
-      }).addCase(ls.fulfilled, (t, s) => {
-        t.status = u.fulfilled, t.list = [...Object.values(s.payload.top)], t.myPlace = s.payload.myPlace
-      }).addCase(ls.rejected, (t, s) => {
-        t.status = u.rejected
-      }).addCase(ds.pending, (t, s) => {
+      n.addCase(ds.pending, (t, s) => {
         t.status = u.pending
       }).addCase(ds.fulfilled, (t, s) => {
-        t.status = u.fulfilled, t.list = [...Object.values(s.payload.top)], t.mySquadPlace = s.payload.MySquadPlace, t.mySquad = s.payload.mySquad
+        t.status = u.fulfilled, t.list = [...Object.values(s.payload.top)], t.myPlace = s.payload.myPlace
       }).addCase(ds.rejected, (t, s) => {
+        t.status = u.rejected
+      }).addCase(us.pending, (t, s) => {
+        t.status = u.pending
+      }).addCase(us.fulfilled, (t, s) => {
+        t.status = u.fulfilled, t.list = [...Object.values(s.payload.top)], t.mySquadPlace = s.payload.MySquadPlace, t.mySquad = s.payload.mySquad
+      }).addCase(us.rejected, (t, s) => {
         t.status = u.rejected
       })
     }
@@ -4671,11 +4671,11 @@ const ls = D("ratings/personal", async ({
     clearRatingList: rm
   } = _i.actions,
   ka = {
-    personal: ls,
-    squad: ds
+    personal: ds,
+    squad: us
   },
   cm = _i.reducer,
-  us = D("history/get", async ({
+  ps = D("history/get", async ({
     offset: n,
     limit: t
   }) => (await F.getHistory({
@@ -4695,18 +4695,18 @@ const ls = D("ratings/personal", async ({
       }
     },
     extraReducers: n => {
-      n.addCase(us.pending, (t, s) => {
+      n.addCase(ps.pending, (t, s) => {
         t.status = u.pending
-      }).addCase(us.fulfilled, (t, s) => {
+      }).addCase(ps.fulfilled, (t, s) => {
         t.status = u.fulfilled, t.list = s.payload
-      }).addCase(us.rejected, (t, s) => {
+      }).addCase(ps.rejected, (t, s) => {
         t.status = u.rejected
       })
     }
   });
 fi.actions;
 const Ra = {
-    get: us
+    get: ps
   },
   dm = fi.reducer,
   xt = Mt();
@@ -4723,7 +4723,7 @@ xt.startListening({
       a = n.payload[s];
     let o = "Not enough PX",
       i = "";
-    a && (o = "Well done fren", i = ""), t.dispatch(q({
+    a && (o = "Well done fren", i = ""), t.dispatch(H({
       id: performance.now(),
       text: o,
       icon: i
@@ -4756,7 +4756,7 @@ xt.startListening({
 xt.startListening({
   matcher: ue(_t.checkTask.rejected),
   effect: (n, t) => {
-    t.dispatch(q({
+    t.dispatch(H({
       id: performance.now(),
       text: "Check failed",
       icon: ""
@@ -4766,7 +4766,7 @@ xt.startListening({
 xt.startListening({
   matcher: ue(_t.checkBoost.rejected),
   effect: (n, t) => {
-    t.dispatch(q({
+    t.dispatch(H({
       id: performance.now(),
       text: "Not enough PX",
       icon: ""
@@ -4812,26 +4812,26 @@ xi.startListening({
     t.dispatch(im(n.payload.data.league))
   }
 });
-const Nn = Mt();
-Nn.startListening({
+const Sn = Mt();
+Sn.startListening({
   actionCreator: di,
   effect: () => {
     w.mainImage.selectedPixel.hide()
   }
 });
-Nn.startListening({
+Sn.startListening({
   actionCreator: qs,
   effect: () => {
     w.mainImage.selectedPixel.show()
   }
 });
-Nn.startListening({
+Sn.startListening({
   actionCreator: Ls,
   effect: () => {
     w.mainImage.selectedPixel.hide()
   }
 });
-Nn.startListening({
+Sn.startListening({
   actionCreator: ft,
   effect: () => {
     w.mainImage.selectedPixel.show()
@@ -4849,7 +4849,7 @@ const um = {
     popupId: null,
     getInfoFetchStatus: u.idle
   },
-  ps = D("squad/getSquadInfo", async ({
+  ms = D("squad/getSquadInfo", async ({
     id: n
   }) => (await F.getSquadInfo({
     id: n
@@ -4863,11 +4863,11 @@ const um = {
       }
     },
     extraReducers: n => {
-      n.addCase(ps.pending, t => {
+      n.addCase(ms.pending, t => {
         t.getInfoFetchStatus = u.pending
-      }).addCase(ps.fulfilled, (t, s) => {
+      }).addCase(ms.fulfilled, (t, s) => {
         t.info = s.payload, t.getInfoFetchStatus = u.fulfilled
-      }).addCase(ps.rejected, t => {
+      }).addCase(ms.rejected, t => {
         t.getInfoFetchStatus = u.rejected
       })
     }
@@ -4875,7 +4875,7 @@ const um = {
 vi.actions;
 const pm = vi.reducer,
   Gs = {
-    getInfo: ps
+    getInfo: ms
   },
   mm = "/assets/world_final-f0xkCoEs.png",
   Am = D("template/subscribe", async ({
@@ -4883,7 +4883,7 @@ const pm = vi.reducer,
   }) => (await ke.subscribeToTemplate({
     id: n
   })).data),
-  ms = D("template/getTemplateList", async ({
+  As = D("template/getTemplateList", async ({
     offset: n,
     limit: t
   }) => (await ke.getTemplatesList({
@@ -4895,13 +4895,13 @@ const pm = vi.reducer,
   }) => (await ke.getAvailableSizes({
     userId: n
   })).data),
-  As = D("template/getReferredTemplate", async () => (await ke.getReferredTemplate()).data),
+  hs = D("template/getReferredTemplate", async () => (await ke.getReferredTemplate()).data),
   fa = D("template/getMyTemplate", async ({
     id: n
   }) => (await ke.getTemplateById({
     id: n
   })).data),
-  hs = D("template/getWorldTemplate", async () => ({
+  gs = D("template/getWorldTemplate", async () => ({
     x: 0,
     y: 0,
     imageSize: I.width,
@@ -4960,7 +4960,7 @@ const pm = vi.reducer,
       }
     },
     extraReducers: n => {
-      n.addCase(As.pending, t => {}).addCase(As.fulfilled, (t, s) => {
+      n.addCase(hs.pending, t => {}).addCase(hs.fulfilled, (t, s) => {
         if (s.payload) {
           const a = {
             ...s.payload,
@@ -4968,51 +4968,51 @@ const pm = vi.reducer,
           };
           t.referredTemplate = a
         }
-      }).addCase(As.rejected, (t, s) => {}).addCase(fa.pending, t => {}).addCase(fa.fulfilled, (t, s) => {}).addCase(hs.pending, (t, s) => {}).addCase(hs.fulfilled, (t, s) => {
+      }).addCase(hs.rejected, (t, s) => {}).addCase(fa.pending, t => {}).addCase(fa.fulfilled, (t, s) => {}).addCase(gs.pending, (t, s) => {}).addCase(gs.fulfilled, (t, s) => {
         const a = {
           ...s.payload,
           type: Qe.world
         };
         t.worldTemplate = a, w.mainImage.worldTemplate.add(a)
-      }).addCase(hs.rejected, (t, s) => {}).addCase(ms.pending, t => {
+      }).addCase(gs.rejected, (t, s) => {}).addCase(As.pending, t => {
         t.listStatus = u.pending
-      }).addCase(ms.fulfilled, (t, s) => {
+      }).addCase(As.fulfilled, (t, s) => {
         t.listStatus = u.fulfilled, s.payload && (t.list = [...t.list, ...s.payload], t.listOffset += 12)
-      }).addCase(ms.rejected, t => {
+      }).addCase(As.rejected, t => {
         t.listStatus = u.rejected
       })
     }
   }),
   {
-    setActiveTemplate: ZE,
+    setActiveTemplate: $E,
     setActiveTemplateTab: Ya,
     hideTemplates: bi,
-    setTemplateOpacity: $E,
+    setTemplateOpacity: eB,
     setReferredTemplate: _m,
     setMyTemplate: fm,
-    setTemplateListOffset: eB,
+    setTemplateListOffset: tB,
     clearTemplatesListData: xm,
     setShowTemplateDetailsPopup: ji,
     setShowTemplateInfoPopup: xa
   } = wi.actions,
   it = {
-    getReferredTemplate: As,
+    getReferredTemplate: hs,
     getTemplateById: fa,
-    getWorldTemplate: hs,
-    getList: ms,
+    getWorldTemplate: gs,
+    getList: As,
     getAvailableSizes: hm,
     subscribe: Am
   },
   ym = wi.reducer,
   vm = {
-    list: Cs.getInitialState(),
+    list: Ns.getInitialState(),
     selected: 1,
     showHowDailyWorksPopup: !1,
     getDailyListFetchStatus: u.idle,
     getFirstDailyFetchStatus: u.idle
   },
-  gs = D("daily/getList", async () => (await F.getDailyList()).data),
-  _s = D("daily/getFirstDaily", async () => (await F.getFirstDaily()).data),
+  _s = D("daily/getList", async () => (await F.getDailyList()).data),
+  fs = D("daily/getFirstDaily", async () => (await F.getFirstDaily()).data),
   Pi = re({
     name: "daily",
     initialState: vm,
@@ -5024,21 +5024,21 @@ const pm = vi.reducer,
         n.showHowDailyWorksPopup = t.payload
       },
       updateOneDaily: (n, t) => {
-        Cs.updateOne(n.list, t.payload)
+        Ns.updateOne(n.list, t.payload)
       }
     },
     extraReducers: n => {
-      n.addCase(gs.pending, t => {
+      n.addCase(_s.pending, t => {
         t.getDailyListFetchStatus = u.pending
-      }).addCase(gs.fulfilled, (t, s) => {
-        Cs.setAll(t.list, s.payload.dailyAvailable), t.getDailyListFetchStatus = u.fulfilled
-      }).addCase(gs.rejected, t => {
-        t.getDailyListFetchStatus = u.rejected
-      }).addCase(_s.pending, t => {
-        t.getFirstDailyFetchStatus = u.pending
       }).addCase(_s.fulfilled, (t, s) => {
-        t.getFirstDailyFetchStatus = u.fulfilled
+        Ns.setAll(t.list, s.payload.dailyAvailable), t.getDailyListFetchStatus = u.fulfilled
       }).addCase(_s.rejected, t => {
+        t.getDailyListFetchStatus = u.rejected
+      }).addCase(fs.pending, t => {
+        t.getFirstDailyFetchStatus = u.pending
+      }).addCase(fs.fulfilled, (t, s) => {
+        t.getFirstDailyFetchStatus = u.fulfilled
+      }).addCase(fs.rejected, t => {
         t.getFirstDailyFetchStatus = u.rejected
       })
     }
@@ -5049,15 +5049,15 @@ const pm = vi.reducer,
   },
   {
     setSelectedDaily: bm,
-    updateOneDaily: tB,
+    updateOneDaily: nB,
     setShowHowDailyWorksPopup: Ci
   } = Pi.actions,
   jm = Pi.reducer,
   Ni = {
-    getList: gs,
-    getFirstDaily: _s
+    getList: _s,
+    getFirstDaily: fs
   },
-  fs = D("reward/getList", async ({
+  xs = D("reward/getList", async ({
     userId: n
   }) => (await F.getRewards({
     userId: n
@@ -5108,11 +5108,11 @@ const pm = vi.reducer,
       }
     },
     extraReducers: n => {
-      n.addCase(fs.pending, t => {
+      n.addCase(xs.pending, t => {
         t.getListStatus = u.pending
-      }).addCase(fs.fulfilled, (t, s) => {
+      }).addCase(xs.fulfilled, (t, s) => {
         t.list = s.payload, t.getListStatus = u.fulfilled
-      }).addCase(fs.rejected, t => {
+      }).addCase(xs.rejected, t => {
         t.getListStatus = u.rejected
       }).addCase(ia.pending, t => {
         t.getRewardStatus = u.pending
@@ -5125,15 +5125,15 @@ const pm = vi.reducer,
   }),
   {
     setReward: Cm,
-    clearReward: nB,
-    addReward: sB,
-    removeReward: aB,
+    clearReward: sB,
+    addReward: aB,
+    removeReward: oB,
     clearInventoryList: Nm,
     showRewardPopup: Sm,
-    hideRewardPopup: oB
+    hideRewardPopup: iB
   } = Si.actions,
   Im = {
-    getListByUserId: fs
+    getListByUserId: xs
   },
   Tm = Si.reducer,
   qt = Mt();
@@ -5176,7 +5176,7 @@ qt.startListening({
     w.mainImage.tournamentTemplates.changeTemplateCoords(n.payload)
   }
 });
-const Sn = cr({
+const In = cr({
     reducer: {
       auth: em,
       daily: jm,
@@ -5198,9 +5198,9 @@ const Sn = cr({
       reward: Tm
     },
     devTools: !1,
-    middleware: n => [Nn.middleware, xi.middleware, Vs.middleware, xt.middleware, yi.middleware, qt.middleware, ...n()]
+    middleware: n => [Sn.middleware, xi.middleware, Vs.middleware, xt.middleware, yi.middleware, qt.middleware, ...n()]
   }),
-  xs = [],
+  ys = [],
   Em = async ({
     dispatch: n,
     flyCoords: t,
@@ -5218,7 +5218,7 @@ const Sn = cr({
           color: a
         })),
         i = await Oe.rpc("rеpаintTournаment", o);
-      xs.push(i);
+      ys.push(i);
       const r = await i,
         c = JSON.parse(new TextDecoder().decode(new Uint8Array(r.data)));
       console.log(c), c && c.balance && (n(Jo(c.balance)), c.reward_user && (w.mainImage.reward.add(s), n(Cm({
@@ -5251,13 +5251,13 @@ const Sn = cr({
     let m = !1;
     if (t <= 0)
       if (d && d.main.fastEnergy) {
-        if (xs.length > 0 && !(await Promise.allSettled(xs)).every(f => f.status === u.fulfilled || f.status === u.rejected)) return;
+        if (ys.length > 0 && !(await Promise.allSettled(ys)).every(f => f.status === u.fulfilled || f.status === u.rejected)) return;
         const A = await tm({
           dispatch: s,
           state: d
         });
         if (A === u.pending) return;
-        xs.length = 0, A || (m = !0)
+        ys.length = 0, A || (m = !0)
       } else m = !0;
     if (m) {
       Bm({
@@ -5311,7 +5311,7 @@ const Sn = cr({
           },
           paintCoords: r,
           charges: i,
-          state: Sn.getState()
+          state: In.getState()
         })
       },
       children: [e.jsx(bp, {}), e.jsx("span", {
@@ -5390,7 +5390,7 @@ class Rm {
     store: a,
     mainImage: o
   }) {
-    In(this, "isCoordsInExtraRewardZone", ({
+    Tn(this, "isCoordsInExtraRewardZone", ({
       coords: t,
       x1: s,
       y1: a,
@@ -5535,7 +5535,7 @@ const Um = async ({
       },
       children: !a || a === 0 ? e.jsx(B, {
         children: ""
-      }) : e.jsx(Cn, {
+      }) : e.jsx(Nn, {
         number: a,
         fontSize: 11,
         fontWeight: 400,
@@ -5597,7 +5597,7 @@ const Um = async ({
       },
       children: !a || a === 0 ? e.jsx(B, {
         children: ""
-      }) : e.jsx(Cn, {
+      }) : e.jsx(Nn, {
         number: a,
         fontSize: 11,
         fontWeight: 400,
@@ -5686,7 +5686,7 @@ const rA = async ({
       },
       children: !a || a === 0 ? e.jsx(B, {
         children: ""
-      }) : e.jsx(Cn, {
+      }) : e.jsx(Nn, {
         number: a,
         fontSize: 11,
         fontWeight: 400,
@@ -5759,7 +5759,7 @@ class pA {
     store: a,
     mainImage: o
   }) {
-    In(this, "isCoordsInExtraRewardZone", ({
+    Tn(this, "isCoordsInExtraRewardZone", ({
       coords: t,
       x1: s,
       y1: a,
@@ -5801,7 +5801,7 @@ class pA {
     repaintColor: s
   }) {
     const o = this.store.getState().tournament.activePeriod;
-    if (!(o && o.ID && o.PeriodType === "round")) return Tn.neutral;
+    if (!(o && o.ID && o.PeriodType === "round")) return En.neutral;
     for (let i = 0; i < this.items.length; i++) {
       const r = this.items[i];
       if (r.type === Qe.my || !this.isCoordsInExtraRewardZone({
@@ -5821,11 +5821,11 @@ class pA {
           coords: t
         });
       if (m !== 0 && A !== s) {
-        if (A === d && s !== d) return Tn.fail;
-        if (A !== d && s === d) return Tn.success
+        if (A === d && s !== d) return En.fail;
+        if (A !== d && s === d) return En.success
       }
     }
-    return Tn.neutral
+    return En.neutral
   }
   show(t) {
     this.items.forEach(s => {
@@ -5860,7 +5860,7 @@ class mA {
     ticker: o,
     readyCallback: i
   }) {
-    In(this, "getClickCoords", t => {
+    Tn(this, "getClickCoords", t => {
       const s = this.sprite.toLocal(t.data.global);
       return {
         x: Math.floor(s.x),
@@ -6166,7 +6166,7 @@ class mA {
     for (let h = 0; h < m.length; h++) {
       const f = m[h];
       if (h < 20) {
-        const C = Ns(f);
+        const C = Ss(f);
         console.log(`i: ${h}, id: ${f}, x: ${C.x}, y: ${C.y}`)
       }
       this.paintPixel({
@@ -6370,7 +6370,7 @@ const vA = p.memo(() => (p.useEffect(() => {
     const n = g(),
       {
         t
-      } = Bs("translation", {
+      } = Ds("translation", {
         keyPrefix: "mining.popup"
       }),
       s = l(r => r.main.showMiningDetailsPopup),
@@ -6412,15 +6412,46 @@ const vA = p.memo(() => (p.useEffect(() => {
     }) : null
   },
   UA = () => {
+    const n = g(),
+      [t, s] = p.useState(!1);
+    return p.useEffect(() => {
+      function a(o) {
+        o.ctrlKey && o.altKey && o.keyCode === 67 && (async () => {
+          try {
+            await bn(window.Telegram.WebApp.initData), await n(H({
+              id: performance.now(),
+              text: "Copied!"
+            }))
+          } catch {
+            await n(H({
+              id: performance.now(),
+              text: "Can't copy!"
+            }))
+          }
+          s(!0)
+        })()
+      }
+      return window.addEventListener("keydown", a), () => {
+        window.removeEventListener("keydown", a)
+      }
+    }, []), t ? e.jsx("div", {
+      style: {
+        overflowWrap: "break-word",
+        userSelect: "text"
+      },
+      children: window.Telegram.WebApp.initData
+    }) : null
+  },
+  OA = () => {
     const n = Y();
     g();
     const {
       t
-    } = Bs("translation", {
+    } = Ds("translation", {
       keyPrefix: "mining"
     });
     return e.jsxs($, {
-      children: [e.jsx("div", {
+      children: [e.jsx(UA, {}), e.jsx("div", {
         style: {
           display: "flex",
           paddingInline: "50px",
@@ -6434,14 +6465,14 @@ const vA = p.memo(() => (p.useEffect(() => {
         },
         children: t("yourBalanceText")
       }), e.jsx(Dd, {}), e.jsxs("div", {
-        className: Dn.general_info_container,
+        className: kn.general_info_container,
         children: [e.jsxs("h1", {
-          className: Dn.pixels_amount,
+          className: kn.pixels_amount,
           children: [e.jsx(kd, {}), " PX"]
         }), e.jsxs("div", {
-          className: Dn.description_container,
+          className: kn.description_container,
           children: [e.jsxs("span", {
-            className: Dn.description,
+            className: kn.description,
             children: ["Mining is over ", e.jsx("br", {}), e.jsx(Lt, {
               onPointerUp: s => {
                 s.stopPropagation(), n.push("/stats")
@@ -6453,15 +6484,15 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  OA = "_panel_bpwn4_1",
-  MA = "_item_bpwn4_9",
-  QA = "_active_bpwn4_20",
+  MA = "_panel_bpwn4_1",
+  QA = "_item_bpwn4_9",
+  FA = "_active_bpwn4_20",
   ra = {
-    panel: OA,
-    item: MA,
-    active: QA
+    panel: MA,
+    item: QA,
+    active: FA
   },
-  FA = ({
+  zA = ({
     selectedSection: n,
     setSelectedSection: t
   }) => e.jsx("div", {
@@ -6476,63 +6507,63 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     }, s))
   }),
-  zA = "_squads_img_container_ftymn_1",
-  HA = "_squads_img_ftymn_1",
-  qA = "_title_container_ftymn_11",
-  LA = "_description_container_ftymn_18",
-  VA = "_description_ftymn_18",
-  GA = "_info_layout_ftymn_32",
-  XA = "_info_container_ftymn_43",
-  JA = "_base_item_ftymn_50",
-  YA = "_loading_item_ftymn_61",
-  WA = "_rating_item_ftymn_70",
-  KA = "_info_row_ftymn_83",
-  ZA = "_avatar_container_ftymn_88",
-  $A = "_avatar_ftymn_88",
-  eh = "_position_ftymn_100",
-  th = "_user_squad_position_ftymn_118",
-  nh = "_rating_main_info_ftymn_136",
-  sh = "_rating_name_ftymn_149",
-  ah = "_rating_value_ftymn_156",
-  oh = "_active_league_text_ftymn_164",
-  ih = "_icon_leagueflag_ftymn_168",
-  rh = "_join_squad_button_ftymn_175",
-  ch = "_join_squad_text_ftymn_189",
-  lh = "_user_squad_container_ftymn_207",
-  dh = "_squad_avatar_container_ftymn_224",
-  uh = "_user_squad_info_ftymn_235",
-  ph = "_user_squad_name_ftymn_243",
-  mh = "_user_squad_your_squad_text_ftymn_247",
-  Ah = "_user_squad_users_count_ftymn_252",
+  HA = "_squads_img_container_ftymn_1",
+  qA = "_squads_img_ftymn_1",
+  LA = "_title_container_ftymn_11",
+  VA = "_description_container_ftymn_18",
+  GA = "_description_ftymn_18",
+  XA = "_info_layout_ftymn_32",
+  JA = "_info_container_ftymn_43",
+  YA = "_base_item_ftymn_50",
+  WA = "_loading_item_ftymn_61",
+  KA = "_rating_item_ftymn_70",
+  ZA = "_info_row_ftymn_83",
+  $A = "_avatar_container_ftymn_88",
+  eh = "_avatar_ftymn_88",
+  th = "_position_ftymn_100",
+  nh = "_user_squad_position_ftymn_118",
+  sh = "_rating_main_info_ftymn_136",
+  ah = "_rating_name_ftymn_149",
+  oh = "_rating_value_ftymn_156",
+  ih = "_active_league_text_ftymn_164",
+  rh = "_icon_leagueflag_ftymn_168",
+  ch = "_join_squad_button_ftymn_175",
+  lh = "_join_squad_text_ftymn_189",
+  dh = "_user_squad_container_ftymn_207",
+  uh = "_squad_avatar_container_ftymn_224",
+  ph = "_user_squad_info_ftymn_235",
+  mh = "_user_squad_name_ftymn_243",
+  Ah = "_user_squad_your_squad_text_ftymn_247",
+  hh = "_user_squad_users_count_ftymn_252",
   O = {
-    squads_img_container: zA,
-    squads_img: HA,
-    title_container: qA,
-    description_container: LA,
-    description: VA,
-    info_layout: GA,
-    info_container: XA,
-    base_item: JA,
-    loading_item: YA,
-    rating_item: WA,
-    info_row: KA,
-    avatar_container: ZA,
-    avatar: $A,
-    position: eh,
-    user_squad_position: th,
-    rating_main_info: nh,
-    rating_name: sh,
-    rating_value: ah,
-    active_league_text: oh,
-    icon_leagueflag: ih,
-    join_squad_button: rh,
-    join_squad_text: ch,
-    user_squad_container: lh,
-    squad_avatar_container: dh,
-    user_squad_info: uh,
-    user_squad_name: ph,
-    user_squad_your_squad_text: mh,
-    user_squad_users_count: Ah
+    squads_img_container: HA,
+    squads_img: qA,
+    title_container: LA,
+    description_container: VA,
+    description: GA,
+    info_layout: XA,
+    info_container: JA,
+    base_item: YA,
+    loading_item: WA,
+    rating_item: KA,
+    info_row: ZA,
+    avatar_container: $A,
+    avatar: eh,
+    position: th,
+    user_squad_position: nh,
+    rating_main_info: sh,
+    rating_name: ah,
+    rating_value: oh,
+    active_league_text: ih,
+    icon_leagueflag: rh,
+    join_squad_button: ch,
+    join_squad_text: lh,
+    user_squad_container: dh,
+    squad_avatar_container: uh,
+    user_squad_info: ph,
+    user_squad_name: mh,
+    user_squad_your_squad_text: Ah,
+    user_squad_users_count: hh
   },
   Xs = ({
     children: n
@@ -6570,7 +6601,7 @@ const vA = p.memo(() => (p.useEffect(() => {
     className: O.rating_value,
     children: Rt(n)
   }) : null,
-  hh = ({
+  gh = ({
     item: n,
     index: t
   }) => {
@@ -6580,7 +6611,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       children: e.jsxs("div", {
         className: a.join(" "),
         onPointerUp: () => {
-          s(Pn({
+          s(Cn({
             dataSource: Te.userFromRating,
             index: t
           }))
@@ -6596,7 +6627,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  gh = () => {
+  _h = () => {
     const n = l(s => s.user.user),
       t = l(s => s.ratings.myPlace);
     return n === null ? null : e.jsx(Xs, {
@@ -6641,7 +6672,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  _h = () => {
+  fh = () => {
     const n = g(),
       t = l(o => o.ratings.list),
       s = l(o => o.ratings.league),
@@ -6653,23 +6684,23 @@ const vA = p.memo(() => (p.useEffect(() => {
     }, [s]), p.useEffect(() => () => {
       n(rm())
     }, []), a !== u.fulfilled ? null : e.jsxs(ae.Fragment, {
-      children: [e.jsx(gh, {}), t.map((o, i) => e.jsx(hh, {
+      children: [e.jsx(_h, {}), t.map((o, i) => e.jsx(gh, {
         item: o,
         index: i
       }, i))]
     })
   },
-  fh = () => (p.useState("Day"), null),
-  xh = ({
+  xh = () => (p.useState("Day"), null),
+  yh = ({
     children: n
   }) => e.jsx("div", {
     className: O.info_layout,
     children: e.jsxs("div", {
       className: O.info_container,
-      children: [e.jsx(fh, {}), n]
+      children: [e.jsx(xh, {}), n]
     })
   }),
-  yh = () => {
+  vh = () => {
     const n = Y();
     return e.jsx("div", {
       className: O.description_container,
@@ -6684,7 +6715,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  vh = () => {
+  wh = () => {
     const n = l(t => t.user.user);
     return !n || !n.squad || n.squad.id !== null ? null : e.jsx("button", {
       className: O.join_squad_button,
@@ -6714,7 +6745,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       }
     })
   },
-  wh = () => {
+  bh = () => {
     const n = g(),
       t = l(a => a.ratings.mySquadPlace),
       s = l(a => a.ratings.mySquad);
@@ -6723,7 +6754,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       onPointerUp: () => {
         n(Gs.getInfo({
           id: s.id
-        })), n(Pn({
+        })), n(Cn({
           dataSource: Te.squadFromData
         }))
       },
@@ -6754,7 +6785,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  bh = ({
+  jh = ({
     item: n,
     index: t
   }) => {
@@ -6765,7 +6796,7 @@ const vA = p.memo(() => (p.useEffect(() => {
         onPointerUp: () => {
           s(Gs.getInfo({
             id: n.id
-          })), s(Pn({
+          })), s(Cn({
             dataSource: Te.squadFromData
           }))
         },
@@ -6781,14 +6812,14 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  jh = () => {
+  Ph = () => {
     const n = l(s => s.ratings.list);
-    return l(s => s.ratings.status) !== u.fulfilled ? null : n.map((s, a) => e.jsx(bh, {
+    return l(s => s.ratings.status) !== u.fulfilled ? null : n.map((s, a) => e.jsx(jh, {
       item: s,
       index: a
     }, a))
   },
-  Ph = () => {
+  Ch = () => {
     const n = g(),
       t = l(s => s.ratings.league);
     return p.useEffect(() => {
@@ -6796,44 +6827,44 @@ const vA = p.memo(() => (p.useEffect(() => {
         league: t
       }))
     }, [t]), e.jsxs(ae.Fragment, {
-      children: [e.jsx(vh, {}), e.jsx(wh, {}), e.jsx(jh, {})]
+      children: [e.jsx(wh, {}), e.jsx(bh, {}), e.jsx(Ph, {})]
     })
   },
-  Ch = () => e.jsx(ae.Fragment, {
+  Nh = () => e.jsx(ae.Fragment, {
     children: Array.from(Array(10)).map((n, t) => e.jsx(Xs, {
       children: e.jsx("div", {
         className: O.loading_item
       })
     }, t))
   }),
-  Nh = "/assets/icon_squad-_NF17RUb.gif",
-  Sh = "/assets/icon_squad_secret-B-fF264Z.gif",
-  Ih = () => {
+  Sh = "/assets/icon_squad-_NF17RUb.gif",
+  Ih = "/assets/icon_squad_secret-B-fF264Z.gif",
+  Th = () => {
     const [n, t] = p.useState(0);
     return e.jsx("div", {
       className: O.squads_img_container,
       children: e.jsx("img", {
         alt: "img",
         className: O.squads_img,
-        src: n >= 10 ? Sh : Nh,
+        src: n >= 10 ? Ih : Sh,
         onPointerUp: () => {
           t(s => s + 1)
         }
       })
     })
   },
-  Th = () => {
+  Eh = () => {
     const [n, t] = p.useState("Squads"), s = l(a => a.ratings.status);
     return e.jsxs($, {
-      children: [e.jsx(Ih, {}), e.jsx(FA, {
+      children: [e.jsx(Th, {}), e.jsx(zA, {
         selectedSection: n,
         setSelectedSection: t
-      }), e.jsx(yh, {}), e.jsxs(xh, {
-        children: [n === "Squads" && e.jsx(Ph, {}), n === "Painters" && e.jsx(_h, {}), s !== u.fulfilled && e.jsx(Ch, {})]
+      }), e.jsx(vh, {}), e.jsxs(yh, {
+        children: [n === "Squads" && e.jsx(Ch, {}), n === "Painters" && e.jsx(fh, {}), s !== u.fulfilled && e.jsx(Nh, {})]
       })]
     })
   },
-  Eh = () => {
+  Bh = () => {
     const n = p.useRef(null),
       t = p.useRef(null);
     p.useEffect(() => () => {
@@ -6864,7 +6895,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  Bh = () => {
+  Dh = () => {
     const n = p.useRef(null),
       t = p.useRef(null),
       s = () => {
@@ -6896,11 +6927,11 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  Dh = () => e.jsxs("div", {
+  kh = () => e.jsxs("div", {
     className: N.buttons_container,
-    children: [e.jsx(Eh, {}), e.jsx(Bh, {})]
+    children: [e.jsx(Bh, {}), e.jsx(Dh, {})]
   }),
-  kh = () => {
+  Rh = () => {
     const n = g(),
       t = [N.button],
       s = l(r => r.shop.limitedGood),
@@ -6934,21 +6965,21 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     }) : null
   },
-  Rh = () => l(Re) ? e.jsx("div", {
+  Uh = () => l(Re) ? e.jsx("div", {
     className: N.buttons_container,
-    children: e.jsx(kh, {})
+    children: e.jsx(Rh, {})
   }) : null,
-  Uh = "_button_t2u3a_1",
-  Oh = "_image_t2u3a_14",
-  Mh = "_airdrop_button_t2u3a_19",
-  Qh = "_button_text_t2u3a_33",
+  Oh = "_button_t2u3a_1",
+  Mh = "_image_t2u3a_14",
+  Qh = "_airdrop_button_t2u3a_19",
+  Fh = "_button_text_t2u3a_33",
   ln = {
-    button: Uh,
-    image: Oh,
-    airdrop_button: Mh,
-    button_text: Qh
+    button: Oh,
+    image: Mh,
+    airdrop_button: Qh,
+    button_text: Fh
   },
-  Fh = () => {
+  zh = () => {
     const n = g(),
       t = l(Ms),
       s = l(Os),
@@ -6960,7 +6991,7 @@ const vA = p.memo(() => (p.useEffect(() => {
         top: o
       },
       onPointerUp: () => {
-        a !== u.pending && n(pp.getPixanosRating()), n(cs(!0))
+        a !== u.pending && n(pp.getPixanosRating()), n(ls(!0))
       },
       children: e.jsx("img", {
         alt: "img",
@@ -6969,8 +7000,8 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  zh = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAAXNSR0IArs4c6QAAAglJREFUaIHtWj1OwzAU/oy6UKkXYGCJRKV07AUoByjs3ITOIHEMBnboAQgXYCRShy4gcYFKsCCFoXlt/BzHNiEisv0ttHb8Xvo+vx/8DET0G6IDmcV/vsPBXwrrAwZdCS5eZ43zYpJ1ojcohmp9YZqOBAC85BtpPk2GAgDy9afTC6TJEOU6SZ5OTwW1vucdQ00RpgBUX+B7n+Z1PmFab5LTsD4MhpyjHLck/aXx5c0KAHB+/yF953i8PAIAzK/GkhyuxxXeMaT1oWk6ArCPMjoGuoKOwUr0q10XDkOwrMmMe32sEbMStc+JwbONWiBGuRK2eUSBIzPK+C/1h8MQ1WZikklR7uk6AQCcLdbtNOsYLEF6CMSMqWb0miHJZNwCZCHKD1qUls9u32unN/kXAGB+d7Id0PgOPScWss/wqrz6ioCHDFXNY1Vdcyh5yDKfFN+n2w+MIVd9vPr2jiHrPJQ9vAHY722lljNELQUa3yGQr47SQwDA7OLYSqx3DMUf1He0j3IUrXQgXzHUbNb6go9yJgtR9DH+x8qZcYROT9DVtrS5+Ykmz0fOMPgOB+UffsoUXLXd+uTUWH07gvtMPDk1PdBVH8cWrvq9YyienPYdzlFut1DTLeAM8ijIx127D8FFudjB6zucuw8WXfBG39spVmuz2AWvQ2d3fRxuksS7Pk2It7EiItrhB7p6E/aIRp2bAAAAAElFTkSuQmCC",
-  Hh = () => {
+  Hh = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAAXNSR0IArs4c6QAAAglJREFUaIHtWj1OwzAU/oy6UKkXYGCJRKV07AUoByjs3ITOIHEMBnboAQgXYCRShy4gcYFKsCCFoXlt/BzHNiEisv0ttHb8Xvo+vx/8DET0G6IDmcV/vsPBXwrrAwZdCS5eZ43zYpJ1ojcohmp9YZqOBAC85BtpPk2GAgDy9afTC6TJEOU6SZ5OTwW1vucdQ00RpgBUX+B7n+Z1PmFab5LTsD4MhpyjHLck/aXx5c0KAHB+/yF953i8PAIAzK/GkhyuxxXeMaT1oWk6ArCPMjoGuoKOwUr0q10XDkOwrMmMe32sEbMStc+JwbONWiBGuRK2eUSBIzPK+C/1h8MQ1WZikklR7uk6AQCcLdbtNOsYLEF6CMSMqWb0miHJZNwCZCHKD1qUls9u32unN/kXAGB+d7Id0PgOPScWss/wqrz6ioCHDFXNY1Vdcyh5yDKfFN+n2w+MIVd9vPr2jiHrPJQ9vAHY722lljNELQUa3yGQr47SQwDA7OLYSqx3DMUf1He0j3IUrXQgXzHUbNb6go9yJgtR9DH+x8qZcYROT9DVtrS5+Ykmz0fOMPgOB+UffsoUXLXd+uTUWH07gvtMPDk1PdBVH8cWrvq9YyienPYdzlFut1DTLeAM8ijIx127D8FFudjB6zucuw8WXfBG39spVmuz2AWvQ2d3fRxuksS7Pk2It7EiItrhB7p6E/aIRp2bAAAAAElFTkSuQmCC",
+  qh = () => {
     const n = Y();
     return e.jsxs("button", {
       className: ln.airdrop_button,
@@ -6979,7 +7010,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       },
       children: [e.jsx("img", {
         alt: "img",
-        src: zh,
+        src: Hh,
         className: ln.image
       }), e.jsx("div", {
         className: ln.button_text,
@@ -6987,47 +7018,47 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  qh = () => e.jsx("div", {
+  Lh = () => e.jsx("div", {
     className: N.layout,
     children: e.jsxs("div", {
       className: N.container,
       children: [e.jsxs("div", {
         className: N.buttons_container,
-        children: [e.jsx(Hh, {}), e.jsx(Fh, {})]
-      }), e.jsx(Dh, {}), e.jsx(Rh, {})]
+        children: [e.jsx(qh, {}), e.jsx(zh, {})]
+      }), e.jsx(kh, {}), e.jsx(Uh, {})]
     })
   }),
-  Lh = "_layout_1v16g_1",
-  Vh = "_container_1v16g_5",
-  Gh = "_close_button_1v16g_14",
-  Xh = "_title_container_1v16g_22",
-  Jh = "_image_container_1v16g_28",
-  Yh = "_image_1v16g_28",
-  Wh = "_first_image_1v16g_45",
-  Kh = "_second_image_1v16g_50",
-  Zh = "_text_container_1v16g_55",
-  $h = "_button_container_1v16g_60",
-  eg = "_button_1v16g_60",
+  Vh = "_layout_1v16g_1",
+  Gh = "_container_1v16g_5",
+  Xh = "_close_button_1v16g_14",
+  Jh = "_title_container_1v16g_22",
+  Yh = "_image_container_1v16g_28",
+  Wh = "_image_1v16g_28",
+  Kh = "_first_image_1v16g_45",
+  Zh = "_second_image_1v16g_50",
+  $h = "_text_container_1v16g_55",
+  eg = "_button_container_1v16g_60",
+  tg = "_button_1v16g_60",
   be = {
-    layout: Lh,
-    container: Vh,
-    close_button: Gh,
-    title_container: Xh,
-    image_container: Jh,
-    image: Yh,
-    first_image: Wh,
-    second_image: Kh,
-    text_container: Zh,
-    button_container: $h,
-    button: eg
+    layout: Vh,
+    container: Gh,
+    close_button: Xh,
+    title_container: Jh,
+    image_container: Yh,
+    image: Wh,
+    first_image: Kh,
+    second_image: Zh,
+    text_container: $h,
+    button_container: eg,
+    button: tg
   },
-  tg = "_layout_1df7o_1",
-  ng = "_container_1df7o_14",
-  sg = "_move_in_1df7o_1",
+  ng = "_layout_1df7o_1",
+  sg = "_container_1df7o_14",
+  ag = "_move_in_1df7o_1",
   Za = {
-    layout: tg,
-    container: ng,
-    move_in: sg
+    layout: ng,
+    container: sg,
+    move_in: ag
   },
   ct = ({
     children: n,
@@ -7035,13 +7066,13 @@ const vA = p.memo(() => (p.useEffect(() => {
     onPointerUp: s = () => {},
     backgroundColor: a
   }) => {
-    const [o, i] = p.useState(!1), [r, c] = vs(() => ({
+    const [o, i] = p.useState(!1), [r, c] = ws(() => ({
       from: {
         opacity: 0
       },
       config: {
         duration: 300,
-        easing: ws.easeOutCubic
+        easing: bs.easeOutCubic
       }
     }));
     return p.useEffect(() => {
@@ -7051,7 +7082,7 @@ const vA = p.memo(() => (p.useEffect(() => {
         opacity: 0,
         onResolve: () => i(!1)
       })
-    }, [t]), o ? e.jsx(bs.div, {
+    }, [t]), o ? e.jsx(js.div, {
       className: Za.layout,
       style: {
         ...r,
@@ -7064,7 +7095,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     }) : null
   },
-  ag = () => {
+  og = () => {
     const n = g(),
       t = l(i => i.main.referrerSquadId),
       [s, a] = p.useState(null),
@@ -7134,17 +7165,17 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  og = "_layout_swx97_1",
-  ig = {
-    layout: og
+  ig = "_layout_swx97_1",
+  rg = {
+    layout: ig
   },
-  rg = "_layout_1a5xo_1",
-  cg = "_container_1a5xo_5",
+  cg = "_layout_1a5xo_1",
+  lg = "_container_1a5xo_5",
   $a = {
-    layout: rg,
-    container: cg
+    layout: cg,
+    container: lg
   },
-  lg = () => {
+  dg = () => {
     const n = g(),
       t = l(o => o.main.fastMode);
     if (!l(o => o.canvas.coords)) return null;
@@ -7161,7 +7192,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  dg = () => {
+  ug = () => {
     const n = g(),
       t = l(i => i.canvas.coords),
       s = l(i => i.main.fastMode),
@@ -7189,7 +7220,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  ug = () => {
+  pg = () => {
     const n = g(),
       t = [N.button, N.shop_button, N.fast_type_button],
       s = [N.button_image];
@@ -7208,14 +7239,14 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  pg = () => l(t => t.canvas.coords) ? e.jsx("div", {
+  mg = () => l(t => t.canvas.coords) ? e.jsx("div", {
     className: $a.layout,
     children: e.jsxs("div", {
       className: $a.container + " " + N.container__bottom,
-      children: [e.jsx(Qm, {}), e.jsx(Om, {}), e.jsx(cA, {}), e.jsx(nm, {}), e.jsx(lg, {}), e.jsx(dg, {}), e.jsx(ug, {})]
+      children: [e.jsx(Qm, {}), e.jsx(Om, {}), e.jsx(cA, {}), e.jsx(nm, {}), e.jsx(dg, {}), e.jsx(ug, {}), e.jsx(pg, {})]
     })
   }) : null,
-  mg = ({
+  Ag = ({
     open: n,
     setOpen: t,
     active: s,
@@ -7232,7 +7263,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       }
     })
   },
-  Ag = ({
+  hg = ({
     open: n,
     setOpen: t,
     active: s,
@@ -7243,14 +7274,14 @@ const vA = p.memo(() => (p.useEffect(() => {
     return n && s === 2 && i.push(Z.info_button_active), e.jsx("div", {
       className: i.join(" "),
       onPointerUp: r => {
-        r.stopPropagation(), o(Pn({
+        r.stopPropagation(), o(Cn({
           dataSource: Te.userFromPixelInfo
         }))
       },
       children: "info"
     })
   },
-  hg = () => {
+  gg = () => {
     const [n, t] = p.useState(!0), [s, a] = p.useState(!1), o = l(r => r.canvas.coords), i = p.useRef(null);
     return p.useEffect(() => () => {
       i.current !== null && (clearTimeout(i.current), i.current = null)
@@ -7260,7 +7291,7 @@ const vA = p.memo(() => (p.useEffect(() => {
         className: Z.pixel_info_text,
         onPointerUp: async r => {
           var d, m;
-          r.stopPropagation(), await Ds(`${gt}?startapp=x${o.x}_y${o.y}`) ? (m = (d = window.Telegram.WebApp) == null ? void 0 : d.HapticFeedback) == null || m.notificationOccurred("success") : a(!0), t(!1), i.current = setTimeout(() => {
+          r.stopPropagation(), await bn(`${gt}?startapp=x${o.x}_y${o.y}`) ? (m = (d = window.Telegram.WebApp) == null ? void 0 : d.HapticFeedback) == null || m.notificationOccurred("success") : a(!0), t(!1), i.current = setTimeout(() => {
             a(!1), t(!0), i.current = null
           }, 4e3)
         },
@@ -7277,19 +7308,19 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  gg = "_expandable_panel_layout_1v9vd_1",
-  _g = "_expandable_panel_1v9vd_1",
-  fg = "_divider_1v9vd_16",
-  xg = "_divider_spacer_1v9vd_24",
-  yg = "_divider_pointer_1v9vd_28",
+  _g = "_expandable_panel_layout_1v9vd_1",
+  fg = "_expandable_panel_1v9vd_1",
+  xg = "_divider_1v9vd_16",
+  yg = "_divider_spacer_1v9vd_24",
+  vg = "_divider_pointer_1v9vd_28",
   dn = {
-    expandable_panel_layout: gg,
-    expandable_panel: _g,
-    divider: fg,
-    divider_spacer: xg,
-    divider_pointer: yg
+    expandable_panel_layout: _g,
+    expandable_panel: fg,
+    divider: xg,
+    divider_spacer: yg,
+    divider_pointer: vg
   },
-  vg = ({
+  wg = ({
     active: n
   }) => {
     const t = n === 1 ? "38px" : "54px",
@@ -7309,7 +7340,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  wg = n => {
+  bg = n => {
     const t = p.useRef(),
       s = p.useRef();
     return p.useEffect(() => {
@@ -7323,41 +7354,41 @@ const vA = p.memo(() => (p.useEffect(() => {
       }
     }, []), s
   },
-  bg = "_container_1vu8i_1",
-  jg = "_owner_1vu8i_10",
-  Pg = "_id_1vu8i_14",
-  Cg = "_date_1vu8i_19",
-  Ng = "_avatar_container_1vu8i_24",
-  Sg = "_avatar_1vu8i_24",
-  Ig = "_squad_avatar_container_1vu8i_36",
-  Tg = "_text_container_1vu8i_48",
-  Eg = "_dot_1vu8i_54",
-  Bg = "_user_name_1vu8i_59",
-  Dg = "_squad_name_1vu8i_64",
+  jg = "_container_1vu8i_1",
+  Pg = "_owner_1vu8i_10",
+  Cg = "_id_1vu8i_14",
+  Ng = "_date_1vu8i_19",
+  Sg = "_avatar_container_1vu8i_24",
+  Ig = "_avatar_1vu8i_24",
+  Tg = "_squad_avatar_container_1vu8i_36",
+  Eg = "_text_container_1vu8i_48",
+  Bg = "_dot_1vu8i_54",
+  Dg = "_user_name_1vu8i_59",
+  kg = "_squad_name_1vu8i_64",
   se = {
-    container: bg,
-    owner: jg,
-    id: Pg,
-    date: Cg,
-    avatar_container: Ng,
-    avatar: Sg,
-    squad_avatar_container: Ig,
-    text_container: Tg,
-    dot: Eg,
-    user_name: Bg,
-    squad_name: Dg
+    container: jg,
+    owner: Pg,
+    id: Cg,
+    date: Ng,
+    avatar_container: Sg,
+    avatar: Ig,
+    squad_avatar_container: Tg,
+    text_container: Eg,
+    dot: Bg,
+    user_name: Dg,
+    squad_name: kg
   },
-  kg = "_skeleton_k7kmi_1",
-  Rg = "_loading_k7kmi_1",
-  Ug = {
-    skeleton: kg,
-    loading: Rg
+  Rg = "_skeleton_k7kmi_1",
+  Ug = "_loading_k7kmi_1",
+  Og = {
+    skeleton: Rg,
+    loading: Ug
   },
   Be = ({
     children: n,
     show: t
   }) => t ? e.jsx("div", {
-    className: Ug.skeleton,
+    className: Og.skeleton,
     children: e.jsx("div", {
       style: {
         opacity: 0
@@ -7365,7 +7396,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       children: n
     })
   }) : null,
-  Og = () => {
+  Mg = () => {
     const n = l(i => i.canvas.pixelInfo),
       t = l(i => i.canvas.getPixelInfoFetchStatus),
       s = n !== null && t === u.fulfilled,
@@ -7403,7 +7434,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       children: o
     })
   },
-  Mg = () => {
+  Qg = () => {
     const n = l(r => r.canvas.pixelInfo),
       t = l(r => r.canvas.getPixelInfoFetchStatus),
       s = n !== null && t === u.fulfilled;
@@ -7432,7 +7463,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  Qg = () => {
+  Fg = () => {
     var o, i;
     const n = l(r => r.canvas.pixelInfo),
       t = l(r => r.canvas.getPixelInfoFetchStatus),
@@ -7467,7 +7498,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  Fg = () => {
+  zg = () => {
     var o, i;
     const n = l(r => r.canvas.pixelInfo),
       t = l(r => r.canvas.getPixelInfoFetchStatus),
@@ -7487,7 +7518,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  zg = () => {
+  Hg = () => {
     const n = g(),
       t = l(o => o.canvas.pixelInfo),
       s = l(o => o.canvas.getPixelInfoFetchStatus),
@@ -7501,12 +7532,12 @@ const vA = p.memo(() => (p.useEffect(() => {
         onPointerUp: async o => {
           o.preventDefault(), o.stopPropagation();
           try {
-            await Ds(`${t.owner.id}`), await n(q({
+            await bn(`${t.owner.id}`), await n(H({
               id: performance.now(),
               text: "Copied!"
             }))
           } catch {
-            await n(q({
+            await n(H({
               id: performance.now(),
               text: "Can't copy!"
             }))
@@ -7522,25 +7553,25 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  Hg = () => e.jsxs("div", {
+  qg = () => e.jsxs("div", {
     className: se.container,
-    children: [e.jsx(zg, {}), e.jsx(Og, {}), e.jsx(Fg, {}), e.jsx(Mg, {}), e.jsx(Qg, {})]
+    children: [e.jsx(Hg, {}), e.jsx(Mg, {}), e.jsx(zg, {}), e.jsx(Qg, {}), e.jsx(Fg, {})]
   }),
-  qg = "_category_text_epppt_1",
-  Lg = "_latest_used_container_epppt_8",
-  Vg = "_color_line_epppt_15",
-  Gg = "_color_item_epppt_22",
-  Xg = "_pipette_container_epppt_30",
-  Jg = "_child_scale_epppt_48",
+  Lg = "_category_text_epppt_1",
+  Vg = "_latest_used_container_epppt_8",
+  Gg = "_color_line_epppt_15",
+  Xg = "_color_item_epppt_22",
+  Jg = "_pipette_container_epppt_30",
+  Yg = "_child_scale_epppt_48",
   Di = {
-    category_text: qg,
-    latest_used_container: Lg,
-    color_line: Vg,
-    color_item: Gg,
-    pipette_container: Xg,
-    child_scale: Jg
+    category_text: Lg,
+    latest_used_container: Vg,
+    color_line: Gg,
+    color_item: Xg,
+    pipette_container: Jg,
+    child_scale: Yg
   },
-  Yg = ({
+  Wg = ({
     color: n
   }) => {
     const [t, s] = p.useState(!1), a = p.useRef(null), o = g();
@@ -7562,37 +7593,37 @@ const vA = p.memo(() => (p.useEffect(() => {
     colors: n
   }) => e.jsx("div", {
     className: Di.color_line,
-    children: n.map((t, s) => e.jsx(Yg, {
+    children: n.map((t, s) => e.jsx(Wg, {
       color: t
     }, `${t}_${s}`))
   }),
-  Wg = "_unlock_button_fc8qr_1",
-  Kg = "_stars_text_fc8qr_13",
+  Kg = "_unlock_button_fc8qr_1",
+  Zg = "_stars_text_fc8qr_13",
   eo = {
-    unlock_button: Wg,
-    stars_text: Kg
+    unlock_button: Kg,
+    stars_text: Zg
   },
-  Zg = () => e.jsxs("div", {
+  $g = () => e.jsxs("div", {
     className: eo.unlock_button,
     children: [e.jsx("span", {
       children: "Unlock all colors for"
     }), e.jsxs("span", {
       className: eo.stars_text,
-      children: [e.jsx(bn, {}), e.jsx("span", {
+      children: [e.jsx(jn, {}), e.jsx("span", {
         children: "5000"
       })]
     })]
   }),
-  $g = () => {
+  e_ = () => {
     l(t => t.color.latest);
     const n = l(t => t.color.basic);
     return e.jsxs(ae.Fragment, {
       children: [e.jsx(ki, {
         colors: n
-      }), e.jsx(Zg, {})]
+      }), e.jsx($g, {})]
     })
   },
-  e_ = ({
+  t_ = ({
     getData: n
   }) => {
     const t = g(),
@@ -7607,22 +7638,22 @@ const vA = p.memo(() => (p.useEffect(() => {
       }
     }, [s, n, a, t]), null
   },
-  t_ = ({
+  n_ = ({
     open: n,
     setOpen: t,
     active: s
   }) => {
-    const a = wg(() => {
+    const a = bg(() => {
         s !== 2 && t(!1)
       }),
-      [o, i] = vs(() => ({
+      [o, i] = ws(() => ({
         from: {
           height: 0,
           opacity: 0
         },
         config: {
           duration: 400,
-          easing: ws.easeOutCubic
+          easing: bs.easeOutCubic
         }
       })),
       r = p.useRef(null);
@@ -7634,24 +7665,24 @@ const vA = p.memo(() => (p.useEffect(() => {
           opacity: n ? 1 : 0
         })
       }
-    }, [n, s, r, i]), e.jsxs(bs.div, {
+    }, [n, s, r, i]), e.jsxs(js.div, {
       ref: a,
       className: dn.expandable_panel_layout,
       style: {
         ...o
       },
-      children: [e.jsx(e_, {
+      children: [e.jsx(t_, {
         getData: s === 2 && n
       }), e.jsxs("div", {
         ref: r,
         className: dn.expandable_panel,
-        children: [e.jsx(vg, {
+        children: [e.jsx(wg, {
           active: s
-        }), s === 1 && e.jsx($g, {}), s === 2 && e.jsx(Hg, {})]
+        }), s === 1 && e.jsx(e_, {}), s === 2 && e.jsx(qg, {})]
       })]
     })
   },
-  n_ = () => l(Re) ? null : e.jsxs("button", {
+  s_ = () => l(Re) ? null : e.jsxs("button", {
     className: Z.button,
     onPointerUp: () => {
       pe("https://t.me/notpixel")
@@ -7659,15 +7690,15 @@ const vA = p.memo(() => (p.useEffect(() => {
     children: [e.jsx("img", {
       alt: "tg_logo",
       className: Z.tg_logo,
-      src: jn
+      src: Pn
     }), e.jsx("span", {
       className: Z.button_text,
       children: "Go to app for paint"
     })]
   }),
-  s_ = () => e.jsx(Dm, {}),
-  a_ = () => l(Re) ? e.jsx(s_, {}) : e.jsx(n_, {}),
-  o_ = () => {
+  a_ = () => e.jsx(Dm, {}),
+  o_ = () => l(Re) ? e.jsx(a_, {}) : e.jsx(s_, {}),
+  i_ = () => {
     const n = l(s => s.main.fastMode),
       t = l(s => s.main.currentFastType);
     return e.jsx("div", {
@@ -7678,7 +7709,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       }
     })
   },
-  i_ = () => {
+  r_ = () => {
     const [n, t] = p.useState(!1), [s, a] = p.useState(1), o = l(r => r.main.fastMode), i = l(r => r.main.currentFastType);
     return p.useEffect(() => {
       (o || i) && t(!1)
@@ -7689,37 +7720,37 @@ const vA = p.memo(() => (p.useEffect(() => {
       },
       children: e.jsxs("div", {
         className: Z.content,
-        children: [e.jsx(o_, {}), e.jsxs("div", {
+        children: [e.jsx(i_, {}), e.jsxs("div", {
           className: Z.info,
-          children: [e.jsx(mg, {
+          children: [e.jsx(Ag, {
             open: n,
             setOpen: t,
             active: s,
             setActive: a
-          }), e.jsx(hg, {}), e.jsx(Ag, {
+          }), e.jsx(gg, {}), e.jsx(hg, {
             open: n,
             setOpen: t,
             active: s,
             setActive: a
           })]
-        }), e.jsx(t_, {
+        }), e.jsx(n_, {
           open: n,
           setOpen: t,
           active: s
-        }), e.jsx(a_, {})]
+        }), e.jsx(o_, {})]
       })
     })
   },
-  r_ = () => e.jsx(ae.Fragment, {
-    children: e.jsx(i_, {})
+  c_ = () => e.jsx(ae.Fragment, {
+    children: e.jsx(r_, {})
   }),
-  c_ = "_panel_1urz2_1",
-  l_ = "_content_1urz2_16",
+  l_ = "_panel_1urz2_1",
+  d_ = "_content_1urz2_16",
   to = {
-    panel: c_,
-    content: l_
+    panel: l_,
+    content: d_
   },
-  d_ = ({
+  u_ = ({
     text: n
   }) => e.jsx("div", {
     className: to.panel,
@@ -7728,27 +7759,27 @@ const vA = p.memo(() => (p.useEffect(() => {
       children: n
     })
   }),
-  u_ = () => l(t => t.canvas.coords) === null ? e.jsx(d_, {
+  p_ = () => l(t => t.canvas.coords) === null ? e.jsx(u_, {
     text: "A-yo! Zoom, tap, paint"
   }) : e.jsxs("div", {
-    className: ig.layout,
-    children: [e.jsx(pg, {}), e.jsx(r_, {})]
+    className: rg.layout,
+    children: [e.jsx(mg, {}), e.jsx(c_, {})]
   }),
-  p_ = "_layout_14a3l_1",
-  m_ = "_container_14a3l_11",
-  A_ = "_image_14a3l_26",
-  h_ = "_text_14a3l_31",
-  g_ = "_gold_14a3l_37",
-  __ = "_winning_14a3l_44",
-  f_ = "_loosing_14a3l_48",
+  m_ = "_layout_14a3l_1",
+  A_ = "_container_14a3l_11",
+  h_ = "_image_14a3l_26",
+  g_ = "_text_14a3l_31",
+  __ = "_gold_14a3l_37",
+  f_ = "_winning_14a3l_44",
+  x_ = "_loosing_14a3l_48",
   ye = {
-    layout: p_,
-    container: m_,
-    image: A_,
-    text: h_,
-    gold: g_,
-    winning: __,
-    loosing: f_
+    layout: m_,
+    container: A_,
+    image: h_,
+    text: g_,
+    gold: __,
+    winning: f_,
+    loosing: x_
   },
   Ri = n => {
     if (!n) return "soon";
@@ -7759,7 +7790,7 @@ const vA = p.memo(() => (p.useEffect(() => {
     return o <= 0 && r < 30 ? "soon" : `in ${o}h ${r}m`
   },
   Ui = "/assets/gold_pixel-CRD2C_ap.gif",
-  x_ = () => {
+  y_ = () => {
     const n = l($u),
       t = l(r => r.tournament.resultsStatus),
       s = n && n.rank && n.rank <= n.rank_to_win,
@@ -7784,7 +7815,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  y_ = () => {
+  v_ = () => {
     const n = l($e),
       t = l(Ku),
       s = t ? Ri(new Date(t.EndTime)) : null;
@@ -7793,10 +7824,10 @@ const vA = p.memo(() => (p.useEffect(() => {
       children: [e.jsxs("span", {
         className: ye.gold,
         children: ["Round ", n, " ", s ? `ends ${s}` : ""]
-      }), e.jsx(x_, {})]
+      }), e.jsx(y_, {})]
     })
   },
-  v_ = () => {
+  w_ = () => {
     const n = Y(),
       t = l($e),
       s = l(Zu);
@@ -7816,50 +7847,50 @@ const vA = p.memo(() => (p.useEffect(() => {
             fontWeight: 600
           },
           children: "Telegram Battle is over"
-        }), t && e.jsx(y_, {})]
+        }), t && e.jsx(v_, {})]
       })
     })
   },
-  w_ = () => e.jsxs(e.Fragment, {
-    children: [e.jsx(qh, {}), e.jsx(u_, {}), e.jsx(v_, {}), e.jsx(ag, {})]
+  b_ = () => e.jsxs(e.Fragment, {
+    children: [e.jsx(Lh, {}), e.jsx(p_, {}), e.jsx(w_, {}), e.jsx(og, {})]
   }),
-  b_ = "_page_title_13ybj_1",
-  j_ = "_container_13ybj_9",
-  P_ = "_item_13ybj_13",
-  C_ = "_active_13ybj_18",
-  N_ = "_info_container_13ybj_34",
-  S_ = "_dot_13ybj_40",
-  I_ = "_title_text_13ybj_46",
-  T_ = "_capitalize_13ybj_50",
-  E_ = "_hint_text_13ybj_54",
-  B_ = "_date_text_13ybj_61",
-  D_ = "_value_container_13ybj_66",
-  k_ = "_value_text_13ybj_74",
-  R_ = "_positive_color_13ybj_78",
-  U_ = "_negative_color_13ybj_85",
-  O_ = "_last_text_13ybj_92",
+  j_ = "_page_title_13ybj_1",
+  P_ = "_container_13ybj_9",
+  C_ = "_item_13ybj_13",
+  N_ = "_active_13ybj_18",
+  S_ = "_info_container_13ybj_34",
+  I_ = "_dot_13ybj_40",
+  T_ = "_title_text_13ybj_46",
+  E_ = "_capitalize_13ybj_50",
+  B_ = "_hint_text_13ybj_54",
+  D_ = "_date_text_13ybj_61",
+  k_ = "_value_container_13ybj_66",
+  R_ = "_value_text_13ybj_74",
+  U_ = "_positive_color_13ybj_78",
+  O_ = "_negative_color_13ybj_85",
+  M_ = "_last_text_13ybj_92",
   x = {
-    page_title: b_,
-    container: j_,
-    item: P_,
-    active: C_,
-    info_container: N_,
-    dot: S_,
-    title_text: I_,
-    capitalize: T_,
-    hint_text: E_,
-    date_text: B_,
-    value_container: D_,
-    value_text: k_,
-    positive_color: R_,
-    negative_color: U_,
-    last_text: O_
+    page_title: j_,
+    container: P_,
+    item: C_,
+    active: N_,
+    info_container: S_,
+    dot: I_,
+    title_text: T_,
+    capitalize: E_,
+    hint_text: B_,
+    date_text: D_,
+    value_container: k_,
+    value_text: R_,
+    positive_color: U_,
+    negative_color: O_,
+    last_text: M_
   },
-  M_ = ({
+  Q_ = ({
     item: n
   }) => {
     const t = Y(),
-      s = Ns(n.details.pixel),
+      s = Ss(n.details.pixel),
       a = g();
     return e.jsxs("div", {
       className: `${x.item} ${x.active}`,
@@ -7898,7 +7929,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  Q_ = ({
+  F_ = ({
     item: n
   }) => {
     const t = Y(),
@@ -7949,7 +7980,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  F_ = ({
+  z_ = ({
     item: n
   }) => e.jsxs("div", {
     className: x.item,
@@ -7974,7 +8005,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })]
   }),
-  z_ = ({
+  H_ = ({
     item: n
   }) => e.jsxs("div", {
     className: x.item,
@@ -8002,7 +8033,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })]
   }),
-  H_ = ({
+  q_ = ({
     item: n
   }) => e.jsxs("div", {
     className: x.item,
@@ -8026,7 +8057,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       className: x.value_container
     })]
   }),
-  q_ = ({
+  L_ = ({
     item: n
   }) => e.jsxs("div", {
     className: x.item,
@@ -8056,7 +8087,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })]
   }),
-  L_ = ({
+  V_ = ({
     item: n
   }) => e.jsxs("div", {
     className: x.item,
@@ -8084,7 +8115,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })]
   }),
-  V_ = ({
+  G_ = ({
     item: n
   }) => e.jsxs("div", {
     className: x.item,
@@ -8106,12 +8137,12 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     }), e.jsxs("div", {
       className: x.value_container,
-      children: ["-", n.details.price, " ", e.jsx(bn, {
+      children: ["-", n.details.price, " ", e.jsx(jn, {
         fontSize: 14
       })]
     })]
   }),
-  G_ = ({
+  X_ = ({
     item: n
   }) => e.jsxs("div", {
     className: x.item,
@@ -8139,7 +8170,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })]
   }),
-  X_ = ({
+  J_ = ({
     item: n
   }) => e.jsxs("div", {
     className: x.item,
@@ -8167,30 +8198,30 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })]
   }),
-  J_ = ({
+  Y_ = ({
     item: n
-  }) => n.action === "buy pixel" ? e.jsx(M_, {
+  }) => n.action === "buy pixel" ? e.jsx(Q_, {
     item: n
-  }) : n.action === "sell pixel" ? e.jsx(Q_, {
+  }) : n.action === "sell pixel" ? e.jsx(F_, {
     item: n
-  }) : n.action === "claim" ? e.jsx(F_, {
+  }) : n.action === "claim" ? e.jsx(z_, {
     item: n
-  }) : n.action === "get boost" ? e.jsx(z_, {
+  }) : n.action === "get boost" ? e.jsx(H_, {
     item: n
-  }) : n.action === "league transfer" ? e.jsx(H_, {
+  }) : n.action === "league transfer" ? e.jsx(q_, {
     item: n
-  }) : n.action === "referral" ? e.jsx(q_, {
+  }) : n.action === "referral" ? e.jsx(L_, {
     item: n
-  }) : n.action === "special" ? e.jsx(L_, {
+  }) : n.action === "special" ? e.jsx(V_, {
     item: n
-  }) : n.action === "purchase" ? e.jsx(V_, {
+  }) : n.action === "purchase" ? e.jsx(G_, {
     item: n
-  }) : n.action === "complete task" ? e.jsx(G_, {
+  }) : n.action === "complete task" ? e.jsx(X_, {
     item: n
-  }) : n.action === "referrer reward" ? e.jsx(X_, {
+  }) : n.action === "referrer reward" ? e.jsx(J_, {
     item: n
   }) : (console.log("unknown action: ", n.action), null),
-  Y_ = () => {
+  W_ = () => {
     const n = g(),
       t = l(a => a.history.list),
       s = l(a => a.history.status);
@@ -8201,7 +8232,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       }))
     }, []), e.jsxs("div", {
       className: x.container,
-      children: [t.map((a, o) => e.jsx(J_, {
+      children: [t.map((a, o) => e.jsx(Y_, {
         item: a
       }, o)), s === u.fulfilled && t.length >= 50 && e.jsx("div", {
         className: x.last_text,
@@ -8211,25 +8242,25 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  W_ = () => e.jsxs($, {
+  K_ = () => e.jsxs($, {
     children: [e.jsx("h1", {
       className: x.page_title,
       children: "History"
-    }), e.jsx(Y_, {})]
+    }), e.jsx(W_, {})]
   }),
-  K_ = "_text_layout_1xggq_1",
-  Z_ = "_text_1xggq_1",
-  $_ = "_button_layout_1xggq_14",
-  ef = "_button_layout_placeholder_1xggq_26",
-  tf = "_button_1xggq_14",
+  Z_ = "_text_layout_1xggq_1",
+  $_ = "_text_1xggq_1",
+  ef = "_button_layout_1xggq_14",
+  tf = "_button_layout_placeholder_1xggq_26",
+  nf = "_button_1xggq_14",
   Kt = {
-    text_layout: K_,
-    text: Z_,
-    button_layout: $_,
-    button_layout_placeholder: ef,
-    button: tf
+    text_layout: Z_,
+    text: $_,
+    button_layout: ef,
+    button_layout_placeholder: tf,
+    button: nf
   },
-  nf = () => e.jsxs($, {
+  sf = () => e.jsxs($, {
     children: [e.jsx("div", {
       className: Kt.text_layout,
       children: e.jsxs("span", {
@@ -8257,24 +8288,24 @@ const vA = p.memo(() => (p.useEffect(() => {
         },
         children: [e.jsx("img", {
           alt: "tg_logo",
-          src: jn
+          src: Pn
         }), "Telegram Channel"]
       })
     })]
   }),
-  sf = "_text_layout_1h04i_1",
-  af = "_text_1h04i_1",
-  of = "_button_layout_1h04i_14",
-  rf = "_button_layout_placeholder_1h04i_26",
-  cf = "_button_1h04i_14",
+  af = "_text_layout_1h04i_1",
+  of = "_text_1h04i_1",
+  rf = "_button_layout_1h04i_14",
+  cf = "_button_layout_placeholder_1h04i_26",
+  lf = "_button_1h04i_14",
   Zt = {
-    text_layout: sf,
-    text: af,
-    button_layout: of,
-    button_layout_placeholder: rf,
-    button: cf
+    text_layout: af,
+    text: of,
+    button_layout: rf,
+    button_layout_placeholder: cf,
+    button: lf
   },
-  lf = () => e.jsxs($, {
+  df = () => e.jsxs($, {
     children: [e.jsx("div", {
       className: Zt.text_layout,
       children: e.jsxs("span", {
@@ -8296,39 +8327,39 @@ const vA = p.memo(() => (p.useEffect(() => {
         },
         children: [e.jsx("img", {
           alt: "tg_logo",
-          src: jn
+          src: Pn
         }), "Not Pixel 42"]
       })
     })]
   }),
-  df = "_layout_1drph_1",
-  uf = "_container_1drph_11",
-  pf = "_bold_1drph_22",
-  mf = "_info_container_1drph_26",
-  Af = "_title_1drph_33",
-  hf = "_description_1drph_38",
-  gf = "_image_container_1drph_43",
-  _f = "_image_1drph_43",
-  ff = "_extra_info_container_1drph_53",
-  xf = "_npx_tokens_1drph_77",
-  yf = "_button_container_1drph_81",
-  vf = "_button_1drph_81",
+  uf = "_layout_1drph_1",
+  pf = "_container_1drph_11",
+  mf = "_bold_1drph_22",
+  Af = "_info_container_1drph_26",
+  hf = "_title_1drph_33",
+  gf = "_description_1drph_38",
+  _f = "_image_container_1drph_43",
+  ff = "_image_1drph_43",
+  xf = "_extra_info_container_1drph_53",
+  yf = "_npx_tokens_1drph_77",
+  vf = "_button_container_1drph_81",
+  wf = "_button_1drph_81",
   me = {
-    layout: df,
-    container: uf,
-    bold: pf,
-    info_container: mf,
-    title: Af,
-    description: hf,
-    image_container: gf,
-    image: _f,
-    extra_info_container: ff,
-    npx_tokens: xf,
-    button_container: yf,
-    button: vf
+    layout: uf,
+    container: pf,
+    bold: mf,
+    info_container: Af,
+    title: hf,
+    description: gf,
+    image_container: _f,
+    image: ff,
+    extra_info_container: xf,
+    npx_tokens: yf,
+    button_container: vf,
+    button: wf
   },
-  wf = "/assets/intro-Brtd1phH.webp",
-  bf = {
+  bf = "/assets/intro-Brtd1phH.webp",
+  jf = {
     initial: {
       scale: .97,
       opacity: 0,
@@ -8345,13 +8376,13 @@ const vA = p.memo(() => (p.useEffect(() => {
       duration: .5
     }
   },
-  jf = () => {
+  Pf = () => {
     const n = Y();
     return Ke.createPortal(e.jsx("div", {
       className: me.layout,
       children: e.jsxs(un.div, {
         className: me.container,
-        ...bf,
+        ...jf,
         children: [e.jsxs("div", {
           className: me.info_container,
           children: [e.jsx("span", {
@@ -8366,7 +8397,7 @@ const vA = p.memo(() => (p.useEffect(() => {
           children: e.jsx("img", {
             alt: "image",
             className: me.image,
-            src: wf
+            src: bf
           })
         }), e.jsxs("div", {
           className: me.extra_info_container,
@@ -8407,19 +8438,19 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     }), document.body)
   },
-  Pf = "_text_layout_q4wab_1",
-  Cf = "_text_q4wab_1",
-  Nf = "_button_layout_q4wab_15",
-  Sf = "_button_layout_placeholder_q4wab_27",
-  If = "_button_q4wab_15",
+  Cf = "_text_layout_q4wab_1",
+  Nf = "_text_q4wab_1",
+  Sf = "_button_layout_q4wab_15",
+  If = "_button_layout_placeholder_q4wab_27",
+  Tf = "_button_q4wab_15",
   $t = {
-    text_layout: Pf,
-    text: Cf,
-    button_layout: Nf,
-    button_layout_placeholder: Sf,
-    button: If
+    text_layout: Cf,
+    text: Nf,
+    button_layout: Sf,
+    button_layout_placeholder: If,
+    button: Tf
   },
-  Tf = () => e.jsxs($, {
+  Ef = () => e.jsxs($, {
     children: [e.jsx("div", {
       className: $t.text_layout,
       children: e.jsxs("span", {
@@ -8458,19 +8489,19 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })]
   }),
-  Ef = "_text_layout_q4wab_1",
-  Bf = "_text_q4wab_1",
-  Df = "_button_layout_q4wab_15",
-  kf = "_button_layout_placeholder_q4wab_27",
-  Rf = "_button_q4wab_15",
+  Bf = "_text_layout_q4wab_1",
+  Df = "_text_q4wab_1",
+  kf = "_button_layout_q4wab_15",
+  Rf = "_button_layout_placeholder_q4wab_27",
+  Uf = "_button_q4wab_15",
   no = {
-    text_layout: Ef,
-    text: Bf,
-    button_layout: Df,
-    button_layout_placeholder: kf,
-    button: Rf
+    text_layout: Bf,
+    text: Df,
+    button_layout: kf,
+    button_layout_placeholder: Rf,
+    button: Uf
   },
-  Uf = () => e.jsx($, {
+  Of = () => e.jsx($, {
     children: e.jsx("div", {
       className: no.text_layout,
       children: e.jsxs("span", {
@@ -8491,58 +8522,58 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   }),
-  Of = "_close_container_1mu9y_1",
-  Mf = "_title_container_1mu9y_12",
-  Qf = "_title_1mu9y_12",
-  Ff = "_frens_count_1mu9y_21",
-  zf = "_content_1mu9y_25",
-  Hf = "_image_container_1mu9y_32",
-  qf = "_image_1mu9y_32",
-  Lf = "_description_container_1mu9y_41",
-  Vf = "_white_1mu9y_50",
-  Gf = "_gray_1mu9y_54",
-  Xf = "_purple_1mu9y_58",
-  Jf = "_bold_1mu9y_64",
-  Yf = "_center_1mu9y_68",
-  Wf = "_info_layout_1mu9y_72",
-  Kf = "_benefits_container_1mu9y_84",
-  Zf = "_benefits_item_1mu9y_92",
-  $f = "_divider_1mu9y_98",
-  ex = "_buttons_container_1mu9y_105",
-  tx = "_button_copy_1mu9y_112",
-  nx = "_button_1mu9y_105",
-  sx = "_share_container_1mu9y_137",
-  ax = "_share_row_1mu9y_143",
-  ox = "_crypto_image_1mu9y_150",
+  Mf = "_close_container_1mu9y_1",
+  Qf = "_title_container_1mu9y_12",
+  Ff = "_title_1mu9y_12",
+  zf = "_frens_count_1mu9y_21",
+  Hf = "_content_1mu9y_25",
+  qf = "_image_container_1mu9y_32",
+  Lf = "_image_1mu9y_32",
+  Vf = "_description_container_1mu9y_41",
+  Gf = "_white_1mu9y_50",
+  Xf = "_gray_1mu9y_54",
+  Jf = "_purple_1mu9y_58",
+  Yf = "_bold_1mu9y_64",
+  Wf = "_center_1mu9y_68",
+  Kf = "_info_layout_1mu9y_72",
+  Zf = "_benefits_container_1mu9y_84",
+  $f = "_benefits_item_1mu9y_92",
+  ex = "_divider_1mu9y_98",
+  tx = "_buttons_container_1mu9y_105",
+  nx = "_button_copy_1mu9y_112",
+  sx = "_button_1mu9y_105",
+  ax = "_share_container_1mu9y_137",
+  ox = "_share_row_1mu9y_143",
+  ix = "_crypto_image_1mu9y_150",
   ce = {
-    close_container: Of,
-    title_container: Mf,
-    title: Qf,
-    frens_count: Ff,
-    content: zf,
-    image_container: Hf,
-    image: qf,
-    description_container: Lf,
-    white: Vf,
-    gray: Gf,
-    purple: Xf,
-    bold: Jf,
-    center: Yf,
-    info_layout: Wf,
-    benefits_container: Kf,
-    benefits_item: Zf,
-    divider: $f,
-    buttons_container: ex,
-    button_copy: tx,
-    button: nx,
-    share_container: sx,
-    share_row: ax,
-    crypto_image: ox
+    close_container: Mf,
+    title_container: Qf,
+    title: Ff,
+    frens_count: zf,
+    content: Hf,
+    image_container: qf,
+    image: Lf,
+    description_container: Vf,
+    white: Gf,
+    gray: Xf,
+    purple: Jf,
+    bold: Yf,
+    center: Wf,
+    info_layout: Kf,
+    benefits_container: Zf,
+    benefits_item: $f,
+    divider: ex,
+    buttons_container: tx,
+    button_copy: nx,
+    button: sx,
+    share_container: ax,
+    share_row: ox,
+    crypto_image: ix
   },
-  ix = "/assets/sitting_chars_animation_ny_snow-er9QiNbn.gif",
-  rx = "_link_a4r15_1",
-  cx = {
-    link: rx
+  rx = "/assets/sitting_chars_animation_ny_snow-er9QiNbn.gif",
+  cx = "_link_a4r15_1",
+  lx = {
+    link: cx
   },
   Gt = ({
     url: n,
@@ -8551,10 +8582,10 @@ const vA = p.memo(() => (p.useEffect(() => {
   }) => {
     const [a, o] = p.useState(null), i = p.useRef(null);
     return e.jsxs("div", {
-      className: `${cx.link} ${t}`,
+      className: `${lx.link} ${t}`,
       onPointerUp: async r => {
         var d, m;
-        const c = await Ds(n);
+        const c = await bn(n);
         r.stopPropagation(), c ? (o("Copied!"), (m = (d = window.Telegram.WebApp) == null ? void 0 : d.HapticFeedback) == null || m.notificationOccurred("success")) : o("Can't copy :-("), clearTimeout(i.current), i.current = setTimeout(() => {
           o(null)
         }, 3e3)
@@ -8567,10 +8598,10 @@ const vA = p.memo(() => (p.useEffect(() => {
       }) : ""]
     })
   },
-  lx = () => {
+  dx = () => {
     const {
       t: n
-    } = Bs("translation", {
+    } = Ds("translation", {
       keyPrefix: "frens"
     }), t = l(c => c.user.user);
     l(c => c.main.settings);
@@ -8593,7 +8624,7 @@ const vA = p.memo(() => (p.useEffect(() => {
           children: e.jsx("img", {
             alt: "image",
             className: ce.image,
-            src: ix
+            src: rx
           })
         }), e.jsx("div", {
           className: ce.title_container,
@@ -8675,39 +8706,39 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  dx = "_container_19cbp_1",
-  ux = "_text_container_19cbp_9",
-  px = "_text_block_19cbp_16",
-  mx = "_gray_19cbp_24",
-  Ax = "_purple_19cbp_28",
-  hx = "_total_19cbp_35",
-  gx = "_bold_19cbp_39",
-  _x = "_indicator_19cbp_43",
-  fx = "_button_container_19cbp_52",
-  xx = "_button_19cbp_52",
+  ux = "_container_19cbp_1",
+  px = "_text_container_19cbp_9",
+  mx = "_text_block_19cbp_16",
+  Ax = "_gray_19cbp_24",
+  hx = "_purple_19cbp_28",
+  gx = "_total_19cbp_35",
+  _x = "_bold_19cbp_39",
+  fx = "_indicator_19cbp_43",
+  xx = "_button_container_19cbp_52",
+  yx = "_button_19cbp_52",
   oe = {
-    container: dx,
-    text_container: ux,
-    text_block: px,
-    gray: mx,
-    purple: Ax,
-    total: hx,
-    bold: gx,
-    indicator: _x,
-    button_container: fx,
-    button: xx
+    container: ux,
+    text_container: px,
+    text_block: mx,
+    gray: Ax,
+    purple: hx,
+    total: gx,
+    bold: _x,
+    indicator: fx,
+    button_container: xx,
+    button: yx
   },
-  yx = "_layout_1ulm2_1",
-  vx = "_container_1ulm2_11",
-  wx = "_stars_1ulm2_17",
-  bx = "_animStar_1ulm2_1",
-  Rn = {
-    layout: yx,
-    container: vx,
-    stars: wx,
-    animStar: bx
+  vx = "_layout_1ulm2_1",
+  wx = "_container_1ulm2_11",
+  bx = "_stars_1ulm2_17",
+  jx = "_animStar_1ulm2_1",
+  Un = {
+    layout: vx,
+    container: wx,
+    stars: bx,
+    animStar: jx
   },
-  jx = () => {
+  Px = () => {
     const [n, t] = p.useState(window.innerWidth);
 
     function s(a) {
@@ -8717,7 +8748,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       window.removeEventListener("resize", s)
     }), []), n
   },
-  Px = [{
+  Cx = [{
     count: 50,
     speed: 50
   }, {
@@ -8727,7 +8758,7 @@ const vA = p.memo(() => (p.useEffect(() => {
     count: 50,
     speed: 90
   }],
-  Cx = n => {
+  Nx = n => {
     const t = window.innerWidth,
       s = window.innerHeight * 2;
     return Array.from(Array(n)).reduce(a => {
@@ -8736,23 +8767,23 @@ const vA = p.memo(() => (p.useEffect(() => {
       return a + `${o}px ${i}px #fff, `
     }, "").replace(/,(\s+)?$/, "")
   },
-  Nx = p.memo(() => (jx(), e.jsx("div", {
-    className: Rn.layout,
+  Sx = p.memo(() => (Px(), e.jsx("div", {
+    className: Un.layout,
     children: e.jsx("div", {
-      className: Rn.container,
-      children: Px.map((n, t) => {
-        const s = Cx(n.count);
+      className: Un.container,
+      children: Cx.map((n, t) => {
+        const s = Nx(n.count);
         return e.jsx("div", {
-          className: Rn.stars,
+          className: Un.stars,
           style: {
-            animation: `${Rn.animStar} ${n.speed}s linear infinite`,
+            animation: `${Un.animStar} ${n.speed}s linear infinite`,
             boxShadow: s
           }
         }, t)
       })
     })
   })), () => !1),
-  Sx = () => {
+  Ix = () => {
     const n = Y(),
       [t, s] = p.useState(0),
       [a, o] = p.useState(0),
@@ -8775,7 +8806,7 @@ const vA = p.memo(() => (p.useEffect(() => {
         })
       } catch {}
     }, []), e.jsxs($, {
-      children: [e.jsx(Nx, {}), e.jsx("div", {
+      children: [e.jsx(Sx, {}), e.jsx("div", {
         style: {
           height: 50
         }
@@ -8857,60 +8888,60 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  Ix = "_main_info_container_1gqs9_2",
-  Tx = "_image_container_1gqs9_11",
-  Ex = "_image_1gqs9_11",
-  Bx = "_title_1gqs9_21",
-  Dx = "_variants_container_1gqs9_25",
-  kx = "_variant_item_1gqs9_33",
-  Rx = "_variant_left_container_1gqs9_39",
-  Ux = "_variant_middle_container_1gqs9_45",
-  Ox = "_dot_1gqs9_53",
-  Mx = "_variant_right_container_1gqs9_59",
-  Qx = "_button_container_1gqs9_66",
-  Fx = "_button_1gqs9_66",
-  zx = "_bold_1gqs9_96",
-  Hx = "_gray_1gqs9_100",
-  qx = "_blue_1gqs9_104",
-  Lx = "_text_1gqs9_109",
+  Tx = "_main_info_container_1gqs9_2",
+  Ex = "_image_container_1gqs9_11",
+  Bx = "_image_1gqs9_11",
+  Dx = "_title_1gqs9_21",
+  kx = "_variants_container_1gqs9_25",
+  Rx = "_variant_item_1gqs9_33",
+  Ux = "_variant_left_container_1gqs9_39",
+  Ox = "_variant_middle_container_1gqs9_45",
+  Mx = "_dot_1gqs9_53",
+  Qx = "_variant_right_container_1gqs9_59",
+  Fx = "_button_container_1gqs9_66",
+  zx = "_button_1gqs9_66",
+  Hx = "_bold_1gqs9_96",
+  qx = "_gray_1gqs9_100",
+  Lx = "_blue_1gqs9_104",
+  Vx = "_text_1gqs9_109",
   M = {
-    main_info_container: Ix,
-    image_container: Tx,
-    image: Ex,
-    title: Bx,
-    variants_container: Dx,
-    variant_item: kx,
-    variant_left_container: Rx,
-    variant_middle_container: Ux,
-    dot: Ox,
-    variant_right_container: Mx,
-    button_container: Qx,
-    button: Fx,
-    bold: zx,
-    gray: Hx,
-    blue: qx,
-    text: Lx
+    main_info_container: Tx,
+    image_container: Ex,
+    image: Bx,
+    title: Dx,
+    variants_container: kx,
+    variant_item: Rx,
+    variant_left_container: Ux,
+    variant_middle_container: Ox,
+    dot: Mx,
+    variant_right_container: Qx,
+    button_container: Fx,
+    button: zx,
+    bold: Hx,
+    gray: qx,
+    blue: Lx,
+    text: Vx
   },
   Oi = "/assets/button_dog_200x200-DtCBiZdv.gif",
-  Vx = n => {
+  Gx = n => {
     const t = n / 1e3,
       s = Math.floor(t / 60),
       a = t % 60;
     return a === 0 ? `${s} min` : `${s} min ${a} sec`
   },
-  Gx = n => {
+  Xx = n => {
     if (n < 0 || !n) return "";
     const t = Math.floor(n / 60),
       s = n % 60;
     return s < 10 ? `${t}:0${s}` : `${t}:${s}`
   },
-  Xx = () => {
+  Jx = () => {
     const n = g(),
       t = Y(),
       s = l(m => m.mining.maxCharges),
       a = l(m => m.mining.charges),
       o = l(m => m.mining.reChargeSpeed),
-      i = Vx(o),
+      i = Gx(o),
       r = l(m => m.mining.reChargeTs),
       [c, d] = p.useState("");
     return p.useEffect(() => {
@@ -8919,7 +8950,7 @@ const vA = p.memo(() => (p.useEffect(() => {
         const h = Date.now() - r,
           f = o - h,
           C = Math.round(f / 1e3);
-        d(Gx(C))
+        d(Xx(C))
       }, 500);
       return () => {
         clearInterval(m)
@@ -9065,73 +9096,73 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  Jx = "_close_container_5xtkt_1",
-  Yx = "_title_container_5xtkt_12",
-  Wx = "_title_5xtkt_12",
-  Kx = "_small_title_container_5xtkt_23",
-  Zx = "_small_title_5xtkt_23",
-  $x = "_content_5xtkt_32",
-  ey = "_image_container_5xtkt_40",
-  ty = "_image_placeholder_5xtkt_46",
-  ny = "_image_5xtkt_40",
-  sy = "_how_container_5xtkt_58",
-  ay = "_description_container_5xtkt_63",
-  oy = "_white_5xtkt_72",
-  iy = "_gray_5xtkt_76",
-  ry = "_bold_5xtkt_80",
-  cy = "_center_5xtkt_84",
-  ly = "_claim_button_container_5xtkt_88",
-  dy = "_claim_button_5xtkt_88",
-  uy = "_no_button_5xtkt_107",
-  py = "_info_layout_5xtkt_119",
-  my = "_rewards_layout_5xtkt_131",
-  Ay = "_rewards_grid_container_5xtkt_137",
-  hy = "_reward_item_5xtkt_143",
-  gy = "_reward_item_completed_5xtkt_153",
-  _y = "_reward_item_content_container_5xtkt_166",
-  fy = "_reward_item_active_5xtkt_179",
-  xy = "_reward_item_image_container_5xtkt_183",
-  yy = "_reward_item_amount_5xtkt_187",
-  vy = "_reward_item_amount_active_5xtkt_201",
-  wy = "_reward_item_amount_premium_5xtkt_205",
-  by = "_reward_item_title_5xtkt_210",
-  jy = "_reward_item_title_premium_5xtkt_216",
-  Py = "_reward_item_image_5xtkt_183",
+  Yx = "_close_container_5xtkt_1",
+  Wx = "_title_container_5xtkt_12",
+  Kx = "_title_5xtkt_12",
+  Zx = "_small_title_container_5xtkt_23",
+  $x = "_small_title_5xtkt_23",
+  ey = "_content_5xtkt_32",
+  ty = "_image_container_5xtkt_40",
+  ny = "_image_placeholder_5xtkt_46",
+  sy = "_image_5xtkt_40",
+  ay = "_how_container_5xtkt_58",
+  oy = "_description_container_5xtkt_63",
+  iy = "_white_5xtkt_72",
+  ry = "_gray_5xtkt_76",
+  cy = "_bold_5xtkt_80",
+  ly = "_center_5xtkt_84",
+  dy = "_claim_button_container_5xtkt_88",
+  uy = "_claim_button_5xtkt_88",
+  py = "_no_button_5xtkt_107",
+  my = "_info_layout_5xtkt_119",
+  Ay = "_rewards_layout_5xtkt_131",
+  hy = "_rewards_grid_container_5xtkt_137",
+  gy = "_reward_item_5xtkt_143",
+  _y = "_reward_item_completed_5xtkt_153",
+  fy = "_reward_item_content_container_5xtkt_166",
+  xy = "_reward_item_active_5xtkt_179",
+  yy = "_reward_item_image_container_5xtkt_183",
+  vy = "_reward_item_amount_5xtkt_187",
+  wy = "_reward_item_amount_active_5xtkt_201",
+  by = "_reward_item_amount_premium_5xtkt_205",
+  jy = "_reward_item_title_5xtkt_210",
+  Py = "_reward_item_title_premium_5xtkt_216",
+  Cy = "_reward_item_image_5xtkt_183",
   k = {
-    close_container: Jx,
-    title_container: Yx,
-    title: Wx,
-    small_title_container: Kx,
-    small_title: Zx,
-    content: $x,
-    image_container: ey,
-    image_placeholder: ty,
-    image: ny,
-    how_container: sy,
-    description_container: ay,
-    white: oy,
-    gray: iy,
-    bold: ry,
-    center: cy,
-    claim_button_container: ly,
-    claim_button: dy,
-    no_button: uy,
-    info_layout: py,
-    rewards_layout: my,
-    rewards_grid_container: Ay,
-    reward_item: hy,
-    reward_item_completed: gy,
-    reward_item_content_container: _y,
-    reward_item_active: fy,
-    reward_item_image_container: xy,
-    reward_item_amount: yy,
-    reward_item_amount_active: vy,
-    reward_item_amount_premium: wy,
-    reward_item_title: by,
-    reward_item_title_premium: jy,
-    reward_item_image: Py
+    close_container: Yx,
+    title_container: Wx,
+    title: Kx,
+    small_title_container: Zx,
+    small_title: $x,
+    content: ey,
+    image_container: ty,
+    image_placeholder: ny,
+    image: sy,
+    how_container: ay,
+    description_container: oy,
+    white: iy,
+    gray: ry,
+    bold: cy,
+    center: ly,
+    claim_button_container: dy,
+    claim_button: uy,
+    no_button: py,
+    info_layout: my,
+    rewards_layout: Ay,
+    rewards_grid_container: hy,
+    reward_item: gy,
+    reward_item_completed: _y,
+    reward_item_content_container: fy,
+    reward_item_active: xy,
+    reward_item_image_container: yy,
+    reward_item_amount: vy,
+    reward_item_amount_active: wy,
+    reward_item_amount_premium: by,
+    reward_item_title: jy,
+    reward_item_title_premium: Py,
+    reward_item_image: Cy
   },
-  Cy = ({
+  Ny = ({
     secondsLeft: n
   }) => {
     const t = g(),
@@ -9175,13 +9206,13 @@ const vA = p.memo(() => (p.useEffect(() => {
         localStorage.setItem(s, JSON.stringify({
           ts: Date.now(),
           dailyId: a.id
-        })), t(q({
+        })), t(H({
           id: performance.now(),
           text: "Success! Wait 3-5 min and reload the app.",
           icon: ""
         })), h(!0)
       } catch (y) {
-        console.warn(y), t(q({
+        console.warn(y), t(H({
           id: performance.now(),
           text: "Error! Wait 5 min before starting a new transaction."
         }))
@@ -9278,35 +9309,35 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  Ny = "data:image/png;base64,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",
-  Sy = "data:image/png;base64,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",
-  Iy = "data:image/png;base64,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",
-  Ty = "data:image/png;base64,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",
-  Ey = "_container_11l5m_1",
-  By = "_divider_11l5m_23",
-  Dy = "_row_11l5m_28",
-  ky = "_row_title_11l5m_40",
-  Ry = "_row_title_main_11l5m_44",
-  Uy = "_row_hint_11l5m_49",
-  Oy = "_row_value_11l5m_55",
-  My = "_row_value_main_11l5m_59",
-  Qy = "_mining_percent_11l5m_64",
-  Fy = "_active_row_11l5m_74",
-  zy = "_button_11l5m_85",
+  Sy = "data:image/png;base64,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",
+  Iy = "data:image/png;base64,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",
+  Ty = "data:image/png;base64,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",
+  Ey = "data:image/png;base64,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",
+  By = "_container_11l5m_1",
+  Dy = "_divider_11l5m_23",
+  ky = "_row_11l5m_28",
+  Ry = "_row_title_11l5m_40",
+  Uy = "_row_title_main_11l5m_44",
+  Oy = "_row_hint_11l5m_49",
+  My = "_row_value_11l5m_55",
+  Qy = "_row_value_main_11l5m_59",
+  Fy = "_mining_percent_11l5m_64",
+  zy = "_active_row_11l5m_74",
+  Hy = "_button_11l5m_85",
   so = {
-    container: Ey,
-    divider: By,
-    row: Dy,
-    row_title: ky,
-    row_title_main: Ry,
-    row_hint: Uy,
-    row_value: Oy,
-    row_value_main: My,
-    mining_percent: Qy,
-    active_row: Fy,
-    button: zy
+    container: By,
+    divider: Dy,
+    row: ky,
+    row_title: Ry,
+    row_title_main: Uy,
+    row_hint: Oy,
+    row_value: My,
+    row_value_main: Qy,
+    mining_percent: Fy,
+    active_row: zy,
+    button: Hy
   },
-  Hy = () => {
+  qy = () => {
     const n = g(),
       t = l(a => a.daily.showHowDailyWorksPopup),
       s = a => {
@@ -9331,12 +9362,12 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  qy = (n, t) => {
+  Ly = (n, t) => {
     const s = n.getTime() - n.getTime() % 864e5,
       a = t.getTime() - t.getTime() % (86400 * 1e3);
     return s === a
   },
-  Ly = () => {
+  Vy = () => {
     const n = g(),
       t = l(Ea.selectAll),
       s = l(r => r.daily.selected),
@@ -9353,7 +9384,7 @@ const vA = p.memo(() => (p.useEffect(() => {
           break
         }
       }
-      if (r && qy(new Date, new Date(r))) {
+      if (r && Ly(new Date, new Date(r))) {
         const c = new Date(r),
           m = new Date(Date.UTC(c.getUTCFullYear(), c.getUTCMonth(), c.getUTCDate() + 1, 0, 0, 0, 0)) - new Date,
           A = Math.floor(m / 1e3);
@@ -9366,7 +9397,7 @@ const vA = p.memo(() => (p.useEffect(() => {
           className: k.title,
           children: "Daily streak awards"
         })
-      }), e.jsx(Cy, {
+      }), e.jsx(Ny, {
         secondsLeft: a
       }), e.jsxs("div", {
         className: k.info_layout,
@@ -9387,11 +9418,11 @@ const vA = p.memo(() => (p.useEffect(() => {
                 h = [k.reward_item_amount],
                 f = [k.reward_item_title];
               r.id === s && (A.push(k.reward_item_active), h.push(k.reward_item_amount_active)), d && f.push(k.reward_item_title_premium), d && !r.active && h.push(k.reward_item_amount_premium);
-              let C = Ny;
-              return c >= 8 && c <= 15 && (C = Sy), c >= 16 && c <= 23 && (C = Iy), c >= 24 && c <= 31 && (C = Ty), e.jsxs("div", {
+              let C = Sy;
+              return c >= 8 && c <= 15 && (C = Iy), c >= 16 && c <= 23 && (C = Ty), c >= 24 && c <= 31 && (C = Ey), e.jsxs("div", {
                 className: A.join(" "),
                 onPointerUp: () => {
-                  n(q({
+                  n(H({
                     id: performance.now(),
                     text: `${m.quantity} ${r.name} for ${m.price} TON`,
                     icon: ""
@@ -9433,96 +9464,96 @@ const vA = p.memo(() => (p.useEffect(() => {
             })
           })
         })]
-      }), e.jsx(Hy, {})]
+      }), e.jsx(qy, {})]
     })
   },
-  Vy = "_general_info_container_fv8d9_1",
-  Gy = "_img_container_fv8d9_7",
-  Xy = "_image_fv8d9_13",
-  Jy = "_title_fv8d9_19",
-  Yy = "_description_container_fv8d9_25",
-  Wy = "_description_fv8d9_25",
+  Gy = "_general_info_container_fv8d9_1",
+  Xy = "_img_container_fv8d9_7",
+  Jy = "_image_fv8d9_13",
+  Yy = "_title_fv8d9_19",
+  Wy = "_description_container_fv8d9_25",
+  Ky = "_description_fv8d9_25",
   Nt = {
-    general_info_container: Vy,
-    img_container: Gy,
-    image: Xy,
-    title: Jy,
-    description_container: Yy,
-    description: Wy
+    general_info_container: Gy,
+    img_container: Xy,
+    image: Jy,
+    title: Yy,
+    description_container: Wy,
+    description: Ky
   },
-  Ky = "_info_layout_1p9dg_1",
-  Zy = {
-    info_layout: Ky
+  Zy = "_info_layout_1p9dg_1",
+  $y = {
+    info_layout: Zy
   },
-  $y = "_no_template_container_uihlo_1",
-  ev = "_no_template_button_uihlo_10",
-  tv = "_template_container_uihlo_28",
-  nv = "_template_info_container_uihlo_35",
-  sv = "_template_info_uihlo_35",
-  av = "_buttons_container_uihlo_44",
-  ov = "_button_copy_uihlo_53",
-  iv = "_button_uihlo_44",
-  rv = "_create_new_template_uihlo_72",
+  ev = "_no_template_container_uihlo_1",
+  tv = "_no_template_button_uihlo_10",
+  nv = "_template_container_uihlo_28",
+  sv = "_template_info_container_uihlo_35",
+  av = "_template_info_uihlo_35",
+  ov = "_buttons_container_uihlo_44",
+  iv = "_button_copy_uihlo_53",
+  rv = "_button_uihlo_44",
+  cv = "_create_new_template_uihlo_72",
   Me = {
-    no_template_container: $y,
-    no_template_button: ev,
-    template_container: tv,
-    template_info_container: nv,
-    template_info: sv,
-    buttons_container: av,
-    button_copy: ov,
-    button: iv,
-    create_new_template: rv
+    no_template_container: ev,
+    no_template_button: tv,
+    template_container: nv,
+    template_info_container: sv,
+    template_info: av,
+    buttons_container: ov,
+    button_copy: iv,
+    button: rv,
+    create_new_template: cv
   },
-  cv = "_instruction_container_14ts7_1",
-  lv = "_img_container_14ts7_9",
-  dv = "_image_14ts7_15",
-  uv = "_instruction_text_14ts7_21",
-  pv = "_preview_container_14ts7_26",
-  mv = "_preview_image_container_14ts7_32",
-  Av = "_preview_image_14ts7_32",
-  hv = "_preview_image_loader_14ts7_45",
-  gv = "_template_size_14ts7_60",
-  _v = "_template_title_14ts7_68",
-  fv = "_template_size_container_14ts7_73",
-  xv = "_template_size_item_14ts7_79",
-  yv = "_template_size_item_active_14ts7_87",
-  vv = "_template_coords_14ts7_92",
-  wv = "_template_coordinates_title_14ts7_102",
-  bv = "_template_coords_container_14ts7_107",
-  jv = "_coords_item_14ts7_114",
-  Pv = "_coords_input_14ts7_120",
-  Cv = "_file_button_container_14ts7_129",
-  Nv = "_file_button_14ts7_129",
+  lv = "_instruction_container_14ts7_1",
+  dv = "_img_container_14ts7_9",
+  uv = "_image_14ts7_15",
+  pv = "_instruction_text_14ts7_21",
+  mv = "_preview_container_14ts7_26",
+  Av = "_preview_image_container_14ts7_32",
+  hv = "_preview_image_14ts7_32",
+  gv = "_preview_image_loader_14ts7_45",
+  _v = "_template_size_14ts7_60",
+  fv = "_template_title_14ts7_68",
+  xv = "_template_size_container_14ts7_73",
+  yv = "_template_size_item_14ts7_79",
+  vv = "_template_size_item_active_14ts7_87",
+  wv = "_template_coords_14ts7_92",
+  bv = "_template_coordinates_title_14ts7_102",
+  jv = "_template_coords_container_14ts7_107",
+  Pv = "_coords_item_14ts7_114",
+  Cv = "_coords_input_14ts7_120",
+  Nv = "_file_button_container_14ts7_129",
+  Sv = "_file_button_14ts7_129",
   J = {
-    instruction_container: cv,
-    img_container: lv,
-    image: dv,
-    instruction_text: uv,
-    preview_container: pv,
-    preview_image_container: mv,
-    preview_image: Av,
-    preview_image_loader: hv,
-    template_size: gv,
-    template_title: _v,
-    template_size_container: fv,
-    template_size_item: xv,
-    template_size_item_active: yv,
-    template_coords: vv,
-    template_coordinates_title: wv,
-    template_coords_container: bv,
-    coords_item: jv,
-    coords_input: Pv,
-    file_button_container: Cv,
-    file_button: Nv
+    instruction_container: lv,
+    img_container: dv,
+    image: uv,
+    instruction_text: pv,
+    preview_container: mv,
+    preview_image_container: Av,
+    preview_image: hv,
+    preview_image_loader: gv,
+    template_size: _v,
+    template_title: fv,
+    template_size_container: xv,
+    template_size_item: yv,
+    template_size_item_active: vv,
+    template_coords: wv,
+    template_coordinates_title: bv,
+    template_coords_container: jv,
+    coords_item: Pv,
+    coords_input: Cv,
+    file_button_container: Nv,
+    file_button: Sv
   },
-  Ss = {
+  Is = {
     16: 512,
     32: 2048,
     64: 8192,
     128: 2e4
   },
-  Sv = ({
+  Iv = ({
     templateSize: n,
     setTemplateSize: t
   }) => {
@@ -9543,9 +9574,9 @@ const vA = p.memo(() => (p.useEffect(() => {
           return n === r && c.push(J.template_size_item_active), e.jsx("div", {
             className: c.join(" "),
             onPointerUp: () => {
-              o >= Ss[r] || a.isContractor ? t(r) : s(q({
+              o >= Is[r] || a.isContractor ? t(r) : s(H({
                 id: performance.now(),
-                text: `To unlock this size, invite ${Ss[r]-o} more frens.`
+                text: `To unlock this size, invite ${Is[r]-o} more frens.`
               }))
             },
             children: `${r} X ${r}`
@@ -9554,11 +9585,11 @@ const vA = p.memo(() => (p.useEffect(() => {
       }), " "]
     })
   },
-  Iv = () => {
+  Tv = () => {
     const n = Y(),
       t = l(o => o.template.myTemplate),
       s = l(o => o.user.user),
-      a = s && s.friends >= Ss[16] || s.isContractor;
+      a = s && s.friends >= Is[16] || s.isContractor;
     return t !== null ? null : e.jsxs("div", {
       className: Me.no_template_container,
       children: [a && e.jsx("span", {
@@ -9566,7 +9597,7 @@ const vA = p.memo(() => (p.useEffect(() => {
         children: "Create a template and share with your friends."
       }), !a && e.jsxs("span", {
         className: "gray",
-        children: ["To unlock template creation, ", e.jsx("br", {}), " invite", " ", s && s.friends || 0, "/", Ss[16], " friends"]
+        children: ["To unlock template creation, ", e.jsx("br", {}), " invite", " ", s && s.friends || 0, "/", Is[16], " friends"]
       }), a && e.jsx("button", {
         className: Me.no_template_button,
         onPointerUp: () => {
@@ -9586,17 +9617,17 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  Tv = "_template_item_container_srp11_1",
-  Ev = "_template_item_inner_srp11_9",
-  Bv = "_template_image_srp11_17",
-  Dv = "_template_image_info_layout_srp11_24",
-  kv = "_template_image_info_container_srp11_34",
+  Ev = "_template_item_container_srp11_1",
+  Bv = "_template_item_inner_srp11_9",
+  Dv = "_template_image_srp11_17",
+  kv = "_template_image_info_layout_srp11_24",
+  Rv = "_template_image_info_container_srp11_34",
   en = {
-    template_item_container: Tv,
-    template_item_inner: Ev,
-    template_image: Bv,
-    template_image_info_layout: Dv,
-    template_image_info_container: kv
+    template_item_container: Ev,
+    template_item_inner: Bv,
+    template_image: Dv,
+    template_image_info_layout: kv,
+    template_image_info_container: Rv
   },
   Mi = ({
     item: n,
@@ -9634,7 +9665,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  Rv = () => {
+  Uv = () => {
     const n = Y();
     return e.jsx("div", {
       className: Me.create_new_template,
@@ -9644,7 +9675,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       children: "Create a new template"
     })
   },
-  Uv = () => {
+  Ov = () => {
     const n = l(a => a.user.user);
     let t = `${gt}?startapp=f${(n==null?void 0:n.id)||""}_t`;
     n.squad && n.squad.id !== null && (t += `_s${n.squad.id}`);
@@ -9680,23 +9711,23 @@ const vA = p.memo(() => (p.useEffect(() => {
           },
           children: "Share"
         })]
-      }), e.jsx(Rv, {})]
+      }), e.jsx(Uv, {})]
     })
   },
-  Ov = () => e.jsxs("div", {
-    children: [e.jsx(Iv, {}), e.jsx(Uv, {})]
+  Mv = () => e.jsxs("div", {
+    children: [e.jsx(Tv, {}), e.jsx(Ov, {})]
   }),
-  Mv = "_layout_94gj5_1",
-  Qv = "_container_94gj5_5",
-  Fv = "_button_container_94gj5_11",
-  zv = "_button_94gj5_11",
-  Is = {
-    layout: Mv,
-    container: Qv,
-    button_container: Fv,
-    button: zv
+  Qv = "_layout_94gj5_1",
+  Fv = "_container_94gj5_5",
+  zv = "_button_container_94gj5_11",
+  Hv = "_button_94gj5_11",
+  Ts = {
+    layout: Qv,
+    container: Fv,
+    button_container: zv,
+    button: Hv
   },
-  Hv = () => {
+  qv = () => {
     const n = g(),
       t = p.useRef(null),
       s = p.useRef(0),
@@ -9728,11 +9759,11 @@ const vA = p.memo(() => (p.useEffect(() => {
     }, [a, o, i, c]), p.useEffect(() => {
       s.current === r.length && r.length !== 0 && d(!0), s.current = r.length
     }, [r]), c ? null : e.jsx("div", {
-      className: Is.button_container,
+      className: Ts.button_container,
       children: e.jsx("button", {
         ref: t,
         disabled: a === u.pending,
-        className: Is.button,
+        className: Ts.button,
         onPointerUp: () => {
           n(it.getList({
             offset: o,
@@ -9743,7 +9774,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  qv = () => {
+  Lv = () => {
     const n = g(),
       t = l(i => i.template.listOffset),
       s = l(i => i.template.listLimit),
@@ -9755,9 +9786,9 @@ const vA = p.memo(() => (p.useEffect(() => {
     })), () => {
       n(xm())
     }), []), e.jsxs("div", {
-      className: Is.layout,
+      className: Ts.layout,
       children: [e.jsx("div", {
-        className: Is.container,
+        className: Ts.container,
         children: a.map(i => {
           if (Number(i.templateId) === 0) return null;
           let r = !1;
@@ -9766,17 +9797,17 @@ const vA = p.memo(() => (p.useEffect(() => {
             current: r
           }, i.templateId)
         })
-      }), e.jsx(Hv, {})]
-    })
-  },
-  Lv = () => {
-    const n = l(t => t.template.activeTab);
-    return e.jsxs("div", {
-      className: Zy.info_layout,
-      children: [n === "my" && e.jsx(Ov, {}), n === "catalog" && e.jsx(qv, {})]
+      }), e.jsx(qv, {})]
     })
   },
   Vv = () => {
+    const n = l(t => t.template.activeTab);
+    return e.jsxs("div", {
+      className: $y.info_layout,
+      children: [n === "my" && e.jsx(Mv, {}), n === "catalog" && e.jsx(Lv, {})]
+    })
+  },
+  Gv = () => {
     const n = g(),
       t = l(s => s.template.activeTab);
     return e.jsxs(zs, {
@@ -9791,35 +9822,35 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  Gv = () => e.jsxs(ae.Fragment, {
-    children: [e.jsx(Vv, {}), e.jsx(Lv, {})]
+  Xv = () => e.jsxs(ae.Fragment, {
+    children: [e.jsx(Gv, {}), e.jsx(Vv, {})]
   }),
   Oa = "/assets/paintings_anim2-nk1iBB8J.gif",
-  Xv = "_container_1h1qc_1",
-  Jv = "_divider_1h1qc_19",
-  Yv = "_row_1h1qc_24",
-  Wv = "_row_title_1h1qc_36",
-  Kv = "_row_title_main_1h1qc_40",
-  Zv = "_row_hint_1h1qc_45",
-  $v = "_row_value_1h1qc_51",
-  ew = "_row_value_main_1h1qc_55",
-  tw = "_mining_percent_1h1qc_60",
-  nw = "_active_row_1h1qc_70",
-  sw = "_button_1h1qc_81",
+  Jv = "_container_1h1qc_1",
+  Yv = "_divider_1h1qc_19",
+  Wv = "_row_1h1qc_24",
+  Kv = "_row_title_1h1qc_36",
+  Zv = "_row_title_main_1h1qc_40",
+  $v = "_row_hint_1h1qc_45",
+  ew = "_row_value_1h1qc_51",
+  tw = "_row_value_main_1h1qc_55",
+  nw = "_mining_percent_1h1qc_60",
+  sw = "_active_row_1h1qc_70",
+  aw = "_button_1h1qc_81",
   ao = {
-    container: Xv,
-    divider: Jv,
-    row: Yv,
-    row_title: Wv,
-    row_title_main: Kv,
-    row_hint: Zv,
-    row_value: $v,
-    row_value_main: ew,
-    mining_percent: tw,
-    active_row: nw,
-    button: sw
+    container: Jv,
+    divider: Yv,
+    row: Wv,
+    row_title: Kv,
+    row_title_main: Zv,
+    row_hint: $v,
+    row_value: ew,
+    row_value_main: tw,
+    mining_percent: nw,
+    active_row: sw,
+    button: aw
   },
-  aw = () => {
+  ow = () => {
     const n = g(),
       t = l(a => a.template.showTemplateDetailsPopup),
       s = a => {
@@ -9846,43 +9877,43 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  ow = "_layout_2uiqn_1",
-  iw = "_container_2uiqn_6",
-  rw = "_close_button_2uiqn_18",
-  cw = "_title_container_2uiqn_26",
-  lw = "_title_2uiqn_26",
-  dw = "_image_container_2uiqn_37",
-  uw = "_image_2uiqn_37",
-  pw = "_image_placeholder_2uiqn_51",
-  mw = "_info_container_2uiqn_58",
-  Aw = "_info_row_2uiqn_64",
-  hw = "_info_title_2uiqn_69",
-  gw = "_info_value_blue_2uiqn_73",
-  _w = "_info_value_white_2uiqn_78",
-  fw = "_buttons_container_2uiqn_82",
-  xw = "_button_2uiqn_82",
-  yw = "_not_button_2uiqn_98",
-  vw = "_button_copy_2uiqn_109",
+  iw = "_layout_2uiqn_1",
+  rw = "_container_2uiqn_6",
+  cw = "_close_button_2uiqn_18",
+  lw = "_title_container_2uiqn_26",
+  dw = "_title_2uiqn_26",
+  uw = "_image_container_2uiqn_37",
+  pw = "_image_2uiqn_37",
+  mw = "_image_placeholder_2uiqn_51",
+  Aw = "_info_container_2uiqn_58",
+  hw = "_info_row_2uiqn_64",
+  gw = "_info_title_2uiqn_69",
+  _w = "_info_value_blue_2uiqn_73",
+  fw = "_info_value_white_2uiqn_78",
+  xw = "_buttons_container_2uiqn_82",
+  yw = "_button_2uiqn_82",
+  vw = "_not_button_2uiqn_98",
+  ww = "_button_copy_2uiqn_109",
   K = {
-    layout: ow,
-    container: iw,
-    close_button: rw,
-    title_container: cw,
-    title: lw,
-    image_container: dw,
-    image: uw,
-    image_placeholder: pw,
-    info_container: mw,
-    info_row: Aw,
-    info_title: hw,
-    info_value_blue: gw,
-    info_value_white: _w,
-    buttons_container: fw,
-    button: xw,
-    not_button: yw,
-    button_copy: vw
+    layout: iw,
+    container: rw,
+    close_button: cw,
+    title_container: lw,
+    title: dw,
+    image_container: uw,
+    image: pw,
+    image_placeholder: mw,
+    info_container: Aw,
+    info_row: hw,
+    info_title: gw,
+    info_value_blue: _w,
+    info_value_white: fw,
+    buttons_container: xw,
+    button: yw,
+    not_button: vw,
+    button_copy: ww
   },
-  ww = () => {
+  bw = () => {
     const n = g(),
       t = l(d => d.template.templateInfoPopupId),
       [s, a] = p.useState(!1),
@@ -9905,7 +9936,7 @@ const vA = p.memo(() => (p.useEffect(() => {
             if (a(!0), (await n(it.subscribe({
                 id: t
               }))).meta.requestStatus === u.fulfilled) {
-              await n(q({
+              await n(H({
                 id: performance.now(),
                 text: "Success!"
               }));
@@ -9918,7 +9949,7 @@ const vA = p.memo(() => (p.useEffect(() => {
                   type: Qe.referred
                 };
               n(_m(A)), w.mainImage.worldTemplate.deleteTemplate(i.id), w.mainImage.worldTemplate.add(A), n(bi())
-            } else await n(q({
+            } else await n(H({
               id: performance.now(),
               text: "Something wrong"
             }));
@@ -9931,7 +9962,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       children: "Select Template"
     })
   },
-  bw = () => {
+  jw = () => {
     const n = g(),
       [t, s] = p.useState(null),
       a = l(i => i.template.showTemplateInfoPopup),
@@ -9987,7 +10018,7 @@ const vA = p.memo(() => (p.useEffect(() => {
             })]
           }), e.jsxs("div", {
             className: K.buttons_container,
-            children: [e.jsx(ww, {}), e.jsx(Gt, {
+            children: [e.jsx(bw, {}), e.jsx(Gt, {
               url: `${gt}?startapp=f${o}_t`,
               className: K.button_copy,
               text: "Copy template link"
@@ -10027,7 +10058,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     }), document.body)
   },
-  jw = () => {
+  Pw = () => {
     const n = g();
     return e.jsxs($, {
       children: [e.jsxs("div", {
@@ -10052,52 +10083,52 @@ const vA = p.memo(() => (p.useEffect(() => {
               },
               children: "How it works"
             })]
-          }), e.jsx(aw, {})]
+          }), e.jsx(ow, {})]
         })]
-      }), e.jsx(Gv, {}), e.jsx(bw, {})]
+      }), e.jsx(Xv, {}), e.jsx(jw, {})]
     })
   },
-  Pw = "_container_s1r1v_1",
-  Cw = "_page_s1r1v_13",
-  Nw = "_id_s1r1v_17",
-  Sw = "_title_s1r1v_22",
-  Iw = "_avatar_container_s1r1v_28",
-  Tw = "_avatar_s1r1v_28",
-  Ew = "_squad_avatar_container_s1r1v_40",
-  Bw = "_text_container_s1r1v_52",
-  Dw = "_dot_s1r1v_58",
-  kw = "_user_name_s1r1v_63",
-  Rw = "_squad_name_s1r1v_69",
-  Uw = "_divider_s1r1v_75",
-  Ow = "_tabs_content_s1r1v_81",
-  Mw = "_content_info_s1r1v_85",
-  Qw = "_content_info_item_s1r1v_92",
-  Fw = "_content_info_item_title_s1r1v_96",
-  zw = "_content_info_item_value_s1r1v_100",
-  Hw = "_no_content_s1r1v_106",
-  qw = "_achievements_container_s1r1v_115",
+  Cw = "_container_s1r1v_1",
+  Nw = "_page_s1r1v_13",
+  Sw = "_id_s1r1v_17",
+  Iw = "_title_s1r1v_22",
+  Tw = "_avatar_container_s1r1v_28",
+  Ew = "_avatar_s1r1v_28",
+  Bw = "_squad_avatar_container_s1r1v_40",
+  Dw = "_text_container_s1r1v_52",
+  kw = "_dot_s1r1v_58",
+  Rw = "_user_name_s1r1v_63",
+  Uw = "_squad_name_s1r1v_69",
+  Ow = "_divider_s1r1v_75",
+  Mw = "_tabs_content_s1r1v_81",
+  Qw = "_content_info_s1r1v_85",
+  Fw = "_content_info_item_s1r1v_92",
+  zw = "_content_info_item_title_s1r1v_96",
+  Hw = "_content_info_item_value_s1r1v_100",
+  qw = "_no_content_s1r1v_106",
+  Lw = "_achievements_container_s1r1v_115",
   U = {
-    container: Pw,
-    page: Cw,
-    id: Nw,
-    title: Sw,
-    avatar_container: Iw,
-    avatar: Tw,
-    squad_avatar_container: Ew,
-    text_container: Bw,
-    dot: Dw,
-    user_name: kw,
-    squad_name: Rw,
-    divider: Uw,
-    tabs_content: Ow,
-    content_info: Mw,
-    content_info_item: Qw,
-    content_info_item_title: Fw,
-    content_info_item_value: zw,
-    no_content: Hw,
-    achievements_container: qw
+    container: Cw,
+    page: Nw,
+    id: Sw,
+    title: Iw,
+    avatar_container: Tw,
+    avatar: Ew,
+    squad_avatar_container: Bw,
+    text_container: Dw,
+    dot: kw,
+    user_name: Rw,
+    squad_name: Uw,
+    divider: Ow,
+    tabs_content: Mw,
+    content_info: Qw,
+    content_info_item: Fw,
+    content_info_item_title: zw,
+    content_info_item_value: Hw,
+    no_content: qw,
+    achievements_container: Lw
   },
-  Lw = () => {
+  Vw = () => {
     const n = l(c => c.canvas.pixelInfo),
       t = l(c => c.ratings.list),
       s = l(c => c.canvas.getPixelInfoFetchStatus),
@@ -10137,7 +10168,7 @@ const vA = p.memo(() => (p.useEffect(() => {
     const [t, s] = p.useState({
       ready: !1,
       data: null
-    }), a = Lw(), o = l(rt);
+    }), a = Vw(), o = l(rt);
     return p.useEffect(() => {
       t && s({
         ready: !0,
@@ -10145,7 +10176,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     }, [o]), n ? a : t
   },
-  Vw = ({
+  Gw = ({
     isPopupContent: n = !0
   }) => {
     const {
@@ -10171,7 +10202,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  Gw = ({
+  Xw = ({
     isPopupContent: n = !0
   }) => {
     var i;
@@ -10189,7 +10220,7 @@ const vA = p.memo(() => (p.useEffect(() => {
         onPointerUp: () => {
           t(Gs.getInfo({
             id: s.squad.id
-          })), t(Pn({
+          })), t(Cn({
             dataSource: Te.squadFromData
           }))
         },
@@ -10212,7 +10243,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  Xw = ({
+  Jw = ({
     isPopupContent: n = !0
   }) => {
     var o;
@@ -10235,7 +10266,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  Jw = ({
+  Yw = ({
     isPopupContent: n = !0
   }) => {
     const t = g(),
@@ -10249,12 +10280,12 @@ const vA = p.memo(() => (p.useEffect(() => {
         onPointerUp: async o => {
           o.preventDefault(), o.stopPropagation();
           try {
-            await Ds(`${s.id}`), await t(q({
+            await bn(`${s.id}`), await t(H({
               id: performance.now(),
               text: "Copied!"
             }))
           } catch {
-            await t(q({
+            await t(H({
               id: performance.now(),
               text: "Can't copy!"
             }))
@@ -10269,7 +10300,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  Yw = ({
+  Ww = ({
     active: n,
     setActive: t
   }) => e.jsxs(zs, {
@@ -10288,10 +10319,10 @@ const vA = p.memo(() => (p.useEffect(() => {
       children: "Inventory"
     })]
   }),
-  Ww = () => e.jsx("div", {
+  Kw = () => e.jsx("div", {
     className: U.divider
   }),
-  Kw = ({
+  Zw = ({
     isPopupContent: n = !0
   }) => {
     const {
@@ -10343,23 +10374,23 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  Zw = "_container_os5nt_1",
-  $w = "_not_completed_os5nt_6",
-  e1 = "_image_container_os5nt_10",
-  t1 = "_image_os5nt_10",
-  n1 = "_bold_os5nt_20",
-  s1 = "_gray_os5nt_24",
-  a1 = "_description_container_os5nt_28",
+  $w = "_container_os5nt_1",
+  e1 = "_not_completed_os5nt_6",
+  t1 = "_image_container_os5nt_10",
+  n1 = "_image_os5nt_10",
+  s1 = "_bold_os5nt_20",
+  a1 = "_gray_os5nt_24",
+  o1 = "_description_container_os5nt_28",
   dt = {
-    container: Zw,
-    not_completed: $w,
-    image_container: e1,
-    image: t1,
-    bold: n1,
-    gray: s1,
-    description_container: a1
+    container: $w,
+    not_completed: e1,
+    image_container: t1,
+    image: n1,
+    bold: s1,
+    gray: a1,
+    description_container: o1
   },
-  o1 = ({
+  i1 = ({
     completed: n,
     item: t
   }) => e.jsxs("div", {
@@ -10381,68 +10412,68 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })]
   }),
-  i1 = "/assets/0-CBlm-5t2.gif",
-  r1 = "/assets/1-C1eaF-Lh.gif",
-  c1 = "/assets/2-Dx7l5fvD.gif",
-  l1 = "data:image/gif;base64,R0lGODdhZABkAHcAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQJCgAAACwAAAAAZABkAMMAAAABAAIzMzNfNRs0QxRMYh2HUjK1ajtogDSHqzuWvkE/Vfb///8AAAAAAAAAAAAE/xDISau9OOvNu79FKI4hYiJJmihs676vmpwIaRdfR+wE7f8+mXBILA6BSB+PkEMyngyBdCqFMpLY7M9KpVq1SwyNOw2Yz2YvVMs+kaVotPoJ5lG01m97386v+UBLgIOEhYaABomKi4yNjo+QkYyHg5IGB5iZmpucnZ6WlKE1N6SlpqWiqaqrrAgLr7CxsrO0tba3uLm6u7y9vr/AtzkYp8XGw8gZS4InRs7P0M40y3bJeH5XrWzY2VhhG2NQVHFnc92ibwLkaVN63tUSTuJdVX/abvP07oDM9/7/exZ5GkiwIKdFAJMsGsCwocOHECNKnBgRYUIgljJqzHixo8dBwf9CihxJsqTJk7mSqVzJsmUyYzBLuZw5oRgNGTBy5pRBoxhNC9R23IxGtKiRaUFV9gNktKmKQt88XPPzMRzVLFEzyHtCrx4dgOnM1dkhBh/XMuvEqkq3LoDad2QnWI2CltxbdPnUpW1nL0nWrXT19b0Xlu/XQUsB7/vILVTiqpAjS64q0KDly5osQt7IuTMojwspih5N+qHmi5Ywq970ebPn1xonA4lJ25js27hzy0bJu7fv38CDCx9OvDjxn8iTK1/OvLmH2tBxOE8evfb0YTabqdDJvQXPEz6v1zw1NEX37t9NhFcetId2p/CjIaXmsn35+PiLzF+mlEeh/ERBBY//Dv4RAqB8hGTFwVR5SNYYVgOWhcWDkFHoV4QXANaVAItpU5hX5yChoFxAfMjhYB7mdZeIGMZjVmB62WVYiJSwtReIYzFBogk2yojjWnm1tWIgA841zo0nHobXWXAg2eEPf714pI9J0nhIj3EMCWWRJao4Y0ImPsnGYzx6+eM/YaLYBpk+WMgYNo4VOCGckbmZoJy65annnnz26adriawm6ECnSVbZoIhmUihosDXq2UeORroRpIqUZumlFSlCaSKYdorpov+kluhlraEmyaikSmKopKwmglurrepZ3awi+EkrrX/mquuuvPbqKx/GBSvssMQWa+yxyCar7LLMNuvsBbPQLhABACH5BAkKAAAALAAAAABkAGQAwwAAAAEAAjMzM181GzRDFExiHYdSMrVqO2iANIerO5a+QT9V9v///wAAAAAAAAAAAAT/EMhJq7046827/1ghjqSInEiiJkrrvjC8JihS3gXIETxR/8DfbEgsGonB5K9HwDCVKIaUIahaq1MGdMuNTq/XbJLy3GavgbQ6HZ5234izdb1uS2tleDAr1vuhfG5/g4SFhod6BoqLjI2Oj5CRko2IiZMHmJmam5ydnpMGlYc4pKWmpqKpqqtQC66vsLGys7S1tre4ubq7vL2+v7Y6whWnxcbDyBVMeSlHzs/QR3jLPCDMSYF3rF3ZWltkPVxyVXRqdt6i4wLlbFZ9J9dw6ufbP/PugvX6+/w1jJ4AAwrkxKhfEkYDEipcyLChw4cQHRY0CASUxYsWKWrUCKyjx48g/0OKHIkrmcmTKFOmNMaylEqVxWrMiEGT5owaxV4qo+YDRbSfQJ1No4Ys3pugSFcQYrIjnJlsG2t04+LEKaAvYLDk03dPqzYg4HiIw0qOHb1U6tgFOHsibM+rUtCYxfe1Utq5XtEhMMqNLJh3XP2yXWK10NSoJw4jXsy4sWND/wZKnqxpImKMmDOD2ogwoufPoBlaNgiKsulNmxdrXo3x8Y+WsI25nk27tiGSuHPr3s27t+/fwIMD10m8uPHjyJOfjM08h3KdzWM/BxHT54qa2F3cRJFzuoTqJ2Zmx779RPfiPN82S8o+2tBlKNPLbE9fKIr0RQvrqf9zaQ9r+sHBn/l7gzC1AV9SQbWYYko0JdZTgTDG4BgXIOhFXFkJAFg9XWm4VQ1VPQgXFRluuE2HJrY1gYWJ+aXWYIjcVc5gbo2FYVkz0qVXjC7i5WFdNUJIIo50wHiIjEXqCOKKAQKBZB1KotVjjnm9RwiKH54oWJRAsKgElnVxuGWVQXhpIx8SKgiFmUKmaNCEtsUp55x01mmnnJGdpmcnozGW556AYtKnRqwVuhpnhiZ6EaKKhObooxItwqgBkFYK6aD7lBboZKlRpOmmA3UalaKkSvpYqaXaFt2qI9DJKqt3xirrrLTWWptwuOaq66689urrr8AGK+ywxBZr7LELRAAAOw==",
-  d1 = "/assets/4-B9SjwR-x.gif",
-  u1 = "/assets/5-D2MXnTsp.gif",
-  p1 = "/assets/6-DGYxyagY.gif",
-  m1 = "/assets/10-BNY74yH-.gif",
-  A1 = "/assets/12-B0vEyGRB.gif",
-  h1 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAABkCAYAAADkBDymAAACSElEQVR4nO3doU5cQRSA4dmymz4DZkG0dU0wKB5gDXZVBSsxTfcBKmrql6SikhUoUlcED4DCNMHRCrqmz9AAadMHmHPDKXP/Jfk/Oxku/BlxMrnLDibz/ZJxvvj6J7WxlHJ7+by6Ntr9nf2xvf4uk/n+IPvMZ9mNyjM6wOgAowOMDjA6YBg9MhoLV6fh1iay412bffHIHI2UnnSA0QFGBxgdYHSA0QH/xpq1Ggs3tzeqa/2Phbl9XXs96QCjA4wOMDrA6ACjA4wOMDrA6ACjA4wOMDrA6ACjA/q/u+24vo10Xac+FZ50gNEBRgcYHWB0gNEBzUbGaCz8sPxSXfv4KfcZqMjx4mew+qq6Eu0b7W6lfx9POsDoAKMDjA4wOsDogPQLpF03hdFY+PLF6+ra9x9X1bVonNz5XN/37bD+vGgsnM3rY2H0vK5netIBRgcYHWB0gNEBRgc0u2XMjoXRvkg0orXwP8/zpAOMDjA6wOgAowOMDmj2MfXoFvLk4nrdOjy66IbSkw4wOsDoAKMDjA4wOgD5+EsLB+/GvT5vebRK7/WkA4wOMDrA6ACjA4wOCEfG8fSuutZ1A/nr5r669mav/pGT6Aay77GwFU86wOgAowOMDjA6wOiAYfbbBsfT+CtnWvzv9fdvz6prLd6dbPHOZfGkM4wOMDrA6ACjA4wOMDogPUx3zffxHF+/Mj5eMCEeKnpBtPjVmOvH6ACjA4wOMDrA6IBmL5Bmr4xn863wynhdZP++4klnGB1gdIDRAUYHGL1vpZS/8GF1OTKsdsMAAAAASUVORK5CYII=",
-  g1 = [{
+  r1 = "/assets/0-CBlm-5t2.gif",
+  c1 = "/assets/1-C1eaF-Lh.gif",
+  l1 = "/assets/2-Dx7l5fvD.gif",
+  d1 = "data:image/gif;base64,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",
+  u1 = "/assets/4-B9SjwR-x.gif",
+  p1 = "/assets/5-D2MXnTsp.gif",
+  m1 = "/assets/6-DGYxyagY.gif",
+  A1 = "/assets/10-BNY74yH-.gif",
+  h1 = "/assets/12-B0vEyGRB.gif",
+  g1 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAABkCAYAAADkBDymAAACSElEQVR4nO3doU5cQRSA4dmymz4DZkG0dU0wKB5gDXZVBSsxTfcBKmrql6SikhUoUlcED4DCNMHRCrqmz9AAadMHmHPDKXP/Jfk/Oxku/BlxMrnLDibz/ZJxvvj6J7WxlHJ7+by6Ntr9nf2xvf4uk/n+IPvMZ9mNyjM6wOgAowOMDjA6YBg9MhoLV6fh1iay412bffHIHI2UnnSA0QFGBxgdYHSA0QH/xpq1Ggs3tzeqa/2Phbl9XXs96QCjA4wOMDrA6ACjA4wOMDrA6ACjA4wOMDrA6ACjA/q/u+24vo10Xac+FZ50gNEBRgcYHWB0gNEBzUbGaCz8sPxSXfv4KfcZqMjx4mew+qq6Eu0b7W6lfx9POsDoAKMDjA4wOsDogPQLpF03hdFY+PLF6+ra9x9X1bVonNz5XN/37bD+vGgsnM3rY2H0vK5netIBRgcYHWB0gNEBRgc0u2XMjoXRvkg0orXwP8/zpAOMDjA6wOgAowOMDmj2MfXoFvLk4nrdOjy66IbSkw4wOsDoAKMDjA4wOgD5+EsLB+/GvT5vebRK7/WkA4wOMDrA6ACjA4wOCEfG8fSuutZ1A/nr5r669mav/pGT6Aay77GwFU86wOgAowOMDjA6wOiAYfbbBsfT+CtnWvzv9fdvz6prLd6dbPHOZfGkM4wOMDrA6ACjA4wOMDogPUx3zffxHF+/Mj5eMCEeKnpBtPjVmOvH6ACjA4wOMDrA6IBmL5Bmr4xn863wynhdZP++4klnGB1gdIDRAUYHGL1vpZS/8GF1OTKsdsMAAAAASUVORK5CYII=",
+  _1 = [{
     id: 1,
-    src: i1,
+    src: r1,
     title: "Beta Pixel",
     description: "Someone who's seen the First Pixel. Show respect. He has nightmares about cubes and flags."
   }, {
     id: 2,
-    src: r1,
+    src: c1,
     title: "Pixel's 16 frens",
     description: "Invite 16 frens. A great company is the key to success!"
   }, {
     id: 3,
-    src: c1,
+    src: l1,
     title: "Pixel Brotherhood",
     description: "Invite 64 frens. Where'd you get that charisma, buddy?"
   }, {
     id: 4,
-    src: l1,
+    src: d1,
     title: "My pixel dudes",
     description: "Invite 128 frens. Admit it, are your relatives in the game too?"
   }, {
     id: 5,
-    src: d1,
+    src: u1,
     title: "Thunder Pixel",
     description: "Paint 64,000 pixels. Is your finger on fire?"
   }, {
     id: 6,
-    src: u1,
+    src: p1,
     title: "Master over Pixels",
     description: "Paint 128,000 pixels. Have you considered a career as a pixel artist?"
   }, {
     id: 7,
-    src: p1,
+    src: m1,
     title: "Malevich",
     description: "Paint 512,000 pixels. Either the most dedicated artist or the most dedicated auto-clicker."
   }, {
     id: 11,
-    src: m1,
+    src: A1,
     title: "Platinum Pixel",
     description: "Platinum League member. Your mom would be proud of you."
   }, {
     id: 13,
-    src: A1,
+    src: h1,
     title: "Ambassador",
     description: "Invited 10,000 frens. You're either very friendly or a bot. A friendly bot?"
   }, {
     id: 14,
-    src: h1,
+    src: g1,
     title: "Pixanos' Snap",
     description: "Use of Pixanos. Your snap destroyed half the world. Or did it save it?"
   }],
-  _1 = ({
+  f1 = ({
     isPopupContent: n
   }) => {
     const {
@@ -10451,28 +10482,28 @@ const vA = p.memo(() => (p.useEffect(() => {
     } = lt(n);
     return e.jsx("div", {
       className: U.achievements_container,
-      children: g1.map(a => e.jsx(o1, {
+      children: _1.map(a => e.jsx(i1, {
         item: a,
         completed: t && s.achievements && s.achievements[a.id]
       }, a.id))
     })
   },
-  f1 = () => e.jsxs("div", {
+  x1 = () => e.jsxs("div", {
     className: U.no_content,
     children: ["Something will happen here,", e.jsx("br", {}), " but not now."]
   }),
-  x1 = ({
+  y1 = ({
     active: n,
     isPopupContent: t = !0
   }) => e.jsxs("div", {
     className: U.tabs_content,
-    children: [n === "info" && e.jsx(Kw, {
+    children: [n === "info" && e.jsx(Zw, {
       isPopupContent: t
-    }), n === "achievements" && e.jsx(_1, {
+    }), n === "achievements" && e.jsx(f1, {
       isPopupContent: t
-    }), n === "inventory" && e.jsx(f1, {})]
+    }), n === "inventory" && e.jsx(x1, {})]
   }),
-  y1 = ({
+  v1 = ({
     isPopupContent: n = !0
   }) => {
     const [t, s] = p.useState("info");
@@ -10480,20 +10511,20 @@ const vA = p.memo(() => (p.useEffect(() => {
       style: {
         width: "100%"
       },
-      children: [e.jsx(Yw, {
+      children: [e.jsx(Ww, {
         active: t,
         setActive: s
-      }), e.jsx(Ww, {}), e.jsx(x1, {
+      }), e.jsx(Kw, {}), e.jsx(y1, {
         active: t,
         isPopupContent: n
       })]
     })
   },
-  v1 = "_layout_c6k10_1",
-  w1 = "_close_button_c6k10_6",
+  w1 = "_layout_c6k10_1",
+  b1 = "_close_button_c6k10_6",
   Qi = {
-    layout: v1,
-    close_button: w1
+    layout: w1,
+    close_button: b1
   },
   Fi = () => {
     const n = g();
@@ -10519,20 +10550,20 @@ const vA = p.memo(() => (p.useEffect(() => {
           className: U.title,
           children: t
         })
-      }), e.jsx(Xw, {
-        isPopupContent: n
-      }), e.jsx(Vw, {
+      }), e.jsx(Jw, {
         isPopupContent: n
       }), e.jsx(Gw, {
         isPopupContent: n
-      }), e.jsx(Jw, {
+      }), e.jsx(Xw, {
         isPopupContent: n
-      }), e.jsx(y1, {
+      }), e.jsx(Yw, {
+        isPopupContent: n
+      }), e.jsx(v1, {
         isPopupContent: n
       })]
     })
   },
-  b1 = () => {
+  j1 = () => {
     const n = g(),
       t = l(rt);
     return p.useEffect(() => (t && t.id && n(Im.getListByUserId({
@@ -10545,61 +10576,61 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  j1 = "_container_1bw7p_1",
-  P1 = {
-    container: j1
+  P1 = "_container_1bw7p_1",
+  C1 = {
+    container: P1
   },
-  C1 = "_container_12mk9_1",
-  N1 = "_page_12mk9_13",
-  S1 = "_id_12mk9_17",
-  I1 = "_title_12mk9_22",
-  T1 = "_avatar_container_12mk9_28",
-  E1 = "_avatar_12mk9_28",
-  B1 = "_text_container_12mk9_39",
-  D1 = "_dot_12mk9_45",
-  k1 = "_user_name_12mk9_50",
-  R1 = "_squad_slug_12mk9_56",
-  U1 = "_your_squad_button_12mk9_62",
-  O1 = "_join_squad_button_12mk9_75",
-  M1 = "_red_12mk9_91",
-  Q1 = "_divider_12mk9_95",
-  F1 = "_tabs_content_12mk9_101",
-  z1 = "_content_info_12mk9_105",
-  H1 = "_content_info_item_12mk9_112",
-  q1 = "_content_info_item_title_12mk9_116",
-  L1 = "_content_info_item_value_12mk9_120",
-  V1 = "_content_top_12mk9_127",
-  G1 = "_content_top_item_12mk9_140",
-  X1 = "_content_top_item_image_12mk9_150",
-  J1 = "_content_top_name_12mk9_156",
-  Y1 = "_content_top_arrow_12mk9_162",
-  W1 = "_gray_12mk9_166",
+  N1 = "_container_12mk9_1",
+  S1 = "_page_12mk9_13",
+  I1 = "_id_12mk9_17",
+  T1 = "_title_12mk9_22",
+  E1 = "_avatar_container_12mk9_28",
+  B1 = "_avatar_12mk9_28",
+  D1 = "_text_container_12mk9_39",
+  k1 = "_dot_12mk9_45",
+  R1 = "_user_name_12mk9_50",
+  U1 = "_squad_slug_12mk9_56",
+  O1 = "_your_squad_button_12mk9_62",
+  M1 = "_join_squad_button_12mk9_75",
+  Q1 = "_red_12mk9_91",
+  F1 = "_divider_12mk9_95",
+  z1 = "_tabs_content_12mk9_101",
+  H1 = "_content_info_12mk9_105",
+  q1 = "_content_info_item_12mk9_112",
+  L1 = "_content_info_item_title_12mk9_116",
+  V1 = "_content_info_item_value_12mk9_120",
+  G1 = "_content_top_12mk9_127",
+  X1 = "_content_top_item_12mk9_140",
+  J1 = "_content_top_item_image_12mk9_150",
+  Y1 = "_content_top_name_12mk9_156",
+  W1 = "_content_top_arrow_12mk9_162",
+  K1 = "_gray_12mk9_166",
   E = {
-    container: C1,
-    page: N1,
-    id: S1,
-    title: I1,
-    avatar_container: T1,
-    avatar: E1,
-    text_container: B1,
-    dot: D1,
-    user_name: k1,
-    squad_slug: R1,
-    your_squad_button: U1,
-    join_squad_button: O1,
-    red: M1,
-    divider: Q1,
-    tabs_content: F1,
-    content_info: z1,
-    content_info_item: H1,
-    content_info_item_title: q1,
-    content_info_item_value: L1,
-    content_top: V1,
-    content_top_item: G1,
-    content_top_item_image: X1,
-    content_top_name: J1,
-    content_top_arrow: Y1,
-    gray: W1
+    container: N1,
+    page: S1,
+    id: I1,
+    title: T1,
+    avatar_container: E1,
+    avatar: B1,
+    text_container: D1,
+    dot: k1,
+    user_name: R1,
+    squad_slug: U1,
+    your_squad_button: O1,
+    join_squad_button: M1,
+    red: Q1,
+    divider: F1,
+    tabs_content: z1,
+    content_info: H1,
+    content_info_item: q1,
+    content_info_item_title: L1,
+    content_info_item_value: V1,
+    content_top: G1,
+    content_top_item: X1,
+    content_top_item_image: J1,
+    content_top_name: Y1,
+    content_top_arrow: W1,
+    gray: K1
   },
   zi = ({
     data: n,
@@ -10694,7 +10725,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       children: "Join squad"
     }) : null
   },
-  K1 = ({
+  Z1 = ({
     active: n,
     setActive: t
   }) => e.jsx(zs, {
@@ -10705,10 +10736,10 @@ const vA = p.memo(() => (p.useEffect(() => {
       children: "Info"
     })
   }),
-  Z1 = () => e.jsx("div", {
+  $1 = () => e.jsx("div", {
     className: E.divider
   }),
-  $1 = ({
+  eb = ({
     data: n,
     ready: t
   }) => e.jsxs("div", {
@@ -10779,7 +10810,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })]
   }),
-  eb = [{
+  tb = [{
     name: "123",
     avatar: ht
   }, {
@@ -10795,9 +10826,9 @@ const vA = p.memo(() => (p.useEffect(() => {
     name: "123",
     avatar: ht
   }],
-  tb = () => e.jsx("div", {
+  nb = () => e.jsx("div", {
     className: E.content_top,
-    children: eb.map((n, t) => {
+    children: tb.map((n, t) => {
       const s = n.avatar && n.avatar !== "" ? n.avatar : He;
       return e.jsxs("div", {
         className: E.content_top_item,
@@ -10825,18 +10856,18 @@ const vA = p.memo(() => (p.useEffect(() => {
       }, t)
     })
   }),
-  nb = ({
+  sb = ({
     isPopupContent: n,
     active: t,
     data: s,
     ready: a
   }) => e.jsxs("div", {
     className: E.tabs_content,
-    children: [t === "info" && e.jsx($1, {
+    children: [t === "info" && e.jsx(eb, {
       isPopupContent: n,
       data: s,
       ready: a
-    }), t === "top" && e.jsx(tb, {})]
+    }), t === "top" && e.jsx(nb, {})]
   }),
   Vi = ({
     data: n,
@@ -10847,17 +10878,17 @@ const vA = p.memo(() => (p.useEffect(() => {
       style: {
         width: "100%"
       },
-      children: [e.jsx(K1, {
+      children: [e.jsx(Z1, {
         active: s,
         setActive: a
-      }), e.jsx(Z1, {}), e.jsx(nb, {
+      }), e.jsx($1, {}), e.jsx(sb, {
         active: s,
         data: n,
         ready: t
       })]
     })
   },
-  sb = () => {
+  ab = () => {
     const n = g(),
       t = l(i => i.user.user),
       a = l(i => i.squad.getInfoFetchStatus) === u.fulfilled,
@@ -10868,7 +10899,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       }))
     }, []), e.jsx($, {
       children: e.jsxs("div", {
-        className: P1.container,
+        className: C1.container,
         children: [e.jsx(zi, {
           data: o,
           ready: a
@@ -10888,7 +10919,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  ab = ({
+  ob = ({
     setFile: n,
     loading: t
   }) => {
@@ -10925,7 +10956,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  ob = ({
+  ib = ({
     dataUrl: n,
     loading: t,
     templateSize: s
@@ -10944,7 +10975,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   }),
-  ib = n => {
+  rb = n => {
     const t = new Uint8Array(n.data);
     for (let s = 0; s < t.length; s += 4) {
       const a = t[s],
@@ -10961,7 +10992,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       n.data[s] = m.r, n.data[s + 1] = m.g, n.data[s + 2] = m.b, n.data[s + 3] = 255
     }
   },
-  rb = ({
+  cb = ({
     loading: n,
     imageData: t,
     posX: s,
@@ -10997,19 +11028,19 @@ const vA = p.memo(() => (p.useEffect(() => {
                   url: `${f.payload.url}?time=${Date.now()}`,
                   type: Qe.my
                 };
-              o(fm(C)), o(bi()), await w.mainImage.worldTemplate.add(C), o(q({
+              o(fm(C)), o(bi()), await w.mainImage.worldTemplate.add(C), o(H({
                 id: performance.now(),
                 text: "Create successfully!",
                 icon: ""
               })), i.push("/template")
-            } else o(q({
+            } else o(H({
               id: performance.now(),
               text: "Error, try again",
               icon: ""
             }));
             m(!1)
           } catch {
-            o(q({
+            o(H({
               id: performance.now(),
               text: "Use another coordinates",
               icon: ""
@@ -11020,7 +11051,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  cb = ({
+  lb = ({
     templateSize: n,
     setTemplateSize: t,
     coords: s,
@@ -11072,7 +11103,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })]
   })),
-  lb = () => e.jsxs("div", {
+  db = () => e.jsxs("div", {
     className: J.instruction_container,
     children: [e.jsx("div", {
       className: J.img_container,
@@ -11086,7 +11117,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       children: "Upload a picture and create a template"
     })]
   }),
-  db = () => {
+  ub = () => {
     g(), l(rt);
     const [n, t] = p.useState(null), [s, a] = p.useState(null), [o, i] = p.useState(null), [r, c] = p.useState(16), [d, m] = p.useState({
       x: "",
@@ -11106,7 +11137,7 @@ const vA = p.memo(() => (p.useEffect(() => {
             we = (r - T) / 2;
           C.width = r, C.height = r, y.drawImage(n, ve, we, b, T);
           const Q = y.getImageData(0, 0, r, r);
-          ib(Q), y.putImageData(Q, 0, 0), a(Q), i(C.toDataURL())
+          rb(Q), y.putImageData(Q, 0, 0), a(Q), i(C.toDataURL())
         };
         setTimeout(() => {
           f().then(() => {
@@ -11115,23 +11146,23 @@ const vA = p.memo(() => (p.useEffect(() => {
         }, 100)
       }
     }, [n, r]), e.jsxs($, {
-      children: [o === null && e.jsx(lb, {}), o !== null && e.jsx(ob, {
+      children: [o === null && e.jsx(db, {}), o !== null && e.jsx(ib, {
         loading: A,
         dataUrl: o,
         templateSize: r
-      }), o !== null && e.jsx(Sv, {
+      }), o !== null && e.jsx(Iv, {
         templateSize: r,
         setTemplateSize: c
-      }), o !== null && e.jsx(cb, {
+      }), o !== null && e.jsx(lb, {
         coords: d,
         setCoords: m,
         templateSize: r,
         setTemplateSize: c
-      }), n === null && e.jsx(ab, {
+      }), n === null && e.jsx(ob, {
         setFile: t,
         templateSize: r,
         loading: A
-      }), n !== null && e.jsx(rb, {
+      }), n !== null && e.jsx(cb, {
         loading: A,
         imageData: s,
         posX: d.x,
@@ -11139,49 +11170,49 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  ub = "_layout_1pbs2_1",
-  pb = "_container_1pbs2_9",
-  mb = "_header_1pbs2_18",
-  Ab = "_bg_image_1pbs2_25",
-  hb = "_title_1pbs2_34",
-  gb = "_description_1pbs2_43",
-  _b = "_timer_1pbs2_52",
-  fb = "_timer_inner_1pbs2_61",
-  xb = "_timer_text_1pbs2_68",
-  yb = "_line_1pbs2_72",
-  vb = "_requirements_title_1pbs2_78",
-  wb = "_requirements_1pbs2_78",
-  bb = "_item_1pbs2_93",
-  jb = "_item_image_1pbs2_106",
-  Pb = "_main_info_1pbs2_112",
-  Cb = "_other_criteria_1pbs2_119",
-  Nb = "_gray_1pbs2_124",
-  Sb = "_soon_1pbs2_128",
-  Ib = "_icon_1pbs2_133",
-  Tb = "_completed_icon_1pbs2_144",
-  Eb = "_not_completed_icon_1pbs2_148",
+  pb = "_layout_1pbs2_1",
+  mb = "_container_1pbs2_9",
+  Ab = "_header_1pbs2_18",
+  hb = "_bg_image_1pbs2_25",
+  gb = "_title_1pbs2_34",
+  _b = "_description_1pbs2_43",
+  fb = "_timer_1pbs2_52",
+  xb = "_timer_inner_1pbs2_61",
+  yb = "_timer_text_1pbs2_68",
+  vb = "_line_1pbs2_72",
+  wb = "_requirements_title_1pbs2_78",
+  bb = "_requirements_1pbs2_78",
+  jb = "_item_1pbs2_93",
+  Pb = "_item_image_1pbs2_106",
+  Cb = "_main_info_1pbs2_112",
+  Nb = "_other_criteria_1pbs2_119",
+  Sb = "_gray_1pbs2_124",
+  Ib = "_soon_1pbs2_128",
+  Tb = "_icon_1pbs2_133",
+  Eb = "_completed_icon_1pbs2_144",
+  Bb = "_not_completed_icon_1pbs2_148",
   te = {
-    layout: ub,
-    container: pb,
-    header: mb,
-    bg_image: Ab,
-    title: hb,
-    description: gb,
-    timer: _b,
-    timer_inner: fb,
-    timer_text: xb,
-    line: yb,
-    requirements_title: vb,
-    requirements: wb,
-    item: bb,
-    item_image: jb,
-    main_info: Pb,
-    other_criteria: Cb,
-    gray: Nb,
-    soon: Sb,
-    icon: Ib,
-    completed_icon: Tb,
-    not_completed_icon: Eb
+    layout: pb,
+    container: mb,
+    header: Ab,
+    bg_image: hb,
+    title: gb,
+    description: _b,
+    timer: fb,
+    timer_inner: xb,
+    timer_text: yb,
+    line: vb,
+    requirements_title: wb,
+    requirements: bb,
+    item: jb,
+    item_image: Pb,
+    main_info: Cb,
+    other_criteria: Nb,
+    gray: Sb,
+    soon: Ib,
+    icon: Tb,
+    completed_icon: Eb,
+    not_completed_icon: Bb
   },
   oo = ({
     success: n
@@ -11198,31 +11229,31 @@ const vA = p.memo(() => (p.useEffect(() => {
       children: ""
     })
   }),
-  Bb = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAABZUlEQVR4nO3cz4nCQBhA8cliBcI2sFfBsx7FHrYFSxArEDvQFuzBs54Ft4hdsIV4Tg4O8eWbjfB+t+CfwONjmBG1SvvfOullH6ZjDAgZEDIgZEDIgJABIQNCBoQMCBkQMiBkQMiAkAEhA0IGhAwIGRAyIGRAaFT6hvXq8+nj1eEv9PV9cwIhA0IGhAwIGRAyIGRAqPg+MCe3zxsaJxAyIGRAKHwNzK1pk/WxcX3bfaPnt+8XfTZ2AiEDQgaEel8Du+7jfr4Woc+PXhOdQMiAkAGhfz8Ld10zh3ZWdgIhA0IGhHpfA+fbU+P6vFl2ejz6fmk8RfdrcwIhA0IGhMJ/sT67XxvX2TWqo9z7XXpe89qcQMiAkAGh4v/aEX2W9fuBb8aAkAGh4p8H0n1fVvC+r80JhAwIGRAqvgZGn01LcwIhA0IGhAwIGRAyIGRAyICQASEDQgaEDAgZEDIgZEDIgJABiZTSA9erPYxaPJ1yAAAAAElFTkSuQmCC",
-  Db = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAABFElEQVR4nO3ZwU0DMRRAQQdRQaS0wZ0zxVBDKqAFKIZzqAWKCC3EPBk50sx9V96nL2stH8b793XwZw/SNQJGAkYCRgJGAkYCRgJGAkYCRgJGAkYCRgJGAkYCRgJGAkYCRgJGAkaPq158fT391zfc5PDxs+S9JjASMBIwEjASMBIwEjASMBIwEjASMFp2Fp71/PY59cTl/LLDsk1gJWAkYLTNHvh1fNpgFfNMYCRgJGAkYCRgJGAkYLTNf+Bu98i3MoGRgJGAkYCRgJGAkYCRgJGAkYCRgNGys/DsPe9yi+5cTGAkYCRgtGwPvNd73lkmMBIwEjASMBIwEjASMBIwEjASMBIwEjASMBIwEjASMBKwGGP8AtVUDnVJr20VAAAAAElFTkSuQmCC",
-  kb = "/assets/gp_ase_f_outl-FdQpX43h.gif",
-  Rb = "_container_1kwij_1",
-  Ub = "_title_1kwij_10",
-  Ob = "_instruction_1kwij_15",
-  Mb = "_required_wallet_1kwij_20",
-  Qb = "_divider_1kwij_24",
-  Fb = "_input_1kwij_30",
-  zb = "_button_1kwij_58",
-  Hb = "_active_row_1kwij_87",
-  qb = "_row_title_1kwij_87",
+  Db = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAABZUlEQVR4nO3cz4nCQBhA8cliBcI2sFfBsx7FHrYFSxArEDvQFuzBs54Ft4hdsIV4Tg4O8eWbjfB+t+CfwONjmBG1SvvfOullH6ZjDAgZEDIgZEDIgJABIQNCBoQMCBkQMiBkQMiAkAEhA0IGhAwIGRAyIGRAaFT6hvXq8+nj1eEv9PV9cwIhA0IGhAwIGRAyIGRAqPg+MCe3zxsaJxAyIGRAKHwNzK1pk/WxcX3bfaPnt+8XfTZ2AiEDQgaEel8Du+7jfr4Woc+PXhOdQMiAkAGhfz8Ld10zh3ZWdgIhA0IGhHpfA+fbU+P6vFl2ejz6fmk8RfdrcwIhA0IGhMJ/sT67XxvX2TWqo9z7XXpe89qcQMiAkAGh4v/aEX2W9fuBb8aAkAGh4p8H0n1fVvC+r80JhAwIGRAqvgZGn01LcwIhA0IGhAwIGRAyIGRAyICQASEDQgaEDAgZEDIgZEDIgJABiZTSA9erPYxaPJ1yAAAAAElFTkSuQmCC",
+  kb = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAABFElEQVR4nO3ZwU0DMRRAQQdRQaS0wZ0zxVBDKqAFKIZzqAWKCC3EPBk50sx9V96nL2stH8b793XwZw/SNQJGAkYCRgJGAkYCRgJGAkYCRgJGAkYCRgJGAkYCRgJGAkYCRgJGAkaPq158fT391zfc5PDxs+S9JjASMBIwEjASMBIwEjASMBIwEjASMFp2Fp71/PY59cTl/LLDsk1gJWAkYLTNHvh1fNpgFfNMYCRgJGAkYCRgJGAkYLTNf+Bu98i3MoGRgJGAkYCRgJGAkYCRgJGAkYCRgNGys/DsPe9yi+5cTGAkYCRgtGwPvNd73lkmMBIwEjASMBIwEjASMBIwEjASMBIwEjASMBIwEjASMBKwGGP8AtVUDnVJr20VAAAAAElFTkSuQmCC",
+  Rb = "/assets/gp_ase_f_outl-FdQpX43h.gif",
+  Ub = "_container_1kwij_1",
+  Ob = "_title_1kwij_10",
+  Mb = "_instruction_1kwij_15",
+  Qb = "_required_wallet_1kwij_20",
+  Fb = "_divider_1kwij_24",
+  zb = "_input_1kwij_30",
+  Hb = "_button_1kwij_58",
+  qb = "_active_row_1kwij_87",
+  Lb = "_row_title_1kwij_87",
   Ne = {
-    container: Rb,
-    title: Ub,
-    instruction: Ob,
-    required_wallet: Mb,
-    divider: Qb,
-    input: Fb,
-    button: zb,
-    active_row: Hb,
-    row_title: qb
+    container: Ub,
+    title: Ob,
+    instruction: Mb,
+    required_wallet: Qb,
+    divider: Fb,
+    input: zb,
+    button: Hb,
+    active_row: qb,
+    row_title: Lb
   },
   io = "data:image/svg+xml,%3csvg%20height='18'%20viewBox='0%200%2017%2018'%20width='17'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20fill='none'%20fill-rule='evenodd'%20stroke='%23fff'%20stroke-width='1.7'%3e%3cpath%20d='m1.84%203h13.3c.28%200%20.5.22.5.5%200%20.09-.02.17-.06.25l-6.33%2011.18c-.27.48-.88.65-1.36.38-.16-.09-.3-.23-.38-.39l-6.11-11.18c-.13-.24-.04-.55.2-.68.08-.04.16-.06.24-.06z'/%3e%3cpath%20d='m8.5%2015v-12'/%3e%3c/g%3e%3c/svg%3e",
-  Lb = ({
+  Vb = ({
     show: n,
     setShow: t
   }) => {
@@ -11240,7 +11271,7 @@ const vA = p.memo(() => (p.useEffect(() => {
     const [f, C] = p.useState(""), y = async () => {
       try {
         if (d !== r) {
-          s(q({
+          s(H({
             id: performance.now(),
             text: `Use ${ma(A)} wallet`
           })), await o.disconnect();
@@ -11256,13 +11287,13 @@ const vA = p.memo(() => (p.useEffect(() => {
             }]
           },
           T = await o.sendTransaction(b);
-        s(q({
+        s(H({
           id: performance.now(),
           text: "Success! Wait code in your wallet",
           icon: ""
         }))
       } catch {
-        s(q({
+        s(H({
           id: performance.now(),
           text: "Something went wrong... Try again."
         }))
@@ -11343,14 +11374,14 @@ const vA = p.memo(() => (p.useEffect(() => {
             var _;
             if (!(!f || f === "")) {
               if (i === "") {
-                s(q({
+                s(H({
                   id: performance.now(),
                   text: `Connect ${A} wallet first`
                 }));
                 return
               }
               if (d !== r) {
-                s(q({
+                s(H({
                   id: performance.now(),
                   text: `Use ${A} wallet`
                 })), await o.disconnect();
@@ -11362,7 +11393,7 @@ const vA = p.memo(() => (p.useEffect(() => {
                   captcha: f
                 }));
                 if (b.meta.requestStatus === u.rejected) throw new Error("error");
-                if ((_ = b.payload) != null && _.success) s(q({
+                if ((_ = b.payload) != null && _.success) s(H({
                   id: performance.now(),
                   text: "Success!",
                   icon: ""
@@ -11372,7 +11403,7 @@ const vA = p.memo(() => (p.useEffect(() => {
                 })), t(!1);
                 else throw new Error("error")
               } catch {
-                s(q({
+                s(H({
                   id: performance.now(),
                   text: "Something went wrong... Try again."
                 }))
@@ -11384,7 +11415,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  Vb = () => {
+  Gb = () => {
     const n = g(),
       t = l(Ms),
       s = l(Os),
@@ -11415,7 +11446,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       C(!1)
     };
     return e.jsxs($, {
-      children: [e.jsx(Lb, {
+      children: [e.jsx(Vb, {
         show: f,
         setShow: y
       }), e.jsx("div", {
@@ -11426,7 +11457,7 @@ const vA = p.memo(() => (p.useEffect(() => {
             className: te.header,
             children: [e.jsx("div", {}), e.jsx("img", {
               alt: "image",
-              src: kb,
+              src: Rb,
               className: te.bg_image
             }), e.jsx("div", {
               className: te.title,
@@ -11451,7 +11482,7 @@ const vA = p.memo(() => (p.useEffect(() => {
               children: [e.jsx("div", {
                 children: e.jsx("img", {
                   className: te.item_image,
-                  src: Db
+                  src: kb
                 })
               }), e.jsx("div", {
                 className: te.main_info,
@@ -11467,7 +11498,7 @@ const vA = p.memo(() => (p.useEffect(() => {
               children: [e.jsx("div", {
                 children: e.jsx("img", {
                   className: te.item_image,
-                  src: Bb
+                  src: Db
                 })
               }), e.jsxs("div", {
                 className: te.main_info,
@@ -11492,37 +11523,37 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  Gb = "_general_info_container_1u2nd_1",
-  Xb = "_img_container_1u2nd_7",
-  Jb = "_image_1u2nd_17",
-  Yb = "_image_cup_1u2nd_23",
-  Wb = "_image_glow_container_1u2nd_29",
-  Kb = "_image_glow_1u2nd_29",
-  Zb = "_rotate_1u2nd_1",
-  $b = "_image_glow_reverse_1u2nd_48",
-  ej = "_title_1u2nd_53",
-  tj = "_description_container_1u2nd_60",
-  nj = "_description_1u2nd_60",
-  sj = "_gold_1u2nd_73",
+  Xb = "_general_info_container_1u2nd_1",
+  Jb = "_img_container_1u2nd_7",
+  Yb = "_image_1u2nd_17",
+  Wb = "_image_cup_1u2nd_23",
+  Kb = "_image_glow_container_1u2nd_29",
+  Zb = "_image_glow_1u2nd_29",
+  $b = "_rotate_1u2nd_1",
+  ej = "_image_glow_reverse_1u2nd_48",
+  tj = "_title_1u2nd_53",
+  nj = "_description_container_1u2nd_60",
+  sj = "_description_1u2nd_60",
+  aj = "_gold_1u2nd_73",
   Se = {
-    general_info_container: Gb,
-    img_container: Xb,
-    image: Jb,
-    image_cup: Yb,
-    image_glow_container: Wb,
-    image_glow: Kb,
-    rotate: Zb,
-    image_glow_reverse: $b,
-    title: ej,
-    description_container: tj,
-    description: nj,
-    gold: sj
+    general_info_container: Xb,
+    img_container: Jb,
+    image: Yb,
+    image_cup: Wb,
+    image_glow_container: Kb,
+    image_glow: Zb,
+    rotate: $b,
+    image_glow_reverse: ej,
+    title: tj,
+    description_container: nj,
+    description: sj,
+    gold: aj
   },
-  aj = "_info_layout_1p9dg_1",
-  oj = {
-    info_layout: aj
+  oj = "_info_layout_1p9dg_1",
+  ij = {
+    info_layout: oj
   },
-  ij = n => {
+  rj = n => {
     const t = new Uint8Array(n.data);
     for (let s = 0; s < t.length; s += 4) {
       const a = t[s],
@@ -11539,68 +11570,68 @@ const vA = p.memo(() => (p.useEffect(() => {
       n.data[s] = m.r, n.data[s + 1] = m.g, n.data[s + 2] = m.b, n.data[s + 3] = 255
     }
   },
-  rj = "_instruction_container_17lvx_1",
-  cj = "_img_container_17lvx_9",
-  lj = "_img_inner_container_17lvx_16",
-  dj = "_image_17lvx_22",
-  uj = "_image_status_17lvx_30",
-  pj = "_image_status_rejected_17lvx_45",
-  mj = "_image_status_review_17lvx_49",
-  Aj = "_image_status_approved_17lvx_53",
-  hj = "_copy_button_container_17lvx_57",
-  gj = "_button_copy_17lvx_65",
-  _j = "_gray_17lvx_71",
-  fj = "_preview_container_17lvx_75",
-  xj = "_preview_image_container_17lvx_81",
-  yj = "_preview_image_17lvx_81",
-  vj = "_preview_image_loader_17lvx_94",
-  wj = "_template_size_17lvx_109",
-  bj = "_template_title_17lvx_117",
-  jj = "_template_size_container_17lvx_122",
-  Pj = "_template_size_item_17lvx_128",
-  Cj = "_template_size_item_active_17lvx_136",
-  Nj = "_template_coords_17lvx_141",
-  Sj = "_template_coordinates_title_17lvx_151",
-  Ij = "_template_coords_container_17lvx_156",
-  Tj = "_coords_item_17lvx_163",
-  Ej = "_coords_input_17lvx_169",
-  Bj = "_file_button_container_17lvx_178",
-  Dj = "_file_button_17lvx_178",
+  cj = "_instruction_container_17lvx_1",
+  lj = "_img_container_17lvx_9",
+  dj = "_img_inner_container_17lvx_16",
+  uj = "_image_17lvx_22",
+  pj = "_image_status_17lvx_30",
+  mj = "_image_status_rejected_17lvx_45",
+  Aj = "_image_status_review_17lvx_49",
+  hj = "_image_status_approved_17lvx_53",
+  gj = "_copy_button_container_17lvx_57",
+  _j = "_button_copy_17lvx_65",
+  fj = "_gray_17lvx_71",
+  xj = "_preview_container_17lvx_75",
+  yj = "_preview_image_container_17lvx_81",
+  vj = "_preview_image_17lvx_81",
+  wj = "_preview_image_loader_17lvx_94",
+  bj = "_template_size_17lvx_109",
+  jj = "_template_title_17lvx_117",
+  Pj = "_template_size_container_17lvx_122",
+  Cj = "_template_size_item_17lvx_128",
+  Nj = "_template_size_item_active_17lvx_136",
+  Sj = "_template_coords_17lvx_141",
+  Ij = "_template_coordinates_title_17lvx_151",
+  Tj = "_template_coords_container_17lvx_156",
+  Ej = "_coords_item_17lvx_163",
+  Bj = "_coords_input_17lvx_169",
+  Dj = "_file_button_container_17lvx_178",
+  kj = "_file_button_17lvx_178",
   ne = {
-    instruction_container: rj,
-    img_container: cj,
-    img_inner_container: lj,
-    image: dj,
-    image_status: uj,
-    image_status_rejected: pj,
-    image_status_review: mj,
-    image_status_approved: Aj,
-    copy_button_container: hj,
-    button_copy: gj,
-    gray: _j,
-    preview_container: fj,
-    preview_image_container: xj,
-    preview_image: yj,
-    preview_image_loader: vj,
-    template_size: wj,
-    template_title: bj,
-    template_size_container: jj,
-    template_size_item: Pj,
-    template_size_item_active: Cj,
-    template_coords: Nj,
-    template_coordinates_title: Sj,
-    template_coords_container: Ij,
-    coords_item: Tj,
-    coords_input: Ej,
-    file_button_container: Bj,
-    file_button: Dj
+    instruction_container: cj,
+    img_container: lj,
+    img_inner_container: dj,
+    image: uj,
+    image_status: pj,
+    image_status_rejected: mj,
+    image_status_review: Aj,
+    image_status_approved: hj,
+    copy_button_container: gj,
+    button_copy: _j,
+    gray: fj,
+    preview_container: xj,
+    preview_image_container: yj,
+    preview_image: vj,
+    preview_image_loader: wj,
+    template_size: bj,
+    template_title: jj,
+    template_size_container: Pj,
+    template_size_item: Cj,
+    template_size_item_active: Nj,
+    template_coords: Sj,
+    template_coordinates_title: Ij,
+    template_coords_container: Tj,
+    coords_item: Ej,
+    coords_input: Bj,
+    file_button_container: Dj,
+    file_button: kj
   },
   St = {
     approved: "approved",
     review: "review",
     rejected: "rejected"
   },
-  kj = () => {
+  Rj = () => {
     const n = g(),
       t = l(a => a.tournament.myTemplate);
     let s = St.review;
@@ -11640,7 +11671,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  Rj = ({
+  Uj = ({
     dataUrl: n,
     loading: t,
     templateSize: s
@@ -11659,7 +11690,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   }),
-  Uj = ({
+  Oj = ({
     templateSize: n,
     setTemplateSize: t
   }) => {
@@ -11684,11 +11715,11 @@ const vA = p.memo(() => (p.useEffect(() => {
       }), " "]
     })
   },
-  Oj = ({
+  Mj = ({
     coords: n,
     setCoords: t
   }) => null,
-  Mj = () => {
+  Qj = () => {
     g(), l(rt);
     const n = l(Hs),
       t = Po[n],
@@ -11715,7 +11746,7 @@ const vA = p.memo(() => (p.useEffect(() => {
             Ue = (d - we) / 2;
           _.width = d, _.height = d, b.drawImage(s, Q, Ue, ve, we);
           const yt = b.getImageData(0, 0, d, d);
-          ij(yt), b.putImageData(yt, 0, 0), i(yt), c(_.toDataURL())
+          rj(yt), b.putImageData(yt, 0, 0), i(yt), c(_.toDataURL())
         };
         setTimeout(() => {
           y().then(() => {
@@ -11729,14 +11760,14 @@ const vA = p.memo(() => (p.useEffect(() => {
         flexDirection: "column",
         gap: 14
       },
-      children: [r === null && e.jsx(kj, {}), r !== null && e.jsx(Rj, {
+      children: [r === null && e.jsx(Rj, {}), r !== null && e.jsx(Uj, {
         loading: f,
         dataUrl: r,
         templateSize: d
-      }), r !== null && e.jsx(Uj, {
+      }), r !== null && e.jsx(Oj, {
         templateSize: d,
         setTemplateSize: m
-      }), r !== null && e.jsx(Oj, {
+      }), r !== null && e.jsx(Mj, {
         coords: A,
         setCoords: h,
         templateSize: d,
@@ -11750,37 +11781,37 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  Qj = "_layout_1c7e5_1",
-  Fj = "_container_1c7e5_5",
-  zj = "_button_container_1c7e5_11",
-  Hj = "_button_1c7e5_11",
-  qj = "_end_of_list_button_1c7e5_27",
+  Fj = "_layout_1c7e5_1",
+  zj = "_container_1c7e5_5",
+  Hj = "_button_container_1c7e5_11",
+  qj = "_button_1c7e5_11",
+  Lj = "_end_of_list_button_1c7e5_27",
   st = {
-    layout: Qj,
-    container: Fj,
-    button_container: zj,
-    button: Hj,
-    end_of_list_button: qj
+    layout: Fj,
+    container: zj,
+    button_container: Hj,
+    button: qj,
+    end_of_list_button: Lj
   },
-  Lj = "_template_item_container_1c93x_1",
-  Vj = "_template_item_inner_1c93x_12",
-  Gj = "_template_item_picked_1c93x_28",
-  Xj = "_template_item_rejected_1c93x_43",
-  Jj = "_template_item_shadow_1c93x_58",
-  Yj = "_template_rank_1c93x_70",
-  Wj = "_template_recolors_1c93x_90",
-  Kj = "_template_recolors_pixel_1c93x_105",
-  Zj = "_template_image_1c93x_112",
+  Vj = "_template_item_container_1c93x_1",
+  Gj = "_template_item_inner_1c93x_12",
+  Xj = "_template_item_picked_1c93x_28",
+  Jj = "_template_item_rejected_1c93x_43",
+  Yj = "_template_item_shadow_1c93x_58",
+  Wj = "_template_rank_1c93x_70",
+  Kj = "_template_recolors_1c93x_90",
+  Zj = "_template_recolors_pixel_1c93x_105",
+  $j = "_template_image_1c93x_112",
   Ve = {
-    template_item_container: Lj,
-    template_item_inner: Vj,
-    template_item_picked: Gj,
-    template_item_rejected: Xj,
-    template_item_shadow: Jj,
-    template_rank: Yj,
-    template_recolors: Wj,
-    template_recolors_pixel: Kj,
-    template_image: Zj
+    template_item_container: Vj,
+    template_item_inner: Gj,
+    template_item_picked: Xj,
+    template_item_rejected: Jj,
+    template_item_shadow: Yj,
+    template_rank: Wj,
+    template_recolors: Kj,
+    template_recolors_pixel: Zj,
+    template_image: $j
   },
   Gi = ({
     item: n,
@@ -11833,7 +11864,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  $j = () => {
+  e0 = () => {
     const n = g(),
       t = p.useRef(null),
       s = l(r => r.tournament.approvedTemplatesListStatus),
@@ -11862,7 +11893,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  e0 = () => {
+  t0 = () => {
     const n = g(),
       t = l(o => o.tournament.approvedTemplatesListOffset),
       s = l(o => o.tournament.approvedTemplatesListLimit),
@@ -11882,10 +11913,10 @@ const vA = p.memo(() => (p.useEffect(() => {
           repaints: o.repaints,
           approved: !0
         }, o.id))
-      }), e.jsx($j, {})]
+      }), e.jsx(e0, {})]
     })
   },
-  t0 = () => {
+  n0 = () => {
     const n = g(),
       t = l(Zo.selectAll),
       a = l(o => o.tournament.selectedTemplate) ? 15 : 16;
@@ -11901,29 +11932,29 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  n0 = "_round_info_container_1d52c_1",
-  s0 = "_title_1d52c_7",
-  a0 = "_description_1d52c_12",
-  o0 = "_round_status_container_1d52c_17",
+  s0 = "_round_info_container_1d52c_1",
+  a0 = "_title_1d52c_7",
+  o0 = "_description_1d52c_12",
+  i0 = "_round_status_container_1d52c_17",
   tt = {
-    round_info_container: n0,
-    title: s0,
-    description: a0,
-    round_status_container: o0
+    round_info_container: s0,
+    title: a0,
+    description: o0,
+    round_status_container: i0
   },
-  i0 = "_round_indicator_mgwmo_1",
-  r0 = "_round_indicator_wait_mgwmo_37",
+  r0 = "_round_indicator_mgwmo_1",
+  c0 = "_round_indicator_wait_mgwmo_37",
   Xi = {
-    round_indicator: i0,
-    round_indicator_wait: r0
+    round_indicator: r0,
+    round_indicator_wait: c0
   },
-  c0 = () => e.jsx("div", {
+  l0 = () => e.jsx("div", {
     className: Xi.round_indicator_wait
   }),
   Ji = () => e.jsx("div", {
     className: Xi.round_indicator
   }),
-  l0 = () => {
+  d0 = () => {
     const n = l($e);
     return l(Hs), n ? e.jsxs("div", {
       className: tt.round_info_container,
@@ -11951,64 +11982,64 @@ const vA = p.memo(() => (p.useEffect(() => {
         })]
       }), e.jsxs("div", {
         className: tt.round_status_container,
-        children: [e.jsx(c0, {}), " Soon"]
+        children: [e.jsx(l0, {}), " Soon"]
       })]
     })
   },
-  d0 = () => {
+  u0 = () => {
     const n = l($e),
       t = l(s => s.tournament.periodsStatus);
     return e.jsxs("div", {
-      children: [e.jsx(l0, {}), n && t === u.fulfilled && e.jsx(e0, {}), !n && t === u.fulfilled && e.jsx(t0, {})]
+      children: [e.jsx(d0, {}), n && t === u.fulfilled && e.jsx(t0, {}), !n && t === u.fulfilled && e.jsx(n0, {})]
     })
   },
-  u0 = "_soon_la5q2_1",
-  p0 = "_active_round_instruction_la5q2_11",
-  m0 = "_not_active_round_instruction_la5q2_19",
-  A0 = "_round_container_la5q2_25",
-  h0 = "_round_title_la5q2_33",
-  g0 = "_round_title_text_la5q2_38",
-  _0 = "_round_indicator_la5q2_43",
-  f0 = "_round_status_success_la5q2_49",
-  x0 = "_round_status_fail_la5q2_60",
-  y0 = "_success_la5q2_71",
-  v0 = "_fail_la5q2_75",
-  w0 = "_gray_la5q2_79",
-  b0 = "_round_main_info_la5q2_83",
-  j0 = "_round_image_container_la5q2_89",
-  P0 = "_round_image_la5q2_89",
-  C0 = "_round_lines_container_la5q2_103",
-  N0 = "_round_line_la5q2_103",
-  S0 = "_divider_la5q2_117",
-  I0 = "_pixels_number_la5q2_124",
-  T0 = "_pixel_la5q2_124",
-  E0 = "_past_rounds_la5q2_136",
-  B0 = "_past_rounds_divider_la5q2_145",
+  p0 = "_soon_la5q2_1",
+  m0 = "_active_round_instruction_la5q2_11",
+  A0 = "_not_active_round_instruction_la5q2_19",
+  h0 = "_round_container_la5q2_25",
+  g0 = "_round_title_la5q2_33",
+  _0 = "_round_title_text_la5q2_38",
+  f0 = "_round_indicator_la5q2_43",
+  x0 = "_round_status_success_la5q2_49",
+  y0 = "_round_status_fail_la5q2_60",
+  v0 = "_success_la5q2_71",
+  w0 = "_fail_la5q2_75",
+  b0 = "_gray_la5q2_79",
+  j0 = "_round_main_info_la5q2_83",
+  P0 = "_round_image_container_la5q2_89",
+  C0 = "_round_image_la5q2_89",
+  N0 = "_round_lines_container_la5q2_103",
+  S0 = "_round_line_la5q2_103",
+  I0 = "_divider_la5q2_117",
+  T0 = "_pixels_number_la5q2_124",
+  E0 = "_pixel_la5q2_124",
+  B0 = "_past_rounds_la5q2_136",
+  D0 = "_past_rounds_divider_la5q2_145",
   z = {
-    soon: u0,
-    active_round_instruction: p0,
-    not_active_round_instruction: m0,
-    round_container: A0,
-    round_title: h0,
-    round_title_text: g0,
-    round_indicator: _0,
-    round_status_success: f0,
-    round_status_fail: x0,
-    success: y0,
-    fail: v0,
-    gray: w0,
-    round_main_info: b0,
-    round_image_container: j0,
-    round_image: P0,
-    round_lines_container: C0,
-    round_line: N0,
-    divider: S0,
-    pixels_number: I0,
-    pixel: T0,
-    past_rounds: E0,
-    past_rounds_divider: B0
+    soon: p0,
+    active_round_instruction: m0,
+    not_active_round_instruction: A0,
+    round_container: h0,
+    round_title: g0,
+    round_title_text: _0,
+    round_indicator: f0,
+    round_status_success: x0,
+    round_status_fail: y0,
+    success: v0,
+    fail: w0,
+    gray: b0,
+    round_main_info: j0,
+    round_image_container: P0,
+    round_image: C0,
+    round_lines_container: N0,
+    round_line: S0,
+    divider: I0,
+    pixels_number: T0,
+    pixel: E0,
+    past_rounds: B0,
+    past_rounds_divider: D0
   },
-  D0 = ({
+  k0 = ({
     result: n
   }) => {
     const t = g(),
@@ -12104,7 +12135,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  k0 = () => {
+  R0 = () => {
     const n = l(ep),
       t = l(Hs);
     return n ? e.jsxs(ae.Fragment, {
@@ -12117,51 +12148,51 @@ const vA = p.memo(() => (p.useEffect(() => {
         }), e.jsx("div", {
           className: z.past_rounds_divider
         })]
-      }), n.map(s => t && t === s.round_id ? null : e.jsx(D0, {
+      }), n.map(s => t && t === s.round_id ? null : e.jsx(k0, {
         result: s
       }, s.round_id))]
     }) : null
   },
-  R0 = () => {
+  U0 = () => {
     const n = g(),
       t = l(s => s.tournament.resultsStatus);
     return p.useEffect(() => {
       t === u.idle && n(Fe.getResults())
     }, [t]), e.jsx("div", {
-      children: e.jsx(k0, {})
+      children: e.jsx(R0, {})
     })
   },
-  U0 = () => {
+  O0 = () => {
     const n = l(t => t.tournament.activeTab);
     return e.jsxs("div", {
-      className: oj.info_layout,
-      children: [n === kt.create && e.jsx(Mj, {}), n === kt.main && e.jsx(d0, {}), n === kt.result && e.jsx(R0, {})]
+      className: ij.info_layout,
+      children: [n === kt.create && e.jsx(Qj, {}), n === kt.main && e.jsx(u0, {}), n === kt.result && e.jsx(U0, {})]
     })
   },
-  O0 = () => e.jsxs(ae.Fragment, {
-    children: [e.jsx(Gu, {}), e.jsx(U0, {})]
+  M0 = () => e.jsxs(ae.Fragment, {
+    children: [e.jsx(Gu, {}), e.jsx(O0, {})]
   }),
-  M0 = "/assets/bg-BNfFdtGI.png",
-  Q0 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAACuCAYAAABQi0QlAAAKPklEQVR4nO3dX4gd1R0H8Bv/xMQ/K0kVV021SkNSNcQVKbbBQiSEgPSpfRJrIT6GPgTWIpQ+thSVCi1SCo0PWkpB+9BCJEgwULENRYwSYxMsTbVqVrSxJtXEGLV4Zn9378zO3DN3/yXr/Xxezs7szNyZ8Wb9nj9zpgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwMJb4p5TZ83ISO/az77gNyn9Ozh07NiZPxPOSuf4zwLQ33nuD209du/VacurbrkylVfcfEVpzyWX3d7qSJ+9++y0dU37Vrd9+8W3a7d764Uj2c/dd6CoQP397XNTuevwa63OFyRKgAxtlNTqbaNcO7o0lQcnTrVqq9xy3bULflNnkg5XLrsgff+PnvwoLWujpIlECZAhUQ6pSq92WylRbr9tVdp87MYiYDa1Wc5GtEVWj1lto2xqm4z2yF41bZMDff8lzuElUQJk6PUeMpEkN28sUuDTe45k2x2vHV2WktdrEydrf9+297uut7uqqVe7aX2k2UiW1Z7tr13xSXfb+HnX4e51dSavq+892LzxyuKge6bWSZfDRaIEyJAoh0w1Se5/7s60XE2BE7uf7P68advzs3oy56Y198/bTd79yK0z3jeSZBxjdNN3S7+PBLxuw860XTdZfp4o/yhRDhOJEiBDohwyuSQZetPVY/cW7X/37HhzVjer32dGeqv+rqldc92GnbM6l07Pk0bVJBniXPY/1/3M3mRtxMgQkSgBMvyhBMhQ9SaJzpuHHnpn2g0ZHy86gDqzrHq3qVa3GUI0V2Jo0fiWX5WOOD5+eSqbquQMH4kSIEOiHFLVdFdNkr2TTOzaNj/Tkd1398utt33wtzfVrq8+whgDzdvYtO350lYxmUfci4c2Feun7tXsO5BYnCRKgAyJkpJIkiNLl3aHvxw7dSp+nNNXQgwyNdqDnfpEGeomwWgh7TSydGmcT7q+MzFNHGc3iRIgQ6KkVk+KnDP9erRjMHp18otqO+J8mI9r5YtFogTIkCiHVPWRweoUZItd7/RqoW2PeHXfhRzbydlJogTIkCiH1L5HX0wXPra1uP54rUNnb1GsXHZB98bEy7eaNL22Ibd9r9wkF4N+xiDiWuM6415Ekox7xfCSKAEyJMohs3a0GB95z443i0lrJ593Htt6cyq3PFN8JWJMYadnTGX0Dkdb39iNp1MZT8dE2muaMi3EdtHTPRvVVz/0Ux0jet45xb5HT35UGj85trUYsxkpNqaXi3vXSa+CGPZv0nCRKAEyJMohc3CiPGYwnmseH+9MlpdP/mJqm0iXly0vXjIWy3d1rh7o5s1FO2PTS8YG8elnRVg+evJUKUnGtcdnVJ9/r947hodECZAhUQ6p0YsuLKXDSJB33VG0O3bnoOz5XW+7ZaenfTB6iXOJcSqhTZ/zcq5Ux0DWtV3+7+OPa5NktLX+bqqdNpVxryY++HDYvzZDS6IEyJAoh0z1xf3VZLlrR7F+e89sPOPjo8UPU8kylW17v8MgswW1Ncj8k6GaJHc+PpHKh/eWZ3CvJsnqvWN4SJQAGV65OeTWjIyUbsCqkeIplTeOfTRt7sl4vWu1DW/7batSGW2V8S6aSJYxnrLNM9PVds5qL3ek1ur4yaa2ycPvvdddd92KFamMdtjq63dXjVywZPLaS+slSSRKgAxtlENuelrqJsxubWPtaDEDeDzNEyJJDtpWWWcuxkf2iiQZKbLTk4CjHTaetInxkZEkJUiqJEqADH8oATJ05pDVtsMn16nTz1x14jx1sKg2H/rv9OrzymVFZ0112jhVbXIkSoAMnTlk5Tp8ImE+vPeNFCW3d1ZN/vpIaa9qsqzrwIl1kSBDbjq1WB9Jcvl556YdTpyeSpyRJCVIBiVRAmRIlAysKWGuXrk8pbhcsqxTTZChKUlG22Ssb5rAQnpkLkiUABl6vZkz0Tu+euXyVL569ESRLCu94f3sO1D+SkqSnA0kSoAMiZI515QsY3qz6tjHXm2nTZMkWUgSJUCGRMm8iWQ5etGFqZz44MNSI2UkzDpNbZFBkmQhSZQAGRIl8676rPjnM6/N4jNL31lJkoUgUQJkSJQsmJ5kWeoF7/S0Sd75veJFZk2vjo3vrCTJQpIoATIkSuZdJMn1qy9J5UuvHp9xG+X61ZcsmTxGWpYsWQgSJUCGRMm8aert3v3IrWmhbubzmI9y5+MTpfXRdrlp2/OxSu83C0aiBMgwHyVZNcmwVqS62P7r1xXPev/t8IlSm2SkxTtrDjI1L2W5stOTJEM6ZsyBGarnMMh5QxOJEiBDGyVZ1fGPVZs3Xpm+R0/vmTZLedr+sXuvTgv93sq45LLbix3efTaV1ffpxD77Hn2xKCfnrXx47xvdQ/Ruv3lj8VlP7znSr4fdmExakSgBMvyhBMjQmcPAqsN71m3Ymaq3m7esK6rgu/aXDhnV5H0Hyp04vVXwqHJXq9Zd3eFC/V9bu3nLus7kOaRz2v/cVJdRVOdrOoagL4kSIENnDlnRmfOtsRWp/PO+90qdNLf88AepvGnN/am8Yc2lxaS6r3+Qlo+eOD2badX6uvj889NnXXN9MTnwK4feT5/18qGfpeUXHvhld/d7drwZ17Fk8jrSss4cciRKgAyJktYiWa4dXZrKgxOnSslybOvNqVy3YWftIds8uhiqjzCGpldDhGiTjLbOSJGT571k8rzTsiRJWxIlQIZESWtNk1xsv21VWhi7sWiK/MkfiinQntxZDCKPweRtTOx+srTV1CONhRi0HiJ5PnWwSIc/+k4xlVvNgPSOiTSYKYkSIEOiJKup13ux8qpbBiVRAmR4MofWIklWe68HaYMcVNMkGVXRlhltmNF2WfcEz67Dr0UiVqOiFYkSIEOiZGCR3qZSXJH2mhJm21TYqenljtfV5k1u98w7k1vWPwsOMyFRAmRIlNQa5FUKc6HaxhjLd91xOpWRLKvLcyGuVe83TSRKgAy9ftSqJMpFPW6yBa+EoC+JEiBDGyWtXfPpVWnTr156alHftH+8X8x+9Po5b53xc2FxkCgBMiRKWosk+czxdxflTasm4tePn+ETYtGQKAEyJEpai7a9+N/rl9atT+XqtTeUDnHfAz8tLR888Eoqn/j1b1K5bNmyadv96fdPpPLQC/tK+548ebK0HPuGNbeMpZ9e+stfS+v//a9/pvI/+1+adnnV64AcXxWADH8oATJUvZmxqHJH9fjHv/h56VC5KndUtztzWOWO7b78letT2Vv1Pv5JMaD8knMX9vFMFj+JEiBDomTGBk2S3/7+3als6rjp9EmSsX79N7+RyqYkGdtFZw7MBYkSIMOkGNSqmxQjBmwv1kf/Vnx8cSqjjbLnOkyKQV8SJUCGNkoGFsly0fF2CGZIogTIkChpzbRkDCuJEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgLNMp9P5P3QA6znhJ60FAAAAAElFTkSuQmCC",
-  F0 = "/assets/rays-uhfpLlt6.png",
-  z0 = "/assets/rays2-Ce7ymw8-.png",
-  H0 = "_container_lc1md_1",
-  q0 = "_title_lc1md_8",
-  L0 = "_table_container_lc1md_13",
-  V0 = "_table_row_lc1md_19",
-  G0 = "_button_lc1md_26",
-  X0 = "_active_row_lc1md_50",
-  J0 = "_row_title_lc1md_50",
+  Q0 = "/assets/bg-BNfFdtGI.png",
+  F0 = "data:image/png;base64,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",
+  z0 = "/assets/rays-uhfpLlt6.png",
+  H0 = "/assets/rays2-Ce7ymw8-.png",
+  q0 = "_container_lc1md_1",
+  L0 = "_title_lc1md_8",
+  V0 = "_table_container_lc1md_13",
+  G0 = "_table_row_lc1md_19",
+  X0 = "_button_lc1md_26",
+  J0 = "_active_row_lc1md_50",
+  Y0 = "_row_title_lc1md_50",
   ca = {
-    container: H0,
-    title: q0,
-    table_container: L0,
-    table_row: V0,
-    button: G0,
-    active_row: X0,
-    row_title: J0
+    container: q0,
+    title: L0,
+    table_container: V0,
+    table_row: G0,
+    button: X0,
+    active_row: J0,
+    row_title: Y0
   },
-  Y0 = () => {
+  W0 = () => {
     const n = g(),
       t = l(a => a.tournament.showTournamentDetailsPopup),
       s = a => {
@@ -12219,43 +12250,43 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  W0 = "_layout_17ca7_1",
-  K0 = "_container_17ca7_6",
-  Z0 = "_close_button_17ca7_20",
-  $0 = "_title_container_17ca7_28",
-  eP = "_title_17ca7_28",
-  tP = "_image_container_17ca7_39",
-  nP = "_image_17ca7_39",
-  sP = "_image_placeholder_17ca7_53",
-  aP = "_info_container_17ca7_60",
-  oP = "_info_row_17ca7_66",
-  iP = "_info_title_17ca7_71",
-  rP = "_info_value_blue_17ca7_75",
-  cP = "_info_value_white_17ca7_80",
-  lP = "_buttons_container_17ca7_84",
-  dP = "_button_17ca7_84",
-  uP = "_not_button_17ca7_100",
-  pP = "_button_copy_17ca7_111",
+  K0 = "_layout_17ca7_1",
+  Z0 = "_container_17ca7_6",
+  $0 = "_close_button_17ca7_20",
+  eP = "_title_container_17ca7_28",
+  tP = "_title_17ca7_28",
+  nP = "_image_container_17ca7_39",
+  sP = "_image_17ca7_39",
+  aP = "_image_placeholder_17ca7_53",
+  oP = "_info_container_17ca7_60",
+  iP = "_info_row_17ca7_66",
+  rP = "_info_title_17ca7_71",
+  cP = "_info_value_blue_17ca7_75",
+  lP = "_info_value_white_17ca7_80",
+  dP = "_buttons_container_17ca7_84",
+  uP = "_button_17ca7_84",
+  pP = "_not_button_17ca7_100",
+  mP = "_button_copy_17ca7_111",
   G = {
-    layout: W0,
-    container: K0,
-    close_button: Z0,
-    title_container: $0,
-    title: eP,
-    image_container: tP,
-    image: nP,
-    image_placeholder: sP,
-    info_container: aP,
-    info_row: oP,
-    info_title: iP,
-    info_value_blue: rP,
-    info_value_white: cP,
-    buttons_container: lP,
-    button: dP,
-    not_button: uP,
-    button_copy: pP
+    layout: K0,
+    container: Z0,
+    close_button: $0,
+    title_container: eP,
+    title: tP,
+    image_container: nP,
+    image: sP,
+    image_placeholder: aP,
+    info_container: oP,
+    info_row: iP,
+    info_title: rP,
+    info_value_blue: cP,
+    info_value_white: lP,
+    buttons_container: dP,
+    button: uP,
+    not_button: pP,
+    button_copy: mP
   },
-  mP = ({
+  AP = ({
     template: n,
     style: t = {},
     onPointerUp: s = () => {}
@@ -12283,7 +12314,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       children: "Select Template"
     })
   },
-  AP = () => {
+  hP = () => {
     const n = l(r => r.tournament.templateDataInfoPopup),
       t = l(r => r.user.user),
       s = l(r => r.tournament.selectedTemplate),
@@ -12299,11 +12330,11 @@ const vA = p.memo(() => (p.useEffect(() => {
         size: 18,
         children: ""
       })]
-    }) : i && s ? null : e.jsx(mP, {
+    }) : i && s ? null : e.jsx(AP, {
       template: n
     })
   },
-  hP = () => {
+  gP = () => {
     const n = g(),
       t = Y(),
       s = l(o => o.tournament.showTemplateInfoPopup),
@@ -12342,7 +12373,7 @@ const vA = p.memo(() => (p.useEffect(() => {
             })
           }), e.jsxs("div", {
             className: G.buttons_container,
-            children: [e.jsx(AP, {}), e.jsx(Gt, {
+            children: [e.jsx(hP, {}), e.jsx(Gt, {
               url: `${gt}?startapp=f${a.id}_t`,
               className: G.button_copy,
               text: "Copy template link"
@@ -12401,42 +12432,42 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     }), document.body)
   },
-  gP = "_layout_20dlh_1",
-  _P = "_container_20dlh_10",
-  fP = "_star_20dlh_14",
-  xP = "_star_animation_20dlh_21",
-  yP = "_move_20dlh_1",
-  Ts = {
-    layout: gP,
-    container: _P,
-    star: fP,
-    star_animation: xP,
-    move: yP
+  _P = "_layout_20dlh_1",
+  fP = "_container_20dlh_10",
+  xP = "_star_20dlh_14",
+  yP = "_star_animation_20dlh_21",
+  vP = "_move_20dlh_1",
+  Es = {
+    layout: _P,
+    container: fP,
+    star: xP,
+    star_animation: yP,
+    move: vP
   },
-  vP = "data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3clinearGradient%20id='grad1'%20x1='0%25'%20y1='0%25'%20x2='0%25'%20y2='100%25'%3e%3cstop%20offset='0%25'%20style='stop-color:%23efce32;stop-opacity:1'%20/%3e%3c!--%20более%20светлый%20желтый%20--%3e%3cstop%20offset='100%25'%20style='stop-color:%23f7752e;stop-opacity:1'%20/%3e%3c!--%20более%20темный%20желтый%20--%3e%3c/linearGradient%3e%3c/defs%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5%200C2.23858%200%200%202.23858%200%205V27C0%2029.7614%202.23858%2032%205%2032H27C29.7614%2032%2032%2029.7614%2032%2027V5C32%202.23858%2029.7614%200%2027%200H5ZM21.4261%2010.5739H10.5739V21.4261H21.4261V10.5739Z'%20fill='url(%23grad1)'/%3e%3c/svg%3e",
-  wP = ({
+  wP = "data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3clinearGradient%20id='grad1'%20x1='0%25'%20y1='0%25'%20x2='0%25'%20y2='100%25'%3e%3cstop%20offset='0%25'%20style='stop-color:%23efce32;stop-opacity:1'%20/%3e%3c!--%20более%20светлый%20желтый%20--%3e%3cstop%20offset='100%25'%20style='stop-color:%23f7752e;stop-opacity:1'%20/%3e%3c!--%20более%20темный%20желтый%20--%3e%3c/linearGradient%3e%3c/defs%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5%200C2.23858%200%200%202.23858%200%205V27C0%2029.7614%202.23858%2032%205%2032H27C29.7614%2032%2032%2029.7614%2032%2027V5C32%202.23858%2029.7614%200%2027%200H5ZM21.4261%2010.5739H10.5739V21.4261H21.4261V10.5739Z'%20fill='url(%23grad1)'/%3e%3c/svg%3e",
+  bP = ({
     size: n,
     style: t = {},
     animation: s = !1
   }) => e.jsx("img", {
     alt: "image",
-    src: vP,
-    className: s ? Ts.star_animation : Ts.star,
+    src: wP,
+    className: s ? Es.star_animation : Es.star,
     style: {
       width: n,
       height: n,
       ...t
     }
   }),
-  bP = p.memo(() => {
+  jP = p.memo(() => {
     const n = Array.from(Array(30));
     return e.jsx("div", {
-      className: Ts.layout,
+      className: Es.layout,
       children: e.jsx("div", {
-        className: Ts.container,
+        className: Es.container,
         children: n.map((t, s) => {
           const a = L(2, 6);
-          return e.jsx(wP, {
+          return e.jsx(bP, {
             size: a,
             animation: !0,
             style: {
@@ -12448,32 +12479,32 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   }, () => !1),
-  jP = "_container_tuzgg_1",
-  PP = "_column_tuzgg_9",
-  CP = "_column_rev_tuzgg_17",
-  NP = "_title_tuzgg_26",
-  SP = "_table_container_tuzgg_32",
-  IP = "_table_row_tuzgg_38",
-  TP = "_button_tuzgg_45",
-  EP = "_value_tuzgg_52",
-  BP = "_notpixel_icon_tuzgg_58",
-  DP = "_active_row_tuzgg_74",
-  kP = "_row_title_tuzgg_74",
+  PP = "_container_tuzgg_1",
+  CP = "_column_tuzgg_9",
+  NP = "_column_rev_tuzgg_17",
+  SP = "_title_tuzgg_26",
+  IP = "_table_container_tuzgg_32",
+  TP = "_table_row_tuzgg_38",
+  EP = "_button_tuzgg_45",
+  BP = "_value_tuzgg_52",
+  DP = "_notpixel_icon_tuzgg_58",
+  kP = "_active_row_tuzgg_74",
+  RP = "_row_title_tuzgg_74",
   Ae = {
-    container: jP,
-    column: PP,
-    column_rev: CP,
-    title: NP,
-    table_container: SP,
-    table_row: IP,
-    button: TP,
-    value: EP,
-    notpixel_icon: BP,
-    active_row: DP,
-    row_title: kP
+    container: PP,
+    column: CP,
+    column_rev: NP,
+    title: SP,
+    table_container: IP,
+    table_row: TP,
+    button: EP,
+    value: BP,
+    notpixel_icon: DP,
+    active_row: kP,
+    row_title: RP
   },
   ro = "data:image/png;base64,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",
-  RP = [{
+  UP = [{
     name: "Total $PX for painters",
     value: 512e7,
     image: he
@@ -12494,7 +12525,7 @@ const vA = p.memo(() => (p.useEffect(() => {
     value: 8184,
     image: null
   }],
-  UP = [{
+  OP = [{
     name: "Template owner",
     value: 128e6,
     image: he
@@ -12539,7 +12570,7 @@ const vA = p.memo(() => (p.useEffect(() => {
     value: 125e3,
     image: he
   }],
-  OP = () => {
+  MP = () => {
     const n = g(),
       t = l(a => a.tournament.showRoundRewardsPopup),
       s = a => {
@@ -12563,7 +12594,7 @@ const vA = p.memo(() => (p.useEffect(() => {
           children: "Round 10"
         }), e.jsx("div", {
           className: Ae.table_container,
-          children: RP.map((a, o) => e.jsxs("div", {
+          children: UP.map((a, o) => e.jsxs("div", {
             className: Ae.table_row,
             children: [e.jsx("div", {
               children: a.name
@@ -12583,7 +12614,7 @@ const vA = p.memo(() => (p.useEffect(() => {
           children: "Rewards in templates"
         }), e.jsx("div", {
           className: Ae.table_container,
-          children: UP.map((a, o) => e.jsxs("div", {
+          children: OP.map((a, o) => e.jsxs("div", {
             className: Ae.table_row,
             children: [e.jsx("div", {
               children: a.name
@@ -12606,13 +12637,13 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     })
   },
-  MP = "_button_1wjsf_1",
-  QP = "_icon_1wjsf_20",
+  QP = "_button_1wjsf_1",
+  FP = "_icon_1wjsf_20",
   co = {
-    button: MP,
-    icon: QP
+    button: QP,
+    icon: FP
   },
-  FP = () => {
+  zP = () => {
     const n = g(),
       s = l(zt) ? "calc(12px + var(--safe-area-top))" : "calc(12px + var(--header-height))";
     return e.jsxs("button", {
@@ -12631,13 +12662,13 @@ const vA = p.memo(() => (p.useEffect(() => {
       })]
     })
   },
-  zP = () => {
+  HP = () => {
     const n = g();
     return e.jsxs($, {
-      children: [e.jsx(FP, {}), e.jsxs("div", {
+      children: [e.jsx(zP, {}), e.jsxs("div", {
         className: Se.general_info_container,
         style: {
-          backgroundImage: `url(${M0})`,
+          backgroundImage: `url(${Q0})`,
           backgroundPosition: "top center",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
@@ -12648,22 +12679,22 @@ const vA = p.memo(() => (p.useEffect(() => {
           children: [e.jsx("img", {
             alt: "img",
             className: Se.image_cup,
-            src: Q0
+            src: F0
           }), e.jsx("div", {
             className: Se.image_glow_container,
             children: e.jsx("img", {
               alt: "img",
               className: Se.image_glow,
-              src: F0
+              src: z0
             })
           }), e.jsx("div", {
             className: Se.image_glow_container,
             children: e.jsx("img", {
               alt: "img",
               className: Se.image_glow_reverse,
-              src: z0
+              src: H0
             })
-          }), e.jsx(bP, {})]
+          }), e.jsx(jP, {})]
         }), e.jsx("h1", {
           className: Se.title,
           children: "Telegram Battle"
@@ -12682,67 +12713,67 @@ const vA = p.memo(() => (p.useEffect(() => {
               },
               children: "How it works"
             })]
-          }), e.jsx(Y0, {}), e.jsx(OP, {})]
+          }), e.jsx(W0, {}), e.jsx(MP, {})]
         })]
-      }), e.jsx(O0, {}), e.jsx(hP, {})]
+      }), e.jsx(M0, {}), e.jsx(gP, {})]
     })
   },
-  HP = "_container_16f9l_1",
-  qP = "_image_container_16f9l_9",
-  LP = "_image_16f9l_9",
-  VP = "_title_container_16f9l_18",
-  GP = "_text_container_16f9l_27",
-  XP = "_title_16f9l_18",
-  JP = "_gray_16f9l_39",
-  YP = "_bold_16f9l_43",
-  WP = "_input_16f9l_47",
-  KP = "_catalog_container_16f9l_72",
-  ZP = "_catalog_title_16f9l_77",
-  $P = "_catalog_items_container_16f9l_82",
-  eC = "_catalog_item_16f9l_82",
-  tC = "_catalog_item_image_container_16f9l_101",
-  nC = "_catalog_item_image_16f9l_101",
-  sC = "_button_container_16f9l_110",
-  aC = "_button_16f9l_110",
-  oC = "_wrong_helper_text_16f9l_125",
-  iC = "_wrong_button_16f9l_130",
-  rC = "_wrong_button_text2_16f9l_143",
+  qP = "_container_16f9l_1",
+  LP = "_image_container_16f9l_9",
+  VP = "_image_16f9l_9",
+  GP = "_title_container_16f9l_18",
+  XP = "_text_container_16f9l_27",
+  JP = "_title_16f9l_18",
+  YP = "_gray_16f9l_39",
+  WP = "_bold_16f9l_43",
+  KP = "_input_16f9l_47",
+  ZP = "_catalog_container_16f9l_72",
+  $P = "_catalog_title_16f9l_77",
+  eC = "_catalog_items_container_16f9l_82",
+  tC = "_catalog_item_16f9l_82",
+  nC = "_catalog_item_image_container_16f9l_101",
+  sC = "_catalog_item_image_16f9l_101",
+  aC = "_button_container_16f9l_110",
+  oC = "_button_16f9l_110",
+  iC = "_wrong_helper_text_16f9l_125",
+  rC = "_wrong_button_16f9l_130",
+  cC = "_wrong_button_text2_16f9l_143",
   S = {
-    container: HP,
-    image_container: qP,
-    image: LP,
-    title_container: VP,
-    text_container: GP,
-    title: XP,
-    gray: JP,
-    bold: YP,
-    input: WP,
-    catalog_container: KP,
-    catalog_title: ZP,
-    catalog_items_container: $P,
-    catalog_item: eC,
-    catalog_item_image_container: tC,
-    catalog_item_image: nC,
-    button_container: sC,
-    button: aC,
-    wrong_helper_text: oC,
-    wrong_button: iC,
-    wrong_button_text2: rC
+    container: qP,
+    image_container: LP,
+    image: VP,
+    title_container: GP,
+    text_container: XP,
+    title: JP,
+    gray: YP,
+    bold: WP,
+    input: KP,
+    catalog_container: ZP,
+    catalog_title: $P,
+    catalog_items_container: eC,
+    catalog_item: tC,
+    catalog_item_image_container: nC,
+    catalog_item_image: sC,
+    button_container: aC,
+    button: oC,
+    wrong_helper_text: iC,
+    wrong_button: rC,
+    wrong_button_text2: cC
   },
-  cC = "/assets/box_1-CzUKXu07.gif",
-  lC = "/assets/box_2-wR9cQS7q.gif",
-  dC = "/assets/box_3-g_PL1kKM.gif",
-  uC = "/assets/dogs-D0jtZggB.gif",
-  pC = "/assets/secret_word-BTKB1fAO.gif",
-  mC = "/assets/cube_youtube_2-BqessN1a.gif",
-  AC = "/assets/cube_twitter_3_m_-Bxf2Qx_E.gif",
-  Un = {
+  lC = "/assets/box_1-CzUKXu07.gif",
+  dC = "/assets/box_2-wR9cQS7q.gif",
+  uC = "/assets/box_3-g_PL1kKM.gif",
+  pC = "/assets/dogs-D0jtZggB.gif",
+  mC = "/assets/secret_word-BTKB1fAO.gif",
+  AC = "/assets/cube_youtube_2-BqessN1a.gif",
+  hC = "/assets/cube_twitter_3_m_-Bxf2Qx_E.gif",
+  On = {
     Ghost: "Ghost",
     Mythical: "Mythical",
     Magical: "Magical",
     Dogs: "Dogs"
   },
-  hC = () => {
+  gC = () => {
     const n = g(),
       [t, s] = p.useState(""),
       [a, o] = p.useState(!1),
@@ -12774,16 +12805,16 @@ const vA = p.memo(() => (p.useEffect(() => {
       (async () => {
         const b = await F.getSecretStats();
         b.status === 200 && b.data && b.data.forEach(T => {
-          T.group_name === Un.Ghost && d({
+          T.group_name === On.Ghost && d({
             count: T.usage_count,
             limit: T.limit
-          }), T.group_name === Un.Mythical && A({
+          }), T.group_name === On.Mythical && A({
             count: T.usage_count,
             limit: T.limit
-          }), T.group_name === Un.Magical && f({
+          }), T.group_name === On.Magical && f({
             count: T.usage_count,
             limit: T.limit
-          }), T.group_name === Un.Dogs && y({
+          }), T.group_name === On.Dogs && y({
             count: T.usage_count,
             limit: T.limit
           })
@@ -12797,7 +12828,7 @@ const vA = p.memo(() => (p.useEffect(() => {
           children: e.jsx("img", {
             alt: "image",
             className: S.image,
-            src: pC
+            src: mC
           })
         }), e.jsxs("div", {
           className: S.title_container,
@@ -12833,7 +12864,7 @@ const vA = p.memo(() => (p.useEffect(() => {
                 children: e.jsx("img", {
                   alt: "item_image",
                   className: S.catalog_item_image,
-                  src: cC
+                  src: lC
                 })
               }), e.jsx("div", {
                 className: R(S.bold),
@@ -12853,7 +12884,7 @@ const vA = p.memo(() => (p.useEffect(() => {
                 children: e.jsx("img", {
                   alt: "item_image",
                   className: S.catalog_item_image,
-                  src: lC
+                  src: dC
                 })
               }), e.jsx("div", {
                 className: R(S.bold),
@@ -12873,7 +12904,7 @@ const vA = p.memo(() => (p.useEffect(() => {
                 children: e.jsx("img", {
                   alt: "item_image",
                   className: S.catalog_item_image,
-                  src: uC
+                  src: pC
                 })
               }), e.jsx("div", {
                 className: R(S.bold),
@@ -12893,7 +12924,7 @@ const vA = p.memo(() => (p.useEffect(() => {
                 children: e.jsx("img", {
                   alt: "item_image",
                   className: S.catalog_item_image,
-                  src: dC
+                  src: uC
                 })
               }), e.jsx("div", {
                 className: R(S.bold),
@@ -12909,7 +12940,7 @@ const vA = p.memo(() => (p.useEffect(() => {
                 children: e.jsx("img", {
                   alt: "item_image",
                   className: S.catalog_item_image,
-                  src: mC
+                  src: AC
                 })
               }), e.jsx("div", {
                 className: R(S.bold),
@@ -12925,7 +12956,7 @@ const vA = p.memo(() => (p.useEffect(() => {
                 children: e.jsx("img", {
                   alt: "item_image",
                   className: S.catalog_item_image,
-                  src: AC
+                  src: hC
                 })
               }), e.jsx("div", {
                 className: R(S.bold),
@@ -12948,7 +12979,7 @@ const vA = p.memo(() => (p.useEffect(() => {
                   key: t
                 });
                 if (_.status === 200 && _.data.secretWord.success) {
-                  n(q({
+                  n(H({
                     id: performance.now(),
                     text: "Success!",
                     icon: ""
@@ -12988,18 +13019,18 @@ const vA = p.memo(() => (p.useEffect(() => {
     my_squad: "/my-squad",
     my_profile: "/my-profile"
   },
-  gC = Object.values(nt),
-  _C = () => e.jsx(ja, {
+  _C = Object.values(nt),
+  fC = () => e.jsx(ja, {
     children: e.jsxs(hr, {
       children: [e.jsx(X, {
         path: "/welcome",
-        children: e.jsx(jf, {})
+        children: e.jsx(Pf, {})
       }), e.jsx(X, {
         path: "/airdrop",
-        children: e.jsx(Vb, {})
+        children: e.jsx(Gb, {})
       }), e.jsx(X, {
         path: "/invite-frens",
-        children: e.jsx(lx, {})
+        children: e.jsx(dx, {})
       }), e.jsx(X, {
         path: nt.stars,
         children: e.jsx(nd, {})
@@ -13008,134 +13039,134 @@ const vA = p.memo(() => (p.useEffect(() => {
         children: e.jsx(cd, {})
       }), e.jsx(X, {
         path: nt.my_squad,
-        children: e.jsx(sb, {})
+        children: e.jsx(ab, {})
       }), e.jsx(X, {
         path: nt.my_profile,
-        children: e.jsx(b1, {})
+        children: e.jsx(j1, {})
       }), e.jsx(X, {
         path: "/rules",
-        children: e.jsx(nf, {})
+        children: e.jsx(sf, {})
       }), e.jsx(X, {
         path: "/terms",
         children: e.jsx(ud, {})
       }), e.jsx(X, {
         path: "/stats",
-        children: e.jsx(Sx, {})
+        children: e.jsx(Ix, {})
       }), e.jsx(X, {
         path: "/privacy",
         children: e.jsx(Ad, {})
       }), e.jsx(X, {
         path: "/secrets",
-        children: e.jsx(hC, {})
+        children: e.jsx(gC, {})
       }), e.jsx(X, {
         path: nt.mining,
-        children: e.jsx(UA, {})
+        children: e.jsx(OA, {})
       }), e.jsx(X, {
         path: "/ratings/awards",
-        children: e.jsx(lf, {})
+        children: e.jsx(df, {})
       }), e.jsx(X, {
         path: nt.ratings,
-        children: e.jsx(Th, {})
+        children: e.jsx(Eh, {})
       }), e.jsx(X, {
         path: "/daily",
-        children: e.jsx(Ly, {})
+        children: e.jsx(Vy, {})
       }), e.jsx(X, {
         path: nt.history,
-        children: e.jsx(W_, {})
+        children: e.jsx(K_, {})
       }), e.jsx(X, {
         path: "/template/create",
-        children: e.jsx(db, {})
+        children: e.jsx(ub, {})
       }), e.jsx(X, {
         path: nt.template,
-        children: e.jsx(jw, {})
+        children: e.jsx(Pw, {})
       }), e.jsx(X, {
         path: "/tournament",
-        children: e.jsx(zP, {})
+        children: e.jsx(HP, {})
       }), e.jsx(X, {
         path: "/energy-over",
-        children: e.jsx(Xx, {})
+        children: e.jsx(Jx, {})
       }), e.jsx(X, {
         path: "/open-league",
-        children: e.jsx(Tf, {})
+        children: e.jsx(Ef, {})
       }), e.jsx(X, {
         path: "/pay-support",
-        children: e.jsx(Uf, {})
+        children: e.jsx(Of, {})
       }), e.jsx(X, {
         path: "/",
-        children: e.jsx(w_, {})
+        children: e.jsx(b_, {})
       })]
     })
   }),
-  fC = "_layout_1djp8_1",
-  xC = "_loading_container_1djp8_8",
-  yC = "_image_container_1djp8_20",
-  vC = "_image_1djp8_20",
-  wC = "_text_1djp8_29",
+  xC = "_layout_1djp8_1",
+  yC = "_loading_container_1djp8_8",
+  vC = "_image_container_1djp8_20",
+  wC = "_image_1djp8_20",
+  bC = "_text_1djp8_29",
   nn = {
-    layout: fC,
-    loading_container: xC,
-    image_container: yC,
-    image: vC,
-    text: wC
+    layout: xC,
+    loading_container: yC,
+    image_container: vC,
+    image: wC,
+    text: bC
   },
-  bC = "_buttons_container_rjvnl_1",
-  jC = "_group_rjvnl_8",
-  PC = "_left_rjvnl_15",
-  CC = "_middle_rjvnl_21",
-  NC = "_right_rjvnl_29",
-  SC = "_number_rjvnl_36",
-  IC = "_button_rjvnl_1",
-  TC = "_ratings_button_rjvnl_55",
-  EC = "_stars_button_rjvnl_62",
-  BC = "_shop_button_rjvnl_70",
-  DC = "_burger_button_rjvnl_79",
-  kC = "_relative_button_rjvnl_89",
-  RC = "_telegram_button_rjvnl_116",
-  UC = "_button_img_rjvnl_124",
-  OC = "_avatar_img_rjvnl_129",
-  MC = "_open_menu_button_rjvnl_134",
-  QC = "_open_menu_button_image_rjvnl_144",
-  FC = "_my_pixels_amount_rjvnl_149",
-  zC = "_header_content_rjvnl_154",
+  jC = "_buttons_container_rjvnl_1",
+  PC = "_group_rjvnl_8",
+  CC = "_left_rjvnl_15",
+  NC = "_middle_rjvnl_21",
+  SC = "_right_rjvnl_29",
+  IC = "_number_rjvnl_36",
+  TC = "_button_rjvnl_1",
+  EC = "_ratings_button_rjvnl_55",
+  BC = "_stars_button_rjvnl_62",
+  DC = "_shop_button_rjvnl_70",
+  kC = "_burger_button_rjvnl_79",
+  RC = "_relative_button_rjvnl_89",
+  UC = "_telegram_button_rjvnl_116",
+  OC = "_button_img_rjvnl_124",
+  MC = "_avatar_img_rjvnl_129",
+  QC = "_open_menu_button_rjvnl_134",
+  FC = "_open_menu_button_image_rjvnl_144",
+  zC = "_my_pixels_amount_rjvnl_149",
+  HC = "_header_content_rjvnl_154",
   _e = {
-    buttons_container: bC,
-    group: jC,
-    left: PC,
-    middle: CC,
-    right: NC,
-    number: SC,
-    button: IC,
-    ratings_button: TC,
-    stars_button: EC,
-    shop_button: BC,
-    burger_button: DC,
-    relative_button: kC,
-    telegram_button: RC,
-    button_img: UC,
-    avatar_img: OC,
-    open_menu_button: MC,
-    open_menu_button_image: QC,
-    my_pixels_amount: FC,
-    header_content: zC
+    buttons_container: jC,
+    group: PC,
+    left: CC,
+    middle: NC,
+    right: SC,
+    number: IC,
+    button: TC,
+    ratings_button: EC,
+    stars_button: BC,
+    shop_button: DC,
+    burger_button: kC,
+    relative_button: RC,
+    telegram_button: UC,
+    button_img: OC,
+    avatar_img: MC,
+    open_menu_button: QC,
+    open_menu_button_image: FC,
+    my_pixels_amount: zC,
+    header_content: HC
   },
-  HC = () => l(Re) ? null : e.jsxs("button", {
+  qC = () => l(Re) ? null : e.jsxs("button", {
     className: `${_e.button} ${_e.telegram_button}`,
     onPointerUp: () => {
       pe("https://t.me/notpixel")
     },
     children: [e.jsx("img", {
       alt: "tg_logo",
-      src: jn
+      src: Pn
     }), "Go to app for paint"]
   }),
   Ma = n => {
-    const t = Es(),
+    const t = Bs(),
       s = Y();
     return () => {
       t.pathname === n ? s.push("/") : s.push(n)
     }
   },
-  qC = () => {
+  LC = () => {
     const n = Ma("/claiming"),
       t = l(a => a.user.pixelCoins);
     return l(Re) ? e.jsxs("button", {
@@ -13148,21 +13179,21 @@ const vA = p.memo(() => (p.useEffect(() => {
         style: {
           transform: "translateY(1px)"
         },
-        children: e.jsx(Cn, {
+        children: e.jsx(Nn, {
           number: Math.max(Number(t.toFixed(0)), 0)
         })
       })]
     }) : null
   },
-  LC = "data:image/svg+xml,%3c?xml%20version='1.0'%20?%3e%3csvg%20viewBox='0%200%2032%2032'%20xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:none;}%3c/style%3e%3c/defs%3e%3ctitle/%3e%3cg%20fill='%23e0dd8e'%20data-name='Layer%202'%20id='Layer_2'%3e%3cpath%20d='M24,29H8a3,3,0,0,1-3-3V16a1,1,0,0,1,2,0V26a1,1,0,0,0,1,1H24a1,1,0,0,0,1-1V16a1,1,0,0,1,2,0V26A3,3,0,0,1,24,29Z'/%3e%3cpath%20d='M15,29H10a1,1,0,0,1-1-1V22a3,3,0,0,1,3-3h1a3,3,0,0,1,3,3v6A1,1,0,0,1,15,29Zm-4-2h3V22a1,1,0,0,0-1-1H12a1,1,0,0,0-1,1Z'/%3e%3cpath%20d='M25,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0v-.76L24.38,7H7.62L5,12.24V13a2,2,0,0,0,4,0,1,1,0,0,1,2,0,4,4,0,0,1-8,0V12a1,1,0,0,1,.11-.45l3-6A1,1,0,0,1,7,5H25a1,1,0,0,1,.89.55l3,6A1,1,0,0,1,29,12v1A4,4,0,0,1,25,17Z'/%3e%3cpath%20d='M13,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0,1,1,0,0,1,2,0A4,4,0,0,1,13,17Z'/%3e%3cpath%20d='M19,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0,1,1,0,0,1,2,0A4,4,0,0,1,19,17Z'/%3e%3cpath%20d='M22,22H19a1,1,0,0,1,0-2h3a1,1,0,0,1,0,2Z'/%3e%3c/g%3e%3cg%20id='frame'%3e%3crect%20class='cls-1'%20height='32'%20width='32'/%3e%3c/g%3e%3c/svg%3e",
-  VC = () => {
+  VC = "data:image/svg+xml,%3c?xml%20version='1.0'%20?%3e%3csvg%20viewBox='0%200%2032%2032'%20xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:none;}%3c/style%3e%3c/defs%3e%3ctitle/%3e%3cg%20fill='%23e0dd8e'%20data-name='Layer%202'%20id='Layer_2'%3e%3cpath%20d='M24,29H8a3,3,0,0,1-3-3V16a1,1,0,0,1,2,0V26a1,1,0,0,0,1,1H24a1,1,0,0,0,1-1V16a1,1,0,0,1,2,0V26A3,3,0,0,1,24,29Z'/%3e%3cpath%20d='M15,29H10a1,1,0,0,1-1-1V22a3,3,0,0,1,3-3h1a3,3,0,0,1,3,3v6A1,1,0,0,1,15,29Zm-4-2h3V22a1,1,0,0,0-1-1H12a1,1,0,0,0-1,1Z'/%3e%3cpath%20d='M25,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0v-.76L24.38,7H7.62L5,12.24V13a2,2,0,0,0,4,0,1,1,0,0,1,2,0,4,4,0,0,1-8,0V12a1,1,0,0,1,.11-.45l3-6A1,1,0,0,1,7,5H25a1,1,0,0,1,.89.55l3,6A1,1,0,0,1,29,12v1A4,4,0,0,1,25,17Z'/%3e%3cpath%20d='M13,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0,1,1,0,0,1,2,0A4,4,0,0,1,13,17Z'/%3e%3cpath%20d='M19,17a4,4,0,0,1-4-4,1,1,0,0,1,2,0,2,2,0,0,0,4,0,1,1,0,0,1,2,0A4,4,0,0,1,19,17Z'/%3e%3cpath%20d='M22,22H19a1,1,0,0,1,0-2h3a1,1,0,0,1,0,2Z'/%3e%3c/g%3e%3cg%20id='frame'%3e%3crect%20class='cls-1'%20height='32'%20width='32'/%3e%3c/g%3e%3c/svg%3e",
+  GC = () => {
     const n = Ma("/stars");
     return l(Re) ? e.jsx("button", {
       className: `${_e.shop_button}`,
       onPointerUp: n,
       children: e.jsx("img", {
         alt: "icon",
-        src: LC,
+        src: VC,
         style: {
           width: 24,
           height: 24
@@ -13170,7 +13201,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     }) : null
   },
-  GC = () => {
+  XC = () => {
     const n = Ma("/invite-frens");
     return l(Re) ? e.jsx("button", {
       className: `${_e.stars_button}`,
@@ -13181,7 +13212,7 @@ const vA = p.memo(() => (p.useEffect(() => {
       })
     }) : null
   },
-  XC = () => {
+  JC = () => {
     const n = g(),
       t = l(hi),
       s = () => {
@@ -13204,13 +13235,13 @@ const vA = p.memo(() => (p.useEffect(() => {
     className: _e.buttons_container,
     children: [e.jsxs("div", {
       className: `${_e.group} ${_e.left}`,
-      children: [e.jsx(XC, {}), e.jsx(GC, {})]
+      children: [e.jsx(JC, {}), e.jsx(XC, {})]
     }), e.jsx("div", {
       className: `${_e.group} ${_e.middle}`,
-      children: e.jsx(qC, {})
+      children: e.jsx(LC, {})
     }), e.jsxs("div", {
       className: `${_e.group} ${_e.right}`,
-      children: [e.jsx(HC, {}), e.jsx(VC, {})]
+      children: [e.jsx(qC, {}), e.jsx(GC, {})]
     })]
   })),
   uo = {
@@ -13227,9 +13258,9 @@ const vA = p.memo(() => (p.useEffect(() => {
       className: t.join(" ")
     })) : null
   },
-  JC = () => {
+  YC = () => {
     const n = l(zt),
-      t = Es(),
+      t = Bs(),
       s = l(Os),
       a = l(Ms);
     l($c);
@@ -13255,23 +13286,23 @@ const vA = p.memo(() => (p.useEffect(() => {
     })
   };
 let mo = "/";
-const YC = () => {
-    let n = Es(),
+const WC = () => {
+    let n = Bs(),
       t = Y();
     return p.useEffect(() => {
       const s = () => {
-        gC.includes(n.pathname) ? t.push("/") : t.goBack()
+        _C.includes(n.pathname) ? t.push("/") : t.goBack()
       };
       return window.Telegram.WebApp.onEvent("backButtonClicked", s), n.pathname !== mo && (n.pathname === "/" ? window.Telegram.WebApp.BackButton.hide() : window.Telegram.WebApp.BackButton.show(), mo = n.pathname), () => {
         window.Telegram.WebApp.offEvent("backButtonClicked", s)
       }
     }, [n, t]), null
   },
-  WC = "_layout_ppin4_1",
-  KC = {
-    layout: WC
+  KC = "_layout_ppin4_1",
+  ZC = {
+    layout: KC
   },
-  ZC = () => {
+  $C = () => {
     const n = p.useRef(),
       t = l(a => a.progress.command),
       s = l(a => a.progress.counter);
@@ -13295,78 +13326,78 @@ const YC = () => {
       }
     }, [t, s]), Ke.createPortal(e.jsx("div", {
       ref: n,
-      className: KC.layout
+      className: ZC.layout
     }), document.body)
   },
-  $C = "_container_1cfz6_1",
-  eN = "_header_1cfz6_9",
-  tN = "_close_1cfz6_20",
-  nN = "_title_1cfz6_32",
-  sN = "_body_1cfz6_37",
-  aN = "_image_container_1cfz6_51",
-  oN = "_image_1cfz6_51",
-  iN = "_content_container_1cfz6_62",
-  rN = "_description_container_1cfz6_70",
-  cN = "_description_item_1cfz6_77",
-  lN = "_amount_selector_container_1cfz6_84",
-  dN = "_amount_selector_button_1cfz6_90",
-  uN = "_amount_selector_count_1cfz6_103",
-  pN = "_button_container_1cfz6_114",
-  mN = "_crypto_button_container_1cfz6_120",
-  AN = "_error_1cfz6_134",
-  hN = "_not_available_1cfz6_141",
-  gN = "_button_1cfz6_114",
-  _N = "_star_color_1cfz6_167",
-  fN = "_tokens_selector_1cfz6_173",
-  xN = "_tokens_title_1cfz6_178",
-  yN = "_connect_wallet_text_title_1cfz6_185",
-  vN = "_tokens_container_1cfz6_194",
-  wN = "_token_item_1cfz6_201",
-  bN = "_token_image_container_1cfz6_212",
-  jN = "_token_image_1cfz6_212",
-  PN = "_sale_box_1cfz6_222",
-  CN = "_sale_text_1cfz6_234",
-  H = {
-    container: $C,
-    header: eN,
-    close: tN,
-    title: nN,
-    body: sN,
-    image_container: aN,
-    image: oN,
-    content_container: iN,
-    description_container: rN,
-    description_item: cN,
-    amount_selector_container: lN,
-    amount_selector_button: dN,
-    amount_selector_count: uN,
-    button_container: pN,
-    crypto_button_container: mN,
-    error: AN,
-    not_available: hN,
-    button: gN,
-    star_color: _N,
-    tokens_selector: fN,
-    tokens_title: xN,
-    connect_wallet_text_title: yN,
-    tokens_container: vN,
-    token_item: wN,
-    token_image_container: bN,
-    token_image: jN,
-    sale_box: PN,
-    sale_text: CN
+  eN = "_container_1cfz6_1",
+  tN = "_header_1cfz6_9",
+  nN = "_close_1cfz6_20",
+  sN = "_title_1cfz6_32",
+  aN = "_body_1cfz6_37",
+  oN = "_image_container_1cfz6_51",
+  iN = "_image_1cfz6_51",
+  rN = "_content_container_1cfz6_62",
+  cN = "_description_container_1cfz6_70",
+  lN = "_description_item_1cfz6_77",
+  dN = "_amount_selector_container_1cfz6_84",
+  uN = "_amount_selector_button_1cfz6_90",
+  pN = "_amount_selector_count_1cfz6_103",
+  mN = "_button_container_1cfz6_114",
+  AN = "_crypto_button_container_1cfz6_120",
+  hN = "_error_1cfz6_134",
+  gN = "_not_available_1cfz6_141",
+  _N = "_button_1cfz6_114",
+  fN = "_star_color_1cfz6_167",
+  xN = "_tokens_selector_1cfz6_173",
+  yN = "_tokens_title_1cfz6_178",
+  vN = "_connect_wallet_text_title_1cfz6_185",
+  wN = "_tokens_container_1cfz6_194",
+  bN = "_token_item_1cfz6_201",
+  jN = "_token_image_container_1cfz6_212",
+  PN = "_token_image_1cfz6_212",
+  CN = "_sale_box_1cfz6_222",
+  NN = "_sale_text_1cfz6_234",
+  q = {
+    container: eN,
+    header: tN,
+    close: nN,
+    title: sN,
+    body: aN,
+    image_container: oN,
+    image: iN,
+    content_container: rN,
+    description_container: cN,
+    description_item: lN,
+    amount_selector_container: dN,
+    amount_selector_button: uN,
+    amount_selector_count: pN,
+    button_container: mN,
+    crypto_button_container: AN,
+    error: hN,
+    not_available: gN,
+    button: _N,
+    star_color: fN,
+    tokens_selector: xN,
+    tokens_title: yN,
+    connect_wallet_text_title: vN,
+    tokens_container: wN,
+    token_item: bN,
+    token_image_container: jN,
+    token_image: PN,
+    sale_box: CN,
+    sale_text: NN
   },
-  NN = () => {
+  SN = () => {
     const n = g(),
       t = l(a => a.shop.activeProductCardId),
       s = l(a => a.shop.products[t]);
     return e.jsxs("div", {
-      className: H.header,
+      className: q.header,
       onPointerUp: a => {
         a.stopPropagation()
       },
       children: [e.jsx("div", {
-        className: H.close,
+        className: q.close,
         onPointerUp: () => {
           n(Sa())
         },
@@ -13375,53 +13406,53 @@ const YC = () => {
           children: ""
         })
       }), e.jsx("div", {
-        className: H.title,
+        className: q.title,
         children: s.name
       })]
     })
   },
-  SN = () => {
+  IN = () => {
     const n = l(a => a.shop.activeProductCardId),
       t = l(a => a.shop.products[n]),
       s = l(a => a.shop.amount);
     return e.jsx("div", {
-      className: H.image_container,
+      className: q.image_container,
       children: e.jsx("img", {
         alt: "img",
-        className: H.image,
+        className: q.image,
         src: qo(t.id, s)
       })
     })
   },
-  IN = () => {
+  TN = () => {
     const n = l(s => s.shop.activeProductCardId),
       t = l(s => s.shop.products[n]);
     return e.jsx("div", {
-      className: H.description_container,
+      className: q.description_container,
       children: e.jsx("span", {
-        className: H.description_item,
+        className: q.description_item,
         children: t.description
       })
     })
   },
-  TN = "_layout_1at34_1",
-  EN = "_container_1at34_10",
-  BN = "_item_1at34_14",
+  EN = "_layout_1at34_1",
+  BN = "_container_1at34_10",
+  DN = "_item_1at34_14",
   la = {
-    layout: TN,
-    container: EN,
-    item: BN
+    layout: EN,
+    container: BN,
+    item: DN
   },
-  DN = 8,
-  kN = 16,
-  RN = 500,
+  kN = 8,
+  RN = 16,
+  UN = 500,
   Yi = 800,
   Ao = window.innerWidth,
   ho = 100,
-  UN = () => Array.from(Array(100)).map(() => {
-    const n = L(DN, kN),
+  ON = () => Array.from(Array(100)).map(() => {
+    const n = L(kN, RN),
       t = `hsl(${L(0,360)} , 70%, 50%)`,
-      s = L(RN, Yi),
+      s = L(UN, Yi),
       a = L(-Ao, Ao),
       o = L(-ho, ho);
     return {
@@ -13434,11 +13465,11 @@ const YC = () => {
       opacity: !1
     }
   }),
-  ON = p.memo(({
+  MN = p.memo(({
     runParticle: n,
     setRunParticle: t
   }) => {
-    const [s, a] = p.useState(UN()), [o, i] = p.useState(!1);
+    const [s, a] = p.useState(ON()), [o, i] = p.useState(!1);
     return p.useEffect(() => {
       n && setTimeout(() => {
         i(!0), setTimeout(() => {
@@ -13466,20 +13497,20 @@ const YC = () => {
       })
     })
   }),
-  MN = () => {
+  QN = () => {
     const n = g(),
       t = l(Ia),
       s = l(o => o.shop.selectedCurrency);
     return l(Ze) !== de ? null : e.jsxs("div", {
-      className: H.tokens_selector,
+      className: q.tokens_selector,
       children: [e.jsx("div", {
-        className: H.tokens_title,
+        className: q.tokens_title,
         children: "Select token"
       }), e.jsx("div", {
         children: e.jsx("div", {
-          className: H.tokens_container,
+          className: q.tokens_container,
           children: t.map(o => o.currency_id === 1 ? null : e.jsxs("div", {
-            className: H.token_item,
+            className: q.token_item,
             style: {
               color: o.currency_id === s ? "#FFFFFF" : void 0
             },
@@ -13492,10 +13523,10 @@ const YC = () => {
                 children: s === o.currency_id ? "" : ""
               })
             }), e.jsx("div", {
-              className: H.token_image_container,
+              className: q.token_image_container,
               children: e.jsx("img", {
                 alt: "img",
-                className: H.token_image,
+                className: q.token_image,
                 src: o.image
               })
             }), e.jsx("div", {
@@ -13508,16 +13539,16 @@ const YC = () => {
       })]
     })
   },
-  QN = () => {
+  FN = () => {
     const n = l(s => s.shop.selectedCurrency),
       t = l(s => s.shop.crypto).filter(s => s.currency_id === n)[0];
     return n === 1 ? e.jsx("span", {
-      className: H.star_color,
+      className: q.star_color,
       style: {
         paddingRight: 4,
         marginBottom: -5
       },
-      children: e.jsx(bn, {})
+      children: e.jsx(jn, {})
     }) : e.jsx("img", {
       alt: "image",
       style: {
@@ -13530,7 +13561,7 @@ const YC = () => {
       src: t.image
     })
   },
-  FN = ({
+  zN = ({
     success: n
   }) => {
     var c;
@@ -13547,16 +13578,16 @@ const YC = () => {
       children: "Not available"
     });
     if (i) return e.jsxs(ae.Fragment, {
-      children: ["Buy for ", e.jsx(QN, {}), Math.round(i * (r ? s : 1) * 100) / 100, e.jsx("div", {
-        className: H.sale_box,
+      children: ["Buy for ", e.jsx(FN, {}), Math.round(i * (r ? s : 1) * 100) / 100, e.jsx("div", {
+        className: q.sale_box,
         children: e.jsx("span", {
-          className: H.sale_text,
+          className: q.sale_text,
           children: "-30% "
         })
       })]
     })
   },
-  zN = ({
+  HN = ({
     setError: n,
     setRunParticle: t
   }) => {
@@ -13605,7 +13636,7 @@ const YC = () => {
       await A.sendTransaction(ar), t(!0), m(!0), c(u.fulfilled)
     };
     return y ? e.jsx("button", {
-      className: H.button,
+      className: q.button,
       onPointerUp: async Q => {
         if (Q.stopPropagation(), n(!1), d) {
           s(Sa()), c(u.idle);
@@ -13629,18 +13660,18 @@ const YC = () => {
           }
         }
       },
-      children: e.jsx(FN, {
+      children: e.jsx(zN, {
         success: d
       })
     }) : e.jsx("div", {
-      className: H.not_available,
+      className: q.not_available,
       children: "Not available"
     })
   },
-  HN = () => {
+  qN = () => {
     const [n, t] = yn(), s = xn(), a = l(o => o.shop.selectedCurrency);
     return s !== "" || a === 1 ? null : e.jsx("button", {
-      className: H.button,
+      className: q.button,
       onPointerUp: async o => {
         o.stopPropagation(), o.preventDefault(), setTimeout(() => {
           n.openModal()
@@ -13649,7 +13680,7 @@ const YC = () => {
       children: "Connect TON wallet"
     })
   },
-  qN = ({
+  LN = ({
     success: n
   }) => {
     const t = l(i => i.shop.activeProductCardId),
@@ -13661,12 +13692,12 @@ const YC = () => {
     }) : e.jsxs(ae.Fragment, {
       children: ["Buy for", e.jsx(B, {
         size: 18,
-        className: H.star_color,
+        className: q.star_color,
         children: ""
       }), a.prices[0].price * (o ? s : 1)]
     })
   },
-  LN = ({
+  VN = ({
     setError: n,
     setRunParticle: t
   }) => {
@@ -13679,7 +13710,7 @@ const YC = () => {
       A = l(f => f.shop.selectedCurrency),
       h = l(f => f.color.active);
     return A !== 1 ? null : e.jsx("div", {
-      className: H.button_container,
+      className: q.button_container,
       onPointerUp: async f => {
         var y;
         if (f.stopPropagation(), d) {
@@ -13705,17 +13736,17 @@ const YC = () => {
                   10: 2,
                   11: 3
                 };
-                s(En({
+                s(Bn({
                   product: 1,
                   amount: Q[T]
-                })), s(En({
+                })), s(Bn({
                   product: 2,
                   amount: Q[T]
-                })), s(En({
+                })), s(Bn({
                   product: 6,
                   amount: Q[T]
                 }))
-              } else s(En({
+              } else s(Bn({
                 product: a,
                 amount: C
               }));
@@ -13728,22 +13759,22 @@ const YC = () => {
         c(u.fulfilled)
       },
       children: e.jsx("button", {
-        className: H.button,
-        children: e.jsx(qN, {
+        className: q.button,
+        children: e.jsx(LN, {
           success: d
         })
       })
     })
   },
-  VN = () => (l(Ze) === de, null),
-  GN = () => {
+  GN = () => (l(Ze) === de, null),
+  XN = () => {
     const n = l(t => t.shop.activeProductCardId);
     return console.log(n), n !== 13 ? null : e.jsxs("div", {
       style: {
         marginBottom: 15
       },
       children: [e.jsx("div", {
-        className: H.tokens_title,
+        className: q.tokens_title,
         style: {
           marginBottom: -10
         },
@@ -13753,44 +13784,44 @@ const YC = () => {
       })]
     })
   },
-  XN = () => {
+  JN = () => {
     const [n, t] = p.useState(null), [s, a] = p.useState(!1);
     return e.jsxs("div", {
-      className: H.crypto_button_container,
-      children: [e.jsx(GN, {}), e.jsx(MN, {}), e.jsx(VN, {}), e.jsx(ON, {
+      className: q.crypto_button_container,
+      children: [e.jsx(XN, {}), e.jsx(QN, {}), e.jsx(GN, {}), e.jsx(MN, {
         runParticle: s,
         setRunParticle: a
       }), n && e.jsx("div", {
-        className: H.error,
+        className: q.error,
         children: " Failure. Something went wrong."
-      }), e.jsx(zN, {
-        setError: t,
-        setRunParticle: a
-      }), e.jsx(LN, {
-        setError: t,
-        setRunParticle: a
       }), e.jsx(HN, {
+        setError: t,
+        setRunParticle: a
+      }), e.jsx(VN, {
+        setError: t,
+        setRunParticle: a
+      }), e.jsx(qN, {
         setError: t
       })]
     })
   },
-  JN = () => {
+  YN = () => {
     g();
     const n = l(o => o.shop.activeProductCardId),
       t = l(o => o.shop.amount);
     return l(o => o.shop.products[n]).isOnePiece ? null : e.jsx("div", {
-      className: H.amount_selector_container,
+      className: q.amount_selector_container,
       children: e.jsxs("div", {
-        className: H.amount_selector_count,
+        className: q.amount_selector_count,
         children: ["× ", t]
       })
     })
   },
-  YN = "_container_1rmx4_1",
-  WN = "_max_value_1rmx4_9",
+  WN = "_container_1rmx4_1",
+  KN = "_max_value_1rmx4_9",
   go = {
-    container: YN,
-    max_value: WN
+    container: WN,
+    max_value: KN
   },
   It = n => n < 100 ? {
     max: 100,
@@ -13813,7 +13844,7 @@ const YC = () => {
 function _o(n, t) {
   return Math.round(n / t) * t
 }
-const KN = () => {
+const ZN = () => {
     const n = g(),
       t = l(b => b.shop.activeProductCardId),
       s = l(b => b.shop.amount),
@@ -13894,69 +13925,69 @@ const KN = () => {
       })]
     })
   },
-  ZN = () => e.jsxs("div", {
-    className: H.body,
+  $N = () => e.jsxs("div", {
+    className: q.body,
     onPointerUp: n => {
       n.stopPropagation()
     },
-    children: [e.jsx(SN, {}), e.jsxs("div", {
-      className: H.content_container,
-      children: [e.jsx(IN, {}), e.jsx(JN, {}), e.jsx(KN, {})]
-    }), e.jsx(XN, {})]
+    children: [e.jsx(IN, {}), e.jsxs("div", {
+      className: q.content_container,
+      children: [e.jsx(TN, {}), e.jsx(YN, {}), e.jsx(ZN, {})]
+    }), e.jsx(JN, {})]
   }),
-  $N = () => {
+  e2 = () => {
     const n = l(t => t.shop.show);
     return Ke.createPortal(e.jsx(ct, {
       show: n,
       children: e.jsxs("div", {
-        className: H.container,
-        children: [e.jsx(NN, {}), e.jsx(ZN, {})]
+        className: q.container,
+        children: [e.jsx(SN, {}), e.jsx($N, {})]
       })
     }), document.body)
   },
-  e2 = "_layout_9sf1k_1",
-  t2 = "_container_9sf1k_13",
-  n2 = "_header_9sf1k_20",
-  s2 = "_title_9sf1k_30",
-  a2 = "_body_9sf1k_35",
-  o2 = "_image_container_9sf1k_47",
-  i2 = "_image_9sf1k_47",
-  r2 = "_shake_9sf1k_1",
-  c2 = "_description_container_9sf1k_60",
-  l2 = "_buyer_info_9sf1k_70",
-  d2 = "_avatar_9sf1k_78",
-  u2 = "_name_9sf1k_84",
-  p2 = "_squad_info_9sf1k_88",
-  m2 = "_squad_avatar_9sf1k_94",
-  A2 = "_text_container_9sf1k_100",
-  h2 = "_text_9sf1k_100",
-  g2 = "_thanos_snap_container_9sf1k_110",
-  _2 = "_thanos_snap_text_9sf1k_119",
-  f2 = "_button_container_9sf1k_126",
-  x2 = "_button_9sf1k_126",
+  t2 = "_layout_9sf1k_1",
+  n2 = "_container_9sf1k_13",
+  s2 = "_header_9sf1k_20",
+  a2 = "_title_9sf1k_30",
+  o2 = "_body_9sf1k_35",
+  i2 = "_image_container_9sf1k_47",
+  r2 = "_image_9sf1k_47",
+  c2 = "_shake_9sf1k_1",
+  l2 = "_description_container_9sf1k_60",
+  d2 = "_buyer_info_9sf1k_70",
+  u2 = "_avatar_9sf1k_78",
+  p2 = "_name_9sf1k_84",
+  m2 = "_squad_info_9sf1k_88",
+  A2 = "_squad_avatar_9sf1k_94",
+  h2 = "_text_container_9sf1k_100",
+  g2 = "_text_9sf1k_100",
+  _2 = "_thanos_snap_container_9sf1k_110",
+  f2 = "_thanos_snap_text_9sf1k_119",
+  x2 = "_button_container_9sf1k_126",
+  y2 = "_button_9sf1k_126",
   le = {
-    layout: e2,
-    container: t2,
-    header: n2,
-    title: s2,
-    body: a2,
-    image_container: o2,
-    image: i2,
-    shake: r2,
-    description_container: c2,
-    buyer_info: l2,
-    avatar: d2,
-    name: u2,
-    squad_info: p2,
-    squad_avatar: m2,
-    text_container: A2,
-    text: h2,
-    thanos_snap_container: g2,
-    thanos_snap_text: _2,
-    button_container: f2,
-    button: x2
+    layout: t2,
+    container: n2,
+    header: s2,
+    title: a2,
+    body: o2,
+    image_container: i2,
+    image: r2,
+    shake: c2,
+    description_container: l2,
+    buyer_info: d2,
+    avatar: u2,
+    name: p2,
+    squad_info: m2,
+    squad_avatar: A2,
+    text_container: h2,
+    text: g2,
+    thanos_snap_container: _2,
+    thanos_snap_text: f2,
+    button_container: x2,
+    button: y2
   },
-  y2 = `precision highp float;
+  v2 = `precision highp float;
 
 uniform float u_AnimationDuration;
 uniform float u_ParticleSize;
@@ -14049,7 +14080,7 @@ void main() {
     // Calculate particle coordinate on texture
     v_ParticleCoord = (position - textureOffset) / originalTextureSize;
 }`,
-  v2 = `precision mediump float;
+  w2 = `precision mediump float;
 
 uniform sampler2D u_Texture;
 varying vec2 v_ParticleCoord;
@@ -14080,29 +14111,29 @@ void main() {
     gl_FragColor = vec4(textureColor.xyz, alpha);
 }`,
   Wi = 7200,
-  w2 = 1;
+  b2 = 1;
 let v = null,
   xe = null,
-  On = -1,
-  ys = 0;
-async function b2(n) {
-  if (v = j2().getContext("webgl"), !v) {
+  Mn = -1,
+  vs = 0;
+async function j2(n) {
+  if (v = P2().getContext("webgl"), !v) {
     console.log("Your browser doesn't support WebGL :(");
     return
   }
-  await P2(), N2(n)
+  await C2(), S2(n)
 }
 
-function j2() {
+function P2() {
   const n = document.createElement("canvas");
   return n.id = "canvasSnap", n.width = window.innerWidth, n.height = window.innerHeight, n.style.width = `${window.innerWidth}px`, n.style.height = `${window.innerHeight}px`, n.style.position = "fixed", n.style.top = "50%", n.style.left = "50%", n.style.zIndex = "980", n.style.transform = "translate(-50%, -50%)", n.style.opacity = "0", n.style.transition = "2s ease opacity", document.body.appendChild(n), window.getComputedStyle(n).opacity, n.style.opacity = "1", n
 }
-async function P2() {
-  v.enable(v.BLEND), v.blendFunc(v.SRC_ALPHA, v.ONE_MINUS_SRC_ALPHA), v.clearColor(0, 0, 0, 0), v.viewport(0, 0, v.canvas.width, v.canvas.height), xe = await C2(v), v.useProgram(xe)
+async function C2() {
+  v.enable(v.BLEND), v.blendFunc(v.SRC_ALPHA, v.ONE_MINUS_SRC_ALPHA), v.clearColor(0, 0, 0, 0), v.viewport(0, 0, v.canvas.width, v.canvas.height), xe = await N2(v), v.useProgram(xe)
 }
-async function C2(n, t, s) {
-  const a = y2,
-    o = v2,
+async function N2(n, t, s) {
+  const a = v2,
+    o = w2,
     i = fo(n, a, n.VERTEX_SHADER),
     r = fo(n, o, n.FRAGMENT_SHADER),
     c = n.createProgram();
@@ -14113,8 +14144,8 @@ function fo(n, t, s) {
   const a = n.createShader(s);
   return n.shaderSource(a, t), n.compileShader(a), n.getShaderParameter(a, n.COMPILE_STATUS) ? a : (console.error("Shader compilation failure:", n.getShaderInfoLog(a)), n.deleteShader(a), null)
 }
-async function N2(n) {
-  S2(), E2(n), Ki(), document.getElementById("canvasHolder").style.opacity = "0", setTimeout(() => {
+async function S2(n) {
+  I2(), B2(n), Ki(), document.getElementById("canvasHolder").style.opacity = "0", setTimeout(() => {
     const t = document.getElementById("canvasHolder");
     t.style.transition = "6s ease-in opacity", t.style.opacity = "1"
   }, 20), setTimeout(() => {
@@ -14122,20 +14153,20 @@ async function N2(n) {
   }, 7e3)
 }
 
-function S2(n) {
-  const t = I2();
+function I2(n) {
+  const t = T2();
   var s = v.createTexture();
   v.bindTexture(v.TEXTURE_2D, s), v.texParameteri(v.TEXTURE_2D, v.TEXTURE_WRAP_S, v.CLAMP_TO_EDGE), v.texParameteri(v.TEXTURE_2D, v.TEXTURE_WRAP_T, v.CLAMP_TO_EDGE), v.texParameteri(v.TEXTURE_2D, v.TEXTURE_MIN_FILTER, v.NEAREST), v.texParameteri(v.TEXTURE_2D, v.TEXTURE_MAG_FILTER, v.NEAREST), v.texImage2D(v.TEXTURE_2D, 0, v.RGBA, v.RGBA, v.UNSIGNED_BYTE, t);
   const a = v.getUniformLocation(xe, "u_Texture");
   v.uniform1i(a, 0)
 }
 
-function I2() {
+function T2() {
   const n = new ImageData(I.width, I.height);
   return n.data.set(w.mainImage.imageData.slice(0)), n
 }
 
-function T2(n) {
+function E2(n) {
   const t = window.innerHeight,
     s = window.innerWidth,
     a = Math.min(s, t);
@@ -14158,7 +14189,7 @@ function T2(n) {
   }
 }
 
-function E2(n) {
+function B2(n) {
   const {
     viewportWidth: t,
     viewportHeight: s,
@@ -14167,10 +14198,10 @@ function E2(n) {
     textureLeft: i,
     textureTop: r,
     min: c
-  } = T2(n);
-  ys = c * c, Je(v, xe, "u_AnimationDuration", Wi), Je(v, xe, "u_ParticleSize", w2), Je(v, xe, "u_ViewportWidth", t), Je(v, xe, "u_ViewportHeight", s), Je(v, xe, "u_TextureWidth", a), Je(v, xe, "u_TextureHeight", o), Je(v, xe, "u_TextureLeft", i), Je(v, xe, "u_TextureTop", r);
-  const d = new Array(ys);
-  for (let h = 0; h < ys; h++) d[h] = h;
+  } = E2(n);
+  vs = c * c, Je(v, xe, "u_AnimationDuration", Wi), Je(v, xe, "u_ParticleSize", b2), Je(v, xe, "u_ViewportWidth", t), Je(v, xe, "u_ViewportHeight", s), Je(v, xe, "u_TextureWidth", a), Je(v, xe, "u_TextureHeight", o), Je(v, xe, "u_TextureLeft", i), Je(v, xe, "u_TextureTop", r);
+  const d = new Array(vs);
+  for (let h = 0; h < vs; h++) d[h] = h;
   const m = v.createBuffer();
   v.bindBuffer(v.ARRAY_BUFFER, m), v.bufferData(v.ARRAY_BUFFER, new Float32Array(d), v.STATIC_DRAW);
   const A = v.getAttribLocation(xe, "a_ParticleIndex");
@@ -14178,24 +14209,24 @@ function E2(n) {
 }
 
 function Ki() {
-  requestAnimationFrame(B2)
+  requestAnimationFrame(D2)
 }
 
-function B2(n) {
-  v.clear(v.COLOR_BUFFER_BIT), On == -1 && (On = n);
-  const s = n - On;
+function D2(n) {
+  v.clear(v.COLOR_BUFFER_BIT), Mn == -1 && (Mn = n);
+  const s = n - Mn;
   if (s > Wi) {
-    On = -1, document.getElementById("canvasSnap").remove();
+    Mn = -1, document.getElementById("canvasSnap").remove();
     return
   }
-  Je(v, xe, "u_ElapsedTime", s), v.drawArrays(v.POINTS, 0, ys), Ki()
+  Je(v, xe, "u_ElapsedTime", s), v.drawArrays(v.POINTS, 0, vs), Ki()
 }
 
 function Je(n, t, s, a) {
   const o = n.getUniformLocation(t, s);
   n.uniform1f(o, a)
 }
-const D2 = () => {
+const k2 = () => {
     const n = Y(),
       t = g(),
       s = l(r => r.main.showPixanosEvent),
@@ -14208,7 +14239,7 @@ const D2 = () => {
             t(Ja(!1)), t(lp())
           }, 7e3);
           try {
-            await b2(o ? 0 : jo)
+            await j2(o ? 0 : jo)
           } catch (m) {
             document.getElementById("canvasHolder").style.opacity = "1", console.error(m, "cannot run pixanos")
           }
@@ -14285,53 +14316,53 @@ const D2 = () => {
       })
     })
   },
-  k2 = "_container_11ui8_1",
-  R2 = "_header_11ui8_13",
-  U2 = "_close_container_11ui8_23",
-  O2 = "_close_11ui8_23",
-  M2 = "_title_11ui8_48",
-  Q2 = "_frens_count_11ui8_53",
-  F2 = "_body_11ui8_58",
-  z2 = "_content_11ui8_68",
-  H2 = "_image_container_11ui8_75",
-  q2 = "_image_11ui8_75",
-  L2 = "_image_container_charges_11ui8_84",
-  V2 = "_image_charges_11ui8_89",
-  G2 = "_description_container_11ui8_94",
-  X2 = "_bold_11ui8_102",
-  J2 = "_gray_11ui8_107",
-  Y2 = "_center_11ui8_111",
-  W2 = "_benefits_container_11ui8_115",
-  K2 = "_benefits_item_11ui8_123",
-  Z2 = "_benefits_icon_container_11ui8_128",
-  $2 = "_icon_invite_11ui8_132",
-  eS = "_footer_11ui8_136",
-  tS = "_button_11ui8_141",
+  R2 = "_container_11ui8_1",
+  U2 = "_header_11ui8_13",
+  O2 = "_close_container_11ui8_23",
+  M2 = "_close_11ui8_23",
+  Q2 = "_title_11ui8_48",
+  F2 = "_frens_count_11ui8_53",
+  z2 = "_body_11ui8_58",
+  H2 = "_content_11ui8_68",
+  q2 = "_image_container_11ui8_75",
+  L2 = "_image_11ui8_75",
+  V2 = "_image_container_charges_11ui8_84",
+  G2 = "_image_charges_11ui8_89",
+  X2 = "_description_container_11ui8_94",
+  J2 = "_bold_11ui8_102",
+  Y2 = "_gray_11ui8_107",
+  W2 = "_center_11ui8_111",
+  K2 = "_benefits_container_11ui8_115",
+  Z2 = "_benefits_item_11ui8_123",
+  $2 = "_benefits_icon_container_11ui8_128",
+  eS = "_icon_invite_11ui8_132",
+  tS = "_footer_11ui8_136",
+  nS = "_button_11ui8_141",
   ee = {
-    container: k2,
-    header: R2,
-    close_container: U2,
-    close: O2,
-    title: M2,
-    frens_count: Q2,
-    body: F2,
-    content: z2,
-    image_container: H2,
-    image: q2,
-    image_container_charges: L2,
-    image_charges: V2,
-    description_container: G2,
-    bold: X2,
-    gray: J2,
-    center: Y2,
-    benefits_container: W2,
-    benefits_item: K2,
-    benefits_icon_container: Z2,
-    icon_invite: $2,
-    footer: eS,
-    button: tS
+    container: R2,
+    header: U2,
+    close_container: O2,
+    close: M2,
+    title: Q2,
+    frens_count: F2,
+    body: z2,
+    content: H2,
+    image_container: q2,
+    image: L2,
+    image_container_charges: V2,
+    image_charges: G2,
+    description_container: X2,
+    bold: J2,
+    gray: Y2,
+    center: W2,
+    benefits_container: K2,
+    benefits_item: Z2,
+    benefits_icon_container: $2,
+    icon_invite: eS,
+    footer: tS,
+    button: nS
   },
-  nS = () => {
+  sS = () => {
     var i, r;
     const n = l(c => c.user.user),
       t = g(),
@@ -14422,7 +14453,7 @@ const D2 = () => {
       })
     })
   },
-  sS = () => Es().pathname === "/" ? null : e.jsx("div", {
+  aS = () => Bs().pathname === "/" ? null : e.jsx("div", {
     style: {
       position: "fixed",
       left: 0,
@@ -14433,15 +14464,15 @@ const D2 = () => {
       zIndex: 99
     }
   }),
-  aS = "_layout_1f2lr_1",
-  oS = "_item_1f2lr_19",
-  iS = "_image_1f2lr_38",
+  oS = "_layout_1f2lr_1",
+  iS = "_item_1f2lr_19",
+  rS = "_image_1f2lr_38",
   Zi = {
-    layout: aS,
-    item: oS,
-    image: iS
+    layout: oS,
+    item: iS,
+    image: rS
   },
-  rS = ({
+  cS = ({
     item: n
   }) => {
     const t = g(),
@@ -14488,18 +14519,18 @@ const D2 = () => {
       }), n.text]
     })
   },
-  cS = () => {
+  lS = () => {
     const n = l(t => t.toast.items);
     return Ke.createPortal(e.jsx("div", {
       className: Zi.layout,
       children: e.jsx(ja, {
-        children: n.map(t => e.jsx(rS, {
+        children: n.map(t => e.jsx(cS, {
           item: t
         }, t.id))
       })
     }), document.body)
   },
-  lS = ({
+  dS = ({
     isPopupContent: n = !0
   }) => {
     const t = n ? "Squad" : "My Squad",
@@ -14524,7 +14555,7 @@ const D2 = () => {
       })]
     })
   },
-  dS = () => {
+  uS = () => {
     const n = g(),
       {
         item: t
@@ -14544,56 +14575,56 @@ const D2 = () => {
           isPopupContent: s
         }), t.dataSource === Te.userFromRating && e.jsx(va, {
           isPopupContent: s
-        }), t.dataSource === Te.squadFromData && e.jsx(lS, {})]
+        }), t.dataSource === Te.squadFromData && e.jsx(dS, {})]
       })
     })
   },
-  uS = "_overlay_12d15_1",
-  pS = "_top_container_12d15_10",
-  mS = "_bottom_container_12d15_15",
-  AS = "_side_menu_12d15_20",
-  hS = "_menu_safe_area_inset_12d15_36",
-  gS = "_menu_header_12d15_40",
-  _S = "_close_button_12d15_53",
-  fS = "_menu_list_12d15_58",
-  xS = "_icon_12d15_79",
-  yS = "_icon_not_pixel_12d15_87",
-  vS = "_gold_pixel_12d15_97",
-  wS = "_menu_list_li_12d15_103",
-  bS = "_menu_list_text_12d15_109",
-  jS = "_menu_list_new_item_12d15_113",
-  PS = "_verificated_wallet_12d15_136",
-  CS = "_button_wrapper_12d15_144",
-  NS = "_button_content_12d15_153",
-  SS = "_footer_12d15_160",
-  IS = "_avatar_12d15_166",
-  TS = "_ratings_image_container_12d15_173",
-  ES = "_ratings_image_12d15_173",
+  pS = "_overlay_12d15_1",
+  mS = "_top_container_12d15_10",
+  AS = "_bottom_container_12d15_15",
+  hS = "_side_menu_12d15_20",
+  gS = "_menu_safe_area_inset_12d15_36",
+  _S = "_menu_header_12d15_40",
+  fS = "_close_button_12d15_53",
+  xS = "_menu_list_12d15_58",
+  yS = "_icon_12d15_79",
+  vS = "_icon_not_pixel_12d15_87",
+  wS = "_gold_pixel_12d15_97",
+  bS = "_menu_list_li_12d15_103",
+  jS = "_menu_list_text_12d15_109",
+  PS = "_menu_list_new_item_12d15_113",
+  CS = "_verificated_wallet_12d15_136",
+  NS = "_button_wrapper_12d15_144",
+  SS = "_button_content_12d15_153",
+  IS = "_footer_12d15_160",
+  TS = "_avatar_12d15_166",
+  ES = "_ratings_image_container_12d15_173",
+  BS = "_ratings_image_12d15_173",
   V = {
-    overlay: uS,
-    top_container: pS,
-    bottom_container: mS,
-    side_menu: AS,
-    menu_safe_area_inset: hS,
-    menu_header: gS,
-    close_button: _S,
-    menu_list: fS,
-    icon: xS,
-    icon_not_pixel: yS,
-    gold_pixel: vS,
-    menu_list_li: wS,
-    menu_list_text: bS,
-    menu_list_new_item: jS,
-    verificated_wallet: PS,
-    button_wrapper: CS,
-    button_content: NS,
-    footer: SS,
-    avatar: IS,
-    ratings_image_container: TS,
-    ratings_image: ES
+    overlay: pS,
+    top_container: mS,
+    bottom_container: AS,
+    side_menu: hS,
+    menu_safe_area_inset: gS,
+    menu_header: _S,
+    close_button: fS,
+    menu_list: xS,
+    icon: yS,
+    icon_not_pixel: vS,
+    gold_pixel: wS,
+    menu_list_li: bS,
+    menu_list_text: jS,
+    menu_list_new_item: PS,
+    verificated_wallet: CS,
+    button_wrapper: NS,
+    button_content: SS,
+    footer: IS,
+    avatar: TS,
+    ratings_image_container: ES,
+    ratings_image: BS
   },
   xo = [.215, .61, .355, 1],
-  BS = {
+  DS = {
     hidden: {
       x: "-100%",
       transition: {
@@ -14611,13 +14642,13 @@ const D2 = () => {
       }
     }
   },
-  DS = "_button_25266_1",
-  kS = "_decor_25266_13",
-  RS = "_dark_25266_22",
+  kS = "_button_25266_1",
+  RS = "_decor_25266_13",
+  US = "_dark_25266_22",
   yo = {
-    button: DS,
-    decor: kS,
-    dark: RS
+    button: kS,
+    decor: RS,
+    dark: US
   },
   vo = ({
     children: n,
@@ -14631,15 +14662,15 @@ const D2 = () => {
     style: a,
     children: n
   }),
-  US = "_layout_4kkfr_1",
-  OS = "_line_4kkfr_14",
-  MS = "_button_4kkfr_19",
+  OS = "_layout_4kkfr_1",
+  MS = "_line_4kkfr_14",
+  QS = "_button_4kkfr_19",
   Tt = {
-    layout: US,
-    line: OS,
-    button: MS
+    layout: OS,
+    line: MS,
+    button: QS
   },
-  QS = ({
+  FS = ({
     className: n = void 0
   }) => {
     const t = g(),
@@ -14676,16 +14707,16 @@ const D2 = () => {
       })
     })
   },
-  FS = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAABtQTFRFR3BM////////////////////////////////Fv0dDgAAAAh0Uk5TABU6XISq0+/2d3cmAAABKElEQVR42u3Z24rDMAxFUV1s6fz/Fw+FlA4lpGOj2Ew566kPKWxEQ2NFiIiIiIiIiIiI6L/RFrgQTeVWGvggbikwPwQ+Cj+YVLHAlChKcExzKaCJaak1A9g7gg7M61UBfSDmeS0DGMAABlQFNACI8YAAgPYNAY6H8YCyPyPDg40FvL5WAA9tNKAdg6u6DVLHAjSPjwX8NYKGa+9XuhQ+k41NAMfYSjRMalIkMCWkiiUmpMneAltwJlx5RlTz1hJ/kK25qdxCvQcuRfetB/RQuZ1l1Q+/viBNZGdBmiyiHSe6yjqeeJMua3ngl3BZT70nAOTsrV95ZmDADvbcW8bEUrJ+eRmLE7xgI1e9vExdO4C9I+g40WUdnNoewPdJREREREREREREU34Aqms7WGCxI2EAAAAASUVORK5CYII=",
-  zS = "_layout_eiymv_1",
-  HS = "_container_eiymv_7",
+  zS = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAABtQTFRFR3BM////////////////////////////////Fv0dDgAAAAh0Uk5TABU6XISq0+/2d3cmAAABKElEQVR42u3Z24rDMAxFUV1s6fz/Fw+FlA4lpGOj2Ew566kPKWxEQ2NFiIiIiIiIiIiI6L/RFrgQTeVWGvggbikwPwQ+Cj+YVLHAlChKcExzKaCJaak1A9g7gg7M61UBfSDmeS0DGMAABlQFNACI8YAAgPYNAY6H8YCyPyPDg40FvL5WAA9tNKAdg6u6DVLHAjSPjwX8NYKGa+9XuhQ+k41NAMfYSjRMalIkMCWkiiUmpMneAltwJlx5RlTz1hJ/kK25qdxCvQcuRfetB/RQuZ1l1Q+/viBNZGdBmiyiHSe6yjqeeJMua3ngl3BZT70nAOTsrV95ZmDADvbcW8bEUrJ+eRmLE7xgI1e9vExdO4C9I+g40WUdnNoewPdJREREREREREREU34Aqms7WGCxI2EAAAAASUVORK5CYII=",
+  HS = "_layout_eiymv_1",
+  qS = "_container_eiymv_7",
   wo = {
-    layout: zS,
-    container: HS
+    layout: HS,
+    container: qS
   },
-  qS = () => localStorage.getItem("canvasFps") ? [Number(localStorage.getItem("canvasFps"))] : [60],
-  LS = () => {
-    const [n, t] = ae.useState(qS());
+  LS = () => localStorage.getItem("canvasFps") ? [Number(localStorage.getItem("canvasFps"))] : [60],
+  VS = () => {
+    const [n, t] = ae.useState(LS());
     return p.useEffect(() => {
       localStorage.setItem("canvasFps", String(n[0])), w.ticker.setFps(n[0])
     }, [n]), e.jsx("div", {
@@ -14735,15 +14766,15 @@ const D2 = () => {
       })
     })
   },
-  VS = "_layout_7wq4a_1",
-  GS = "_green_7wq4a_10",
-  XS = "_red_7wq4a_14",
+  GS = "_layout_7wq4a_1",
+  XS = "_green_7wq4a_10",
+  JS = "_red_7wq4a_14",
   da = {
-    layout: VS,
-    green: GS,
-    red: XS
+    layout: GS,
+    green: XS,
+    red: JS
   },
-  JS = () => {
+  YS = () => {
     const n = g(),
       t = l(s => s.canvas.animations);
     return e.jsxs("div", {
@@ -14765,7 +14796,7 @@ const D2 = () => {
       })]
     })
   },
-  YS = () => {
+  WS = () => {
     const n = l(Os),
       t = l(Ms);
     return e.jsx("div", {
@@ -14775,7 +14806,7 @@ const D2 = () => {
       }
     })
   },
-  WS = () => {
+  KS = () => {
     const n = Y(),
       t = g();
     l(rt);
@@ -14823,7 +14854,7 @@ const D2 = () => {
             initial: "hidden",
             animate: "visible",
             exit: "hidden",
-            variants: BS,
+            variants: DS,
             children: [e.jsxs("div", {
               className: V.top_container,
               children: [e.jsx("div", {
@@ -14871,7 +14902,7 @@ const D2 = () => {
                     children: e.jsx("img", {
                       alt: "noavatar",
                       className: V.ratings_image,
-                      src: FS
+                      src: zS
                     })
                   }), e.jsx("span", {
                     className: V.menu_list_text,
@@ -14894,7 +14925,7 @@ const D2 = () => {
               })]
             }), e.jsxs("div", {
               className: V.bottom_container,
-              children: [e.jsx(JS, {}), e.jsx(LS, {}), f && f !== "" && e.jsxs("div", {
+              children: [e.jsx(YS, {}), e.jsx(VS, {}), f && f !== "" && e.jsxs("div", {
                 className: V.verificated_wallet,
                 children: ["Verificated wallet: ", f]
               }), e.jsxs("div", {
@@ -14938,64 +14969,64 @@ const D2 = () => {
                     })]
                   })
                 })]
-              }), e.jsx(QS, {}), e.jsx(YS, {})]
+              }), e.jsx(FS, {}), e.jsx(WS, {})]
             })]
           })]
         })
       })
     })
   },
-  KS = "_layout_1vlcp_1",
-  ZS = "_container_1vlcp_13",
-  $S = "_close_button_1vlcp_21",
-  eI = "_body_1vlcp_29",
-  tI = "_image_container_1vlcp_40",
-  nI = "_image_1vlcp_40",
-  sI = "_shake_1vlcp_1",
-  aI = "_description_container_1vlcp_54",
-  oI = "_buyer_info_1vlcp_64",
-  iI = "_avatar_1vlcp_72",
-  rI = "_name_1vlcp_78",
-  cI = "_squad_info_1vlcp_82",
-  lI = "_squad_avatar_1vlcp_88",
-  dI = "_text_container_1vlcp_94",
-  uI = "_text_1vlcp_94",
-  pI = "_thanos_snap_container_1vlcp_105",
-  mI = "_thanos_snap_text_1vlcp_114",
-  AI = "_prev_snaps_container_1vlcp_121",
-  hI = "_prev_snaps_text_1vlcp_128",
-  gI = "_prev_snaps_list_container_1vlcp_134",
-  _I = "_prev_snaps_list_item_1vlcp_142",
-  fI = "_button_container_1vlcp_148",
-  xI = "_button_1vlcp_148",
-  yI = "_button_text_1vlcp_163",
+  ZS = "_layout_1vlcp_1",
+  $S = "_container_1vlcp_13",
+  eI = "_close_button_1vlcp_21",
+  tI = "_body_1vlcp_29",
+  nI = "_image_container_1vlcp_40",
+  sI = "_image_1vlcp_40",
+  aI = "_shake_1vlcp_1",
+  oI = "_description_container_1vlcp_54",
+  iI = "_buyer_info_1vlcp_64",
+  rI = "_avatar_1vlcp_72",
+  cI = "_name_1vlcp_78",
+  lI = "_squad_info_1vlcp_82",
+  dI = "_squad_avatar_1vlcp_88",
+  uI = "_text_container_1vlcp_94",
+  pI = "_text_1vlcp_94",
+  mI = "_thanos_snap_container_1vlcp_105",
+  AI = "_thanos_snap_text_1vlcp_114",
+  hI = "_prev_snaps_container_1vlcp_121",
+  gI = "_prev_snaps_text_1vlcp_128",
+  _I = "_prev_snaps_list_container_1vlcp_134",
+  fI = "_prev_snaps_list_item_1vlcp_142",
+  xI = "_button_container_1vlcp_148",
+  yI = "_button_1vlcp_148",
+  vI = "_button_text_1vlcp_163",
   W = {
-    layout: KS,
-    container: ZS,
-    close_button: $S,
-    body: eI,
-    image_container: tI,
-    image: nI,
-    shake: sI,
-    description_container: aI,
-    buyer_info: oI,
-    avatar: iI,
-    name: rI,
-    squad_info: cI,
-    squad_avatar: lI,
-    text_container: dI,
-    text: uI,
-    thanos_snap_container: pI,
-    thanos_snap_text: mI,
-    prev_snaps_container: AI,
-    prev_snaps_text: hI,
-    prev_snaps_list_container: gI,
-    prev_snaps_list_item: _I,
-    button_container: fI,
-    button: xI,
-    button_text: yI
+    layout: ZS,
+    container: $S,
+    close_button: eI,
+    body: tI,
+    image_container: nI,
+    image: sI,
+    shake: aI,
+    description_container: oI,
+    buyer_info: iI,
+    avatar: rI,
+    name: cI,
+    squad_info: lI,
+    squad_avatar: dI,
+    text_container: uI,
+    text: pI,
+    thanos_snap_container: mI,
+    thanos_snap_text: AI,
+    prev_snaps_container: hI,
+    prev_snaps_text: gI,
+    prev_snaps_list_container: _I,
+    prev_snaps_list_item: fI,
+    button_container: xI,
+    button: yI,
+    button_text: vI
   },
-  vI = n => {
+  wI = n => {
     const t = new Date;
     t.setHours(0, 0, 0, 0);
     const s = new Date(t);
@@ -15003,12 +15034,12 @@ const D2 = () => {
     const a = new Date(n);
     return a.setHours(0, 0, 0, 0), a.getTime() === t.getTime() ? "today" : a.getTime() === s.getTime() ? "yesterday" : "once"
   },
-  wI = n => {
+  bI = n => {
     const t = String(n.getHours()).padStart(2, "0"),
       s = String(n.getMinutes()).padStart(2, "0");
-    return ` ${vI(n)} at ${t}:${s}`
+    return ` ${wI(n)} at ${t}:${s}`
   },
-  bI = () => {
+  jI = () => {
     const n = g(),
       t = l(r => r.main.showPixanosRating),
       s = l(r => r.main.pixanosRatingData),
@@ -15019,14 +15050,14 @@ const D2 = () => {
     return e.jsx(ct, {
       show: t,
       onPointerUp: () => {
-        n(cs(!1))
+        n(ls(!1))
       },
       children: e.jsxs("div", {
         className: W.container,
         children: [e.jsx("div", {
           className: W.close_button,
           onPointerUp: () => {
-            n(cs(!1))
+            n(ls(!1))
           },
           children: e.jsx(B, {
             size: 26,
@@ -15080,7 +15111,7 @@ const D2 = () => {
                     children: "Pixanos' Snap"
                   })
                 }), e.jsx("span", {
-                  children: wI(new Date(o.info.datetime))
+                  children: bI(new Date(o.info.datetime))
                 })]
               })]
             }), e.jsx("div", {
@@ -15124,15 +15155,15 @@ const D2 = () => {
                   });
                   d.status === 200 && ((c = d == null ? void 0 : d.data) == null ? void 0 : c.ok) === !0 && window.Telegram.WebApp.openInvoice(d.data.result, m => {
                     var A, h;
-                    if (m === "paid") n(q({
+                    if (m === "paid") n(H({
                       id: performance.now(),
                       text: "Success!",
                       icon: ""
-                    })), n(cs(!1)), (h = (A = window.Telegram.WebApp) == null ? void 0 : A.HapticFeedback) == null || h.notificationOccurred("error");
+                    })), n(ls(!1)), (h = (A = window.Telegram.WebApp) == null ? void 0 : A.HapticFeedback) == null || h.notificationOccurred("error");
                     else throw new Error("Error")
                   })
                 } catch {
-                  n(q({
+                  n(H({
                     id: performance.now(),
                     text: "Error, try again."
                   }))
@@ -15144,22 +15175,22 @@ const D2 = () => {
       })
     })
   },
-  jI = "_layout_1i63b_1",
-  PI = "_container_1i63b_18",
-  CI = "_image_container_1i63b_25",
-  NI = "_title_1i63b_30",
-  SI = "_text_container_1i63b_37",
-  II = "_support_container_1i63b_46",
+  PI = "_layout_1i63b_1",
+  CI = "_container_1i63b_18",
+  NI = "_image_container_1i63b_25",
+  SI = "_title_1i63b_30",
+  II = "_text_container_1i63b_37",
+  TI = "_support_container_1i63b_46",
   Et = {
-    layout: jI,
-    container: PI,
-    image_container: CI,
-    title: NI,
-    text_container: SI,
-    support_container: II
+    layout: PI,
+    container: CI,
+    image_container: NI,
+    title: SI,
+    text_container: II,
+    support_container: TI
   },
-  TI = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACQCAYAAACPtWCAAAAFW0lEQVR4nO3dwXUTMRSF4RnOVMImdJAmWKUCmgikhEDagSJIB7ChFHMOq4zko8vLk+bKzv/tHDtjxb5HPN6MNOvdp7vlpXVdd4+XU/lw/4N1WZvPK+uyniK/X47vdAq/X/MH6eMV5N9T/P3699fGo+rrEqP7d/zmS7Lfrzreu9TRgCQCCCsCCKutqmHEP/Gq5lGvz9YQZY0WHU9Vw57KmipX00WpmrpU13xqPO3PP/r3qu9TPV8+ZgaEFQGEFQGE1Va9uWgsVf/mF325sqaSNUq7LSf7cr1rlDN9wv3DdtusEq4pk59HtOaO1oRx7UAxA8KKAMKKAMJqU30xWcNVNWKbqmnK59N9PlHTyRpXfB7Rmkv+fcE24+i+bO/Pv3w3ZkBYEUBYEUBY1X3AoHANIfpc2esP5fPi3G997jKmup6yoGre+LnavWgXT76/uP5S1pSij8oMCCsCCCsCCKt0DRg+15m8nC56bjN7vHLAck1KVQKN7WtGa1Z1vGhfMnt9JDMgrAggrAggrLZo5yh7vVj298PnesvfL/tY0T5XsA/Wex119tzt6OsDozUkMyCsCCCsCCCsNrXONLtXTLbvVZI1jloz0Xtvmejrk2s+wuNRm8cI2RpWPc8MCCsCCCsCCKvqXHC0j/P+5nbw+LNXvIXfIPjy7uO5KH9+Pzc/HlUzMgPCigDCigDCql4XfPD+eJcnW/OpGnJ0jTn2+NE9vpkBYUUAYUUAYVX1AVWF0H//OOXa+mzq7xldY3au+cT1lVwPiKkRQFgRQFidORe8d/1nPo/uy2WPd2yNFyXv41IMnxkQVgQQVgQQVv+xN4ysWWKbSFdyNcvH21+h15c1yo/nD0PHp44XHX/p+8+b4ifhGjN1cn9dxIaIAjMgrAggrAggrM6cC+5977DBfalgyaP2cI7XULkaN7xXjRz/sX3A7LphZkBYEUBYEUBYbdH97fKyNVawxgkP/9iaV9V02b1sjha9zwgzIKwIIKwIIKzkueB8H3D09XTFs6JEyp25PHvErkcrx1+Ot/+anNz3I8fDmhDMjADCigDCalvW9s3G8n3AsX013Xdamo9nU61IqQY89vrEV9gNMLpnODMgrAggrAggrNL3C3ZTfaj+fb/S2HPV0Xvhxd/w2JXg7BGNqRBAWBFAWMn7hEy/J7QoYcbvbZO8nlGO/+g1Otk1MOJw7A2DmRBAWBFAWG1qP7f+fai+9B7F4gK74XLvF91zeXyfr/1/hGiNygwIKwIIKwIIq/i54HBbcGwnTu/vp3h3wa7391Oie9GM7ePKGpU1IZgZAYQVAYSV3B8wb/Y7i1zfnU/2jt2fUd4vmDUhmAkBhBUBhNUrrgfsfW7x+u9G19dcd/OLngtmTQimQgBhRQBhVe0RXdLXd/Veo9D73nKjjze65pqtRs7VfCVmQFgRQFgRQFit2ftO3D9+C94veF8zPD18ThU1949fy0UfmcOdMXfNl//81PfXln1/ZkBYEUBYEUBYDdgf8OiaaXQfj3PbIzEDwooAwooAwmpADfjW14BQM0YwA8KKAMKKAMLq4u8TcvmSe0wfru+6cWZAWBFAWBFAWPWoAQdfz9euOZ4evrzpk63Z6/ni31/fj5sZEFYEEFYEEFYT9AFHrzvGzJgBYUUAYUUAYUUAYUUAYUUAYUUAYUUAYUUAYUUAYUUAYTXhmpDYGogO18MFZe+bwt4xLzEDwooAwooAwmqCGjBawh1dY/U+HnvHvMQMCCsCCCsCCKsLWBMSff3RNV/vGraUrXHnriGZAWFFAGFFAGE1YR9wtj6XGt/RNVjvmtmLGRBWBBBWBBA+y7L8BWJknvMP2Od9AAAAAElFTkSuQmCC",
-  EI = () => l(t => t.user.showRobotPopup) ? Ke.createPortal(e.jsx("div", {
+  EI = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACQCAYAAACPtWCAAAAFW0lEQVR4nO3dwXUTMRSF4RnOVMImdJAmWKUCmgikhEDagSJIB7ChFHMOq4zko8vLk+bKzv/tHDtjxb5HPN6MNOvdp7vlpXVdd4+XU/lw/4N1WZvPK+uyniK/X47vdAq/X/MH6eMV5N9T/P3699fGo+rrEqP7d/zmS7Lfrzreu9TRgCQCCCsCCKutqmHEP/Gq5lGvz9YQZY0WHU9Vw57KmipX00WpmrpU13xqPO3PP/r3qu9TPV8+ZgaEFQGEFQGE1Va9uWgsVf/mF325sqaSNUq7LSf7cr1rlDN9wv3DdtusEq4pk59HtOaO1oRx7UAxA8KKAMKKAMJqU30xWcNVNWKbqmnK59N9PlHTyRpXfB7Rmkv+fcE24+i+bO/Pv3w3ZkBYEUBYEUBY1X3AoHANIfpc2esP5fPi3G997jKmup6yoGre+LnavWgXT76/uP5S1pSij8oMCCsCCCsCCKt0DRg+15m8nC56bjN7vHLAck1KVQKN7WtGa1Z1vGhfMnt9JDMgrAggrAggrLZo5yh7vVj298PnesvfL/tY0T5XsA/Wex119tzt6OsDozUkMyCsCCCsCCCsNrXONLtXTLbvVZI1jloz0Xtvmejrk2s+wuNRm8cI2RpWPc8MCCsCCCsCCKvqXHC0j/P+5nbw+LNXvIXfIPjy7uO5KH9+Pzc/HlUzMgPCigDCigDCql4XfPD+eJcnW/OpGnJ0jTn2+NE9vpkBYUUAYUUAYVX1AVWF0H//OOXa+mzq7xldY3au+cT1lVwPiKkRQFgRQFidORe8d/1nPo/uy2WPd2yNFyXv41IMnxkQVgQQVgQQVv+xN4ysWWKbSFdyNcvH21+h15c1yo/nD0PHp44XHX/p+8+b4ifhGjN1cn9dxIaIAjMgrAggrAggrM6cC+5977DBfalgyaP2cI7XULkaN7xXjRz/sX3A7LphZkBYEUBYEUBYbdH97fKyNVawxgkP/9iaV9V02b1sjha9zwgzIKwIIKwIIKzkueB8H3D09XTFs6JEyp25PHvErkcrx1+Ot/+anNz3I8fDmhDMjADCigDCalvW9s3G8n3AsX013Xdamo9nU61IqQY89vrEV9gNMLpnODMgrAggrAggrNL3C3ZTfaj+fb/S2HPV0Xvhxd/w2JXg7BGNqRBAWBFAWMn7hEy/J7QoYcbvbZO8nlGO/+g1Otk1MOJw7A2DmRBAWBFAWG1qP7f+fai+9B7F4gK74XLvF91zeXyfr/1/hGiNygwIKwIIKwIIq/i54HBbcGwnTu/vp3h3wa7391Oie9GM7ePKGpU1IZgZAYQVAYSV3B8wb/Y7i1zfnU/2jt2fUd4vmDUhmAkBhBUBhNUrrgfsfW7x+u9G19dcd/OLngtmTQimQgBhRQBhVe0RXdLXd/Veo9D73nKjjze65pqtRs7VfCVmQFgRQFgRQFit2ftO3D9+C94veF8zPD18ThU1949fy0UfmcOdMXfNl//81PfXln1/ZkBYEUBYEUBYDdgf8OiaaXQfj3PbIzEDwooAwooAwmpADfjW14BQM0YwA8KKAMKKAMLq4u8TcvmSe0wfru+6cWZAWBFAWBFAWPWoAQdfz9euOZ4evrzpk63Z6/ni31/fj5sZEFYEEFYEEFYT9AFHrzvGzJgBYUUAYUUAYUUAYUUAYUUAYUUAYUUAYUUAYUUAYUUAYTXhmpDYGogO18MFZe+bwt4xLzEDwooAwooAwmqCGjBawh1dY/U+HnvHvMQMCCsCCCsCCKsLWBMSff3RNV/vGraUrXHnriGZAWFFAGFFAGE1YR9wtj6XGt/RNVjvmtmLGRBWBBBWBBA+y7L8BWJknvMP2Od9AAAAAElFTkSuQmCC",
+  BI = () => l(t => t.user.showRobotPopup) ? Ke.createPortal(e.jsx("div", {
     className: Et.layout,
     children: e.jsxs("div", {
       className: Et.container,
@@ -15167,7 +15198,7 @@ const D2 = () => {
         className: Et.image_container,
         children: e.jsx("img", {
           alt: "robot",
-          src: TI
+          src: EI
         })
       }), e.jsx("div", {
         className: Et.title,
@@ -15190,11 +15221,11 @@ const D2 = () => {
       })]
     })
   }), document.body) : null,
-  BI = () => e.jsxs("div", {
+  DI = () => e.jsxs("div", {
     className: nn.layout,
-    children: [e.jsx(ZC, {}), e.jsx(JC, {}), e.jsx(vA, {}), e.jsx(_C, {}), e.jsx(YC, {}), e.jsx(sS, {}), e.jsx(dS, {}), e.jsx(nS, {}), e.jsx(EI, {}), e.jsx($N, {}), e.jsx(D2, {}), e.jsx(bI, {}), e.jsx(cS, {}), e.jsx(WS, {})]
+    children: [e.jsx($C, {}), e.jsx(YC, {}), e.jsx(vA, {}), e.jsx(fC, {}), e.jsx(WC, {}), e.jsx(aS, {}), e.jsx(uS, {}), e.jsx(sS, {}), e.jsx(BI, {}), e.jsx(e2, {}), e.jsx(k2, {}), e.jsx(jI, {}), e.jsx(lS, {}), e.jsx(KS, {})]
   }),
-  DI = () => {
+  kI = () => {
     var o, i;
     const n = g(),
       t = ((i = (o = window == null ? void 0 : window.Telegram) == null ? void 0 : o.WebApp) == null ? void 0 : i.initData) && window.Telegram.WebApp.initData !== "",
@@ -15240,7 +15271,7 @@ const D2 = () => {
       }
     }, [n])
   },
-  kI = () => (p.useEffect(() => {
+  RI = () => (p.useEffect(() => {
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1, document.body.style.overflowY = "hidden", document.body.style.marginTop = "100px", document.body.style.height = window.innerHeight + 100 + "px", document.body.style.paddingBottom = "100px", setTimeout(() => {
         window.scrollTo(0, 100)
       }, 1), document.body.addEventListener("scroll", () => {
@@ -15290,31 +15321,31 @@ const D2 = () => {
       })
     }
   }, []), null),
-  RI = "_layout_ieygs_1",
-  UI = "_container_ieygs_8",
-  OI = "_logo_container_ieygs_17",
-  MI = "_logo_ieygs_17",
-  QI = "_animate_ieygs_1",
-  FI = "_center_ieygs_37",
-  zI = "_title_ieygs_51",
-  HI = "_description_ieygs_58",
-  qI = "_button_container_ieygs_63",
-  LI = "_button_ieygs_63",
-  VI = "_b_ieygs_63",
+  UI = "_layout_ieygs_1",
+  OI = "_container_ieygs_8",
+  MI = "_logo_container_ieygs_17",
+  QI = "_logo_ieygs_17",
+  FI = "_animate_ieygs_1",
+  zI = "_center_ieygs_37",
+  HI = "_title_ieygs_51",
+  qI = "_description_ieygs_58",
+  LI = "_button_container_ieygs_63",
+  VI = "_button_ieygs_63",
+  GI = "_b_ieygs_63",
   fe = {
-    layout: RI,
-    container: UI,
-    logo_container: OI,
-    logo: MI,
-    animate: QI,
-    center: FI,
-    title: zI,
-    description: HI,
-    button_container: qI,
-    button: LI,
-    b: VI
+    layout: UI,
+    container: OI,
+    logo_container: MI,
+    logo: QI,
+    animate: FI,
+    center: zI,
+    title: HI,
+    description: qI,
+    button_container: LI,
+    button: VI,
+    b: GI
   },
-  GI = () => {
+  XI = () => {
     const n = l(Da);
     return e.jsx("div", {
       className: fe.layout,
@@ -15341,14 +15372,14 @@ const D2 = () => {
       })
     })
   },
-  XI = "/assets/loading-D8SQALTR.gif",
-  JI = () => e.jsxs("div", {
+  JI = "/assets/loading-D8SQALTR.gif",
+  YI = () => e.jsxs("div", {
     className: nn.loading_container,
     children: [e.jsx("div", {
       className: nn.image_container,
       children: e.jsx("img", {
         alt: "img",
-        src: XI,
+        src: JI,
         className: nn.image
       })
     }), e.jsx("div", {
@@ -15356,7 +15387,7 @@ const D2 = () => {
       children: "Preparing pixels..."
     })]
   }),
-  YI = () => {
+  WI = () => {
     const n = g();
     p.useEffect(() => {
       const t = (s, a) => {
@@ -15376,7 +15407,7 @@ const D2 = () => {
       })
     }, [n])
   },
-  WI = () => {
+  KI = () => {
     const n = g(),
       t = l(A => A.main.startParams),
       s = async () => {
@@ -15430,7 +15461,7 @@ const D2 = () => {
       m()
     }, [n])
   },
-  KI = () => {
+  ZI = () => {
     const n = Y();
     p.useEffect(() => {
       So() ? localStorage.getItem("skipIntro") || (n.push("/welcome"), localStorage.setItem("skipIntro", "true")) : Qt.get("skipIntro", (t, s) => {
@@ -15446,7 +15477,7 @@ const D2 = () => {
       os: s
     }
   },
-  ZI = n => {
+  $I = n => {
     let t = "unknown",
       s = "unknown";
     const a = n.toLowerCase();
@@ -15479,7 +15510,7 @@ const D2 = () => {
       os: s
     }
   },
-  $I = () => {
+  eT = () => {
     const n = g(),
       t = l(s => s.auth.authData);
     p.useEffect(() => {
@@ -15490,7 +15521,7 @@ const D2 = () => {
       if (t && t !== "")
         if ((r = (i = window == null ? void 0 : window.Telegram) == null ? void 0 : i.WebApp) != null && r.platform) {
           s = window.Telegram.WebApp.platform;
-          const c = ZI(s);
+          const c = $I(s);
           a = c.deviceType, o = c.os
         } else {
           const c = navigator.userAgent,
@@ -15509,18 +15540,18 @@ const D2 = () => {
       }))
     }, [n, t])
   },
-  eT = () => {
+  tT = () => {
     const n = g(),
       {
         t,
         i18n: s
-      } = Bs(),
+      } = Ds(),
       a = l(o => o.user.languageCode);
     p.useEffect(() => {
       s.changeLanguage(a)
     }, [n, a])
   },
-  tT = () => {
+  nT = () => {
     const n = g(),
       t = l(a => a.shop.selectedCurrency),
       s = l(Ze);
@@ -15528,7 +15559,7 @@ const D2 = () => {
       s === de && t === 1 && n(pn(2)), s !== de && n(pn(1))
     }, [s])
   },
-  nT = () => {
+  sT = () => {
     const n = g(),
       t = window.Telegram.WebApp,
       s = l(zt);
@@ -15555,18 +15586,18 @@ function Ge(n, t) {
 const sn = window.Telegram.WebApp.Accelerometer,
   an = window.Telegram.WebApp.DeviceOrientation,
   on = window.Telegram.WebApp.Gyroscope,
-  sT = new Promise(n => {
+  aT = new Promise(n => {
     sn.start(null, t => n(t))
   }),
-  aT = new Promise(n => {
+  oT = new Promise(n => {
     an.start(null, t => n(t))
   }),
-  oT = new Promise(n => {
+  iT = new Promise(n => {
     on.start(null, t => n(t))
   }),
-  iT = async () => {
+  rT = async () => {
     if (!window.Telegram.WebApp.isVersionAtLeast("8.0")) return Promise.reject("Version is too low");
-    const n = [sT, aT, oT],
+    const n = [aT, oT, iT],
       t = [],
       s = [],
       a = [],
@@ -15636,27 +15667,27 @@ const sn = window.Telegram.WebApp.Accelerometer,
     await Oe.rpc("sensor", A), sn.stop(), an.stop(), on.stop()
   };
 let bo = !1;
-const rT = () => {
+const cT = () => {
     const n = l(s => s.device.deviceType),
       t = window.Telegram.WebApp.platform;
     return p.useEffect(() => {
-      n === "mobile" && t !== "unknown" && !bo && (iT(), bo = !0)
+      n === "mobile" && t !== "unknown" && !bo && (rT(), bo = !0)
     }, [n]), null
   },
-  cT = ({
+  lT = ({
     children: n
   }) => {
-    nT(), DI(), $I(), eT(), tT(), rT();
+    sT(), kI(), eT(), tT(), nT(), cT();
     const t = l(c => c.main.timeLimit),
       s = l(c => c.user.getUserFetchStatus),
       a = s === u.rejected && !mn.app.disableBetaError,
       o = s === u.pending || s === u.idle,
       i = t;
-    return window.Telegram && !window.Telegram.WebApp.isVersionAtLeast(zr) && kI(), YI(), WI(), KI(), a || i ? e.jsx(GI, {}) : o ? e.jsx(JI, {}) : e.jsx(e.Fragment, {
+    return window.Telegram && !window.Telegram.WebApp.isVersionAtLeast(zr) && RI(), WI(), KI(), ZI(), a || i ? e.jsx(XI, {}) : o ? e.jsx(YI, {}) : e.jsx(e.Fragment, {
       children: n
     })
   },
-  lT = () => {
+  dT = () => {
     const n = l(Da);
     return e.jsx("div", {
       className: fe.layout,
@@ -15684,12 +15715,12 @@ const rT = () => {
     })
   };
 
-function dT() {
-  return console.log("version:", window.Telegram.WebApp), window.Telegram.WebApp.isVersionAtLeast("8.0") || window.Telegram.WebApp.version === "6.0" && window.Telegram.WebApp.platform === "unknown" ? e.jsx(cT, {
-    children: e.jsx(BI, {})
-  }) : e.jsx(lT, {})
+function uT() {
+  return console.log("version:", window.Telegram.WebApp), window.Telegram.WebApp.isVersionAtLeast("8.0") || window.Telegram.WebApp.version === "6.0" && window.Telegram.WebApp.platform === "unknown" ? e.jsx(lT, {
+    children: e.jsx(DI, {})
+  }) : e.jsx(dT, {})
 }
-const uT = {
+const pT = {
     main: {
       paintButtonText: "Paint",
       paintButtonMax: "max",
@@ -15745,10 +15776,10 @@ const uT = {
       }
     }
   },
-  pT = {
-    translation: uT
-  },
   mT = {
+    translation: pT
+  },
+  AT = {
     main: {
       paintButtonText: "Paint",
       paintButtonMax: "max",
@@ -15804,13 +15835,13 @@ const uT = {
       }
     }
   },
-  AT = {
-    translation: mT
+  hT = {
+    translation: AT
   };
 fr.use(gr).init({
   resources: {
-    en: pT,
-    ru: AT
+    en: mT,
+    ru: hT
   },
   lng: "en",
   fallbackLng: "en",
@@ -15824,13 +15855,13 @@ try {
     appName: "NotPixel"
   })
 } catch {}
-fA(Sn);
-Lr(Sn);
-sp(Sn);
-const hT = rr.createRoot(document.getElementById("root"));
-hT.render(e.jsx(ae.StrictMode, {
+fA(In);
+Lr(In);
+sp(In);
+const gT = rr.createRoot(document.getElementById("root"));
+gT.render(e.jsx(ae.StrictMode, {
   children: e.jsx(dr, {
-    store: Sn,
+    store: In,
     children: e.jsx(_r, {
       children: e.jsx(ur, {
         manifestUrl: "https://app.notpx.app/tonconnect-manifest.json",
@@ -15844,7 +15875,7 @@ hT.render(e.jsx(ae.StrictMode, {
         uiPreferences: {
           theme: pr.DARK
         },
-        children: e.jsx(dT, {})
+        children: e.jsx(uT, {})
       })
     })
   })
