@@ -6506,6 +6506,11 @@ const bA = p.memo(() => (p.useEffect(() => {
               children: "Stats"
             })]
           }), e.jsx(OA, {})]
+        }), e.jsx("div", {
+          onPointerUp: () => {
+            n.push("/airdrop")
+          },
+          children: "Airdrop"
         })]
       })]
     })
