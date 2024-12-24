@@ -11564,7 +11564,7 @@ const SA = p.memo(() => (p.useEffect(() => {
     const {
       handleConnect: n,
       formattedVerificatedWalletUQ: t
-    } = Zi();
+    } = Zi(), s = l(a => a.mining.tasks.checkCaptcha);
     return e.jsxs("div", {
       className: Tt.container,
       children: [e.jsx("div", {
@@ -11579,13 +11579,15 @@ const SA = p.memo(() => (p.useEffect(() => {
           className: Tt.wallet_address,
           children: t
         })]
-      }), e.jsx("span", {
-        className: Tt.dot,
-        children: "•"
-      }), e.jsx("div", {
-        className: Tt.text_button,
-        onPointerUp: n,
-        children: t === "" ? "Add" : "Change"
+      }), !s && e.jsxs(e.Fragment, {
+        children: [e.jsx("span", {
+          className: Tt.dot,
+          children: "•"
+        }), e.jsx("div", {
+          className: Tt.text_button,
+          onPointerUp: n,
+          children: t === "" ? "Add" : "Change"
+        })]
       })]
     })
   },
@@ -15017,7 +15019,7 @@ const $2 = () => {
     const {
       handleConnect: n,
       formattedVerificatedWalletUQ: t
-    } = Zi(), s = t && t !== "";
+    } = Zi(), s = t && t !== "", a = l(o => o.mining.tasks.checkCaptcha);
     return e.jsx("div", {
       className: nt.layout,
       children: e.jsxs("div", {
@@ -15027,7 +15029,7 @@ const $2 = () => {
           children: [e.jsx("div", {
             className: nt.title,
             children: "Airdrop wallet"
-          }), e.jsx("div", {
+          }), !a && e.jsx("div", {
             className: nt.change,
             onPointerUp: n,
             children: s ? "Change" : "Add"
