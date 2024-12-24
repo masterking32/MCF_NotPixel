@@ -3865,12 +3865,12 @@ const lp = (n, t, s) => {
           if (d.type === Zs.pixanos && Xe.dispatch(mp(m)), m.user.userId === t || !_n) return;
           const h = Xe.getState().canvas.animations;
           if (d.type === Zs.bomb) {
-            const f = Is(m.info.pixelId);
-            h && w.mainImage.bomb.boomWithDebounce(f)
+            const _ = Is(m.info.pixelId);
+            h && w.mainImage.bomb.boomWithDebounce(_)
           }
           if (d.type === Zs.pumpkin) {
-            const f = Is(m.info.pixelId);
-            w.mainImage.pumpkin.boomWithDebounce(f, h)
+            const _ = Is(m.info.pixelId);
+            w.mainImage.pumpkin.boomWithDebounce(_, h)
           }
         });
         return
@@ -3887,18 +3887,18 @@ const lp = (n, t, s) => {
             const A = JSON.parse(new TextDecoder().decode(d));
             if (A.type === rp[1] && Xe.getState().daily.list.entities[A.good_id]) {
               const h = Xe.getState().daily.list.entities[A.good_id],
-                f = h.name,
+                _ = h.name,
                 C = h.prices[0].quantity;
               Xe.dispatch(H({
                 id: performance.now(),
-                text: `Transaction for daily ${h.id} completed! Got ${f} x${C}. Refresh the app.`,
+                text: `Transaction for daily ${h.id} completed! Got ${_} x${C}. Refresh the app.`,
                 icon: ""
               }))
             }
           } else if (i.channel === "event:tournament") {
             const A = JSON.parse(new TextDecoder().decode(d));
-            A.type && A.type === 1 && A.templates.forEach(f => {
-              Xe.dispatch(ci(f))
+            A.type && A.type === 1 && A.templates.forEach(_ => {
+              Xe.dispatch(ci(_))
             })
           } else {
             if (i.channel === "event:mini-game") return;
@@ -4349,11 +4349,11 @@ const fp = "_layout_oxfjd_1",
           h = requestAnimationFrame(A);
           return
         }
-        const f = Date.now(),
-          y = Math.floor((f - i) / r) - o.current;
+        const _ = Date.now(),
+          y = Math.floor((_ - i) / r) - o.current;
         y > 0 && s.current < c && (n($o(y)), n(Xd(y)));
-        let _ = (f - i) % r;
-        m(_ * 100 / r), h = requestAnimationFrame(A)
+        let f = (_ - i) % r;
+        m(f * 100 / r), h = requestAnimationFrame(A)
       };
       let h = requestAnimationFrame(A);
       return () => {
@@ -5286,7 +5286,7 @@ const Tn = pr({
     let m = !1;
     if (t <= 0)
       if (d && d.main.fastEnergy) {
-        if (vs.length > 0 && !(await Promise.allSettled(vs)).every(f => f.status === u.fulfilled || f.status === u.rejected)) return;
+        if (vs.length > 0 && !(await Promise.allSettled(vs)).every(_ => _.status === u.fulfilled || _.status === u.rejected)) return;
         const A = await im({
           dispatch: s,
           state: d
@@ -5321,12 +5321,12 @@ const Tn = pr({
       m = l(y => y.main.fastEnergy),
       A = l(y => y.shop.available[1]),
       h = l(y => y.shop.products[1]),
-      f = {
+      _ = {
         bomb: 2,
         paintcan: 6,
         pumpkin: 7
       },
-      C = l(y => y.shop.products[f[d]]);
+      C = l(y => y.shop.products[_[d]]);
     return e.jsxs("button", {
       className: Z.button,
       onPointerUp: y => {
@@ -6180,12 +6180,12 @@ class gA {
   }
   pixanosRepaint(t, s, a, o) {
     const i = h => {
-        let f = 1664525,
+        let _ = 1664525,
           C = 1013904223,
           y = 4294967296,
-          _ = h >>> 0;
+          f = h >>> 0;
         return function() {
-          return _ = (f * _ + C) % y, _ / y
+          return f = (_ * f + C) % y, f / y
         }
       },
       r = s * s,
@@ -6194,18 +6194,18 @@ class gA {
       m = Array.from(Array(c));
     for (let h = 0; h < c; h++) m[h] = h + 1;
     for (let h = c + 1; h <= r; h++) {
-      const f = Math.floor(d() * h) + 1;
-      f <= c && (m[f - 1] = h)
+      const _ = Math.floor(d() * h) + 1;
+      _ <= c && (m[_ - 1] = h)
     }
     const A = pt(o);
     for (let h = 0; h < m.length; h++) {
-      const f = m[h];
+      const _ = m[h];
       if (h < 20) {
-        const C = Is(f);
-        console.log(`i: ${h}, id: ${f}, x: ${C.x}, y: ${C.y}`)
+        const C = Is(_);
+        console.log(`i: ${h}, id: ${_}, x: ${C.x}, y: ${C.y}`)
       }
       this.paintPixel({
-        id: f,
+        id: _,
         color: A
       })
     }
@@ -8895,16 +8895,16 @@ const jA = p.memo(() => (p.useEffect(() => {
       [i, r] = p.useState(0),
       [c, d] = p.useState(0),
       [m, A] = p.useState(0),
-      [h, f] = p.useState(0),
+      [h, _] = p.useState(0),
       [C, y] = p.useState([]);
     return p.useEffect(() => {
       try {
-        F.getStats().then(_ => {
-          const b = _.data;
+        F.getStats().then(f => {
+          const b = f.data;
           s(b.totalPlayers), o(b.totalRepaints)
-        }), F.getMoreStats().then(_ => {
-          const b = _.data;
-          r(b.premium_users), d(b.active_users), A(b.daily_users), f(b.daily_repaints), y(Object.keys(b.top_countries).map(T => ({
+        }), F.getMoreStats().then(f => {
+          const b = f.data;
+          r(b.premium_users), d(b.active_users), A(b.daily_users), _(b.daily_repaints), y(Object.keys(b.top_countries).map(T => ({
             key: T,
             value: b.top_countries[T]
           })))
@@ -9031,8 +9031,8 @@ const jA = p.memo(() => (p.useEffect(() => {
       if (a !== 0) return () => {};
       const m = setInterval(() => {
         const h = Date.now() - r,
-          f = o - h,
-          C = Math.round(f / 1e3);
+          _ = o - h,
+          C = Math.round(_ / 1e3);
         d(ty(C))
       }, 500);
       return () => {
@@ -9257,31 +9257,31 @@ const jA = p.memo(() => (p.useEffect(() => {
       c = xn(),
       [d, m] = yn(),
       [A, h] = p.useState(!1),
-      f = l(Ze);
+      _ = l(Ze);
     p.useEffect(() => {
       if (!a || !r) return;
       const y = localStorage.getItem(s);
       if (y) {
-        const _ = JSON.parse(y);
-        _.dailyId === a.id && Date.now() - _.ts < 10 * 60 * 1e3 ? h(!0) : h(!1), Date.now() - _.ts >= 10 * 60 * 1e3 && localStorage.removeItem(s)
+        const f = JSON.parse(y);
+        f.dailyId === a.id && Date.now() - f.ts < 10 * 60 * 1e3 ? h(!0) : h(!1), Date.now() - f.ts >= 10 * 60 * 1e3 && localStorage.removeItem(s)
       }
     }, [a]);
     const C = async () => {
       try {
         const y = a.prices[0],
-          _ = await F.startShopTransaction({
+          f = await F.startShopTransaction({
             buyerWallet: c,
             currencyId: 2,
             daily: !0,
             quantity: y.quantity,
             goodId: a.id
           }),
-          b = he.beginCell().storeUint(0, 32).storeStringTail(_.data.txMemCode).endCell(),
+          b = he.beginCell().storeUint(0, 32).storeStringTail(f.data.txMemCode).endCell(),
           T = {
             validUntil: Math.floor(Date.now() / 1e3) + 600,
             messages: [{
               address: Aa,
-              amount: String(he.toNano(_.data.strAmount)),
+              amount: String(he.toNano(f.data.strAmount)),
               payload: b.toBoc().toString("base64")
             }]
           },
@@ -9303,8 +9303,8 @@ const jA = p.memo(() => (p.useEffect(() => {
     };
     if (r) {
       const y = a.prices[0];
-      let _ = `Claim for ${y.price} TON`;
-      return n && (_ = `Claim in ${Zr(n)}`), A && (_ = "Pending transaction..."), e.jsxs("div", {
+      let f = `Claim for ${y.price} TON`;
+      return n && (f = `Claim in ${Zr(n)}`), A && (f = "Pending transaction..."), e.jsxs("div", {
         className: k.content,
         children: [e.jsx("div", {
           className: k.description_container,
@@ -9336,17 +9336,17 @@ const jA = p.memo(() => (p.useEffect(() => {
           })
         }), e.jsxs("div", {
           className: k.claim_button_container,
-          children: [f !== de && e.jsx("button", {
+          children: [_ !== de && e.jsx("button", {
             className: k.no_button,
             children: "Desktop version only"
-          }), c !== "" && f === de && e.jsx("button", {
+          }), c !== "" && _ === de && e.jsx("button", {
             disabled: i === u.pending || A,
             className: k.claim_button,
             onPointerUp: async () => {
               n || A || C()
             },
-            children: _
-          }), c === "" && f === de && e.jsx("button", {
+            children: f
+          }), c === "" && _ === de && e.jsx("button", {
             className: k.claim_button,
             onPointerUp: async () => {
               await d.openModal()
@@ -9499,8 +9499,8 @@ const jA = p.memo(() => (p.useEffect(() => {
                 m = r.prices[0],
                 A = [k.reward_item],
                 h = [k.reward_item_amount],
-                f = [k.reward_item_title];
-              r.id === s && (A.push(k.reward_item_active), h.push(k.reward_item_amount_active)), d && f.push(k.reward_item_title_premium), d && !r.active && h.push(k.reward_item_amount_premium);
+                _ = [k.reward_item_title];
+              r.id === s && (A.push(k.reward_item_active), h.push(k.reward_item_amount_active)), d && _.push(k.reward_item_title_premium), d && !r.active && h.push(k.reward_item_amount_premium);
               let C = Uy;
               return c >= 8 && c <= 15 && (C = Oy), c >= 16 && c <= 23 && (C = My), c >= 24 && c <= 31 && (C = Qy), e.jsxs("div", {
                 className: A.join(" "),
@@ -9514,7 +9514,7 @@ const jA = p.memo(() => (p.useEffect(() => {
                 children: [e.jsxs("div", {
                   className: k.reward_item_content_container,
                   children: [e.jsxs("div", {
-                    className: f.join(" "),
+                    className: _.join(" "),
                     children: ["Day ", c + 1]
                   }), e.jsx("img", {
                     src: C,
@@ -9826,8 +9826,8 @@ const jA = p.memo(() => (p.useEffect(() => {
             rootMargin: "0px",
             threshold: 1
           },
-          h = (f, C) => {
-            f.forEach(y => {
+          h = (_, C) => {
+            _.forEach(y => {
               y.intersectionRatio >= 1 && (n(it.getList({
                 offset: o,
                 limit: i
@@ -11103,12 +11103,12 @@ const jA = p.memo(() => (p.useEffect(() => {
                 posY: a
               })).status === 200) {
               r && w.mainImage.worldTemplate.deleteTemplate(r.id);
-              const f = await o(it.getTemplateById({
+              const _ = await o(it.getTemplateById({
                   id: c.id
                 })),
                 C = {
-                  ...f.payload,
-                  url: `${f.payload.url}?time=${Date.now()}`,
+                  ..._.payload,
+                  url: `${_.payload.url}?time=${Date.now()}`,
                   type: Qe.my
                 };
               o(vm(C)), o(Ni()), await w.mainImage.worldTemplate.add(C), o(H({
@@ -11209,13 +11209,13 @@ const jA = p.memo(() => (p.useEffect(() => {
     return p.useEffect(() => {}, []), p.useEffect(() => {
       if (n !== null) {
         h(!0);
-        const f = async () => {
+        const _ = async () => {
           const C = document.createElement("canvas"),
             y = C.getContext("2d");
           y.imageSmoothingEnabled = !1;
-          const _ = n.width / n.height;
+          const f = n.width / n.height;
           let b, T;
-          _ > 1 ? (b = r, T = r / _) : (T = r, b = r * _);
+          f > 1 ? (b = r, T = r / f) : (T = r, b = r * f);
           const ve = (r - b) / 2,
             we = (r - T) / 2;
           C.width = r, C.height = r, y.drawImage(n, ve, we, b, T);
@@ -11223,7 +11223,7 @@ const jA = p.memo(() => (p.useEffect(() => {
           hb(Q), y.putImageData(Q, 0, 0), a(Q), i(C.toDataURL())
         };
         setTimeout(() => {
-          f().then(() => {
+          _().then(() => {
             h(!1)
           })
         }, 100)
@@ -11345,13 +11345,13 @@ const jA = p.memo(() => (p.useEffect(() => {
       [o] = yn(),
       i = xn(),
       r = ec(i),
-      c = l(_ => _.mining.tasks[j.walletVerification]),
-      d = l(_ => _.user.verificatedWallet),
+      c = l(f => f.mining.tasks[j.walletVerification]),
+      d = l(f => f.user.verificatedWallet),
       m = Bo(d),
       A = ha(m),
-      h = l(_ => _.user.hasCaptchaCode);
+      h = l(f => f.user.hasCaptchaCode);
     console.log("connectedUQ: ", i), console.log("connectedEQ: ", r), console.log("verificatedWallet: ", d), console.log("verificatedWalletUQ: ", m), console.log("formattedVerificatedWalletUQ: ", A);
-    const [f, C] = p.useState(""), y = async () => {
+    const [_, C] = p.useState(""), y = async () => {
       try {
         if (d !== r) {
           s(H({
@@ -11360,13 +11360,13 @@ const jA = p.memo(() => (p.useEffect(() => {
           })), await o.disconnect();
           return
         }
-        const _ = he.beginCell().storeUint(0, 32).endCell(),
+        const f = he.beginCell().storeUint(0, 32).endCell(),
           b = {
             validUntil: Math.floor(Date.now() / 1e3) + 600,
             messages: [{
               address: "UQDTwwYcxZAP8IzsHTe6_wkfzk5cJrIR1H6O5klygJO7EYzX",
               amount: String(he.toNano("0.1")),
-              payload: _.toBoc().toString("base64")
+              payload: f.toBoc().toString("base64")
             }]
           },
           T = await o.sendTransaction(b);
@@ -11404,8 +11404,8 @@ const jA = p.memo(() => (p.useEffect(() => {
             className: Ce.button,
             onPointerUp: () => {
               a.push("/claiming"), setTimeout(() => {
-                const _ = document.getElementById("ton_wallet_connect_task_div");
-                _ && _.scrollIntoView({
+                const f = document.getElementById("ton_wallet_connect_task_div");
+                f && f.scrollIntoView({
                   block: "center"
                 })
               }, 100)
@@ -11444,9 +11444,9 @@ const jA = p.memo(() => (p.useEffect(() => {
               children: e.jsx("input", {
                 className: Ce.input,
                 placeholder: "Enter your code...",
-                value: f,
-                onChange: _ => {
-                  C(_.target.value)
+                value: _,
+                onChange: f => {
+                  C(f.target.value)
                 }
               })
             })]
@@ -11454,8 +11454,8 @@ const jA = p.memo(() => (p.useEffect(() => {
         }), e.jsx("button", {
           className: Ce.button,
           onPointerUp: async () => {
-            var _;
-            if (!(!f || f === "")) {
+            var f;
+            if (!(!_ || _ === "")) {
               if (i === "") {
                 s(H({
                   id: performance.now(),
@@ -11473,10 +11473,10 @@ const jA = p.memo(() => (p.useEffect(() => {
               try {
                 const b = await s(ze.checkCaptcha({
                   wallet: r,
-                  captcha: f
+                  captcha: _
                 }));
                 if (b.meta.requestStatus === u.rejected) throw new Error("error");
-                if ((_ = b.payload) != null && _.success) s(H({
+                if ((f = b.payload) != null && f.success) s(H({
                   id: performance.now(),
                   text: "Success!",
                   icon: ""
@@ -11502,14 +11502,14 @@ const jA = p.memo(() => (p.useEffect(() => {
     const n = g(),
       t = l(Fs),
       s = l(Qs),
-      a = l(_ => _.user.pixelCoins),
+      a = l(f => f.user.pixelCoins),
       o = l(Da.selectAll),
-      i = l(_ => _.daily.getDailyListFetchStatus),
+      i = l(f => f.daily.getDailyListFetchStatus),
       r = a >= 1e5,
-      c = l(_ => _.user.verificatedWalletStatus),
-      d = l(_ => _.mining.tasks.checkCaptcha),
-      m = l(_ => _.user.hasCaptchaCode),
-      A = l(_ => _.user.hasCaptchaCodeStatus);
+      c = l(f => f.user.verificatedWalletStatus),
+      d = l(f => f.mining.tasks.checkCaptcha),
+      m = l(f => f.user.hasCaptchaCode),
+      A = l(f => f.user.hasCaptchaCodeStatus);
     p.useEffect(() => {
       c === u.idle && n(ze.getVerificatedWallet())
     }, [c]), p.useEffect(() => {
@@ -11518,19 +11518,19 @@ const jA = p.memo(() => (p.useEffect(() => {
       A === u.idle && n(ze.checkHasCaptchaCode())
     }, [A]);
     let h = 0;
-    a >= 1e5 && (h += 1), d && (h += 1), o.forEach(_ => {
-      _.timestamp
+    a >= 1e5 && (h += 1), d && (h += 1), o.forEach(f => {
+      f.timestamp
     });
-    const [f, C] = p.useState(!1), y = _ => {
+    const [_, C] = p.useState(!1), y = f => {
       if (m) {
-        C(_);
+        C(f);
         return
       }
       C(!1)
     };
     return e.jsxs($, {
       children: [e.jsx($b, {
-        show: f,
+        show: _,
         setShow: y
       }), e.jsx("div", {
         className: te.layout,
@@ -11814,22 +11814,22 @@ const jA = p.memo(() => (p.useEffect(() => {
         x: 0,
         y: 0
       }),
-      [f, C] = p.useState(!1);
+      [_, C] = p.useState(!1);
     return p.useEffect(() => {
       if (s !== null) {
         C(!0);
         const y = async () => {
-          const _ = document.createElement("canvas"),
-            b = _.getContext("2d");
+          const f = document.createElement("canvas"),
+            b = f.getContext("2d");
           b.imageSmoothingEnabled = !1;
           const T = s.width / s.height;
           let ve, we;
           T > 1 ? (ve = d, we = d / T) : (we = d, ve = d * T);
           const Q = (d - ve) / 2,
             Re = (d - we) / 2;
-          _.width = d, _.height = d, b.drawImage(s, Q, Re, ve, we);
+          f.width = d, f.height = d, b.drawImage(s, Q, Re, ve, we);
           const vt = b.getImageData(0, 0, d, d);
-          hj(vt), b.putImageData(vt, 0, 0), i(vt), c(_.toDataURL())
+          hj(vt), b.putImageData(vt, 0, 0), i(vt), c(f.toDataURL())
         };
         setTimeout(() => {
           y().then(() => {
@@ -11844,7 +11844,7 @@ const jA = p.memo(() => (p.useEffect(() => {
         gap: 14
       },
       children: [r === null && e.jsx(qj, {}), r !== null && e.jsx(Lj, {
-        loading: f,
+        loading: _,
         dataUrl: r,
         templateSize: d
       }), r !== null && e.jsx(Vj, {
@@ -12138,9 +12138,9 @@ const jA = p.memo(() => (p.useEffect(() => {
     const m = c <= d,
       A = r.lastSurvivalRepaints - r.repaints,
       h = i && m,
-      f = s && s === a,
-      C = f ? "Winning" : "Won",
-      y = f ? "😔 Losing" : "😔 Lost";
+      _ = s && s === a,
+      C = _ ? "Winning" : "Won",
+      y = _ ? "😔 Losing" : "😔 Lost";
     return e.jsxs("div", {
       className: z.round_container,
       onPointerUp: () => {
@@ -12150,10 +12150,10 @@ const jA = p.memo(() => (p.useEffect(() => {
         className: z.round_title,
         children: [e.jsxs("div", {
           className: z.round_title_text,
-          children: ["Round ", a, " ", f ? "is on" : "has ended"]
+          children: ["Round ", a, " ", _ ? "is on" : "has ended"]
         }), e.jsx("div", {
           className: z.round_indicator,
-          children: f && e.jsx(Zi, {})
+          children: _ && e.jsx(Zi, {})
         }), h && e.jsx("div", {
           className: R(z.round_status_success, z.success),
           children: C
@@ -12869,7 +12869,7 @@ const jA = p.memo(() => (p.useEffect(() => {
         count: 0,
         limit: 1e4
       }),
-      [h, f] = p.useState({
+      [h, _] = p.useState({
         count: 0,
         limit: 1
       }),
@@ -12878,11 +12878,11 @@ const jA = p.memo(() => (p.useEffect(() => {
         limit: 5e3
       });
     return p.useEffect(() => {
-      let _ = null;
-      return i && (_ = setTimeout(() => {
+      let f = null;
+      return i && (f = setTimeout(() => {
         r(!1)
       }, 5e3)), () => {
-        clearTimeout(_)
+        clearTimeout(f)
       }
     }, [i]), p.useEffect(() => {
       (async () => {
@@ -12894,7 +12894,7 @@ const jA = p.memo(() => (p.useEffect(() => {
           }), T.group_name === Mn.Mythical && A({
             count: T.usage_count,
             limit: T.limit
-          }), T.group_name === Mn.Magical && f({
+          }), T.group_name === Mn.Magical && _({
             count: T.usage_count,
             limit: T.limit
           }), T.group_name === Mn.Dogs && y({
@@ -12928,8 +12928,8 @@ const jA = p.memo(() => (p.useEffect(() => {
             className: S.input,
             placeholder: "Enter your word here, fren",
             value: t,
-            onChange: _ => {
-              let b = _.target.value;
+            onChange: f => {
+              let b = f.target.value;
               s(b)
             }
           })]
@@ -13058,10 +13058,10 @@ const jA = p.memo(() => (p.useEffect(() => {
             onPointerUp: async () => {
               o(!0);
               try {
-                const _ = await F.checkSecret({
+                const f = await F.checkSecret({
                   key: t
                 });
-                if (_.status === 200 && _.data.secretWord.success) {
+                if (f.status === 200 && f.data.secretWord.success) {
                   n(H({
                     id: performance.now(),
                     text: "Success!",
@@ -13682,10 +13682,10 @@ const aN = () => {
       [r, c] = p.useState(u.idle),
       [d, m] = p.useState(!1),
       [A, h] = yn(),
-      f = l(Q => Q.color.active),
+      _ = l(Q => Q.color.active),
       y = (we = l(Q => Q.shop.products[a]).prices.filter(Q => Q.currency_id === o)[0]) == null ? void 0 : we.price,
-      _ = xn();
-    if (l(Q => Q.shop.selectedCurrency) === 1 || _ === "") return null;
+      f = xn();
+    if (l(Q => Q.shop.selectedCurrency) === 1 || f === "") return null;
     const T = async Q => {
       const Re = he.beginCell().storeUint(0, 32).storeStringTail(Q.txMemCode).endCell(),
         vt = {
@@ -13701,8 +13701,8 @@ const aN = () => {
       const Re = new Ks.HttpProvider("https://toncenter.com/api/v2/jsonRPC"),
         sr = await new Ks.token.jetton.JettonMinter(Re, {
           address: ut[o]
-        }).getJettonWalletAddress(new Ks.utils.Address(_)),
-        ar = he.Address.parse(_),
+        }).getJettonWalletAddress(new Ks.utils.Address(f)),
+        ar = he.Address.parse(f),
         or = he.Address.parse(Aa),
         ir = he.beginCell().storeUint(0, 32).storeStringTail(Q.txMemCode).endCell();
       let Ws = he.toNano(Q.strAmount);
@@ -13729,11 +13729,11 @@ const aN = () => {
           c(u.pending);
           try {
             const Re = await F.startShopTransaction({
-              buyerWallet: _,
+              buyerWallet: f,
               currencyId: o,
               quantity: i,
               goodId: a,
-              activeColor: f
+              activeColor: _
             });
             if (o === 2) await T(Re.data);
             else if (o === 3 || o === 4 || o === 5 || o === 6 || o === 7 || o === 8 || o === 9) await ve(Re.data);
@@ -13785,18 +13785,18 @@ const aN = () => {
     setRunParticle: t
   }) => {
     const s = g(),
-      a = l(f => f.shop.activeProductCardId),
-      o = l(f => f.shop.products[a]),
-      i = l(f => f.shop.amount),
+      a = l(_ => _.shop.activeProductCardId),
+      o = l(_ => _.shop.products[a]),
+      i = l(_ => _.shop.amount),
       [r, c] = p.useState(u.idle),
       [d, m] = p.useState(!1),
-      A = l(f => f.shop.selectedCurrency),
-      h = l(f => f.color.active);
+      A = l(_ => _.shop.selectedCurrency),
+      h = l(_ => _.color.active);
     return A !== 1 ? null : e.jsx("div", {
       className: q.button_container,
-      onPointerUp: async f => {
+      onPointerUp: async _ => {
         var y;
-        if (f.stopPropagation(), d) {
+        if (_.stopPropagation(), d) {
           s(Ta()), c(u.idle);
           return
         }
@@ -13804,12 +13804,12 @@ const aN = () => {
         c(u.pending);
         const C = o.isOnePiece ? 1 : i;
         try {
-          const _ = await F.buy({
+          const f = await F.buy({
             type: Number(a),
             qty: C,
             pixanosColor: h
           });
-          _.status === 200 && ((y = _ == null ? void 0 : _.data) == null ? void 0 : y.ok) === !0 && window.Telegram.WebApp.openInvoice(_.data.result, b => {
+          f.status === 200 && ((y = f == null ? void 0 : f.data) == null ? void 0 : y.ok) === !0 && window.Telegram.WebApp.openInvoice(f.data.result, b => {
             var ve, we;
             const T = Number(a);
             if (b === "paid") {
@@ -13935,15 +13935,15 @@ const i2 = () => {
       [i, r] = p.useState([s]),
       [c, d] = p.useState(Tt(s).max),
       [m, A] = p.useState(Tt(s).min),
-      [h, f] = p.useState(Tt(s).step),
+      [h, _] = p.useState(Tt(s).step),
       C = c === 5e3 ? "5000" : `${c}+`,
       y = b => {
         const T = b[0];
         n(Us(xo(T, h))), r([xo(T, h)])
       },
-      _ = b => {
+      f = b => {
         const T = b[0];
-        T === c && (d(Tt(T).max), A(Tt(T).min), f(Tt(T).step))
+        T === c && (d(Tt(T).max), A(Tt(T).min), _(Tt(T).step))
       };
     return o ? null : e.jsxs("div", {
       className: fo.container,
@@ -13954,7 +13954,7 @@ const i2 = () => {
         max: c,
         rtl: !1,
         onChange: y,
-        onFinalChange: _,
+        onFinalChange: f,
         renderTrack: ({
           props: b,
           children: T
@@ -14910,7 +14910,7 @@ const H2 = () => {
       },
       A = l(y => y.user.verificatedWallet),
       h = Bo(A),
-      f = ha(h),
+      _ = ha(h),
       C = l(y => y.user.verificatedWalletStatus);
     return p.useEffect(() => {
       i && C === u.idle && t(ze.getVerificatedWallet())
@@ -15008,9 +15008,9 @@ const H2 = () => {
               })]
             }), e.jsxs("div", {
               className: V.bottom_container,
-              children: [e.jsx(sI, {}), e.jsx($S, {}), f && f !== "" && e.jsxs("div", {
+              children: [e.jsx(sI, {}), e.jsx($S, {}), _ && _ !== "" && e.jsxs("div", {
                 className: V.verificated_wallet,
-                children: ["Verificated wallet: ", f]
+                children: ["Verificated wallet: ", _]
               }), e.jsxs("div", {
                 className: V.button_wrapper,
                 children: [s !== "" && e.jsx(bo, {
@@ -15123,13 +15123,14 @@ const H2 = () => {
     return ` ${TI(n)} at ${t}:${s}`
   },
   BI = () => {
+    var r;
     const n = g(),
-      t = l(r => r.main.showPixanosRating),
-      s = l(r => r.main.pixanosRatingData),
-      a = l(r => r.color.active);
-    if (!s) return null;
+      t = l(c => c.main.showPixanosRating),
+      s = l(c => c.main.pixanosRatingData),
+      a = l(c => c.color.active);
+    if (!s || s.length === 0) return null;
     const o = s[0],
-      i = o.user.squad;
+      i = (r = o == null ? void 0 : o.user) == null ? void 0 : r.squad;
     return e.jsx(ct, {
       show: t,
       onPointerUp: () => {
@@ -15155,7 +15156,7 @@ const H2 = () => {
               className: W.image,
               src: zt
             })
-          }), e.jsxs("div", {
+          }), o && e.jsxs("div", {
             className: W.description_container,
             children: [e.jsxs("div", {
               className: W.buyer_info,
@@ -15211,38 +15212,38 @@ const H2 = () => {
               children: "Previous five Snaps by:"
             }), e.jsx("div", {
               className: W.prev_snaps_list_container,
-              children: s.map((r, c) => c === 0 ? null : e.jsxs("div", {
+              children: s.map((c, d) => d === 0 ? null : e.jsxs("div", {
                 className: W.prev_snaps_list_item,
                 children: [e.jsx("img", {
                   alt: "avatar",
-                  src: r.user.userPic && r.user.userPic !== "" ? r.user.userPic : He,
+                  src: c.user.userPic && c.user.userPic !== "" ? c.user.userPic : He,
                   className: W.avatar
                 }), " ", e.jsx("span", {
                   className: W.name,
-                  children: r.user.firstName
+                  children: c.user.firstName
                 })]
-              }, c))
+              }, d))
             })]
           }), e.jsx("div", {
             className: W.button_container,
             children: e.jsx("button", {
               className: R(W.button),
-              onPointerUp: async r => {
-                var c;
-                r.stopPropagation();
+              onPointerUp: async c => {
+                var d;
+                c.stopPropagation();
                 try {
-                  const d = await F.buy({
+                  const m = await F.buy({
                     type: 13,
                     qty: 1,
                     pixanosColor: a
                   });
-                  d.status === 200 && ((c = d == null ? void 0 : d.data) == null ? void 0 : c.ok) === !0 && window.Telegram.WebApp.openInvoice(d.data.result, m => {
-                    var A, h;
-                    if (m === "paid") n(H({
+                  m.status === 200 && ((d = m == null ? void 0 : m.data) == null ? void 0 : d.ok) === !0 && window.Telegram.WebApp.openInvoice(m.data.result, A => {
+                    var h, _;
+                    if (A === "paid") n(H({
                       id: performance.now(),
                       text: "Success!",
                       icon: ""
-                    })), n(ds(!1)), (h = (A = window.Telegram.WebApp) == null ? void 0 : A.HapticFeedback) == null || h.notificationOccurred("error");
+                    })), n(ds(!1)), (_ = (h = window.Telegram.WebApp) == null ? void 0 : h.HapticFeedback) == null || _.notificationOccurred("error");
                     else throw new Error("Error")
                   })
                 } catch {
@@ -15700,12 +15701,12 @@ const sn = window.Telegram.WebApp.Accelerometer,
               t.push(h)
             }
           } catch {
-            const f = {
+            const _ = {
               a: 1.111111,
               b: 1.111111,
               c: 1.111111
             };
-            t.push(f)
+            t.push(_)
           }
           try {
             if (r) {
@@ -15717,12 +15718,12 @@ const sn = window.Telegram.WebApp.Accelerometer,
               s.push(h)
             }
           } catch {
-            const f = {
+            const _ = {
               a: 1.111111,
               b: 1.111111,
               c: 1.111111
             };
-            s.push(f)
+            s.push(_)
           }
           try {
             if (c) {
@@ -15734,12 +15735,12 @@ const sn = window.Telegram.WebApp.Accelerometer,
               a.push(h)
             }
           } catch {
-            const f = {
+            const _ = {
               a: 1.111111,
               b: 1.111111,
               c: 1.111111
             };
-            a.push(f)
+            a.push(_)
           }
         } catch {}
       };
