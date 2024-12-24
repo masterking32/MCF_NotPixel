@@ -3208,7 +3208,7 @@ const fa = D("canvas/getPixelInfo", async ({
         price: n
       }),
       s = new Uint8Array(t.data);
-    return w.mask.draw({
+    return b.mask.draw({
       arr: s
     }), {
       result: !0
@@ -3843,16 +3843,16 @@ const mp = (n, t, s) => {
         }),
         c = new Image;
       c.src = URL.createObjectURL(r), c.onload = () => {
-        w.mainImage.loadFromCentrifuge(c).then(() => {
+        b.mainImage.loadFromCentrifuge(c).then(() => {
           const m = Xe.getState().main.startParams.coords;
-          m && (w.viewport.viewport.animate({
+          m && (b.viewport.viewport.animate({
             scale: 60,
             time: 400,
             position: {
               x: m.x + .5,
               y: m.y + .5
             }
-          }), w.mainImage.selectedPixel.draw(m), Xe.dispatch(Ft(m)))
+          }), b.mainImage.selectedPixel.draw(m), Xe.dispatch(Ft(m)))
         })
       }
     }), Ue.on("disconnected", function(i) {
@@ -3867,11 +3867,11 @@ const mp = (n, t, s) => {
           const h = Xe.getState().canvas.animations;
           if (d.type === ta.bomb) {
             const _ = Es(m.info.pixelId);
-            h && w.mainImage.bomb.boomWithDebounce(_)
+            h && b.mainImage.bomb.boomWithDebounce(_)
           }
           if (d.type === ta.pumpkin) {
             const _ = Es(m.info.pixelId);
-            w.mainImage.pumpkin.boomWithDebounce(_, h)
+            b.mainImage.pumpkin.boomWithDebounce(_, h)
           }
         });
         return
@@ -3883,16 +3883,16 @@ const mp = (n, t, s) => {
           const m = JSON.parse(new TextDecoder().decode(d));
           if (i.channel === "pixel:message") Object.values(m).forEach(A => {
             ya += A.length
-          }), w.mainImage.paintPixelsFromCentrifuge(m);
+          }), b.mainImage.paintPixelsFromCentrifuge(m);
           else if (i.channel === `personal:user#${t}`) {
             const A = JSON.parse(new TextDecoder().decode(d));
             if (A.type === up[1] && Xe.getState().daily.list.entities[A.good_id]) {
               const h = Xe.getState().daily.list.entities[A.good_id],
                 _ = h.name,
-                b = h.prices[0].quantity;
+                v = h.prices[0].quantity;
               Xe.dispatch(M({
                 id: performance.now(),
-                text: `Transaction for daily ${h.id} completed! Got ${_} x${b}. Refresh the app.`,
+                text: `Transaction for daily ${h.id} completed! Got ${_} x${v}. Refresh the app.`,
                 icon: ""
               }))
             }
@@ -4846,25 +4846,25 @@ const En = zt();
 En.startListening({
   actionCreator: Ai,
   effect: () => {
-    w.mainImage.selectedPixel.hide()
+    b.mainImage.selectedPixel.hide()
   }
 });
 En.startListening({
   actionCreator: Js,
   effect: () => {
-    w.mainImage.selectedPixel.show()
+    b.mainImage.selectedPixel.show()
   }
 });
 En.startListening({
   actionCreator: Ys,
   effect: () => {
-    w.mainImage.selectedPixel.hide()
+    b.mainImage.selectedPixel.hide()
   }
 });
 En.startListening({
   actionCreator: yt,
   effect: () => {
-    w.mainImage.selectedPixel.show()
+    b.mainImage.selectedPixel.show()
   }
 });
 const Qa = zt();
@@ -4965,13 +4965,13 @@ const xm = Ni.reducer,
     initialState: bm,
     reducers: {
       setActiveTemplate: (n, t) => {
-        n.active = t.payload, w.mainImage.worldTemplate.hide(), w.mainImage.worldTemplate.show(t.payload)
+        n.active = t.payload, b.mainImage.worldTemplate.hide(), b.mainImage.worldTemplate.show(t.payload)
       },
       setActiveTemplateTab: (n, t) => {
         n.activeTab = t.payload
       },
       hideTemplates: n => {
-        n.active = null, w.mainImage.worldTemplate.hide()
+        n.active = null, b.mainImage.worldTemplate.hide()
       },
       setTemplateOpacity: (n, t) => {
         n.opacity = t.payload
@@ -5009,7 +5009,7 @@ const xm = Ni.reducer,
           ...s.payload,
           type: Qe.world
         };
-        t.worldTemplate = a, w.mainImage.worldTemplate.add(a)
+        t.worldTemplate = a, b.mainImage.worldTemplate.add(a)
       }).addCase(xs.rejected, (t, s) => {}).addCase(_s.pending, t => {
         t.listStatus = u.pending
       }).addCase(_s.fulfilled, (t, s) => {
@@ -5179,7 +5179,7 @@ Gt.startListening({
     const s = t.getState();
     if (s.tournament.myTemplate) {
       const a = s.tournament.myTemplate;
-      w.mainImage.tournamentTemplates.deleteTemplate(a.id), w.mainImage.tournamentTemplates.add(a)
+      b.mainImage.tournamentTemplates.deleteTemplate(a.id), b.mainImage.tournamentTemplates.add(a)
     }
   }
 });
@@ -5189,7 +5189,7 @@ Gt.startListening({
     const s = t.getState();
     if (s.tournament.selectedTemplate) {
       const a = s.tournament.selectedTemplate;
-      w.mainImage.tournamentTemplates.deleteTemplate(a.id), w.mainImage.tournamentTemplates.add(a)
+      b.mainImage.tournamentTemplates.deleteTemplate(a.id), b.mainImage.tournamentTemplates.add(a)
     }
   }
 });
@@ -5197,19 +5197,19 @@ Gt.startListening({
   matcher: ce(ap),
   effect: n => {
     const t = n.payload;
-    w.mainImage.tournamentTemplates.hide(), w.mainImage.tournamentTemplates.show(t)
+    b.mainImage.tournamentTemplates.hide(), b.mainImage.tournamentTemplates.show(t)
   }
 });
 Gt.startListening({
   matcher: ce(op),
   effect: () => {
-    w.mainImage.tournamentTemplates.hide()
+    b.mainImage.tournamentTemplates.hide()
   }
 });
 Gt.startListening({
   matcher: ce(di),
   effect: n => {
-    w.mainImage.tournamentTemplates.changeTemplateCoords(n.payload)
+    b.mainImage.tournamentTemplates.changeTemplateCoords(n.payload)
   }
 });
 const Bn = hr({
@@ -5243,10 +5243,10 @@ const Bn = hr({
     paintCoords: s,
     activeColor: a
   }) => {
-    w.mainImage.paintPixel({
+    b.mainImage.paintPixel({
       id: it(s),
       color: pt(a)
-    }), w.mainImage.updateTexture(), await n(ic(a)), await n(pu(s)), await n(Zd());
+    }), b.mainImage.updateTexture(), await n(ic(a)), await n(pu(s)), await n(Zd());
     try {
       const o = new TextEncoder().encode(JSON.stringify({
           type: 0,
@@ -5257,7 +5257,7 @@ const Bn = hr({
       bs.push(i);
       const r = await i,
         c = JSON.parse(new TextDecoder().decode(new Uint8Array(r.data)));
-      console.log(c), c && c.balance && (n(Zo(c.balance)), c.reward_user && (w.mainImage.reward.add(s), n(Dm({
+      console.log(c), c && c.balance && (n(Zo(c.balance)), c.reward_user && (b.mainImage.reward.add(s), n(Dm({
         rewardId: c.reward_user.reward_id,
         rewardUserId: c.reward_user.id,
         reward: c.reward,
@@ -5272,7 +5272,7 @@ const Bn = hr({
     dispatch: t,
     paintCoords: s
   }) => {
-    t(Js()), n && n.push("/energy-over"), t(Ft(s)), w.mainImage.selectedPixel.draw(s)
+    t(Js()), n && n.push("/energy-over"), t(Ft(s)), b.mainImage.selectedPixel.draw(s)
   }, Ri = async ({
     history: n,
     charges: t,
@@ -5327,7 +5327,7 @@ const Bn = hr({
         paintcan: 6,
         pumpkin: 7
       },
-      b = l(y => y.shop.products[_[d]]);
+      v = l(y => y.shop.products[_[d]]);
     return e.jsxs("button", {
       className: $.button,
       onPointerUp: y => {
@@ -5393,9 +5393,9 @@ const Bn = hr({
             children: [e.jsx("img", {
               alt: "img",
               className: $.image,
-              src: b.image_url
+              src: v.image_url
             }), e.jsx("span", {
-              children: b.name
+              children: v.name
             })]
           })]
         }) : "Paint"
@@ -5536,7 +5536,7 @@ const qm = async ({
     t(Qs(10)), t(qe(2)), t(Le()), t(yt());
     return
   }
-  w.mainImage.bomb.boom(n), t(zs.useProduct({
+  b.mainImage.bomb.boom(n), t(zs.useProduct({
     pixelId: it(n),
     productId: 2
   })), t(Fs({
@@ -5592,7 +5592,7 @@ const qm = async ({
     t(Qs(10)), t(qe(6)), t(Le()), t(yt());
     return
   }
-  w.mainImage.paintSquare({
+  b.mainImage.paintSquare({
     x: n.x - 1,
     y: n.y - 1,
     size: 3,
@@ -5687,7 +5687,7 @@ const AA = async ({
     t(yt());
     return
   }
-  w.mainImage.pumpkin.boom(n), t(zs.useProduct({
+  b.mainImage.pumpkin.boom(n), t(zs.useProduct({
     pixelId: it(n),
     productId: 7
   })), t(Fs({
@@ -5938,7 +5938,7 @@ class yA {
       command: Pe.start
     })), !Bo() && this.loadAllChunks().then(() => {
       const r = a.getState().main.startParams.coords;
-      r && (w.viewport.viewport.animate({
+      r && (b.viewport.viewport.animate({
         scale: 60,
         time: 400,
         position: {
@@ -5970,10 +5970,10 @@ class yA {
         i = s.main.currentFastType;
       if (this.isCoordsEqual(this.lastPaintCoords, a), this.wasMoved) return;
       const r = Date.now();
-      if (r - this.lastPointerUpTs < 200 && !o && !i && (this.pixiViewport.scaled > 50 ? w.viewport.viewport.animate({
+      if (r - this.lastPointerUpTs < 200 && !o && !i && (this.pixiViewport.scaled > 50 ? b.viewport.viewport.animate({
           scale: this.pixiViewport.findFitHeight(I.height),
           time: 400
-        }) : w.viewport.viewport.animate({
+        }) : b.viewport.viewport.animate({
           scale: 60,
           time: 400,
           position: {
@@ -6182,11 +6182,11 @@ class yA {
   pixanosRepaint(t, s, a, o) {
     const i = h => {
         let _ = 1664525,
-          b = 1013904223,
+          v = 1013904223,
           y = 4294967296,
           f = h >>> 0;
         return function() {
-          return f = (_ * f + b) % y, f / y
+          return f = (_ * f + v) % y, f / y
         }
       },
       r = s * s,
@@ -6202,8 +6202,8 @@ class yA {
     for (let h = 0; h < m.length; h++) {
       const _ = m[h];
       if (h < 20) {
-        const b = Es(_);
-        console.log(`i: ${h}, id: ${_}, x: ${b.x}, y: ${b.y}`)
+        const v = Es(_);
+        console.log(`i: ${h}, id: ${_}, x: ${v.x}, y: ${v.y}`)
       }
       this.paintPixel({
         id: _,
@@ -6347,10 +6347,10 @@ class CA {
     })
   }
 }
-let w, eo = !1;
+let b, eo = !1;
 
 function NA() {
-  w = new CA({
+  b = new CA({
     readyCallback: async n => {
       var s, a, o;
       const t = n.getState();
@@ -6977,17 +6977,17 @@ const SA = p.memo(() => (p.useEffect(() => {
       clearInterval(n.current)
     }, []);
     const s = () => {
-      performance.now() - t.current < 200 && w.viewport.zoomIn(), clearInterval(n.current)
+      performance.now() - t.current < 200 && b.viewport.zoomIn(), clearInterval(n.current)
     };
     return e.jsx("button", {
       className: N.button,
       onPointerDown: () => {
         t.current = performance.now(), n.current = setInterval(() => {
-          w.viewport.zoomIn()
+          b.viewport.zoomIn()
         }, 90)
       },
       onPointerUp: () => {
-        performance.now() - t.current < 200 && w.viewport.zoomIn(), clearInterval(n.current)
+        performance.now() - t.current < 200 && b.viewport.zoomIn(), clearInterval(n.current)
       },
       onPointerLeave: s,
       onPointerOut: s,
@@ -7005,7 +7005,7 @@ const SA = p.memo(() => (p.useEffect(() => {
     const n = p.useRef(null),
       t = p.useRef(null),
       s = () => {
-        performance.now() - t.current < 200 && w.viewport.zoomOut(), clearInterval(n.current)
+        performance.now() - t.current < 200 && b.viewport.zoomOut(), clearInterval(n.current)
       };
     return p.useEffect(() => () => {
       clearInterval(n.current)
@@ -7015,11 +7015,11 @@ const SA = p.memo(() => (p.useEffect(() => {
       className: N.button,
       onPointerDown: () => {
         t.current = performance.now(), n.current = setInterval(() => {
-          w.viewport.zoomOut()
+          b.viewport.zoomOut()
         }, 90)
       },
       onPointerUp: () => {
-        performance.now() - t.current < 200 && w.viewport.zoomOut(), clearInterval(n.current)
+        performance.now() - t.current < 200 && b.viewport.zoomOut(), clearInterval(n.current)
       },
       onPointerLeave: s,
       onPointerOut: s,
@@ -7309,7 +7309,7 @@ const SA = p.memo(() => (p.useEffect(() => {
       className: o.join(" "),
       onPointerUp: () => {
         if (s || a) return;
-        const i = w.mainImage.getPixelColor({
+        const i = b.mainImage.getPixelColor({
           coords: t
         });
         n(Ea(i))
@@ -8001,11 +8001,11 @@ const SA = p.memo(() => (p.useEffect(() => {
     return e.jsxs("div", {
       className: `${x.item} ${x.active}`,
       onPointerUp: () => {
-        t.push("/"), w.viewport.viewport.animate({
+        t.push("/"), b.viewport.viewport.animate({
           scale: 25,
           time: 400,
           position: s
-        }), w.mainImage.selectedPixel.draw(s), a(Ft(s)), t.push("/")
+        }), b.mainImage.selectedPixel.draw(s), a(Ft(s)), t.push("/")
       },
       children: [e.jsxs("div", {
         className: x.info_container,
@@ -8047,11 +8047,11 @@ const SA = p.memo(() => (p.useEffect(() => {
     return e.jsxs("div", {
       className: `${x.item} ${x.active}`,
       onPointerUp: () => {
-        t.push("/"), w.viewport.viewport.animate({
+        t.push("/"), b.viewport.viewport.animate({
           scale: 25,
           time: 400,
           position: s
-        }), w.mainImage.selectedPixel.draw(s), a(Ft(s)), t.push("/")
+        }), b.mainImage.selectedPixel.draw(s), a(Ft(s)), t.push("/")
       },
       children: [e.jsxs("div", {
         className: x.info_container,
@@ -8897,7 +8897,7 @@ const SA = p.memo(() => (p.useEffect(() => {
       [c, d] = p.useState(0),
       [m, A] = p.useState(0),
       [h, _] = p.useState(0),
-      [b, y] = p.useState([]);
+      [v, y] = p.useState([]);
     return p.useEffect(() => {
       try {
         Q.getStats().then(f => {
@@ -9033,8 +9033,8 @@ const SA = p.memo(() => (p.useEffect(() => {
       const m = setInterval(() => {
         const h = Date.now() - r,
           _ = o - h,
-          b = Math.round(_ / 1e3);
-        d(oy(b))
+          v = Math.round(_ / 1e3);
+        d(oy(v))
       }, 500);
       return () => {
         clearInterval(m)
@@ -9267,7 +9267,7 @@ const SA = p.memo(() => (p.useEffect(() => {
         f.dailyId === a.id && Date.now() - f.ts < 10 * 60 * 1e3 ? h(!0) : h(!1), Date.now() - f.ts >= 10 * 60 * 1e3 && localStorage.removeItem(s)
       }
     }, [a]);
-    const b = async () => {
+    const v = async () => {
       try {
         const y = a.prices[0],
           f = await Q.startShopTransaction({
@@ -9344,7 +9344,7 @@ const SA = p.memo(() => (p.useEffect(() => {
             disabled: i === u.pending || A,
             className: k.claim_button,
             onPointerUp: async () => {
-              n || A || b()
+              n || A || v()
             },
             children: f
           }), c === "" && _ === de && e.jsx("button", {
@@ -9502,8 +9502,8 @@ const SA = p.memo(() => (p.useEffect(() => {
                 h = [k.reward_item_amount],
                 _ = [k.reward_item_title];
               r.id === s && (A.push(k.reward_item_active), h.push(k.reward_item_amount_active)), d && _.push(k.reward_item_title_premium), d && !r.active && h.push(k.reward_item_amount_premium);
-              let b = Fy;
-              return c >= 8 && c <= 15 && (b = zy), c >= 16 && c <= 23 && (b = Hy), c >= 24 && c <= 31 && (b = qy), e.jsxs("div", {
+              let v = Fy;
+              return c >= 8 && c <= 15 && (v = zy), c >= 16 && c <= 23 && (v = Hy), c >= 24 && c <= 31 && (v = qy), e.jsxs("div", {
                 className: A.join(" "),
                 onPointerUp: () => {
                   n(M({
@@ -9518,7 +9518,7 @@ const SA = p.memo(() => (p.useEffect(() => {
                     className: _.join(" "),
                     children: ["Day ", c + 1]
                   }), e.jsx("img", {
-                    src: b,
+                    src: v,
                     style: {
                       position: "absolute",
                       bottom: -12
@@ -9827,12 +9827,12 @@ const SA = p.memo(() => (p.useEffect(() => {
             rootMargin: "0px",
             threshold: 1
           },
-          h = (_, b) => {
+          h = (_, v) => {
             _.forEach(y => {
               y.intersectionRatio >= 1 && (n(rt.getList({
                 offset: o,
                 limit: i
-              })), b.unobserve(t.current))
+              })), v.unobserve(t.current))
             })
           };
         m = new IntersectionObserver(h, A), m.observe(t.current)
@@ -10032,7 +10032,7 @@ const SA = p.memo(() => (p.useEffect(() => {
                   url: `${m.payload.url}?time=${Date.now()}`,
                   type: Qe.referred
                 };
-              n(jm(A)), w.mainImage.worldTemplate.deleteTemplate(i.id), w.mainImage.worldTemplate.add(A), n(Ii())
+              n(jm(A)), b.mainImage.worldTemplate.deleteTemplate(i.id), b.mainImage.worldTemplate.add(A), n(Ii())
             } else await n(M({
               id: performance.now(),
               text: "Something wrong"
@@ -11103,16 +11103,16 @@ const SA = p.memo(() => (p.useEffect(() => {
                 posX: s,
                 posY: a
               })).status === 200) {
-              r && w.mainImage.worldTemplate.deleteTemplate(r.id);
+              r && b.mainImage.worldTemplate.deleteTemplate(r.id);
               const _ = await o(rt.getTemplateById({
                   id: c.id
                 })),
-                b = {
+                v = {
                   ..._.payload,
                   url: `${_.payload.url}?time=${Date.now()}`,
                   type: Qe.my
                 };
-              o(Pm(b)), o(Ii()), await w.mainImage.worldTemplate.add(b), o(M({
+              o(Pm(v)), o(Ii()), await b.mainImage.worldTemplate.add(v), o(M({
                 id: performance.now(),
                 text: "Create successfully!",
                 icon: ""
@@ -11211,17 +11211,17 @@ const SA = p.memo(() => (p.useEffect(() => {
       if (n !== null) {
         h(!0);
         const _ = async () => {
-          const b = document.createElement("canvas"),
-            y = b.getContext("2d");
+          const v = document.createElement("canvas"),
+            y = v.getContext("2d");
           y.imageSmoothingEnabled = !1;
           const f = n.width / n.height;
           let j, T;
           f > 1 ? (j = r, T = r / f) : (T = r, j = r * f);
           const ve = (r - j) / 2,
             we = (r - T) / 2;
-          b.width = r, b.height = r, y.drawImage(n, ve, we, j, T);
+          v.width = r, v.height = r, y.drawImage(n, ve, we, j, T);
           const z = y.getImageData(0, 0, r, r);
-          xb(z), y.putImageData(z, 0, 0), a(z), i(b.toDataURL())
+          xb(z), y.putImageData(z, 0, 0), a(z), i(v.toDataURL())
         };
         setTimeout(() => {
           _().then(() => {
@@ -11351,7 +11351,7 @@ const SA = p.memo(() => (p.useEffect(() => {
       m = ko(d),
       A = _a(m),
       h = l(f => f.user.hasCaptchaCode),
-      [_, b] = p.useState(""),
+      [_, v] = p.useState(""),
       y = async () => {
         try {
           if (d !== r) {
@@ -11447,7 +11447,7 @@ const SA = p.memo(() => (p.useEffect(() => {
                 placeholder: "Enter your code...",
                 value: _,
                 onChange: f => {
-                  b(f.target.value)
+                  v(f.target.value)
                 }
               })
             })]
@@ -11529,9 +11529,9 @@ const SA = p.memo(() => (p.useEffect(() => {
         r && await d.disconnect(), d.setConnectRequestParameters({
           state: "loading"
         }), A(!1);
-        const b = await Q.generateTonProofPayload();
-        if (b.status === 200 && b.data && b.data.payload) {
-          const y = b.data;
+        const v = await Q.generateTonProofPayload();
+        if (v.status === 200 && v.data && v.data.payload) {
+          const y = v.data;
           d.setConnectRequestParameters({
             state: "ready",
             value: {
@@ -11545,15 +11545,19 @@ const SA = p.memo(() => (p.useEffect(() => {
       };
     return p.useEffect(() => {
       var _;
-      !i || s !== u.fulfilled || r && m && (_ = r == null ? void 0 : r.connectItems) != null && _.tonProof && !("error" in r.connectItems.tonProof) && Q.checkTonProof(r.connectItems.tonProof.proof, r.account).then(b => {
-        b.status === 200 && b.data.success ? (n(Zl(Do(c))), n(M({
+      !i || s !== u.fulfilled || r && m && (_ = r == null ? void 0 : r.connectItems) != null && _.tonProof && !("error" in r.connectItems.tonProof) && Q.checkTonProof(r.connectItems.tonProof.proof, r.account).then(v => {
+        if (v.status === 200 && v.data.success) n(Zl(Do(c))), n(M({
           id: performance.now(),
           text: "Success!",
           icon: ""
-        }))) : n(M({
-          id: performance.now(),
-          text: "Something went wrong. Try later, or try another wallet."
-        }))
+        }));
+        else {
+          let y = "Something went wrong. Try later, or try another wallet.";
+          v.data && v.data.error && (y = v.data.error), n(M({
+            id: performance.now(),
+            text: y
+          }))
+        }
       })
     }, [r, i, s, m]), {
       handleConnect: h,
@@ -11614,12 +11618,12 @@ const SA = p.memo(() => (p.useEffect(() => {
     a >= 1e5 && (h += 1), d && (h += 1), o.forEach(f => {
       f.timestamp
     });
-    const [_, b] = p.useState(!1), y = f => {
+    const [_, v] = p.useState(!1), y = f => {
       if (m) {
-        b(f);
+        v(f);
         return
       }
-      b(!1)
+      v(!1)
     };
     return e.jsxs(ee, {
       children: [e.jsx(sj, {
@@ -11911,10 +11915,10 @@ const SA = p.memo(() => (p.useEffect(() => {
         x: 0,
         y: 0
       }),
-      [_, b] = p.useState(!1);
+      [_, v] = p.useState(!1);
     return p.useEffect(() => {
       if (s !== null) {
-        b(!0);
+        v(!0);
         const y = async () => {
           const f = document.createElement("canvas"),
             j = f.getContext("2d");
@@ -11930,7 +11934,7 @@ const SA = p.memo(() => (p.useEffect(() => {
         };
         setTimeout(() => {
           y().then(() => {
-            b(!1)
+            v(!1)
           })
         }, 100)
       }
@@ -12236,7 +12240,7 @@ const SA = p.memo(() => (p.useEffect(() => {
       A = r.lastSurvivalRepaints - r.repaints,
       h = i && m,
       _ = s && s === a,
-      b = _ ? "Winning" : "Won",
+      v = _ ? "Winning" : "Won",
       y = _ ? "😔 Losing" : "😔 Lost";
     return e.jsxs("div", {
       className: H.round_container,
@@ -12253,7 +12257,7 @@ const SA = p.memo(() => (p.useEffect(() => {
           children: _ && e.jsx(tr, {})
         }), h && e.jsx("div", {
           className: R(H.round_status_success, H.success),
-          children: b
+          children: v
         }), !h && e.jsx("div", {
           className: R(H.round_status_fail, H.fail),
           children: y
@@ -12563,7 +12567,7 @@ const SA = p.memo(() => (p.useEffect(() => {
             children: [e.jsxs("div", {
               className: V.info_row,
               onPointerUp: () => {
-                t.push("/"), n(ca()), w.viewport.viewport.animate({
+                t.push("/"), n(ca()), b.viewport.viewport.animate({
                   scale: 4,
                   time: 400,
                   position: {
@@ -12970,7 +12974,7 @@ const SA = p.memo(() => (p.useEffect(() => {
         count: 0,
         limit: 1
       }),
-      [b, y] = p.useState({
+      [v, y] = p.useState({
         count: 0,
         limit: 5e3
       });
@@ -13092,9 +13096,9 @@ const SA = p.memo(() => (p.useEffect(() => {
               }), e.jsxs("div", {
                 className: R(S.gray),
                 children: [Se({
-                  num: b.count
+                  num: v.count
                 }), "/", Se({
-                  num: b.limit
+                  num: v.limit
                 })]
               })]
             }), e.jsxs("div", {
@@ -13496,8 +13500,8 @@ const hN = () => {
         m = null;
       const A = h => {
         a === null && (a = h);
-        const b = (h - a) / r;
-        i !== h && (o = Math.min(b * c, c), n.current && (n.current.style.width = `${o}%`)), i = h, o < c && (d = requestAnimationFrame(A))
+        const v = (h - a) / r;
+        i !== h && (o = Math.min(v * c, c), n.current && (n.current.style.width = `${o}%`)), i = h, o < c && (d = requestAnimationFrame(A))
       };
       return t === Pe.start && (d = requestAnimationFrame(A), n.current && (n.current.style.display = "block")), t === Pe.finish && (n.current && (n.current.style.width = "100%"), m = setTimeout(() => {
         n.current && (n.current.style.display = "none", n.current.style.width = "0")
@@ -13899,11 +13903,11 @@ const hN = () => {
         }
         if (r === u.pending) return;
         c(u.pending);
-        const b = o.isOnePiece ? 1 : i;
+        const v = o.isOnePiece ? 1 : i;
         try {
           const f = await Q.buy({
             type: Number(a),
-            qty: b,
+            qty: v,
             pixanosColor: h
           });
           f.status === 200 && ((y = f == null ? void 0 : f.data) == null ? void 0 : y.ok) === !0 && window.Telegram.WebApp.openInvoice(f.data.result, j => {
@@ -13928,7 +13932,7 @@ const hN = () => {
                 }))
               } else s(Rn({
                 product: a,
-                amount: b
+                amount: v
               }));
               m(!0), (we = (ve = window.Telegram.WebApp) == null ? void 0 : ve.HapticFeedback) == null || we.notificationOccurred("error"), t(!0)
             } else n("Error, try again.")
@@ -14033,7 +14037,7 @@ const _2 = () => {
       [c, d] = p.useState(Bt(s).max),
       [m, A] = p.useState(Bt(s).min),
       [h, _] = p.useState(Bt(s).step),
-      b = c === 5e3 ? "5000" : `${c}+`,
+      v = c === 5e3 ? "5000" : `${c}+`,
       y = j => {
         const T = j[0];
         n(Qs(yo(T, h))), r([yo(T, h)])
@@ -14101,7 +14105,7 @@ const _2 = () => {
         })
       }), e.jsxs("div", {
         className: xo.max_value,
-        children: [" ", b]
+        children: [" ", v]
       })]
     })
   },
@@ -14292,12 +14296,12 @@ void main() {
 }`,
   sr = 7200,
   H2 = 1;
-let v = null,
+let w = null,
   xe = null,
   zn = -1,
   js = 0;
 async function q2(n) {
-  if (v = L2().getContext("webgl"), !v) {
+  if (w = L2().getContext("webgl"), !w) {
     console.log("Your browser doesn't support WebGL :(");
     return
   }
@@ -14309,7 +14313,7 @@ function L2() {
   return n.id = "canvasSnap", n.width = window.innerWidth, n.height = window.innerHeight, n.style.width = `${window.innerWidth}px`, n.style.height = `${window.innerHeight}px`, n.style.position = "fixed", n.style.top = "50%", n.style.left = "50%", n.style.zIndex = "980", n.style.transform = "translate(-50%, -50%)", n.style.opacity = "0", n.style.transition = "2s ease opacity", document.body.appendChild(n), window.getComputedStyle(n).opacity, n.style.opacity = "1", n
 }
 async function V2() {
-  v.enable(v.BLEND), v.blendFunc(v.SRC_ALPHA, v.ONE_MINUS_SRC_ALPHA), v.clearColor(0, 0, 0, 0), v.viewport(0, 0, v.canvas.width, v.canvas.height), xe = await G2(v), v.useProgram(xe)
+  w.enable(w.BLEND), w.blendFunc(w.SRC_ALPHA, w.ONE_MINUS_SRC_ALPHA), w.clearColor(0, 0, 0, 0), w.viewport(0, 0, w.canvas.width, w.canvas.height), xe = await G2(w), w.useProgram(xe)
 }
 async function G2(n, t, s) {
   const a = F2,
@@ -14335,15 +14339,15 @@ async function X2(n) {
 
 function J2(n) {
   const t = Y2();
-  var s = v.createTexture();
-  v.bindTexture(v.TEXTURE_2D, s), v.texParameteri(v.TEXTURE_2D, v.TEXTURE_WRAP_S, v.CLAMP_TO_EDGE), v.texParameteri(v.TEXTURE_2D, v.TEXTURE_WRAP_T, v.CLAMP_TO_EDGE), v.texParameteri(v.TEXTURE_2D, v.TEXTURE_MIN_FILTER, v.NEAREST), v.texParameteri(v.TEXTURE_2D, v.TEXTURE_MAG_FILTER, v.NEAREST), v.texImage2D(v.TEXTURE_2D, 0, v.RGBA, v.RGBA, v.UNSIGNED_BYTE, t);
-  const a = v.getUniformLocation(xe, "u_Texture");
-  v.uniform1i(a, 0)
+  var s = w.createTexture();
+  w.bindTexture(w.TEXTURE_2D, s), w.texParameteri(w.TEXTURE_2D, w.TEXTURE_WRAP_S, w.CLAMP_TO_EDGE), w.texParameteri(w.TEXTURE_2D, w.TEXTURE_WRAP_T, w.CLAMP_TO_EDGE), w.texParameteri(w.TEXTURE_2D, w.TEXTURE_MIN_FILTER, w.NEAREST), w.texParameteri(w.TEXTURE_2D, w.TEXTURE_MAG_FILTER, w.NEAREST), w.texImage2D(w.TEXTURE_2D, 0, w.RGBA, w.RGBA, w.UNSIGNED_BYTE, t);
+  const a = w.getUniformLocation(xe, "u_Texture");
+  w.uniform1i(a, 0)
 }
 
 function Y2() {
   const n = new ImageData(I.width, I.height);
-  return n.data.set(w.mainImage.imageData.slice(0)), n
+  return n.data.set(b.mainImage.imageData.slice(0)), n
 }
 
 function W2(n) {
@@ -14379,13 +14383,13 @@ function K2(n) {
     textureTop: r,
     min: c
   } = W2(n);
-  js = c * c, Je(v, xe, "u_AnimationDuration", sr), Je(v, xe, "u_ParticleSize", H2), Je(v, xe, "u_ViewportWidth", t), Je(v, xe, "u_ViewportHeight", s), Je(v, xe, "u_TextureWidth", a), Je(v, xe, "u_TextureHeight", o), Je(v, xe, "u_TextureLeft", i), Je(v, xe, "u_TextureTop", r);
+  js = c * c, Je(w, xe, "u_AnimationDuration", sr), Je(w, xe, "u_ParticleSize", H2), Je(w, xe, "u_ViewportWidth", t), Je(w, xe, "u_ViewportHeight", s), Je(w, xe, "u_TextureWidth", a), Je(w, xe, "u_TextureHeight", o), Je(w, xe, "u_TextureLeft", i), Je(w, xe, "u_TextureTop", r);
   const d = new Array(js);
   for (let h = 0; h < js; h++) d[h] = h;
-  const m = v.createBuffer();
-  v.bindBuffer(v.ARRAY_BUFFER, m), v.bufferData(v.ARRAY_BUFFER, new Float32Array(d), v.STATIC_DRAW);
-  const A = v.getAttribLocation(xe, "a_ParticleIndex");
-  v.enableVertexAttribArray(A), v.vertexAttribPointer(A, 1, v.FLOAT, !1, 0, 0)
+  const m = w.createBuffer();
+  w.bindBuffer(w.ARRAY_BUFFER, m), w.bufferData(w.ARRAY_BUFFER, new Float32Array(d), w.STATIC_DRAW);
+  const A = w.getAttribLocation(xe, "a_ParticleIndex");
+  w.enableVertexAttribArray(A), w.vertexAttribPointer(A, 1, w.FLOAT, !1, 0, 0)
 }
 
 function ar() {
@@ -14393,13 +14397,13 @@ function ar() {
 }
 
 function Z2(n) {
-  v.clear(v.COLOR_BUFFER_BIT), zn == -1 && (zn = n);
+  w.clear(w.COLOR_BUFFER_BIT), zn == -1 && (zn = n);
   const s = n - zn;
   if (s > sr) {
     zn = -1, document.getElementById("canvasSnap").remove();
     return
   }
-  Je(v, xe, "u_ElapsedTime", s), v.drawArrays(v.POINTS, 0, js), ar()
+  Je(w, xe, "u_ElapsedTime", s), w.drawArrays(w.POINTS, 0, js), ar()
 }
 
 function Je(n, t, s, a) {
@@ -14415,7 +14419,7 @@ const $2 = () => {
     if (p.useEffect(() => {
         s && a && (async () => {
           var c, d;
-          w.viewport.viewport.fit(), w.viewport.viewport.moveCenter(w.viewport.viewport.worldWidth / 2, w.viewport.viewport.worldHeight / 2), t(Za(!0)), setTimeout(() => {
+          b.viewport.viewport.fit(), b.viewport.viewport.moveCenter(b.viewport.viewport.worldWidth / 2, b.viewport.viewport.worldHeight / 2), t(Za(!0)), setTimeout(() => {
             t(Za(!1)), t(fp())
           }, 7e3);
           try {
@@ -14423,7 +14427,7 @@ const $2 = () => {
           } catch (m) {
             document.getElementById("canvasHolder").style.opacity = "1", console.error(m, "cannot run pixanos")
           }
-          n.push("/"), w.mainImage.pixanosRepaint(a.info.seed, I.width, a.info.percentage, a.info.color), (d = (c = window.Telegram.WebApp) == null ? void 0 : c.HapticFeedback) == null || d.notificationOccurred("error")
+          n.push("/"), b.mainImage.pixanosRepaint(a.info.seed, I.width, a.info.percentage, a.info.color), (d = (c = window.Telegram.WebApp) == null ? void 0 : c.HapticFeedback) == null || d.notificationOccurred("error")
         })()
       }, [s, a]), !a) return null;
     const i = a.user.squad;
@@ -14987,7 +14991,7 @@ const $2 = () => {
   _I = () => {
     const [n, t] = ae.useState(gI());
     return p.useEffect(() => {
-      localStorage.setItem("canvasFps", String(n[0])), w.ticker.setFps(n[0])
+      localStorage.setItem("canvasFps", String(n[0])), b.ticker.setFps(n[0])
     }, [n]), e.jsxs(e.Fragment, {
       children: [e.jsx(pI, {
         values: n
@@ -15781,10 +15785,10 @@ const $2 = () => {
         t.offEvent("fullscreenChanged", a)
       }
     }, [n]), p.useEffect(() => {
-      if (w) {
+      if (b) {
         const a = window.innerWidth,
           o = window.innerHeight;
-        w.app.renderer.resize(a, o), w.viewport.viewport.resize(a, o)
+        b.app.renderer.resize(a, o), b.viewport.viewport.resize(a, o)
       }
     }, [s]), null
   };
