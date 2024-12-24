@@ -1,5 +1,5 @@
 import {
-  r as ot,
+  r as De,
   R as fl
 } from "./react-DjWS3H3h.js";
 import {
@@ -24,22 +24,22 @@ var ct;
 (function(e) {
   e[e.UNKNOWN_ERROR = 0] = "UNKNOWN_ERROR", e[e.BAD_REQUEST_ERROR = 1] = "BAD_REQUEST_ERROR", e[e.MANIFEST_NOT_FOUND_ERROR = 2] = "MANIFEST_NOT_FOUND_ERROR", e[e.MANIFEST_CONTENT_ERROR = 3] = "MANIFEST_CONTENT_ERROR", e[e.UNKNOWN_APP_ERROR = 100] = "UNKNOWN_APP_ERROR", e[e.USER_REJECTS_ERROR = 300] = "USER_REJECTS_ERROR", e[e.METHOD_NOT_SUPPORTED = 400] = "METHOD_NOT_SUPPORTED"
 })(ct || (ct = {}));
-var Ro;
+var Io;
 (function(e) {
   e[e.UNKNOWN_ERROR = 0] = "UNKNOWN_ERROR", e[e.METHOD_NOT_SUPPORTED = 400] = "METHOD_NOT_SUPPORTED"
-})(Ro || (Ro = {}));
+})(Io || (Io = {}));
 var Bt;
 (function(e) {
   e[e.UNKNOWN_ERROR = 0] = "UNKNOWN_ERROR", e[e.BAD_REQUEST_ERROR = 1] = "BAD_REQUEST_ERROR", e[e.UNKNOWN_APP_ERROR = 100] = "UNKNOWN_APP_ERROR", e[e.USER_REJECTS_ERROR = 300] = "USER_REJECTS_ERROR", e[e.METHOD_NOT_SUPPORTED = 400] = "METHOD_NOT_SUPPORTED"
 })(Bt || (Bt = {}));
-var Io;
-(function(e) {
-  e[e.UNKNOWN_ERROR = 0] = "UNKNOWN_ERROR", e[e.BAD_REQUEST_ERROR = 1] = "BAD_REQUEST_ERROR", e[e.UNKNOWN_APP_ERROR = 100] = "UNKNOWN_APP_ERROR", e[e.USER_REJECTS_ERROR = 300] = "USER_REJECTS_ERROR", e[e.METHOD_NOT_SUPPORTED = 400] = "METHOD_NOT_SUPPORTED"
-})(Io || (Io = {}));
 var Bo;
 (function(e) {
-  e[e.UNKNOWN_ERROR = 0] = "UNKNOWN_ERROR", e[e.BAD_REQUEST_ERROR = 1] = "BAD_REQUEST_ERROR", e[e.UNKNOWN_APP_ERROR = 100] = "UNKNOWN_APP_ERROR", e[e.METHOD_NOT_SUPPORTED = 400] = "METHOD_NOT_SUPPORTED"
+  e[e.UNKNOWN_ERROR = 0] = "UNKNOWN_ERROR", e[e.BAD_REQUEST_ERROR = 1] = "BAD_REQUEST_ERROR", e[e.UNKNOWN_APP_ERROR = 100] = "UNKNOWN_APP_ERROR", e[e.USER_REJECTS_ERROR = 300] = "USER_REJECTS_ERROR", e[e.METHOD_NOT_SUPPORTED = 400] = "METHOD_NOT_SUPPORTED"
 })(Bo || (Bo = {}));
+var Wo;
+(function(e) {
+  e[e.UNKNOWN_ERROR = 0] = "UNKNOWN_ERROR", e[e.BAD_REQUEST_ERROR = 1] = "BAD_REQUEST_ERROR", e[e.UNKNOWN_APP_ERROR = 100] = "UNKNOWN_APP_ERROR", e[e.METHOD_NOT_SUPPORTED = 400] = "METHOD_NOT_SUPPORTED"
+})(Wo || (Wo = {}));
 var dn;
 (function(e) {
   e.MAINNET = "-239", e.TESTNET = "-3"
@@ -311,7 +311,7 @@ class gt extends j {
     super(...t), Object.setPrototypeOf(this, gt.prototype)
   }
 }
-const Wo = {
+const Po = {
   [ct.UNKNOWN_ERROR]: gt,
   [ct.USER_REJECTS_ERROR]: lr,
   [ct.BAD_REQUEST_ERROR]: ar,
@@ -322,7 +322,7 @@ const Wo = {
 class Sl {
   parseError(t) {
     let n = gt;
-    return t.code in Wo && (n = Wo[t.code] || gt), new n(t.message)
+    return t.code in Po && (n = Po[t.code] || gt), new n(t.message)
   }
 }
 const kl = new Sl;
@@ -331,7 +331,7 @@ class _l {
     return "error" in t
   }
 }
-const Po = {
+const Uo = {
   [Bt.UNKNOWN_ERROR]: gt,
   [Bt.USER_REJECTS_ERROR]: lr,
   [Bt.BAD_REQUEST_ERROR]: ar,
@@ -346,7 +346,7 @@ class El extends _l {
   }
   parseAndThrowError(t) {
     let n = gt;
-    throw t.error.code in Po && (n = Po[t.error.code] || gt), new n(t.error.message)
+    throw t.error.code in Uo && (n = Uo[t.error.code] || gt), new n(t.error.message)
   }
   convertFromRpcResponse(t) {
     return {
@@ -381,7 +381,7 @@ function Ll(e) {
   return e.slice(-1) === "/" ? e.slice(0, -1) : e
 }
 
-function Bi(e, t) {
+function Wi(e, t) {
   return Ll(e) + "/" + t
 }
 
@@ -391,11 +391,11 @@ function ft(e) {
   return t.protocol === "tg:" || t.hostname === "t.me"
 }
 
-function Wi(e) {
+function Pi(e) {
   return e.replaceAll(".", "%2E").replaceAll("-", "%2D").replaceAll("_", "%5F").replaceAll("&", "-").replaceAll("=", "__").replaceAll("%", "--")
 }
 
-function Pi(e, t) {
+function Ui(e, t) {
   return D(this, void 0, void 0, function*() {
     return new Promise((n, r) => {
       var o, i;
@@ -434,7 +434,7 @@ function tn(e, t) {
           signal: s.signal
         })
       } catch (u) {
-        c = u, l++, l < o && (yield Pi(i))
+        c = u, l++, l < o && (yield Ui(i))
       }
     }
     throw c
@@ -447,7 +447,7 @@ function ve(...e) {
   } catch {}
 }
 
-function tt(...e) {
+function nt(...e) {
   try {
     console.error("[TON_CONNECT_SDK]", ...e)
   } catch {}
@@ -494,7 +494,7 @@ function Tl(e, t) {
         L = o,
         I = r,
         W = i;
-      if (yield Pi(f), v === n && L === o && I === r && W === i) return yield l(i, ...I ?? []);
+      if (yield Ui(f), v === n && L === o && I === r && W === i) return yield l(i, ...I ?? []);
       throw new j("Resource recreation was aborted by a new resource creation")
     })
   }
@@ -568,7 +568,7 @@ class xr {
     return D(this, void 0, void 0, function*() {
       const s = {};
       typeof o == "number" ? s.ttl = o : (s.ttl = o == null ? void 0 : o.ttl, s.signal = o == null ? void 0 : o.signal, s.attempts = o == null ? void 0 : o.attempts);
-      const l = new URL(Bi(this.bridgeUrl, this.postPath));
+      const l = new URL(Wi(this.bridgeUrl, this.postPath));
       l.searchParams.append("client_id", this.sessionId), l.searchParams.append("to", n), l.searchParams.append("ttl", ((s == null ? void 0 : s.ttl) || this.defaultTtl).toString()), l.searchParams.append("topic", r);
       const c = Jr.encode(t);
       yield tn(u => D(this, void 0, void 0, function*() {
@@ -582,7 +582,7 @@ class xr {
     })
   }
   pause() {
-    this.eventSource.dispose().catch(t => tt(`Bridge pause failed, ${t}`))
+    this.eventSource.dispose().catch(t => nt(`Bridge pause failed, ${t}`))
   }
   unPause() {
     return D(this, void 0, void 0, function*() {
@@ -591,7 +591,7 @@ class xr {
   }
   close() {
     return D(this, void 0, void 0, function*() {
-      yield this.eventSource.dispose().catch(t => tt(`Bridge close failed, ${t}`))
+      yield this.eventSource.dispose().catch(t => nt(`Bridge close failed, ${t}`))
     })
   }
   setListener(t) {
@@ -647,7 +647,7 @@ function Rl(e) {
         n(new j("Bridge connection aborted"));
         return
       }
-      const l = new URL(Bi(e.bridgeUrl, e.ssePath));
+      const l = new URL(Wi(e.bridgeUrl, e.ssePath));
       l.searchParams.append("client_id", e.sessionId);
       const c = yield e.bridgeGatewayStorage.getLastEventId();
       if (c && l.searchParams.append("last_event_id", c), s.aborted) {
@@ -812,7 +812,7 @@ class fn {
     })
   }
 }
-const Ui = 2;
+const Di = 2;
 class hn {
   constructor(t, n) {
     this.storage = t, this.walletConnectionSource = n, this.type = "http", this.standardUniversalLink = "tc://", this.pendingRequests = new Map, this.session = null, this.gateway = null, this.pendingGateways = [], this.listeners = [], this.defaultOpeningDeadlineMS = 12e3, this.defaultRetryTimeoutMS = 2e3, this.connectionStorage = new fn(t)
@@ -984,7 +984,7 @@ class hn {
       if (n.id !== void 0) {
         const o = yield this.connectionStorage.getLastWalletEventId();
         if (o !== void 0 && n.id <= o) {
-          tt(`Received event id (=${n.id}) must be greater than stored last wallet event id (=${o}) `);
+          nt(`Received event id (=${n.id}) must be greater than stored last wallet event id (=${o}) `);
           return
         }
         n.event !== "connect" && (yield this.connectionStorage.storeLastWalletEventId(n.id))
@@ -1028,11 +1028,11 @@ class hn {
   }
   generateRegularUniversalLink(t, n) {
     const r = new URL(t);
-    return r.searchParams.append("v", Ui.toString()), r.searchParams.append("id", this.session.sessionCrypto.sessionId), r.searchParams.append("r", JSON.stringify(n)), r.toString()
+    return r.searchParams.append("v", Di.toString()), r.searchParams.append("id", this.session.sessionCrypto.sessionId), r.searchParams.append("r", JSON.stringify(n)), r.toString()
   }
   generateTGUniversalLink(t, n) {
     const o = this.generateRegularUniversalLink("about:blank", n).split("?")[1],
-      i = "tonconnect-" + Wi(o),
+      i = "tonconnect-" + Pi(o),
       s = this.convertToDirectLink(t),
       l = new URL(s);
     return l.searchParams.append("startapp", i), l.toString()
@@ -1071,17 +1071,17 @@ class hn {
   }
 }
 
-function Uo(e, t) {
-  return Di(e, [t])
+function Do(e, t) {
+  return Ni(e, [t])
 }
 
-function Di(e, t) {
+function Ni(e, t) {
   return !e || typeof e != "object" ? !1 : t.every(n => n in e)
 }
 
 function Il(e) {
   try {
-    return !Uo(e, "tonconnect") || !Uo(e.tonconnect, "walletInfo") ? !1 : Di(e.tonconnect.walletInfo, ["name", "app_name", "image", "about_url", "platforms"])
+    return !Do(e, "tonconnect") || !Do(e.tonconnect, "walletInfo") ? !1 : Ni(e.tonconnect.walletInfo, ["name", "app_name", "image", "about_url", "platforms"])
   } catch {
     return !1
   }
@@ -1193,7 +1193,7 @@ class Le {
     return !!t && n in t && typeof t[n] == "object" && "tonconnect" in t[n]
   }
   connect(t) {
-    this._connect(Ui, t)
+    this._connect(Di, t)
   }
   restoreConnection() {
     return D(this, void 0, void 0, function*() {
@@ -1498,15 +1498,15 @@ class Ur {
       try {
         if (t = yield(yield fetch(this.walletsListSource)).json(), !Array.isArray(t)) throw new no("Wrong wallets list format, wallets list must be an array.");
         const o = t.filter(i => !this.isCorrectWalletConfigDTO(i));
-        o.length && (tt(`Wallet(s) ${o.map(i=>i.name).join(", ")} config format is wrong. They were removed from the wallets list.`), t = t.filter(i => this.isCorrectWalletConfigDTO(i)))
+        o.length && (nt(`Wallet(s) ${o.map(i=>i.name).join(", ")} config format is wrong. They were removed from the wallets list.`), t = t.filter(i => this.isCorrectWalletConfigDTO(i)))
       } catch (r) {
-        tt(r), t = jl
+        nt(r), t = jl
       }
       let n = [];
       try {
         n = Le.getCurrentlyInjectedWallets()
       } catch (r) {
-        tt(r)
+        nt(r)
       }
       return this.mergeWalletsLists(this.walletConfigDTOListToWalletConfigList(t), n)
     })
@@ -1572,13 +1572,13 @@ function Kl(e, t) {
   $l("Connected wallet didn't provide information about max allowed messages in the SendTransaction request. Request may be rejected by the wallet.")
 }
 
-function Ni() {
+function Hi() {
   return {
     type: "request-version"
   }
 }
 
-function Hi(e) {
+function Fi(e) {
   return {
     type: "response-version",
     version: e
@@ -1607,21 +1607,21 @@ function qt(e, t) {
   }
 }
 
-function Fi(e) {
+function Oi(e) {
   return {
     type: "connection-started",
     custom_data: Lt(e)
   }
 }
 
-function Oi(e, t) {
+function ji(e, t) {
   return Object.assign({
     type: "connection-completed",
     is_success: !0
   }, qt(e, t))
 }
 
-function ji(e, t, n) {
+function Ki(e, t, n) {
   return {
     type: "connection-error",
     is_success: !1,
@@ -1631,21 +1631,21 @@ function ji(e, t, n) {
   }
 }
 
-function Ki(e) {
+function Vi(e) {
   return {
     type: "connection-restoring-started",
     custom_data: Lt(e)
   }
 }
 
-function Vi(e, t) {
+function qi(e, t) {
   return Object.assign({
     type: "connection-restoring-completed",
     is_success: !0
   }, qt(e, t))
 }
 
-function qi(e, t) {
+function Zi(e, t) {
   return {
     type: "connection-restoring-error",
     is_success: !1,
@@ -1669,13 +1669,13 @@ function oo(e, t) {
   }
 }
 
-function Zi(e, t, n) {
+function Gi(e, t, n) {
   return Object.assign(Object.assign({
     type: "transaction-sent-for-signature"
   }, qt(e, t)), oo(t, n))
 }
 
-function Gi(e, t, n, r) {
+function Qi(e, t, n, r) {
   return Object.assign(Object.assign({
     type: "transaction-signed",
     is_success: !0,
@@ -1683,7 +1683,7 @@ function Gi(e, t, n, r) {
   }, qt(e, t)), oo(t, n))
 }
 
-function Qi(e, t, n, r, o) {
+function zi(e, t, n, r, o) {
   return Object.assign(Object.assign({
     type: "transaction-signing-failed",
     is_success: !1,
@@ -1692,13 +1692,13 @@ function Qi(e, t, n, r, o) {
   }, qt(e, t)), oo(t, n))
 }
 
-function zi(e, t, n) {
+function Yi(e, t, n) {
   return Object.assign({
     type: "disconnection",
     scope: n
   }, qt(e, t))
 }
-class Yi {
+class Ji {
   constructor() {
     this.window = ur()
   }
@@ -1724,7 +1724,7 @@ class Yi {
 class Vl {
   constructor(t) {
     var n;
-    this.eventPrefix = "ton-connect-", this.tonConnectUiVersion = null, this.eventDispatcher = (n = t == null ? void 0 : t.eventDispatcher) !== null && n !== void 0 ? n : new Yi, this.tonConnectSdkVersion = t.tonConnectSdkVersion, this.init().catch()
+    this.eventPrefix = "ton-connect-", this.tonConnectUiVersion = null, this.eventDispatcher = (n = t == null ? void 0 : t.eventDispatcher) !== null && n !== void 0 ? n : new Ji, this.tonConnectSdkVersion = t.tonConnectSdkVersion, this.init().catch()
   }
   get version() {
     return Lt({
@@ -1742,7 +1742,7 @@ class Vl {
   setRequestVersionHandler() {
     return D(this, void 0, void 0, function*() {
       yield this.eventDispatcher.addEventListener("ton-connect-request-version", () => D(this, void 0, void 0, function*() {
-        yield this.eventDispatcher.dispatchEvent("ton-connect-response-version", Hi(this.tonConnectSdkVersion))
+        yield this.eventDispatcher.dispatchEvent("ton-connect-response-version", Fi(this.tonConnectSdkVersion))
       }))
     })
   }
@@ -1754,7 +1754,7 @@ class Vl {
             t(r.detail.version)
           }, {
             once: !0
-          }), yield this.eventDispatcher.dispatchEvent("ton-connect-ui-request-version", Ni())
+          }), yield this.eventDispatcher.dispatchEvent("ton-connect-ui-request-version", Hi())
         } catch (r) {
           n(r)
         }
@@ -1768,61 +1768,61 @@ class Vl {
   }
   trackConnectionStarted(...t) {
     try {
-      const n = Fi(this.version, ...t);
+      const n = Oi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackConnectionCompleted(...t) {
     try {
-      const n = Oi(this.version, ...t);
+      const n = ji(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackConnectionError(...t) {
     try {
-      const n = ji(this.version, ...t);
+      const n = Ki(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackConnectionRestoringStarted(...t) {
     try {
-      const n = Ki(this.version, ...t);
+      const n = Vi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackConnectionRestoringCompleted(...t) {
     try {
-      const n = Vi(this.version, ...t);
+      const n = qi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackConnectionRestoringError(...t) {
     try {
-      const n = qi(this.version, ...t);
+      const n = Zi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackDisconnection(...t) {
     try {
-      const n = zi(this.version, ...t);
+      const n = Yi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackTransactionSentForSignature(...t) {
     try {
-      const n = Zi(this.version, ...t);
+      const n = Gi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackTransactionSigned(...t) {
     try {
-      const n = Gi(this.version, ...t);
+      const n = Qi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackTransactionSigningFailed(...t) {
     try {
-      const n = Qi(this.version, ...t);
+      const n = zi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
@@ -1916,7 +1916,7 @@ class At {
         return
       }
       if (!l) {
-        tt("Provider is not restored"), this.tracker.trackConnectionRestoringError("Provider is not restored");
+        nt("Provider is not restored"), this.tracker.trackConnectionRestoringError("Provider is not restored");
         return
       }(r = this.provider) === null || r === void 0 || r.closeConnection(), this.provider = l, l.listen(this.walletEventsListener.bind(this));
       const c = () => {
@@ -1988,7 +1988,7 @@ class At {
         t.hidden ? this.pauseConnection() : this.unPauseConnection().catch()
       })
     } catch (n) {
-      tt("Cannot subscribe to the document.visibilitychange: ", n)
+      nt("Cannot subscribe to the document.visibilitychange: ", n)
     }
   }
   createProvider(t) {
@@ -2027,7 +2027,7 @@ class At {
   }
   onWalletConnectError(t) {
     const n = kl.parseError(t);
-    if (this.statusChangeErrorSubscriptions.forEach(r => r(n)), ve(n), this.tracker.trackConnectionError(t.message, t.code), n instanceof sr || n instanceof ir) throw tt(n), n
+    if (this.statusChangeErrorSubscriptions.forEach(r => r(n)), ve(n), this.tracker.trackConnectionError(t.message, t.code), n instanceof sr || n instanceof ir) throw nt(n), n
   }
   onWalletDisconnected(t) {
     this.tracker.trackDisconnection(this.wallet, t), this.wallet = null
@@ -2114,7 +2114,7 @@ function Yl(e) {
 var Jl = Object.defineProperty,
   Xl = Object.defineProperties,
   ea = Object.getOwnPropertyDescriptors,
-  Do = Object.getOwnPropertySymbols,
+  No = Object.getOwnPropertySymbols,
   ta = Object.prototype.hasOwnProperty,
   na = Object.prototype.propertyIsEnumerable,
   Nr = (e, t, n) => t in e ? Jl(e, t, {
@@ -2125,8 +2125,8 @@ var Jl = Object.defineProperty,
   }) : e[t] = n,
   re = (e, t) => {
     for (var n in t || (t = {})) ta.call(t, n) && Nr(e, n, t[n]);
-    if (Do)
-      for (var n of Do(t)) na.call(t, n) && Nr(e, n, t[n]);
+    if (No)
+      for (var n of No(t)) na.call(t, n) && Nr(e, n, t[n]);
     return e
   },
   Te = (e, t) => Xl(e, ea(t)),
@@ -2149,22 +2149,22 @@ var Jl = Object.defineProperty,
       l = c => c.done ? r(c.value) : Promise.resolve(c.value).then(i, s);
     l((n = n.apply(e, t)).next())
   }),
-  No, Ho, Fo, Oo, jo, Ko, Vo, qo;
+  Ho, Fo, Oo, jo, Ko, Vo, qo, Zo;
 const ce = {};
 
 function ra(e) {
   ce.context = e
 }
 const oa = (e, t) => e === t,
-  De = Symbol("solid-proxy"),
+  Ne = Symbol("solid-proxy"),
   Hr = Symbol("solid-track"),
   Kn = {
     equals: oa
   };
-let Ji = is;
+let Xi = ss;
 const st = 1,
   Vn = 2,
-  Xi = {
+  es = {
     owned: null,
     cleanups: null,
     context: null,
@@ -2175,14 +2175,14 @@ var we = null;
 let _t = null,
   ue = null,
   _e = null,
-  nt = null,
+  rt = null,
   so = 0;
 
 function rn(e, t) {
   const n = ue,
     r = we,
     o = e.length === 0,
-    i = o ? Xi : {
+    i = o ? es : {
       owned: null,
       cleanups: null,
       context: null,
@@ -2205,8 +2205,8 @@ function q(e, t) {
       observerSlots: null,
       comparator: t.equals || void 0
     },
-    r = o => (typeof o == "function" && (o = o(n.value)), os(n, o));
-  return [rs.bind(n), r]
+    r = o => (typeof o == "function" && (o = o(n.value)), is(n, o));
+  return [os.bind(n), r]
 }
 
 function qn(e, t, n) {
@@ -2220,15 +2220,15 @@ function Y(e, t, n) {
 }
 
 function pe(e, t, n) {
-  Ji = da;
+  Xi = da;
   const r = gr(e, t, !1, st);
-  r.user = !0, nt ? nt.push(r) : Zt(r)
+  r.user = !0, rt ? rt.push(r) : Zt(r)
 }
 
 function P(e, t, n) {
   n = n ? Object.assign({}, Kn, n) : Kn;
   const r = gr(e, t, !0, 0);
-  return r.observers = null, r.observerSlots = null, r.comparator = n.equals || void 0, Zt(r), rs.bind(r)
+  return r.observers = null, r.observerSlots = null, r.comparator = n.equals || void 0, Zt(r), os.bind(r)
 }
 
 function ia(e, t, n) {
@@ -2291,7 +2291,7 @@ function ia(e, t, n) {
     }));
     return typeof m != "object" || !(m && "then" in m) ? (b(s, m, void 0, S), m) : (s = m, u = !0, queueMicrotask(() => u = !1), mt(() => {
       F(d ? "refreshing" : "pending"), A()
-    }, !1), m.then(h => b(m, h, void 0, S), h => b(m, void 0, ls(h), S)))
+    }, !1), m.then(h => b(m, h, void 0, S), h => b(m, void 0, as(h), S)))
   }
   return Object.defineProperties(C, {
     state: {
@@ -2320,7 +2320,7 @@ function ia(e, t, n) {
   }]
 }
 
-function es(e) {
+function ts(e) {
   return mt(e, !1)
 }
 
@@ -2349,7 +2349,7 @@ function sa(e, t, n) {
   }
 }
 
-function ts(e) {
+function ns(e) {
   pe(() => Ce(e))
 }
 
@@ -2357,7 +2357,7 @@ function Ee(e) {
   return we === null || (we.cleanups === null ? we.cleanups = [e] : we.cleanups.push(e)), e
 }
 
-function ns() {
+function rs() {
   return ue
 }
 
@@ -2376,7 +2376,7 @@ function fr(e, t) {
 
 function Ae(e) {
   let t;
-  return (t = cs(we, e.id)) !== void 0 ? t : e.defaultValue
+  return (t = us(we, e.id)) !== void 0 ? t : e.defaultValue
 }
 
 function hr(e) {
@@ -2389,7 +2389,7 @@ function hr(e) {
 }
 let aa;
 
-function rs() {
+function os() {
   const e = _t;
   if (this.sources && (this.state || e))
     if (this.state === st || e) Zt(this);
@@ -2403,13 +2403,13 @@ function rs() {
   return this.value
 }
 
-function os(e, t, n) {
+function is(e, t, n) {
   let r = e.value;
   return (!e.comparator || !e.comparator(r, t)) && (e.value = t, e.observers && e.observers.length && mt(() => {
     for (let o = 0; o < e.observers.length; o += 1) {
       const i = e.observers[o],
         s = _t && _t.running;
-      s && _t.disposed.has(i), (s && !i.tState || !s && !i.state) && (i.pure ? _e.push(i) : nt.push(i), i.observers && ss(i)), s || (i.state = st)
+      s && _t.disposed.has(i), (s && !i.tState || !s && !i.state) && (i.pure ? _e.push(i) : rt.push(i), i.observers && ls(i)), s || (i.state = st)
     }
     if (_e.length > 1e6) throw _e = [], new Error
   }, !1)), t
@@ -2429,8 +2429,8 @@ function ca(e, t, n) {
   try {
     r = e.fn(t)
   } catch (o) {
-    e.pure && (e.state = st, e.owned && e.owned.forEach(mr), e.owned = null), as(o)
-  }(!e.updatedAt || e.updatedAt <= n) && (e.updatedAt != null && "observers" in e ? os(e, r) : e.value = r, e.updatedAt = n)
+    e.pure && (e.state = st, e.owned && e.owned.forEach(mr), e.owned = null), cs(o)
+  }(!e.updatedAt || e.updatedAt <= n) && (e.updatedAt != null && "observers" in e ? is(e, r) : e.value = r, e.updatedAt = n)
 }
 
 function gr(e, t, n, r = st, o) {
@@ -2447,7 +2447,7 @@ function gr(e, t, n, r = st, o) {
     context: null,
     pure: n
   };
-  return we === null || we !== Xi && (we.owned ? we.owned.push(i) : we.owned = [i]), i
+  return we === null || we !== es && (we.owned ? we.owned.push(i) : we.owned = [i]), i
 }
 
 function Zn(e) {
@@ -2469,22 +2469,22 @@ function Zn(e) {
 function mt(e, t) {
   if (_e) return e();
   let n = !1;
-  t || (_e = []), nt ? n = !0 : nt = [], so++;
+  t || (_e = []), rt ? n = !0 : rt = [], so++;
   try {
     const r = e();
     return ua(n), r
   } catch (r) {
-    n || (nt = null), _e = null, as(r)
+    n || (rt = null), _e = null, cs(r)
   }
 }
 
 function ua(e) {
-  if (_e && (is(_e), _e = null), e) return;
-  const t = nt;
-  nt = null, t.length && mt(() => Ji(t), !1)
+  if (_e && (ss(_e), _e = null), e) return;
+  const t = rt;
+  rt = null, t.length && mt(() => Xi(t), !1)
 }
 
-function is(e) {
+function ss(e) {
   for (let t = 0; t < e.length; t++) Zn(e[t])
 }
 
@@ -2506,11 +2506,11 @@ function Gn(e, t) {
   }
 }
 
-function ss(e) {
+function ls(e) {
   const t = _t;
   for (let n = 0; n < e.observers.length; n += 1) {
     const r = e.observers[n];
-    (!r.state || t) && (r.state = Vn, r.pure ? _e.push(r) : nt.push(r), r.observers && ss(r))
+    (!r.state || t) && (r.state = Vn, r.pure ? _e.push(r) : rt.push(r), r.observers && ls(r))
   }
 }
 
@@ -2538,16 +2538,16 @@ function mr(e) {
   e.state = 0, e.context = null
 }
 
-function ls(e) {
+function as(e) {
   return e instanceof Error || typeof e == "string" ? e : new Error("Unknown error")
 }
 
-function as(e) {
-  throw e = ls(e), e
+function cs(e) {
+  throw e = as(e), e
 }
 
-function cs(e, t) {
-  return e ? e.context && e.context[t] !== void 0 ? e.context[t] : cs(e.owner, t) : void 0
+function us(e, t) {
+  return e ? e.context && e.context[t] !== void 0 ? e.context[t] : us(e.owner, t) : void 0
 }
 
 function Fr(e) {
@@ -2573,7 +2573,7 @@ function fa(e, t) {
 }
 const ha = Symbol("fallback");
 
-function Zo(e) {
+function Go(e) {
   for (let t = 0; t < e.length; t++) e[t]()
 }
 
@@ -2583,13 +2583,13 @@ function ga(e, t, n = {}) {
     i = [],
     s = 0,
     l = t.length > 1 ? [] : null;
-  return Ee(() => Zo(i)), () => {
+  return Ee(() => Go(i)), () => {
     let c = e() || [],
       u, d;
     return c[Hr], Ce(() => {
       let v = c.length,
         L, I, W, H, N, A, B, F, b;
-      if (v === 0) s !== 0 && (Zo(i), i = [], r = [], o = [], s = 0, l && (l = [])), n.fallback && (r = [ha], o[0] = rn(M => (i[0] = M, n.fallback())), s = 1);
+      if (v === 0) s !== 0 && (Go(i), i = [], r = [], o = [], s = 0, l && (l = [])), n.fallback && (r = [ha], o[0] = rn(M => (i[0] = M, n.fallback())), s = 1);
       else if (s === 0) {
         for (o = new Array(v), d = 0; d < v; d++) r[d] = c[d], o[d] = rn(f);
         s = v
@@ -2623,10 +2623,10 @@ function Tn() {
 }
 const Or = {
   get(e, t, n) {
-    return t === De ? n : e.get(t)
+    return t === Ne ? n : e.get(t)
   },
   has(e, t) {
-    return t === De ? !0 : e.has(t)
+    return t === Ne ? !0 : e.has(t)
   },
   set: Tn,
   deleteProperty: Tn,
@@ -2650,11 +2650,11 @@ function kr(e) {
   return (e = typeof e == "function" ? e() : e) ? e : {}
 }
 
-function Oe(...e) {
+function je(...e) {
   let t = !1;
   for (let r = 0; r < e.length; r++) {
     const o = e[r];
-    t = t || !!o && De in o, e[r] = typeof o == "function" ? (t = !0, P(o)) : o
+    t = t || !!o && Ne in o, e[r] = typeof o == "function" ? (t = !0, P(o)) : o
   }
   if (t) return new Proxy({
     get(r) {
@@ -2692,7 +2692,7 @@ function Oe(...e) {
 
 function lo(e, ...t) {
   const n = new Set(t.flat());
-  if (De in e) {
+  if (Ne in e) {
     const o = t.map(i => new Proxy({
       get(s) {
         return i.includes(s) ? e[s] : void 0
@@ -2794,7 +2794,7 @@ const ma = ["allowfullscreen", "async", "autofocus", "autoplay", "checked", "con
     className: "class",
     htmlFor: "for"
   }),
-  Go = Object.assign(Object.create(null), {
+  Qo = Object.assign(Object.create(null), {
     class: "className",
     formnovalidate: "formNoValidate",
     ismap: "isMap",
@@ -2853,7 +2853,7 @@ function xa(e, t, n) {
     }
   }
 }
-const Qo = "_$DX_DELEGATE";
+const zo = "_$DX_DELEGATE";
 
 function Sa(e, t, n, r = {}) {
   let o;
@@ -2873,7 +2873,7 @@ function J(e, t, n) {
 }
 
 function ka(e, t = window.document) {
-  const n = t[Qo] || (t[Qo] = new Set);
+  const n = t[zo] || (t[zo] = new Set);
   for (let r = 0, o = e.length; r < o; r++) {
     const i = e[r];
     n.has(i) || (n.add(i), t.addEventListener(i, Ra))
@@ -2906,12 +2906,12 @@ function Aa(e, t, n = {}) {
   let i, s;
   for (i = 0, s = o.length; i < s; i++) {
     const l = o[i];
-    !l || l === "undefined" || t[l] || (zo(e, l, !1), delete n[l])
+    !l || l === "undefined" || t[l] || (Yo(e, l, !1), delete n[l])
   }
   for (i = 0, s = r.length; i < s; i++) {
     const l = r[i],
       c = !!t[l];
-    !l || l === "undefined" || n[l] === c || !c || (zo(e, l, !0), n[l] = c)
+    !l || l === "undefined" || n[l] === c || !c || (Yo(e, l, !0), n[l] = c)
   }
   return n
 }
@@ -2927,7 +2927,7 @@ function La(e, t, n) {
   return n
 }
 
-function us(e, t = {}, n, r) {
+function ds(e, t = {}, n, r) {
   const o = {};
   return Y(() => o.children = gn(e, t.children, o.children)), Y(() => t.ref && t.ref(e)), Y(() => $a(e, t, n, !0, o, !0)), o
 }
@@ -2946,11 +2946,11 @@ function $a(e, t, n, r, o = {}, i = !1) {
   for (const s in o)
     if (!(s in t)) {
       if (s === "children") continue;
-      o[s] = Yo(e, s, null, o[s], n, i)
+      o[s] = Jo(e, s, null, o[s], n, i)
     } for (const s in t) {
     if (s === "children") continue;
     const l = t[s];
-    o[s] = Yo(e, s, l, o[s], n, i)
+    o[s] = Jo(e, s, l, o[s], n, i)
   }
 }
 
@@ -2963,12 +2963,12 @@ function Ma(e) {
   return e.toLowerCase().replace(/-([a-z])/g, (t, n) => n.toUpperCase())
 }
 
-function zo(e, t, n) {
+function Yo(e, t, n) {
   const r = t.trim().split(/\s+/);
   for (let o = 0, i = r.length; o < i; o++) e.classList.toggle(r[o], n)
 }
 
-function Yo(e, t, n, r, o, i) {
+function Jo(e, t, n, r, o, i) {
   let s, l, c;
   if (t === "style") return La(e, n, r);
   if (t === "classList") return Aa(e, n, r);
@@ -2987,7 +2987,7 @@ function Yo(e, t, n, r, o, i) {
       const f = Array.isArray(r) ? r[0] : r;
       e.removeEventListener(u, f)
     }(d || n) && (Ea(e, u, n, d), d && ka([u]))
-  } else if ((c = wa.has(t)) || !o && (Go[t] || (l = va.has(t))) || (s = e.nodeName.includes("-"))) t === "class" || t === "className" ? ao(e, n) : s && !l && !c ? e[Ma(t)] = n : e[Go[t] || t] = n;
+  } else if ((c = wa.has(t)) || !o && (Qo[t] || (l = va.has(t))) || (s = e.nodeName.includes("-"))) t === "class" || t === "className" ? ao(e, n) : s && !l && !c ? e[Ma(t)] = n : e[Qo[t] || t] = n;
   else {
     const u = o && t.indexOf(":") > -1 && ba[t.split(":")[0]];
     u ? _a(e, u, t, n) : O(e, pa[t] || t, n)
@@ -3053,7 +3053,7 @@ function gn(e, t, n, r, o) {
       }
       if (l.length === 0) {
         if (n = It(e, n, r), s) return n
-      } else c ? n.length === 0 ? Jo(e, l, r) : xa(e, n, l) : (n && It(e), Jo(e, l));
+      } else c ? n.length === 0 ? Xo(e, l, r) : xa(e, n, l) : (n && It(e), Xo(e, l));
       n = l
     } else if (t instanceof Node) {
       if (ce.context && t.parentNode) return n = s ? [t] : t;
@@ -3088,7 +3088,7 @@ function jr(e, t, n, r) {
   return o
 }
 
-function Jo(e, t, n = null) {
+function Xo(e, t, n = null) {
   for (let r = 0, o = t.length; r < o; r++) e.insertBefore(t[r], n)
 }
 
@@ -3114,11 +3114,11 @@ function Ia() {
 }
 const Ba = "http://www.w3.org/2000/svg";
 
-function ds(e, t = !1) {
+function fs(e, t = !1) {
   return t ? document.createElementNS(Ba, e) : document.createElement(e)
 }
 
-function fs(e) {
+function hs(e) {
   const {
     useShadow: t
   } = e, n = document.createTextNode(""), r = e.mount || document.body;
@@ -3135,7 +3135,7 @@ function fs(e) {
       ce.context ? queueMicrotask(l) : l()
     })
   } else {
-    const i = ds(e.isSVG ? "g" : "div", e.isSVG),
+    const i = fs(e.isSVG ? "g" : "div", e.isSVG),
       s = t && i.attachShadow ? i.attachShadow({
         mode: "open"
       }) : i;
@@ -3158,8 +3158,8 @@ function Ot(e) {
         return Ce(() => o(n));
       case "string":
         const i = Ca.has(o),
-          s = ce.context ? Ta() : ds(o, i);
-        return us(s, n, i), s
+          s = ce.context ? Ta() : fs(o, i);
+        return ds(s, n, i), s
     }
   })
 }
@@ -3173,7 +3173,7 @@ let Wa = {
   })).firstChild : e || Wa,
   Ua = /(?:([\u0080-\uFFFF\w-%@]+) *:? *([^{;]+?);|([^;}{]*?) *{)|(}\s*)/g,
   Da = /\/\*[^]*?\*\/|  +/g,
-  Xo = /\n+/g,
+  ei = /\n+/g,
   bt = (e, t) => {
     let n = "",
       r = "",
@@ -3184,37 +3184,37 @@ let Wa = {
     }
     return n + (t && o ? t + "{" + o + "}" : o) + r
   },
-  Je = {},
-  hs = e => {
+  Xe = {},
+  gs = e => {
     if (typeof e == "object") {
       let t = "";
-      for (let n in e) t += n + hs(e[n]);
+      for (let n in e) t += n + gs(e[n]);
       return t
     }
     return e
   },
   Na = (e, t, n, r, o) => {
-    let i = hs(e),
-      s = Je[i] || (Je[i] = (c => {
+    let i = gs(e),
+      s = Xe[i] || (Xe[i] = (c => {
         let u = 0,
           d = 11;
         for (; u < c.length;) d = 101 * d + c.charCodeAt(u++) >>> 0;
         return "go" + d
       })(i));
-    if (!Je[s]) {
+    if (!Xe[s]) {
       let c = i !== e ? e : (u => {
         let d, f, v = [{}];
-        for (; d = Ua.exec(u.replace(Da, ""));) d[4] ? v.shift() : d[3] ? (f = d[3].replace(Xo, " ").trim(), v.unshift(v[0][f] = v[0][f] || {})) : v[0][d[1]] = d[2].replace(Xo, " ").trim();
+        for (; d = Ua.exec(u.replace(Da, ""));) d[4] ? v.shift() : d[3] ? (f = d[3].replace(ei, " ").trim(), v.unshift(v[0][f] = v[0][f] || {})) : v[0][d[1]] = d[2].replace(ei, " ").trim();
         return v[0]
       })(e);
-      Je[s] = bt(o ? {
+      Xe[s] = bt(o ? {
         ["@keyframes " + s]: c
       } : c, n ? "" : "." + s)
     }
-    let l = n && Je.g ? Je.g : null;
-    return n && (Je.g = Je[s]), ((c, u, d, f) => {
+    let l = n && Xe.g ? Xe.g : null;
+    return n && (Xe.g = Xe[s]), ((c, u, d, f) => {
       f ? u.data = u.data.replace(f, c) : u.data.indexOf(c) === -1 && (u.data = d ? c + u.data : u.data + c)
-    })(Je[s], t, r, l), s
+    })(Xe[s], t, r, l), s
   },
   Ha = (e, t, n) => e.reduce((r, o, i) => {
     let s = t[i];
@@ -3252,15 +3252,15 @@ function ie() {
   return Ae(co)
 }
 
-function gs(e) {
+function ms(e) {
   let t = this || {};
   return (...n) => {
     const r = o => {
       const i = Ae(co),
-        s = Oe(o, {
+        s = je(o, {
           theme: i
         }),
-        l = Oe(s, {
+        l = je(s, {
           get class() {
             const L = s.class,
               I = "class" in s && /^go[0-9]+/.test(L);
@@ -3277,7 +3277,7 @@ function gs(e) {
         d = u,
         f = c.as || e;
       let v;
-      return typeof f == "function" ? v = f(d) : t.g == 1 ? (v = document.createElement(f), us(v, d)) : v = Ot(Oe({
+      return typeof f == "function" ? v = f(d) : t.g == 1 ? (v = document.createElement(f), ds(v, d)) : v = Ot(je({
         component: f
       }, d)), v
     };
@@ -3288,21 +3288,21 @@ function gs(e) {
     }, n)), r
   }
 }
-const w = new Proxy(gs, {
+const w = new Proxy(ms, {
   get(e, t) {
     return e(t)
   }
 });
 
 function ja() {
-  const e = gs.call({
+  const e = ms.call({
     g: 1
   }, "div").apply(null, arguments);
   return function(n) {
     return e(n), null
   }
 }
-const Xe = "tc-root",
+const et = "tc-root",
   uo = "tc-disable-scroll",
   _r = "tc-using-mouse",
   Ka = () => {
@@ -3310,7 +3310,7 @@ const Xe = "tc-root",
       t.key === "Tab" && document.body.classList.remove(_r)
     });
     const e = ja`
-    ${Xe} * {
+    ${et} * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -3321,20 +3321,20 @@ const Xe = "tc-root",
         -webkit-tap-highlight-color: transparent;
     }
     
-    ${Xe} img {
+    ${et} img {
       -webkit-user-select: none;
       -webkit-touch-callout: none;
     }   
  
-    ${Xe} *:focus {
+    ${et} *:focus {
         outline: #08f auto 2px;
     }
     
-    ${Xe} li {
+    ${et} li {
         list-style: none;
     }
     
-    ${Xe} button {
+    ${et} button {
         outline: none;
     }
     
@@ -3345,7 +3345,7 @@ const Xe = "tc-root",
         left: 0;
     }
     
-    body.${_r} ${Xe} *:focus {
+    body.${_r} ${et} *:focus {
         outline: none;
     }
 `;
@@ -3365,7 +3365,7 @@ function Cn(e, t) {
   return e[0] === "#" && (e = Va(e)), `rgba(${e}, ${t})`
 }
 
-function je(e) {
+function Ke(e) {
   return e.toString() + "px"
 }
 const Yt = class {
@@ -3397,8 +3397,8 @@ const Yt = class {
     this.storage[e] = t
   }
 };
-let ms = Yt;
-K(ms, "instance");
+let vs = Yt;
+K(vs, "instance");
 class fe extends j {
   constructor(...t) {
     super(...t), Object.setPrototypeOf(this, fe.prototype)
@@ -3451,7 +3451,7 @@ function Qa(e) {
 }
 
 function za() {
-  document.documentElement.scrollHeight !== document.documentElement.clientHeight && (document.body.style.top = je(-document.documentElement.scrollTop), document.body.classList.add(uo))
+  document.documentElement.scrollHeight !== document.documentElement.clientHeight && (document.body.style.top = Ke(-document.documentElement.scrollTop), document.body.classList.add(uo))
 }
 
 function Ya() {
@@ -3465,10 +3465,10 @@ function Ja() {
 }
 
 function Xa() {
-  customElements.define(Xe, class extends HTMLElement {})
+  customElements.define(et, class extends HTMLElement {})
 }
 
-function vs(e) {
+function ws(e) {
   return ne(this, null, function*() {
     yield new Promise(t => requestAnimationFrame(t)), e()
   })
@@ -3480,8 +3480,8 @@ function ec(e) {
   })
 }
 
-function ws(e) {
-  document.readyState !== "complete" ? window.addEventListener("load", () => vs(() => ws(e)), {
+function ps(e) {
+  document.readyState !== "complete" ? window.addEventListener("load", () => ws(() => ps(e)), {
     once: !0
   }) : e.forEach(t => {
     const n = new window.Image;
@@ -3489,14 +3489,14 @@ function ws(e) {
   })
 }
 
-function Ze() {
+function Ge() {
   if (typeof window < "u") return window
 }
 
 function fo() {
   if (tc()) return localStorage;
   if (nc()) throw new fe("`localStorage` is unavailable, but it is required for TonConnect. For more details, see https://github.com/ton-connect/sdk/tree/main/packages/sdk#init-connector");
-  return ms.getInstance()
+  return vs.getInstance()
 }
 
 function tc() {
@@ -3597,7 +3597,7 @@ class oc {
     return this.localStorage.getItem(this.storageKey) || void 0
   }
 }
-class ps {
+class ys {
   constructor() {
     K(this, "localStorage"), K(this, "storageKey", "ton-connect-ui_last-selected-wallet-info"), this.localStorage = fo()
   }
@@ -3612,20 +3612,20 @@ class ps {
     this.localStorage.removeItem(this.storageKey)
   }
 }
-const [Kr, ei] = q({
+const [Kr, ti] = q({
   status: "closed",
   closeReason: null
-}), ti = P(() => Kr().status === "opened"), [Qn, ni] = q({
+}), ni = P(() => Kr().status === "opened"), [Qn, ri] = q({
   status: "closed",
   closeReason: null
-}), ri = P(() => Qn().status === "opened"), ic = P(() => {
+}), oi = P(() => Qn().status === "opened"), ic = P(() => {
   const e = Qn();
   return e.status === "opened" ? e.walletInfo : null
 });
-let Pt = typeof window < "u" ? new ps : void 0;
+let Pt = typeof window < "u" ? new ys : void 0;
 const [sc, lc] = q((Pt == null ? void 0 : Pt.getLastSelectedWalletInfo()) || null), Se = e => {
-  Pt || (Pt = new ps), e ? Pt.setLastSelectedWalletInfo(e) : Pt.removeLastSelectedWalletInfo(), lc(e)
-}, [et, Ut] = q(null), ac = {
+  Pt || (Pt = new ys), e ? Pt.setLastSelectedWalletInfo(e) : Pt.removeLastSelectedWalletInfo(), lc(e)
+}, [tt, Ut] = q(null), ac = {
   close: "Close",
   openWallet: "Open wallet",
   copyLink: "Copy Link",
@@ -3806,11 +3806,11 @@ const [sc, lc] = q((Pt == null ? void 0 : Pt.getLastSelectedWalletInfo()) || nul
   walletModal: yc,
   actionModal: Cc
 }, xc = {
-  en: oi(gc),
-  ru: oi(bc)
+  en: ii(gc),
+  ru: ii(bc)
 };
 
-function oi(e) {
+function ii(e) {
   const t = "$",
     n = r => {
       Object.entries(r).forEach(([o, i]) => {
@@ -3835,9 +3835,9 @@ const Gt = fr(),
   mn = Symbol("store-node"),
   Sc = Symbol("store-name");
 
-function ys(e, t) {
-  let n = e[De];
-  if (!n && (Object.defineProperty(e, De, {
+function Cs(e, t) {
+  let n = e[Ne];
+  if (!n && (Object.defineProperty(e, Ne, {
       value: n = new Proxy(e, Ec)
     }), !Array.isArray(e))) {
     const r = Object.keys(e),
@@ -3855,7 +3855,7 @@ function ys(e, t) {
 
 function zn(e) {
   let t;
-  return e != null && typeof e == "object" && (e[De] || !(t = Object.getPrototypeOf(e)) || t === Object.prototype || Array.isArray(e))
+  return e != null && typeof e == "object" && (e[Ne] || !(t = Object.getPrototypeOf(e)) || t === Object.prototype || Array.isArray(e))
 }
 
 function jt(e, t = new Set) {
@@ -3882,26 +3882,26 @@ function go(e) {
 }
 
 function qr(e, t, n) {
-  return e[t] || (e[t] = bs(n))
+  return e[t] || (e[t] = xs(n))
 }
 
 function kc(e, t) {
   const n = Reflect.getOwnPropertyDescriptor(e, t);
-  return !n || n.get || !n.configurable || t === De || t === mn || t === Sc || (delete n.value, delete n.writable, n.get = () => e[De][t]), n
+  return !n || n.get || !n.configurable || t === Ne || t === mn || t === Sc || (delete n.value, delete n.writable, n.get = () => e[Ne][t]), n
 }
 
-function Cs(e) {
-  if (ns()) {
+function bs(e) {
+  if (rs()) {
     const t = go(e);
-    (t._ || (t._ = bs()))()
+    (t._ || (t._ = xs()))()
   }
 }
 
 function _c(e) {
-  return Cs(e), Reflect.ownKeys(e)
+  return bs(e), Reflect.ownKeys(e)
 }
 
-function bs(e) {
+function xs(e) {
   const [t, n] = q(e, {
     equals: !1,
     internal: !0
@@ -3911,20 +3911,20 @@ function bs(e) {
 const Ec = {
   get(e, t, n) {
     if (t === Vr) return e;
-    if (t === De) return n;
-    if (t === Hr) return Cs(e), n;
+    if (t === Ne) return n;
+    if (t === Hr) return bs(e), n;
     const r = go(e),
       o = r.hasOwnProperty(t);
     let i = o ? r[t]() : e[t];
     if (t === mn || t === "__proto__") return i;
     if (!o) {
       const s = Object.getOwnPropertyDescriptor(e, t);
-      ns() && (typeof i != "function" || e.hasOwnProperty(t)) && !(s && s.get) && (i = qr(r, t, i)())
+      rs() && (typeof i != "function" || e.hasOwnProperty(t)) && !(s && s.get) && (i = qr(r, t, i)())
     }
-    return zn(i) ? ys(i) : i
+    return zn(i) ? Cs(i) : i
   },
   has(e, t) {
-    return t === Vr || t === De || t === Hr || t === mn || t === "__proto__" ? !0 : (this.get(e, t, e), t in e)
+    return t === Vr || t === Ne || t === Hr || t === mn || t === "__proto__" ? !0 : (this.get(e, t, e), t in e)
   },
   set() {
     return !0
@@ -3946,7 +3946,7 @@ function Yn(e, t, n, r = !1) {
   (l = qr(s, t, o)) && l.$(() => n), Array.isArray(e) && e.length !== i && (l = qr(s, "length", i)) && l.$(e.length), (l = s._) && l.$()
 }
 
-function xs(e, t) {
+function Ss(e, t) {
   const n = Object.keys(t);
   for (let r = 0; r < n.length; r += 1) {
     const o = n[r];
@@ -3964,7 +3964,7 @@ function Ac(e, t) {
       e[n] !== o && Yn(e, n, o)
     }
     Yn(e, "length", r)
-  } else xs(e, t)
+  } else Ss(e, t)
 }
 
 function Jt(e, t, n = []) {
@@ -3994,22 +3994,22 @@ function Jt(e, t, n = []) {
     o = e[r], n = [r].concat(n)
   }
   let i = t[0];
-  typeof i == "function" && (i = i(o, n), i === o) || r === void 0 && i == null || (i = jt(i), r === void 0 || zn(o) && zn(i) && !Array.isArray(i) ? xs(o, i) : Yn(e, r, i))
+  typeof i == "function" && (i = i(o, n), i === o) || r === void 0 && i == null || (i = jt(i), r === void 0 || zn(o) && zn(i) && !Array.isArray(i) ? Ss(o, i) : Yn(e, r, i))
 }
 
 function mo(...[e, t]) {
   const n = jt(e || {}),
     r = Array.isArray(n),
-    o = ys(n);
+    o = Cs(n);
 
   function i(...s) {
-    es(() => {
+    ts(() => {
       r && s.length === 1 ? Ac(n, s[0]) : Jt(n, s)
     })
   }
   return [o, i]
 }
-const Ss = {
+const ks = {
     constant: {
       black: "#000000",
       white: "#FFFFFF"
@@ -4075,13 +4075,13 @@ const Ss = {
  * Copyright (c) 2014-2017, Jon Schlinkert.
  * Released under the MIT License.
  */
-function ii(e) {
+function si(e) {
   return Object.prototype.toString.call(e) === "[object Object]"
 }
 
 function $c(e) {
   var t, n;
-  return ii(e) === !1 ? !1 : (t = e.constructor, t === void 0 ? !0 : (n = t.prototype, !(ii(n) === !1 || n.hasOwnProperty("isPrototypeOf") === !1)))
+  return si(e) === !1 ? !1 : (t = e.constructor, t === void 0 ? !0 : (n = t.prototype, !(si(n) === !1 || n.hasOwnProperty("isPrototypeOf") === !1)))
 }
 
 function ht(e, t) {
@@ -4092,20 +4092,20 @@ function ht(e, t) {
 }
 const [Tc, vo] = mo({
   theme: de.LIGHT,
-  colors: Ss,
+  colors: ks,
   borderRadius: "m"
-}), ks = {
-  [de.LIGHT]: Ss,
+}), _s = {
+  [de.LIGHT]: ks,
   [de.DARK]: Lc
-}, He = {
+}, Fe = {
   [de.LIGHT]: void 0,
   [de.DARK]: void 0
 };
 
 function Er(e, t) {
-  t && (He[de.DARK] = ht(t[de.DARK], He[de.DARK]), He[de.LIGHT] = ht(t[de.LIGHT], He[de.LIGHT])), vo({
+  t && (Fe[de.DARK] = ht(t[de.DARK], Fe[de.DARK]), Fe[de.LIGHT] = ht(t[de.LIGHT], Fe[de.LIGHT])), vo({
     theme: e,
-    colors: ht(He[e], ks[e])
+    colors: ht(Fe[e], _s[e])
   })
 }
 
@@ -4116,8 +4116,8 @@ function Mc(e) {
 }
 
 function Rc(e) {
-  He[de.DARK] = ht(e[de.DARK], He[de.DARK]), He[de.LIGHT] = ht(e[de.LIGHT], He[de.LIGHT]), vo(t => ({
-    colors: ht(He[t.theme], ks[t.theme])
+  Fe[de.DARK] = ht(e[de.DARK], Fe[de.DARK]), Fe[de.LIGHT] = ht(e[de.LIGHT], Fe[de.LIGHT]), vo(t => ({
+    colors: ht(Fe[t.theme], _s[t.theme])
   }))
 }
 const Ic = w.div`
@@ -4159,35 +4159,35 @@ try {
   Et = Bc(e)
 } catch {}
 let Kt = "unknown";
-Et != null && Et.tgWebAppPlatform && (Kt = (No = Et.tgWebAppPlatform) != null ? No : "unknown");
+Et != null && Et.tgWebAppPlatform && (Kt = (Ho = Et.tgWebAppPlatform) != null ? Ho : "unknown");
 if (Kt === "unknown") {
-  const e = Ze();
-  Kt = (Oo = (Fo = (Ho = e == null ? void 0 : e.Telegram) == null ? void 0 : Ho.WebApp) == null ? void 0 : Fo.platform) != null ? Oo : "unknown"
+  const e = Ge();
+  Kt = (jo = (Oo = (Fo = e == null ? void 0 : e.Telegram) == null ? void 0 : Fo.WebApp) == null ? void 0 : Oo.platform) != null ? jo : "unknown"
 }
 let Jn = "6.0";
 Et != null && Et.tgWebAppVersion && (Jn = Et.tgWebAppVersion);
 if (!Jn) {
-  const e = Ze();
-  Jn = (Vo = (Ko = (jo = e == null ? void 0 : e.Telegram) == null ? void 0 : jo.WebApp) == null ? void 0 : Ko.version) != null ? Vo : "6.0"
+  const e = Ge();
+  Jn = (qo = (Vo = (Ko = e == null ? void 0 : e.Telegram) == null ? void 0 : Ko.WebApp) == null ? void 0 : Vo.version) != null ? qo : "6.0"
 }
 
 function xt(...e) {
   return e.includes(Kt)
 }
 
-function Ke() {
+function Ve() {
   var e;
-  return Kt !== "unknown" || !!((e = Ze()) != null && e.TelegramWebviewProxy)
+  return Kt !== "unknown" || !!((e = Ge()) != null && e.TelegramWebviewProxy)
 }
 
-function _s() {
+function Es() {
   var e;
-  const t = !!((e = Ze()) != null && e.TelegramWebview);
-  return (Ke() || t) && Kt === "unknown"
+  const t = !!((e = Ge()) != null && e.TelegramWebview);
+  return (Ve() || t) && Kt === "unknown"
 }
 
 function wo() {
-  As("web_app_expand", {})
+  Ls("web_app_expand", {})
 }
 
 function Zr(e, t) {
@@ -4201,30 +4201,30 @@ function Zr(e, t) {
     throw new fe(`Url host is not supported: ${n}`)
   }
   const r = n.pathname + n.search;
-  Es() || Uc("6.1") ? As("web_app_open_tg_link", {
+  As() || Uc("6.1") ? Ls("web_app_open_tg_link", {
     path_full: r
   }) : le("https://t.me" + r)
 }
 
-function Es() {
+function As() {
   try {
-    const e = Ze();
+    const e = Ge();
     return e ? e.parent != null && e !== e.parent : !1
   } catch {
     return !1
   }
 }
 
-function As(e, t) {
+function Ls(e, t) {
   try {
-    const n = Ze();
+    const n = Ge();
     if (!n) throw new fe("Can't post event to parent window: window is not defined");
     if (n.TelegramWebviewProxy !== void 0) Dn("postEvent", e, t), n.TelegramWebviewProxy.postEvent(e, JSON.stringify(t));
     else if (n.external && "notify" in n.external) Dn("postEvent", e, t), n.external.notify(JSON.stringify({
       eventType: e,
       eventData: t
     }));
-    else if (Es()) {
+    else if (As()) {
       const r = "*",
         o = JSON.stringify({
           eventType: e,
@@ -4288,7 +4288,7 @@ const St = {
 };
 
 function Dt(e) {
-  const t = Ze();
+  const t = Ge();
   if (!t) return e === "desktop";
   if (xt("weba")) return !0;
   const n = t.innerWidth;
@@ -4370,7 +4370,7 @@ function Sn(e) {
 }
 const he = e => {
   const t = Sn(e);
-  return a(Nc, Oe({
+  return a(Nc, je({
     get appearance() {
       return e.appearance || "primary"
     },
@@ -4442,7 +4442,7 @@ const po = e => {
   function W(N, A) {
     if (!n || e.appear) {
       let B = function(C) {
-        N && (!C || C.target === N) && (N.removeEventListener("transitionend", B), N.removeEventListener("animationend", B), N.classList.remove(...b), N.classList.remove(...M), es(() => {
+        N && (!C || C.target === N) && (N.removeEventListener("transitionend", B), N.removeEventListener("animationend", B), N.classList.remove(...b), N.classList.remove(...M), ts(() => {
           r() !== N && o(N), i() === N && s(void 0)
         }), d && d(N), e.mode === "inout" && H(N, A))
       };
@@ -4619,15 +4619,15 @@ function jc(e, t) {
   window.addEventListener("popstate", i, {
     once: !0
   }), Ee(() => {
-    window.removeEventListener("popstate", i), vs(() => {
+    window.removeEventListener("popstate", i), ws(() => {
       var s;
-      ((s = window.history.state) == null ? void 0 : s[Ls]) === !0 && window.history.back()
+      ((s = window.history.state) == null ? void 0 : s[$s]) === !0 && window.history.back()
     })
   })
 }
-const Ls = "androidBackHandler",
+const $s = "androidBackHandler",
   Kc = {
-    [Ls]: !0
+    [$s]: !0
   },
   Vc = J('<svg><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2122 14.3407C10.5384 14.0854 10.5959 13.614 10.3406 13.2878L6.20237 8.00003L10.3406 2.71227C10.5959 2.38607 10.5384 1.91469 10.2122 1.6594C9.88604 1.40412 9.41465 1.46161 9.15937 1.7878L4.65937 7.5378C4.44688 7.80932 4.44688 8.19074 4.65937 8.46226L9.15937 14.2123C9.41465 14.5385 9.88604 14.5959 10.2122 14.3407Z"></path></svg>', 4, !0),
   qc = {
@@ -4636,7 +4636,7 @@ const Ls = "androidBackHandler",
     right: 180,
     bottom: 270
   },
-  $s = e => {
+  Ts = e => {
     const t = ie(),
       n = () => e.fill || t.colors.icon.secondary,
       r = () => e.direction || "left",
@@ -4702,7 +4702,7 @@ const Ls = "androidBackHandler",
   Tt = e => {
     const t = Sn(e),
       n = () => e.icon || "close";
-    return a(Qc, Oe({
+    return a(Qc, je({
       get class() {
         return e.class
       },
@@ -4740,7 +4740,7 @@ const Ls = "androidBackHandler",
                     return n() === "arrow"
                   },
                   get children() {
-                    return a($s, {
+                    return a(Ts, {
                       get fill() {
                         return e.fill
                       }
@@ -4861,17 +4861,17 @@ const Xt = class {
   commitStyles() {}
   persist() {}
 };
-let Ts = Xt;
-K(Ts, "_instance", null);
+let Ms = Xt;
+K(Ms, "_instance", null);
 
-function Fe(e, t, n) {
-  return "animate" in e ? e.animate(t, n) : Ts.create()
+function Oe(e, t, n) {
+  return "animate" in e ? e.animate(t, n) : Ms.create()
 }
 const ru = J("<div></div>"),
   ou = Fc,
   iu = Oc,
   su = jc,
-  Ms = e => {
+  Rs = e => {
     const t = ie(),
       n = Sn(e);
     return pe(() => {
@@ -4879,13 +4879,13 @@ const ru = J("<div></div>"),
     }), a(po, {
       onBeforeEnter: r => {
         const o = Dt("mobile") ? 200 : 100;
-        Fe(r, [{
+        Oe(r, [{
           opacity: 0
         }, {
           opacity: 1
         }], {
           duration: o
-        }), Dt("mobile") && Fe(r.firstElementChild, [{
+        }), Dt("mobile") && Oe(r.firstElementChild, [{
           transform: "translateY(390px)"
         }, {
           transform: "translateY(0)"
@@ -4895,7 +4895,7 @@ const ru = J("<div></div>"),
       },
       onExit: (r, o) => {
         const i = Dt("mobile") ? 200 : 100,
-          s = Fe(r, [{
+          s = Oe(r, [{
             opacity: 1
           }, {
             opacity: 0
@@ -4903,7 +4903,7 @@ const ru = J("<div></div>"),
             duration: i
           });
         if (Dt("mobile")) {
-          const l = Fe(r.firstElementChild, [{
+          const l = Oe(r.firstElementChild, [{
             transform: "translateY(0)"
           }, {
             transform: "translateY(390px)"
@@ -4919,7 +4919,7 @@ const ru = J("<div></div>"),
             return e.opened
           },
           get children() {
-            return a(zc, Oe({
+            return a(zc, je({
               "data-tc-modal": "true"
             }, n, {
               get children() {
@@ -5007,10 +5007,10 @@ const ru = J("<div></div>"),
 
     transition: transform 0.13s ease-in-out;
 `,
-  si = w.input`
+  li = w.input`
     display: none;
 `,
-  li = w.label`
+  ai = w.label`
     padding: 9px 12px;
     z-index: 1;
 
@@ -5038,12 +5038,12 @@ const ru = J("<div></div>"),
           get right() {
             return e.selectedTabIndex === 1
           }
-        }), a(li, {
+        }), a(ai, {
           get isActive() {
             return e.selectedTabIndex === 0
           },
           get children() {
-            return [a(si, {
+            return [a(li, {
               type: "radio",
               name: t,
               get checked() {
@@ -5055,12 +5055,12 @@ const ru = J("<div></div>"),
               }
             }), P(() => e.tab1)]
           }
-        }), a(li, {
+        }), a(ai, {
           get isActive() {
             return e.selectedTabIndex === 1
           },
           get children() {
-            return [a(si, {
+            return [a(li, {
               type: "radio",
               get checked() {
                 return e.selectedTabIndex === 1
@@ -5086,10 +5086,10 @@ const ru = J("<div></div>"),
     s: "8px",
     none: "0"
   },
-  Rs = 256,
+  Is = 256,
   Gr = 60,
-  ai = 48,
-  ci = 24,
+  ci = 48,
+  ui = 24,
   Nn = w.div`
     width: 52px;
     height: 52px;
@@ -5109,8 +5109,8 @@ const ru = J("<div></div>"),
     position: relative;
     background-color: ${e=>e.theme.colors.background.qr};
     border-radius: ${e=>fu[e.theme.borderRadius]};
-    padding: ${je(ci)} 0;
-    height: ${je(Rs+ci*2)};
+    padding: ${Ke(ui)} 0;
+    height: ${Ke(Is+ui*2)};
     width: 100%;
 
     overflow: hidden;
@@ -5161,8 +5161,8 @@ const ru = J("<div></div>"),
 `,
   vu = w.div`
     position: absolute;
-    width: ${je(Gr)};
-    height: ${je(Gr)};
+    width: ${Ke(Gr)};
+    height: ${Ke(Gr)};
     background: ${e=>e.theme.colors.background.qr};
 
     display: flex;
@@ -5170,8 +5170,8 @@ const ru = J("<div></div>"),
     justify-content: center;
 `,
   wu = w($t)`
-    width: ${e=>je(e.size)};
-    height: ${e=>je(e.size)};
+    width: ${e=>Ke(e.size)};
+    height: ${e=>Ke(e.size)};
     border-radius: ${e=>hu[e.theme.borderRadius]};
     background-color: ${e=>e.theme.colors.background.qr};
 `,
@@ -5191,7 +5191,7 @@ const ru = J("<div></div>"),
     filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.08));
     background-color: ${e=>e.theme.colors.background.segment};
 `;
-var Is = {
+var Bs = {
   exports: {}
 };
 (function(e, t) {
@@ -5213,7 +5213,7 @@ var Is = {
               for (var U = 0; U < y; U += 1) _[E][U] = null
             }
             return _
-          }(h), ee(0, 0), ee(h - 7, 0), ee(0, h - 7), ke(), ge(), ze(x, k), g >= 7 && Ne(x), R == null && (R = ul(g, S, $)), Ye(R, k)
+          }(h), ee(0, 0), ee(h - 7, 0), ee(0, h - 7), ke(), ge(), Ye(x, k), g >= 7 && He(x), R == null && (R = ul(g, S, $)), Je(R, k)
         },
         ee = function(x, k) {
           for (var y = -1; y <= 7; y += 1)
@@ -5242,7 +5242,7 @@ var Is = {
                   for (var Z = -2; Z <= 2; Z += 1) U == -2 || U == 2 || Z == -2 || Z == 2 || U == 0 && Z == 0 ? m[_ + U][E + Z] = !0 : m[_ + U][E + Z] = !1
             }
         },
-        Ne = function(x) {
+        He = function(x) {
           for (var k = l.getBCHTypeNumber(g), y = 0; y < 18; y += 1) {
             var _ = !x && (k >> y & 1) == 1;
             m[Math.floor(y / 3)][y % 3 + h - 8 - 3] = _
@@ -5252,7 +5252,7 @@ var Is = {
             m[y % 3 + h - 8 - 3][Math.floor(y / 3)] = _
           }
         },
-        ze = function(x, k) {
+        Ye = function(x, k) {
           for (var y = S << 3 | k, _ = l.getBCHTypeInfo(y), E = 0; E < 15; E += 1) {
             var U = !x && (_ >> E & 1) == 1;
             E < 6 ? m[E][8] = U : E < 8 ? m[E + 1][8] = U : m[h - 15 + E][8] = U
@@ -5263,7 +5263,7 @@ var Is = {
           }
           m[h - 8][8] = !x
         },
-        Ye = function(x, k) {
+        Je = function(x, k) {
           for (var y = -1, _ = h - 1, E = 7, U = 0, Z = l.getMaskFunction(k), V = h - 1; V > 0; V -= 2)
             for (V == 6 && (V -= 1);;) {
               for (var ae = 0; ae < 2; ae += 1)
@@ -5287,15 +5287,15 @@ var Is = {
             y += ae;
             var Ie = l.getErrorCorrectPolynomial(me),
               Be = u(U[V], Ie.getLength() - 1),
-              $o = Be.mod(Ie);
+              To = Be.mod(Ie);
             Z[V] = new Array(Ie.getLength() - 1);
             for (var Q = 0; Q < Z[V].length; Q += 1) {
-              var To = Q + $o.getLength() - Z[V].length;
-              Z[V][Q] = To >= 0 ? $o.getAt(To) : 0
+              var Mo = Q + To.getLength() - Z[V].length;
+              Z[V][Q] = Mo >= 0 ? To.getAt(Mo) : 0
             }
           }
-          for (var Mo = 0, Q = 0; Q < k.length; Q += 1) Mo += k[Q].totalCount;
-          for (var Cr = new Array(Mo), An = 0, Q = 0; Q < _; Q += 1)
+          for (var Ro = 0, Q = 0; Q < k.length; Q += 1) Ro += k[Q].totalCount;
+          for (var Cr = new Array(Ro), An = 0, Q = 0; Q < _; Q += 1)
             for (var V = 0; V < k.length; V += 1) Q < U[V].length && (Cr[An] = U[V][Q], An += 1);
           for (var Q = 0; Q < E; Q += 1)
             for (var V = 0; V < k.length; V += 1) Q < Z[V].length && (Cr[An] = Z[V][Q], An += 1);
@@ -5675,10 +5675,10 @@ var Is = {
             for (var T = 0; T < h - 6; T += 1) m.isDark($, T) && !m.isDark($, T + 1) && m.isDark($, T + 2) && m.isDark($, T + 3) && m.isDark($, T + 4) && !m.isDark($, T + 5) && m.isDark($, T + 6) && (R += 40);
           for (var T = 0; T < h; T += 1)
             for (var $ = 0; $ < h - 6; $ += 1) m.isDark($, T) && !m.isDark($ + 1, T) && m.isDark($ + 2, T) && m.isDark($ + 3, T) && m.isDark($ + 4, T) && !m.isDark($ + 5, T) && m.isDark($ + 6, T) && (R += 40);
-          for (var Ne = 0, T = 0; T < h; T += 1)
-            for (var $ = 0; $ < h; $ += 1) m.isDark($, T) && (Ne += 1);
-          var ze = Math.abs(100 * Ne / h / h - 50) / 5;
-          return R += ze * 10, R
+          for (var He = 0, T = 0; T < h; T += 1)
+            for (var $ = 0; $ < h; $ += 1) m.isDark($, T) && (He += 1);
+          var Ye = Math.abs(100 * He / h / h - 50) / 5;
+          return R += Ye * 10, R
         }, g
       }(),
       c = function() {
@@ -6137,15 +6137,15 @@ var Is = {
             for (var T = 1 << $, X = (1 << $) + 1, ee = $ + 1, se = R(), ge = 0; ge < T; ge += 1) se.add(String.fromCharCode(ge));
             se.add(String.fromCharCode(T)), se.add(String.fromCharCode(X));
             var ke = H(),
-              Ne = m(ke);
-            Ne.write(T, ee);
-            var ze = 0,
-              Ye = String.fromCharCode(g[ze]);
-            for (ze += 1; ze < g.length;) {
-              var Mt = String.fromCharCode(g[ze]);
-              ze += 1, se.contains(Ye + Mt) ? Ye = Ye + Mt : (Ne.write(se.indexOf(Ye), ee), se.size() < 4095 && (se.size() == 1 << ee && (ee += 1), se.add(Ye + Mt)), Ye = Mt)
+              He = m(ke);
+            He.write(T, ee);
+            var Ye = 0,
+              Je = String.fromCharCode(g[Ye]);
+            for (Ye += 1; Ye < g.length;) {
+              var Mt = String.fromCharCode(g[Ye]);
+              Ye += 1, se.contains(Je + Mt) ? Je = Je + Mt : (He.write(se.indexOf(Je), ee), se.size() < 4095 && (se.size() == 1 << ee && (ee += 1), se.add(Je + Mt)), Je = Mt)
             }
-            return Ne.write(se.indexOf(Ye), ee), Ne.write(X, ee), Ne.flush(), ke.toByteArray()
+            return He.write(se.indexOf(Je), ee), He.write(X, ee), He.flush(), ke.toByteArray()
           },
           R = function() {
             var $ = {},
@@ -6191,8 +6191,8 @@ var Is = {
   }(function() {
     return n
   })
-})(Is);
-const yu = Is.exports;
+})(Bs);
+const yu = Bs.exports;
 
 function yo(e) {
   return ne(this, null, function*() {
@@ -6216,16 +6216,16 @@ function Cu(e) {
 const bu = J("<div></div>"),
   vr = e => {
     let t, n, r;
-    const [o, i] = q(!1), [s, l] = q(ai);
+    const [o, i] = q(!1), [s, l] = q(ci);
     pe(() => {
       const v = yu(0, "L");
       v.addData(e.sourceUrl), v.make(), t.innerHTML = v.createSvgTag(4, 0);
       const L = t.firstElementChild.clientWidth,
-        I = Math.round(Rs / L * 1e5) / 1e5;
+        I = Math.round(Is / L * 1e5) / 1e5;
       if (r) {
         const W = Math.ceil(Gr / (I * 4)) * 4,
-          H = je(Math.ceil((L - W) / (2 * 4)) * 4);
-        r.style.top = H, r.style.left = H, r.style.height = je(W), r.style.width = je(W), l(Math.round(ai / I))
+          H = Ke(Math.ceil((L - W) / (2 * 4)) * 4);
+        r.style.top = H, r.style.left = H, r.style.height = Ke(W), r.style.width = Ke(W), l(Math.round(ci / I))
       }
       n.style.transform = `scale(${I})`
     });
@@ -6275,7 +6275,7 @@ const bu = J("<div></div>"),
           }
         }), a(po, {
           onBeforeEnter: d => {
-            Fe(d, [{
+            Oe(d, [{
               opacity: 0,
               transform: "translate(-50%, 44px)"
             }, {
@@ -6287,7 +6287,7 @@ const bu = J("<div></div>"),
             })
           },
           onExit: (d, f) => {
-            Fe(d, [{
+            Oe(d, [{
               opacity: 1,
               transform: "translate(-50%, 0)"
             }, {
@@ -6326,7 +6326,7 @@ const bu = J("<div></div>"),
           get children() {
             return a(Nn, {
               get children() {
-                return a(Ps, {})
+                return a(Us, {})
               }
             })
           }
@@ -6352,8 +6352,8 @@ var Qr = (e, t, n) => {
       dict: c => Qr(o, c)
     }]
   },
-  Bs = fr({}),
-  Ge = () => Ae(Bs);
+  Ws = fr({}),
+  Qe = () => Ae(Ws);
 const ku = w.div`
     font-style: normal;
     font-weight: ${e=>e.fontWeight};
@@ -6364,10 +6364,10 @@ const ku = w.div`
 `,
   Me = e => {
     const t = ie(),
-      [n] = Ge();
+      [n] = Qe();
     let r;
     const o = () => e.color || t.colors.text.primary,
-      i = Oe({
+      i = je({
         fontSize: "14px",
         fontWeight: "510",
         lineHeight: "130%"
@@ -6422,7 +6422,7 @@ const ku = w.div`
     height: 100%;
     border-radius: inherit;
 `,
-  Ws = e => a(_u, {
+  Ps = e => a(_u, {
     get class() {
       return e.class
     },
@@ -6478,7 +6478,7 @@ const ku = w.div`
         }
     }
 `,
-  Tu = w(Ws)`
+  Tu = w(Ps)`
     width: 60px;
     height: 60px;
     border-radius: ${e=>Au[e.theme.borderRadius]};
@@ -6530,7 +6530,7 @@ const ku = w.div`
         o !== 0 && (o -= s, r.style.letterSpacing = `${o}px`)
       }
     };
-    return ts(() => n()), pe(() => {
+    return ns(() => n()), pe(() => {
       n()
     }), a($u, {
       get class() {
@@ -6581,8 +6581,8 @@ const ku = w.div`
 
     cursor: default;
 `,
-  Qe = e => {
-    const [t] = Ge();
+  ze = e => {
+    const [t] = Qe();
     return a(Wu, {
       get class() {
         return e.class
@@ -6610,7 +6610,7 @@ const ku = w.div`
     cursor: default;
 `,
   pt = e => {
-    const [t] = Ge();
+    const [t] = Qe();
     return a(Pu, {
       get class() {
         return e.class
@@ -6636,7 +6636,7 @@ const ku = w.div`
     cursor: default;
 `,
   Co = e => {
-    const [t] = Ge();
+    const [t] = Qe();
     return a(Uu, {
       "data-tc-h3": "true",
       get class() {
@@ -6913,7 +6913,7 @@ const ku = w.div`
     })()
   },
   a0 = J('<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13 4.06119V6.75053C13 7.16474 13.3358 7.50053 13.75 7.50053C14.1642 7.50053 14.5 7.16474 14.5 6.75053V2.75053L14.5 2.72807C14.5001 2.63191 14.5003 2.49627 14.4842 2.37627C14.4638 2.22503 14.4063 1.99261 14.2071 1.79342C14.0079 1.59423 13.7755 1.5367 13.6243 1.51637C13.5043 1.50023 13.3686 1.50039 13.2725 1.50051L13.25 1.50053H9.25C8.83579 1.50053 8.5 1.83631 8.5 2.25053C8.5 2.66474 8.83579 3.00053 9.25 3.00053H11.9393L7.21967 7.7202C6.92678 8.01309 6.92678 8.48796 7.21967 8.78086C7.51256 9.07375 7.98744 9.07375 8.28033 8.78086L13 4.06119ZM5.85 1.50053H5.81903H5.81899C5.21528 1.50052 4.71702 1.50051 4.31113 1.53367C3.88956 1.56812 3.50203 1.64204 3.13803 1.82751C2.57354 2.11513 2.1146 2.57407 1.82698 3.13856C1.64151 3.50256 1.56759 3.89009 1.53315 4.31166C1.49998 4.71755 1.49999 5.21581 1.5 5.81953V5.81955V5.85053V10.1505V10.1815V10.1815C1.49999 10.7852 1.49998 11.2835 1.53315 11.6894C1.56759 12.111 1.64151 12.4985 1.82698 12.8625C2.1146 13.427 2.57354 13.8859 3.13803 14.1735C3.50203 14.359 3.88956 14.4329 4.31113 14.4674C4.71702 14.5005 5.21527 14.5005 5.81897 14.5005H5.81901H5.85H10.15H10.181H10.181C10.7847 14.5005 11.283 14.5005 11.6889 14.4674C12.1104 14.4329 12.498 14.359 12.862 14.1735C13.4265 13.8859 13.8854 13.427 14.173 12.8625C14.3585 12.4985 14.4324 12.111 14.4669 11.6894C14.5 11.2835 14.5 10.7853 14.5 10.1816V10.1815V10.1505V9.75053C14.5 9.33631 14.1642 9.00053 13.75 9.00053C13.3358 9.00053 13 9.33631 13 9.75053V10.1505C13 10.793 12.9994 11.2297 12.9718 11.5672C12.945 11.8961 12.8963 12.0642 12.8365 12.1815C12.6927 12.4638 12.4632 12.6932 12.181 12.837C12.0637 12.8968 11.8955 12.9455 11.5667 12.9724C11.2292 12.9999 10.7924 13.0005 10.15 13.0005H5.85C5.20757 13.0005 4.77085 12.9999 4.43328 12.9724C4.10447 12.9455 3.93632 12.8968 3.81902 12.837C3.53677 12.6932 3.3073 12.4638 3.16349 12.1815C3.10372 12.0642 3.05503 11.8961 3.02816 11.5672C3.00058 11.2297 3 10.793 3 10.1505V5.85053C3 5.20809 3.00058 4.77137 3.02816 4.43381C3.05503 4.10499 3.10372 3.93684 3.16349 3.81954C3.3073 3.5373 3.53677 3.30783 3.81902 3.16402C3.93632 3.10425 4.10447 3.05556 4.43328 3.02869C4.77085 3.00111 5.20757 3.00053 5.85 3.00053H6.25C6.66422 3.00053 7 2.66474 7 2.25053C7 1.83631 6.66422 1.50053 6.25 1.50053H5.85Z"></path></svg>'),
-  ui = e => {
+  di = e => {
     const t = ie(),
       n = () => e.fill || t.colors.accent;
     return (() => {
@@ -7019,7 +7019,7 @@ const ku = w.div`
     })()
   },
   b0 = J('<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.0001 10.0001C10.0016 8.02333 10.0267 6.98719 10.436 6.18404C10.8195 5.43139 11.4314 4.81947 12.184 4.43597C13.0397 4 14.1598 4 16.4 4H17.6C19.8402 4 20.9603 4 21.816 4.43597C22.5686 4.81947 23.1805 5.43139 23.564 6.18404C24 7.03969 24 8.15979 24 10.4V11.6C24 13.8402 24 14.9603 23.564 15.816C23.1805 16.5686 22.5686 17.1805 21.816 17.564C21.0128 17.9733 19.9767 17.9984 17.9999 17.9999C17.9984 19.9767 17.9733 21.0128 17.564 21.816C17.1805 22.5686 16.5686 23.1805 15.816 23.564C14.9603 24 13.8402 24 11.6 24H10.4C8.15979 24 7.03969 24 6.18404 23.564C5.43139 23.1805 4.81947 22.5686 4.43597 21.816C4 20.9603 4 19.8402 4 17.6V16.4C4 14.1598 4 13.0397 4.43597 12.184C4.81947 11.4314 5.43139 10.8195 6.18404 10.436C6.98719 10.0267 8.02333 10.0016 10.0001 10.0001ZM10 11.5H9.5C8.09987 11.5 7.3998 11.5 6.86502 11.7725C6.39462 12.0122 6.01217 12.3946 5.77248 12.865C5.5 13.3998 5.5 14.0999 5.5 15.5V18.5C5.5 19.9001 5.5 20.6002 5.77248 21.135C6.01217 21.6054 6.39462 21.9878 6.86502 22.2275C7.3998 22.5 8.09987 22.5 9.5 22.5H12.5C13.9001 22.5 14.6002 22.5 15.135 22.2275C15.6054 21.9878 15.9878 21.6054 16.2275 21.135C16.5 20.6002 16.5 19.9001 16.5 18.5V18H16.4C14.1598 18 13.0397 18 12.184 17.564C11.4314 17.1805 10.8195 16.5686 10.436 15.816C10 14.9603 10 13.8402 10 11.6V11.5ZM11.5 9.5C11.5 8.09987 11.5 7.3998 11.7725 6.86502C12.0122 6.39462 12.3946 6.01217 12.865 5.77248C13.3998 5.5 14.0999 5.5 15.5 5.5H18.5C19.9001 5.5 20.6002 5.5 21.135 5.77248C21.6054 6.01217 21.9878 6.39462 22.2275 6.86502C22.5 7.3998 22.5 8.09987 22.5 9.5V12.5C22.5 13.9001 22.5 14.6002 22.2275 15.135C21.9878 15.6054 21.6054 15.9878 21.135 16.2275C20.6002 16.5 19.9001 16.5 18.5 16.5H15.5C14.0999 16.5 13.3998 16.5 12.865 16.2275C12.3946 15.9878 12.0122 15.6054 11.7725 15.135C11.5 14.6002 11.5 13.9001 11.5 12.5V9.5Z"></path></svg>'),
-  Ps = e => {
+  Us = e => {
     const t = ie(),
       n = () => e.fill || t.colors.icon.secondary;
     return (() => {
@@ -7066,12 +7066,12 @@ const ku = w.div`
     grid-template: 1fr 1fr / 1fr 1fr;
     gap: 4px;
 `,
-  E0 = w(Ws)`
+  E0 = w(Ps)`
     width: 20px;
     height: 20px;
     border-radius: ${e=>k0[e.theme.borderRadius]};
 `,
-  Us = e => a(tr, {
+  Ds = e => a(tr, {
     get name() {
       return e.labelLine1
     },
@@ -7094,21 +7094,21 @@ const ku = w.div`
     },
     onClick: () => e.onClick()
   }),
-  rt = "telegram-wallet",
+  ot = "telegram-wallet",
   kn = {
     TON: "https://raw.githubusercontent.com/ton-connect/sdk/main/assets/ton-icon-48.png",
     TG: "https://raw.githubusercontent.com/ton-connect/sdk/main/assets/tg.png"
   },
-  Ds = e => {
-    const [t] = Ge(), n = () => {
-      if (e.wallet.appName !== rt) {
+  Ns = e => {
+    const [t] = Qe(), n = () => {
+      if (e.wallet.appName !== ot) {
         if ("isPreferred" in e.wallet && e.wallet.isPreferred) return t("walletItem.recent", {}, "Recent");
         if (kt(e.wallet)) return t("walletItem.installed", {}, "Installed");
         if (e.wallet.name === "Tonkeeper") return t("walletItem.popular", {}, "Popular")
       }
     };
     return P((() => {
-      const r = P(() => e.wallet.appName === rt);
+      const r = P(() => e.wallet.appName === ot);
       return () => r() ? a(tr, {
         get icon() {
           return e.wallet.imageUrl
@@ -7167,13 +7167,13 @@ const ku = w.div`
         margin: 0;
     }
 `,
-  [$0, T0] = q(((qo = Ze()) == null ? void 0 : qo.innerHeight) || 0);
-Ze() && window.addEventListener("resize", () => T0(window.innerHeight));
+  [$0, T0] = q(((Zo = Ge()) == null ? void 0 : Zo.innerHeight) || 0);
+Ge() && window.addEventListener("resize", () => T0(window.innerHeight));
 const [Vt, M0] = q(Dt("mobile")), nr = () => M0(Dt("mobile"));
-Ze() && (window.addEventListener("resize", () => nr()), window.addEventListener("load", () => nr(), {
+Ge() && (window.addEventListener("resize", () => nr()), window.addEventListener("load", () => nr(), {
   once: !0
 }));
-const Ns = e => {
+const Hs = e => {
     const [t, n] = q(!1), r = s => {
       n(s.target.scrollTop > 0)
     }, o = () => Vt() ? 150 : 200, i = () => e.maxHeight !== void 0 ? `${e.maxHeight}px` : `${$0()-o()}px`;
@@ -7198,7 +7198,7 @@ const Ns = e => {
     display: block;
     text-decoration: unset;
 `,
-  rr = e => a(R0, Oe({
+  rr = e => a(R0, je({
     get href() {
       return e.href
     },
@@ -7274,7 +7274,7 @@ const Ns = e => {
     background-color: ${e=>e.theme.colors.background.primary};
     padding: 8px;
 `,
-  di = w.button`
+  fi = w.button`
     display: flex;
     align-items: center;
     gap: 8px;
@@ -7297,7 +7297,7 @@ const Ns = e => {
         transform: scale(0.96);
     }
 `,
-  fi = J("<li></li>"),
+  hi = J("<li></li>"),
   Lr = e => a(Me, {
     get translationKey() {
       return e.translationKey
@@ -7331,8 +7331,8 @@ const Ns = e => {
         return a(H0, {
           get children() {
             return [(() => {
-              const s = fi.cloneNode(!0);
-              return xe(s, a(di, {
+              const s = hi.cloneNode(!0);
+              return xe(s, a(fi, {
                 onClick: () => o(),
                 get children() {
                   return [a(B0, {}), a(G, {
@@ -7359,8 +7359,8 @@ const Ns = e => {
                 }
               })), s
             })(), (() => {
-              const s = fi.cloneNode(!0);
-              return xe(s, a(di, {
+              const s = hi.cloneNode(!0);
+              return xe(s, a(fi, {
                 onClick: () => i(),
                 get children() {
                   return [a(P0, {}), a(Lr, {
@@ -7403,7 +7403,7 @@ const Ns = e => {
 `,
   xo = e => {
     const t = Sn(e);
-    return a(j0, Oe({
+    return a(j0, je({
       get class() {
         return e.class
       },
@@ -7447,7 +7447,7 @@ const Ns = e => {
 `,
   Z0 = e => {
     const t = Ae(yt),
-      [n] = Ge(),
+      [n] = Qe(),
       r = () => t.wallet && "name" in t.wallet ? t.wallet.name : n("common.yourWallet", {}, "Your wallet");
     return a(xo, {
       get header() {
@@ -7515,15 +7515,15 @@ const Ns = e => {
   J0 = {
     timeout: 4500
   },
-  [hi, X0] = q(null);
+  [gi, X0] = q(null);
 
 function e1(e) {
   const {
     timeout: t
   } = re(re({}, J0), e), [n, r] = q([]), [o, i] = q([]);
-  return pe(sa(et, s => {
+  return pe(sa(tt, s => {
     var l;
-    if (!s || !s.showNotification || hi() === s || ((l = hi()) == null ? void 0 : l.name) === "confirm-transaction" && s.name === "confirm-transaction") return;
+    if (!s || !s.showNotification || gi() === s || ((l = gi()) == null ? void 0 : l.name) === "confirm-transaction" && s.name === "confirm-transaction") return;
     X0(s), r(d => d.filter(f => f.action !== "confirm-transaction"));
     const c = {
       action: s.name
@@ -7544,7 +7544,7 @@ const t1 = J('<div data-tc-list-notifications="true"></div>'),
       const n = t1.cloneNode(!0);
       return xe(n, a(Hc, {
         onBeforeEnter: r => {
-          Fe(r, [{
+          Oe(r, [{
             opacity: 0,
             transform: "translateY(0)"
           }, {
@@ -7555,7 +7555,7 @@ const t1 = J('<div data-tc-list-notifications="true"></div>'),
           })
         },
         onExit: (r, o) => {
-          Fe(r, [{
+          Oe(r, [{
             opacity: 1,
             transform: "translateY(-8px)"
           }, {
@@ -7607,7 +7607,7 @@ const t1 = J('<div data-tc-list-notifications="true"></div>'),
       })), Y(() => ao(n, e.class)), n
     })()
   },
-  Hs = w(he)`
+  Fs = w(he)`
     background-color: ${e=>e.theme.colors.connectButton.background};
     color: ${e=>e.theme.colors.connectButton.foreground};
     box-shadow: ${e=>`0 4px 24px ${Cn(e.theme.colors.constant.black,.16)}`};
@@ -7618,7 +7618,7 @@ const t1 = J('<div data-tc-list-notifications="true"></div>'),
     gap: 4px;
     height: 40px;
 `,
-  r1 = w(Hs)`
+  r1 = w(Fs)`
     padding: 12px 16px;
     min-width: 148px;
     justify-content: center;
@@ -7657,7 +7657,7 @@ const t1 = J('<div data-tc-list-notifications="true"></div>'),
     }
 `;
 
-function Fs(e) {
+function Os(e) {
   return e.split("-")[0]
 }
 
@@ -7666,14 +7666,14 @@ function c1(e) {
 }
 
 function u1(e) {
-  return ["top", "bottom"].includes(Fs(e)) ? "x" : "y"
+  return ["top", "bottom"].includes(Os(e)) ? "x" : "y"
 }
 
 function d1(e) {
   return e === "y" ? "height" : "width"
 }
 
-function gi(e, t, n) {
+function mi(e, t, n) {
   let {
     reference: r,
     floating: o
@@ -7683,7 +7683,7 @@ function gi(e, t, n) {
     l = u1(t),
     c = d1(l),
     u = r[c] / 2 - o[c] / 2,
-    d = Fs(t),
+    d = Os(t),
     f = l === "x";
   let v;
   switch (d) {
@@ -7750,7 +7750,7 @@ const f1 = (e, t, n) => ne(void 0, null, function*() {
   }), {
     x: d,
     y: f
-  } = gi(u, r, c), v = r, L = {}, I = 0;
+  } = mi(u, r, c), v = r, L = {}, I = 0;
   for (let W = 0; W < l.length; W++) {
     const {
       name: H,
@@ -7784,7 +7784,7 @@ const f1 = (e, t, n) => ne(void 0, null, function*() {
       }): b.rects), {
         x: d,
         y: f
-      } = gi(u, v, c)), W = -1;
+      } = mi(u, v, c)), W = -1;
       continue
     }
   }
@@ -7797,7 +7797,7 @@ const f1 = (e, t, n) => ne(void 0, null, function*() {
   }
 });
 
-function mi(e) {
+function vi(e) {
   return Te(re({}, e), {
     top: e.y,
     left: e.x,
@@ -7811,22 +7811,22 @@ function at(e) {
   return ((t = e.ownerDocument) == null ? void 0 : t.defaultView) || window
 }
 
-function Ve(e) {
+function qe(e) {
   return at(e).getComputedStyle(e)
 }
 
 function vt(e) {
-  return js(e) ? (e.nodeName || "").toLowerCase() : ""
+  return Ks(e) ? (e.nodeName || "").toLowerCase() : ""
 }
 let In;
 
-function Os() {
+function js() {
   if (In) return In;
   const e = navigator.userAgentData;
   return e && Array.isArray(e.brands) ? (In = e.brands.map(t => t.brand + "/" + t.version).join(" "), In) : navigator.userAgent
 }
 
-function qe(e) {
+function Ze(e) {
   return e instanceof at(e).HTMLElement
 }
 
@@ -7834,11 +7834,11 @@ function We(e) {
   return e instanceof at(e).Element
 }
 
-function js(e) {
+function Ks(e) {
   return e instanceof at(e).Node
 }
 
-function vi(e) {
+function wi(e) {
   if (typeof ShadowRoot > "u") return !1;
   const t = at(e).ShadowRoot;
   return e instanceof t || e instanceof ShadowRoot
@@ -7850,7 +7850,7 @@ function pr(e) {
     overflowX: n,
     overflowY: r,
     display: o
-  } = Ve(e);
+  } = qe(e);
   return /auto|scroll|overlay|hidden/.test(t + r + n) && !["inline", "contents"].includes(o)
 }
 
@@ -7859,8 +7859,8 @@ function h1(e) {
 }
 
 function So(e) {
-  const t = /firefox/i.test(Os()),
-    n = Ve(e),
+  const t = /firefox/i.test(js()),
+    n = qe(e),
     r = n.backdropFilter || n.WebkitBackdropFilter;
   return n.transform !== "none" || n.perspective !== "none" || (r ? r !== "none" : !1) || t && n.willChange === "filter" || t && (n.filter ? n.filter !== "none" : !1) || ["transform", "perspective"].some(o => n.willChange.includes(o)) || ["paint", "layout", "strict", "content"].some(o => {
     const i = n.contain;
@@ -7868,16 +7868,16 @@ function So(e) {
   })
 }
 
-function Ks() {
-  return !/^((?!chrome|android).)*safari/i.test(Os())
+function Vs() {
+  return !/^((?!chrome|android).)*safari/i.test(js())
 }
 
 function ko(e) {
   return ["html", "body", "#document"].includes(vt(e))
 }
-const wi = Math.min,
+const pi = Math.min,
   ln = Math.max,
-  pi = Math.round,
+  yi = Math.round,
   Yr = {
     x: 1,
     y: 1
@@ -7887,10 +7887,10 @@ function vn(e) {
   const t = !We(e) && e.contextElement ? e.contextElement : We(e) ? e : null;
   if (!t) return Yr;
   const n = t.getBoundingClientRect(),
-    r = Ve(t);
-  if (r.boxSizing !== "border-box") return qe(t) ? {
-    x: t.offsetWidth > 0 && pi(n.width) / t.offsetWidth || 1,
-    y: t.offsetHeight > 0 && pi(n.height) / t.offsetHeight || 1
+    r = qe(t);
+  if (r.boxSizing !== "border-box") return Ze(t) ? {
+    x: t.offsetWidth > 0 && yi(n.width) / t.offsetWidth || 1,
+    y: t.offsetHeight > 0 && yi(n.height) / t.offsetHeight || 1
   } : Yr;
   let o = n.width / parseFloat(r.width),
     i = n.height / parseFloat(r.height);
@@ -7907,7 +7907,7 @@ function wt(e, t, n, r) {
   let u = Yr;
   t && (r ? We(r) && (u = vn(r)) : u = vn(e));
   const d = We(e) ? at(e) : window,
-    f = !Ks() && n,
+    f = !Vs() && n,
     v = (c.left + (f && (o = (i = d.visualViewport) == null ? void 0 : i.offsetLeft) != null ? o : 0)) / u.x,
     L = (c.top + (f && (s = (l = d.visualViewport) == null ? void 0 : l.offsetTop) != null ? s : 0)) / u.y,
     I = c.width / u.x,
@@ -7925,7 +7925,7 @@ function wt(e, t, n, r) {
 }
 
 function Ct(e) {
-  return ((js(e) ? e.ownerDocument : e.document) || window.document).documentElement
+  return ((Ks(e) ? e.ownerDocument : e.document) || window.document).documentElement
 }
 
 function yr(e) {
@@ -7938,12 +7938,12 @@ function yr(e) {
   }
 }
 
-function Vs(e) {
+function qs(e) {
   return wt(Ct(e)).left + yr(e).scrollLeft
 }
 
 function g1(e, t, n) {
-  const r = qe(t),
+  const r = Ze(t),
     o = Ct(t),
     i = wt(e, !0, n === "fixed", t);
   let s = {
@@ -7955,10 +7955,10 @@ function g1(e, t, n) {
     y: 0
   };
   if (r || !r && n !== "fixed")
-    if ((vt(t) !== "body" || pr(o)) && (s = yr(t)), qe(t)) {
+    if ((vt(t) !== "body" || pr(o)) && (s = yr(t)), Ze(t)) {
       const c = wt(t, !0);
       l.x = c.x + t.clientLeft, l.y = c.y + t.clientTop
-    } else o && (l.x = Vs(o));
+    } else o && (l.x = qs(o));
   return {
     x: i.left + s.scrollLeft - l.x,
     y: i.top + s.scrollTop - l.y,
@@ -7969,32 +7969,32 @@ function g1(e, t, n) {
 
 function wn(e) {
   if (vt(e) === "html") return e;
-  const t = e.assignedSlot || e.parentNode || (vi(e) ? e.host : null) || Ct(e);
-  return vi(t) ? t.host : t
+  const t = e.assignedSlot || e.parentNode || (wi(e) ? e.host : null) || Ct(e);
+  return wi(t) ? t.host : t
 }
 
-function yi(e) {
-  return !qe(e) || Ve(e).position === "fixed" ? null : e.offsetParent
+function Ci(e) {
+  return !Ze(e) || qe(e).position === "fixed" ? null : e.offsetParent
 }
 
 function m1(e) {
   let t = wn(e);
-  for (; qe(t) && !ko(t);) {
+  for (; Ze(t) && !ko(t);) {
     if (So(t)) return t;
     t = wn(t)
   }
   return null
 }
 
-function Ci(e) {
+function bi(e) {
   const t = at(e);
-  let n = yi(e);
-  for (; n && h1(n) && Ve(n).position === "static";) n = yi(n);
-  return n && (vt(n) === "html" || vt(n) === "body" && Ve(n).position === "static" && !So(n)) ? t : n || m1(e) || t
+  let n = Ci(e);
+  for (; n && h1(n) && qe(n).position === "static";) n = Ci(n);
+  return n && (vt(n) === "html" || vt(n) === "body" && qe(n).position === "static" && !So(n)) ? t : n || m1(e) || t
 }
 
 function v1(e) {
-  if (qe(e)) return {
+  if (Ze(e)) return {
     width: e.offsetWidth,
     height: e.offsetHeight
   };
@@ -8011,7 +8011,7 @@ function w1(e) {
     offsetParent: n,
     strategy: r
   } = e;
-  const o = qe(n),
+  const o = Ze(n),
     i = Ct(n);
   if (n === i) return t;
   let s = {
@@ -8026,7 +8026,7 @@ function w1(e) {
     x: 0,
     y: 0
   };
-  if ((o || !o && r !== "fixed") && ((vt(n) !== "body" || pr(i)) && (s = yr(n)), qe(n))) {
+  if ((o || !o && r !== "fixed") && ((vt(n) !== "body" || pr(i)) && (s = yr(n)), Ze(n))) {
     const u = wt(n);
     l = vn(n), c.x = u.x + n.clientLeft, c.y = u.y + n.clientTop
   }
@@ -8048,7 +8048,7 @@ function p1(e, t) {
     c = 0;
   if (o) {
     i = o.width, s = o.height;
-    const u = Ks();
+    const u = Vs();
     (u || !u && t === "fixed") && (l = o.offsetLeft, c = o.offsetTop)
   }
   return {
@@ -8066,9 +8066,9 @@ function y1(e) {
     o = (t = e.ownerDocument) == null ? void 0 : t.body,
     i = ln(n.scrollWidth, n.clientWidth, o ? o.scrollWidth : 0, o ? o.clientWidth : 0),
     s = ln(n.scrollHeight, n.clientHeight, o ? o.scrollHeight : 0, o ? o.clientHeight : 0);
-  let l = -r.scrollLeft + Vs(e);
+  let l = -r.scrollLeft + qs(e);
   const c = -r.scrollTop;
-  return Ve(o || n).direction === "rtl" && (l += ln(n.clientWidth, o ? o.clientWidth : 0) - i), {
+  return qe(o || n).direction === "rtl" && (l += ln(n.clientWidth, o ? o.clientWidth : 0) - i), {
     width: i,
     height: s,
     x: l,
@@ -8076,15 +8076,15 @@ function y1(e) {
   }
 }
 
-function qs(e) {
+function Zs(e) {
   const t = wn(e);
-  return ko(t) ? e.ownerDocument.body : qe(t) && pr(t) ? t : qs(t)
+  return ko(t) ? e.ownerDocument.body : Ze(t) && pr(t) ? t : Zs(t)
 }
 
 function an(e, t) {
   var n;
   t === void 0 && (t = []);
-  const r = qs(e),
+  const r = Zs(e),
     o = r === ((n = e.ownerDocument) == null ? void 0 : n.body),
     i = at(r);
   return o ? t.concat(i, i.visualViewport || [], pr(r) ? r : []) : t.concat(r, an(r))
@@ -8094,7 +8094,7 @@ function C1(e, t) {
   const n = wt(e, !0, t === "fixed"),
     r = n.top + e.clientTop,
     o = n.left + e.clientLeft,
-    i = qe(e) ? vn(e) : {
+    i = Ze(e) ? vn(e) : {
       x: 1,
       y: 1
     },
@@ -8114,8 +8114,8 @@ function C1(e, t) {
   }
 }
 
-function bi(e, t, n) {
-  return t === "viewport" ? mi(p1(e, n)) : We(t) ? C1(t, n) : mi(y1(Ct(e)))
+function xi(e, t, n) {
+  return t === "viewport" ? vi(p1(e, n)) : We(t) ? C1(t, n) : vi(y1(Ct(e)))
 }
 
 function b1(e, t) {
@@ -8123,10 +8123,10 @@ function b1(e, t) {
   if (n) return n;
   let r = an(e).filter(l => We(l) && vt(l) !== "body"),
     o = null;
-  const i = Ve(e).position === "fixed";
+  const i = qe(e).position === "fixed";
   let s = i ? wn(e) : e;
   for (; We(s) && !ko(s);) {
-    const l = Ve(s),
+    const l = qe(s),
       c = So(s);
     (i ? !c && !o : !c && l.position === "static" && !!o && ["absolute", "fixed"].includes(o.position)) ? r = r.filter(d => d !== s): o = l, s = wn(s)
   }
@@ -8143,9 +8143,9 @@ function x1(e) {
   const s = [...n === "clippingAncestors" ? b1(t, this._c) : [].concat(n), r],
     l = s[0],
     c = s.reduce((u, d) => {
-      const f = bi(t, d, o);
-      return u.top = ln(f.top, u.top), u.right = wi(f.right, u.right), u.bottom = wi(f.bottom, u.bottom), u.left = ln(f.left, u.left), u
-    }, bi(t, l, o));
+      const f = xi(t, d, o);
+      return u.top = ln(f.top, u.top), u.right = pi(f.right, u.right), u.bottom = pi(f.bottom, u.bottom), u.left = ln(f.left, u.left), u
+    }, xi(t, l, o));
   return {
     width: c.right - c.left,
     height: c.bottom - c.top,
@@ -8158,7 +8158,7 @@ const S1 = {
   convertOffsetParentRelativeRectToViewportRelativeRect: w1,
   isElement: We,
   getDimensions: v1,
-  getOffsetParent: Ci,
+  getOffsetParent: bi,
   getDocumentElement: Ct,
   getScale: vn,
   getElementRects(e) {
@@ -8168,7 +8168,7 @@ const S1 = {
         floating: n,
         strategy: r
       } = e;
-      const o = this.getOffsetParent || Ci,
+      const o = this.getOffsetParent || bi,
         i = this.getDimensions;
       return {
         reference: g1(t, yield o(n), r),
@@ -8180,7 +8180,7 @@ const S1 = {
     })
   },
   getClientRects: e => Array.from(e.getClientRects()),
-  isRTL: e => Ve(e).direction === "rtl"
+  isRTL: e => qe(e).direction === "rtl"
 };
 
 function k1(e, t, n, r) {
@@ -8330,12 +8330,12 @@ const A1 = J('<tc-root data-tc-dropdown-container="true"></tc-root>'),
           F = u.contains(A.target);
         !B && !F && o(!1)
       };
-    return ts(() => {
+    return ns(() => {
       document.body.addEventListener("click", N)
     }), Ee(() => {
       document.body.removeEventListener("click", N), H()
     }), a(Ot, {
-      component: Xe,
+      component: et,
       get children() {
         return [a(G, {
           get when() {
@@ -8360,7 +8360,7 @@ const A1 = J('<tc-root data-tc-dropdown-container="true"></tc-root>'),
                 return !i()
               },
               get children() {
-                return a(Hs, {
+                return a(Fs, {
                   onClick: () => n.openModal(),
                   "data-tc-connect-button": "true",
                   scale: "s",
@@ -8402,16 +8402,16 @@ const A1 = J('<tc-root data-tc-dropdown-container="true"></tc-root>'),
                           get children() {
                             return W()
                           }
-                        }), a($s, {
+                        }), a(Ts, {
                           direction: "bottom"
                         })]
                       }
-                    }), a(fs, {
+                    }), a(hs, {
                       get children() {
                         const A = Ce(() => document.importNode(A1, !0));
                         return Ht(f, A), A.style.setProperty("z-index", "999"), A._$owner = la(), xe(A, a(po, {
                           onBeforeEnter: B => {
-                            Fe(B, [{
+                            Oe(B, [{
                               opacity: 0,
                               transform: "translateY(-8px)"
                             }, {
@@ -8422,7 +8422,7 @@ const A1 = J('<tc-root data-tc-dropdown-container="true"></tc-root>'),
                             })
                           },
                           onExit: (B, F) => {
-                            Fe(B, [{
+                            Oe(B, [{
                               opacity: 1,
                               transform: "translateY(0)"
                             }, {
@@ -8473,7 +8473,7 @@ const A1 = J('<tc-root data-tc-dropdown-container="true"></tc-root>'),
       }
     })
   },
-  Zs = w(Ms)`
+  Gs = w(Rs)`
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 18px;
@@ -8486,14 +8486,14 @@ const A1 = J('<tc-root data-tc-dropdown-container="true"></tc-root>'),
         min-height: 364px;
     }
 `,
-  Gs = w(Qe)`
+  Qs = w(ze)`
     margin-top: 12px;
 
     ${Re("mobile")} {
         padding: 0 10px;
     }
 `,
-  Qs = w.div`
+  zs = w.div`
     margin: 30px 0;
     width: 100%;
     display: flex;
@@ -8544,7 +8544,7 @@ function _o(e, t) {
   return t && (n = t.includeWallets) != null && n.length && (e = T1("name", e, t.includeWallets.map(M1))), e
 }
 
-function xi(e) {
+function Si(e) {
   return e.platforms.some(t => ["macos", "linux", "windows"].includes(t))
 }
 
@@ -8552,7 +8552,7 @@ function cn(e) {
   return e.platforms.some(t => ["ios", "android"].includes(t))
 }
 
-function Si(e) {
+function ki(e) {
   return e.platforms.some(t => ["chrome", "firefox", "safari"].includes(t))
 }
 
@@ -8564,7 +8564,7 @@ const R1 = w.div`
     flex-direction: column;
     align-items: center;
 `,
-  I1 = w(Qe)`
+  I1 = w(ze)`
     margin-bottom: 18px;
 `;
 w.div`
@@ -8611,7 +8611,7 @@ const W1 = w(Tt)`
     top: 16px;
     left: 16px;
 `,
-  P1 = w(Ds)`
+  P1 = w(Ns)`
     height: 100%;
 `,
   U1 = J("<li></li>"),
@@ -8627,7 +8627,7 @@ const W1 = w(Tt)`
         }), a(I1, {
           translationKey: "walletModal.wallets",
           children: "Wallets"
-        }), a(Ns, {
+        }), a(Hs, {
           get maxHeight() {
             return t()
           },
@@ -8679,7 +8679,7 @@ const W1 = w(Tt)`
   j1 = w(vr)`
     margin-bottom: 24px;
 `,
-  K1 = w(Qe)`
+  K1 = w(ze)`
     max-width: 288px;
     margin: 0 auto 2px;
 `,
@@ -8732,7 +8732,7 @@ const W1 = w(Tt)`
     border-radius: ${e=>H1[e.theme.borderRadius]};
 `,
   ye = e => {
-    const [t] = Ge();
+    const [t] = Qe();
     return P(() => {
       var n;
       return t(e.translationKey, e.translationValues, (n = e.children) == null ? void 0 : n.toString())
@@ -8741,22 +8741,22 @@ const W1 = w(Tt)`
 
 function oe(e, t) {
   let n;
-  typeof t == "string" ? n = t : n = Ke() ? t.twaReturnUrl || t.returnStrategy : "none";
+  typeof t == "string" ? n = t : n = Ve() ? t.twaReturnUrl || t.returnStrategy : "none";
   const r = J1(e, "ret", n);
   if (!ft(e)) return r;
   const o = r.slice(r.lastIndexOf("&") + 1);
-  return r.slice(0, r.lastIndexOf("&")) + "-" + Wi(o)
+  return r.slice(0, r.lastIndexOf("&")) + "-" + Pi(o)
 }
 
 function _n(e, t) {
   t = re({}, t);
   const n = X1(e),
     r = new URL(n);
-  if (r.searchParams.has("startapp") || r.searchParams.append("startapp", "tonconnect"), _s()) {
+  if (r.searchParams.has("startapp") || r.searchParams.append("startapp", "tonconnect"), Es()) {
     t.returnStrategy = "back";
     const o = oe(r.toString(), t.returnStrategy);
     le(o)
-  } else if (Ke())
+  } else if (Ve())
     if (xt("ios", "android", "macos", "tdesktop", "web")) {
       t.returnStrategy = "back";
       const o = oe(r.toString(), t.returnStrategy);
@@ -8808,14 +8808,14 @@ function _n(e, t) {
 }
 
 function En(e, t, n, r) {
-  if (n = re({}, n), _s())
+  if (n = re({}, n), Es())
     if (Pe("ios", "android")) n.returnStrategy === "back" && (n.returnStrategy = "tg://resolve"), r("universal-link"), on(oe(e, n.returnStrategy), "_self");
     else {
       r("universal-link");
       const o = oe(e, n.returnStrategy);
       le(o)
     }
-  else if (Ke())
+  else if (Ve())
     if (xt("ios", "android")) {
       n.returnStrategy === "back" && (n.returnStrategy = "tg://resolve"), r("universal-link");
       const o = oe(e, n.returnStrategy);
@@ -8872,9 +8872,9 @@ function Pn(e) {
     o = t.searchParams.get("startapp");
   return `tg://resolve?domain=${n}&appname=${r}&startapp=${o}`
 }
-const zs = e => {
+const Ys = e => {
     const [t, n] = q("mobile"), [r, o] = q(!1), [i, s] = q(), [l, c] = q(!0), u = Ae(Gt), d = u.onStatusChange(() => {}, () => {
-      e.wallet.appName !== rt && o(!0)
+      e.wallet.appName !== ot && o(!0)
     });
     Ee(d);
     const f = () => {
@@ -8887,7 +8887,7 @@ const zs = e => {
       } catch {}
     };
     pe(() => {
-      Ce(t) !== "extension" && (cn(e.wallet) || xi(e.wallet)) && f()
+      Ce(t) !== "extension" && (cn(e.wallet) || Si(e.wallet)) && f()
     });
     const v = () => {
         o(!1), t() === "extension" && f(), n("mobile"), Se(Te(re({}, e.wallet), {
@@ -8923,7 +8923,7 @@ const zs = e => {
           jsBridgeKey: e.wallet.jsBridgeKey
         }, e.additionalRequest))
       };
-    return cn(e.wallet) ? v() : Si(e.wallet) ? W() : L(), a(F1, {
+    return cn(e.wallet) ? v() : ki(e.wallet) ? W() : L(), a(F1, {
       "data-tc-wallets-modal-connection-desktop": "true",
       get children() {
         return [a(G, {
@@ -9072,7 +9072,7 @@ const zs = e => {
                               get children() {
                                 return a(he, {
                                   get rightIcon() {
-                                    return a(ui, {})
+                                    return a(di, {})
                                   },
                                   onClick: W,
                                   get children() {
@@ -9134,7 +9134,7 @@ const zs = e => {
                           get children() {
                             return a(he, {
                               get rightIcon() {
-                                return a(ui, {})
+                                return a(di, {})
                               },
                               get children() {
                                 return a(ye, {
@@ -9161,7 +9161,7 @@ const zs = e => {
           }
         }), a(G, {
           get when() {
-            return e.wallet.appName === rt
+            return e.wallet.appName === ot
           },
           get children() {
             return a(z1, {
@@ -9184,7 +9184,7 @@ const zs = e => {
           }
         }), a(G, {
           get when() {
-            return e.wallet.appName !== rt
+            return e.wallet.appName !== ot
           },
           get children() {
             return a(Z1, {
@@ -9210,7 +9210,7 @@ const zs = e => {
                   }
                 }), a(G, {
                   get when() {
-                    return P(() => t() !== "extension")() && Si(e.wallet)
+                    return P(() => t() !== "extension")() && ki(e.wallet)
                   },
                   get children() {
                     return a(Tr, {
@@ -9229,7 +9229,7 @@ const zs = e => {
                   }
                 }), a(G, {
                   get when() {
-                    return P(() => t() !== "desktop")() && xi(e.wallet)
+                    return P(() => t() !== "desktop")() && Si(e.wallet)
                   },
                   get children() {
                     return a(Tr, {
@@ -9260,7 +9260,7 @@ const zs = e => {
     top: 16px;
     left: 16px;
 `,
-  nd = w(Qe)`
+  nd = w(ze)`
     margin-bottom: 18px;
 `,
   Mr = w.div`
@@ -9291,7 +9291,7 @@ const zs = e => {
   od = {
     GET_A_WALLET: "https://ton.org/wallets?filters[wallet_features][slug][$in]=dapp-auth&pagination[limit]=-1"
   },
-  Ys = e => a(ed, {
+  Js = e => a(ed, {
     "data-tc-wallets-modal-info": "true",
     get children() {
       return [a(td, {
@@ -9300,7 +9300,7 @@ const zs = e => {
       }), a(nd, {
         translationKey: "walletModal.infoModal.whatIsAWallet",
         children: "What is a wallet"
-      }), a(Ns, {
+      }), a(Hs, {
         get children() {
           return [a(Mr, {
             get children() {
@@ -9375,7 +9375,7 @@ const zs = e => {
     justify-content: center;
     min-height: 232px;
 `,
-  ld = w(Qe)`
+  ld = w(ze)`
     max-width: 262px;
     margin: 0 auto 8px;
 `,
@@ -9406,18 +9406,18 @@ const zs = e => {
   hd = w(wr)`
     margin-bottom: 16px;
 `,
-  ki = w(pt)`
+  _i = w(pt)`
     color: ${e=>e.theme.colors.text.secondary};
     text-align: center;
     margin-bottom: 20px;
 `,
-  _i = w.div`
+  Ei = w.div`
     display: flex;
     justify-content: center;
     gap: 8px;
     padding-bottom: 16px;
 `,
-  gd = w(Qe)`
+  gd = w(ze)`
     margin-bottom: 2px;
     padding: 0 64px;
 `,
@@ -9456,7 +9456,7 @@ const zs = e => {
       })
     }
   })],
-  Js = e => {
+  Xs = e => {
     const t = ie(),
       [n, r] = q(!0),
       [o, i] = q(!1),
@@ -9550,10 +9550,10 @@ const zs = e => {
                   get children() {
                     return [a(hd, {
                       size: "s"
-                    }), a(ki, {
+                    }), a(_i, {
                       translationKey: "walletModal.mobileConnectionModal.connectionDeclined",
                       children: "Connection declined"
-                    }), a(_i, {
+                    }), a(Ei, {
                       get children() {
                         return [a(he, {
                           get leftIcon() {
@@ -9592,7 +9592,7 @@ const zs = e => {
                   get children() {
                     return [a(fd, {
                       size: "s"
-                    }), a(ki, {
+                    }), a(_i, {
                       translationKey: "walletModal.mobileConnectionModal.continueIn",
                       get translationValues() {
                         return {
@@ -9602,7 +9602,7 @@ const zs = e => {
                       get children() {
                         return ["Continue in ", P(() => e.wallet.name), "…"]
                       }
-                    }), a(_i, {
+                    }), a(Ei, {
                       get children() {
                         return [a(he, {
                           get leftIcon() {
@@ -9669,7 +9669,7 @@ const zs = e => {
       }
     })
   },
-  Xs = {
+  el = {
     m: "16px",
     s: "12px",
     none: "0"
@@ -9702,7 +9702,7 @@ const zs = e => {
         height: fit-content;
     }
 `,
-  Ei = w.li`
+  Ai = w.li`
     width: 82px;
     min-width: 82px;
     height: 124px;
@@ -9742,10 +9742,10 @@ const zs = e => {
     background-color: ${e=>e.theme.colors.icon.secondary};
     opacity: 0.2;
 `,
-  Ai = w.div`
+  Li = w.div`
     width: 60px;
     height: 60px;
-    border-radius: ${e=>Xs[e.theme.borderRadius]};
+    border-radius: ${e=>el[e.theme.borderRadius]};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9753,7 +9753,7 @@ const zs = e => {
     background-color: ${e=>e.theme.colors.background.tint};
     margin-bottom: 8px;
 `,
-  bd = w(Qe)`
+  bd = w(ze)`
     margin-top: 38px;
     margin-bottom: 4px;
     padding: 0 24px;
@@ -9773,7 +9773,7 @@ w(he)`
 const Sd = w(he)`
     margin: 0 24px 24px;
     width: calc(100% - 48px);
-    border-radius: ${e=>Xs[e.theme.borderRadius]};
+    border-radius: ${e=>el[e.theme.borderRadius]};
     padding: 14px 16px 14px 14px;
     background-color: ${e=>e.theme.colors.telegramButton};
 
@@ -9788,12 +9788,12 @@ const Sd = w(he)`
     width: 24px;
     height: 24px;
 `,
-  Li = w(Tt)`
+  $i = w(Tt)`
     position: absolute;
     top: 16px;
     left: 16px;
 `,
-  _d = w(Qe)`
+  _d = w(ze)`
     margin-bottom: 2px;
     padding: 0 64px;
 `,
@@ -9824,23 +9824,23 @@ const Sd = w(he)`
     }
   })];
 
-function el(e) {
+function tl(e) {
   const t = new Set(e.filter(ro).map(n => n.bridgeUrl));
   return Array.from(t).map(n => ({
     bridgeUrl: n
   }))
 }
 
-function tl(e, t) {
+function nl(e, t) {
   const n = new Set(e == null ? void 0 : e.map(o => o.bridgeUrl)),
     r = new Set(t == null ? void 0 : t.map(o => o.bridgeUrl));
   return n.size === r.size && [...n].every(o => r.has(o))
 }
-const $i = J("<li></li>"),
+const Ti = J("<li></li>"),
   $d = J('<div data-tc-wallets-modal-universal-mobile="true"></div>'),
   Td = e => {
-    const [t, n] = q(!1), [r, o] = q(!0), [i, s] = q(null), l = te.connector, c = () => e.walletsList.filter(B => cn(B) && B.appName !== rt), u = () => c().length > 7, d = P(() => el(e.walletsList), null, {
-      equals: tl
+    const [t, n] = q(!1), [r, o] = q(!0), [i, s] = q(null), l = te.connector, c = () => e.walletsList.filter(B => cn(B) && B.appName !== ot), u = () => c().length > 7, d = P(() => tl(e.walletsList), null, {
+      equals: nl
     }), f = () => (i() || s(l.connect(d(), e.additionalRequest)), i());
     Se({
       openMethod: "universal-link"
@@ -9861,7 +9861,7 @@ const $i = J("<li></li>"),
       })
     }, H = () => {
       s(null);
-      const B = e.walletsList.find(M => M.appName === rt);
+      const B = e.walletsList.find(M => M.appName === ot);
       if (!B || !ro(B)) throw new fe("@wallet bot not found in the wallets list");
       const F = l.connect({
           bridgeUrl: B.bridgeUrl,
@@ -9889,7 +9889,7 @@ const $i = J("<li></li>"),
           return t()
         },
         get children() {
-          return [a(Li, {
+          return [a($i, {
             icon: "arrow",
             onClick: A
           }), a(Ld, {
@@ -9903,7 +9903,7 @@ const $i = J("<li></li>"),
           return !t()
         },
         get children() {
-          return [a(Li, {
+          return [a($i, {
             get icon() {
               return a(zr, {})
             },
@@ -9941,7 +9941,7 @@ const $i = J("<li></li>"),
                   return P(() => !!u())() ? c().slice(0, 4) : c()
                 },
                 children: F => (() => {
-                  const b = $i.cloneNode(!0);
+                  const b = Ti.cloneNode(!0);
                   return xe(b, a(tr, {
                     get icon() {
                       return F.imageUrl
@@ -9957,8 +9957,8 @@ const $i = J("<li></li>"),
                   return u()
                 },
                 get children() {
-                  const F = $i.cloneNode(!0);
-                  return xe(F, a(Us, {
+                  const F = Ti.cloneNode(!0);
+                  return xe(F, a(Ds, {
                     labelLine1: "View all",
                     labelLine2: "wallets",
                     get images() {
@@ -9969,10 +9969,10 @@ const $i = J("<li></li>"),
                 }
               }), a(Cd, {
                 children: " "
-              }), a(Ei, {
+              }), a(Ai, {
                 onClick: W,
                 get children() {
-                  return [a(Ai, {
+                  return [a(Li, {
                     get children() {
                       return a(Nu, {})
                     }
@@ -9982,12 +9982,12 @@ const $i = J("<li></li>"),
                     children: "Open Link"
                   })]
                 }
-              }), a(Ei, {
+              }), a(Ai, {
                 onClick: I,
                 get children() {
-                  return [a(Ai, {
+                  return [a(Li, {
                     get children() {
-                      return P(() => v() !== void 0)() ? a(C0, {}) : a(Ps, {})
+                      return P(() => v() !== void 0)() ? a(C0, {}) : a(Us, {})
                     }
                   }), a(Me, {
                     fontWeight: 590,
@@ -10006,7 +10006,7 @@ const $i = J("<li></li>"),
       }), null), B
     })()
   },
-  nl = {
+  rl = {
     m: "16px",
     s: "8px",
     none: "0"
@@ -10048,7 +10048,7 @@ w(he)`
     width: 100%;
     padding: 0 16px;
     height: 56px;
-    border-radius: ${e=>nl[e.theme.borderRadius]};
+    border-radius: ${e=>rl[e.theme.borderRadius]};
 
     &:hover {
         ${e=>e.disableEventsAnimation?"transform: unset;":""}
@@ -10068,7 +10068,7 @@ w.ul`
     transform: translateY(-16px);
 
     background-color: ${e=>e.theme.colors.background.primary};
-    border-radius: ${e=>nl[e.theme.borderRadius]};
+    border-radius: ${e=>rl[e.theme.borderRadius]};
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.16);
 `;
 w.li`
@@ -10111,8 +10111,8 @@ w(Me)`
 `;
 const Ud = J("<li></li>"),
   Dd = e => {
-    const [t, n] = q(!1), r = te.connector, o = P(() => el(e.walletsList), null, {
-      equals: tl
+    const [t, n] = q(!1), r = te.connector, o = P(() => tl(e.walletsList), null, {
+      equals: nl
     });
     Se({
       openMethod: "qrcode"
@@ -10122,7 +10122,7 @@ const Ud = J("<li></li>"),
       onClick: () => n(!1),
       "data-tc-wallets-modal-universal-desktop": "true",
       get children() {
-        return [a(Qe, {
+        return [a(ze, {
           translationKey: "walletModal.desktopUniversalModal.connectYourWallet",
           children: "Connect your wallet"
         }), a(Id, {
@@ -10149,12 +10149,12 @@ const Ud = J("<li></li>"),
               },
               children: s => (() => {
                 const l = Ud.cloneNode(!0);
-                return xe(l, a(Ds, {
+                return xe(l, a(Ns, {
                   wallet: s,
                   onClick: () => e.onSelect(s)
                 })), l
               })()
-            }), a(Us, {
+            }), a(Ds, {
               labelLine1: "View all",
               labelLine2: "wallets",
               get images() {
@@ -10170,9 +10170,9 @@ const Ud = J("<li></li>"),
   Nd = () => {
     const {
       locale: e
-    } = Ge()[1];
+    } = Qe()[1];
     pe(() => e(te.language)), pe(() => {
-      ti() ? nr() : (i(null), l("universal"), u(!1))
+      ni() ? nr() : (i(null), l("universal"), u(!1))
     });
     const t = Ae(Gt),
       n = Ae(yt),
@@ -10192,8 +10192,8 @@ const Ud = J("<li></li>"),
         b && M && !C && (A = [Te(re({}, M), {
           isPreferred: !0
         })].concat(A.filter(g => !ut(g, b))));
-        const p = A.find(g => ut(g, rt));
-        return p && (A = [p].concat(A.filter(g => !ut(g, rt)))), A
+        const p = A.find(g => ut(g, ot));
+        return p && (A = [p].concat(A.filter(g => !ut(g, ot)))), A
       }),
       f = () => {
         var A;
@@ -10220,9 +10220,9 @@ const Ud = J("<li></li>"),
       };
     return Ee(() => {
       i(null), u(!1)
-    }), Ee(I), a(Zs, {
+    }), Ee(I), a(Gs, {
       get opened() {
-        return ti()
+        return ni()
       },
       get enableAndroidBackHandler() {
         return te.enableAndroidBackHandler
@@ -10236,7 +10236,7 @@ const Ud = J("<li></li>"),
             return c()
           },
           get children() {
-            return a(Ys, {
+            return a(Js, {
               onBackClick: () => u(!1)
             })
           }
@@ -10250,10 +10250,10 @@ const Ud = J("<li></li>"),
                 return f() || !d()
               },
               get children() {
-                return [a(Gs, {
+                return [a(Qs, {
                   translationKey: "walletModal.loading",
                   children: "Wallets list is loading"
-                }), a(Qs, {
+                }), a(zs, {
                   get children() {
                     return a(lt, {
                       size: "m"
@@ -10275,7 +10275,7 @@ const Ud = J("<li></li>"),
                       get children() {
                         return a(Ot, {
                           get component() {
-                            return Vt() ? Js : zs
+                            return Vt() ? Xs : Ys
                           },
                           get wallet() {
                             return o()
@@ -10334,7 +10334,7 @@ const Ud = J("<li></li>"),
     align-items: center;
     padding-bottom: 8px;
 `,
-  Fd = w(Qe)`
+  Fd = w(ze)`
     margin-top: 16px;
 `,
   Od = w(Me)`
@@ -10354,7 +10354,7 @@ const Ud = J("<li></li>"),
     height: 16px;
     width: 16px;
 `,
-  Ti = w(he)`
+  Mi = w(he)`
     margin-top: 32px;
 `,
   Eo = e => {
@@ -10363,15 +10363,15 @@ const Ud = J("<li></li>"),
       [r, o] = q(!0),
       [i, s] = q(!1);
     pe(() => {
-      const d = et();
+      const d = tt();
       s(!!d && "sent" in d && d.sent)
     });
     let l;
-    n != null && n.wallet && "universalLink" in n.wallet && (n.wallet.openMethod === "universal-link" || ft(n.wallet.universalLink) && Ke()) && (l = n.wallet.universalLink);
+    n != null && n.wallet && "universalLink" in n.wallet && (n.wallet.openMethod === "universal-link" || ft(n.wallet.universalLink) && Ve()) && (l = n.wallet.universalLink);
     let c;
-    n != null && n.wallet && "deepLink" in n.wallet && (n.wallet.openMethod === "custom-deeplink" || ft(n.wallet.deepLink) && Ke()) && (c = n.wallet.deepLink);
+    n != null && n.wallet && "deepLink" in n.wallet && (n.wallet.openMethod === "custom-deeplink" || ft(n.wallet.deepLink) && Ve()) && (c = n.wallet.deepLink);
     const u = () => {
-      const d = et(),
+      const d = tt(),
         f = "returnStrategy" in d ? d.returnStrategy : te.returnStrategy,
         v = !r();
       o(!1), ft(l) ? _n(l, {
@@ -10383,7 +10383,7 @@ const Ud = J("<li></li>"),
         forceRedirect: v
       }, () => {})
     };
-    return a(Hd, Oe(t, {
+    return a(Hd, je(t, {
       get children() {
         return [P(() => e.icon), a(Fd, {
           get translationKey() {
@@ -10422,7 +10422,7 @@ const Ud = J("<li></li>"),
                 return e.showButton !== "open-wallet"
               },
               get children() {
-                return a(Ti, {
+                return a(Mi, {
                   onClick: () => e.onClose(),
                   get children() {
                     return a(ye, {
@@ -10437,7 +10437,7 @@ const Ud = J("<li></li>"),
                 return e.showButton === "open-wallet" && l
               },
               get children() {
-                return a(Ti, {
+                return a(Mi, {
                   onClick: u,
                   get children() {
                     return a(ye, {
@@ -10455,7 +10455,7 @@ const Ud = J("<li></li>"),
   },
   Vd = e => {
     const t = Ae(yt),
-      [n] = Ge(),
+      [n] = Qe(),
       r = () => t.wallet && "name" in t.wallet ? t.wallet.name : n("common.yourWallet", {}, "Your wallet");
     return a(Eo, {
       headerTranslationKey: "actionModal.confirmTransaction.header",
@@ -10497,10 +10497,10 @@ const Ud = J("<li></li>"),
     onClose: () => e.onClose(),
     "data-tc-transaction-sent-modal": "true"
   }),
-  Gd = () => a(Ms, {
+  Gd = () => a(Rs, {
     get opened() {
       var e;
-      return P(() => et() !== null)() && ((e = et()) == null ? void 0 : e.openModal) === !0
+      return P(() => tt() !== null)() && ((e = tt()) == null ? void 0 : e.openModal) === !0
     },
     get enableAndroidBackHandler() {
       return te.enableAndroidBackHandler
@@ -10512,7 +10512,7 @@ const Ud = J("<li></li>"),
         get children() {
           return [a(be, {
             get when() {
-              return et().name === "transaction-sent"
+              return tt().name === "transaction-sent"
             },
             get children() {
               return a(Zd, {
@@ -10521,7 +10521,7 @@ const Ud = J("<li></li>"),
             }
           }), a(be, {
             get when() {
-              return et().name === "transaction-canceled"
+              return tt().name === "transaction-canceled"
             },
             get children() {
               return a(qd, {
@@ -10530,7 +10530,7 @@ const Ud = J("<li></li>"),
             }
           }), a(be, {
             get when() {
-              return et().name === "confirm-transaction"
+              return tt().name === "confirm-transaction"
             },
             get children() {
               return a(Vd, {
@@ -10545,9 +10545,9 @@ const Ud = J("<li></li>"),
   Qd = () => {
     const {
       locale: e
-    } = Ge()[1];
+    } = Qe()[1];
     pe(() => e(te.language)), pe(() => {
-      ri() && nr()
+      oi() && nr()
     });
     const t = Ae(Gt),
       n = Ae(yt),
@@ -10568,9 +10568,9 @@ const Ud = J("<li></li>"),
       });
     return Ee(c), Ee(() => {
       o(!1)
-    }), a(Zs, {
+    }), a(Gs, {
       get opened() {
-        return ri()
+        return oi()
       },
       get enableAndroidBackHandler() {
         return te.enableAndroidBackHandler
@@ -10584,7 +10584,7 @@ const Ud = J("<li></li>"),
             return r()
           },
           get children() {
-            return a(Ys, {
+            return a(Js, {
               onBackClick: () => o(!1)
             })
           }
@@ -10598,10 +10598,10 @@ const Ud = J("<li></li>"),
                 return i()
               },
               get children() {
-                return [a(Gs, {
+                return [a(Qs, {
                   translationKey: "walletModal.loading",
                   children: "Wallets list is loading"
-                }), a(Qs, {
+                }), a(zs, {
                   get children() {
                     return a(lt, {
                       size: "m"
@@ -10616,7 +10616,7 @@ const Ud = J("<li></li>"),
               get children() {
                 return a(Ot, {
                   get component() {
-                    return Vt() ? Js : zs
+                    return Vt() ? Xs : Ys
                   },
                   get wallet() {
                     return ic()
@@ -10636,7 +10636,7 @@ const Ud = J("<li></li>"),
   },
   zd = e => {
     const t = Su(xc, te.language);
-    return Xa(), Ja(), a(Bs.Provider, {
+    return Xa(), Ja(), a(Ws.Provider, {
       value: t,
       get children() {
         return a(yt.Provider, {
@@ -10657,7 +10657,7 @@ const Ud = J("<li></li>"),
                         return te.buttonRootId
                       },
                       get children() {
-                        return a(fs, {
+                        return a(hs, {
                           get mount() {
                             return document.getElementById(te.buttonRootId)
                           },
@@ -10667,7 +10667,7 @@ const Ud = J("<li></li>"),
                         })
                       }
                     }), a(Ot, {
-                      component: Xe,
+                      component: et,
                       get children() {
                         return [a(Nd, {}), a(Qd, {}), a(Gd, {})]
                       }
@@ -10682,22 +10682,22 @@ const Ud = J("<li></li>"),
     })
   },
   $e = {
-    openWalletsModal: () => void setTimeout(() => ei({
+    openWalletsModal: () => void setTimeout(() => ti({
       status: "opened",
       closeReason: null
     })),
-    closeWalletsModal: e => void setTimeout(() => ei({
+    closeWalletsModal: e => void setTimeout(() => ti({
       status: "closed",
       closeReason: e
     })),
     openSingleWalletModal: e => {
-      setTimeout(() => ni({
+      setTimeout(() => ri({
         status: "opened",
         closeReason: null,
         walletInfo: e
       }))
     },
-    closeSingleWalletModal: e => void setTimeout(() => ni({
+    closeSingleWalletModal: e => void setTimeout(() => ri({
       status: "closed",
       closeReason: e
     })),
@@ -10742,7 +10742,7 @@ class Yd {
   }
   openWalletsModal() {
     return ne(this, null, function*() {
-      return Ke() && wo(), $e.openWalletsModal(), new Promise(t => {
+      return Ve() && wo(), $e.openWalletsModal(), new Promise(t => {
         const n = this.onStateChange(r => {
           const {
             status: o
@@ -10756,7 +10756,7 @@ class Yd {
 class Jd {
   constructor(t) {
     K(this, "connector"), K(this, "consumers", []), this.connector = t.connector, pe(() => {
-      const n = et();
+      const n = tt();
       this.consumers.forEach(r => r(n))
     })
   }
@@ -10803,7 +10803,7 @@ class Xd {
   }
   openSingleWalletModal(t) {
     return ne(this, null, function*() {
-      return Ke() && wo(), $e.openSingleWalletModal(t), new Promise(n => {
+      return Ve() && wo(), $e.openSingleWalletModal(t), new Promise(n => {
         const r = this.onStateChange(o => {
           const {
             status: i
@@ -10818,7 +10818,7 @@ class e4 {
   constructor(t) {
     K(this, "eventPrefix", "ton-connect-ui-"), K(this, "tonConnectUiVersion"), K(this, "tonConnectSdkVersion", null), K(this, "eventDispatcher");
     var n;
-    this.eventDispatcher = (n = t == null ? void 0 : t.eventDispatcher) != null ? n : new Yi, this.tonConnectUiVersion = t.tonConnectUiVersion, this.init().catch()
+    this.eventDispatcher = (n = t == null ? void 0 : t.eventDispatcher) != null ? n : new Ji, this.tonConnectUiVersion = t.tonConnectUiVersion, this.init().catch()
   }
   get version() {
     return Lt({
@@ -10836,7 +10836,7 @@ class e4 {
   setRequestVersionHandler() {
     return ne(this, null, function*() {
       yield this.eventDispatcher.addEventListener("ton-connect-ui-request-version", () => ne(this, null, function*() {
-        yield this.eventDispatcher.dispatchEvent("ton-connect-ui-response-version", Hi(this.tonConnectUiVersion))
+        yield this.eventDispatcher.dispatchEvent("ton-connect-ui-response-version", Fi(this.tonConnectUiVersion))
       }))
     })
   }
@@ -10848,7 +10848,7 @@ class e4 {
             t(r.detail.version)
           }, {
             once: !0
-          }), yield this.eventDispatcher.dispatchEvent("ton-connect-request-version", Ni())
+          }), yield this.eventDispatcher.dispatchEvent("ton-connect-request-version", Hi())
         } catch (r) {
           n(r)
         }
@@ -10863,61 +10863,61 @@ class e4 {
   }
   trackConnectionStarted(...t) {
     try {
-      const n = Fi(this.version, ...t);
+      const n = Oi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackConnectionCompleted(...t) {
     try {
-      const n = Oi(this.version, ...t);
+      const n = ji(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackConnectionError(...t) {
     try {
-      const n = ji(this.version, ...t);
+      const n = Ki(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackConnectionRestoringStarted(...t) {
     try {
-      const n = Ki(this.version, ...t);
+      const n = Vi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackConnectionRestoringCompleted(...t) {
     try {
-      const n = Vi(this.version, ...t);
+      const n = qi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackConnectionRestoringError(...t) {
     try {
-      const n = qi(this.version, ...t);
+      const n = Zi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackDisconnection(...t) {
     try {
-      const n = zi(this.version, ...t);
+      const n = Yi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackTransactionSentForSignature(...t) {
     try {
-      const n = Zi(this.version, ...t);
+      const n = Gi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackTransactionSigned(...t) {
     try {
-      const n = Gi(this.version, ...t);
+      const n = Qi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
   trackTransactionSigningFailed(...t) {
     try {
-      const n = Qi(this.version, ...t);
+      const n = zi(this.version, ...t);
       this.dispatchUserActionEvent(n)
     } catch {}
   }
@@ -10948,7 +10948,7 @@ class n4 {
       }
     }), this.transactionModal = new Jd({
       connector: this.connector
-    }), this.walletsList = this.getWallets(), this.walletsList.then(o => ws($1(o.map(i => i.imageUrl))));
+    }), this.walletsList = this.getWallets(), this.walletsList.then(o => ps($1(o.map(i => i.imageUrl))));
     const n = this.normalizeWidgetRoot(t == null ? void 0 : t.widgetRootId);
     this.subscribeToWalletChange(), (t == null ? void 0 : t.restoreConnection) !== !1 && (this.connectionRestored = ec(() => ne(this, null, function*() {
       return this.tracker.trackConnectionRestoringStarted(), yield this.connector.restoreConnection(), this.connector.connected ? this.tracker.trackConnectionRestoringCompleted(this.wallet) : (this.tracker.trackConnectionRestoringError("Connection was not restored"), this.walletInfoStorage.removeWalletInfo()), this.connector.connected
@@ -11050,7 +11050,7 @@ class n4 {
   sendTransaction(t, n) {
     return ne(this, null, function*() {
       if (this.tracker.trackTransactionSentForSignature(this.wallet, t), !this.connected) throw this.tracker.trackTransactionSigningFailed(this.wallet, t, "Wallet was not connected"), new fe("Connect wallet to send a transaction.");
-      Ke() && wo();
+      Ve() && wo();
       const {
         notifications: r,
         modals: o,
@@ -11252,7 +11252,7 @@ class n4 {
     const f = (t == null ? void 0 : t.returnStrategy) || ((i = this.actionsConfiguration) == null ? void 0 : i.returnStrategy) || "back",
       v = (t == null ? void 0 : t.twaReturnUrl) || ((s = this.actionsConfiguration) == null ? void 0 : s.twaReturnUrl);
     let L = (t == null ? void 0 : t.skipRedirectToWallet) || ((l = this.actionsConfiguration) == null ? void 0 : l.skipRedirectToWallet) || "ios";
-    return Ke() && (L = "never"), {
+    return Ve() && (L = "never"), {
       notifications: u,
       modals: d,
       returnStrategy: f,
@@ -11263,28 +11263,28 @@ class n4 {
 }
 var r4 = Object.defineProperty,
   or = Object.getOwnPropertySymbols,
-  rl = Object.prototype.hasOwnProperty,
-  ol = Object.prototype.propertyIsEnumerable,
-  Mi = (e, t, n) => t in e ? r4(e, t, {
+  ol = Object.prototype.hasOwnProperty,
+  il = Object.prototype.propertyIsEnumerable,
+  Ri = (e, t, n) => t in e ? r4(e, t, {
     enumerable: !0,
     configurable: !0,
     writable: !0,
     value: n
   }) : e[t] = n,
   o4 = (e, t) => {
-    for (var n in t || (t = {})) rl.call(t, n) && Mi(e, n, t[n]);
+    for (var n in t || (t = {})) ol.call(t, n) && Ri(e, n, t[n]);
     if (or)
-      for (var n of or(t)) ol.call(t, n) && Mi(e, n, t[n]);
+      for (var n of or(t)) il.call(t, n) && Ri(e, n, t[n]);
     return e
   },
   i4 = (e, t) => {
     var n = {};
-    for (var r in e) rl.call(e, r) && t.indexOf(r) < 0 && (n[r] = e[r]);
+    for (var r in e) ol.call(e, r) && t.indexOf(r) < 0 && (n[r] = e[r]);
     if (e != null && or)
-      for (var r of or(e)) t.indexOf(r) < 0 && ol.call(e, r) && (n[r] = e[r]);
+      for (var r of or(e)) t.indexOf(r) < 0 && il.call(e, r) && (n[r] = e[r]);
     return n
   },
-  il = {
+  sl = {
     exports: {}
   },
   Qt = {};
@@ -11297,11 +11297,11 @@ var r4 = Object.defineProperty,
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var Ri;
+var Ii;
 
 function s4() {
-  if (Ri) return Qt;
-  Ri = 1;
+  if (Ii) return Qt;
+  Ii = 1;
   var e = fl,
     t = Symbol.for("react.element"),
     n = Symbol.for("react.fragment"),
@@ -11334,17 +11334,17 @@ function s4() {
   return Qt.Fragment = n, Qt.jsx = s, Qt.jsxs = s, Qt
 }(function(e) {
   e.exports = s4()
-})(il);
-const sl = il.exports.jsx;
+})(sl);
+const ll = sl.exports.jsx;
 
-function ll() {
+function al() {
   return typeof window < "u"
 }
 
 function l4() {
-  return !ll()
+  return !al()
 }
-const al = ot.createContext(null);
+const cl = De.createContext(null);
 let Wr = null;
 const a4 = e => {
     var t = e,
@@ -11352,12 +11352,12 @@ const a4 = e => {
         children: n
       } = t,
       r = i4(t, ["children"]);
-    return ll() && !Wr && (Wr = new n4(r)), sl(al.Provider, {
+    return al() && !Wr && (Wr = new n4(r)), ll(cl.Provider, {
       value: Wr,
       children: n
     })
   },
-  C4 = ot.memo(a4);
+  C4 = De.memo(a4);
 class Ao extends fe {
   constructor(...t) {
     super(...t), Object.setPrototypeOf(this, Ao.prototype)
@@ -11374,36 +11374,36 @@ function c4(e) {
   return !0
 }
 
-function cl() {
-  const e = ot.useContext(al),
-    t = ot.useCallback(n => {
+function $o() {
+  const e = De.useContext(cl),
+    t = De.useCallback(n => {
       e && (e.uiOptions = n)
     }, [e]);
   return l4() ? [null, () => {}] : (c4(e), [e, t])
 }
-const Ii = "ton-connect-button",
+const Bi = "ton-connect-button",
   u4 = ({
     className: e,
     style: t
   }) => {
-    const [n, r] = cl();
-    return ot.useEffect(() => (r({
-      buttonRootId: Ii
+    const [n, r] = $o();
+    return De.useEffect(() => (r({
+      buttonRootId: Bi
     }), () => r({
       buttonRootId: null
-    })), [r]), sl("div", {
-      id: Ii,
+    })), [r]), ll("div", {
+      id: Bi,
       className: e,
       style: o4({
         width: "fit-content"
       }, t)
     })
   };
-ot.memo(u4);
+De.memo(u4);
 
 function d4() {
-  const [e] = cl(), [t, n] = ot.useState((e == null ? void 0 : e.wallet) || null);
-  return ot.useEffect(() => {
+  const [e] = $o(), [t, n] = De.useState((e == null ? void 0 : e.wallet) || null);
+  return De.useEffect(() => {
     if (e) return n(e.wallet), e.onStatusChange(r => {
       n(r)
     })
@@ -11412,8 +11412,15 @@ function d4() {
 
 function b4(e = !0) {
   const t = d4();
-  return ot.useMemo(() => t ? e ? io(t.account.address, t.account.chain === dn.TESTNET) : t.account.address : "", [t, e, t == null ? void 0 : t.account.address, t == null ? void 0 : t.account.chain])
+  return De.useMemo(() => t ? e ? io(t.account.address, t.account.chain === dn.TESTNET) : t.account.address : "", [t, e, t == null ? void 0 : t.account.address, t == null ? void 0 : t.account.chain])
+}
+
+function x4() {
+  const [e, t] = De.useState(!1), [n] = $o();
+  return De.useEffect(() => {
+    n && n.connectionRestored.then(() => t(!0))
+  }, [n]), e
 }
 export {
-  C4 as T, cl as a, de as b, b4 as u
+  C4 as T, $o as a, x4 as b, d4 as c, de as d, b4 as u
 };
