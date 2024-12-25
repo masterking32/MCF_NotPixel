@@ -11647,7 +11647,7 @@ const RA = p.memo(() => (p.useEffect(() => {
       const N = String(h.id),
         pe = Number(N[N.length - 1]);
       ({
-        3: !0
+        6: !0
       })[pe] && (d && (y = !1), x(y))
     };
     return e.jsxs(ee, {
