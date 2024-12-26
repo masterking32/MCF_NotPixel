@@ -6922,7 +6922,7 @@ const RA = p.memo(() => (p.useEffect(() => {
       })
     }, t))
   }),
-  Hh = "/assets/icon_squad-_NF17RUb.gif",
+  Hh = "/assets/icon_squad_ny-C9Q4pxMJ.gif",
   qh = "/assets/icon_squad_secret-B-fF264Z.gif",
   Lh = () => {
     const [n, t] = p.useState(0);
