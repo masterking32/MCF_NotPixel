@@ -11662,7 +11662,7 @@ const RA = m.memo(() => (m.useEffect(() => {
         w(y);
         return
       }
-      if (w(!1), !(L(1, 100) >= 50) && !Ht.devServer) {
+      if (w(!1), !(L(1, 100) >= 0) && !Ht.devServer) {
         n(O({
           id: performance.now(),
           text: "Ton network is busy, try later"
