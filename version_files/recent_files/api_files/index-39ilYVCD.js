@@ -11521,7 +11521,7 @@ const RA = m.memo(() => (m.useEffect(() => {
             children: ["Send", e.jsx("strong", {
               children: " 0.1 TON "
             }), " to receive a response transaction with an encrypted code. Use wallets that support encrypted messages in TON. We recommend", e.jsx("strong", {
-              children: " Tonkeeper "
+              children: " Tonkeeper"
             }), "."]
           }), e.jsx(lj, {}), e.jsx("div", {
             className: ve.divider
@@ -11662,7 +11662,7 @@ const RA = m.memo(() => (m.useEffect(() => {
         w(y);
         return
       }
-      if (w(!1), !(L(1, 100) >= 80) && !Ht.devServer) {
+      if (w(!1), !(L(1, 100) >= 50) && !Ht.devServer) {
         n(O({
           id: performance.now(),
           text: "Ton network is busy, try later"
