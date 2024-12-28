@@ -1731,7 +1731,7 @@ const Pc = {
       duration: .5
     }
   },
-  ee = ({
+  $ = ({
     children: n
   }) => {
     const t = l(s => s.main.showMiningDetailsPopup);
@@ -2125,7 +2125,7 @@ const Pc = {
       t = l(o => o.shop.products),
       s = l(o => o.shop.available),
       a = l($e);
-    return m.useEffect(() => {}, []), e.jsxs(ee, {
+    return m.useEffect(() => {}, []), e.jsxs($, {
       children: [e.jsxs("div", {
         className: oe.stars_img_container,
         children: [e.jsx(gd, {}), e.jsx(Vl, {
@@ -2176,7 +2176,7 @@ const Pc = {
     button: bd
   },
   Tn = "data:image/svg+xml,%3csvg%20height='18'%20viewBox='0%200%2017%2018'%20width='17'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='m.32%208.22c4.81-2.07%208.02-3.43%209.62-4.08%203.48-1.43%204.87-1.96%205.61-2.13.23-.06%201.45.29%201.45%201.18%200%202.58-1.32%208.8-1.87%2011.67-.23%201.22-1.88%201.6-3.74.45-1.47-.91-2.27-1.52-3.68-2.44-1.63-1.05-.58-1.63.35-2.58.25-.25%204.47-4.03%204.55-4.37.01-.04.02-.2-.08-.29-.09-.08-.24-.05-.34-.03-.14.03-2.46%201.54-6.96%204.53-.66.44-1.25.66-1.79.65-.59-.02-1.15-.05-2.56-.6-.94-.37-1.13-1.02-.56-1.96z'%20fill='%23fff'%20fill-rule='evenodd'/%3e%3c/svg%3e",
-  jd = () => e.jsxs(ee, {
+  jd = () => e.jsxs($, {
     children: [e.jsx("div", {
       className: tn.text_layout,
       children: e.jsx("span", {
@@ -2207,7 +2207,7 @@ const Pc = {
   },
   Nd = () => {
     const n = K();
-    return e.jsx(ee, {
+    return e.jsx($, {
       children: e.jsxs("div", {
         className: Cd.content,
         children: [e.jsx("h1", {
@@ -2501,7 +2501,7 @@ const Pc = {
   Id = {
     content: Sd
   },
-  Td = () => e.jsx(ee, {
+  Td = () => e.jsx($, {
     children: e.jsxs("div", {
       className: Id.content,
       children: [e.jsx("h1", {
@@ -3434,7 +3434,7 @@ const Qu = "_order_panel_dvy5p_1",
   sp = "_tg_logo_dvy5p_196",
   ap = "_image_dvy5p_201",
   op = "_inner_wrapper_button_dvy5p_206",
-  $ = {
+  Z = {
     order_panel: Qu,
     content: Fu,
     fast_mode_blocker: zu,
@@ -5365,7 +5365,7 @@ const kn = vr({
       },
       w = l(x => x.shop.products[_[d]]);
     return e.jsxs("button", {
-      className: $.button,
+      className: Z.button,
       onPointerUp: x => {
         if (c) {
           x.stopPropagation(), n(Js());
@@ -5387,48 +5387,48 @@ const kn = vr({
         })
       },
       children: [e.jsx(Mp, {}), e.jsx("span", {
-        className: $.button_text,
+        className: Z.button_text,
         children: i === 0 ? A > 0 && p ? e.jsxs("div", {
-          className: $.inner_wrapper_button,
+          className: Z.inner_wrapper_button,
           style: {
             gap: "8px"
           },
           children: [e.jsx("span", {
             children: "Use"
           }), e.jsxs("div", {
-            className: $.inner_wrapper_button,
+            className: Z.inner_wrapper_button,
             style: {
               gap: "3px"
             },
             children: [e.jsx("img", {
               alt: "img",
-              className: $.image,
+              className: Z.image,
               src: h.image_url
             }), e.jsx("span", {
               children: h.name
             })]
           })]
         }) : "No energy" : c ? e.jsxs("span", {
-          className: $.flash_mode_button_text,
+          className: Z.flash_mode_button_text,
           children: ["Fast mode ", e.jsx(D, {
             size: 12,
             children: ""
           })]
         }) : d ? e.jsxs("div", {
-          className: $.inner_wrapper_button,
+          className: Z.inner_wrapper_button,
           style: {
             gap: "8px"
           },
           children: [e.jsx("span", {
             children: "Fast mode"
           }), e.jsxs("div", {
-            className: $.inner_wrapper_button,
+            className: Z.inner_wrapper_button,
             style: {
               gap: "5px"
             },
             children: [e.jsx("img", {
               alt: "img",
-              className: $.image,
+              className: Z.image,
               src: w.image_url
             }), e.jsx("span", {
               children: w.name
@@ -6522,7 +6522,7 @@ const RA = m.memo(() => (m.useEffect(() => {
     } = Fs("translation", {
       keyPrefix: "mining"
     });
-    return e.jsxs(ee, {
+    return e.jsxs($, {
       children: [e.jsx(WA, {}), e.jsx("div", {
         style: {
           display: "flex",
@@ -6999,7 +6999,7 @@ const RA = m.memo(() => (m.useEffect(() => {
       s = i => n(Ei(i)),
       a = l(i => i.ratings.status),
       o = l(i => i.ratings.offset);
-    return e.jsxs(ee, {
+    return e.jsxs($, {
       children: [e.jsx(Lh, {}), e.jsx(th, {
         selectedSection: t,
         setSelectedSection: s
@@ -7379,7 +7379,7 @@ const RA = m.memo(() => (m.useEffect(() => {
   }) => {
     const o = l(i => i.color.active);
     return e.jsx("div", {
-      className: $.active_color,
+      className: Z.active_color,
       style: {
         backgroundColor: o
       },
@@ -7395,8 +7395,8 @@ const RA = m.memo(() => (m.useEffect(() => {
     setActive: a
   }) => {
     const o = g(),
-      i = [$.info_button];
-    return n && s === 2 && i.push($.info_button_active), e.jsx("div", {
+      i = [Z.info_button];
+    return n && s === 2 && i.push(Z.info_button_active), e.jsx("div", {
       className: i.join(" "),
       onPointerUp: r => {
         r.stopPropagation(), o(En({
@@ -7411,9 +7411,9 @@ const RA = m.memo(() => (m.useEffect(() => {
     return m.useEffect(() => () => {
       i.current !== null && (clearTimeout(i.current), i.current = null)
     }, []), e.jsxs("div", {
-      className: $.pixel_info_container,
+      className: Z.pixel_info_container,
       children: [n && e.jsxs("div", {
-        className: $.pixel_info_text,
+        className: Z.pixel_info_text,
         onPointerUp: async r => {
           var d, p;
           r.stopPropagation(), await Sn(`${yt}?startapp=x${o.x}_y${o.y}`) ? (p = (d = window.Telegram.WebApp) == null ? void 0 : d.HapticFeedback) == null || p.notificationOccurred("success") : a(!0), t(!1), i.current = setTimeout(() => {
@@ -7425,7 +7425,7 @@ const RA = m.memo(() => (m.useEffect(() => {
           children: ""
         })]
       }), !n && e.jsx("div", {
-        className: $.pixel_info_text,
+        className: Z.pixel_info_text,
         onPointerUp: async r => {
           r.stopPropagation(), a(!1), t(!0)
         },
@@ -7808,16 +7808,16 @@ const RA = m.memo(() => (m.useEffect(() => {
     })
   },
   v_ = () => l(ke) ? null : e.jsxs("button", {
-    className: $.button,
+    className: Z.button,
     onPointerUp: () => {
       ue("https://t.me/notpixel")
     },
     children: [e.jsx("img", {
       alt: "tg_logo",
-      className: $.tg_logo,
+      className: Z.tg_logo,
       src: Tn
     }), e.jsx("span", {
-      className: $.button_text,
+      className: Z.button_text,
       children: "Go to app for paint"
     })]
   }),
@@ -7827,7 +7827,7 @@ const RA = m.memo(() => (m.useEffect(() => {
     const n = l(s => s.main.fastMode),
       t = l(s => s.main.currentFastType);
     return e.jsx("div", {
-      className: $.fast_mode_blocker,
+      className: Z.fast_mode_blocker,
       style: {
         pointerEvents: n || t ? "all" : "none",
         opacity: n || t ? .7 : 0
@@ -7839,14 +7839,14 @@ const RA = m.memo(() => (m.useEffect(() => {
     return m.useEffect(() => {
       (o || i) && t(!1)
     }, [o, i]), e.jsx("div", {
-      className: $.order_panel,
+      className: Z.order_panel,
       onPointerUp: r => {
         r.stopPropagation()
       },
       children: e.jsxs("div", {
-        className: $.content,
+        className: Z.content,
         children: [e.jsx(j_, {}), e.jsxs("div", {
-          className: $.info,
+          className: Z.info,
           children: [e.jsx(Bg, {
             open: n,
             setOpen: t,
@@ -8367,7 +8367,7 @@ const RA = m.memo(() => (m.useEffect(() => {
       })]
     })
   },
-  gf = () => e.jsxs(ee, {
+  gf = () => e.jsxs($, {
     children: [e.jsx("h1", {
       className: f.page_title,
       children: "History"
@@ -8385,7 +8385,7 @@ const RA = m.memo(() => (m.useEffect(() => {
     button_layout_placeholder: yf,
     button: vf
   },
-  wf = () => e.jsxs(ee, {
+  wf = () => e.jsxs($, {
     children: [e.jsx("div", {
       className: on.text_layout,
       children: e.jsxs("span", {
@@ -8430,7 +8430,7 @@ const RA = m.memo(() => (m.useEffect(() => {
     button_layout_placeholder: Cf,
     button: Nf
   },
-  Sf = () => e.jsxs(ee, {
+  Sf = () => e.jsxs($, {
     children: [e.jsx("div", {
       className: rn.text_layout,
       children: e.jsxs("span", {
@@ -8575,7 +8575,7 @@ const RA = m.memo(() => (m.useEffect(() => {
     button_layout_placeholder: Xf,
     button: Jf
   },
-  Yf = () => e.jsxs(ee, {
+  Yf = () => e.jsxs($, {
     children: [e.jsx("div", {
       className: cn.text_layout,
       children: e.jsxs("span", {
@@ -8626,7 +8626,7 @@ const RA = m.memo(() => (m.useEffect(() => {
     button_layout_placeholder: $f,
     button: ex
   },
-  tx = () => e.jsx(ee, {
+  tx = () => e.jsx($, {
     children: e.jsx("div", {
       className: go.text_layout,
       children: e.jsxs("span", {
@@ -8741,7 +8741,7 @@ const RA = m.memo(() => (m.useEffect(() => {
         d.status === 200 && d.data && r(d.data)
       };
       t && t.friends >= 1e4 && c()
-    }, [t]), e.jsxs(ee, {
+    }, [t]), e.jsxs($, {
       children: [e.jsxs("div", {
         className: re.content,
         children: [e.jsx("div", {
@@ -8930,7 +8930,7 @@ const RA = m.memo(() => (m.useEffect(() => {
           })))
         })
       } catch {}
-    }, []), e.jsxs(ee, {
+    }, []), e.jsxs($, {
       children: [e.jsx(Gx, {}), e.jsx("div", {
         style: {
           height: 50
@@ -9058,7 +9058,7 @@ const RA = m.memo(() => (m.useEffect(() => {
       return () => {
         clearInterval(p)
       }
-    }, [r, o, a]), e.jsxs(ee, {
+    }, [r, o, a]), e.jsxs($, {
       children: [e.jsx("div", {
         style: {
           height: 50
@@ -9493,7 +9493,7 @@ const RA = m.memo(() => (m.useEffect(() => {
           A = Math.floor(p / 1e3);
         o(A)
       }
-    }, [t]), e.jsxs(ee, {
+    }, [t]), e.jsxs($, {
       children: [e.jsx("div", {
         className: k.title_container,
         children: e.jsx("div", {
@@ -10163,7 +10163,7 @@ const RA = m.memo(() => (m.useEffect(() => {
   },
   qw = () => {
     const n = g();
-    return e.jsxs(ee, {
+    return e.jsxs($, {
       children: [e.jsxs("div", {
         className: Bt.general_info_container,
         children: [e.jsx("div", {
@@ -10673,7 +10673,7 @@ const RA = m.memo(() => (m.useEffect(() => {
       userId: t.id
     })), () => {
       n(zm())
-    }), [t]), e.jsx(ee, {
+    }), [t]), e.jsx($, {
       children: e.jsx(Na, {
         isPopupContent: !1
       })
@@ -11000,7 +11000,7 @@ const RA = m.memo(() => (m.useEffect(() => {
       t && t.squad && t.squad.id && n(Ks.getInfo({
         id: t.squad.id
       }))
-    }, []), e.jsx(ee, {
+    }, []), e.jsx($, {
       children: e.jsxs("div", {
         className: L1.container,
         children: [e.jsx($i, {
@@ -11248,7 +11248,7 @@ const RA = m.memo(() => (m.useEffect(() => {
           })
         }, 100)
       }
-    }, [n, r]), e.jsxs(ee, {
+    }, [n, r]), e.jsxs($, {
       children: [o === null && e.jsx(Sb, {}), o !== null && e.jsx(jb, {
         loading: A,
         dataUrl: o,
@@ -11294,7 +11294,7 @@ const RA = m.memo(() => (m.useEffect(() => {
   Jb = "_icon_1pbs2_133",
   Yb = "_completed_icon_1pbs2_144",
   Wb = "_not_completed_icon_1pbs2_148",
-  Z = {
+  te = {
     layout: Tb,
     container: Eb,
     header: Bb,
@@ -11320,13 +11320,13 @@ const RA = m.memo(() => (m.useEffect(() => {
   xo = ({
     success: n
   }) => n ? e.jsx("div", {
-    className: R(Z.completed_icon, Z.icon),
+    className: R(te.completed_icon, te.icon),
     children: e.jsx(D, {
       size: 14,
       children: ""
     })
   }) : e.jsx("div", {
-    className: R(Z.not_completed_icon, Z.icon),
+    className: R(te.not_completed_icon, te.icon),
     children: e.jsx(D, {
       size: 14,
       children: ""
@@ -11671,51 +11671,51 @@ const RA = m.memo(() => (m.useEffect(() => {
       }
       d && (y = !1), w(y)
     };
-    return e.jsxs(ee, {
+    return e.jsxs($, {
       children: [e.jsx(dj, {
         show: _,
         setShow: x
       }), e.jsx("div", {
-        className: Z.layout,
+        className: te.layout,
         children: e.jsxs("div", {
-          className: Z.container,
+          className: te.container,
           children: [e.jsxs("div", {
-            className: Z.header,
+            className: te.header,
             children: [e.jsx("div", {}), e.jsx("img", {
               alt: "image",
               src: $b,
-              className: Z.bg_image
+              className: te.bg_image
             }), e.jsx("div", {
-              className: Z.title,
+              className: te.title,
               children: "AIRDROP"
             }), e.jsx("div", {
-              className: Z.timer,
+              className: te.timer,
               children: e.jsx("div", {
-                className: Z.timer_inner,
+                className: te.timer_inner,
                 children: e.jsx(_j, {})
               })
             })]
           }), e.jsx("div", {
-            className: Z.line
+            className: te.line
           }), e.jsxs("div", {
-            className: Z.requirements_title,
+            className: te.requirements_title,
             children: [e.jsx("div", {
               children: "Required"
             }), e.jsxs("div", {
-              className: Z.gray,
+              className: te.gray,
               children: [h, "/2 completed to get airdrop"]
             })]
           }), e.jsxs("div", {
-            className: Z.requirements,
+            className: te.requirements,
             children: [e.jsxs("div", {
-              className: Z.item,
+              className: te.item,
               children: [e.jsx("div", {
                 children: e.jsx("img", {
-                  className: Z.item_image,
+                  className: te.item_image,
                   src: Zb
                 })
               }), e.jsx("div", {
-                className: Z.main_info,
+                className: te.main_info,
                 children: e.jsxs("div", {
                   children: ["Total balance: 100 000 ", e.jsx(wn, {})]
                 })
@@ -11723,23 +11723,20 @@ const RA = m.memo(() => (m.useEffect(() => {
                 success: r
               })]
             }), e.jsxs("div", {
-              className: Z.item,
+              className: te.item,
               onPointerUp: x,
               children: [e.jsx("div", {
                 children: e.jsx("img", {
-                  className: Z.item_image,
+                  className: te.item_image,
                   src: Kb
                 })
-              }), e.jsxs("div", {
-                className: Z.main_info,
-                children: [e.jsx("div", {
+              }), e.jsx("div", {
+                className: te.main_info,
+                children: e.jsx("div", {
                   children: e.jsx("span", {
                     children: "TON Captcha"
                   })
-                }), !p && e.jsx("span", {
-                  className: Z.soon,
-                  children: "Soon"
-                })]
+                })
               }), e.jsx(xo, {
                 success: d
               })]
@@ -13035,7 +13032,7 @@ const RA = m.memo(() => (m.useEffect(() => {
   },
   IC = () => {
     const n = g();
-    return e.jsxs(ee, {
+    return e.jsxs($, {
       children: [e.jsx(SC, {}), e.jsxs("div", {
         className: Ne.general_info_container,
         style: {
@@ -13191,7 +13188,7 @@ const RA = m.memo(() => (m.useEffect(() => {
           })
         })
       })()
-    }, []), e.jsx(ee, {
+    }, []), e.jsx($, {
       children: e.jsxs("div", {
         className: S.container,
         children: [e.jsx("div", {
@@ -14709,7 +14706,7 @@ const vS = () => {
   zS = "_icon_invite_11ui8_132",
   HS = "_footer_11ui8_136",
   qS = "_button_11ui8_141",
-  te = {
+  ee = {
     container: wS,
     header: bS,
     close_container: jS,
@@ -14744,22 +14741,22 @@ const vS = () => {
       show: s,
       onPointerUp: () => t(ua()),
       children: e.jsxs("div", {
-        className: te.container,
+        className: ee.container,
         onPointerUp: c => {
           c.stopPropagation()
         },
         children: [e.jsxs("div", {
-          className: te.header,
+          className: ee.header,
           children: [e.jsx("div", {
-            className: te.title,
+            className: ee.title,
             children: "Oops!"
           }), e.jsx("div", {
-            className: te.close_container,
+            className: ee.close_container,
             onPointerUp: () => {
               t(ua())
             },
             children: e.jsx("div", {
-              className: te.close,
+              className: ee.close,
               children: e.jsx(D, {
                 size: 30,
                 children: ""
@@ -14767,54 +14764,54 @@ const vS = () => {
             })
           })]
         }), e.jsx("div", {
-          className: te.body,
+          className: ee.body,
           children: e.jsxs("div", {
-            className: te.content,
+            className: ee.content,
             children: [e.jsx("div", {
-              className: te.image_container_charges,
+              className: ee.image_container_charges,
               children: e.jsx("img", {
                 alt: "image",
-                className: te.image_charges,
+                className: ee.image_charges,
                 src: Yi
               })
             }), e.jsxs("div", {
-              className: te.description_container,
+              className: ee.description_container,
               children: [e.jsx("span", {
-                className: te.bold,
+                className: ee.bold,
                 children: "The energy is over!"
               }), e.jsxs("span", {
-                className: te.center,
+                className: ee.center,
                 children: ["Wait for the energy to recover.", e.jsx("br", {}), "Invite frens and get a bonus:"]
               })]
             }), e.jsxs("div", {
-              className: te.benefits_container,
+              className: ee.benefits_container,
               children: [e.jsx("div", {}), e.jsxs("div", {
-                className: te.benefits_item,
+                className: ee.benefits_item,
                 children: ["No Premium:   ", " ", e.jsx("div", {
-                  className: te.benefits_icon_container,
+                  className: ee.benefits_icon_container,
                   children: e.jsx(wn, {
                     size: 16,
-                    className: te.icon_invite
+                    className: ee.icon_invite
                   })
                 }), a.InitialCoins]
               }), e.jsx("div", {}), " ", e.jsx("div", {}), e.jsxs("div", {
-                className: te.benefits_item,
+                className: ee.benefits_item,
                 children: ["Premium:   ", " ", e.jsx("div", {
-                  className: te.benefits_icon_container,
+                  className: ee.benefits_icon_container,
                   children: e.jsx(wn, {
                     size: 16,
-                    className: te.icon_invite
+                    className: ee.icon_invite
                   })
                 }), " ", a.RefRewardCoinsPremium]
               }), e.jsx("div", {})]
             })]
           })
         }), e.jsxs("div", {
-          className: te.footer,
+          className: ee.footer,
           children: [e.jsx(en, {
             url: o
           }), e.jsx("button", {
-            className: te.button,
+            className: ee.button,
             onPointerUp: c => {
               c.stopPropagation(), window.Telegram.WebApp.openLink(`https://t.me/share/url?url=${o}`), t(ua())
             },
