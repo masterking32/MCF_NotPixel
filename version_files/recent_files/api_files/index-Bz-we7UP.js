@@ -16,7 +16,7 @@ import {
   c as Br
 } from "./react-dom-DCoj3sTC.js";
 import {
-  c as ce,
+  c as re,
   a as B,
   b as Pt,
   d as za,
@@ -509,7 +509,7 @@ const an = $o,
     id: btoa(ho),
     latest: ["#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff"],
     basic: Re
-  }, ai = ce({
+  }, ai = re({
     name: "color",
     initialState: jc,
     reducers: {
@@ -1266,7 +1266,7 @@ const Oc = {
     productId: t,
     color: s
   })).data),
-  li = ce({
+  li = re({
     name: "shop",
     initialState: Oc,
     reducers: {
@@ -1393,7 +1393,7 @@ const Oc = {
       src: t.image
     })
   },
-  re = ({
+  le = ({
     num: n
   }) => isNaN(n) ? null : new Intl.NumberFormat("ru-RU").format(n),
   di = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACABAMAAAAxEHz4AAAAIVBMVEVHcEzv7++7trv/sQAAxvb+XTUAieJkY2UaWbc9OGcbGx4WugEBAAAAAXRSTlMAQObYZgAAAM1JREFUeNrt2c0JxSAQBOC0YAu2YAu2YAu2YAu2YAtW+Rh4gUE0Iddh9rLBON9pwfxca8055/WhDOgBCJdSygmZ/zKgDaCewrXWmnPOuDagCpwxDqN67x1rBnQBDmMzh9ERHmMMA5rATrzD6LuwAS0ACymlhM5rrbWGjiA6hw3oAag1HGOMfLDwYWJAF+BwCCGg80DxIBlQBd7DPGwGVIH38LrXgBLwPcwfqwxoAfxAsQufBsmAFsDIGj5BBrSAFUHtXkgNSAD+B2vg6f4Pseby+y+jC6sAAAAASUVORK5CYII=",
@@ -1509,7 +1509,7 @@ const Oc = {
           className: ie.row_price_container,
           children: [r && e.jsxs("span", {
             className: ie.main_info_channel_users,
-            children: [e.jsx(zc, {}), e.jsx(re, {
+            children: [e.jsx(zc, {}), e.jsx(le, {
               num: r
             })]
           }), !r && e.jsx("span", {
@@ -1595,7 +1595,7 @@ const Oc = {
     safeAreaInset: vl(),
     contentSafeAreaInset: wl()
   },
-  fi = ce({
+  fi = re({
     name: "device",
     initialState: bl,
     reducers: {
@@ -1943,7 +1943,7 @@ const Ba = B("canvas/getPixelInfo", async ({
     selectedPrice: null,
     priceMaskFetching: !1
   },
-  yi = ce({
+  yi = re({
     name: "canvas",
     initialState: fd,
     reducers: {
@@ -2160,7 +2160,7 @@ const ss = B("mining/info", async () => (await ta.info()).data),
     reChargeSpeed: 0,
     reChargeTs: Date.now()
   },
-  vi = ce({
+  vi = re({
     name: "mining",
     initialState: jd,
     reducers: {
@@ -2301,7 +2301,7 @@ const ss = B("mining/info", async () => (await ta.info()).data),
     command: Te.idle,
     counter: 0
   },
-  bi = ce({
+  bi = re({
     name: "progress",
     initialState: Rd,
     reducers: {
@@ -2361,7 +2361,7 @@ let Wd = class {
 const Kd = {
     items: []
   },
-  ji = ce({
+  ji = re({
     name: "toast",
     initialState: Kd,
     reducers: {
@@ -2601,7 +2601,7 @@ const Kd = {
     pixanosRatingStatus: m.idle,
     flyingRewards: []
   },
-  Pi = ce({
+  Pi = re({
     name: "main",
     initialState: vu,
     reducers: {
@@ -3014,7 +3014,7 @@ const Cu = "_layout_oxfjd_1",
     isAuth: !1,
     authData: null
   },
-  Ii = ce({
+  Ii = re({
     name: "auth",
     initialState: lm,
     reducers: {
@@ -3123,7 +3123,7 @@ const hm = async ({
   list: Ja.getInitialState(),
   getListStatus: m.idle,
   getRewardStatus: m.idle
-}, Ti = ce({
+}, Ti = re({
   name: "reward",
   initialState: gm,
   reducers: {
@@ -4516,7 +4516,7 @@ const ls = B("tournament/getPeriods", async () => (await Za.getPeriods()).data),
     selectedTemplateStatus: m.idle
   },
   mn = "?time=1502",
-  Di = ce({
+  Di = re({
     name: "tournament",
     initialState: xp,
     reducers: {
@@ -4866,7 +4866,7 @@ const Tp = (n, t, s) => {
       return t(s.response.data)
     }
   }),
-  Mi = ce({
+  Mi = re({
     name: "user",
     initialState: Ep,
     reducers: {
@@ -6074,7 +6074,7 @@ const iA = Wa.getSelectors(n => n.tournament.finalResults),
   },
   js = B("daily/getList", async () => (await F.getDailyList()).data),
   Ps = B("daily/getFirstDaily", async () => (await F.getFirstDaily()).data),
-  Hi = ce({
+  Hi = re({
     name: "daily",
     initialState: cA,
     reducers: {
@@ -6616,7 +6616,7 @@ const Cs = B("ratings/personal", async ({
     limit: 20,
     total: 500
   },
-  Vi = ce({
+  Vi = re({
     name: "ratings",
     initialState: YA,
     reducers: {
@@ -6918,7 +6918,7 @@ const Cs = B("ratings/personal", async ({
   }) => (await F.getSquadInfo({
     id: n
   })).data),
-  Ki = ce({
+  Ki = re({
     name: "squad",
     initialState: Bg,
     reducers: {
@@ -8135,7 +8135,7 @@ const Dg = Ki.reducer,
     myTemplate: null,
     sizes: []
   },
-  sr = ce({
+  sr = re({
     name: "template",
     initialState: Hf,
     reducers: {
@@ -8753,7 +8753,7 @@ const Dg = Ki.reducer,
     list: [],
     status: m.idle
   },
-  or = ce({
+  or = re({
     name: "history",
     initialState: Bx,
     reducers: {
@@ -9123,7 +9123,7 @@ const ro = {
   qy = "_share_container_1mu9y_137",
   Ly = "_share_row_1mu9y_143",
   Vy = "_crypto_image_1mu9y_150",
-  le = {
+  ce = {
     close_container: by,
     title_container: jy,
     title: Py,
@@ -9196,22 +9196,22 @@ const ro = {
       t && t.friends >= 1e4 && c()
     }, [t]), e.jsxs(K, {
       children: [e.jsxs("div", {
-        className: le.content,
+        className: ce.content,
         children: [e.jsx("div", {
-          className: le.image_container,
+          className: ce.image_container,
           children: e.jsx("img", {
             alt: "image",
-            className: le.image,
+            className: ce.image,
             src: Gy
           })
         }), e.jsx("div", {
-          className: le.title_container,
+          className: ce.title_container,
           children: e.jsx("div", {
-            className: le.title,
+            className: ce.title,
             children: n("invite")
           })
         }), e.jsxs("div", {
-          className: le.description_container,
+          className: ce.description_container,
           children: [e.jsx("div", {
             children: e.jsx("span", {
               children: n("description")
@@ -9220,17 +9220,17 @@ const ro = {
             children: [e.jsxs("span", {
               children: [" ", n("your"), " "]
             }), e.jsx("span", {
-              className: `${le.frens_count} ${le.bold}`,
+              className: `${ce.frens_count} ${ce.bold}`,
               children: a
             })]
           })]
         }), e.jsxs("div", {
-          className: le.buttons_container,
+          className: ce.buttons_container,
           children: [e.jsx(cn, {
             url: s,
-            className: le.button_copy
+            className: ce.button_copy
           }), e.jsx("button", {
-            className: le.button,
+            className: ce.button,
             onPointerUp: c => {
               c.stopPropagation(), he(`https://t.me/share/url?url=${s}`)
             },
@@ -9238,13 +9238,13 @@ const ro = {
           })]
         })]
       }), i && i.length > 0 && e.jsx("div", {
-        className: le.info_layout,
+        className: ce.info_layout,
         children: e.jsxs("div", {
-          className: le.benefits_container,
+          className: ce.benefits_container,
           children: [e.jsxs("div", {
-            className: le.share_container,
+            className: ce.share_container,
             children: [e.jsxs("div", {
-              className: le.share_row,
+              className: ce.share_row,
               children: [e.jsx("div", {}), e.jsx("div", {
                 children: "Crypto"
               }), e.jsx("div", {
@@ -9257,19 +9257,19 @@ const ro = {
               if (d.length === 0) return null;
               const p = d[0];
               return e.jsxs("div", {
-                className: le.share_row,
+                className: ce.share_row,
                 children: [e.jsx("img", {
                   alt: "currency",
                   src: p.image,
-                  className: le.crypto_image
+                  className: ce.crypto_image
                 }), e.jsx("div", {
                   children: p.name
                 }), e.jsx("div", {
-                  children: re({
+                  children: le({
                     num: Math.floor(c.totalPurchases)
                   })
                 }), e.jsx("div", {
-                  children: re({
+                  children: le({
                     num: Math.floor(c.totalSpend)
                   })
                 })]
@@ -13167,7 +13167,7 @@ const ro = {
               children: a.name
             }), e.jsxs("div", {
               className: _e.value,
-              children: [re({
+              children: [le({
                 num: a.value
               }), a.image && e.jsx("img", {
                 alt: "coin",
@@ -13187,7 +13187,7 @@ const ro = {
               children: a.name
             }), e.jsxs("div", {
               className: _e.value,
-              children: [re({
+              children: [le({
                 num: a.value
               }), a.image && e.jsx("img", {
                 alt: "coin",
@@ -13413,9 +13413,9 @@ const ro = {
                 children: "Ghost's secret"
               }), e.jsxs("div", {
                 className: R(S.gray),
-                children: [re({
+                children: [le({
                   num: 1e4
-                }), "/", re({
+                }), "/", le({
                   num: c.limit
                 })]
               })]
@@ -13433,9 +13433,9 @@ const ro = {
                 children: "Mythical secret"
               }), e.jsxs("div", {
                 className: R(S.gray),
-                children: [re({
+                children: [le({
                   num: p.count
-                }), "/", re({
+                }), "/", le({
                   num: p.limit
                 })]
               })]
@@ -13453,9 +13453,9 @@ const ro = {
                 children: "Dogs secret"
               }), e.jsxs("div", {
                 className: R(S.gray),
-                children: [re({
+                children: [le({
                   num: v.count
-                }), "/", re({
+                }), "/", le({
                   num: v.limit
                 })]
               })]
@@ -13657,9 +13657,9 @@ const ro = {
           style: {
             marginTop: 0
           },
-          children: [e.jsx("span", {
+          children: [e.jsxs("span", {
             className: q.gray,
-            children: "When sending PIX, remember: it's a "
+            children: ["When sending PIX, remember: ", e.jsx("br", {}), " it's a", " "]
           }), e.jsx("span", {
             children: "non-refundable "
           }), e.jsx("span", {
@@ -13717,9 +13717,9 @@ const ro = {
               children: "Thanks, Pixanos!"
             }), e.jsxs("div", {
               className: q.title2,
-              children: [e.jsx("span", {
+              children: [e.jsxs("span", {
                 className: q.gray,
-                children: "Is it time to be thankful? Donations for players who have used"
+                children: ["Is it time to be thankful? Donations ", e.jsx("br", {}), " for players who have used"]
               }), e.jsx("span", {
                 className: q.bold,
                 children: " Pixanos"
@@ -13739,7 +13739,7 @@ const ro = {
                     children: "Your balance: "
                   }), " ", e.jsxs("span", {
                     className: q.balance_value,
-                    children: [e.jsx(re, {
+                    children: [e.jsx(le, {
                       num: d
                     }), " PX"]
                   })]
@@ -13749,7 +13749,7 @@ const ro = {
                     children: "Share balance: "
                   }), " ", e.jsxs("span", {
                     className: q.balance_value,
-                    children: [e.jsx(re, {
+                    children: [e.jsx(le, {
                       num: Math.floor(d * a / 100)
                     }), " ", "PX"]
                   })]
@@ -13775,7 +13775,7 @@ const ro = {
                     children: "Your balance: "
                   }), " ", e.jsxs("span", {
                     className: q.balance_value,
-                    children: [e.jsx(re, {
+                    children: [e.jsx(le, {
                       num: d
                     }), " PX"]
                   })]
@@ -13799,7 +13799,7 @@ const ro = {
                     },
                     children: e.jsxs("span", {
                       className: q.button_text,
-                      children: ["Send ", e.jsx(re, {
+                      children: ["Send ", e.jsx(le, {
                         num: r
                       }), " PX"]
                     })
@@ -13908,22 +13908,15 @@ const ro = {
       id: "3",
       video: "https://npx-cdn.fra1.cdn.digitaloceanspaces.com/results_video/2_friends.mp4",
       top: "Pixel frens",
-      center: `${re({num:t.friends})} Frens`,
+      center: `${le({num:t.friends})} Frens`,
       bottom: "Where'd you get that charisma, buddy? Anyway, to create something meaningful, you have to have your dudes around.",
       number: ++r
     }), t && t.repaints && n.push({
       id: "4",
       video: "https://npx-cdn.fra1.cdn.digitaloceanspaces.com/results_video/3_repaints.mp4",
       top: "Repaints",
-      center: `${re({num:t.repaints})} Repaints`,
+      center: `${le({num:t.repaints})} Repaints`,
       bottom: "We respect the working man. Your merit reflects your diligence, man.",
-      number: ++r
-    }), s && s.speedPerSecond && n.push({
-      id: "5",
-      video: "https://npx-cdn.fra1.cdn.digitaloceanspaces.com/results_video/5_mining.mp4",
-      top: "MINING",
-      center: `${re({num:(s.speedPerSecond*86400/1e3).toFixed(0)})} a day`,
-      bottom: "Mining is one of the most effective actions to get a mountain of $PX. You've probably caught on to that?",
       number: ++r
     }), o && n.push({
       id: "6",
@@ -14214,7 +14207,7 @@ const ro = {
   WS = {
     isShowSideMenu: !1
   },
-  _r = ce({
+  _r = re({
     name: "layout",
     initialState: WS,
     reducers: {
