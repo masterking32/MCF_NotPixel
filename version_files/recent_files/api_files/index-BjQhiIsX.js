@@ -42,7 +42,7 @@ import {
   A as $a
 } from "./framer-motion-BggZOsGS.js";
 import {
-  u as ne,
+  u as $,
   S as Jr,
   a as H,
   b as aa
@@ -1779,7 +1779,7 @@ const Kc = {
     button: hd
   },
   Ad = () => {
-    const n = ne();
+    const n = $();
     return e.jsx("div", {
       className: Ii.layout,
       children: e.jsx("div", {
@@ -2185,7 +2185,7 @@ const Kc = {
     content: Gd
   },
   Yd = () => {
-    const n = ne();
+    const n = $();
     return e.jsx(W, {
       children: e.jsxs("div", {
         className: Wd.content,
@@ -3182,7 +3182,7 @@ const tp = ri.getSelectors(n => n.tournament.finalResults),
   Cp = "_icon_bs3u8_133",
   Pp = "_completed_icon_bs3u8_143",
   Np = "_not_completed_icon_bs3u8_147",
-  ee = {
+  te = {
     layout: rp,
     container: cp,
     header: lp,
@@ -3208,13 +3208,13 @@ const tp = ri.getSelectors(n => n.tournament.finalResults),
   Ks = ({
     success: n
   }) => n ? e.jsx("div", {
-    className: U(ee.completed_icon, ee.icon),
+    className: U(te.completed_icon, te.icon),
     children: e.jsx(B, {
       size: 14,
       children: ""
     })
   }) : e.jsx("div", {
-    className: U(ee.not_completed_icon, ee.icon),
+    className: U(te.not_completed_icon, te.icon),
     children: e.jsx(B, {
       size: 14,
       children: ""
@@ -3656,7 +3656,7 @@ const hs = D("mining/info", async () => (await la.info()).data),
   },
   Yp = () => {
     const n = _(),
-      t = ne(),
+      t = $(),
       s = l(qn),
       a = l(zn),
       [i, o] = u.useState(!1),
@@ -4356,7 +4356,7 @@ const nh = "_order_panel_dvy5p_1",
   },
   Ih = () => {
     _();
-    const n = ne(),
+    const n = $(),
       t = l(o => o.mining.charges),
       s = l(o => o.mining.maxCharges),
       a = l(o => o.main.currentFastType),
@@ -4818,7 +4818,7 @@ const xA = n => {
     })
   }, wA = () => {
     const n = _(),
-      t = ne(),
+      t = $(),
       s = l(v => v.canvas.pixelInfo),
       a = l(v => v.color.active),
       i = l(v => v.user.user),
@@ -6796,7 +6796,7 @@ const Dg = ({
     })
   }),
   Ug = () => {
-    const n = ne();
+    const n = $();
     return e.jsx("div", {
       className: Q.description_container,
       children: e.jsxs("span", {
@@ -8256,7 +8256,7 @@ const Fg = dr.reducer,
   _x = ({
     item: n
   }) => {
-    const t = ne(),
+    const t = $(),
       s = $s(n.details.pixel),
       a = _();
     return e.jsxs("div", {
@@ -8299,7 +8299,7 @@ const Fg = dr.reducer,
   fx = ({
     item: n
   }) => {
-    const t = ne(),
+    const t = $(),
       s = {
         x: n.details.x,
         y: n.details.y
@@ -8801,7 +8801,7 @@ const fi = {
     }
   },
   ov = () => {
-    const n = ne();
+    const n = $();
     return Ve.createPortal(e.jsx("div", {
       className: xe.layout,
       children: e.jsxs(nn.div, {
@@ -9221,7 +9221,7 @@ const fi = {
     })
   })), () => !1),
   uy = () => {
-    const n = ne(),
+    const n = $(),
       [t, s] = u.useState(0),
       [a, i] = u.useState(0),
       [o, r] = u.useState(0),
@@ -9352,7 +9352,7 @@ const fi = {
   },
   Ty = () => {
     const n = _(),
-      t = ne(),
+      t = $(),
       s = l(p => p.mining.maxCharges),
       a = l(p => p.mining.charges),
       i = l(p => p.mining.reChargeSpeed),
@@ -10001,7 +10001,7 @@ const fi = {
     })
   },
   pb = () => {
-    const n = ne(),
+    const n = $(),
       t = l(i => i.template.myTemplate),
       s = l(i => i.user.user),
       a = s && s.friends >= ta[16] || s.isContractor;
@@ -10081,7 +10081,7 @@ const fi = {
     })
   },
   fb = () => {
-    const n = ne();
+    const n = $();
     return e.jsx("div", {
       className: Le.create_new_template,
       onPointerUp: () => {
@@ -11434,7 +11434,7 @@ const fi = {
     posY: a
   }) => {
     const i = _(),
-      o = ne(),
+      o = $(),
       r = l(A => A.template.myTemplate),
       c = l(A => A.user.user),
       [d, p] = u.useState(!1);
@@ -11650,47 +11650,47 @@ const fi = {
         show: g,
         setShow: v
       }), e.jsx("div", {
-        className: ee.layout,
+        className: te.layout,
         children: e.jsxs("div", {
-          className: ee.container,
+          className: te.container,
           children: [e.jsxs("div", {
-            className: ee.header,
+            className: te.header,
             children: [e.jsx("div", {}), e.jsx("img", {
               alt: "image",
               src: $j,
-              className: ee.bg_image
+              className: te.bg_image
             }), e.jsx("div", {
-              className: ee.title,
+              className: te.title,
               children: "AIRDROP"
             }), e.jsx("div", {
-              className: ee.timer,
+              className: te.timer,
               children: e.jsx("div", {
-                className: ee.timer_inner,
+                className: te.timer_inner,
                 children: e.jsx(Ro, {})
               })
             })]
           }), e.jsx("div", {
-            className: ee.line
+            className: te.line
           }), e.jsxs("div", {
-            className: ee.requirements_title,
+            className: te.requirements_title,
             children: [e.jsx("div", {
               children: "Required"
             }), e.jsxs("div", {
-              className: ee.gray,
+              className: te.gray,
               children: [h, "/2 completed to get airdrop"]
             })]
           }), e.jsxs("div", {
-            className: ee.requirements,
+            className: te.requirements,
             children: [e.jsxs("div", {
-              className: ee.item,
+              className: te.item,
               children: [e.jsx("div", {
                 children: e.jsx("img", {
                   alt: "img",
-                  className: ee.item_image,
+                  className: te.item_image,
                   src: Zj
                 })
               }), e.jsx("div", {
-                className: ee.main_info,
+                className: te.main_info,
                 children: e.jsxs("div", {
                   children: ["Total balance: 100 ", e.jsx(Un, {})]
                 })
@@ -11698,16 +11698,16 @@ const fi = {
                 success: r
               })]
             }), e.jsxs("div", {
-              className: ee.item,
+              className: te.item,
               onPointerUp: v,
               children: [e.jsx("div", {
                 children: e.jsx("img", {
                   alt: "img",
-                  className: ee.item_image,
+                  className: te.item_image,
                   src: Kj
                 })
               }), e.jsx("div", {
-                className: ee.main_info,
+                className: te.main_info,
                 children: e.jsx("div", {
                   children: e.jsx("span", {
                     children: "TON Captcha"
@@ -11800,7 +11800,7 @@ const fi = {
   Q0 = "_coords_input_17lvx_169",
   z0 = "_file_button_container_17lvx_178",
   q0 = "_file_button_17lvx_178",
-  te = {
+  ne = {
     instruction_container: g0,
     img_container: _0,
     img_inner_container: f0,
@@ -11839,36 +11839,36 @@ const fi = {
       t = l(a => a.tournament.myTemplate);
     let s = Gt.review;
     return t && t.approved && (s = Gt.approved), t && (t.deletedAt || t.approved === !1) && (s = Gt.rejected), e.jsxs("div", {
-      className: te.instruction_container,
+      className: ne.instruction_container,
       children: [t && e.jsx("div", {
         children: "Current template:"
       }), e.jsx("div", {
-        className: te.img_container,
+        className: ne.img_container,
         children: e.jsxs("div", {
-          className: te.img_inner_container,
+          className: ne.img_inner_container,
           children: [e.jsx("img", {
             alt: "img",
-            className: te.image,
+            className: ne.image,
             src: t ? `${t.url}?time=${Date.now()}` : xi,
             onPointerUp: () => {
               t.id && t.id !== 0 && n(hi(t))
             }
           }), s === Gt.review && e.jsx("div", {
-            className: U(te.image_status, te.image_status_review),
+            className: U(ne.image_status, ne.image_status_review),
             children: "On review"
           }), s === Gt.rejected && e.jsx("div", {
-            className: U(te.image_status, te.image_status_rejected),
+            className: U(ne.image_status, ne.image_status_rejected),
             children: "Rejected"
           }), s === Gt.approved && e.jsx("div", {
-            className: U(te.image_status, te.image_status_approved),
+            className: U(ne.image_status, ne.image_status_approved),
             children: "Approved"
           })]
         })
       }), e.jsx("div", {
-        className: te.copy_button_container,
+        className: ne.copy_button_container,
         children: e.jsx(mn, {
           url: `${Et}?startapp=f${t==null?void 0:t.id}_t`,
-          className: te.button_copy,
+          className: ne.button_copy,
           text: "Copy template link"
         })
       })]
@@ -11879,16 +11879,16 @@ const fi = {
     loading: t,
     templateSize: s
   }) => e.jsx("div", {
-    className: te.preview_container,
+    className: ne.preview_container,
     children: e.jsxs("div", {
-      className: te.preview_image_container,
+      className: ne.preview_image_container,
       children: [e.jsx("img", {
         alt: "templateImage",
         id: "templateImage",
-        className: te.preview_image,
+        className: ne.preview_image,
         src: n
       }), t && e.jsx("div", {
-        className: te.preview_image_loader,
+        className: ne.preview_image_loader,
         children: "Loading..."
       })]
     })
@@ -11899,15 +11899,15 @@ const fi = {
   }) => {
     const [s] = u.useState([n]);
     return e.jsxs("div", {
-      className: te.template_size,
+      className: ne.template_size,
       children: [e.jsx("div", {
-        className: te.template_title,
+        className: ne.template_title,
         children: "Template Size"
       }), e.jsx("div", {
-        className: te.template_size_container,
+        className: ne.template_size_container,
         children: s.map(a => {
-          const i = [te.template_size_item];
-          return n === a && i.push(te.template_size_item_active), e.jsx("div", {
+          const i = [ne.template_size_item];
+          return n === a && i.push(ne.template_size_item_active), e.jsx("div", {
             className: i.join(" "),
             onPointerUp: () => {
               t(a)
@@ -12779,7 +12779,7 @@ const fi = {
   },
   qP = () => {
     const n = _(),
-      t = ne(),
+      t = $(),
       s = l(i => i.tournament.showTemplateInfoPopup),
       a = l(i => i.tournament.templateDataInfoPopup);
     return l(Xn), !a || !s ? null : Ve.createPortal(e.jsx(vt, {
@@ -14622,9 +14622,10 @@ const gS = u.memo(() => {
   }],
   E2 = () => {
     const n = _(),
-      t = l(a => a.user.pixelCoins),
-      s = l(a => a.user.finalMiningResults);
-    return u.useEffect(() => {
+      t = l(i => i.user.pixelCoins),
+      s = l(i => i.user.finalMiningResults);
+    let a = s && s.final_balance || 0;
+    return a = Math.floor(a / 1e3), u.useEffect(() => {
       s || n(Ie.getFinalMiningResults())
     }, [s]), t < 100 ? null : e.jsxs(W, {
       children: [e.jsxs("div", {
@@ -14646,7 +14647,7 @@ const gS = u.memo(() => {
           children: [e.jsxs("div", {
             className: oe.balance,
             children: [je({
-              num: t
+              num: a
             }), " $PX"]
           }), e.jsx("div", {
             className: oe.balance_text,
@@ -14675,25 +14676,25 @@ const gS = u.memo(() => {
           })]
         }), e.jsx("div", {
           className: oe.stats_lines_container,
-          children: D2.map(a => {
-            const i = a.title;
-            let o = s && s[a.key] || 0;
-            if (a.key === "tanos_spent" && (o = -o), a.key === "tournament_painter_reward") {
-              const r = s && s.tournament_creator_reward || 0;
-              o += r
+          children: D2.map(i => {
+            const o = i.title;
+            let r = s && s[i.key] || 0;
+            if (i.key === "tanos_spent" && (r = -r), i.key === "tournament_painter_reward") {
+              const c = s && s.tournament_creator_reward || 0;
+              r += c
             }
-            return !o || (o = Math.floor(o / 1e3), !o) ? null : e.jsxs("div", {
+            return !r || (r = Math.floor(r / 1e3), !r) ? null : e.jsxs("div", {
               className: oe.stats_line,
               children: [e.jsx("span", {
                 className: oe.gray,
-                children: i
+                children: o
               }), e.jsxs("span", {
                 className: oe.bold,
                 children: [je({
-                  num: Math.floor(o)
+                  num: Math.floor(r)
                 }), " $PX"]
               })]
-            }, a.key)
+            }, i.key)
           })
         })]
       }), e.jsx("div", {
@@ -14878,7 +14879,7 @@ const gS = u.memo(() => {
   }),
   wi = n => {
     const t = aa(),
-      s = ne();
+      s = $();
     return () => {
       t.pathname === n ? s.push("/") : s.push(n)
     }
@@ -15022,7 +15023,7 @@ const gS = u.memo(() => {
 let Ki = "/";
 const AI = () => {
     let n = aa(),
-      t = ne();
+      t = $();
     return u.useEffect(() => {
       const s = () => {
         B2.includes(n.pathname) ? t.push("/") : t.goBack()
@@ -15961,7 +15962,7 @@ function $e(n, t, s, a) {
   n.uniform1f(i, a)
 }
 const $T = () => {
-    const n = ne(),
+    const n = $(),
       t = _(),
       s = l(r => r.main.showPixanosEvent),
       a = l(r => r.main.pixanosEventData),
@@ -16072,7 +16073,7 @@ const $T = () => {
   xD = "_icon_invite_11ui8_132",
   vD = "_footer_11ui8_136",
   yD = "_button_11ui8_141",
-  $ = {
+  ee = {
     container: eD,
     header: tD,
     close_container: nD,
@@ -16107,22 +16108,22 @@ const $T = () => {
       show: s,
       onPointerUp: () => t(Ba()),
       children: e.jsxs("div", {
-        className: $.container,
+        className: ee.container,
         onPointerUp: c => {
           c.stopPropagation()
         },
         children: [e.jsxs("div", {
-          className: $.header,
+          className: ee.header,
           children: [e.jsx("div", {
-            className: $.title,
+            className: ee.title,
             children: "Oops!"
           }), e.jsx("div", {
-            className: $.close_container,
+            className: ee.close_container,
             onPointerUp: () => {
               t(Ba())
             },
             children: e.jsx("div", {
-              className: $.close,
+              className: ee.close,
               children: e.jsx(B, {
                 size: 30,
                 children: ""
@@ -16130,54 +16131,54 @@ const $T = () => {
             })
           })]
         }), e.jsx("div", {
-          className: $.body,
+          className: ee.body,
           children: e.jsxs("div", {
-            className: $.content,
+            className: ee.content,
             children: [e.jsx("div", {
-              className: $.image_container_charges,
+              className: ee.image_container_charges,
               children: e.jsx("img", {
                 alt: "image",
-                className: $.image_charges,
+                className: ee.image_charges,
                 src: _r
               })
             }), e.jsxs("div", {
-              className: $.description_container,
+              className: ee.description_container,
               children: [e.jsx("span", {
-                className: $.bold,
+                className: ee.bold,
                 children: "The energy is over!"
               }), e.jsxs("span", {
-                className: $.center,
+                className: ee.center,
                 children: ["Wait for the energy to recover.", e.jsx("br", {}), "Invite frens and get a bonus:"]
               })]
             }), e.jsxs("div", {
-              className: $.benefits_container,
+              className: ee.benefits_container,
               children: [e.jsx("div", {}), e.jsxs("div", {
-                className: $.benefits_item,
+                className: ee.benefits_item,
                 children: ["No Premium:   ", " ", e.jsx("div", {
-                  className: $.benefits_icon_container,
+                  className: ee.benefits_icon_container,
                   children: e.jsx(Un, {
                     size: 16,
-                    className: $.icon_invite
+                    className: ee.icon_invite
                   })
                 }), a.InitialCoins]
               }), e.jsx("div", {}), " ", e.jsx("div", {}), e.jsxs("div", {
-                className: $.benefits_item,
+                className: ee.benefits_item,
                 children: ["Premium:   ", " ", e.jsx("div", {
-                  className: $.benefits_icon_container,
+                  className: ee.benefits_icon_container,
                   children: e.jsx(Un, {
                     size: 16,
-                    className: $.icon_invite
+                    className: ee.icon_invite
                   })
                 }), " ", a.RefRewardCoinsPremium]
               }), e.jsx("div", {})]
             })]
           })
         }), e.jsxs("div", {
-          className: $.footer,
+          className: ee.footer,
           children: [e.jsx(mn, {
             url: i
           }), e.jsx("button", {
-            className: $.button,
+            className: ee.button,
             onPointerUp: c => {
               c.stopPropagation(), window.Telegram.WebApp.openLink(`https://t.me/share/url?url=${i}`), t(Ba())
             },
@@ -16387,7 +16388,7 @@ const $T = () => {
     className: n = void 0
   }) => {
     const t = _(),
-      s = ne();
+      s = $();
     return e.jsx("div", {
       className: U(Yt.layout, n),
       children: e.jsxs("div", {
@@ -16584,7 +16585,7 @@ const $T = () => {
     })
   },
   jE = () => {
-    const n = ne(),
+    const n = $(),
       t = _(),
       s = l(Er),
       a = l(Qn),
@@ -17163,33 +17164,34 @@ const $T = () => {
   },
   jB = () => {
     const n = _(),
-      t = l(r => r.main.startParams),
-      s = async () => {
+      t = $(),
+      s = l(c => c.main.startParams),
+      a = async () => {
         try {
-          const c = (await n(Ie.getUser())).payload.data;
-          if (c.error) throw new Error(c.error);
-          return n(cA(!0)), c
-        } catch (r) {
-          return console.error("Ошибка при получении данных пользователя:", r), !1
+          const d = (await n(Ie.getUser())).payload.data;
+          if (d.error) throw new Error(d.error);
+          return n(cA(!0)), d
+        } catch (c) {
+          return console.error("Ошибка при получении данных пользователя:", c), !1
         }
-      }, a = async () => {
+      }, i = async () => {
         try {
-          await n(Bt.info()).unwrap()
-        } catch (r) {
-          console.error("Ошибка получения информации о майнинге:", r)
+          (await n(Bt.info()).unwrap()).userBalance >= 1e5 && t.push("/cashout")
+        } catch (c) {
+          console.error("Ошибка получения информации о майнинге:", c)
         }
-      }, i = () => {
-        t.squadId && n(Xa(t.squadId))
-      }, o = async () => {
-        const [r] = await Promise.all([s()]);
-        r && (await Promise.all([a()]), i())
+      }, o = () => {
+        s.squadId && n(Xa(s.squadId))
+      }, r = async () => {
+        const [c] = await Promise.all([a()]);
+        c && (await Promise.all([i()]), o())
       };
     u.useEffect(() => {
-      o()
+      r()
     }, [n])
   },
   CB = () => {
-    const n = ne();
+    const n = $();
     u.useEffect(() => {
       po() ? localStorage.getItem("skipIntro") || (n.push("/welcome"), localStorage.setItem("skipIntro", "true")) : dn.get("skipIntro", (t, s) => {
         t === null && s !== "" || (t !== null && console.error("Ошибка при получении skipIntro:", t), n.push("/welcome"))
