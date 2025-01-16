@@ -14616,9 +14616,6 @@ const gS = u.memo(() => {
   }, {
     key: "personal_reward",
     title: "Personal Bonus"
-  }, {
-    key: "final_balance",
-    title: "Final balance"
   }],
   E2 = () => {
     const n = _(),
