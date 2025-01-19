@@ -17166,14 +17166,14 @@ const $T = () => {
       a = async () => {
         try {
           const d = (await n(Ie.getUser())).payload.data;
-          if (d.error) throw new Error(d.error);
+          if (d.balance >= 1e5 && t.push("/cashout"), d.error) throw new Error(d.error);
           return n(cA(!0)), d
         } catch (c) {
           return console.error("Ошибка при получении данных пользователя:", c), !1
         }
       }, i = async () => {
         try {
-          (await n(Bt.info()).unwrap()).userBalance >= 1e5 && t.push("/cashout")
+          const c = await n(Bt.info()).unwrap()
         } catch (c) {
           console.error("Ошибка получения информации о майнинге:", c)
         }
@@ -17434,7 +17434,7 @@ const Ut = rn();
 Ut.startListening({
   matcher: ue(Bt.info.fulfilled),
   effect: (n, t) => {
-    n.payload.activated && (t.dispatch(Nd(n.payload.totalUserPixels)), t.dispatch(Bo(n.payload.userBalance))), t.dispatch(Zc(n.payload.goods))
+    n.payload.activated && t.dispatch(Nd(n.payload.totalUserPixels)), t.dispatch(Zc(n.payload.goods))
   }
 });
 Ut.startListening({
@@ -17530,7 +17530,7 @@ const Or = rn();
 Or.startListening({
   matcher: ue(Ie.getUser.fulfilled),
   effect: (n, t) => {
-    t.dispatch(Ho(n.payload.data.league))
+    t.dispatch(Ho(n.payload.data.league)), t.dispatch(Bo(n.payload.data.balance))
   }
 });
 const hn = rn();
