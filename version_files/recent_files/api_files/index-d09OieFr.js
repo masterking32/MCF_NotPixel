@@ -3744,7 +3744,7 @@ const hs = D("mining/info", async () => (await la.info()).data),
               },
               children: ""
             })]
-          }), d.firstClaimIteration && e.jsxs(_e, {
+          }), d.firstClaimIteration && A && e.jsxs(_e, {
             variant: "disabled2",
             children: ["Withdraw $PX ", e.jsx(B, {
               size: 20,
@@ -3755,7 +3755,7 @@ const hs = D("mining/info", async () => (await la.info()).data),
               },
               children: ""
             })]
-          }), !d.firstClaimIteration && e.jsxs("div", {
+          }), !d.firstClaimIteration && A && e.jsxs("div", {
             style: {
               color: "#b75b5a",
               backgroundColor: "#2f282c",
