@@ -210,7 +210,7 @@ const Fa = 512,
   },
   Nc = 24 * 60 * 60 * 1e3,
   Et = "https://t.me/notpixel/app",
-  P = {
+  N = {
     addToHomeScreen: "addToHomeScreen",
     addEmoji: "addEmoji",
     adsgram: "adsgram",
@@ -283,7 +283,7 @@ const Fa = 512,
     taskTypeCampaign6_74738: "taskTypeCampaign6_74738",
     taskTypeCampaign5_74739: "taskTypeCampaign5_74739"
   },
-  et = {
+  tt = {
     paintReward: "paintReward",
     reChargeSpeed: "reChargeSpeed",
     energyLimit: "energyLimit"
@@ -294,7 +294,7 @@ const Fa = 512,
     referred: "referred",
     world: "world"
   },
-  at = "notgames_bot/squads",
+  it = "notgames_bot/squads",
   ei = "https://t.me/notpixel_42",
   Qa = "UQBv3exBKLmQcn2Fm6VlntAInW-je1YP4U59gJxaO62NCyMn",
   Re = {
@@ -369,18 +369,18 @@ let lo;
 const Ec = n => {
     lo = n
   },
-  w = Wr.create({
+  b = Wr.create({
     baseURL: ti
   });
-w.interceptors.request.use(function(n) {
+b.interceptors.request.use(function(n) {
   var a;
   const s = (a = lo.getState().auth) == null ? void 0 : a.authData;
   return s ? n.headers.Authorization = `initData ${s}` : delete n.headers.Authorization, n
 });
-w.interceptors.request.use(function(n) {
+b.interceptors.request.use(function(n) {
   return Sc.includes(n.url), n
 });
-w.interceptors.response.use(n => n, n => Promise.reject(n));
+b.interceptors.response.use(n => n, n => Promise.reject(n));
 const ji = window.Telegram.WebApp.CloudStorage;
 let uo = class {
   static warn() {
@@ -534,63 +534,63 @@ const dn = uo,
   } = go.actions, zc = go.reducer;
 class O {
   static async getPrices() {
-    return w.get("/image/prices")
+    return b.get("/image/prices")
   }
   static async getPixelInfo({
     id: t,
     signal: s
   }) {
-    return w.get(`/image/get/${t}`, {
+    return b.get(`/image/get/${t}`, {
       signal: s
     })
   }
   static async getRevShareInfo() {
-    return w.get("/users/me/revshare")
+    return b.get("/users/me/revshare")
   }
   static async getUser() {
-    return w.get("/users/me")
+    return b.get("/users/me")
   }
   static async getStats() {
-    return w.get("/users/stats")
+    return b.get("/users/stats")
   }
   static async getMoreStats() {
-    return w.get("/history/stats")
+    return b.get("/history/stats")
   }
   static async getVerificatedWallet() {
-    return w.get("/wallet/address")
+    return b.get("/wallet/address")
   }
   static async checkCaptcha({
     wallet: t,
     captcha: s
   }) {
-    return w.post("/wallet/ton-proof/check-captcha", {
+    return b.post("/wallet/ton-proof/check-captcha", {
       wallet: t,
       captcha: s
     })
   }
   static async checkHasCaptchaCode() {
-    return w.get("/wallet/ton-proof/uncompleted-captcha")
+    return b.get("/wallet/ton-proof/uncompleted-captcha")
   }
   static async getUserPixels({
     offset: t,
     limit: s
   }) {
-    return w.get(`/users/mypixels?offset=${t}&limit=${s}`)
+    return b.get(`/users/mypixels?offset=${t}&limit=${s}`)
   }
   static async getUserPixelsSold({
     offset: t,
     limit: s
   }) {
-    return w.get(`/users/mypixels/sold?offset=${t}&limit=${s}`)
+    return b.get(`/users/mypixels/sold?offset=${t}&limit=${s}`)
   }
   static async getUserPixelsCount() {
-    return w.get("/users/mypixels/count")
+    return b.get("/users/mypixels/count")
   }
   static async getPriceMask({
     price: t
   }) {
     let s = t === null ? "" : `/${t}`;
-    return w.get(`/image/mask${s}`, {
+    return b.get(`/image/mask${s}`, {
       responseType: "arraybuffer",
       decompress: !0
     })
@@ -599,7 +599,7 @@ class O {
     pixelId: t,
     newColor: s
   }) {
-    return w.post("/repaint/start", {
+    return b.post("/repaint/start", {
       pixelId: t,
       newColor: s
     })
@@ -608,31 +608,31 @@ class O {
     offset: t,
     limit: s
   }) {
-    return w.get(`/history/all?offset=${t}&limit=${s}`)
+    return b.get(`/history/all?offset=${t}&limit=${s}`)
   }
   static async getPixanosRating() {
-    return w.get("/ratings/pixanos")
+    return b.get("/ratings/pixanos")
   }
   static async buy({
     type: t,
     qty: s,
     pixanosColor: a
   }) {
-    return w.post("/buy/stars", {
+    return b.post("/buy/stars", {
       type: t,
       qty: s,
       pixanosColor: a
     })
   }
   static async getProducts() {
-    return w.get("/buy/list")
+    return b.get("/buy/list")
   }
   static async useProduct({
     pixelId: t,
     productId: s,
     color: a
   }) {
-    return w.post("/repaint/special", {
+    return b.post("/repaint/special", {
       pixelId: t,
       type: s,
       color: a
@@ -641,7 +641,7 @@ class O {
   static async startTransaction({
     buyerWallet: t
   }) {
-    return w.post("/transactions/start", {
+    return b.post("/transactions/start", {
       buyerWallet: t
     })
   }
@@ -654,7 +654,7 @@ class O {
     activeColor: r
   }) {
     let c = s === 13 ? Ue[V(0, 29)] : void 0;
-    return r && Ue.includes(r) && (c = r), w.post("/transactions/start", {
+    return r && Ue.includes(r) && (c = r), b.post("/transactions/start", {
       buyerWallet: t,
       goodId: s,
       daily: a,
@@ -666,57 +666,57 @@ class O {
   static async putUserWallet({
     address: t
   }) {
-    return w.put(`/users/wallet/${t}`)
+    return b.put(`/users/wallet/${t}`)
   }
   static async getSquadInfo({
     id: t
   }) {
-    return w.get(`/ratings/squads/${t}`)
+    return b.get(`/ratings/squads/${t}`)
   }
   static async checkSecret({
     key: t
   }) {
-    return w.post("/mining/quest/check/secretWord", {
+    return b.post("/mining/quest/check/secretWord", {
       secret_word: t
     })
   }
   static async getSecretStats() {
-    return w.get("/mining/quest/stats ")
+    return b.get("/mining/quest/stats ")
   }
   static async getDailyList() {
-    return w.get("/daily/list")
+    return b.get("/daily/list")
   }
   static async getFirstDaily() {
-    return w.get("/daily/free")
+    return b.get("/daily/free")
   }
   static async shareBalance({
     sharePercent: t
   }) {
-    return w.post("/users/balance/share", {
+    return b.post("/users/balance/share", {
       balance_share_percent: t
     })
   }
   static async getRewards({
     userId: t
   }) {
-    return w.get(`/users/rewards/${t}`)
+    return b.get(`/users/rewards/${t}`)
   }
   static async getRewardById({
     rewardId: t
   }) {
-    return w.get(`/users/rewards/distribution/${t}`)
+    return b.get(`/users/rewards/distribution/${t}`)
   }
   static async claimRewardById({
     userId: t,
     rewardId: s
   }) {
-    return w.post("/users/rewards/claim", {
+    return b.post("/users/rewards/claim", {
       user_id: t,
       reward_user_id: s
     })
   }
   static async generateTonProofPayload() {
-    return w.post("/wallet/ton-proof/generate-payload")
+    return b.post("/wallet/ton-proof/generate-payload")
   }
   static async checkTonProof(t, s) {
     const a = {
@@ -727,10 +727,10 @@ class O {
         state_init: s.walletStateInit
       }
     };
-    return w.post("/wallet/ton-proof/check-proof", a)
+    return b.post("/wallet/ton-proof/check-proof", a)
   }
   static async getFinalMiningResults() {
-    return w.get("/users/game/results")
+    return b.get("/users/game/results")
   }
 }
 const qc = "/assets/icon_stars_new-Dk8ap_HZ.png",
@@ -1621,14 +1621,14 @@ const Kc = {
     setDeviceInfo: Ml,
     setFullscreen: Fl
   } = To.actions,
-  it = n => n.device.platform,
+  ot = n => n.device.platform,
   Ql = n => n.device.os,
   Qn = n => n.device.fullscreen,
   zn = n => n.device.contentSafeAreaInset,
   qn = n => n.device.safeAreaInset,
   zl = To.reducer,
   ql = () => {
-    const [n, t] = u.useState("Stars"), s = l(it);
+    const [n, t] = u.useState("Stars"), s = l(ot);
     return e.jsx("div", {
       className: wa.panel,
       children: ["Star Shop"].map(a => e.jsxs("div", {
@@ -1745,7 +1745,7 @@ const Kc = {
   }) : null,
   pd = u.memo(() => {
     const n = Array.from(Array(30)),
-      t = l(it);
+      t = l(ot);
     return e.jsx("div", {
       className: Jn.layout,
       children: e.jsx("div", {
@@ -2008,7 +2008,7 @@ const Kc = {
     updateUserSquad: Td,
     setShareBalancePercent: Dd
   } = Eo.actions,
-  ot = n => n.user.user,
+  Ye = n => n.user.user,
   Ed = Eo.reducer,
   Ie = {
     getPixelsForSale: cs,
@@ -2024,8 +2024,8 @@ const Kc = {
     const n = _(),
       t = l(ii),
       s = l(i => i.shop.selectedCurrency),
-      a = l(it);
-    return l(ot), u.useEffect(() => {
+      a = l(ot);
+    return l(Ye), u.useEffect(() => {
       a === Ae && s === 1 && n(Bn(2))
     }, [a]), a !== Ae ? null : e.jsx("div", {
       className: ct.layout,
@@ -2082,7 +2082,7 @@ const Kc = {
   Od = ko.reducer,
   Md = () => {
     const n = _(),
-      t = l(it),
+      t = l(ot),
       [s, a] = u.useState(1);
     return e.jsx("img", {
       alt: "img",
@@ -2103,7 +2103,7 @@ const Kc = {
     const n = l(i => i.shop.order),
       t = l(i => i.shop.products),
       s = l(i => i.shop.available),
-      a = l(it);
+      a = l(ot);
     return u.useEffect(() => {}, []), e.jsxs(W, {
       children: [e.jsxs("div", {
         className: le.stars_img_container,
@@ -2997,13 +2997,13 @@ const Kc = {
         r && await d.disconnect(), d.setConnectRequestParameters({
           state: "loading"
         }), A(!1);
-        const y = await O.generateTonProofPayload();
-        if (y.status === 200 && y.data && y.data.payload) {
-          const v = y.data;
+        const w = await O.generateTonProofPayload();
+        if (w.status === 200 && w.data && w.data.payload) {
+          const x = w.data;
           d.setConnectRequestParameters({
             state: "ready",
             value: {
-              tonProof: v.payload
+              tonProof: x.payload
             }
           }), await d.openModal(), A(!0)
         } else n(k({
@@ -3013,17 +3013,17 @@ const Kc = {
       };
     return u.useEffect(() => {
       var g;
-      !o || s !== m.fulfilled || r && p && (g = r == null ? void 0 : r.connectItems) != null && g.tonProof && !("error" in r.connectItems.tonProof) && O.checkTonProof(r.connectItems.tonProof.proof, r.account).then(y => {
-        if (y.status === 200 && y.data.success) n(Pd(ni(c))), n(k({
+      !o || s !== m.fulfilled || r && p && (g = r == null ? void 0 : r.connectItems) != null && g.tonProof && !("error" in r.connectItems.tonProof) && O.checkTonProof(r.connectItems.tonProof.proof, r.account).then(w => {
+        if (w.status === 200 && w.data.success) n(Pd(ni(c))), n(k({
           id: performance.now(),
           text: "Success!",
           icon: ""
         }));
         else {
-          let v = "Something went wrong. Try later, or try another wallet.";
-          y.data && y.data.error && (v = y.data.error), n(k({
+          let x = "Something went wrong. Try later, or try another wallet.";
+          w.data && w.data.error && (x = w.data.error), n(k({
             id: performance.now(),
-            text: v
+            text: x
           }))
         }
       })
@@ -3242,30 +3242,30 @@ const tp = ri.getSelectors(n => n.tournament.finalResults),
   };
 class la {
   static async claim() {
-    return w.get("/mining/claim")
+    return b.get("/mining/claim")
   }
   static async info() {
-    return w.get("/mining/status")
+    return b.get("/mining/status")
   }
   static async checkBoost({
     key: t
   }) {
-    return w.get(`/mining/boost/check/${t}`)
+    return b.get(`/mining/boost/check/${t}`)
   }
   static async checkTask({
     key: t
   }) {
     let s = t,
       a = "";
-    if (t === P["channel:notpixel_channel"] || t === P["channel:notcoin_pre_release"] || t === P["channel:purego"] || t === P["channel:probablyinsomnia"] || t === P["channel:tonbeholder"] || t === P["channel:notaspidey"] || t === P["channel:nuvov"] || t === P["channel:seinarukiro"] || t === P["channel:sscaleton"] || t === P["channel:waketonup"] || t === P["channel:GameDevDead"] || t === P["channel:zaegd"] || t === P["channel:fakedonalds"] || t === P["channel:pushinton"] || t === P["channel:notcoin"]) {
+    if (t === N["channel:notpixel_channel"] || t === N["channel:notcoin_pre_release"] || t === N["channel:purego"] || t === N["channel:probablyinsomnia"] || t === N["channel:tonbeholder"] || t === N["channel:notaspidey"] || t === N["channel:nuvov"] || t === N["channel:seinarukiro"] || t === N["channel:sscaleton"] || t === N["channel:waketonup"] || t === N["channel:GameDevDead"] || t === N["channel:zaegd"] || t === N["channel:fakedonalds"] || t === N["channel:pushinton"] || t === N["channel:notcoin"]) {
       const i = t.split(":");
       s = i[0], a = `?name=${i[1]}`
     }
-    if (t === P["x:notpixel"] || t === P["x:notcoin"]) {
+    if (t === N["x:notpixel"] || t === N["x:notcoin"]) {
       const i = t.split(":");
       s = i[0], a = `?name=${i[1]}`
     }
-    return w.get(`/mining/task/check/${s}${a}`)
+    return b.get(`/mining/task/check/${s}${a}`)
   }
 }
 const hs = D("mining/info", async () => (await la.info()).data),
@@ -3285,51 +3285,51 @@ const hs = D("mining/info", async () => (await la.info()).data),
     tasks: {},
     walletVerification: null,
     boosts: {
-      [et.paintReward]: 1,
-      [et.reChargeSpeed]: 1,
-      [et.energyLimit]: 1
+      [tt.paintReward]: 1,
+      [tt.reChargeSpeed]: 1,
+      [tt.energyLimit]: 1
     },
     checkError: {},
     toggleAction: {
-      [P.invite3frens]: !0,
-      [P.makePixelAvatar]: !0,
-      [P.boostChannelNotPixel]: !0,
-      [P.boostChannelNotCoin]: !0,
-      [P.walletVerification]: !0,
-      [P["channel:notpixel_channel"]]: !0,
-      [P["channel:notcoin_pre_release"]]: !0,
-      [P["channel:purego"]]: !0,
-      [P["channel:seinarukiro"]]: !0,
-      [P["channel:sscaleton"]]: !0,
-      [P["channel:waketonup"]]: !0,
-      [P["channel:notcoin"]]: !0,
-      [P["channel:GameDevDead"]]: !0,
-      [P["channel:zaegd"]]: !0,
-      [P["channel:fakedonalds"]]: !0,
-      [P["channel:pushinton"]]: !0,
-      [P["channel:probablyinsomnia"]]: !0,
-      [P["channel:tonbeholder"]]: !0,
-      [P["channel:notaspidey"]]: !0,
-      [P["channel:nuvov"]]: !0,
-      [P["x:notpixel"]]: !0,
-      [P["x:notcoin"]]: !0,
-      [P.jettonTask]: !0,
-      [P.solitaireGame]: !0,
-      [P.tonDurakGame]: !0,
-      [P.earnCoin]: !0,
-      [P.earnCoin2]: !0,
-      [P.frogApp]: !0,
-      [P.tonPoker]: !0,
-      [P.flappyBird]: !0,
-      [P.stickerStore]: !0,
-      [P.boink2]: !0,
-      [P.duckChain]: !0,
-      [P.starHash]: !0,
-      [P.trmnl]: !0,
-      [P.hauntedSpace]: !0,
-      [P.capsGame]: !0,
-      [P.taskTypeCampaign5_74739]: !0,
-      [P.taskTypeCampaign6_74738]: !0
+      [N.invite3frens]: !0,
+      [N.makePixelAvatar]: !0,
+      [N.boostChannelNotPixel]: !0,
+      [N.boostChannelNotCoin]: !0,
+      [N.walletVerification]: !0,
+      [N["channel:notpixel_channel"]]: !0,
+      [N["channel:notcoin_pre_release"]]: !0,
+      [N["channel:purego"]]: !0,
+      [N["channel:seinarukiro"]]: !0,
+      [N["channel:sscaleton"]]: !0,
+      [N["channel:waketonup"]]: !0,
+      [N["channel:notcoin"]]: !0,
+      [N["channel:GameDevDead"]]: !0,
+      [N["channel:zaegd"]]: !0,
+      [N["channel:fakedonalds"]]: !0,
+      [N["channel:pushinton"]]: !0,
+      [N["channel:probablyinsomnia"]]: !0,
+      [N["channel:tonbeholder"]]: !0,
+      [N["channel:notaspidey"]]: !0,
+      [N["channel:nuvov"]]: !0,
+      [N["x:notpixel"]]: !0,
+      [N["x:notcoin"]]: !0,
+      [N.jettonTask]: !0,
+      [N.solitaireGame]: !0,
+      [N.tonDurakGame]: !0,
+      [N.earnCoin]: !0,
+      [N.earnCoin2]: !0,
+      [N.frogApp]: !0,
+      [N.tonPoker]: !0,
+      [N.flappyBird]: !0,
+      [N.stickerStore]: !0,
+      [N.boink2]: !0,
+      [N.duckChain]: !0,
+      [N.starHash]: !0,
+      [N.trmnl]: !0,
+      [N.hauntedSpace]: !0,
+      [N.capsGame]: !0,
+      [N.taskTypeCampaign5_74739]: !0,
+      [N.taskTypeCampaign6_74738]: !0
     },
     infoStatus: m.idle,
     claimStatus: m.idle,
@@ -3446,7 +3446,7 @@ const hs = D("mining/info", async () => (await la.info()).data),
     }
   }),
   ja = n => {
-    const t = et.paintReward,
+    const t = tt.paintReward,
       s = n.main.settings,
       a = s.UpgradeRepaint,
       i = n.mining.boosts[t];
@@ -3637,7 +3637,7 @@ const hs = D("mining/info", async () => (await la.info()).data),
                   text: "Success!",
                   icon: ""
                 })), s(Vp({
-                  task: P.checkCaptcha,
+                  task: N.checkCaptcha,
                   value: !0
                 })), t(!1);
                 else throw new Error("error")
@@ -3661,21 +3661,22 @@ const hs = D("mining/info", async () => (await la.info()).data),
       a = l(zn),
       [i, o] = u.useState(!1),
       [r, c] = u.useState(!1),
-      p = l(f => f.user.pixelCoins) >= 100,
-      A = l(f => f.user.verificatedWalletStatus),
-      h = l(f => f.daily.getDailyListFetchStatus),
-      g = l(f => f.mining.tasks.checkCaptcha);
-    l(f => f.user.hasCaptchaCode);
-    const y = l(f => f.user.hasCaptchaCodeStatus);
+      d = l(Ye),
+      A = l(y => y.user.pixelCoins) >= 100,
+      h = l(y => y.user.verificatedWalletStatus),
+      g = l(y => y.daily.getDailyListFetchStatus),
+      w = l(y => y.mining.tasks.checkCaptcha);
+    l(y => y.user.hasCaptchaCode);
+    const x = l(y => y.user.hasCaptchaCodeStatus);
     u.useEffect(() => {
-      A === m.idle && n(Ie.getVerificatedWallet())
-    }, [A]), u.useEffect(() => {
-      h === m.idle && n(di.getList())
+      h === m.idle && n(Ie.getVerificatedWallet())
     }, [h]), u.useEffect(() => {
-      y === m.idle && n(Ie.checkHasCaptchaCode())
-    }, [y]);
-    const v = f => {
-      g && (f = !1), c(f)
+      g === m.idle && n(di.getList())
+    }, [g]), u.useEffect(() => {
+      x === m.idle && n(Ie.checkHasCaptchaCode())
+    }, [x]);
+    const v = y => {
+      w && (y = !1), c(y)
     };
     return e.jsxs(W, {
       children: [e.jsx(Nu, {}), e.jsx(zu, {
@@ -3705,8 +3706,8 @@ const hs = D("mining/info", async () => (await la.info()).data),
         }), e.jsxs("div", {
           className: qe.description_container,
           children: [e.jsx(pn, {
-            onPointerUp: f => {
-              f.stopPropagation(), o(!0)
+            onPointerUp: y => {
+              y.stopPropagation(), o(!0)
             },
             children: "Balance conversion"
           }), e.jsx("div", {
@@ -3731,7 +3732,7 @@ const hs = D("mining/info", async () => (await la.info()).data),
               },
               children: ""
             })]
-          }), p && e.jsxs(_e, {
+          }), A && e.jsxs(_e, {
             variant: "decor",
             onPointerUp: () => {
               t.push("/cashout")
@@ -3743,7 +3744,7 @@ const hs = D("mining/info", async () => (await la.info()).data),
               },
               children: ""
             })]
-          }), e.jsxs(_e, {
+          }), d.firstClaimIteration && e.jsxs(_e, {
             variant: "disabled2",
             children: ["Withdraw $PX ", e.jsx(B, {
               size: 20,
@@ -3753,6 +3754,22 @@ const hs = D("mining/info", async () => (await la.info()).data),
                 transform: "translateY(1px)"
               },
               children: ""
+            })]
+          }), !d.firstClaimIteration && e.jsxs("div", {
+            style: {
+              color: "#b75b5a",
+              backgroundColor: "#2f282c",
+              padding: "10px",
+              borderRadius: "10px"
+            },
+            children: ["Sadly, you did not complete TON captcha in time. You will be able to get your tokens on Feb. 22. ", e.jsx("br", {}), e.jsx("a", {
+              href: "mailto:support@notpx.app",
+              target: "_blank",
+              style: {
+                color: "#b75b5a",
+                backgroundColor: "#2f282c"
+              },
+              children: "support@notpx.app"
             })]
           })]
         }), e.jsx("div", {
@@ -3765,7 +3782,7 @@ const hs = D("mining/info", async () => (await la.info()).data),
             children: [e.jsx("div", {
               children: "Your balance 100+ PX"
             }), e.jsx(Ks, {
-              success: p
+              success: A
             })]
           }), e.jsxs("div", {
             className: qe.item,
@@ -3775,7 +3792,7 @@ const hs = D("mining/info", async () => (await la.info()).data),
                 children: "TON Captcha"
               })
             }), e.jsx(Ks, {
-              success: g
+              success: w
             })]
           })]
         })]
@@ -3822,7 +3839,7 @@ class ui {
     offset: a
   }) {
     Ht !== null && (Ht.abort(), Ht = null), Ht = new AbortController;
-    const i = await w.get(`/ratings/personal?league=${t.toLowerCase()}&limit=${s}&offset=${a}`, {
+    const i = await b.get(`/ratings/personal?league=${t.toLowerCase()}&limit=${s}&offset=${a}`, {
       signal: Ht.signal
     });
     return Ht = null, i
@@ -3833,7 +3850,7 @@ class ui {
     offset: a
   }) {
     Lt !== null && (Lt.abort(), Lt = null), Lt = new AbortController;
-    const i = await w.get(`/ratings/squads?league=${t.toLowerCase()}&limit=${s}&offset=${a}`, {
+    const i = await b.get(`/ratings/squads?league=${t.toLowerCase()}&limit=${s}&offset=${a}`, {
       signal: Lt.signal
     });
     return Lt = null, i
@@ -3842,7 +3859,7 @@ class ui {
     limit: t,
     offset: s
   }) {
-    return await w.get(`/ratings/pixanos?limit=${t}&offset=${s}`)
+    return await b.get(`/ratings/pixanos?limit=${t}&offset=${s}`)
   }
 }
 const fs = D("ratings/personal", async ({
@@ -4061,7 +4078,7 @@ const fs = D("ratings/personal", async ({
       y: Math.floor(a / t)
     }
   },
-  tt = n => {
+  nt = n => {
     const t = parseInt(n.replace("#", ""), 16),
       s = t >> 16 & 255,
       a = t >> 8 & 255,
@@ -4096,7 +4113,7 @@ const za = D("canvas/getPixelInfo", async ({
         price: n
       }),
       s = new Uint8Array(t.data);
-    return j.mask.draw({
+    return C.mask.draw({
       arr: s
     }), {
       result: !0
@@ -4249,7 +4266,7 @@ const Be = {
     }
   }),
   {
-    setProgressCommand: nt
+    setProgressCommand: st
   } = Yo.actions,
   zm = Yo.reducer,
   qm = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkBAMAAACCzIhnAAAAElBMVEVHcEz/////96f/uQD/WQDnERFRxRXOAAAAAXRSTlMAQObYZgAAAKRJREFUeNrt1MENgzAQRNEVUEBqmKUA5DF3C7sApJj+W4kQKcCjHLP//m6jsSiKoiiKon9uKjpZbYZIPEEkM6ESQCW8hQto2r7ExwnwkH2YzHhikUk+h8mSHuLCBBIO3K3j5O0HEgAfJz1XOAGOk0Y2eKVJJB2eFdKvnnbShFpl3clTIWRtVSJGdmYWhdR8ceubQuZiLCa1mDWTe8UzR1EURT/0AVQMHG7ZD4ErAAAAAElFTkSuQmCC",
@@ -4421,10 +4438,10 @@ const nh = "_order_panel_dvy5p_1",
           return
         }
         const g = Date.now(),
-          v = Math.floor((g - o) / r) - i.current;
-        v > 0 && s.current < c && (n(Qo(v)), n(Lp(v)));
-        let f = (g - o) % r;
-        p(f * 100 / r), h = requestAnimationFrame(A)
+          x = Math.floor((g - o) / r) - i.current;
+        x > 0 && s.current < c && (n(Qo(x)), n(Lp(x)));
+        let v = (g - o) % r;
+        p(v * 100 / r), h = requestAnimationFrame(A)
       };
       let h = requestAnimationFrame(A);
       return () => {
@@ -4611,7 +4628,7 @@ const uA = async ({
   if (!t && o && (t = o.shop.available[1], s = o.mining.charges, a = o.mining.maxCharges, i = o.shop.useProductStatus), !t || t === 0) return n(oa(10)), n(Ge(1)), n(We()), n(cr()), !1;
   if (s === a) return !1;
   if (Na) return m.pending;
-  Na = !0, n(nt({
+  Na = !0, n(st({
     command: Be.start
   }));
   try {
@@ -4625,7 +4642,7 @@ const uA = async ({
   } catch (p) {
     console.log("error", p)
   } finally {
-    Na = !1, n(nt({
+    Na = !1, n(st({
       command: Be.finish
     }))
   }
@@ -4750,10 +4767,10 @@ const xA = n => {
     paintCoords: s,
     activeColor: a
   }) => {
-    j.mainImage.paintPixel({
+    C.mainImage.paintPixel({
       id: gt(s),
-      color: tt(a)
-    }), j.mainImage.updateTexture(), await n(Fc(a)), await n(Om(s)), await n(Xp());
+      color: nt(a)
+    }), C.mainImage.updateTexture(), await n(Fc(a)), await n(Om(s)), await n(Xp());
     try {
       const i = new TextEncoder().encode(JSON.stringify({
           type: 0,
@@ -4764,7 +4781,7 @@ const xA = n => {
       Cs.push(o);
       const r = await o,
         c = JSON.parse(new TextDecoder().decode(new Uint8Array(r.data)));
-      console.log(c), c && c.balance && (n(Bo(c.balance)), c.reward_user && (j.mainImage.reward.add(s), n(hA({
+      console.log(c), c && c.balance && (n(Bo(c.balance)), c.reward_user && (C.mainImage.reward.add(s), n(hA({
         rewardId: c.reward_user.reward_id,
         rewardUserId: c.reward_user.id,
         reward: c.reward,
@@ -4779,7 +4796,7 @@ const xA = n => {
     dispatch: t,
     paintCoords: s
   }) => {
-    t(ma()), n && n.push("/energy-over"), t(on(s)), j.mainImage.selectedPixel.draw(s)
+    t(ma()), n && n.push("/energy-over"), t(on(s)), C.mainImage.selectedPixel.draw(s)
   }, er = async ({
     history: n,
     charges: t,
@@ -4819,27 +4836,27 @@ const xA = n => {
   }, wA = () => {
     const n = _(),
       t = $(),
-      s = l(v => v.canvas.pixelInfo),
-      a = l(v => v.color.active),
-      i = l(v => v.user.user),
-      o = l(v => v.mining.charges),
-      r = l(v => v.canvas.coords),
-      c = l(v => v.main.fastMode),
-      d = l(v => v.main.currentFastType),
-      p = l(v => v.main.fastEnergy),
-      A = l(v => v.shop.available[1]),
-      h = l(v => v.shop.products[1]),
+      s = l(x => x.canvas.pixelInfo),
+      a = l(x => x.color.active),
+      i = l(x => x.user.user),
+      o = l(x => x.mining.charges),
+      r = l(x => x.canvas.coords),
+      c = l(x => x.main.fastMode),
+      d = l(x => x.main.currentFastType),
+      p = l(x => x.main.fastEnergy),
+      A = l(x => x.shop.available[1]),
+      h = l(x => x.shop.products[1]),
       g = {
         bomb: 2,
         paintcan: 6,
         pumpkin: 7
       },
-      y = l(v => v.shop.products[g[d]]);
+      w = l(x => x.shop.products[g[d]]);
     return e.jsxs("button", {
       className: Z.button,
-      onPointerUp: v => {
+      onPointerUp: x => {
         if (c) {
-          v.stopPropagation(), n(ma());
+          x.stopPropagation(), n(ma());
           return
         }
         er({
@@ -4849,8 +4866,8 @@ const xA = n => {
           activeColor: a,
           user: i,
           flyCoords: {
-            x: v.clientX,
-            y: v.clientY
+            x: x.clientX,
+            y: x.clientY
           },
           paintCoords: r,
           charges: o,
@@ -4900,9 +4917,9 @@ const xA = n => {
             children: [e.jsx("img", {
               alt: "img",
               className: Z.image,
-              src: y.image_url
+              src: w.image_url
             }), e.jsx("span", {
-              children: y.name
+              children: w.name
             })]
           })]
         }) : "Paint"
@@ -5043,7 +5060,7 @@ const CA = async ({
     t(oa(10)), t(Ge(2)), t(We()), t(kt());
     return
   }
-  j.mainImage.bomb.boom(n), t(ca.useProduct({
+  C.mainImage.bomb.boom(n), t(ca.useProduct({
     pixelId: gt(n),
     productId: 2
   })), t(ra({
@@ -5099,7 +5116,7 @@ const CA = async ({
     t(oa(10)), t(Ge(6)), t(We()), t(kt());
     return
   }
-  j.mainImage.paintSquare({
+  C.mainImage.paintSquare({
     x: n.x - 1,
     y: n.y - 1,
     size: 3,
@@ -5194,7 +5211,7 @@ const JA = async ({
     t(kt());
     return
   }
-  j.mainImage.pumpkin.boom(n), t(ca.useProduct({
+  C.mainImage.pumpkin.boom(n), t(ca.useProduct({
     pixelId: gt(n),
     productId: 7
   })), t(ra({
@@ -5441,11 +5458,11 @@ let ng = class {
     }), this.imageData = null, this.texture = null, this.sprite = null, this.timeout = null, this.lastPointerUpTs = Date.now(), this.lastPaintCoords = {
       x: -1,
       y: -1
-    }, this.initImage(), o(a), this.initEvents(), this.store.dispatch(nt({
+    }, this.initImage(), o(a), this.initEvents(), this.store.dispatch(st({
       command: Be.start
     })), !mo() && this.loadAllChunks().then(() => {
       const r = a.getState().main.startParams.coords;
-      r && (j.viewport.viewport.animate({
+      r && (C.viewport.viewport.animate({
         scale: 60,
         time: 400,
         position: {
@@ -5477,10 +5494,10 @@ let ng = class {
         o = s.main.currentFastType;
       if (this.isCoordsEqual(this.lastPaintCoords, a), this.wasMoved) return;
       const r = Date.now();
-      if (r - this.lastPointerUpTs < 200 && !i && !o && (this.pixiViewport.scaled > 50 ? j.viewport.viewport.animate({
+      if (r - this.lastPointerUpTs < 200 && !i && !o && (this.pixiViewport.scaled > 50 ? C.viewport.viewport.animate({
           scale: this.pixiViewport.findFitHeight(T.height),
           time: 400
-        }) : j.viewport.viewport.animate({
+        }) : C.viewport.viewport.animate({
           scale: 60,
           time: 400,
           position: {
@@ -5527,7 +5544,7 @@ let ng = class {
     const t = await this.loadImage(Dc),
       s = this.getImageData(t, T.width, T.height);
     for (let a = 0; a < s.length; a += 4) this.imageData[a + 3] === 0 && (this.imageData[a] = s[a], this.imageData[a + 1] = s[a + 1], this.imageData[a + 2] = s[a + 2], this.imageData[a + 3] = s[a + 3]);
-    this.updateTexture(), this.store.dispatch(nt({
+    this.updateTexture(), this.store.dispatch(st({
       command: Be.finish
     }))
   }
@@ -5535,7 +5552,7 @@ let ng = class {
     const s = performance.now(),
       a = this.getImageData(t, T.width, T.height);
     for (let i = 0; i < a.length; i += 4) this.imageData[i + 3] === 0 && (this.imageData[i] = a[i], this.imageData[i + 1] = a[i + 1], this.imageData[i + 2] = a[i + 2], this.imageData[i + 3] = a[i + 3]);
-    this.updateTexture(), this.store.dispatch(nt({
+    this.updateTexture(), this.store.dispatch(st({
       command: Be.finish
     })), console.log(performance.now() - s)
   }
@@ -5564,7 +5581,7 @@ let ng = class {
     }
     this.updateTexture(), t < 15 ? await this.loadChunk({
       chunkIndex: t + 1
-    }) : this.store.dispatch(nt({
+    }) : this.store.dispatch(st({
       command: Be.finish
     }))
   }
@@ -5574,7 +5591,7 @@ let ng = class {
   paintPixels(t) {
     for (const [s, a] of Object.entries(t)) this.paintPixel({
       id: s,
-      color: tt(a)
+      color: nt(a)
     });
     this.updateTexture()
   }
@@ -5583,7 +5600,7 @@ let ng = class {
       t[s].forEach(i => {
         s !== "#171F2A" && this.paintPixel({
           id: i,
-          color: tt(s)
+          color: nt(s)
         })
       })
     }), this.updateTexture()
@@ -5614,7 +5631,7 @@ let ng = class {
           r: p,
           g: A,
           b: h
-        } = tt(i[o]);
+        } = nt(i[o]);
       this.imageData[d] = p, this.imageData[d + 1] = A, this.imageData[d + 2] = h, this.imageData[d + 3] = 255
     }
     this.updateTexture()
@@ -5689,11 +5706,11 @@ let ng = class {
   pixanosRepaint(t, s, a, i) {
     const o = h => {
         let g = 1664525,
-          y = 1013904223,
-          v = 4294967296,
-          f = h >>> 0;
+          w = 1013904223,
+          x = 4294967296,
+          v = h >>> 0;
         return function() {
-          return f = (g * f + y) % v, f / v
+          return v = (g * v + w) % x, v / x
         }
       },
       r = s * s,
@@ -5705,12 +5722,12 @@ let ng = class {
       const g = Math.floor(d() * h) + 1;
       g <= c && (p[g - 1] = h)
     }
-    const A = tt(i);
+    const A = nt(i);
     for (let h = 0; h < p.length; h++) {
       const g = p[h];
       if (h < 20) {
-        const y = $s(g);
-        console.log(`i: ${h}, id: ${g}, x: ${y.x}, y: ${y.y}`)
+        const w = $s(g);
+        console.log(`i: ${h}, id: ${g}, x: ${w.x}, y: ${w.y}`)
       }
       this.paintPixel({
         id: g,
@@ -5854,10 +5871,10 @@ let cg = class {
       })
     }
   },
-  j, ki = !1;
+  C, ki = !1;
 
 function lg() {
-  j = new cg({
+  C = new cg({
     readyCallback: async n => {
       var s, a, i;
       const t = n.getState();
@@ -5890,7 +5907,7 @@ const dg = u.memo(() => (u.useEffect(() => {
     },
     children: n
   }),
-  st = ({
+  at = ({
     active: n,
     setActive: t,
     children: s
@@ -5912,17 +5929,17 @@ const dg = u.memo(() => (u.useEffect(() => {
   Ag = () => {
     const n = _(),
       t = l(a => a.tournament.activeTab),
-      s = l(ot);
+      s = l(Ye);
     return hg(s), l(a => a.tournament.myTemplate), e.jsxs(pa, {
-      children: [e.jsx(st, {
+      children: [e.jsx(at, {
         active: t === De.result,
         setActive: () => n(Ia(De.result)),
         children: "My results"
-      }), e.jsx(st, {
+      }), e.jsx(at, {
         active: t === De.pixanos,
         setActive: () => n(Ia(De.pixanos)),
         children: "Pixanos'"
-      }), e.jsx(st, {
+      }), e.jsx(at, {
         active: t === De.finalRating,
         setActive: () => n(Ia(De.finalRating)),
         children: "Rating"
@@ -5939,7 +5956,7 @@ class Fe {
     const i = {
       "Content-Type": "application/octet-stream"
     };
-    return s && s !== "" && (i.posX = s), a && a !== "" && (i.posY = a), w.post("/image/template/upload", t, {
+    return s && s !== "" && (i.posX = s), a && a !== "" && (i.posY = a), b.post("/image/template/upload", t, {
       headers: i
     })
   }
@@ -5948,7 +5965,7 @@ class Fe {
     posX: s,
     posY: a
   }) {
-    return w.post("/tournament/template/upload", t, {
+    return b.post("/tournament/template/upload", t, {
       headers: {
         "Content-Type": "application/octet-stream",
         posX: s,
@@ -5957,66 +5974,66 @@ class Fe {
     })
   }
   static async getReferredTemplate() {
-    return w.get("/image/template/my")
+    return b.get("/image/template/my")
   }
   static async getTemplateById({
     id: t
   }) {
-    return fn !== null && (fn.abort(), fn = null), fn = new AbortController, w.get(`/image/template/${t}`, {
+    return fn !== null && (fn.abort(), fn = null), fn = new AbortController, b.get(`/image/template/${t}`, {
       signal: fn.signal
     })
   }
   static async getTournamentTemplateById({
     id: t
   }) {
-    return w.get(`/tournament/template/${t}`)
+    return b.get(`/tournament/template/${t}`)
   }
   static async getSelectedTemplate() {
-    return w.get("/tournament/template/subscribe/my")
+    return b.get("/tournament/template/subscribe/my")
   }
   static async getTemplatesList({
     limit: t,
     offset: s
   }) {
-    return w.get(`/image/template/list?limit=${t}&offset=${s}`)
+    return b.get(`/image/template/list?limit=${t}&offset=${s}`)
   }
   static async getApprovedTemplatesList({
     limit: t,
     offset: s
   }) {
-    return w.get(`/tournament/template/list?limit=${t}&offset=${s}`)
+    return b.get(`/tournament/template/list?limit=${t}&offset=${s}`)
   }
   static async getRandomTemplates() {
-    return w.get("/tournament/template/list/random?limit=16")
+    return b.get("/tournament/template/list/random?limit=16")
   }
   static async subscribeToTemplate({
     id: t
   }) {
-    return w.put(`/image/template/subscribe/${t}`)
+    return b.put(`/image/template/subscribe/${t}`)
   }
   static async subscribeToTournamentTemplate({
     id: t
   }) {
-    return w.put(`/tournament/template/subscribe/${t}`)
+    return b.put(`/tournament/template/subscribe/${t}`)
   }
   static async getAvailableSizes({
     userId: t
   }) {
-    return w.get(`/image/template/sizes/${t}`)
+    return b.get(`/image/template/sizes/${t}`)
   }
 }
 class mi {
   static async getPeriods() {
-    return w.get("/tournament/periods")
+    return b.get("/tournament/periods")
   }
   static async getResults() {
-    return w.get("/tournament/user/results")
+    return b.get("/tournament/user/results")
   }
   static async getFinalResults({
     limit: t,
     offset: s
   }) {
-    return w.get(`/tournament/templates/leaderboard?limit=${t}&offset=${s}`)
+    return b.get(`/tournament/templates/leaderboard?limit=${t}&offset=${s}`)
   }
 }
 const Ps = D("tournament/getPeriods", async () => (await mi.getPeriods()).data),
@@ -6235,9 +6252,9 @@ window.getComputedStyle(document.body).getPropertyValue("--canvas-bg-color");
 const wg = {
   1: 1
 };
-let Ze;
+let $e;
 const bg = n => {
-  Ze = n
+  $e = n
 };
 let La = 0;
 setInterval(() => {
@@ -6269,16 +6286,16 @@ const jg = (n, t, s) => {
         }),
         c = new Image;
       c.src = URL.createObjectURL(r), c.onload = () => {
-        j.mainImage.loadFromCentrifuge(c).then(() => {
-          const p = Ze.getState().main.startParams.coords;
-          p && (j.viewport.viewport.animate({
+        C.mainImage.loadFromCentrifuge(c).then(() => {
+          const p = $e.getState().main.startParams.coords;
+          p && (C.viewport.viewport.animate({
             scale: 60,
             time: 400,
             position: {
               x: p.x + .5,
               y: p.y + .5
             }
-          }), j.mainImage.selectedPixel.draw(p), Ze.dispatch(on(p)))
+          }), C.mainImage.selectedPixel.draw(p), $e.dispatch(on(p)))
         })
       }
     }), He.on("disconnected", function(o) {
@@ -6289,15 +6306,15 @@ const jg = (n, t, s) => {
       if (o.channel === "event:message") {
         JSON.parse(new TextDecoder().decode(o.data)).forEach(d => {
           const p = JSON.parse(d.data);
-          if (d.type === xa.pixanos && Ze.dispatch(Sg(p)), p.user.userId === t || !Rn) return;
-          const h = Ze.getState().canvas.animations;
+          if (d.type === xa.pixanos && $e.dispatch(Sg(p)), p.user.userId === t || !Rn) return;
+          const h = $e.getState().canvas.animations;
           if (d.type === xa.bomb) {
             const g = $s(p.info.pixelId);
-            h && j.mainImage.bomb.boomWithDebounce(g)
+            h && C.mainImage.bomb.boomWithDebounce(g)
           }
           if (d.type === xa.pumpkin) {
             const g = $s(p.info.pixelId);
-            j.mainImage.pumpkin.boomWithDebounce(g, h)
+            C.mainImage.pumpkin.boomWithDebounce(g, h)
           }
         });
         return
@@ -6309,23 +6326,23 @@ const jg = (n, t, s) => {
           const p = JSON.parse(new TextDecoder().decode(d));
           if (o.channel === "pixel:message") Object.values(p).forEach(A => {
             La += A.length
-          }), j.mainImage.paintPixelsFromCentrifuge(p);
+          }), C.mainImage.paintPixelsFromCentrifuge(p);
           else if (o.channel === `personal:user#${t}`) {
             const A = JSON.parse(new TextDecoder().decode(d));
-            if (A.type === wg[1] && Ze.getState().daily.list.entities[A.good_id]) {
-              const h = Ze.getState().daily.list.entities[A.good_id],
+            if (A.type === wg[1] && $e.getState().daily.list.entities[A.good_id]) {
+              const h = $e.getState().daily.list.entities[A.good_id],
                 g = h.name,
-                y = h.prices[0].quantity;
-              Ze.dispatch(k({
+                w = h.prices[0].quantity;
+              $e.dispatch(k({
                 id: performance.now(),
-                text: `Transaction for daily ${h.id} completed! Got ${g} x${y}. Refresh the app.`,
+                text: `Transaction for daily ${h.id} completed! Got ${g} x${w}. Refresh the app.`,
                 icon: ""
               }))
             }
           } else if (o.channel === "event:tournament") {
             const A = JSON.parse(new TextDecoder().decode(d));
             A.type && A.type === 1 && A.templates.forEach(g => {
-              Ze.dispatch(sr(g))
+              $e.dispatch(sr(g))
             })
           } else {
             if (o.channel === "event:mini-game") return;
@@ -6503,7 +6520,7 @@ const jg = (n, t, s) => {
     showNoChargesPopup: !1,
     lastShowChargesPopupTs: Date.now() - Nc,
     showBoostDetailsPopup: !1,
-    activeBoostDetails: et.paintReward,
+    activeBoostDetails: tt.paintReward,
     referrerSquadId: null,
     showMiniPopup: !1,
     showPixanosEvent: !1,
@@ -6817,7 +6834,7 @@ const Dg = ({
       children: e.jsxs("div", {
         className: Q.join_squad_text,
         onPointerUp: () => {
-          fe(`https://t.me/${at}`)
+          fe(`https://t.me/${it}`)
         },
         children: ["Join the squad ", e.jsx(B, {
           children: ""
@@ -7061,17 +7078,17 @@ const Fg = dr.reducer,
       clearInterval(n.current)
     }, []);
     const s = () => {
-      performance.now() - t.current < 200 && j.viewport.zoomIn(), clearInterval(n.current)
+      performance.now() - t.current < 200 && C.viewport.zoomIn(), clearInterval(n.current)
     };
     return e.jsx("button", {
       className: I.button,
       onPointerDown: () => {
         t.current = performance.now(), n.current = setInterval(() => {
-          j.viewport.zoomIn()
+          C.viewport.zoomIn()
         }, 90)
       },
       onPointerUp: () => {
-        performance.now() - t.current < 200 && j.viewport.zoomIn(), clearInterval(n.current)
+        performance.now() - t.current < 200 && C.viewport.zoomIn(), clearInterval(n.current)
       },
       onPointerLeave: s,
       onPointerOut: s,
@@ -7089,7 +7106,7 @@ const Fg = dr.reducer,
     const n = u.useRef(null),
       t = u.useRef(null),
       s = () => {
-        performance.now() - t.current < 200 && j.viewport.zoomOut(), clearInterval(n.current)
+        performance.now() - t.current < 200 && C.viewport.zoomOut(), clearInterval(n.current)
       };
     return u.useEffect(() => () => {
       clearInterval(n.current)
@@ -7099,11 +7116,11 @@ const Fg = dr.reducer,
       className: I.button,
       onPointerDown: () => {
         t.current = performance.now(), n.current = setInterval(() => {
-          j.viewport.zoomOut()
+          C.viewport.zoomOut()
         }, 90)
       },
       onPointerUp: () => {
-        performance.now() - t.current < 200 && j.viewport.zoomOut(), clearInterval(n.current)
+        performance.now() - t.current < 200 && C.viewport.zoomOut(), clearInterval(n.current)
       },
       onPointerLeave: s,
       onPointerOut: s,
@@ -7294,7 +7311,7 @@ const Fg = dr.reducer,
             children: e.jsxs("button", {
               className: Te.button,
               onPointerUp: () => {
-                s !== null && fe(`https://t.me/${at}?startapp=${btoa(`id=${s.id}`)}`)
+                s !== null && fe(`https://t.me/${it}?startapp=${btoa(`id=${s.id}`)}`)
               },
               children: [s !== null && `Join ${s.name} squad`, s === null && "Loading squad info..."]
             })
@@ -7341,7 +7358,7 @@ const Fg = dr.reducer,
       className: i.join(" "),
       onPointerUp: () => {
         if (s || a) return;
-        const o = j.mainImage.getPixelColor({
+        const o = C.mainImage.getPixelColor({
           coords: t
         });
         n(si(o))
@@ -7634,7 +7651,7 @@ const Fg = dr.reducer,
         className: ae.dot,
         children: "•"
       }), e.jsx(Rt, {
-        address: `${at}?startapp=${btoa(`id=${n.owner.squad.id}`)}`,
+        address: `${it}?startapp=${btoa(`id=${n.owner.squad.id}`)}`,
         display: n.owner.squad.slug,
         limit: 18
       })]
@@ -7986,13 +8003,13 @@ const Fg = dr.reducer,
     initialState: Mf,
     reducers: {
       setActiveTemplate: (n, t) => {
-        n.active = t.payload, j.mainImage.worldTemplate.hide(), j.mainImage.worldTemplate.show(t.payload)
+        n.active = t.payload, C.mainImage.worldTemplate.hide(), C.mainImage.worldTemplate.show(t.payload)
       },
       setActiveTemplateTab: (n, t) => {
         n.activeTab = t.payload
       },
       hideTemplates: n => {
-        n.active = null, j.mainImage.worldTemplate.hide()
+        n.active = null, C.mainImage.worldTemplate.hide()
       },
       setTemplateOpacity: (n, t) => {
         n.opacity = t.payload
@@ -8030,7 +8047,7 @@ const Fg = dr.reducer,
           ...s.payload,
           type: Se.world
         };
-        t.worldTemplate = a, j.mainImage.worldTemplate.add(a)
+        t.worldTemplate = a, C.mainImage.worldTemplate.add(a)
       }).addCase(Os.rejected, (t, s) => {}).addCase(Rs.pending, t => {
         t.listStatus = m.pending
       }).addCase(Rs.fulfilled, (t, s) => {
@@ -8111,7 +8128,7 @@ const Fg = dr.reducer,
         min: zi,
         max: qi,
         onChange: o => {
-          t(Qf(o)), j.mainImage.worldTemplate.setOpacity(Number(o[0])), j.mainImage.tournamentTemplates.setOpacity(Number(o[0]))
+          t(Qf(o)), C.mainImage.worldTemplate.setOpacity(Number(o[0])), C.mainImage.tournamentTemplates.setOpacity(Number(o[0]))
         },
         renderTrack: ({
           props: o,
@@ -8236,7 +8253,7 @@ const Fg = dr.reducer,
   hx = "_positive_color_13ybj_78",
   Ax = "_negative_color_13ybj_85",
   gx = "_last_text_13ybj_92",
-  x = {
+  f = {
     page_title: nx,
     container: sx,
     item: ax,
@@ -8260,34 +8277,34 @@ const Fg = dr.reducer,
       s = $s(n.details.pixel),
       a = _();
     return e.jsxs("div", {
-      className: `${x.item} ${x.active}`,
+      className: `${f.item} ${f.active}`,
       onPointerUp: () => {
-        t.push("/"), j.viewport.viewport.animate({
+        t.push("/"), C.viewport.viewport.animate({
           scale: 25,
           time: 400,
           position: s
-        }), j.mainImage.selectedPixel.draw(s), a(on(s)), t.push("/")
+        }), C.mainImage.selectedPixel.draw(s), a(on(s)), t.push("/")
       },
       children: [e.jsxs("div", {
-        className: x.info_container,
+        className: f.info_container,
         children: [e.jsxs("div", {
           children: [e.jsx("span", {
-            className: x.title_text,
+            className: f.title_text,
             children: "Paint Pixel"
           }), e.jsx("span", {
-            className: x.hint_text,
+            className: f.hint_text,
             children: `${s.x}, ${s.y}`
           })]
         }), e.jsx("div", {
-          className: x.date_text,
+          className: f.date_text,
           children: e.jsx("span", {
             children: Qe(new Date(n.dateTime))
           })
         })]
       }), e.jsx("div", {
-        className: x.value_container,
+        className: f.value_container,
         children: e.jsxs("span", {
-          className: `${x.value_text} ${x.positive_color}`,
+          className: `${f.value_text} ${f.positive_color}`,
           children: ["+", new Intl.NumberFormat("fr", {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
@@ -8306,39 +8323,39 @@ const Fg = dr.reducer,
       },
       a = _();
     return e.jsxs("div", {
-      className: `${x.item} ${x.active}`,
+      className: `${f.item} ${f.active}`,
       onPointerUp: () => {
-        t.push("/"), j.viewport.viewport.animate({
+        t.push("/"), C.viewport.viewport.animate({
           scale: 25,
           time: 400,
           position: s
-        }), j.mainImage.selectedPixel.draw(s), a(on(s)), t.push("/")
+        }), C.mainImage.selectedPixel.draw(s), a(on(s)), t.push("/")
       },
       children: [e.jsxs("div", {
-        className: x.info_container,
+        className: f.info_container,
         children: [e.jsxs("div", {
           children: [e.jsx("span", {
-            className: x.title_text,
+            className: f.title_text,
             children: "Pixel Sale"
           }), e.jsx("span", {
-            className: x.hint_text,
+            className: f.hint_text,
             children: `${s.x}, ${s.y}`
           }), e.jsx("span", {
-            className: x.dot,
+            className: f.dot,
             children: "•"
           }), e.jsx(Rt, {
             address: n.details.buyer
           })]
         }), e.jsx("div", {
-          className: x.date_text,
+          className: f.date_text,
           children: e.jsx("span", {
             children: Qe(new Date(n.dateTime))
           })
         })]
       }), e.jsx("div", {
-        className: x.value_container,
+        className: f.value_container,
         children: e.jsxs("span", {
-          className: `${x.value_text} ${x.positive_color}`,
+          className: `${f.value_text} ${f.positive_color}`,
           children: ["+", new Intl.NumberFormat("fr", {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
@@ -8350,24 +8367,24 @@ const Fg = dr.reducer,
   xx = ({
     item: n
   }) => e.jsxs("div", {
-    className: x.item,
+    className: f.item,
     children: [e.jsxs("div", {
-      className: x.info_container,
+      className: f.info_container,
       children: [e.jsx("div", {
         children: e.jsx("span", {
-          className: x.title_text,
+          className: f.title_text,
           children: "Claim"
         })
       }), e.jsx("div", {
-        className: x.date_text,
+        className: f.date_text,
         children: e.jsx("span", {
           children: Qe(new Date(n.dateTime))
         })
       })]
     }), e.jsx("div", {
-      className: x.value_container,
+      className: f.value_container,
       children: e.jsxs("span", {
-        className: `${x.value_text} ${x.positive_color}`,
+        className: `${f.value_text} ${f.positive_color}`,
         children: ["+", n.balanceChange.toFixed(2)]
       })
     })]
@@ -8375,27 +8392,27 @@ const Fg = dr.reducer,
   vx = ({
     item: n
   }) => e.jsxs("div", {
-    className: x.item,
+    className: f.item,
     children: [e.jsxs("div", {
-      className: x.info_container,
+      className: f.info_container,
       children: [e.jsxs("div", {
         children: [e.jsx("span", {
-          className: x.title_text,
+          className: f.title_text,
           children: n.details.type
         }), e.jsx("span", {
-          className: x.hint_text,
+          className: f.hint_text,
           children: "Boost"
         })]
       }), e.jsx("div", {
-        className: x.date_text,
+        className: f.date_text,
         children: e.jsx("span", {
           children: Qe(new Date(n.dateTime))
         })
       })]
     }), e.jsx("div", {
-      className: x.value_container,
+      className: f.value_container,
       children: e.jsx("span", {
-        className: `${x.value_text} ${x.negative_color}`,
+        className: `${f.value_text} ${f.negative_color}`,
         children: n.balanceChange
       })
     })]
@@ -8403,53 +8420,53 @@ const Fg = dr.reducer,
   yx = ({
     item: n
   }) => e.jsxs("div", {
-    className: x.item,
+    className: f.item,
     children: [e.jsxs("div", {
-      className: x.info_container,
+      className: f.info_container,
       children: [e.jsxs("div", {
         children: [e.jsx("span", {
-          className: `${x.title_text} ${x.capitalize}`,
+          className: `${f.title_text} ${f.capitalize}`,
           children: `${n.details.from} > ${n.details.to}`
         }), e.jsx("span", {
-          className: x.hint_text,
+          className: f.hint_text,
           children: "League"
         })]
       }), e.jsx("div", {
-        className: x.date_text,
+        className: f.date_text,
         children: e.jsx("span", {
           children: Qe(new Date(n.dateTime))
         })
       })]
     }), e.jsx("div", {
-      className: x.value_container
+      className: f.value_container
     })]
   }),
   wx = ({
     item: n
   }) => e.jsxs("div", {
-    className: x.item,
+    className: f.item,
     children: [e.jsxs("div", {
-      className: x.info_container,
+      className: f.info_container,
       children: [e.jsxs("div", {
         children: [e.jsx("span", {
-          className: x.title_text,
+          className: f.title_text,
           children: "Referral"
         }), e.jsx("span", {
-          className: x.dot,
+          className: f.dot,
           children: "•"
         }), e.jsx(Rt, {
           address: n.details.name
         })]
       }), e.jsx("div", {
-        className: x.date_text,
+        className: f.date_text,
         children: e.jsx("span", {
           children: Qe(new Date(n.dateTime))
         })
       })]
     }), e.jsx("div", {
-      className: x.value_container,
+      className: f.value_container,
       children: e.jsxs("span", {
-        className: `${x.value_text} ${x.positive_color}`,
+        className: `${f.value_text} ${f.positive_color}`,
         children: ["+", n.balanceChange]
       })
     })]
@@ -8457,27 +8474,27 @@ const Fg = dr.reducer,
   bx = ({
     item: n
   }) => e.jsxs("div", {
-    className: x.item,
+    className: f.item,
     children: [e.jsxs("div", {
-      className: x.info_container,
+      className: f.info_container,
       children: [e.jsxs("div", {
         children: [e.jsx("span", {
-          className: x.title_text,
+          className: f.title_text,
           children: `${n.details.type} ${n.details.round_id?"for round №"+n.details.round_id:""}`
         }), e.jsx("span", {
-          className: x.hint_text,
+          className: f.hint_text,
           children: "Special"
         })]
       }), e.jsx("div", {
-        className: x.date_text,
+        className: f.date_text,
         children: e.jsx("span", {
           children: Qe(new Date(n.dateTime))
         })
       })]
     }), e.jsx("div", {
-      className: x.value_container,
+      className: f.value_container,
       children: e.jsxs("span", {
-        className: `${x.value_text} ${n.balanceChange>=0?x.positive_color:x.negative_color}`,
+        className: `${f.value_text} ${n.balanceChange>=0?f.positive_color:f.negative_color}`,
         children: [n.balanceChange >= 0 ? "+" : "", n.balanceChange]
       })
     })]
@@ -8485,25 +8502,25 @@ const Fg = dr.reducer,
   jx = ({
     item: n
   }) => e.jsxs("div", {
-    className: x.item,
+    className: f.item,
     children: [e.jsxs("div", {
-      className: x.info_container,
+      className: f.info_container,
       children: [e.jsxs("div", {
         children: [e.jsx("span", {
-          className: `${x.title_text} ${x.capitalize}`,
+          className: `${f.title_text} ${f.capitalize}`,
           children: `${n.details.type}`
         }), e.jsxs("span", {
-          className: x.hint_text,
+          className: f.hint_text,
           children: [n.details.quantity, " pc."]
         })]
       }), e.jsx("div", {
-        className: x.date_text,
+        className: f.date_text,
         children: e.jsx("span", {
           children: Qe(new Date(n.dateTime))
         })
       })]
     }), e.jsxs("div", {
-      className: x.value_container,
+      className: f.value_container,
       children: ["-", n.details.price, " ", e.jsx(Fn, {
         fontSize: 14
       })]
@@ -8512,27 +8529,27 @@ const Fg = dr.reducer,
   Cx = ({
     item: n
   }) => e.jsxs("div", {
-    className: x.item,
+    className: f.item,
     children: [e.jsxs("div", {
-      className: x.info_container,
+      className: f.info_container,
       children: [e.jsxs("div", {
         children: [e.jsx("span", {
-          className: x.title_text,
+          className: f.title_text,
           children: n.details.type
         }), e.jsx("span", {
-          className: x.hint_text,
+          className: f.hint_text,
           children: "Task"
         })]
       }), e.jsx("div", {
-        className: x.date_text,
+        className: f.date_text,
         children: e.jsx("span", {
           children: Qe(new Date(n.dateTime))
         })
       })]
     }), e.jsx("div", {
-      className: x.value_container,
+      className: f.value_container,
       children: e.jsxs("span", {
-        className: `${x.value_text} ${x.positive_color}`,
+        className: `${f.value_text} ${f.positive_color}`,
         children: ["+", n.balanceChange]
       })
     })]
@@ -8540,27 +8557,27 @@ const Fg = dr.reducer,
   Px = ({
     item: n
   }) => e.jsxs("div", {
-    className: x.item,
+    className: f.item,
     children: [e.jsxs("div", {
-      className: x.info_container,
+      className: f.info_container,
       children: [e.jsxs("div", {
         children: [e.jsx("span", {
-          className: x.title_text,
+          className: f.title_text,
           children: "Ref reward"
         }), e.jsx("span", {
-          className: x.hint_text,
+          className: f.hint_text,
           children: n.details.type
         })]
       }), e.jsx("div", {
-        className: x.date_text,
+        className: f.date_text,
         children: e.jsx("span", {
           children: Qe(new Date(n.dateTime))
         })
       })]
     }), e.jsx("div", {
-      className: x.value_container,
+      className: f.value_container,
       children: e.jsxs("span", {
-        className: `${x.value_text} ${x.positive_color}`,
+        className: `${f.value_text} ${f.positive_color}`,
         children: ["+", n.balanceChange.toFixed(2)]
       })
     })]
@@ -8632,11 +8649,11 @@ const fi = {
         limit: 50
       }))
     }, []), e.jsxs("div", {
-      className: x.container,
+      className: f.container,
       children: [t.map((a, i) => e.jsx(Nx, {
         item: a
       }, i)), s === m.fulfilled && t.length >= 50 && e.jsx("div", {
-        className: x.last_text,
+        className: f.last_text,
         children: e.jsx("span", {
           children: "Last 50 events"
         })
@@ -8645,7 +8662,7 @@ const fi = {
   },
   Dx = () => e.jsxs(W, {
     children: [e.jsx("h1", {
-      className: x.page_title,
+      className: f.page_title,
       children: "History"
     }), e.jsx(Tx, {})]
   }),
@@ -9228,17 +9245,17 @@ const fi = {
       [c, d] = u.useState(0),
       [p, A] = u.useState(0),
       [h, g] = u.useState(0),
-      [y, v] = u.useState([]);
+      [w, x] = u.useState([]);
     return u.useEffect(() => {
       try {
-        O.getStats().then(f => {
-          const N = f.data;
-          s(N.totalPlayers), i(N.totalRepaints)
-        }), O.getMoreStats().then(f => {
-          const N = f.data;
-          r(N.premium_users), d(N.active_users), A(N.daily_users), g(N.daily_repaints), v(Object.keys(N.top_countries).map(C => ({
-            key: C,
-            value: N.top_countries[C]
+        O.getStats().then(v => {
+          const y = v.data;
+          s(y.totalPlayers), i(y.totalRepaints)
+        }), O.getMoreStats().then(v => {
+          const y = v.data;
+          r(y.premium_users), d(y.active_users), A(y.daily_users), g(y.daily_repaints), x(Object.keys(y.top_countries).map(P => ({
+            key: P,
+            value: y.top_countries[P]
           })))
         })
       } catch {}
@@ -9364,8 +9381,8 @@ const fi = {
       const p = setInterval(() => {
         const h = Date.now() - r,
           g = i - h,
-          y = Math.round(g / 1e3);
-        d(Iy(y))
+          w = Math.round(g / 1e3);
+        d(Iy(w))
       }, 500);
       return () => {
         clearInterval(p)
@@ -9583,41 +9600,41 @@ const fi = {
     const t = _(),
       s = "dailyTransactionInfo",
       a = l(ap),
-      i = l(v => v.daily.getDailyListFetchStatus),
-      o = l(v => v.daily.getFirstDailyFetchStatus),
+      i = l(x => x.daily.getDailyListFetchStatus),
+      o = l(x => x.daily.getFirstDailyFetchStatus),
       r = i === m.fulfilled,
       c = cn(),
       [d, p] = ln(),
       [A, h] = u.useState(!1),
-      g = l(it);
+      g = l(ot);
     u.useEffect(() => {
       if (!a || !r) return;
-      const v = localStorage.getItem(s);
-      if (v) {
-        const f = JSON.parse(v);
-        f.dailyId === a.id && Date.now() - f.ts < 10 * 60 * 1e3 ? h(!0) : h(!1), Date.now() - f.ts >= 10 * 60 * 1e3 && localStorage.removeItem(s)
+      const x = localStorage.getItem(s);
+      if (x) {
+        const v = JSON.parse(x);
+        v.dailyId === a.id && Date.now() - v.ts < 10 * 60 * 1e3 ? h(!0) : h(!1), Date.now() - v.ts >= 10 * 60 * 1e3 && localStorage.removeItem(s)
       }
     }, [a]);
-    const y = async () => {
+    const w = async () => {
       try {
-        const v = a.prices[0],
-          f = await O.startShopTransaction({
+        const x = a.prices[0],
+          v = await O.startShopTransaction({
             buyerWallet: c,
             currencyId: 2,
             daily: !0,
-            quantity: v.quantity,
+            quantity: x.quantity,
             goodId: a.id
           }),
-          N = we.beginCell().storeUint(0, 32).storeStringTail(f.data.txMemCode).endCell(),
-          C = {
+          y = we.beginCell().storeUint(0, 32).storeStringTail(v.data.txMemCode).endCell(),
+          P = {
             validUntil: Math.floor(Date.now() / 1e3) + 600,
             messages: [{
               address: Qa,
-              amount: String(we.toNano(f.data.strAmount)),
-              payload: N.toBoc().toString("base64")
+              amount: String(we.toNano(v.data.strAmount)),
+              payload: y.toBoc().toString("base64")
             }]
           },
-          ge = await d.sendTransaction(C);
+          ge = await d.sendTransaction(P);
         localStorage.setItem(s, JSON.stringify({
           ts: Date.now(),
           dailyId: a.id
@@ -9626,17 +9643,17 @@ const fi = {
           text: "Success! Wait 3-5 min and reload the app.",
           icon: ""
         })), h(!0)
-      } catch (v) {
-        console.warn(v), t(k({
+      } catch (x) {
+        console.warn(x), t(k({
           id: performance.now(),
           text: "Error! Wait 5 min before starting a new transaction."
         }))
       }
     };
     if (r) {
-      const v = a.prices[0];
-      let f = `Claim for ${v.price} TON`;
-      return n && (f = `Claim in ${Uc(n)}`), A && (f = "Pending transaction..."), e.jsxs("div", {
+      const x = a.prices[0];
+      let v = `Claim for ${x.price} TON`;
+      return n && (v = `Claim in ${Uc(n)}`), A && (v = "Pending transaction..."), e.jsxs("div", {
         className: R.content,
         children: [e.jsx("div", {
           className: R.description_container,
@@ -9656,13 +9673,13 @@ const fi = {
           className: R.title_container,
           children: e.jsx("div", {
             className: R.title,
-            children: `${a.name} x${v.quantity}`
+            children: `${a.name} x${x.quantity}`
           })
         }), e.jsx("div", {
           className: R.how_container,
           children: e.jsx(pn, {
-            onPointerUp: N => {
-              N.stopPropagation(), t(Mo(!0))
+            onPointerUp: y => {
+              y.stopPropagation(), t(Mo(!0))
             },
             children: "How it works"
           })
@@ -9675,9 +9692,9 @@ const fi = {
             disabled: o === m.pending || A,
             className: R.claim_button,
             onPointerUp: async () => {
-              n || A || y()
+              n || A || w()
             },
-            children: f
+            children: v
           }), c === "" && g === Ae && e.jsx("button", {
             className: R.claim_button,
             onPointerUp: async () => {
@@ -9833,8 +9850,8 @@ const fi = {
                 h = [R.reward_item_amount],
                 g = [R.reward_item_title];
               r.id === s && (A.push(R.reward_item_active), h.push(R.reward_item_amount_active)), d && g.push(R.reward_item_title_premium), d && !r.active && h.push(R.reward_item_amount_premium);
-              let y = dw;
-              return c >= 8 && c <= 15 && (y = uw), c >= 16 && c <= 23 && (y = pw), c >= 24 && c <= 31 && (y = mw), e.jsxs("div", {
+              let w = dw;
+              return c >= 8 && c <= 15 && (w = uw), c >= 16 && c <= 23 && (w = pw), c >= 24 && c <= 31 && (w = mw), e.jsxs("div", {
                 className: A.join(" "),
                 onPointerUp: () => {
                   n(k({
@@ -9849,7 +9866,7 @@ const fi = {
                     className: g.join(" "),
                     children: ["Day ", c + 1]
                   }), e.jsx("img", {
-                    src: y,
+                    src: w,
                     style: {
                       position: "absolute",
                       bottom: -12
@@ -9973,7 +9990,7 @@ const fi = {
     setTemplateSize: t
   }) => {
     const s = _(),
-      a = l(ot),
+      a = l(Ye),
       i = a.friends || 64,
       [o] = u.useState([16, 32, 64, 128]);
     return e.jsxs("div", {
@@ -10158,12 +10175,12 @@ const fi = {
             rootMargin: "0px",
             threshold: 1
           },
-          h = (g, y) => {
-            g.forEach(v => {
-              v.intersectionRatio >= 1 && (n(ft.getList({
+          h = (g, w) => {
+            g.forEach(x => {
+              x.intersectionRatio >= 1 && (n(ft.getList({
                 offset: i,
                 limit: o
-              })), y.unobserve(t.current))
+              })), w.unobserve(t.current))
             })
           };
         p = new IntersectionObserver(h, A), p.observe(t.current)
@@ -10226,11 +10243,11 @@ const fi = {
     const n = _(),
       t = l(s => s.template.activeTab);
     return e.jsxs(pa, {
-      children: [e.jsx(st, {
+      children: [e.jsx(at, {
         active: t === "my",
         setActive: () => n(Qi("my")),
         children: "My template"
-      }), e.jsx(st, {
+      }), e.jsx(at, {
         active: t === "catalog",
         setActive: () => n(Qi("catalog")),
         children: "Catalog"
@@ -10363,7 +10380,7 @@ const fi = {
                   url: `${p.payload.url}?time=${Date.now()}`,
                   type: Se.referred
                 };
-              n(zf(A)), j.mainImage.worldTemplate.deleteTemplate(o.id), j.mainImage.worldTemplate.add(A), n(_i())
+              n(zf(A)), C.mainImage.worldTemplate.deleteTemplate(o.id), C.mainImage.worldTemplate.add(A), n(_i())
             } else await n(k({
               id: performance.now(),
               text: "Something wrong"
@@ -10583,7 +10600,7 @@ const fi = {
     const [t, s] = u.useState({
       ready: !1,
       data: null
-    }), a = N1(), i = l(ot);
+    }), a = N1(), i = l(Ye);
     return u.useEffect(() => {
       t && s({
         ready: !0,
@@ -10720,15 +10737,15 @@ const fi = {
     setActive: t
   }) => e.jsxs(pa, {
     style: {},
-    children: [e.jsx(st, {
+    children: [e.jsx(at, {
       active: n === "info",
       setActive: () => t("info"),
       children: "Info"
-    }), e.jsx(st, {
+    }), e.jsx(at, {
       active: n === "achievements",
       setActive: () => t("achievements"),
       children: "Achievements"
-    }), e.jsx(st, {
+    }), e.jsx(at, {
       active: n === "inventory",
       setActive: () => t("inventory"),
       children: "Inventory"
@@ -11000,7 +11017,7 @@ const fi = {
   },
   lj = () => {
     const n = _(),
-      t = l(ot);
+      t = l(Ye);
     return u.useEffect(() => (t && t.id && n(_A.getListByUserId({
       userId: t.id
     })), () => {
@@ -11115,7 +11132,7 @@ const fi = {
     return t ? ((a = n == null ? void 0 : n.squad) == null ? void 0 : a.slug) && n.squad.slug !== null ? e.jsx("div", {
       className: E.text_container,
       children: e.jsx(Rt, {
-        address: `${at}?startapp=${btoa(`id=${n.squad.id}`)}`,
+        address: `${it}?startapp=${btoa(`id=${n.squad.id}`)}`,
         display: n.squad.slug,
         limit: 18
       })
@@ -11143,7 +11160,7 @@ const fi = {
     return t ? s !== null && s.squad.id !== null && s.squad.id === n.squad.id ? e.jsxs("div", {
       className: E.your_squad_button,
       onPointerUp: () => {
-        fe(`https://t.me/${at}?startapp=${btoa(`id=${n.squad.id}`)}`)
+        fe(`https://t.me/${it}?startapp=${btoa(`id=${n.squad.id}`)}`)
       },
       children: [e.jsx("span", {
         className: E.gray,
@@ -11154,7 +11171,7 @@ const fi = {
       })]
     }) : e.jsx("button", {
       onPointerUp: () => {
-        fe(`https://t.me/${at}?startapp=${btoa(`id=${n.squad.id}`)}`)
+        fe(`https://t.me/${it}?startapp=${btoa(`id=${n.squad.id}`)}`)
       },
       className: E.join_squad_button,
       children: "Join squad"
@@ -11165,7 +11182,7 @@ const fi = {
     setActive: t
   }) => e.jsx(pa, {
     style: {},
-    children: e.jsx(st, {
+    children: e.jsx(at, {
       active: n === "info",
       setActive: () => t("info"),
       children: "Info"
@@ -11423,7 +11440,7 @@ const fi = {
         const h = en.deltaE(en(_t(a, i, o)), en(A));
         h < d && (d = h, c = A)
       }
-      const p = tt(c);
+      const p = nt(c);
       n.data[s] = p.r, n.data[s + 1] = p.g, n.data[s + 2] = p.b, n.data[s + 3] = 255
     }
   },
@@ -11454,16 +11471,16 @@ const fi = {
                 posX: s,
                 posY: a
               })).status === 200) {
-              r && j.mainImage.worldTemplate.deleteTemplate(r.id);
+              r && C.mainImage.worldTemplate.deleteTemplate(r.id);
               const g = await i(ft.getTemplateById({
                   id: c.id
                 })),
-                y = {
+                w = {
                   ...g.payload,
                   url: `${g.payload.url}?time=${Date.now()}`,
                   type: Se.my
                 };
-              i(qf(y)), i(_i()), await j.mainImage.worldTemplate.add(y), i(k({
+              i(qf(w)), i(_i()), await C.mainImage.worldTemplate.add(w), i(k({
                 id: performance.now(),
                 text: "Create successfully!",
                 icon: ""
@@ -11553,7 +11570,7 @@ const fi = {
     })]
   }),
   Jj = () => {
-    _(), l(ot);
+    _(), l(Ye);
     const [n, t] = u.useState(null), [s, a] = u.useState(null), [i, o] = u.useState(null), [r, c] = u.useState(16), [d, p] = u.useState({
       x: "",
       y: ""
@@ -11562,17 +11579,17 @@ const fi = {
       if (n !== null) {
         h(!0);
         const g = async () => {
-          const y = document.createElement("canvas"),
-            v = y.getContext("2d");
-          v.imageSmoothingEnabled = !1;
-          const f = n.width / n.height;
-          let N, C;
-          f > 1 ? (N = r, C = r / f) : (C = r, N = r * f);
-          const ge = (r - N) / 2,
-            pe = (r - C) / 2;
-          y.width = r, y.height = r, v.drawImage(n, ge, pe, N, C);
-          const M = v.getImageData(0, 0, r, r);
-          Vj(M), v.putImageData(M, 0, 0), a(M), o(y.toDataURL())
+          const w = document.createElement("canvas"),
+            x = w.getContext("2d");
+          x.imageSmoothingEnabled = !1;
+          const v = n.width / n.height;
+          let y, P;
+          v > 1 ? (y = r, P = r / v) : (P = r, y = r * v);
+          const ge = (r - y) / 2,
+            pe = (r - P) / 2;
+          w.width = r, w.height = r, x.drawImage(n, ge, pe, y, P);
+          const M = x.getImageData(0, 0, r, r);
+          Vj(M), x.putImageData(M, 0, 0), a(M), o(w.toDataURL())
         };
         setTimeout(() => {
           g().then(() => {
@@ -11612,14 +11629,14 @@ const fi = {
     const n = _(),
       t = l(qn),
       s = l(zn),
-      a = l(f => f.user.pixelCoins),
+      a = l(v => v.user.pixelCoins),
       i = l(li.selectAll),
-      o = l(f => f.daily.getDailyListFetchStatus),
+      o = l(v => v.daily.getDailyListFetchStatus),
       r = a >= 100,
-      c = l(f => f.user.verificatedWalletStatus),
-      d = l(f => f.mining.tasks.checkCaptcha),
-      p = l(f => f.user.hasCaptchaCode),
-      A = l(f => f.user.hasCaptchaCodeStatus);
+      c = l(v => v.user.verificatedWalletStatus),
+      d = l(v => v.mining.tasks.checkCaptcha),
+      p = l(v => v.user.hasCaptchaCode),
+      A = l(v => v.user.hasCaptchaCodeStatus);
     u.useEffect(() => {
       c === m.idle && n(Ie.getVerificatedWallet())
     }, [c]), u.useEffect(() => {
@@ -11628,27 +11645,27 @@ const fi = {
       A === m.idle && n(Ie.checkHasCaptchaCode())
     }, [A]);
     let h = 0;
-    a >= 1e5 && (h += 1), d && (h += 1), i.forEach(f => {
-      f.timestamp
+    a >= 1e5 && (h += 1), d && (h += 1), i.forEach(v => {
+      v.timestamp
     });
-    const [g, y] = u.useState(!1), v = f => {
+    const [g, w] = u.useState(!1), x = v => {
       if (p) {
-        y(f);
+        w(v);
         return
       }
-      if (y(!1), !(V(1, 100) >= 0) && !It.devServer) {
+      if (w(!1), !(V(1, 100) >= 0) && !It.devServer) {
         n(k({
           id: performance.now(),
           text: "Ton network is busy, try later"
         }));
         return
       }
-      d && (f = !1), y(f)
+      d && (v = !1), w(v)
     };
     return e.jsxs(W, {
       children: [e.jsx(zo, {
         show: g,
-        setShow: v
+        setShow: x
       }), e.jsx("div", {
         className: te.layout,
         children: e.jsxs("div", {
@@ -11699,7 +11716,7 @@ const fi = {
               })]
             }), e.jsxs("div", {
               className: te.item,
-              onPointerUp: v,
+              onPointerUp: x,
               children: [e.jsx("div", {
                 children: e.jsx("img", {
                   alt: "img",
@@ -11769,7 +11786,7 @@ const fi = {
         const h = en.deltaE(en(_t(a, i, o)), en(A));
         h < d && (d = h, c = A)
       }
-      const p = tt(c);
+      const p = nt(c);
       n.data[s] = p.r, n.data[s + 1] = p.g, n.data[s + 2] = p.b, n.data[s + 3] = 255
     }
   },
@@ -11923,7 +11940,7 @@ const fi = {
     setCoords: t
   }) => null,
   G0 = () => {
-    _(), l(ot);
+    _(), l(Ye);
     const n = l(Ai),
       t = co[n],
       [s, a] = u.useState(null),
@@ -11934,26 +11951,26 @@ const fi = {
         x: 0,
         y: 0
       }),
-      [g, y] = u.useState(!1);
+      [g, w] = u.useState(!1);
     return u.useEffect(() => {
       if (s !== null) {
-        y(!0);
-        const v = async () => {
-          const f = document.createElement("canvas"),
-            N = f.getContext("2d");
-          N.imageSmoothingEnabled = !1;
-          const C = s.width / s.height;
+        w(!0);
+        const x = async () => {
+          const v = document.createElement("canvas"),
+            y = v.getContext("2d");
+          y.imageSmoothingEnabled = !1;
+          const P = s.width / s.height;
           let ge, pe;
-          C > 1 ? (ge = d, pe = d / C) : (pe = d, ge = d * C);
+          P > 1 ? (ge = d, pe = d / P) : (pe = d, ge = d * P);
           const M = (d - ge) / 2,
             ze = (d - pe) / 2;
-          f.width = d, f.height = d, N.drawImage(s, M, ze, ge, pe);
-          const Ot = N.getImageData(0, 0, d, d);
-          A0(Ot), N.putImageData(Ot, 0, 0), o(Ot), c(f.toDataURL())
+          v.width = d, v.height = d, y.drawImage(s, M, ze, ge, pe);
+          const Ot = y.getImageData(0, 0, d, d);
+          A0(Ot), y.putImageData(Ot, 0, 0), o(Ot), c(v.toDataURL())
         };
         setTimeout(() => {
-          v().then(() => {
-            y(!1)
+          x().then(() => {
+            w(!1)
           })
         }, 100)
       }
@@ -12005,7 +12022,7 @@ const fi = {
   iC = "_template_recolors_1c93x_90",
   oC = "_template_recolors_pixel_1c93x_105",
   rC = "_template_image_1c93x_112",
-  Ye = {
+  Je = {
     template_item_container: $0,
     template_item_inner: eC,
     template_item_picked: tC,
@@ -12035,7 +12052,7 @@ const fi = {
         clearTimeout(p)
       }
     }, []), e.jsxs("div", {
-      className: Ye.template_item_container,
+      className: Je.template_item_container,
       style: {
         ...a
       },
@@ -12043,27 +12060,27 @@ const fi = {
         d.current || (n.id && n.id !== 0 && o(hi(n)), i())
       },
       children: [e.jsx("div", {
-        className: Ye.template_item_inner,
+        className: Je.template_item_inner,
         children: e.jsx("img", {
           alt: "image",
-          className: Ye.template_image,
+          className: Je.template_image,
           src: `${n.url}`
         })
       }), c && n.approved !== !1 && e.jsx("div", {
-        className: Ye.template_item_picked,
+        className: Je.template_item_picked,
         children: "Picked"
       }), n.approved === !1 && e.jsx("div", {
-        className: Ye.template_item_rejected,
+        className: Je.template_item_rejected,
         children: "Rejected"
       }), t && e.jsx("div", {
-        className: Ye.template_rank,
+        className: Je.template_rank,
         children: t
       }), s !== void 0 && s !== 0 && e.jsx("div", {
-        className: Ye.template_item_shadow
+        className: Je.template_item_shadow
       }), s !== void 0 && s !== 0 && e.jsxs("div", {
-        className: Ye.template_recolors,
+        className: Je.template_recolors,
         children: [e.jsx("div", {
-          className: Ye.template_recolors_pixel
+          className: Je.template_recolors_pixel
         }), sn(s)]
       })]
     })
@@ -12256,8 +12273,8 @@ const fi = {
       A = r.lastSurvivalRepaints - r.repaints,
       h = o && p,
       g = s && s === a,
-      y = g ? "Winning" : "Won",
-      v = g ? "😔 Losing" : "😔 Lost";
+      w = g ? "Winning" : "Won",
+      x = g ? "😔 Losing" : "😔 Lost";
     return e.jsxs("div", {
       className: X.round_container,
       onPointerUp: () => {
@@ -12273,10 +12290,10 @@ const fi = {
           children: g && e.jsx(Nr, {})
         }), h && e.jsx("div", {
           className: U(X.round_status_success, X.success),
-          children: y
+          children: w
         }), !h && e.jsx("div", {
           className: U(X.round_status_fail, X.fail),
-          children: v
+          children: x
         })]
       }), e.jsxs("div", {
         className: X.round_main_info,
@@ -12543,7 +12560,7 @@ const fi = {
       }))
     }, []);
     const o = r => {
-      fe(`https://t.me/${at}?startapp=${btoa(`id=${r}`)}`)
+      fe(`https://t.me/${it}?startapp=${btoa(`id=${r}`)}`)
     };
     return e.jsxs("div", {
       children: [a[10] && e.jsxs(e.Fragment, {
@@ -12826,7 +12843,7 @@ const fi = {
             children: [e.jsxs("div", {
               className: G.info_row,
               onPointerUp: () => {
-                t.push("/"), n(Ta()), j.viewport.viewport.animate({
+                t.push("/"), n(Ta()), C.viewport.viewport.animate({
                   scale: 4,
                   time: 400,
                   position: {
@@ -13208,33 +13225,33 @@ const fi = {
         count: 0,
         limit: 1
       }),
-      [y, v] = u.useState({
+      [w, x] = u.useState({
         count: 0,
         limit: 5e3
       });
     return u.useEffect(() => {
-      let f = null;
-      return o && (f = setTimeout(() => {
+      let v = null;
+      return o && (v = setTimeout(() => {
         r(!1)
       }, 5e3)), () => {
-        clearTimeout(f)
+        clearTimeout(v)
       }
     }, [o]), u.useEffect(() => {
       (async () => {
-        const N = await O.getSecretStats();
-        N.status === 200 && N.data && N.data.forEach(C => {
-          C.group_name === $n.Ghost && d({
-            count: C.usage_count,
-            limit: C.limit
-          }), C.group_name === $n.Mythical && A({
-            count: C.usage_count,
-            limit: C.limit
-          }), C.group_name === $n.Magical && g({
-            count: C.usage_count,
-            limit: C.limit
-          }), C.group_name === $n.Dogs && v({
-            count: C.usage_count,
-            limit: C.limit
+        const y = await O.getSecretStats();
+        y.status === 200 && y.data && y.data.forEach(P => {
+          P.group_name === $n.Ghost && d({
+            count: P.usage_count,
+            limit: P.limit
+          }), P.group_name === $n.Mythical && A({
+            count: P.usage_count,
+            limit: P.limit
+          }), P.group_name === $n.Magical && g({
+            count: P.usage_count,
+            limit: P.limit
+          }), P.group_name === $n.Dogs && x({
+            count: P.usage_count,
+            limit: P.limit
           })
         })
       })()
@@ -13263,9 +13280,9 @@ const fi = {
             className: S.input,
             placeholder: "Enter your word here, fren",
             value: t,
-            onChange: f => {
-              let N = f.target.value;
-              s(N)
+            onChange: v => {
+              let y = v.target.value;
+              s(y)
             }
           })]
         }), e.jsxs("div", {
@@ -13330,9 +13347,9 @@ const fi = {
               }), e.jsxs("div", {
                 className: U(S.gray),
                 children: [de({
-                  num: y.count
+                  num: w.count
                 }), "/", de({
-                  num: y.limit
+                  num: w.limit
                 })]
               })]
             }), e.jsxs("div", {
@@ -13393,10 +13410,10 @@ const fi = {
             onPointerUp: async () => {
               i(!0);
               try {
-                const f = await O.checkSecret({
+                const v = await O.checkSecret({
                   key: t
                 });
-                if (f.status === 200 && f.data.secretWord.success) {
+                if (v.status === 200 && v.data.secretWord.success) {
                   n(k({
                     id: performance.now(),
                     text: "Success!",
@@ -13452,7 +13469,7 @@ const fi = {
   KN = "_info_text_t9gzv_25",
   ZN = "_button_container_t9gzv_32",
   $N = "_button_content_t9gzv_37",
-  Je = {
+  Ke = {
     info_layout: WN,
     info_desc_wrapper: YN,
     info_title: JN,
@@ -13467,15 +13484,15 @@ class vi {
     const s = {
       "Content-Type": "application/octet-stream"
     };
-    return w.post("/nft/upload", t, {
+    return b.post("/nft/upload", t, {
       headers: s
     })
   }
   static async getNft() {
-    return w.get("/nft/get")
+    return b.get("/nft/get")
   }
   static async getCountApproved() {
-    return w.get("/nft/count")
+    return b.get("/nft/count")
   }
 }
 const Qs = D("drawNft/uploadNft", async ({
@@ -13556,7 +13573,7 @@ const Qs = D("drawNft/uploadNft", async ({
       i = l(r => r.drawNft.nftData);
     if (t !== "connect") return null;
     const o = () => a === m.pending ? e.jsx("div", {
-      className: Je.button_container,
+      className: Ke.button_container,
       children: e.jsx(_e, {
         variant: "loading",
         onPointerUp: async r => {
@@ -13565,7 +13582,7 @@ const Qs = D("drawNft/uploadNft", async ({
         children: "Loading data..."
       })
     }) : i ? e.jsx("div", {
-      className: Je.button_container,
+      className: Ke.button_container,
       children: e.jsx(_e, {
         variant: "disabled2",
         onPointerUp: async r => {
@@ -13574,14 +13591,14 @@ const Qs = D("drawNft/uploadNft", async ({
         children: "Wait for NFT approval"
       })
     }) : e.jsx("div", {
-      className: Je.button_container,
+      className: Ke.button_container,
       children: e.jsx(_e, {
         variant: "blue",
         onPointerUp: async r => {
           r.stopPropagation(), r.preventDefault(), n(yi("draw"))
         },
         children: e.jsxs("div", {
-          className: Je.button_content,
+          className: Ke.button_content,
           children: [e.jsx(B, {
             size: 25,
             children: ""
@@ -13595,20 +13612,20 @@ const Qs = D("drawNft/uploadNft", async ({
       })
     });
     return e.jsxs("div", {
-      className: Je.info_layout,
+      className: Ke.info_layout,
       children: [e.jsx("img", {
         src: nS,
         alt: "nft_dog",
-        className: Je.info_img
+        className: Ke.info_img
       }), e.jsxs("div", {
-        className: Je.info_desc_wrapper,
+        className: Ke.info_desc_wrapper,
         children: [e.jsxs("span", {
-          className: Je.info_title,
+          className: Ke.info_title,
           children: ["Approved ", je({
             num: s
           }), " / 1,000 NFTs"]
         }), e.jsxs("p", {
-          className: Je.info_text,
+          className: Ke.info_text,
           children: ["Create your own pixel artwork. ", e.jsx("br", {}), " Get a special authored NFT", " ", e.jsx("br", {}), " on TON blockchain."]
         })]
       }), e.jsx(o, {})]
@@ -13721,7 +13738,7 @@ class mS {
         a = this.getClickCoords(t);
       this.wasMoved || s.nftCanvas.color && (this.paintPixel({
         id: this.coordsToId(a),
-        color: tt(s.nftCanvas.color)
+        color: nt(s.nftCanvas.color)
       }), this.updateTexture())
     })
   }
@@ -13735,7 +13752,7 @@ class mS {
             x: a,
             y: s
           }),
-          o = tt(t[s][a]);
+          o = nt(t[s][a]);
         this.paintPixel({
           id: i,
           color: o
@@ -14176,7 +14193,7 @@ const gS = u.memo(() => {
     })
   },
   ZS = () => {
-    const [n, t] = u.useState(!1), a = l(ot).balance_share_percent, [i, o] = u.useState([0]), [r, c] = u.useState(0), d = l(g => g.user.pixelCoins), p = d - r, A = l(qn), h = l(zn);
+    const [n, t] = u.useState(!1), a = l(Ye).balance_share_percent, [i, o] = u.useState([0]), [r, c] = u.useState(0), d = l(g => g.user.pixelCoins), p = d - r, A = l(qn), h = l(zn);
     return u.useEffect(() => {
       c(Math.floor(d * i[0] / 100))
     }, [i]), e.jsxs(W, {
@@ -14366,7 +14383,7 @@ const gS = u.memo(() => {
   },
   c2 = () => {
     const n = [],
-      t = l(ot),
+      t = l(Ye),
       s = l(d => d.mining.info),
       a = l(d => d.mining.tasks),
       i = Object.keys(a || {}).length,
@@ -14421,38 +14438,38 @@ const gS = u.memo(() => {
   l2 = () => {
     const [t, s] = u.useState(0), a = l(Qn), [i, o] = u.useState(window.innerHeight - 20 * 2 - 100 - (a ? 0 : 56)), r = u.useRef(null), c = u.useRef(Date.now()), d = 600, p = i + 20, A = t / p + 1, [h, g] = c2();
     u.useEffect(() => {
-      const C = () => {
+      const P = () => {
         o(window.innerHeight - 40 - 100 - (a ? 0 : 56))
       };
-      return window.addEventListener("resize", C), () => {
-        window.removeEventListener("resize", C)
+      return window.addEventListener("resize", P), () => {
+        window.removeEventListener("resize", P)
       }
     }, []);
-    const y = () => {
+    const w = () => {
         t / p < g - 1 && s(t + p)
       },
-      v = () => {
+      x = () => {
         t !== 0 && s(t - p)
       },
-      f = C => {
-        const ge = C.changedTouches[0].clientY,
+      v = P => {
+        const ge = P.changedTouches[0].clientY,
           pe = r.current;
         if (pe !== null) {
           const M = pe - ge;
-          Math.abs(M) > 30 && (M > 0 ? y() : v())
+          Math.abs(M) > 30 && (M > 0 ? w() : x())
         }
       },
-      N = C => {
-        Date.now() - c.current < d || (C.deltaY > 0 ? y() : C.deltaY < 0 && v(), c.current = Date.now())
+      y = P => {
+        Date.now() - c.current < d || (P.deltaY > 0 ? w() : P.deltaY < 0 && x(), c.current = Date.now())
       };
     return e.jsx("div", {
       className: pt.layout,
-      onTouchStart: C => {
-        r.current = C.touches[0].clientY
+      onTouchStart: P => {
+        r.current = P.touches[0].clientY
       },
-      onTouchEnd: f,
-      onTouchCancel: f,
-      onWheel: N,
+      onTouchEnd: v,
+      onTouchCancel: v,
+      onWheel: y,
       children: e.jsxs(nn.div, {
         className: pt.container,
         style: {
@@ -14468,13 +14485,13 @@ const gS = u.memo(() => {
           style: {
             height: 50
           }
-        }), h.map(C => e.jsx(r2, {
+        }), h.map(P => e.jsx(r2, {
           itemHeight: i,
           setTranslate: s,
           translateStep: p,
           currentNumber: A,
-          item: C
-        }, C.id))]
+          item: P
+        }, P.id))]
       })
     })
   },
@@ -15048,8 +15065,8 @@ const AI = () => {
         p = null;
       const A = h => {
         a === null && (a = h);
-        const y = (h - a) / r;
-        o !== h && (i = Math.min(y * c, c), n.current && (n.current.style.width = `${i}%`)), o = h, i < c && (d = requestAnimationFrame(A))
+        const w = (h - a) / r;
+        o !== h && (i = Math.min(w * c, c), n.current && (n.current.style.width = `${i}%`)), o = h, i < c && (d = requestAnimationFrame(A))
       };
       return t === Be.start && (d = requestAnimationFrame(A), n.current && (n.current.style.display = "block")), t === Be.finish && (n.current && (n.current.style.width = "100%"), p = setTimeout(() => {
         n.current && (n.current.style.display = "none", n.current.style.width = "0")
@@ -15233,7 +15250,7 @@ const AI = () => {
     const n = _(),
       t = l(ii),
       s = l(i => i.shop.selectedCurrency);
-    return l(it) !== Ae ? null : e.jsxs("div", {
+    return l(ot) !== Ae ? null : e.jsxs("div", {
       className: q.tokens_selector,
       children: [e.jsx("div", {
         className: q.tokens_title,
@@ -15332,10 +15349,10 @@ const AI = () => {
       [d, p] = u.useState(!1),
       [A, h] = ln(),
       g = l(M => M.color.active),
-      v = (pe = l(M => M.shop.products[a]).prices.filter(M => M.currency_id === i)[0]) == null ? void 0 : pe.price,
-      f = cn();
-    if (l(M => M.shop.selectedCurrency) === 1 || f === "") return null;
-    const C = async M => {
+      x = (pe = l(M => M.shop.products[a]).prices.filter(M => M.currency_id === i)[0]) == null ? void 0 : pe.price,
+      v = cn();
+    if (l(M => M.shop.selectedCurrency) === 1 || v === "") return null;
+    const P = async M => {
       const ze = we.beginCell().storeUint(0, 32).storeStringTail(M.txMemCode).endCell(),
         Ot = {
           validUntil: Math.floor(Date.now() / 1e3) + 600,
@@ -15350,8 +15367,8 @@ const AI = () => {
       const ze = new fa.HttpProvider("https://toncenter.com/api/v2/jsonRPC"),
         Mr = await new fa.token.jetton.JettonMinter(ze, {
           address: Ct[i]
-        }).getJettonWalletAddress(new fa.utils.Address(f)),
-        Fr = we.Address.parse(f),
+        }).getJettonWalletAddress(new fa.utils.Address(v)),
+        Fr = we.Address.parse(v),
         Qr = we.Address.parse(Qa),
         zr = we.beginCell().storeUint(0, 32).storeStringTail(M.txMemCode).endCell();
       let _a = we.toNano(M.strAmount);
@@ -15367,7 +15384,7 @@ const AI = () => {
         };
       await A.sendTransaction(Hr), t(!0), p(!0), c(m.fulfilled)
     };
-    return v ? e.jsx("button", {
+    return x ? e.jsx("button", {
       className: q.button,
       onPointerUp: async M => {
         if (M.stopPropagation(), n(!1), d) {
@@ -15378,13 +15395,13 @@ const AI = () => {
           c(m.pending);
           try {
             const ze = await O.startShopTransaction({
-              buyerWallet: f,
+              buyerWallet: v,
               currencyId: i,
               quantity: o,
               goodId: a,
               activeColor: g
             });
-            if (i === 2) await C(ze.data);
+            if (i === 2) await P(ze.data);
             else if (i === 3 || i === 4 || i === 5 || i === 6 || i === 7 || i === 8 || i === 9) await ge(ze.data);
             else throw new Error("Wrong currency")
           } catch (ze) {
@@ -15444,25 +15461,25 @@ const AI = () => {
     return A !== 1 ? null : e.jsx("div", {
       className: q.button_container,
       onPointerUp: async g => {
-        var v;
+        var x;
         if (g.stopPropagation(), d) {
           s(ai()), c(m.idle);
           return
         }
         if (r === m.pending) return;
         c(m.pending);
-        const y = i.isOnePiece ? 1 : o;
+        const w = i.isOnePiece ? 1 : o;
         try {
-          const f = await O.buy({
+          const v = await O.buy({
             type: Number(a),
-            qty: y,
+            qty: w,
             pixanosColor: h
           });
-          f.status === 200 && ((v = f == null ? void 0 : f.data) == null ? void 0 : v.ok) === !0 && window.Telegram.WebApp.openInvoice(f.data.result, N => {
+          v.status === 200 && ((x = v == null ? void 0 : v.data) == null ? void 0 : x.ok) === !0 && window.Telegram.WebApp.openInvoice(v.data.result, y => {
             var ge, pe;
-            const C = Number(a);
-            if (N === "paid") {
-              if (C >= 9 && C <= 11) {
+            const P = Number(a);
+            if (y === "paid") {
+              if (P >= 9 && P <= 11) {
                 const M = {
                   9: 1,
                   10: 2,
@@ -15470,17 +15487,17 @@ const AI = () => {
                 };
                 s(Yn({
                   product: 1,
-                  amount: M[C]
+                  amount: M[P]
                 })), s(Yn({
                   product: 2,
-                  amount: M[C]
+                  amount: M[P]
                 })), s(Yn({
                   product: 6,
-                  amount: M[C]
+                  amount: M[P]
                 }))
               } else s(Yn({
                 product: a,
-                amount: y
+                amount: w
               }));
               p(!0), (pe = (ge = window.Telegram.WebApp) == null ? void 0 : ge.HapticFeedback) == null || pe.notificationOccurred("error"), t(!0)
             } else n("Error, try again.")
@@ -15498,7 +15515,7 @@ const AI = () => {
       })
     })
   },
-  uT = () => (l(it) === Ae, null),
+  uT = () => (l(ot) === Ae, null),
   pT = () => {
     const n = l(t => t.shop.activeProductCardId);
     return console.log(n), n !== 13 ? null : e.jsxs("div", {
@@ -15578,21 +15595,21 @@ function to(n, t) {
 }
 const _T = () => {
     const n = _(),
-      t = l(N => N.shop.activeProductCardId),
-      s = l(N => N.shop.amount),
-      i = l(N => N.shop.products[t]).isOnePiece,
+      t = l(y => y.shop.activeProductCardId),
+      s = l(y => y.shop.amount),
+      i = l(y => y.shop.products[t]).isOnePiece,
       [o, r] = u.useState([s]),
       [c, d] = u.useState(Wt(s).max),
       [p, A] = u.useState(Wt(s).min),
       [h, g] = u.useState(Wt(s).step),
-      y = c === 5e3 ? "5000" : `${c}+`,
-      v = N => {
-        const C = N[0];
-        n(oa(to(C, h))), r([to(C, h)])
+      w = c === 5e3 ? "5000" : `${c}+`,
+      x = y => {
+        const P = y[0];
+        n(oa(to(P, h))), r([to(P, h)])
       },
-      f = N => {
-        const C = N[0];
-        C === c && (d(Wt(C).max), A(Wt(C).min), g(Wt(C).step))
+      v = y => {
+        const P = y[0];
+        P === c && (d(Wt(P).max), A(Wt(P).min), g(Wt(P).step))
       };
     return i ? null : e.jsxs("div", {
       className: eo.container,
@@ -15602,22 +15619,22 @@ const _T = () => {
         min: p,
         max: c,
         rtl: !1,
-        onChange: v,
-        onFinalChange: f,
+        onChange: x,
+        onFinalChange: v,
         renderTrack: ({
-          props: N,
-          children: C
+          props: y,
+          children: P
         }) => e.jsx("div", {
-          onMouseDown: N.onMouseDown,
-          onTouchStart: N.onTouchStart,
+          onMouseDown: y.onMouseDown,
+          onTouchStart: y.onTouchStart,
           style: {
-            ...N.style,
+            ...y.style,
             height: "36px",
             display: "flex",
             width: "100%"
           },
           children: e.jsx("div", {
-            ref: N.ref,
+            ref: y.ref,
             style: {
               height: "4px",
               borderRadius: "2px",
@@ -15631,17 +15648,17 @@ const _T = () => {
               }),
               alignSelf: "center"
             },
-            children: C
+            children: P
           })
         }),
         renderThumb: ({
-          props: N,
-          isDragged: C
+          props: y,
+          isDragged: P
         }) => u.createElement("div", {
-          ...N,
-          key: N.key,
+          ...y,
+          key: y.key,
           style: {
-            ...N.style,
+            ...y.style,
             height: "20px",
             width: "20px",
             borderRadius: "50%",
@@ -15653,7 +15670,7 @@ const _T = () => {
         })
       }), e.jsxs("div", {
         className: eo.max_value,
-        children: [" ", y]
+        children: [" ", w]
       })]
     })
   },
@@ -15844,12 +15861,12 @@ void main() {
 }`,
   kr = 7200,
   qT = 1;
-let b = null,
+let j = null,
   Pe = null,
   ts = -1,
   Hs = 0;
 async function HT(n) {
-  if (b = LT().getContext("webgl"), !b) {
+  if (j = LT().getContext("webgl"), !j) {
     console.log("Your browser doesn't support WebGL :(");
     return
   }
@@ -15861,7 +15878,7 @@ function LT() {
   return n.id = "canvasSnap", n.width = window.innerWidth, n.height = window.innerHeight, n.style.width = `${window.innerWidth}px`, n.style.height = `${window.innerHeight}px`, n.style.position = "fixed", n.style.top = "50%", n.style.left = "50%", n.style.zIndex = "980", n.style.transform = "translate(-50%, -50%)", n.style.opacity = "0", n.style.transition = "2s ease opacity", document.body.appendChild(n), window.getComputedStyle(n).opacity, n.style.opacity = "1", n
 }
 async function XT() {
-  b.enable(b.BLEND), b.blendFunc(b.SRC_ALPHA, b.ONE_MINUS_SRC_ALPHA), b.clearColor(0, 0, 0, 0), b.viewport(0, 0, b.canvas.width, b.canvas.height), Pe = await VT(b), b.useProgram(Pe)
+  j.enable(j.BLEND), j.blendFunc(j.SRC_ALPHA, j.ONE_MINUS_SRC_ALPHA), j.clearColor(0, 0, 0, 0), j.viewport(0, 0, j.canvas.width, j.canvas.height), Pe = await VT(j), j.useProgram(Pe)
 }
 async function VT(n, t, s) {
   const a = QT,
@@ -15887,15 +15904,15 @@ async function GT(n) {
 
 function WT(n) {
   const t = YT();
-  var s = b.createTexture();
-  b.bindTexture(b.TEXTURE_2D, s), b.texParameteri(b.TEXTURE_2D, b.TEXTURE_WRAP_S, b.CLAMP_TO_EDGE), b.texParameteri(b.TEXTURE_2D, b.TEXTURE_WRAP_T, b.CLAMP_TO_EDGE), b.texParameteri(b.TEXTURE_2D, b.TEXTURE_MIN_FILTER, b.NEAREST), b.texParameteri(b.TEXTURE_2D, b.TEXTURE_MAG_FILTER, b.NEAREST), b.texImage2D(b.TEXTURE_2D, 0, b.RGBA, b.RGBA, b.UNSIGNED_BYTE, t);
-  const a = b.getUniformLocation(Pe, "u_Texture");
-  b.uniform1i(a, 0)
+  var s = j.createTexture();
+  j.bindTexture(j.TEXTURE_2D, s), j.texParameteri(j.TEXTURE_2D, j.TEXTURE_WRAP_S, j.CLAMP_TO_EDGE), j.texParameteri(j.TEXTURE_2D, j.TEXTURE_WRAP_T, j.CLAMP_TO_EDGE), j.texParameteri(j.TEXTURE_2D, j.TEXTURE_MIN_FILTER, j.NEAREST), j.texParameteri(j.TEXTURE_2D, j.TEXTURE_MAG_FILTER, j.NEAREST), j.texImage2D(j.TEXTURE_2D, 0, j.RGBA, j.RGBA, j.UNSIGNED_BYTE, t);
+  const a = j.getUniformLocation(Pe, "u_Texture");
+  j.uniform1i(a, 0)
 }
 
 function YT() {
   const n = new ImageData(T.width, T.height);
-  return n.data.set(j.mainImage.imageData.slice(0)), n
+  return n.data.set(C.mainImage.imageData.slice(0)), n
 }
 
 function JT(n) {
@@ -15931,13 +15948,13 @@ function KT(n) {
     textureTop: r,
     min: c
   } = JT(n);
-  Hs = c * c, $e(b, Pe, "u_AnimationDuration", kr), $e(b, Pe, "u_ParticleSize", qT), $e(b, Pe, "u_ViewportWidth", t), $e(b, Pe, "u_ViewportHeight", s), $e(b, Pe, "u_TextureWidth", a), $e(b, Pe, "u_TextureHeight", i), $e(b, Pe, "u_TextureLeft", o), $e(b, Pe, "u_TextureTop", r);
+  Hs = c * c, et(j, Pe, "u_AnimationDuration", kr), et(j, Pe, "u_ParticleSize", qT), et(j, Pe, "u_ViewportWidth", t), et(j, Pe, "u_ViewportHeight", s), et(j, Pe, "u_TextureWidth", a), et(j, Pe, "u_TextureHeight", i), et(j, Pe, "u_TextureLeft", o), et(j, Pe, "u_TextureTop", r);
   const d = new Array(Hs);
   for (let h = 0; h < Hs; h++) d[h] = h;
-  const p = b.createBuffer();
-  b.bindBuffer(b.ARRAY_BUFFER, p), b.bufferData(b.ARRAY_BUFFER, new Float32Array(d), b.STATIC_DRAW);
-  const A = b.getAttribLocation(Pe, "a_ParticleIndex");
-  b.enableVertexAttribArray(A), b.vertexAttribPointer(A, 1, b.FLOAT, !1, 0, 0)
+  const p = j.createBuffer();
+  j.bindBuffer(j.ARRAY_BUFFER, p), j.bufferData(j.ARRAY_BUFFER, new Float32Array(d), j.STATIC_DRAW);
+  const A = j.getAttribLocation(Pe, "a_ParticleIndex");
+  j.enableVertexAttribArray(A), j.vertexAttribPointer(A, 1, j.FLOAT, !1, 0, 0)
 }
 
 function Rr() {
@@ -15945,16 +15962,16 @@ function Rr() {
 }
 
 function ZT(n) {
-  b.clear(b.COLOR_BUFFER_BIT), ts == -1 && (ts = n);
+  j.clear(j.COLOR_BUFFER_BIT), ts == -1 && (ts = n);
   const s = n - ts;
   if (s > kr) {
     ts = -1, document.getElementById("canvasSnap").remove();
     return
   }
-  $e(b, Pe, "u_ElapsedTime", s), b.drawArrays(b.POINTS, 0, Hs), Rr()
+  et(j, Pe, "u_ElapsedTime", s), j.drawArrays(j.POINTS, 0, Hs), Rr()
 }
 
-function $e(n, t, s, a) {
+function et(n, t, s, a) {
   const i = n.getUniformLocation(t, s);
   n.uniform1f(i, a)
 }
@@ -15967,7 +15984,7 @@ const $T = () => {
     if (u.useEffect(() => {
         s && a && (async () => {
           var c, d;
-          j.viewport.viewport.fit(), j.viewport.viewport.moveCenter(j.viewport.viewport.worldWidth / 2, j.viewport.viewport.worldHeight / 2), t(Ri(!0)), setTimeout(() => {
+          C.viewport.viewport.fit(), C.viewport.viewport.moveCenter(C.viewport.viewport.worldWidth / 2, C.viewport.viewport.worldHeight / 2), t(Ri(!0)), setTimeout(() => {
             t(Ri(!1)), t(Ig())
           }, 7e3);
           try {
@@ -15975,7 +15992,7 @@ const $T = () => {
           } catch (p) {
             document.getElementById("canvasHolder").style.opacity = "1", console.error(p, "cannot run pixanos")
           }
-          n.push("/"), j.mainImage.pixanosRepaint(a.info.seed, T.width, a.info.percentage, a.info.color), (d = (c = window.Telegram.WebApp) == null ? void 0 : c.HapticFeedback) == null || d.notificationOccurred("error")
+          n.push("/"), C.mainImage.pixanosRepaint(a.info.seed, T.width, a.info.percentage, a.info.color), (d = (c = window.Telegram.WebApp) == null ? void 0 : c.HapticFeedback) == null || d.notificationOccurred("error")
         })()
       }, [s, a]), !a) return null;
     const o = a.user.squad;
@@ -16019,7 +16036,7 @@ const $T = () => {
                   src: o.logo && o.logo !== "" ? o.logo : Nt,
                   className: me.squad_avatar
                 }), e.jsx(Rt, {
-                  address: `${at}?startapp=${btoa(`id=${o.squadId}`)}`,
+                  address: `${it}?startapp=${btoa(`id=${o.squadId}`)}`,
                   display: o.name,
                   limit: 18
                 })]
@@ -16520,7 +16537,7 @@ const $T = () => {
   hE = () => {
     const [n, t] = re.useState(mE());
     return u.useEffect(() => {
-      localStorage.setItem("canvasFps", String(n[0])), j.ticker.setFps(n[0])
+      localStorage.setItem("canvasFps", String(n[0])), C.ticker.setFps(n[0])
     }, [n]), e.jsxs(e.Fragment, {
       children: [e.jsx(lE, {
         values: n
@@ -16822,7 +16839,7 @@ const $T = () => {
                   src: o.logo && o.logo !== "" ? o.logo : Nt,
                   className: J.squad_avatar
                 }), e.jsx(Rt, {
-                  address: `${at}?startapp=${btoa(`id=${o.squadId}`)}`,
+                  address: `${it}?startapp=${btoa(`id=${o.squadId}`)}`,
                   display: o.name,
                   limit: 36
                 })]
@@ -17280,7 +17297,7 @@ const $T = () => {
   IB = () => {
     const n = _(),
       t = l(a => a.shop.selectedCurrency),
-      s = l(it);
+      s = l(ot);
     u.useEffect(() => {
       s === Ae && t === 1 && n(Bn(2)), s !== Ae && n(Bn(1))
     }, [s])
@@ -17297,15 +17314,15 @@ const $T = () => {
         t.offEvent("fullscreenChanged", a)
       }
     }, [n]), u.useEffect(() => {
-      if (j) {
+      if (C) {
         const a = window.innerWidth,
           i = window.innerHeight;
-        j.app.renderer.resize(a, i), j.viewport.viewport.resize(a, i)
+        C.app.renderer.resize(a, i), C.viewport.viewport.resize(a, i)
       }
     }, [s]), null
   };
 
-function Ke(n, t) {
+function Ze(n, t) {
   const [s, a = ""] = n.toString().split("."), i = a.slice(0, t);
   return +`${s}.${i.padEnd(t,"0")}`
 }
@@ -17336,9 +17353,9 @@ const Cn = window.Telegram.WebApp.Accelerometer,
           try {
             if (o) {
               const h = {
-                a: Ke(Cn.x, 6),
-                b: Ke(Cn.y, 6),
-                c: Ke(Cn.z, 6)
+                a: Ze(Cn.x, 6),
+                b: Ze(Cn.y, 6),
+                c: Ze(Cn.z, 6)
               };
               t.push(h)
             }
@@ -17353,9 +17370,9 @@ const Cn = window.Telegram.WebApp.Accelerometer,
           try {
             if (r) {
               const h = {
-                a: Ke(Pn.alpha, 6),
-                b: Ke(Pn.beta, 6),
-                c: Ke(Pn.gamma, 6)
+                a: Ze(Pn.alpha, 6),
+                b: Ze(Pn.beta, 6),
+                c: Ze(Pn.gamma, 6)
               };
               s.push(h)
             }
@@ -17370,9 +17387,9 @@ const Cn = window.Telegram.WebApp.Accelerometer,
           try {
             if (c) {
               const h = {
-                a: Ke(Nn.x, 6),
-                b: Ke(Nn.y, 6),
-                c: Ke(Nn.z, 6)
+                a: Ze(Nn.x, 6),
+                b: Ze(Nn.y, 6),
+                c: Ze(Nn.z, 6)
               };
               a.push(h)
             }
@@ -17460,13 +17477,13 @@ Ut.startListening({
       o = n.payload[i],
       r = n.meta.arg.price;
     if (o) {
-      if (i === et.energyLimit) {
-        const c = s.mining.boosts[et.energyLimit],
+      if (i === tt.energyLimit) {
+        const c = s.mining.boosts[tt.energyLimit],
           d = a.UpgradeChargeCount.levels[c].Boost;
         t.dispatch(zp(s.mining.maxCharges + d)), t.dispatch(Qo(d))
       }
-      if (i === et.reChargeSpeed) {
-        const c = s.mining.boosts[et.reChargeSpeed],
+      if (i === tt.reChargeSpeed) {
+        const c = s.mining.boosts[tt.reChargeSpeed],
           d = a.UpgradeChargeRestoration.levels[c].ChargeBoost;
         t.dispatch(qp(d))
       }
@@ -17505,7 +17522,7 @@ const ga = rn();
 ga.startListening({
   matcher: ue(ua.getPriceMask.pending, Ie.getPixelsForSale.pending, Ie.getPixelsSold.pending, fi.get.pending),
   effect: (n, t) => {
-    t.dispatch(nt({
+    t.dispatch(st({
       command: Be.start
     }))
   }
@@ -17513,7 +17530,7 @@ ga.startListening({
 ga.startListening({
   matcher: ue(ua.getPriceMask.fulfilled, Ie.getPixelsForSale.fulfilled, Ie.getPixelsSold.fulfilled, fi.get.fulfilled),
   effect: (n, t) => {
-    t.dispatch(nt({
+    t.dispatch(st({
       command: Be.finish
     }))
   }
@@ -17521,7 +17538,7 @@ ga.startListening({
 ga.startListening({
   matcher: ue(ua.getPriceMask.rejected),
   effect: (n, t) => {
-    n.error.code !== "ERR_CANCELED" && t.dispatch(nt({
+    n.error.code !== "ERR_CANCELED" && t.dispatch(st({
       command: Be.finish
     }))
   }
@@ -17540,7 +17557,7 @@ hn.startListening({
     const s = t.getState();
     if (s.tournament.myTemplate) {
       const a = s.tournament.myTemplate;
-      j.mainImage.tournamentTemplates.deleteTemplate(a.id), j.mainImage.tournamentTemplates.add(a)
+      C.mainImage.tournamentTemplates.deleteTemplate(a.id), C.mainImage.tournamentTemplates.add(a)
     }
   }
 });
@@ -17550,7 +17567,7 @@ hn.startListening({
     const s = t.getState();
     if (s.tournament.selectedTemplate) {
       const a = s.tournament.selectedTemplate;
-      j.mainImage.tournamentTemplates.deleteTemplate(a.id), j.mainImage.tournamentTemplates.add(a)
+      C.mainImage.tournamentTemplates.deleteTemplate(a.id), C.mainImage.tournamentTemplates.add(a)
     }
   }
 });
@@ -17558,19 +17575,19 @@ hn.startListening({
   matcher: ue(_g),
   effect: n => {
     const t = n.payload;
-    j.mainImage.tournamentTemplates.hide(), j.mainImage.tournamentTemplates.show(t)
+    C.mainImage.tournamentTemplates.hide(), C.mainImage.tournamentTemplates.show(t)
   }
 });
 hn.startListening({
   matcher: ue(fg),
   effect: () => {
-    j.mainImage.tournamentTemplates.hide()
+    C.mainImage.tournamentTemplates.hide()
   }
 });
 hn.startListening({
   matcher: ue(sr),
   effect: n => {
-    j.mainImage.tournamentTemplates.changeTemplateCoords(n.payload)
+    C.mainImage.tournamentTemplates.changeTemplateCoords(n.payload)
   }
 });
 const bi = rn();
@@ -17590,25 +17607,25 @@ const Gn = rn();
 Gn.startListening({
   actionCreator: rr,
   effect: () => {
-    j.mainImage.selectedPixel.hide()
+    C.mainImage.selectedPixel.hide()
   }
 });
 Gn.startListening({
   actionCreator: ma,
   effect: () => {
-    j.mainImage.selectedPixel.show()
+    C.mainImage.selectedPixel.show()
   }
 });
 Gn.startListening({
   actionCreator: ha,
   effect: () => {
-    j.mainImage.selectedPixel.hide()
+    C.mainImage.selectedPixel.hide()
   }
 });
 Gn.startListening({
   actionCreator: kt,
   effect: () => {
-    j.mainImage.selectedPixel.show()
+    C.mainImage.selectedPixel.show()
   }
 });
 const An = Gr({
