@@ -7951,7 +7951,7 @@ const Fg = dr.reducer,
   kf = {
     container: Bf
   },
-  Rf = "/assets/1024ssa-iiCT2o7N.png",
+  Rf = "/assets/start-DnMan449.png",
   Uf = D("template/subscribe", async ({
     id: n
   }) => (await Fe.subscribeToTemplate({
