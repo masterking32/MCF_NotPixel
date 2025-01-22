@@ -2,21 +2,21 @@ import {
   R as z,
   c as x,
   m as F
-} from "./react-router-skDq-tWz.js";
+} from "./react-router-DCwf-dt2.js";
 import {
   a as M,
   b as H,
   _ as g
 } from "./@babel-OEIDM1DX.js";
 import {
-  R as c
+  R as s
 } from "./react-DjWS3H3h.js";
 import {
   b as $,
   d as G,
   e as I,
-  a as J
-} from "./history-COziRoqA.js";
+  c as J
+} from "./history-DY9FvNaQ.js";
 import {
   i as W
 } from "./tiny-invariant-BaFNuDhB.js";
@@ -29,13 +29,13 @@ var rr = function(r) {
   }
   var e = t.prototype;
   return e.render = function() {
-    return c.createElement(z, {
+    return s.createElement(z, {
       history: this.history,
       children: this.props.children
     })
   }, t
-}(c.Component);
-c.Component;
+}(s.Component);
+s.Component;
 var E = function(t, e) {
     return typeof t == "function" ? t(e) : t
   },
@@ -45,7 +45,7 @@ var E = function(t, e) {
   b = function(t) {
     return t
   },
-  v = c.forwardRef;
+  v = s.forwardRef;
 typeof v > "u" && (v = b);
 
 function O(r) {
@@ -58,15 +58,15 @@ var Q = v(function(r, t) {
       o = H(r, ["innerRef", "navigate", "onClick"]),
       n = o.target,
       l = g({}, o, {
-        onClick: function(s) {
+        onClick: function(c) {
           try {
-            i && i(s)
+            i && i(c)
           } catch (f) {
-            throw s.preventDefault(), f
-          }!s.defaultPrevented && s.button === 0 && (!n || n === "_self") && !O(s) && (s.preventDefault(), a())
+            throw c.preventDefault(), f
+          }!c.defaultPrevented && c.button === 0 && (!n || n === "_self") && !O(c) && (c.preventDefault(), a())
         }
       });
-    return b !== v ? l.ref = t || e : l.ref = e, c.createElement("a", l)
+    return b !== v ? l.ref = t || e : l.ref = e, s.createElement("a", l)
   }),
   U = v(function(r, t) {
     var e = r.component,
@@ -75,27 +75,27 @@ var Q = v(function(r, t) {
       o = r.to,
       n = r.innerRef,
       l = H(r, ["component", "replace", "to", "innerRef"]);
-    return c.createElement(x.Consumer, null, function(u) {
+    return s.createElement(x.Consumer, null, function(u) {
       u || W();
-      var s = u.history,
+      var c = u.history,
         f = S(E(o, u.location), u.location),
-        C = f ? s.createHref(f) : "",
+        C = f ? c.createHref(f) : "",
         p = g({}, l, {
           href: C,
           navigate: function() {
             var m = E(o, u.location),
               d = $(u.location) === $(S(m)),
-              L = i || d ? s.replace : s.push;
+              L = i || d ? c.replace : c.push;
             L(m)
           }
         });
-      return b !== v ? p.ref = t || n : p.innerRef = n, c.createElement(a, p)
+      return b !== v ? p.ref = t || n : p.innerRef = n, s.createElement(a, p)
     })
   }),
   q = function(t) {
     return t
   },
-  w = c.forwardRef;
+  w = s.forwardRef;
 typeof w > "u" && (w = q);
 
 function V() {
@@ -112,7 +112,7 @@ w(function(r, t) {
     n = r.activeStyle,
     l = r.className,
     u = r.exact,
-    s = r.isActive,
+    c = r.isActive,
     f = r.location,
     C = r.sensitive,
     p = r.strict,
@@ -120,7 +120,7 @@ w(function(r, t) {
     m = r.to,
     d = r.innerRef,
     L = H(r, ["aria-current", "activeClassName", "activeStyle", "className", "exact", "isActive", "location", "sensitive", "strict", "style", "to", "innerRef"]);
-  return c.createElement(x.Consumer, null, function(B) {
+  return s.createElement(x.Consumer, null, function(B) {
     B || W();
     var y = f || B.location,
       K = S(E(m, y), y),
@@ -132,7 +132,7 @@ w(function(r, t) {
         sensitive: C,
         strict: p
       }) : null,
-      R = !!(s ? s(D, y) : D),
+      R = !!(c ? c(D, y) : D),
       N = typeof l == "function" ? l(R) : l,
       P = typeof h == "function" ? h(R) : h;
     R && (N = V(N, o), P = g({}, P, n));
@@ -142,7 +142,7 @@ w(function(r, t) {
       style: P,
       to: K
     }, L);
-    return q !== w ? A.ref = t || d : A.innerRef = d, c.createElement(U, A)
+    return q !== w ? A.ref = t || d : A.innerRef = d, s.createElement(U, A)
   })
 });
 export {
